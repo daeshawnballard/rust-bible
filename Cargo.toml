@@ -4,8 +4,13 @@ name = "rust-bible"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+crate-type = ["cdylib", "rlib"]
+
 [dependencies]
-axum = "0.8"
-tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
