@@ -11,6 +11,6 @@ fi
 
 cargo build --release --target wasm32-unknown-unknown --lib
 mkdir -p dist
-cp web/index.html web/app.js web/style.css dist/
+cp web/index.html web/app.js web/style.css web/logo.png dist/
 cp target/wasm32-unknown-unknown/release/rust_bible.wasm dist/rust_bible.wasm
 echo "Static WASM site built in $repo_root/dist"

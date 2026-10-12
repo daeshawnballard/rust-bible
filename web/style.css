@@ -5,7 +5,11 @@ header{border-bottom:1px solid var(--border);background:var(--card)}
 .wrap{max-width:46rem;margin:0 auto;padding:1rem}
 header .wrap{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between}
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.brand{font-family:Georgia,'Times New Roman',serif;font-size:1.3rem;font-weight:bold;color:var(--fg)}
+.brand{display:inline-flex;align-items:center;gap:.6rem;font-family:Georgia,'Times New Roman',serif;font-size:1.3rem;font-weight:bold;color:var(--fg);white-space:nowrap}
+.brand img{width:42px;height:42px;object-fit:contain;flex:none}
+.site-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;font-size:.85rem;border-top:1px solid var(--border);margin-top:1rem}
+.site-footer a{white-space:nowrap}
+input{min-width:0}
 form{display:flex;gap:.4rem;flex:1;min-width:15rem}
 input{flex:1;padding:.45rem .6rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);font-size:1rem}
 button{padding:.45rem .8rem;border:0;border-radius:6px;background:var(--accent);color:var(--bg);font-size:.95rem;cursor:pointer}

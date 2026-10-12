@@ -1,4 +1,6 @@
-# rust-bible — KJV Bible reader
+# The Bible in Rust
+
+Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site>. Open-source repository: <https://github.com/daeshawnballard/rust-bible>.
 
 ![Screenshot](docs/screenshot.png)
 

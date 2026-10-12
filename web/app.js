@@ -39,7 +39,7 @@ function installPage(response) {
     return;
   }
 
-  document.title = response.title || "KJV Bible";
+  document.title = response.title || "The Bible in Rust";
   if (response.content_type.startsWith("application/json")) {
     app.textContent = response.body;
     return;
