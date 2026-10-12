@@ -23,5 +23,6 @@ h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}
 .scripture sup{color:var(--muted);font-family:system-ui,sans-serif;font-size:.65em;margin-right:.2em;vertical-align:super}
 .v{scroll-margin-top:1rem}.hl{background:rgba(224,169,109,.25);border-radius:3px}
 .nav{display:flex;justify-content:space-between;margin:1.5rem 0;gap:1rem}
+@media(max-width:420px){.nav{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.75rem}.nav>[rel=prev]{grid-column:1;grid-row:1}.nav>[rel=next]{grid-column:2;grid-row:1;text-align:right}.nav>a:not([rel]){grid-column:1/-1;grid-row:2;text-align:center}}
 .muted{color:var(--muted)}.res p{margin:.2rem 0 1rem}.res .scripture{font-size:1.05rem}
 mark{background:rgba(224,169,109,.45);color:inherit}
