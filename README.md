@@ -1,14 +1,14 @@
-# The Bible in Rust
+# The Bible
 
 Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site>. Open-source repository: <https://github.com/daeshawnballard/rust-bible>.
 
-![Screenshot](docs/screenshot.png)
+![The Bible reader](docs/site-reader.jpg)
 
 A small KJV reader with one shared Rust implementation. Run it as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. The static browser app uses Rust for Bible lookup, reference parsing, search, and page rendering; its small JavaScript file only loads the module, passes routes through the ABI, and updates the page.
 
 ## Native server
 
-Requirements: Rust stable (1.75+; originally built with 1.85). The KJV JSON is embedded in the binary with `include_str!`, so no runtime data file is needed.
+Requirements: a current stable Rust toolchain. The KJV JSON is embedded in the binary with `include_str!`, so no runtime data file is needed.
 
 ```sh
 cargo run --release
@@ -30,7 +30,7 @@ Build the static site:
 ./scripts/build-wasm.sh
 ```
 
-The command writes `dist/index.html`, `dist/app.js`, `dist/style.css`, and `dist/rust_bible.wasm`. Publish the contents of `dist/` on any static host. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
+The command writes `dist/index.html`, `dist/app.js`, `dist/style.css`, `dist/logo.png`, and `dist/rust_bible.wasm`. Publish the contents of `dist/` on any static host. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
 
 For a local static preview after building:
 
