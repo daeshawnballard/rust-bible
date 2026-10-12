@@ -9,6 +9,8 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .brand img{width:42px;height:42px;object-fit:contain;flex:none}
 .site-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1rem;font-size:.85rem;border-top:1px solid var(--border);margin-top:1rem}
 .site-footer a{white-space:nowrap}
+.suggestions{padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin:1rem 0 1.5rem}
+.suggestions h2{margin:0 0 .6rem;font-size:1.2rem}
 input{min-width:0}
 form{display:flex;gap:.4rem;flex:1;min-width:15rem}
 input{flex:1;padding:.45rem .6rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg);font-size:1rem}

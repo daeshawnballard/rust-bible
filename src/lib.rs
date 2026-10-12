@@ -640,6 +640,90 @@ fn passage_content(reference: &Ref, url: &str) -> String {
 
 const MAX_RESULTS: usize = 200;
 
+// Optimal-string-alignment distance: insertions, omissions, substitutions,
+// and adjacent transpositions each cost one edit.
+fn book_edit_distance(a: &str, b: &str) -> usize {
+    let a: Vec<char> = a.chars().collect();
+    let b: Vec<char> = b.chars().collect();
+    let mut rows = vec![vec![0; b.len() + 1]; a.len() + 1];
+    for (i, row) in rows.iter_mut().enumerate() {
+        row[0] = i;
+    }
+    for j in 0..=b.len() {
+        rows[0][j] = j;
+    }
+    for i in 1..=a.len() {
+        for j in 1..=b.len() {
+            rows[i][j] = (rows[i - 1][j] + 1)
+                .min(rows[i][j - 1] + 1)
+                .min(rows[i - 1][j - 1] + usize::from(a[i - 1] != b[j - 1]));
+            if i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1] {
+                rows[i][j] = rows[i][j].min(rows[i - 2][j - 2] + 1);
+            }
+        }
+    }
+    rows[a.len()][b.len()]
+}
+
+fn book_suggestions(query: &str, client: bool) -> String {
+    // Keep a requested chapter/range attached to each suggestion, and validate
+    // it through the same exact parser used by ordinary reference lookup.
+    let split = query
+        .rsplit_once(char::is_whitespace)
+        .filter(|(_, tail)| tail.starts_with(|c: char| c.is_ascii_digit()));
+    let (name, suffix) = split.unwrap_or_else(|| {
+        query
+            .char_indices()
+            .skip(1)
+            .find(|(_, c)| c.is_ascii_digit())
+            .map(|(index, _)| (&query[..index], &query[index..]))
+            .unwrap_or((query, ""))
+    });
+    let key = norm(name);
+    if key.len() < 3 || key.len() > 32 || find_book(name).is_some() {
+        return String::new();
+    }
+    let mut candidates = Vec::new();
+    for (book, canonical) in NAMES.iter().enumerate() {
+        let target = norm(canonical);
+        let distance = book_edit_distance(&key, &target);
+        let longest = key.chars().count().max(target.chars().count());
+        let similarity = 1.0 - distance as f64 / longest as f64;
+        let shared_start = key.chars().take(2).eq(target.chars().take(2));
+        if !(distance <= 2 && similarity >= 0.65
+            || key.len() >= 5 && shared_start && distance <= 4 && similarity >= 0.5)
+        {
+            continue;
+        }
+        let (label, url) = if suffix.is_empty() {
+            (
+                canonical.to_string(),
+                route_path(&format!("/book/{}", slug(book)), client),
+            )
+        } else {
+            let Some(reference) = parse_ref(&format!("{canonical} {suffix}")) else {
+                continue;
+            };
+            // A corrected range should retain the focused passage view.
+            (
+                ref_label(&reference),
+                route_path(&format!("/go?q={canonical}%20{suffix}"), client),
+            )
+        };
+        candidates.push((similarity, book, label, url));
+    }
+    candidates.sort_by(|a, b| b.0.total_cmp(&a.0).then(a.1.cmp(&b.1)));
+    if candidates.is_empty() {
+        return String::new();
+    }
+    let mut html = String::from("<aside class=\"suggestions\" aria-label=\"Suggested books\"><h2>Did you mean…?</h2><div class=\"grid\">");
+    for (_, _, label, url) in candidates.into_iter().take(3) {
+        html.push_str(&format!("<a href=\"{}\">{}</a>", esc(&url), esc(&label)));
+    }
+    html.push_str("</div></aside>");
+    html
+}
+
 fn search(q: &str) -> (Vec<(usize, usize, usize, &'static str)>, usize) {
     let terms: Vec<String> = q
         .to_lowercase()
@@ -720,6 +804,7 @@ fn search_content(q: &str, client: bool) -> String {
             String::new()
         }
     );
+    s.push_str(&book_suggestions(q, client));
     for (b, ch, verse, text) in results {
         let target = route_path(
             &format!("/book/{}/{ch}?v={verse}-{verse}#v{verse}", slug(b)),
@@ -761,7 +846,14 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
     let path = decode_component(raw_path);
     let params = query_params(raw_query);
     match path.as_str() {
-        "/" => html_response(200, "The Bible in Rust", "", &home_content(client), client, anchor),
+        "/" => html_response(
+            200,
+            "The Bible in Rust",
+            "",
+            &home_content(client),
+            client,
+            anchor,
+        ),
         "/go" => {
             let query = params.get("q").cloned().unwrap_or_default();
             let query = query.trim();
@@ -912,6 +1004,39 @@ mod wasm_abi {
 #[cfg(test)]
 mod tests {
     use super::route;
+
+    #[test]
+    fn misspelled_books_offer_explicit_corrections() {
+        let response = route("#/go?q=neimai", true);
+        assert!(response.body.contains("Did you mean…?"));
+        assert!(response
+            .body
+            .contains("href=\"#/book/Nehemiah\">Nehemiah</a>"));
+        let transposed = route("/go?q=jhon", false);
+        assert!(transposed.body.contains("href=\"/book/John\">John</a>"));
+    }
+
+    #[test]
+    fn fuzzy_suggestions_keep_valid_reference_and_reject_invalid_chapter() {
+        let response = route("#/go?q=neimai%202%3A3", true);
+        assert!(response.body.contains("Nehemiah 2:3</a>"));
+        assert!(response.body.contains("#/go?q=Nehemiah%202:3"));
+        assert!(route("/go?q=neimai2%3A3", false)
+            .body
+            .contains("Nehemiah 2:3</a>"));
+        assert!(!route("/go?q=neimai%20999", false)
+            .body
+            .contains("Did you mean…?"));
+    }
+
+    #[test]
+    fn ordinary_keywords_and_nonsense_do_not_get_book_corrections() {
+        for query in ["faith", "love", "hope", "zzzznoverse123"] {
+            assert!(!route(&format!("/go?q={query}"), true)
+                .body
+                .contains("Did you mean…?"));
+        }
+    }
 
     #[test]
     fn parses_book_alias_and_verse_range() {

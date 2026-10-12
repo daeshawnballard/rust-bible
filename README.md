@@ -51,6 +51,7 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 - All 66 books and chapter navigation, with previous and next chapter links across book boundaries.
 - Reference lookup such as `John 3:16`, `John 3`, `1 Cor 13:4-7`, and `ps 23`; names are case-insensitive and common abbreviations are supported.
+- Typo-tolerant book suggestions: `neimai` suggests Nehemiah, and `jhon` suggests John. Chapter and verse requests stay attached to valid suggestions. Corrections are explicit links; keyword search still returns exact text matches.
 - Full-text search where every query word must match, with up to 200 displayed results and escaped highlighting.
 - Verse ranges and highlighted chapter links.
 
