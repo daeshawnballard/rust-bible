@@ -438,7 +438,7 @@ fn route_path(path: &str, client: bool) -> String {
 fn page_body(q: &str, body: &str, client: bool) -> String {
     let home = route_path("/", client);
     format!(
-        r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible in Rust</span></a><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header><main class="wrap">{body}</main><footer class="wrap muted site-footer"><span>King James Version (public domain).</span><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></footer>"#,
+        r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible</span></a><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header><main class="wrap">{body}</main><footer class="wrap muted site-footer"><span>King James Version (public domain).</span><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></footer>"#,
         home = esc(&home),
         q = esc(q)
     )
@@ -848,7 +848,7 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
     match path.as_str() {
         "/" => html_response(
             200,
-            "The Bible in Rust",
+            "The Bible",
             "",
             &home_content(client),
             client,
