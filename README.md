@@ -61,6 +61,8 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 Choose **Explore** to open a detailed illustrated Tabernacle scene. Scripture is the default view in a fixed-size right-hand panel with its own scroll area. Eight clickable scene hotspots switch that same panel to one of eight dedicated object illustrations and a short explanation. **Back to Scripture** or the panel’s **Scripture** link returns to the selected object’s KJV passage. The object-button row and separate drawer are removed. Rust renders the hotspots, panel views, selections, references, explanations, and KJV content in both native and WASM builds.
 
+![Dedicated object artwork](docs/site-tabernacle-objects.png)
+
 The scene and the eight object close-ups are separate AI-generated artistic reconstructions, not archaeological models. The close-ups are served from `web/art/objects/{courtyard,altar,basin,tent,table,lamp,veil,ark}.webp`; they are individual illustrations, not crops of the scene image. Asset provenance is recorded in [the image manifest](assets/imagegen/manifest.json). The artwork uses the approved visual concept; its depicted proportions, details, and placement are illustrative.
 
 Scripture is rendered verbatim from the embedded KJV corpus. **Explanation** is a separate, explicitly labeled section with passage references; it is not added to Scripture playback. The supporting references are listed in [the scene source notes](docs/tabernacle-sources.md).
