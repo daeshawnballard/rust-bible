@@ -1,7 +1,7 @@
 //! Scripture-led Tabernacle scene and exploration pages.
 //!
 //! Rust renders the illustrated scene hotspots, explanation panel, and separate
-//! Scripture drawer for both Axum and the WebAssembly reader.
+//! Scripture view in one fixed panel for both Axum and the WebAssembly reader.
 
 use super::{esc, parse_ref, ref_label, reference_url, route_path, verses, Ref, RouteResponse};
 
@@ -81,26 +81,6 @@ fn part_for(id: &str) -> Option<&'static Part> {
     PARTS.iter().find(|part| part.id == id)
 }
 
-fn picker(selected: &str, client: bool) -> String {
-    let mut list = String::from("<ul class=\"part-picker\" aria-label=\"Tabernacle parts\">");
-    for part in &PARTS {
-        let href = route_path(&format!("/explore/tabernacle?part={}", part.id), client);
-        let current = if part.id == selected {
-            " aria-current=\"page\""
-        } else {
-            ""
-        };
-        list.push_str(&format!(
-            "<li><a href=\"{}\"{}>{}</a></li>",
-            esc(&href),
-            current,
-            esc(part.name)
-        ));
-    }
-    list.push_str("</ul>");
-    list
-}
-
 fn passage_blocks(part: &Part, client: bool) -> String {
     let mut output = String::new();
     for text_reference in part.references {
@@ -167,7 +147,7 @@ fn illustration(selected: &str, client: bool) -> String {
         } else {
             ""
         };
-        scene.push_str(&format!("<a class=\"scene-hotspot\" data-scene-part=\"{id}\" style=\"left:{x}%;top:{y}%\" href=\"{}\" aria-label=\"{}\"{current}><span class=\"hotspot-dot\"></span><span class=\"hotspot-label\">{}</span></a>",esc(&route_path(&format!("/explore/tabernacle?part={id}"),client)),esc(part.aria),esc(part.name)));
+        scene.push_str(&format!("<a class=\"scene-hotspot\" data-scene-part=\"{id}\" style=\"left:{x}%;top:{y}%\" href=\"{}\" aria-label=\"{}\"{current}><span class=\"hotspot-dot\"></span><span class=\"hotspot-label\">{}</span></a>",esc(&route_path(&format!("/explore/tabernacle?part={id}&view=object"),client)),esc(part.aria),esc(part.name)));
     }
     scene.push_str("</div>");
     scene
@@ -187,30 +167,40 @@ fn detail_view(id: &str) -> String {
     format!("<svg class=\"object-preview\" viewBox=\"{x} {y} {w} {h}\" role=\"img\" aria-label=\"Illustrated detail of {}\"><image href=\"/art/tabernacle.webp\" width=\"1536\" height=\"1024\"/></svg>",esc(part_for(id).unwrap().name))
 }
 
-fn explore_body(selected: &str, client: bool) -> String {
+fn explore_body(selected: &str, object_view: bool, client: bool) -> String {
     let part = part_for(selected).expect("selected Tabernacle part is known");
-    let mut body = String::from("<section id=\"explore\" class=\"explore-page illustrated-explore\"><div class=\"explore-heading\"><p class=\"eyebrow\">An illustrated reconstruction · Exodus</p><h1>Inside the Tabernacle</h1><p>Tap a part to explore its passage.</p></div><div class=\"explore-layout\"><section class=\"scene-column\" aria-label=\"Interactive Tabernacle scene\">");
+    let scripture_link = route_path(
+        &format!("/explore/tabernacle?part={selected}&view=scripture"),
+        client,
+    );
+    let object_link = route_path(
+        &format!("/explore/tabernacle?part={selected}&view=object"),
+        client,
+    );
+    let current = " aria-current=\"page\"";
+    let hidden = " hidden";
+    let mut body = String::from("<section id=\"explore\" class=\"explore-page illustrated-explore\"><div class=\"explore-heading\"><p class=\"eyebrow\">An illustrated reconstruction · Exodus</p><h1>Inside the Tabernacle</h1><p>Read the passage, or tap a hotspot to explore an object.</p></div><div class=\"explore-layout\"><section class=\"scene-column\" aria-label=\"Interactive Tabernacle scene\">");
     body.push_str(&illustration(selected, client));
-    body.push_str(&picker(selected, client));
-    body.push_str("</section><article class=\"object-card\">");
-    body.push_str(&detail_view(selected));
-    body.push_str(&format!("<div class=\"object-description\"><p class=\"eyebrow\">Selected part</p><h2>{}</h2><p class=\"object-reference\">{}</p><section class=\"context-note\"><h3>Explanation</h3><p>{}</p></section><button class=\"open-passage\" type=\"button\" data-open-scripture>Read the passage <span aria-hidden=\"true\">↗</span></button><small class=\"reconstruction-note\">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></article></div>",esc(part.name),esc(part.references[0]),esc(part.note)));
-    body.push_str("<div class=\"explore-audio\">");
-    body.push_str(&listen_controls(&part.references.join("; ")));
-    body.push_str("</div><dialog class=\"scripture-drawer\" data-scripture-dialog aria-labelledby=\"scripture-title\"><div class=\"drawer-heading\"><div><p class=\"eyebrow\">Scripture · King James Version</p><h2 id=\"scripture-title\">");
-    body.push_str(&esc(part.name));
-    body.push_str("</h2></div><button type=\"button\" data-close-scripture aria-label=\"Close Scripture\">✕</button></div>");
+    body.push_str(&format!("</section><article class=\"object-card study-panel\" data-panel-view=\"{}\" aria-label=\"Passage and object details\"><nav class=\"panel-navigation\" aria-label=\"Panel view\"><a href=\"{}\"{}>Scripture</a><a href=\"{}\"{}>Object</a></nav><section class=\"panel-view scripture-panel\" aria-label=\"Scripture\" tabindex=\"0\"{}><div class=\"panel-title\"><p class=\"eyebrow\">Scripture · King James Version</p><h2>{}</h2></div>",if object_view {"object"} else {"scripture"},esc(&scripture_link),if object_view {""} else {current},esc(&object_link),if object_view {current} else {""},if object_view {hidden} else {""},esc(part.name)));
     body.push_str(&passage_blocks(part, client));
-    body.push_str("</dialog></section>");
+    body.push_str(&format!("</section><section class=\"panel-view object-panel\" aria-label=\"Object and explanation\" tabindex=\"0\"{}>",if object_view {""} else {hidden}));
+    body.push_str(&detail_view(selected));
+    body.push_str(&format!("<div class=\"object-description\"><p class=\"eyebrow\">Selected part</p><h2>{}</h2><p class=\"object-reference\">{}</p><section class=\"context-note\"><h3>Explanation</h3><p>{}</p></section><a class=\"open-passage\" href=\"{}\">Back to Scripture <span aria-hidden=\"true\">←</span></a><small class=\"reconstruction-note\">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></section></article></div><div class=\"explore-audio\">",esc(part.name),esc(part.references[0]),esc(part.note),esc(&scripture_link)));
+    body.push_str(&listen_controls(&part.references.join("; ")));
+    body.push_str("</div></section>");
     body
 }
 
 pub(super) fn explore_page(client: bool) -> RouteResponse {
-    response("Inside the Tabernacle", "lamp", client)
+    response("Inside the Tabernacle", "lamp", false, client)
 }
 
-pub(super) fn selected_page(selected: Option<&str>, client: bool) -> RouteResponse {
-    let selected = selected.unwrap_or("courtyard");
+pub(super) fn selected_page(
+    selected: Option<&str>,
+    view: Option<&str>,
+    client: bool,
+) -> RouteResponse {
+    let selected = selected.unwrap_or("lamp");
     if part_for(selected).is_none() {
         let content = format!(
             "<section class=\"explore-page\"><h1>Tabernacle part not found</h1><p>Choose one of the named parts to continue.</p><p><a href=\"{}\">Explore the Tabernacle</a></p></section>",
@@ -231,11 +221,16 @@ pub(super) fn selected_page(selected: Option<&str>, client: bool) -> RouteRespon
             },
         };
     }
-    response("Explore the Tabernacle", selected, client)
+    response(
+        "Inside the Tabernacle",
+        selected,
+        view == Some("object"),
+        client,
+    )
 }
 
-fn response(title: &str, selected: &str, client: bool) -> RouteResponse {
-    let content = explore_body(selected, client);
+fn response(title: &str, selected: &str, object_view: bool, client: bool) -> RouteResponse {
+    let content = explore_body(selected, object_view, client);
     let body = super::page_body("", &content, client);
     RouteResponse {
         status: 200,
@@ -270,10 +265,14 @@ mod tests {
                 .contains(&format!("aria-label=\"{}\"", part.aria)));
             assert!(landing.body.contains(&format!("?part={}", part.id)));
         }
-        assert!(landing.body.contains("class=\"part-picker\""));
+        assert!(!landing.body.contains("class=\"part-picker\""));
         assert!(landing.body.contains("/art/tabernacle.webp"));
         assert_eq!(landing.body.matches("class=\"scene-hotspot\"").count(), 8);
-        assert!(landing.body.contains("data-scripture-dialog"));
+        assert!(landing.body.contains("data-panel-view=\"scripture\""));
+        assert!(!landing.body.contains("<dialog"));
+        let object = route("/explore/tabernacle?part=ark&view=object", false);
+        assert!(object.body.contains("data-panel-view=\"object\""));
+        assert!(object.body.contains("Back to Scripture"));
     }
 
     #[test]

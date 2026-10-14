@@ -904,9 +904,11 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
         "/api/verse" => api_verse(&params),
         "/api/search" => api_search(&params),
         "/explore" => tabernacle::explore_page(client),
-        "/explore/tabernacle" => {
-            tabernacle::selected_page(params.get("part").map(String::as_str), client)
-        }
+        "/explore/tabernacle" => tabernacle::selected_page(
+            params.get("part").map(String::as_str),
+            params.get("view").map(String::as_str),
+            client,
+        ),
         _ if path.starts_with("/book/") => {
             let rest = &path[6..];
             if let Some((name, chapter)) = rest.split_once('/') {

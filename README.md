@@ -59,7 +59,7 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 ![Illustrated Tabernacle explorer](docs/site-tabernacle.png)
 
-Choose **Explore** to open a detailed illustrated Tabernacle scene. Eight clickable hotspots and a named part list select a close-up and a short explanation. **Read the passage** opens a separate Scripture drawer, keeping the exhibit compact instead of extending the page with a long passage column. Rust renders the hotspots, selections, references, explanations, and KJV content in both native and WASM builds.
+Choose **Explore** to open a detailed illustrated Tabernacle scene. Scripture is the default view in a fixed-size right-hand panel with its own scroll area. Eight clickable scene hotspots switch that same panel to an object close-up and a short explanation. **Back to Scripture** or the panel’s **Scripture** link returns to the selected object’s KJV passage. The object-button row and separate drawer are removed. Rust renders the hotspots, panel views, selections, references, explanations, and KJV content in both native and WASM builds.
 
 The scene is an AI-generated artistic reconstruction, not an archaeological model. Asset provenance is recorded in [the image manifest](assets/imagegen/manifest.json). The artwork uses the approved visual concept; its depicted proportions, details, and placement are illustrative.
 

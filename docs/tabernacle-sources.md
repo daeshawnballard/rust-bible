@@ -23,4 +23,4 @@ scale or the complete relative placement shown in the illustration.
 
 ## Illustration conventions
 
-The scene is an ImageGen illustration based on the approved visual concept. Rust renders eight positioned hotspot links over the artwork; object close-ups are viewports into the same image. The named list provides an alternative to targeting a small hotspot. Materials, geometry, placement, and decorative details in the image are illustrative. It does not establish archaeological or theological claims. Scripture stays in its own labelled dialog and comes verbatim from the embedded KJV corpus.
+The scene is an ImageGen illustration based on the approved visual concept. Rust renders eight positioned hotspot links over the artwork; object close-ups are viewports into the same image. Each hotspot has an accessible name and keyboard focus. Materials, geometry, placement, and decorative details in the image are illustrative. It does not establish archaeological or theological claims. Scripture stays in its own labelled panel view, separate from the object explanation and comes verbatim from the embedded KJV corpus.

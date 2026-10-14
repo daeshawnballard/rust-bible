@@ -9,22 +9,6 @@ export function initExperience(root = document) {
     target?.addEventListener(event, handler);
     if (target) listeners.push(() => target.removeEventListener(event, handler));
   };
-  const drawer = root.querySelector('[data-scripture-dialog]');
-  const opener = root.querySelector('[data-open-scripture]');
-  const audioDock = root.querySelector('.explore-audio');
-  on(opener, 'click', () => {
-    const audio = audioDock?.querySelector('[data-read-aloud]');
-    if (audio) drawer.querySelector('.drawer-heading').after(audio);
-    drawer?.showModal();
-  });
-  on(root.querySelector('[data-close-scripture]'), 'click', () => drawer?.close());
-  on(drawer, 'click', event => { if (event.target === drawer) { const box = drawer.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) drawer.close(); } });
-  on(drawer, 'close', () => {
-    const audio = drawer.querySelector('[data-read-aloud]');
-    if (audio && audioDock) audioDock.append(audio);
-    opener?.focus();
-  });
-
   const controls = root.querySelector('[data-read-aloud]');
   let stop = () => {};
   if (controls) {
