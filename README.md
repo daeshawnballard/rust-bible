@@ -30,7 +30,7 @@ Build the static site:
 ./scripts/build-wasm.sh
 ```
 
-The command writes `dist/index.html`, `dist/app.js`, `dist/style.css`, `dist/logo.png`, and `dist/rust_bible.wasm`. Publish the contents of `dist/` on any static host. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
+The command writes `dist/index.html`, `dist/app.js`, `dist/style.css`, `dist/logo.png`, `dist/experience.js`, `dist/art/tabernacle.webp`, and `dist/rust_bible.wasm`. Publish the contents of `dist/` on any static host. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
 
 For a local static preview after building:
 
@@ -57,7 +57,11 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 ## Explore and listen
 
-Choose **Explore** to open an interactive, isometric Tabernacle model. Select a furnishing in the scene or use the named part list to see its related KJV passages. The cutaway lifts the roof and veil so the interior can be inspected. The model is an illustrated reconstruction, with schematic placement and appearance.
+![Illustrated Tabernacle explorer](docs/site-tabernacle.png)
+
+Choose **Explore** to open a detailed illustrated Tabernacle scene. Eight clickable hotspots and a named part list select a close-up and a short explanation. **Read the passage** opens a separate Scripture drawer, keeping the exhibit compact instead of extending the page with a long passage column. Rust renders the hotspots, selections, references, explanations, and KJV content in both native and WASM builds.
+
+The scene is an AI-generated artistic reconstruction, not an archaeological model. Asset provenance is recorded in [the image manifest](assets/imagegen/manifest.json). The artwork uses the approved visual concept; its depicted proportions, details, and placement are illustrative.
 
 Scripture is rendered verbatim from the embedded KJV corpus. **Explanation** is a separate, explicitly labeled section with passage references; it is not added to Scripture playback. The supporting references are listed in [the scene source notes](docs/tabernacle-sources.md).
 

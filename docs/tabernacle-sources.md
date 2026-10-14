@@ -21,10 +21,6 @@ scale or the complete relative placement shown in the illustration.
 | Veil | Exodus 26:31–33 | Materials, pillars, and division between the holy place and most holy. |
 | Ark of the testimony | Exodus 25:10–11; Exodus 25:16; Exodus 25:21–22; Exodus 26:33 | Shittim wood, gold overlay, the testimony, the mercy seat, and placement within the veil. |
 
-## Drawing conventions
+## Illustration conventions
 
-The renderer ports the Anatomy kit's isometric projection and camera-depth
-equations to Rust. Box-like pieces are represented as filled top and visible
-side faces, ordered by camera depth. The palette and simplified shapes are
-illustrative. The lamp's bowls, knops, and flowers, and the ark's cherubim are
-not reconstructed in detail.
+The scene is an ImageGen illustration based on the approved visual concept. Rust renders eight positioned hotspot links over the artwork; object close-ups are viewports into the same image. The named list provides an alternative to targeting a small hotspot. Materials, geometry, placement, and decorative details in the image are illustrative. It does not establish archaeological or theological claims. Scripture stays in its own labelled dialog and comes verbatim from the embedded KJV corpus.

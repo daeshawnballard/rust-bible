@@ -1,0 +1,21 @@
+{
+  "assets": [
+    {
+      "id": "tabernacle-illustrated",
+      "source": "assets/imagegen/source/tabernacle-illustrated.png",
+      "final": "web/art/tabernacle.webp",
+      "intended_use": "Interactive scene and object detail viewports",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Generated with built-in ImageGen using approved image 2 as reference. Illustrative reconstruction; not archaeological proof.",
+      "prompt": "Reference-led historical scene: recreate only the approved concept\u2019s richly realistic isometric Tabernacle diorama, tightly framed 3:2, charcoal backdrop, detailed linen, gold, sand and wood; partly open roof and veil; no UI, text, labels or hotspots."
+    }
+  ]
+}

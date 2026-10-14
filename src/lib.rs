@@ -440,7 +440,7 @@ fn route_path(path: &str, client: bool) -> String {
 fn page_body(q: &str, body: &str, client: bool) -> String {
     let home = route_path("/", client);
     let explore = route_path("/explore", client);
-    let is_explore = body.contains("class=\"explore-page\"");
+    let is_explore = body.contains("id=\"explore\"") || body.contains("class=\"explore-page\"");
     let read_current = if is_explore {
         ""
     } else {

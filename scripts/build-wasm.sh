@@ -10,7 +10,8 @@ if ! rustup target list --installed | rg -qx 'wasm32-unknown-unknown'; then
 fi
 
 cargo build --release --target wasm32-unknown-unknown --lib
-mkdir -p dist
+mkdir -p dist/art
 cp web/index.html web/app.js web/experience.js web/style.css web/logo.png dist/
+cp web/art/tabernacle.webp dist/art/
 cp target/wasm32-unknown-unknown/release/rust_bible.wasm dist/rust_bible.wasm
 echo "Static WASM site built in $repo_root/dist"

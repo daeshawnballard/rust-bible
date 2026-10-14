@@ -7,6 +7,14 @@ use axum::{
 };
 
 async fn serve(uri: Uri) -> Response {
+    if uri.path() == "/art/tabernacle.webp" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "image/webp")
+            .body(Body::from(
+                include_bytes!("../web/art/tabernacle.webp").as_slice(),
+            ))
+            .expect("static illustration response is valid");
+    }
     if uri.path() == "/logo.png" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "image/png")

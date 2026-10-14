@@ -1,5 +1,4 @@
 let dispose = () => {};
-let cutawayOpen = true;
 
 // Scripture comes from Rust's KJV renderer. The speech layer never reads
 // explanatory notes, navigation, or markup as though they were Scripture.
@@ -10,21 +9,20 @@ export function initExperience(root = document) {
     target?.addEventListener(event, handler);
     if (target) listeners.push(() => target.removeEventListener(event, handler));
   };
-  const scene = root.querySelector('.scene-card');
-  const toggle = root.querySelector('[data-scene-toggle]');
-  const sceneStatus = scene?.querySelector('.scene-controls span');
-  if (scene && toggle) {
-    scene.classList.toggle('is-cutaway', cutawayOpen);
-    toggle.setAttribute('aria-pressed', String(cutawayOpen));
-    toggle.textContent = cutawayOpen ? 'Close cutaway' : 'Open cutaway';
-    if (sceneStatus) sceneStatus.textContent = cutawayOpen ? 'Cutaway view' : 'Covered view';
-  }
-  on(toggle, 'click', () => {
-    const cutaway = scene.classList.toggle('is-cutaway');
-    cutawayOpen = cutaway;
-    toggle.setAttribute('aria-pressed', String(cutaway));
-    toggle.textContent = cutaway ? 'Close cutaway' : 'Open cutaway';
-    if (sceneStatus) sceneStatus.textContent = cutaway ? 'Cutaway view' : 'Covered view';
+  const drawer = root.querySelector('[data-scripture-dialog]');
+  const opener = root.querySelector('[data-open-scripture]');
+  const audioDock = root.querySelector('.explore-audio');
+  on(opener, 'click', () => {
+    const audio = audioDock?.querySelector('[data-read-aloud]');
+    if (audio) drawer.querySelector('.drawer-heading').after(audio);
+    drawer?.showModal();
+  });
+  on(root.querySelector('[data-close-scripture]'), 'click', () => drawer?.close());
+  on(drawer, 'click', event => { if (event.target === drawer) { const box = drawer.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) drawer.close(); } });
+  on(drawer, 'close', () => {
+    const audio = drawer.querySelector('[data-read-aloud]');
+    if (audio && audioDock) audioDock.append(audio);
+    opener?.focus();
   });
 
   const controls = root.querySelector('[data-read-aloud]');
