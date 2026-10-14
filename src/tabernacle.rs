@@ -9,6 +9,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "courtyard",
         name: "Courtyard",
+        image_alt: "Illustration of the Tabernacle courtyard, linen boundary, and east gate",
         aria: "Explore the courtyard",
         references: &["Exodus 27:13-18"],
         note: "Exodus specifies the court's linen hangings, east side, and embroidered gate curtain (Exodus 27:13–18).",
@@ -16,6 +17,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "altar",
         name: "Altar",
+        image_alt: "Illustration of the bronze-covered altar with projecting horns",
         aria: "Explore the altar",
         references: &["Exodus 27:1-2", "Exodus 40:6"],
         note: "The square shittim-wood altar had horns and a brass overlay, and stood before the tabernacle door (Exodus 27:1–2; 40:6).",
@@ -23,6 +25,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "basin",
         name: "Laver",
+        image_alt: "Illustration of the bronze laver and its foot",
         aria: "Explore the laver",
         references: &["Exodus 30:18-21"],
         note: "The brass laver and its foot were placed between the tabernacle and the altar for washing.",
@@ -30,6 +33,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "tent",
         name: "Tabernacle tent",
+        image_alt: "Illustration of the Tabernacle tent and its layered coverings",
         aria: "Explore the tabernacle tent",
         references: &["Exodus 26:1", "Exodus 26:7"],
         note: "The curtains used fine twined linen with blue, purple, and scarlet, with a goats’ hair covering also specified (Exodus 26:1, 7).",
@@ -37,6 +41,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "table",
         name: "Table of shewbread",
+        image_alt: "Illustration of the gold-covered table holding the shewbread",
         aria: "Explore the table of shewbread",
         references: &["Exodus 25:23-24", "Exodus 25:30", "Exodus 26:35"],
         note: "The gold-overlaid shittim table held shewbread and stood on the north side of the tabernacle (Exodus 25:23–24, 30; 26:35).",
@@ -44,6 +49,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "lamp",
         name: "Candlestick",
+        image_alt: "Illustration of the golden seven-branched candlestick and its lamps",
         aria: "Explore the candlestick",
         references: &["Exodus 25:31-32", "Exodus 25:37", "Exodus 26:35"],
         note: "The pure-gold candlestick had six branches and seven lamps, and stood opposite the table on the south side (Exodus 25:31–32, 37; 26:35).",
@@ -51,6 +57,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "veil",
         name: "Veil",
+        image_alt: "Illustration of the embroidered veil between the holy place and the most holy",
         aria: "Explore the veil",
         references: &["Exodus 26:31-33"],
         note: "The veil used blue, purple, scarlet, and fine twined linen, and divided the holy place from the most holy.",
@@ -58,6 +65,7 @@ const PARTS: [Part; 8] = [
     Part {
         id: "ark",
         name: "Ark of the testimony",
+        image_alt: "Illustration of the gold-covered Ark of the testimony and mercy seat",
         aria: "Explore the ark of the testimony",
         references: &[
             "Exodus 25:10-11",
@@ -72,6 +80,7 @@ const PARTS: [Part; 8] = [
 struct Part {
     id: &'static str,
     name: &'static str,
+    image_alt: &'static str,
     aria: &'static str,
     references: &'static [&'static str],
     note: &'static str,
@@ -176,17 +185,11 @@ fn illustration(selected: &str, client: bool) -> String {
 }
 
 fn detail_view(id: &str) -> String {
-    let (x, y, w, h) = match id {
-        "lamp" => (748, 245, 190, 215),
-        "table" => (823, 330, 215, 185),
-        "ark" => (1060, 160, 190, 180),
-        "veil" => (950, 170, 170, 245),
-        "altar" => (380, 440, 215, 195),
-        "basin" => (555, 440, 180, 185),
-        "tent" => (580, 20, 790, 495),
-        _ => (0, 0, 1536, 1024),
-    };
-    format!("<svg class=\"object-preview\" viewBox=\"{x} {y} {w} {h}\" role=\"img\" aria-label=\"Illustrated detail of {}\"><image href=\"/art/tabernacle.webp\" width=\"1536\" height=\"1024\"/></svg>",esc(part_for(id).unwrap().name))
+    let part = part_for(id).expect("selected Tabernacle part is known");
+    format!(
+        "<img class=\"object-preview\" loading=\"lazy\" decoding=\"async\" src=\"/art/objects/{id}.webp\" width=\"1536\" height=\"1024\" alt=\"{}\">",
+        esc(part.image_alt)
+    )
 }
 
 fn explore_body(selected: &str, object_view: bool, client: bool) -> String {
@@ -308,6 +311,25 @@ mod tests {
             assert!(response
                 .body
                 .contains(&format!("data-scene-part=\"{}\"", part.id)));
+            let preview = response
+                .body
+                .split("class=\"object-preview\"")
+                .nth(1)
+                .unwrap()
+                .split('>')
+                .next()
+                .unwrap();
+            for attribute in [
+                format!("src=\"/art/objects/{}.webp\"", part.id),
+                format!("alt=\"{}\"", part.image_alt),
+                "width=\"1536\"".into(),
+                "height=\"1024\"".into(),
+            ] {
+                assert!(
+                    preview.contains(&attribute),
+                    "missing artwork attribute: {attribute}"
+                );
+            }
             for source in part.references {
                 let reference = parse_ref(source).expect("part source parses");
                 let canonical = crate::ref_label(&reference);

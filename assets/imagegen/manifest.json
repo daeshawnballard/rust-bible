@@ -4,7 +4,7 @@
       "id": "tabernacle-illustrated",
       "source": "assets/imagegen/source/tabernacle-illustrated.png",
       "final": "web/art/tabernacle.webp",
-      "intended_use": "Interactive scene and object detail viewports",
+      "intended_use": "Interactive Tabernacle scene",
       "processing": [
         "webp_quality_90_no_resizing"
       ],
@@ -16,6 +16,152 @@
       "alpha": false,
       "notes": "Generated with built-in ImageGen using approved image 2 as reference. Illustrative reconstruction; not archaeological proof.",
       "prompt": "Reference-led historical scene: recreate only the approved concept\u2019s richly realistic isometric Tabernacle diorama, tightly framed 3:2, charcoal backdrop, detailed linen, gold, sand and wood; partly open roof and veil; no UI, text, labels or hotspots."
+    },
+    {
+      "id": "tabernacle-object-lamp",
+      "source": "assets/imagegen/source/objects/lamp.png",
+      "final": "web/art/objects/lamp.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: One ornate pure-gold seven-lamp candlestick, like the isolated candlestick at the reference's right. Exactly one central stem plus three branching arms to EACH side, exactly SEVEN clearly visible oil cups total in one symmetrical row. Almond-flower cups, knops and intricate hammered-gold finish, substantial gold foot. No candles or wax. Isolate the entire object including its base; front three-quarter view; lamps unlit as in the concept's portrait. No table, tent, altar or other furnishings.",
+      "notes": "Reference-led artistic reconstruction; reviewed whole subject, material, framing, and lack of UI/text."
+    },
+    {
+      "id": "tabernacle-object-altar",
+      "source": "assets/imagegen/source/objects/altar.png",
+      "final": "web/art/objects/altar.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: The bronze-overlaid square altar of burnt offering as the SINGLE isolated subject. A substantial square ancient wooden altar clad in burnished bronze, four upward horns one on EACH corner, visible open upper grate and interior dark metal mesh, bronze rings and carrying poles. Full three-quarter view from slightly above, complete base and poles visible. Warm copper-bronze patina, fine joinery and hammer marks. No fire, sacrifices, blood, utensils, laver, people or tent.",
+      "notes": "Reference-led artistic reconstruction; reviewed whole subject, material, framing, and lack of UI/text."
+    },
+    {
+      "id": "tabernacle-object-basin",
+      "source": "assets/imagegen/source/objects/basin.png",
+      "final": "web/art/objects/basin.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: The brass laver on its foot as the SINGLE isolated subject. A broad shallow polished bronze wash basin with a softly flared rim holding still water, mounted on a stout sculpted bronze stem and round foot. Ancient understated craftsmanship with subtle hammered texture, warm bronze reflections. Full three-quarter view from slightly above showing water and full base. No taps or modern plumbing, no altar, tent, people or additional furnishings.",
+      "notes": "Reference-led artistic reconstruction; reviewed whole subject, material, framing, and lack of UI/text."
+    },
+    {
+      "id": "tabernacle-object-ark",
+      "source": "assets/imagegen/source/objects/ark.png",
+      "final": "web/art/objects/ark.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: The Ark of the testimony as the SINGLE isolated subject. A compact ancient rectangular acacia-wood chest overlaid with pure gold, gold molding around its top, carrying rings and long gold-overlaid wooden poles at the sides. Gold mercy-seat lid with TWO small sculpted winged cherubim facing each other, their raised wings extending protectively over the lid. Detailed craftsmanship and warm reflective gold. Complete chest and poles in three-quarter view. No people, no tent, no other furnishings, no writing or text.",
+      "notes": "Reference-led artistic reconstruction; reviewed whole subject, material, framing, and lack of UI/text."
+    },
+    {
+      "id": "tabernacle-object-tent",
+      "source": "assets/imagegen/source/objects/tent.png",
+      "final": "web/art/objects/tent.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: A standalone detailed architectural model of ONLY the Tabernacle tent, without its courtyard or any furnishings. Rectangular sanctuary with gold-clad upright framing, fine blue/purple/scarlet woven entrance curtain, layered pale linen beneath a dark brown goats-hair/hide outer roof, as in the approved concept. Three-quarter isometric museum-model view showing entire tent, a partial side cutaway reveals gold framing and inner embroidered textile layers only. No altar, basin, table, candlestick, ark, courtyard walls, people or model label.",
+      "notes": "Reference-led artistic reconstruction; reviewed whole subject, material, framing, and lack of UI/text."
+    },
+    {
+      "id": "tabernacle-object-courtyard",
+      "source": "assets/imagegen/source/objects/courtyard.png",
+      "final": "web/art/objects/courtyard.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: A standalone architectural illustration of ONLY the Tabernacle courtyard enclosure, without the tent or any furnishings. A complete rectangular fenced courtyard of pale fine-linen hangings between evenly spaced bronze-toned posts with silver-toned hooks, cords and low ground pegs. One beautiful woven blue/purple/scarlet entrance curtain at the nearer short end. Sandy ground on a thin rectangular base. Entire enclosure shown tightly framed in a three-quarter isometric museum-model view with visible linen texture and warm gold-toned light. Keep interior empty. No tent, altar, basin, table, candlestick, ark, people or plaque.",
+      "notes": "Reference-led artistic reconstruction; reviewed whole subject, material, framing, and lack of UI/text."
+    },
+    {
+      "id": "tabernacle-object-veil",
+      "source": "assets/imagegen/source/objects/veil.png",
+      "final": "web/art/objects/veil.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: The Tabernacle's interior veil as the SINGLE architectural textile subject. A richly woven hanging of deep blue and purple with scarlet accents and fine cream linen, refined gold-thread cherub embroidery like the interior curtain in the approved concept. Hang between four slender gold-overlaid posts with simple capitals and silver-toned foot sockets, complete hanging and supporting posts visible. Slight natural fabric folds, front three-quarter view, beautifully tactile embroidery. No room, ark, other furnishings, people, text or modern symbols.",
+      "edit": "Corrected original three-post illustration to four clearly visible supporting posts and silver sockets; preserve textile/material/lighting.",
+      "notes": "Four visible supporting posts; reviewed complete framing and embroidered fabric."
+    },
+    {
+      "id": "tabernacle-object-table",
+      "source": "assets/imagegen/source/objects/table.png",
+      "final": "web/art/objects/table.webp",
+      "intended_use": "Dedicated hotspot illustration",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "generator": "built-in ImageGen",
+      "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: The gold-overlaid table of shewbread as the SINGLE isolated subject: a finely made rectangular acacia-wood table clad in gold with a gold raised rim, four straight substantial gold-clad legs, rings and carrying poles along the sides. Twelve small round flat loaves arranged in two neat stacks of six on top, not random piles. Museum-quality hammered gold, warm shadows, entire table and poles visible in three-quarter view. No candlestick, tent, altar, people or surroundings.",
+      "edit": "Surgical count correction with measured spatial guide. Image1 is the EDIT TARGET. Image2 is ONLY a location mask/guide; never copy its colors/marks/background into final art. In Image1, the LEFT bread stack now has SEVEN loaves while the RIGHT has SIX. The red region in Image2 (x525..772,y309..351 in the 1536x1024 frame) marks ONLY the lowest, seventh loaf of the LEFT stack. Remove that ONE bottom-left loaf and let the remaining six rest down onto the table. Do not redraw or add any bread. Preserve all SIX right-stack loaves exactly. Preserve the upper SIX left-stack loaves, their texture, original table, gold poles, legs, background, lighting, camera and framing. The final must show six plainly separated layers at left and the existing six at right. No other changes, text, guide marks or labels.",
+      "notes": "Accepted final has two visible stacks of six loaves; decorative materials and proportions remain an artistic reconstruction."
     }
   ]
 }

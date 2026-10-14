@@ -6,9 +6,9 @@ canonical reference parser and obtains its verse text from the same `verses`
 function used by the rest of the site. This document records the source basis
 for the brief explanations; it is not an independent Scripture transcription.
 
-The isometric reconstruction is schematic. The Bible passages below ground the
-named features and descriptions; they do not specify the scene's exact visual
-scale or the complete relative placement shown in the illustration.
+The scene and close-ups are schematic artistic reconstructions. The Bible
+passages below ground the named features and descriptions; they do not specify
+the images' exact visual scale, materials, decorative details, or placement.
 
 | Scene part | Displayed Scripture | Explanation basis |
 | --- | --- | --- |
@@ -21,6 +21,16 @@ scale or the complete relative placement shown in the illustration.
 | Veil | Exodus 26:31–33 | Materials, pillars, and division between the holy place and most holy. |
 | Ark of the testimony | Exodus 25:10–11; Exodus 25:16; Exodus 25:21–22; Exodus 26:33 | Shittim wood, gold overlay, the testimony, the mercy seat, and placement within the veil. |
 
-## Illustration conventions
+## Illustration assets and conventions
 
-The scene is an ImageGen illustration based on the approved visual concept. Rust renders eight positioned hotspot links over the artwork; object close-ups are viewports into the same image. Each hotspot has an accessible name and keyboard focus. Materials, geometry, placement, and decorative details in the image are illustrative. It does not establish archaeological or theological claims. Scripture stays in its own labelled panel view, separate from the object explanation and comes verbatim from the embedded KJV corpus.
+The broad scene is a separate ImageGen illustration based on the approved visual
+concept. Each of its eight objects has a dedicated close-up at
+`web/art/objects/{courtyard,altar,basin,tent,table,lamp,veil,ark}.webp`; these
+are distinct illustrations, not crops of the scene. The image manifest records
+artwork provenance. Rust renders the scene's positioned hotspot links and
+selects the matching close-up when a hotspot is opened. Each hotspot has an
+accessible name and keyboard focus, and each close-up has descriptive alt text.
+Materials, geometry, placement, and decorative details are illustrative. The
+images do not establish archaeological or theological claims. Scripture stays
+in its own labelled panel view, separate from the object explanation, and comes
+verbatim from the embedded KJV corpus.

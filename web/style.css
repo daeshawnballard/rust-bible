@@ -136,3 +136,5 @@ body:has(.illustrated-explore) header .wrap{width:calc(100% - 64px)}
 .player-settings label{display:flex;flex-direction:column;gap:6px}.player-settings select{width:100%;padding:8px;background:#101310;color:#e7d5ae;border:1px solid #b59a6255;border-radius:5px}.player-settings button{margin:12px 0;background:transparent;color:#e7d5ae;border:1px solid #b59a6266}.player-settings small{display:block;color:#aaa18e;line-height:1.4}.player-settings button:disabled{opacity:.4;cursor:default}
 @media(max-width:760px){.scripture-player{gap:12px;min-height:98px;padding:14px 12px}.scripture-player .player-toggle{width:48px;height:48px;flex-basis:48px}.player-toggle svg{width:22px;height:22px}.player-copy{flex:1;min-width:0}.player-title{font-size:1.05rem;white-space:normal}.player-wave{display:none}.player-speed select{font-size:.85rem;max-width:65px}.player-options summary{padding:3px}.scripture-player [data-audio-status]{font-size:.63rem}}
 @media(max-width:760px){.scripture-player{gap:8px}.player-title{font-size:1rem}}
+
+img.object-preview{object-fit:contain;object-position:center;background:#141615}

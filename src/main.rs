@@ -7,6 +7,31 @@ use axum::{
 };
 
 async fn serve(uri: Uri) -> Response {
+    let object_art = match uri.path() {
+        "/art/objects/courtyard.webp" => {
+            Some(include_bytes!("../web/art/objects/courtyard.webp").as_slice())
+        }
+        "/art/objects/altar.webp" => {
+            Some(include_bytes!("../web/art/objects/altar.webp").as_slice())
+        }
+        "/art/objects/basin.webp" => {
+            Some(include_bytes!("../web/art/objects/basin.webp").as_slice())
+        }
+        "/art/objects/tent.webp" => Some(include_bytes!("../web/art/objects/tent.webp").as_slice()),
+        "/art/objects/table.webp" => {
+            Some(include_bytes!("../web/art/objects/table.webp").as_slice())
+        }
+        "/art/objects/lamp.webp" => Some(include_bytes!("../web/art/objects/lamp.webp").as_slice()),
+        "/art/objects/veil.webp" => Some(include_bytes!("../web/art/objects/veil.webp").as_slice()),
+        "/art/objects/ark.webp" => Some(include_bytes!("../web/art/objects/ark.webp").as_slice()),
+        _ => None,
+    };
+    if let Some(bytes) = object_art {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "image/webp")
+            .body(Body::from(bytes))
+            .expect("object illustration response is valid");
+    }
     if uri.path() == "/art/tabernacle.webp" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "image/webp")
