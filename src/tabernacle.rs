@@ -128,6 +128,28 @@ pub(super) fn listen_controls(reference: &str) -> String {
     )
 }
 
+fn scene_listen_controls(reference: &str) -> String {
+    // Decorative waveform silhouette, not sampled audio or a seek timeline.
+    let mut wave = String::new();
+    for i in 0..160 {
+        let x = i as f64 / 159.0;
+        let envelope = (std::f64::consts::PI * x).sin().powf(1.2);
+        let texture = ((i * 37 + 11) % 29) as f64 / 29.0;
+        let height = 2.0 + envelope * (9.0 + texture * 38.0);
+        wave.push_str(&format!(
+            "<line x1=\"{}\" x2=\"{}\" y1=\"{:.1}\" y2=\"{:.1}\"/>",
+            i * 5,
+            i * 5,
+            32.0 - height / 2.0,
+            32.0 + height / 2.0
+        ));
+    }
+    format!(
+        r#"<div class="scripture-player" data-read-aloud data-audio-compact data-reference="{}"><button class="player-toggle" type="button" data-audio-action="play" aria-label="Listen to Scripture"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="player-play-icon" d="M8 4 21 12 8 20Z"/><path class="player-pause-icon" d="M7 5h4v14H7zm7 0h4v14h-4z"/></svg></button><div class="player-copy"><span class="player-title">Listen to Scripture</span><span data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</span></div><div class="player-wave" aria-hidden="true"><svg viewBox="0 0 795 64" preserveAspectRatio="none">{wave}</svg></div><label class="player-speed"><select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><details class="player-options"><summary aria-label="Playback options">⋯</summary><div class="player-settings"><label>Voice <select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label><button type="button" data-audio-action="stop">Stop reading</button><small>Synthetic device voice. Reads Scripture only.</small></div></details></div>"#,
+        esc(reference)
+    )
+}
+
 fn illustration(selected: &str, client: bool) -> String {
     let positions = [
         ("courtyard", 16.0, 60.5),
@@ -186,7 +208,7 @@ fn explore_body(selected: &str, object_view: bool, client: bool) -> String {
     body.push_str(&format!("</section><section class=\"panel-view object-panel\" aria-label=\"Object and explanation\" tabindex=\"0\"{}>",if object_view {""} else {hidden}));
     body.push_str(&detail_view(selected));
     body.push_str(&format!("<div class=\"object-description\"><p class=\"eyebrow\">Selected part</p><h2>{}</h2><p class=\"object-reference\">{}</p><section class=\"context-note\"><h3>Explanation</h3><p>{}</p></section><a class=\"open-passage\" href=\"{}\">Back to Scripture <span aria-hidden=\"true\">←</span></a><small class=\"reconstruction-note\">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></section></article></div><div class=\"explore-audio\">",esc(part.name),esc(part.references[0]),esc(part.note),esc(&scripture_link)));
-    body.push_str(&listen_controls(&part.references.join("; ")));
+    body.push_str(&scene_listen_controls(&part.references.join("; ")));
     body.push_str("</div></section>");
     body
 }

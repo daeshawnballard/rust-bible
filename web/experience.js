@@ -12,6 +12,7 @@ export function initExperience(root = document) {
   const controls = root.querySelector('[data-read-aloud]');
   let stop = () => {};
   if (controls) {
+    const compact = controls.hasAttribute('data-audio-compact');
     const synth = window.speechSynthesis;
     const play = controls.querySelector('[data-audio-action="play"]');
     const pause = controls.querySelector('[data-audio-action="pause"]');
@@ -29,10 +30,16 @@ export function initExperience(root = document) {
     const setState = (state, message) => {
       controls.dataset.audioState = state;
       status.textContent = message;
-      pause.disabled = !['reading', 'paused'].includes(state);
+      if (pause) pause.disabled = !['reading', 'paused'].includes(state);
       stopButton.disabled = !['reading', 'paused', 'starting'].includes(state);
-      play.textContent = state === 'paused' ? 'Resume' : 'Listen to Scripture';
-      pause.textContent = state === 'paused' ? 'Paused' : 'Pause';
+      if (compact) {
+        play.setAttribute('aria-label', state === 'reading' ? 'Pause Scripture' : state === 'paused' ? 'Resume Scripture' : 'Listen to Scripture');
+        play.disabled = state === 'starting' || state === 'unavailable';
+        controls.querySelector('.player-title').textContent = state === 'paused' ? 'Scripture paused' : state === 'reading' ? 'Reading Scripture' : 'Listen to Scripture';
+      } else {
+        play.textContent = state === 'paused' ? 'Resume' : 'Listen to Scripture';
+        pause.textContent = state === 'paused' ? 'Paused' : 'Pause';
+      }
     };
     const clearHighlight = () => nodes.forEach(node => node.classList.remove('is-speaking'));
     stop = (message = 'Stopped.') => {
@@ -109,6 +116,11 @@ export function initExperience(root = document) {
         synth.speak(utterance);
       };
       on(play, 'click', () => {
+        if (compact && controls.dataset.audioState === 'reading') {
+          synth.pause();
+          if (synth.paused) setState('paused', 'Paused. Press Resume to continue.');
+          return;
+        }
         if (controls.dataset.audioState === 'paused' && current) {
           synth.resume();
           if (!synth.paused) setState('reading', `Reading verse ${nodes[index].dataset.verse || index + 1} · ${index + 1} of ${verses.length}.`);
