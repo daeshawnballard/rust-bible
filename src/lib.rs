@@ -6,6 +6,8 @@ use std::{collections::HashMap, sync::OnceLock};
 static RAW: &str = include_str!("../data/kjv.json");
 const CSS: &str = include_str!("../web/style.css");
 
+mod tabernacle;
+
 const NAMES: [&str; 66] = [
     "Genesis",
     "Exodus",
@@ -437,15 +439,30 @@ fn route_path(path: &str, client: bool) -> String {
 
 fn page_body(q: &str, body: &str, client: bool) -> String {
     let home = route_path("/", client);
+    let explore = route_path("/explore", client);
+    let is_explore = body.contains("class=\"explore-page\"");
+    let read_current = if is_explore {
+        ""
+    } else {
+        " aria-current=\"page\""
+    };
+    let explore_current = if is_explore {
+        " aria-current=\"page\""
+    } else {
+        ""
+    };
     format!(
-        r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible</span></a><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header><main class="wrap">{body}</main><footer class="wrap muted site-footer"><span>King James Version (public domain).</span><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></footer>"#,
+        r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}"{read_current}>Read</a><a href="{explore}"{explore_current}>Explore</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header><main class="wrap">{body}</main><footer class="wrap muted site-footer"><span>King James Version (public domain).</span><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></footer>"#,
         home = esc(&home),
+        explore = esc(&explore),
+        read_current = read_current,
+        explore_current = explore_current,
         q = esc(q)
     )
 }
 
 fn document(title: &str, body: &str) -> String {
-    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style></head><body>{body}</body></html>", esc(title))
+    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script></head><body>{body}</body></html>", esc(title))
 }
 
 fn html_response(
@@ -493,7 +510,10 @@ fn json_response(status: u16, body: String) -> RouteResponse {
 }
 
 fn home_content(client: bool) -> String {
-    let mut s = String::from("<h2>Old Testament</h2><div class=\"grid\">");
+    let mut s = format!(
+        "<section class=\"explore-teaser\"><h2>Explore the Tabernacle</h2><p>Read the construction passages beside a schematic, selectable scene.</p><a href=\"{}\">Explore the Tabernacle →</a></section><h2>Old Testament</h2><div class=\"grid\">",
+        esc(&route_path("/explore", client))
+    );
     for i in 0..66 {
         if i == 39 {
             s.push_str("</div><h2>New Testament</h2><div class=\"grid\">");
@@ -528,7 +548,13 @@ fn chapter_content(
     client: bool,
 ) -> String {
     let chs = &bible().books[b];
-    let mut s = format!("<h1>{} {}</h1><div class=\"scripture\">", NAMES[b], ch);
+    let reference = format!("{} {}", NAMES[b], ch);
+    let mut s = format!(
+        "<h1>{} {}</h1>{}<div class=\"scripture\">",
+        NAMES[b],
+        ch,
+        tabernacle::listen_controls(&reference)
+    );
     for (i, verse) in chs[ch - 1].iter().enumerate() {
         let n = i + 1;
         let class = if highlighted.is_some_and(|(a, z)| n >= a && n <= z) {
@@ -537,7 +563,8 @@ fn chapter_content(
             "v"
         };
         s.push_str(&format!(
-            "<span class=\"{class}\" id=\"v{n}\"><sup>{n}</sup>{} </span>",
+            "<span class=\"{class}\" id=\"v{n}\" data-reference=\"{}\" data-verse=\"{n}\"><sup>{n}</sup>{} </span>",
+            esc(&reference),
             esc(verse)
         ));
     }
@@ -622,12 +649,14 @@ fn verses(reference: &Ref) -> Vec<(usize, &'static str)> {
 
 fn passage_content(reference: &Ref, url: &str) -> String {
     let mut s = format!(
-        "<h1>{}</h1><div class=\"scripture\">",
-        esc(&ref_label(reference))
+        "<h1>{}</h1>{}<div class=\"scripture\">",
+        esc(&ref_label(reference)),
+        tabernacle::listen_controls(&ref_label(reference))
     );
     for (n, text) in verses(reference) {
         s.push_str(&format!(
-            "<span class=\"v\"><sup>{n}</sup>{} </span>",
+            "<span class=\"v\" data-reference=\"{}\" data-verse=\"{n}\"><sup>{n}</sup>{} </span>",
+            esc(&ref_label(reference)),
             esc(text)
         ));
     }
@@ -846,14 +875,7 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
     let path = decode_component(raw_path);
     let params = query_params(raw_query);
     match path.as_str() {
-        "/" => html_response(
-            200,
-            "The Bible",
-            "",
-            &home_content(client),
-            client,
-            anchor,
-        ),
+        "/" => html_response(200, "The Bible", "", &home_content(client), client, anchor),
         "/go" => {
             let query = params.get("q").cloned().unwrap_or_default();
             let query = query.trim();
@@ -881,6 +903,10 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
         }
         "/api/verse" => api_verse(&params),
         "/api/search" => api_search(&params),
+        "/explore" => tabernacle::explore_page(client),
+        "/explore/tabernacle" => {
+            tabernacle::selected_page(params.get("part").map(String::as_str), client)
+        }
         _ if path.starts_with("/book/") => {
             let rest = &path[6..];
             if let Some((name, chapter)) = rest.split_once('/') {

@@ -1,3 +1,4 @@
+import { initExperience } from './experience.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
@@ -45,6 +46,7 @@ function installPage(response) {
     return;
   }
   app.innerHTML = response.body;
+  initExperience(app);
 
   const form = app.querySelector("#lookup");
   form?.addEventListener("submit", (event) => {

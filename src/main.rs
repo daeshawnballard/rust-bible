@@ -13,6 +13,12 @@ async fn serve(uri: Uri) -> Response {
             .body(Body::from(include_bytes!("../web/logo.png").as_slice()))
             .expect("static logo response is valid");
     }
+    if uri.path() == "/experience.js" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(include_str!("../web/experience.js")))
+            .expect("experience script response is valid");
+    }
     let raw_uri = uri.path_and_query().map_or("/", |value| value.as_str());
     let rendered = rust_bible::route(raw_uri, false);
     let mut builder = Response::builder()

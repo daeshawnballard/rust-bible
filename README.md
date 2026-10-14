@@ -55,6 +55,14 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 - Full-text search where every query word must match, with up to 200 displayed results and escaped highlighting.
 - Verse ranges and highlighted chapter links.
 
+## Explore and listen
+
+Choose **Explore** to open an interactive, isometric Tabernacle model. Select a furnishing in the scene or use the named part list to see its related KJV passages. The cutaway lifts the roof and veil so the interior can be inspected. The model is an illustrated reconstruction, with schematic placement and appearance.
+
+Scripture is rendered verbatim from the embedded KJV corpus. **Explanation** is a separate, explicitly labeled section with passage references; it is not added to Scripture playback. The supporting references are listed in [the scene source notes](docs/tabernacle-sources.md).
+
+Chapter, passage, and Explore pages include **Listen to Scripture**, pause/resume, stop, speed, and voice controls. Speech uses the browser's Web Speech API and available device voices, so no API key is embedded or required. Voice availability and pronunciation depend on the browser/device. Playback starts only after a user action, highlights the current verse, and stops on navigation. Browsers without working speech support show an explicit unavailable/error message.
+
 ## Data source
 
 <https://raw.githubusercontent.com/thiagobodruk/bible/master/json/en_kjv.json> (KJV, public domain). The source file's book names are in Portuguese, so English names are supplied in code by book order.
