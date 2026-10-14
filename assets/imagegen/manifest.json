@@ -162,6 +162,1590 @@
       "prompt": "Use case: historical-scene. Production website asset, a SINGLE dedicated museum-quality illustration, NOT a website mockup, NOT a collage. Use the attached approved website concept ONLY as style reference, especially the isolated candlestick portrait on its right. Rich realistic miniature materials and precise craftsmanship, dramatic soft warm side lighting, quiet charcoal-black backdrop (#141615 edges), elegant restrained gold/brass/linen palette. 3:2 landscape composition, complete subject comfortably centered, fills about 80% of frame with breathing room, sharp tactile detail and believable grounded shadow. No text, letters, labels, people, UI, frame, watermark, pedestal plaque, extra unrelated objects. This is an artistic reconstruction, not archaeological evidence. SUBJECT: The gold-overlaid table of shewbread as the SINGLE isolated subject: a finely made rectangular acacia-wood table clad in gold with a gold raised rim, four straight substantial gold-clad legs, rings and carrying poles along the sides. Twelve small round flat loaves arranged in two neat stacks of six on top, not random piles. Museum-quality hammered gold, warm shadows, entire table and poles visible in three-quarter view. No candlestick, tent, altar, people or surroundings.",
       "edit": "Surgical count correction with measured spatial guide. Image1 is the EDIT TARGET. Image2 is ONLY a location mask/guide; never copy its colors/marks/background into final art. In Image1, the LEFT bread stack now has SEVEN loaves while the RIGHT has SIX. The red region in Image2 (x525..772,y309..351 in the 1536x1024 frame) marks ONLY the lowest, seventh loaf of the LEFT stack. Remove that ONE bottom-left loaf and let the remaining six rest down onto the table. Do not redraw or add any bread. Preserve all SIX right-stack loaves exactly. Preserve the upper SIX left-stack loaves, their texture, original table, gold poles, legs, background, lighting, camera and framing. The final must show six plainly separated layers at left and the existing six at right. No other changes, text, guide marks or labels.",
       "notes": "Accepted final has two visible stacks of six loaves; decorative materials and proportions remain an artistic reconstruction."
+    },
+    {
+      "id": "cover-genesis",
+      "book": "Genesis",
+      "index": 0,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/genesis.png",
+      "final": "web/art/covers/genesis.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Genesis. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient flourishing garden: a great olive-like tree beside a clear winding river, distant green hills and golden dawn, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:40:19.632Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-2593ab5b-9484-453e-9702-d6bc8e9d5d71.png"
+    },
+    {
+      "id": "cover-exodus",
+      "book": "Exodus",
+      "index": 1,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/exodus.png",
+      "final": "web/art/covers/exodus.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Exodus. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A cloaked elderly traveler seen only from behind holding a wooden staff at the path through two towering parted walls of sea, golden dawn ahead. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:39:57.360Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-7ca10dd1-f1f5-4798-852c-9b86aaf7c471.png"
+    },
+    {
+      "id": "cover-leviticus",
+      "book": "Leviticus",
+      "index": 2,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/leviticus.png",
+      "final": "web/art/covers/leviticus.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Leviticus. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A gold seven-lamp candlestick and bronze/gold altar in a richly woven purple and crimson sanctuary, warm sacred lamp light, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:40:40.519Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-0d2f735d-1e9f-4535-8f7f-d5f2dd8b6c54.png"
+    },
+    {
+      "id": "cover-numbers",
+      "book": "Numbers",
+      "index": 3,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/numbers.png",
+      "final": "web/art/covers/numbers.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Numbers. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A vast desert encampment of pale linen tents beneath rugged mountains at sunset, a small group of robed travelers on the path. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:41:01.233Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-361a51c2-cdb7-43f5-a3a9-f7b9bced47c7.png"
+    },
+    {
+      "id": "cover-deuteronomy",
+      "book": "Deuteronomy",
+      "index": 4,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/deuteronomy.png",
+      "final": "web/art/covers/deuteronomy.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Deuteronomy. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A robed elder seen from behind with wooden staff looking over a sunlit valley from a mountain, two plain uninscribed stone tablets near the foreground. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:41:22.506Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-4fc1f9e5-2642-49b3-a0ba-97b2b65b2026.png"
+    },
+    {
+      "id": "cover-joshua",
+      "book": "Joshua",
+      "index": 5,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/joshua.png",
+      "final": "web/art/covers/joshua.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Joshua. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A majestic ancient walled stone city on a rocky hill with olive trees and a glowing golden sky; no modern buildings. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:41:43.885Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-7dd17ef5-2330-42b7-8a4b-32a5e3b0254f.png"
+    },
+    {
+      "id": "cover-judges",
+      "book": "Judges",
+      "index": 6,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/judges.png",
+      "final": "web/art/covers/judges.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Judges. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient bronze/iron sword resting point-down among weathered rocks, distant rugged hills and olive trees under amber clouds, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:42:06.223Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-441284f9-d32d-4d5a-a819-7d97bec7417b.png"
+    },
+    {
+      "id": "cover-ruth",
+      "book": "Ruth",
+      "index": 7,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/ruth.png",
+      "final": "web/art/covers/ruth.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Ruth. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A modestly dressed ancient woman gathering fallen grain in golden wheat fields at sunset, distant village, gentle hopeful mood. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:41:43.155Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-df35f7c2-5389-433a-bc1c-ead7874c4da7.png"
+    },
+    {
+      "id": "cover-1-samuel",
+      "book": "1 Samuel",
+      "index": 8,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-samuel.png",
+      "final": "web/art/covers/1-samuel.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Samuel. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A weathered shepherd's crook and an ancient curved horn resting on a stone ledge above sunlit hills, warm sunrise, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:42:26.546Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-7b92a9bc-6acf-479a-a849-03804a01e2fa.png"
+    },
+    {
+      "id": "cover-2-samuel",
+      "book": "2 Samuel",
+      "index": 9,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-samuel.png",
+      "final": "web/art/covers/2-samuel.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Samuel. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A richly carved ancient wooden harp in foreground, a distant fortified hill city and river under golden light, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:42:44.705Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-8ed9b1ec-464b-43a7-82d1-0a55278fe337.png"
+    },
+    {
+      "id": "cover-1-kings",
+      "book": "1 Kings",
+      "index": 10,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-kings.png",
+      "final": "web/art/covers/1-kings.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Kings. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient Jerusalem sanctuary facade with tall bronze pillars, cedar doorway and gold detailing in radiant dawn, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:43:04.434Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-0b2537f2-30b3-422a-a019-eac288d9063c.png"
+    },
+    {
+      "id": "cover-2-kings",
+      "book": "2 Kings",
+      "index": 11,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-kings.png",
+      "final": "web/art/covers/2-kings.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Kings. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: Weathered ancient city walls and a quiet broken gate overlooking distant hills beneath dramatic amber storm clouds, no fire or victims. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:43:23.363Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-e885294e-64b6-4bed-a570-bc4483c52f56.png"
+    },
+    {
+      "id": "cover-1-chronicles",
+      "book": "1 Chronicles",
+      "index": 12,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-chronicles.png",
+      "final": "web/art/covers/1-chronicles.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Chronicles. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A strong ancient olive tree with intricate spreading roots before a distant hill city, symbolic generations, sunlight, no people or diagrams. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:42:03.459Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-971811e8-7e70-447b-a70d-8dc1ddc9200b.png"
+    },
+    {
+      "id": "cover-2-chronicles",
+      "book": "2 Chronicles",
+      "index": 13,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-chronicles.png",
+      "final": "web/art/covers/2-chronicles.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Chronicles. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A magnificent ancient temple courtyard with bronze pillars and basin, cedar and gold textures lit by evening sunlight, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:42:26.009Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-72e28bf3-4ee2-42f8-99be-eff12d0e1624.png"
+    },
+    {
+      "id": "cover-ezra",
+      "book": "Ezra",
+      "index": 14,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/ezra.png",
+      "final": "web/art/covers/ezra.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Ezra. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A partly unrolled blank ancient parchment scroll beside a clay oil lamp, a restored stone sanctuary in the distance under golden dawn. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:42:48.289Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-aec15aa3-fae5-46f3-a2ae-f6ac50acd88f.png"
+    },
+    {
+      "id": "cover-nehemiah",
+      "book": "Nehemiah",
+      "index": 15,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/nehemiah.png",
+      "final": "web/art/covers/nehemiah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Nehemiah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A newly restored ancient stone city wall and timber gate above a golden valley, small distant workers carrying stones, hopeful morning. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:43:12.215Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-e860bb6a-3a54-4ade-ace2-c5eb2cf5b40a.png"
+    },
+    {
+      "id": "cover-esther",
+      "book": "Esther",
+      "index": 16,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/esther.png",
+      "final": "web/art/covers/esther.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Esther. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An elegant ancient gold royal crown on deep purple cloth with pomegranate motifs, a Persian palace in soft background light, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:43:06.902Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-f7ce2604-cb0f-4699-90c9-e657cedc1998.png"
+    },
+    {
+      "id": "cover-job",
+      "book": "Job",
+      "index": 17,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/job.png",
+      "final": "web/art/covers/job.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Job. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A solitary modestly robed man seen from behind on a windswept rocky plain beneath a clearing night sky and first golden light, no injuries. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:43:28.588Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-7b314c90-a980-4443-8251-d49402db51ba.png"
+    },
+    {
+      "id": "cover-psalms",
+      "book": "Psalms",
+      "index": 18,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/psalms.png",
+      "final": "web/art/covers/psalms.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Psalms. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient wooden lyre beside an olive tree and quiet flowing water, rolling green hills, luminous golden sunrise, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:43:49.372Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-e861d1a0-86e5-4736-8bed-e17454ccfd69.png"
+    },
+    {
+      "id": "cover-proverbs",
+      "book": "Proverbs",
+      "index": 19,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/proverbs.png",
+      "final": "web/art/covers/proverbs.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Proverbs. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An open ancient blank parchment book and small glowing clay oil lamp on a worn cedar desk, an olive branch, quiet warm wisdom atmosphere. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:44:12.368Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-3e71bcd6-b5d8-4f3f-ba05-db67b32fbe73.png"
+    },
+    {
+      "id": "cover-ecclesiastes",
+      "book": "Ecclesiastes",
+      "index": 20,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/ecclesiastes.png",
+      "final": "web/art/covers/ecclesiastes.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Ecclesiastes. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient spreading tree casting long late-afternoon shadows over weathered stone and a quiet valley, contemplative amber light. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:44:32.946Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-ecdc0a11-9aa5-4836-8a93-e79b5e47107f.png"
+    },
+    {
+      "id": "cover-song-of-solomon",
+      "book": "Song of Solomon",
+      "index": 21,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/song-of-solomon.png",
+      "final": "web/art/covers/song-of-solomon.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Song of Solomon. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A lush ancient vineyard and walled garden with lilies, pomegranate blossoms and a sunlit arched entry, romantic restrained richness, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:44:11.963Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-de24f9f3-93ba-40ab-8416-14e27a6f6c57.png"
+    },
+    {
+      "id": "cover-isaiah",
+      "book": "Isaiah",
+      "index": 22,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/isaiah.png",
+      "final": "web/art/covers/isaiah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Isaiah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ornate pair of ancient bronze tongs holding a glowing coal before a softly illuminated sanctuary arch, dramatic gold light, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:44:30.863Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-a194ab29-2fbf-4cd1-adac-6efc74646469.png"
+    },
+    {
+      "id": "cover-jeremiah",
+      "book": "Jeremiah",
+      "index": 23,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/jeremiah.png",
+      "final": "web/art/covers/jeremiah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Jeremiah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A simple handmade clay jar on weathered stone beside an ancient city gate, olive leaves and distant hills under a muted golden sky. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:44:52.050Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-e305f4fa-5a23-427c-8df7-abc8dd4b9ac9.png"
+    },
+    {
+      "id": "cover-lamentations",
+      "book": "Lamentations",
+      "index": 24,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/lamentations.png",
+      "final": "web/art/covers/lamentations.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Lamentations. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: Quiet weathered stone ruins of an ancient hill city, a willow bending beside a dry gate, soft amber light through dusk clouds, no bodies. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:44:51.820Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-47656337-c206-4a4f-96f2-3ac551b572b0.png"
+    },
+    {
+      "id": "cover-ezekiel",
+      "book": "Ezekiel",
+      "index": 25,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/ezekiel.png",
+      "final": "web/art/covers/ezekiel.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Ezekiel. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A richly detailed symbolic bronze wheel nested within a wheel, above golden clouds and distant plain, visionary light, no human or divine figure. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:14.367Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-d3854b54-7fc8-4bd9-b029-032edef5aafc.png"
+    },
+    {
+      "id": "cover-daniel",
+      "book": "Daniel",
+      "index": 26,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/daniel.png",
+      "final": "web/art/covers/daniel.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Daniel. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A robed man seen from behind in a rocky cavern with peaceful resting lions, a shaft of golden daylight from above, no violence. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:33.772Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-1d8cf8cf-1d08-46bb-bf35-c568c8f35bf2.png"
+    },
+    {
+      "id": "cover-hosea",
+      "book": "Hosea",
+      "index": 27,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/hosea.png",
+      "final": "web/art/covers/hosea.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Hosea. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient country path returning through a restored vineyard toward a warmly lit modest house, olive branches and gentle golden dawn. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:56.242Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-663b9497-e3dd-49fd-ae1b-fecf4c322e22.png"
+    },
+    {
+      "id": "cover-joel",
+      "book": "Joel",
+      "index": 28,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/joel.png",
+      "final": "web/art/covers/joel.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Joel. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: Golden grain bending beneath a refreshing rain shower, storm clouds clearing to warm light over an ancient farming valley, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:10.459Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-a1df5e14-67fb-4b6a-8f2a-4d1310cc49cb.png"
+    },
+    {
+      "id": "cover-amos",
+      "book": "Amos",
+      "index": 29,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/amos.png",
+      "final": "web/art/covers/amos.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Amos. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient plumb line hanging beside a handmade stone wall and sycamore orchard, warm sunlit hills, no people or writing. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:30.502Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-329bada7-cc74-4b72-a15f-0020babc668c.png"
+    },
+    {
+      "id": "cover-obadiah",
+      "book": "Obadiah",
+      "index": 30,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/obadiah.png",
+      "final": "web/art/covers/obadiah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Obadiah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A dramatic ancient fortress high in red sandstone cliffs above a desert valley, warm setting sun, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:51.508Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-24552f7b-ba65-427b-b778-c99dbc149c69.png"
+    },
+    {
+      "id": "cover-jonah",
+      "book": "Jonah",
+      "index": 31,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/jonah.png",
+      "final": "web/art/covers/jonah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Jonah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A great whale-like fish surfacing beneath deep turquoise waves, an ancient wooden sailing ship in the distance, dramatic golden break in storm clouds. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:45:52.047Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-c83e7547-420b-4dd5-84e8-f497434eb34f.png"
+    },
+    {
+      "id": "cover-micah",
+      "book": "Micah",
+      "index": 32,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/micah.png",
+      "final": "web/art/covers/micah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Micah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: Rolling green hills around a small ancient Bethlehem-like village, a clear bright star above a golden horizon and an olive branch, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:46:12.508Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-5c1bb958-15bc-4309-a462-419c13d36e3a.png"
+    },
+    {
+      "id": "cover-nahum",
+      "book": "Nahum",
+      "index": 33,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/nahum.png",
+      "final": "web/art/covers/nahum.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Nahum. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A distant great ancient walled city beside a wide river beneath heavy storm clouds, a warm band of light, no destruction or victims. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:46:34.134Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-0c800555-3755-4a76-b6cd-4ccbc5def922.png"
+    },
+    {
+      "id": "cover-habakkuk",
+      "book": "Habakkuk",
+      "index": 34,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/habakkuk.png",
+      "final": "web/art/covers/habakkuk.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Habakkuk. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A solitary ancient stone watchtower overlooking a quiet valley at dawn, olive trees and golden sky, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:46:12.622Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-581d1ab9-762e-445c-82a8-ef9dd04e171c.png"
+    },
+    {
+      "id": "cover-zephaniah",
+      "book": "Zephaniah",
+      "index": 35,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/zephaniah.png",
+      "final": "web/art/covers/zephaniah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Zephaniah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: Ancient stone city walls emerging from deep storm shadows into clear golden morning light, a small growing flowering branch in foreground. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:46:15.114Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-645b52ba-8f5b-4a70-8c68-4e0b88939315.png"
+    },
+    {
+      "id": "cover-haggai",
+      "book": "Haggai",
+      "index": 36,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/haggai.png",
+      "final": "web/art/covers/haggai.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Haggai. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient sanctuary under restoration: cedar beams, carefully laid stone blocks and hand tools under warm hopeful sunlight, no modern construction. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:46:37.292Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-2b5904a9-40f1-4862-baa6-9f1b0a1bbd64.png"
+    },
+    {
+      "id": "cover-zechariah",
+      "book": "Zechariah",
+      "index": 37,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/zechariah.png",
+      "final": "web/art/covers/zechariah.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Zechariah. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A beautiful gold seven-lamp candlestick framed by two olive trees, ancient sanctuary hints and luminous amber sky, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:46:57.792Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-f2aa8068-f554-4dde-b934-23f12c0305ff.png"
+    },
+    {
+      "id": "cover-malachi",
+      "book": "Malachi",
+      "index": 38,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/malachi.png",
+      "final": "web/art/covers/malachi.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Malachi. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient refiner's crucible glowing warmly over a small controlled forge, tongs and gold metal beside it, dark workshop, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:47:22.460Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-38aa9e65-3bfa-4a33-8dd1-224e5f59ed28.png"
+    },
+    {
+      "id": "cover-matthew",
+      "book": "Matthew",
+      "index": 39,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/matthew.png",
+      "final": "web/art/covers/matthew.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Matthew. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A distant robed teacher seen from behind on a sunlit hillside, a small listening gathering below and a blue lake beyond, no close-up faces. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:47:44.338Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-87b3d4aa-9a64-40cd-8b11-a22dcf2a8dfe.png"
+    },
+    {
+      "id": "cover-mark",
+      "book": "Mark",
+      "index": 40,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/mark.png",
+      "final": "web/art/covers/mark.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Mark. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A simple ancient wooden fishing boat drawn up on a lakeshore, coiled nets and rugged hills under fast-moving clouds and golden light, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:48:06.176Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-dfe5b2a3-39a9-4b70-989e-4eda18d6172a.png"
+    },
+    {
+      "id": "cover-luke",
+      "book": "Luke",
+      "index": 41,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/luke.png",
+      "final": "web/art/covers/luke.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Luke. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient physician's leather satchel, a small clay vessel, a rolled blank parchment and oil lamp on a cedar table, warm compassionate mood. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:47:24.025Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-7cb7f4b4-4dcc-4bb0-816e-6f5b03cbf5cc.png"
+    },
+    {
+      "id": "cover-john",
+      "book": "John",
+      "index": 42,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/john.png",
+      "final": "web/art/covers/john.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for John. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A graceful eagle above still blue water and a luminous golden horizon, hills and light reflected in ripples, no human or divine figures. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:47:48.175Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-01855b55-1c35-43b9-b3de-7ba9f63e8212.png"
+    },
+    {
+      "id": "cover-acts",
+      "book": "Acts",
+      "index": 43,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/acts.png",
+      "final": "web/art/covers/acts.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Acts. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient wooden sailboat departing a Mediterranean harbor beneath a golden sky, a stone road toward a distant city, hopeful expansive mood. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:48:10.589Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-5c96103d-c11e-4146-bb0e-d9b1078eba6d.png"
+    },
+    {
+      "id": "cover-romans",
+      "book": "Romans",
+      "index": 44,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/romans.png",
+      "final": "web/art/covers/romans.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Romans. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An open blank parchment scroll and bronze clay-style oil lamp before an ancient Roman stone arch, warm Mediterranean light, no writing. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:48:30.954Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-1df306d2-ff1b-44c8-b595-2756e2669fce.png"
+    },
+    {
+      "id": "cover-1-corinthians",
+      "book": "1 Corinthians",
+      "index": 45,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-corinthians.png",
+      "final": "web/art/covers/1-corinthians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Corinthians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A classical ancient Corinthian stone column beside three intertwined cords and an olive branch, sea and glowing horizon, no letters. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:48:51.119Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-88c0c6e6-f89f-4b0b-a962-fdee492af5a6.png"
+    },
+    {
+      "id": "cover-2-corinthians",
+      "book": "2 Corinthians",
+      "index": 46,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-corinthians.png",
+      "final": "web/art/covers/2-corinthians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Corinthians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A modest weathered clay jar with subtle light glowing from within its cracks, ancient cloth on a stone ledge, gentle gold illumination. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:48:27.953Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-3256e4ce-2a09-4a85-afd7-8060c7b3f850.png"
+    },
+    {
+      "id": "cover-galatians",
+      "book": "Galatians",
+      "index": 47,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/galatians.png",
+      "final": "web/art/covers/galatians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Galatians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A broken ancient iron chain resting beside an olive branch on a sunlit stone step, distant hills and open golden sky, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:48:53.039Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-d95d10ae-dc80-4de4-9543-e136ba60b010.png"
+    },
+    {
+      "id": "cover-ephesians",
+      "book": "Ephesians",
+      "index": 48,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/ephesians.png",
+      "final": "web/art/covers/ephesians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Ephesians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient bronze helmet and simple round shield beside an olive tree, quiet rugged landscape and golden dawn, no battle or people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:49:13.339Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-b514f2fd-ca7b-4333-bd32-c059bcfbe1e9.png"
+    },
+    {
+      "id": "cover-philippians",
+      "book": "Philippians",
+      "index": 49,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/philippians.png",
+      "final": "web/art/covers/philippians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Philippians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A glowing clay lamp and small flowering branch by a simple ancient stone window, warm light reaching into a quiet shadowed room. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:49:33.991Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-6e8b681e-77ed-42ac-8b7e-565b0a976e7d.png"
+    },
+    {
+      "id": "cover-colossians",
+      "book": "Colossians",
+      "index": 50,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/colossians.png",
+      "final": "web/art/covers/colossians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Colossians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A majestic high mountain peak in luminous golden dawn above clouds, a quiet ancient stone path and olive leaves in foreground, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:49:09.869Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-3cbdeb63-ccbf-4ea7-bd09-01e830012ecd.png"
+    },
+    {
+      "id": "cover-1-thessalonians",
+      "book": "1 Thessalonians",
+      "index": 51,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-thessalonians.png",
+      "final": "web/art/covers/1-thessalonians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Thessalonians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A beautiful ancient Mediterranean harbor with simple wooden ships under a starry predawn sky, first golden light on hills. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:49:32.141Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-15295f86-f7e5-4567-84dd-291aa0b2c136.png"
+    },
+    {
+      "id": "cover-2-thessalonians",
+      "book": "2 Thessalonians",
+      "index": 52,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-thessalonians.png",
+      "final": "web/art/covers/2-thessalonians.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Thessalonians. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient stone watchtower above golden farmland and a modest village beneath a clear predawn sky, serene watchful mood. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:49:30.261Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-c125599c-aafe-4e1a-a406-2517aa8d7fca.png"
+    },
+    {
+      "id": "cover-1-timothy",
+      "book": "1 Timothy",
+      "index": 53,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-timothy.png",
+      "final": "web/art/covers/1-timothy.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Timothy. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A small steady clay oil lamp beside a blank unrolled parchment on a carefully worn cedar teaching desk, warm quiet lamplight. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:49:50.793Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-03b2bb7f-afce-4336-8d30-11b141589c0d.png"
+    },
+    {
+      "id": "cover-2-timothy",
+      "book": "2 Timothy",
+      "index": 54,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-timothy.png",
+      "final": "web/art/covers/2-timothy.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Timothy. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A lit clay oil lamp beside a weathered blank parchment book, an open ancient doorway showing a stony path into golden dawn. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:50:12.345Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-8afbfc13-0425-46cf-b5de-c040efe22800.png"
+    },
+    {
+      "id": "cover-titus",
+      "book": "Titus",
+      "index": 55,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/titus.png",
+      "final": "web/art/covers/titus.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Titus. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient Cretan coastal village with olive groves, terracotta rooftops, turquoise sea and a warm sunlit path, no modern architecture. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:50:33.912Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-06758434-8231-4dda-8c3f-cdb0feb82cad.png"
+    },
+    {
+      "id": "cover-philemon",
+      "book": "Philemon",
+      "index": 56,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/philemon.png",
+      "final": "web/art/covers/philemon.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Philemon. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An open humble ancient wooden doorway with two welcoming robed figures at a distance, broken chain on the threshold, warm gentle light. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:50:34.191Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-6d6904c7-43bd-4adc-a7da-55f2dc4c55ca.png"
+    },
+    {
+      "id": "cover-hebrews",
+      "book": "Hebrews",
+      "index": 57,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/hebrews.png",
+      "final": "web/art/covers/hebrews.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Hebrews. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient sanctuary veil drawn aside toward brilliant golden light, a simple bronze anchor in foreground, no figures. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:50:53.166Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-befce8ae-fe0d-418c-9249-c2a34888acd6.png"
+    },
+    {
+      "id": "cover-james",
+      "book": "James",
+      "index": 58,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/james.png",
+      "final": "web/art/covers/james.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for James. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A healthy fruit-bearing olive tree after rain beside a practical stone path, warm morning sun, rich leaves and simple ancient countryside. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:51:17.704Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-877ef140-5774-4b78-bcd3-d4b4c039a300.png"
+    },
+    {
+      "id": "cover-1-peter",
+      "book": "1 Peter",
+      "index": 59,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-peter.png",
+      "final": "web/art/covers/1-peter.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 Peter. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A heavy ancient stone-and-wood anchor on a rocky shore with dark waves and a band of hopeful golden light, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:51:40.388Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-39d94d54-8227-4c24-aca3-1a2593bdf437.png"
+    },
+    {
+      "id": "cover-2-peter",
+      "book": "2 Peter",
+      "index": 60,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-peter.png",
+      "final": "web/art/covers/2-peter.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 Peter. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A glowing clay lamp on weathered stone above the sea, one bright morning star and golden dawn at the horizon, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:52:00.351Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-9eff84b9-b0b7-4959-9705-edd6981a3da9.png"
+    },
+    {
+      "id": "cover-1-john",
+      "book": "1 John",
+      "index": 61,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/1-john.png",
+      "final": "web/art/covers/1-john.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 1 John. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A small glowing oil lamp in a humble ancient home, warm light through an open wooden window onto an olive grove, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:50:52.360Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-1e06f229-ddcd-41d9-b2d3-0a7dce951d3e.png"
+    },
+    {
+      "id": "cover-2-john",
+      "book": "2 John",
+      "index": 62,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/2-john.png",
+      "final": "web/art/covers/2-john.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 2 John. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A small neatly rolled blank parchment letter tied with a simple cord and a red wax seal, an olive sprig on dark cedar, no writing. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:51:11.918Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-01ed46ef-24cb-4220-ab49-284987aa3f6a.png"
+    },
+    {
+      "id": "cover-3-john",
+      "book": "3 John",
+      "index": 63,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/3-john.png",
+      "final": "web/art/covers/3-john.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 3 John. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A warmly open ancient guesthouse doorway, a simple table with bread and a clay cup inside, golden evening welcome, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:51:33.781Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-480d1027-43da-4166-a469-7bcb3c2b1574.png"
+    },
+    {
+      "id": "cover-jude",
+      "book": "Jude",
+      "index": 64,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/jude.png",
+      "final": "web/art/covers/jude.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Jude. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: An ancient stone fortress holding one steady lamp at its gate through a gathering dark storm, a resilient olive branch, warm gold light. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:51:33.037Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-ed067c5f-c003-47a3-b6fa-c6aab2f212ec.png"
+    },
+    {
+      "id": "cover-revelation",
+      "book": "Revelation",
+      "index": 65,
+      "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+      "source": "assets/imagegen/source/covers/revelation.png",
+      "final": "web/art/covers/revelation.webp",
+      "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Revelation. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A radiant ancient golden city beyond a crystal-clear river, flourishing trees and luminous warm sky, intricate gates, no human or divine figure. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+      "tool": "built-in image_gen",
+      "generated_at": "2026-10-14T22:51:38.340Z",
+      "reference": "assets/imagegen/reference/library-approved.png",
+      "processing": [
+        "full-frame resize to 768px wide",
+        "WebP quality 88"
+      ],
+      "dimensions": {
+        "width": 768,
+        "height": 1152
+      },
+      "format": "webp",
+      "alpha": false,
+      "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+      "generation_output": "exec-3d081802-d1fe-4439-834f-c70df10775e6.png"
     }
   ]
 }

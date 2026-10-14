@@ -1,0 +1,24 @@
+{
+  "id": "cover-3-john",
+  "book": "3 John",
+  "index": 63,
+  "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+  "source": "assets/imagegen/source/covers/3-john.png",
+  "final": "web/art/covers/3-john.webp",
+  "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for 3 John. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A warmly open ancient guesthouse doorway, a simple table with bread and a clay cup inside, golden evening welcome, no people. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+  "tool": "built-in image_gen",
+  "generated_at": "2026-10-14T22:51:33.781Z",
+  "reference": "assets/imagegen/reference/library-approved.png",
+  "processing": [
+    "full-frame resize to 768px wide",
+    "WebP quality 88"
+  ],
+  "dimensions": {
+    "width": 768,
+    "height": 1152
+  },
+  "format": "webp",
+  "alpha": false,
+  "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+  "generation_output": "exec-480d1027-43da-4166-a469-7bcb3c2b1574.png"
+}

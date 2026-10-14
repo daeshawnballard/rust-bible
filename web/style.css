@@ -138,3 +138,66 @@ body:has(.illustrated-explore) header .wrap{width:calc(100% - 64px)}
 @media(max-width:760px){.scripture-player{gap:8px}.player-title{font-size:1rem}}
 
 img.object-preview{object-fit:contain;object-position:center;background:#141615}
+
+/* Image 4: a library of illustrated volumes, with all lettering in HTML. */
+body:has(.library-page){--bg:#131514;--fg:#e8e3d9;--muted:#b9b1a2;--accent:#f0cf87;--card:#191c19;--border:#9b87513d;background:radial-gradient(ellipse at 50% 0,#272b2540,transparent 65%),#131514;color:var(--fg)}
+.library-header{background:linear-gradient(115deg,#1c1f1b,#171a18);border-bottom:1px solid #ad986159}
+.library-header .wrap{max-width:1536px;padding:8px 4%;gap:38px;flex-wrap:nowrap;justify-content:flex-start}
+.library-header .brand{font-size:1.85rem;font-weight:400;letter-spacing:.02em;color:#f2d295;gap:14px}
+.brand-mark{width:58px;height:38px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none}
+.library-header .site-navigation{gap:28px;flex-wrap:nowrap}
+.library-header .site-navigation a{font:1.04rem Georgia,'Times New Roman',serif;padding:5px 0 7px;border-radius:0;color:#dfd9cc}
+.library-header .site-navigation a[aria-current=page]{background:none;color:#f6d898;box-shadow:inset 0 -1px #eac77e}
+.library-header #lookup{margin-left:auto;flex:0 1 365px;min-width:200px;gap:5px;position:relative}
+.library-header #lookup::before{content:'⌕';position:absolute;left:12px;top:2px;color:#ddd3be;font:25px Georgia,serif;pointer-events:none}
+.library-header #lookup input{background:#171a18a6;border-color:#8a8d815c;border-radius:10px;padding:7px 10px 7px 35px;font:14px Georgia,'Times New Roman',serif;color:#f1e6d0;width:100%}
+.library-header #lookup button{border:1px solid #a7905866;background:transparent;color:#e7cd93;font:13px Georgia,serif;border-radius:8px;padding:5px 10px}
+main.wrap:has(.library-page){max-width:1536px;width:100%;padding:27px 3.6% 125px}
+.library-heading,.library-count{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,var(--cover-width,240px)),1fr));gap:25px 27px;align-items:start}
+.library-card{min-width:0;max-width:410px;width:100%;justify-self:center;font-family:Georgia,'Times New Roman',serif}
+.book-cover{container-type:inline-size;position:relative;display:block;isolation:isolate;aspect-ratio:5/7;margin:0 0 10px 9px;border:1px solid #ba9e62a8;border-radius:2px 4px 4px 2px;background:#1b2019;box-shadow:2px 6px 12px #0009,inset 0 0 0 3px #2d2b20;transition:transform .18s,box-shadow .18s;color:#f4d694;text-decoration:none}
+.book-cover::before{content:'';position:absolute;z-index:3;left:-11px;top:0;bottom:0;width:10px;border-radius:5px 0 0 5px;background:repeating-linear-gradient(0deg,transparent 0 16%,#d2a75a80 16.2% 16.8%,#121713 17% 18%,transparent 18.3% 32%),linear-gradient(90deg,#080c0b,#655535 23%,#1d2922 48%,#111713 75%,#a68d5677 85%,#151b16);box-shadow:-3px 2px 5px #0007}
+.book-cover::after{content:'';position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(180deg,#0a100fd4 0,#0a100f6b 18%,transparent 36%,transparent 70%,#09100bbf 88%,#09100bf0 100%);box-shadow:inset 0 0 16px #000a}
+.cover-art{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;border-radius:3px}
+.cover-frame{position:absolute;z-index:2;inset:6px;border:1px solid #ceaa5b9e;box-shadow:0 0 0 2px #231f1377,inset 0 0 0 3px #11150c33;pointer-events:none}
+.cover-frame::before,.cover-frame::after{content:'❧';position:absolute;color:#c9a359c7;font:clamp(15px,9cqw,27px) Georgia,serif;left:4px;right:4px;height:24px;text-align:center;line-height:1}
+.cover-frame::before{top:0;border-top:1px solid #cca55677}.cover-frame::after{bottom:0;transform:rotate(180deg);border-top:1px solid #cca55677}
+.cover-title{position:absolute;z-index:3;top:20px;left:10px;right:10px;text-align:center;margin:0;color:#f6d79b;font:400 clamp(1rem,12cqw,2.55rem)/1.1 Georgia,'Times New Roman',serif;font-variant:small-caps;letter-spacing:.025em;text-shadow:0 2px 3px #000c;overflow-wrap:normal}
+.cover-title.long-title{font-size:clamp(1rem,9cqw,1.85rem)}
+.cover-tagline{position:absolute;z-index:3;bottom:20px;left:12px;right:12px;margin:0;text-align:center;color:#f2d28c;font:400 clamp(.66rem,5.7cqw,.97rem)/1.25 Georgia,'Times New Roman',serif;text-wrap:balance;text-shadow:0 1px 3px #000}
+.book-description{margin:0 0 8px 13px;font-size:1rem;line-height:1.4;color:#dedbd2;text-wrap:pretty}
+.book-category{display:none}
+.book-read-link{display:inline-block;margin-left:13px;color:#efcc80;font-size:1rem;line-height:1.4;min-height:26px}
+.book-cover:hover{transform:translateY(-3px);box-shadow:2px 10px 20px #000b;text-decoration:none}.book-cover:focus-visible{outline:2px solid #ffe2a5;outline-offset:5px}.book-read-link:focus-visible{outline:1px solid #ffe2a5;outline-offset:4px}
+.library-tools{position:fixed;z-index:10;left:26px;right:26px;bottom:22px;max-width:1484px;margin:0 auto;padding:16px 22px;background:linear-gradient(115deg,#1d201cf5,#111512f5);border:1px solid #c4a66c;border-radius:20px;box-shadow:0 8px 30px #000a;backdrop-filter:blur(16px);color:#f2d99e;font:1rem Georgia,'Times New Roman',serif}
+.library-tools[open]{display:flex;align-items:center;gap:28px}
+.library-tools summary{display:flex;align-items:center;gap:16px;list-style:none;cursor:pointer;white-space:nowrap;font-size:1.25rem;flex:none}
+.library-tools summary::-webkit-details-marker{display:none}
+.library-tools summary::before{content:'☷';display:grid;place-items:center;width:48px;height:48px;border:1px solid #f3ce83;border-radius:50%;font:27px Georgia,serif;color:#efd08a}
+.library-tools summary:focus-visible{outline:2px solid #ecd195;outline-offset:5px;border-radius:4px}
+.library-tools form{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+.tools-fields{display:grid;grid-template-columns:minmax(120px,1fr) minmax(130px,1fr) minmax(120px,1fr) minmax(145px,1fr);gap:22px;flex:1;align-items:center;min-width:0}
+.tools-fields label{min-width:0;font-size:0;border-left:1px solid #a29a7e44;padding-left:22px}
+.tools-fields select{width:100%;appearance:auto;min-height:42px;padding:8px 10px;background:#10151199;color:#f0eadf;border:1px solid #898c7b55;border-radius:9px;font:1rem Georgia,'Times New Roman',serif;cursor:pointer}
+.tools-fields select option{background:#1c211b;color:#f0eadf}
+.tools-fields label:last-child{display:flex;gap:14px;align-items:center}
+.tools-fields label:last-child::before,.tools-fields label:last-child::after{content:'♧';color:#efcf87;font:24px Georgia,serif;flex:none}
+.tools-fields label:last-child::after{font-size:34px}
+.tools-fields input[type=range]{accent-color:#edca7d;padding:0;width:100%;min-width:55px;cursor:pointer;height:28px;background:transparent;border:0;flex:1}
+.tools-fields output{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+.tools-actions{display:flex;gap:5px}.tools-actions button{padding:6px 8px;font:12px Georgia,serif;background:transparent;border:1px solid #b69b5a66;color:#dac18c;min-height:34px}
+.library-empty{min-height:50vh;display:grid;align-content:center;text-align:center}.library-empty h2{font-size:2rem;color:#f1d69a}.library-empty p{color:#c9c0ad}
+body:has(.library-page) .site-footer{max-width:none;padding:16px 4%;margin:0 0 95px;font:13px Georgia,'Times New Roman',serif;color:#c9c5bc;border-color:#a99a6a55}
+body:has(.library-page) .site-footer a{color:#d7d0c1}
+@media(min-width:761px) and (max-width:1200px){.library-header .wrap{gap:22px}.library-header .site-navigation{gap:18px}.library-header .brand{font-size:1.6rem}.brand-mark{width:42px}.library-tools{padding:13px 16px}.library-tools[open]{gap:14px}.library-tools summary{font-size:1rem;gap:9px}.library-tools summary::before{width:36px;height:36px}.tools-fields{gap:12px;grid-template-columns:1fr 1fr 1fr 1fr}.tools-fields label{padding-left:12px}.tools-fields select{font-size:.86rem;padding:7px}.tools-fields label:last-child{gap:6px}.tools-fields label:last-child::before,.tools-fields label:last-child::after{display:none}.tools-actions{flex-direction:column}.tools-actions button{min-height:24px;padding:2px 5px}}
+@media(max-width:760px){.library-header .wrap{display:grid;grid-template-columns:1fr auto;gap:10px 12px;padding:12px 16px}.library-header .brand{font-size:1.45rem;gap:8px}.brand-mark{width:37px;height:29px}.library-header .site-navigation{gap:14px}.library-header .site-navigation a{font-size:.86rem}.library-header #lookup{grid-column:1/-1;min-width:0;max-width:none;margin:0;width:100%}.library-header #lookup input{font-size:16px;min-height:40px}.library-header #lookup button{font-size:15px;min-width:42px}main.wrap:has(.library-page){padding:22px 18px 180px}.library-grid{gap:23px 20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(var(--cover-width,240px)*.58)),1fr))}.library-card{max-width:340px}.cover-title{top:17px;font-size:clamp(1rem,12cqw,2rem)}.cover-title.long-title{font-size:clamp(.88rem,9cqw,1.75rem)}.cover-tagline{bottom:16px;font-size:clamp(.64rem,5.6cqw,.95rem);left:8px;right:8px}.cover-frame{inset:5px}.book-description{font-size:.88rem;line-height:1.4;margin-left:9px}.book-read-link{font-size:.9rem;margin-left:9px;min-height:36px}.library-tools{left:12px;right:12px;bottom:12px;padding:12px 15px;border-radius:16px;max-height:75vh;overflow-y:auto}.library-tools[open]{display:block}.library-tools summary{font-size:1.08rem;gap:11px}.library-tools summary::before{width:34px;height:34px;font-size:24px}.library-tools summary::after{content:'⌃';margin-left:auto;font-family:system-ui;font-size:20px}.library-tools:not([open]) summary::after{content:'⌄'}.library-tools form{display:block;min-width:0;margin-top:14px}.tools-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:13px 10px}.tools-fields label{border:0;padding:0;font:11px/1.4 system-ui,sans-serif;display:block;color:#c3b793}.tools-fields select{font-size:.88rem;margin-top:4px;padding:8px;min-height:42px}.tools-fields label:last-child{display:flex;flex-wrap:wrap;gap:5px}.tools-fields label:last-child::before,.tools-fields label:last-child::after{display:none}.tools-fields input[type=range]{flex-basis:100%;width:100%;min-width:0}.tools-actions{margin-top:14px;justify-content:flex-end;gap:8px}.tools-actions button{font-size:.88rem;min-height:36px;padding:7px 15px}body:has(.library-page) .site-footer{padding:15px 18px;margin-bottom:90px;gap:10px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.book-cover{transition:none}.book-cover:hover{transform:none}}
+@media(max-width:760px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,calc(var(--cover-width,240px)*.58)),1fr))}}
+.library-tools summary::before{content:'';background:center / 25px 25px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23efd08a' stroke-width='1.5'%3E%3Cpath d='M3 8h26M3 16h26M3 24h26'/%3E%3Ccircle cx='11' cy='8' r='3' fill='%23191c18'/%3E%3Ccircle cx='22' cy='16' r='3' fill='%23191c18'/%3E%3Ccircle cx='13' cy='24' r='3' fill='%23191c18'/%3E%3C/svg%3E")}
+.tools-fields label:last-child::before,.tools-fields label:last-child::after{content:'';width:24px;height:24px;background:currentColor;mask:center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 36' fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath d='M3 4c6-2 12-1 17 2v27c-5-3-11-4-17-2zM37 4c-6-2-12-1-17 2v27c5-3 11-4 17-2z'/%3E%3C/svg%3E")}
+.tools-fields label:last-child::after{width:39px;height:34px}
+.cover-title{font-size:clamp(1rem,14cqw,2.8rem)}.cover-title.long-title{font-size:clamp(.95rem,10cqw,2rem)}
+@media(max-width:760px){.cover-title{font-size:clamp(1rem,14cqw,2.25rem)}.cover-title.long-title{font-size:clamp(.85rem,10cqw,1.75rem)}}
+@media(max-width:760px){.library-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,max(120px,calc(var(--cover-width,240px)*.58))),1fr))}.library-header .site-navigation a{min-height:36px;display:flex;align-items:center}}
+@media(max-width:380px){.library-header .wrap{padding:10px 12px;gap:8px}.library-header .brand{font-size:1.2rem;gap:6px}.library-header .brand-mark{width:30px;height:28px}.library-header .site-navigation{gap:12px}.library-header .site-navigation a{font-size:.76rem}}

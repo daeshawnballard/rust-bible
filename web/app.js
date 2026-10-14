@@ -1,9 +1,11 @@
 import { initExperience } from './experience.js';
+import { disposeLibrary, initLibrary } from './library.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 
 function showError(message) {
+  disposeLibrary(app);
   app.innerHTML = "";
   const heading = document.createElement("h1");
   heading.textContent = "Reader couldn't start";
@@ -35,6 +37,7 @@ function createRustBridge(exports) {
 }
 
 function installPage(response) {
+  disposeLibrary(app);
   if (response.location) {
     window.location.hash = response.location;
     return;
@@ -47,6 +50,7 @@ function installPage(response) {
   }
   app.innerHTML = response.body;
   initExperience(app);
+  initLibrary(app);
 
   const form = app.querySelector("#lookup");
   form?.addEventListener("submit", (event) => {

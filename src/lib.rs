@@ -6,6 +6,7 @@ use std::{collections::HashMap, sync::OnceLock};
 static RAW: &str = include_str!("../data/kjv.json");
 const CSS: &str = include_str!("../web/style.css");
 
+mod library;
 mod tabernacle;
 
 const NAMES: [&str; 66] = [
@@ -440,7 +441,9 @@ fn route_path(path: &str, client: bool) -> String {
 fn page_body(q: &str, body: &str, client: bool) -> String {
     let home = route_path("/", client);
     let explore = route_path("/explore", client);
+    let listen = route_path("/book/Psalms/23", client);
     let is_explore = body.contains("id=\"explore\"") || body.contains("class=\"explore-page\"");
+    let is_library = body.contains("data-library");
     let read_current = if is_explore {
         ""
     } else {
@@ -451,18 +454,36 @@ fn page_body(q: &str, body: &str, client: bool) -> String {
     } else {
         ""
     };
+    let header = if is_library {
+        format!(
+            r#"<header class="library-header"><div class="wrap"><a class="brand" href="{home}"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" aria-current="page">Library</a><a href="{explore}">Explore</a><a href="{listen}">Listen</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"#,
+            home = esc(&home),
+            explore = esc(&explore),
+            listen = esc(&listen),
+            q = esc(q)
+        )
+    } else {
+        format!(
+            r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}"{read_current}>Read</a><a href="{explore}"{explore_current}>Explore</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header>"#,
+            home = esc(&home),
+            explore = esc(&explore),
+            read_current = read_current,
+            explore_current = explore_current,
+            q = esc(q)
+        )
+    };
     format!(
-        r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}"{read_current}>Read</a><a href="{explore}"{explore_current}>Explore</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header><main class="wrap">{body}</main><footer class="wrap muted site-footer"><span>King James Version (public domain).</span><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></footer>"#,
-        home = esc(&home),
-        explore = esc(&explore),
-        read_current = read_current,
-        explore_current = explore_current,
-        q = esc(q)
+        "{header}<main class=\"wrap\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version (public domain).</span><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></footer>"
     )
 }
 
 fn document(title: &str, body: &str) -> String {
-    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script></head><body>{body}</body></html>", esc(title))
+    let library_script = if body.contains("data-library") {
+        "<script type=\"module\" src=\"/library.js\"></script>"
+    } else {
+        ""
+    };
+    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
 }
 
 fn html_response(
@@ -507,25 +528,6 @@ fn json_response(status: u16, body: String) -> RouteResponse {
         anchor: None,
         body,
     }
-}
-
-fn home_content(client: bool) -> String {
-    let mut s = format!(
-        "<section class=\"explore-teaser\"><h2>Explore the Tabernacle</h2><p>Read the construction passages beside a schematic, selectable scene.</p><a href=\"{}\">Explore the Tabernacle →</a></section><h2>Old Testament</h2><div class=\"grid\">",
-        esc(&route_path("/explore", client))
-    );
-    for i in 0..66 {
-        if i == 39 {
-            s.push_str("</div><h2>New Testament</h2><div class=\"grid\">");
-        }
-        s.push_str(&format!(
-            "<a href=\"{}\">{}</a>",
-            route_path(&format!("/book/{}", slug(i)), client),
-            NAMES[i]
-        ));
-    }
-    s.push_str("</div>");
-    s
 }
 
 fn book_content(b: usize, client: bool) -> String {
@@ -875,7 +877,22 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
     let path = decode_component(raw_path);
     let params = query_params(raw_query);
     match path.as_str() {
-        "/" => html_response(200, "The Bible", "", &home_content(client), client, anchor),
+        "/" => html_response(
+            200,
+            "The Bible Library",
+            "",
+            &library::render(&params, client),
+            client,
+            anchor,
+        ),
+        "/library" => html_response(
+            200,
+            "The Bible Library",
+            "",
+            &library::render(&params, client),
+            client,
+            anchor,
+        ),
         "/go" => {
             let query = params.get("q").cloned().unwrap_or_default();
             let query = query.trim();

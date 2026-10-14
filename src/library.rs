@@ -1,0 +1,625 @@
+//! Rust-rendered book gallery and its server-side filter/sort contract.
+
+use std::collections::HashMap;
+
+use super::{bible, esc, route_path, NAMES};
+
+#[derive(Clone, Copy)]
+struct BookDetails {
+    category: &'static str,
+    tagline: &'static str,
+    description: &'static str,
+}
+
+const BOOKS: [BookDetails; 66] = [
+    BookDetails {
+        category: "law",
+        tagline: "Beginnings, families, and promises",
+        description: "Creation, the patriarchs, and the first promises.",
+    },
+    BookDetails {
+        category: "law",
+        tagline: "Freedom and a people formed",
+        description: "From slavery in Egypt to the covenant at Sinai.",
+    },
+    BookDetails {
+        category: "law",
+        tagline: "Worship and communal life",
+        description: "Laws for worship, offerings, and holy living.",
+    },
+    BookDetails {
+        category: "law",
+        tagline: "A wilderness generation",
+        description: "Israel's journey and trials in the wilderness.",
+    },
+    BookDetails {
+        category: "law",
+        tagline: "Moses speaks to a new generation",
+        description: "Moses' final addresses and the covenant renewed.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Entering and settling the land",
+        description: "Israel's entry into Canaan and the division of the land among the tribes.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Cycles of conflict and renewal",
+        description: "Accounts of Israel's leaders during a time of recurring conflict and change.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Loyalty in an unsettled time",
+        description: "A family story of loss, loyalty, and a new beginning in Bethlehem.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "The first king of Israel",
+        description: "The rise of Israel's monarchy, Saul's reign, and David's early years.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "David's reign and its aftermath",
+        description:
+            "David's kingship, family conflicts, and the transition toward Solomon's rule.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "A kingdom divided",
+        description: "Solomon's reign and the early history of the divided kingdoms.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Two kingdoms, changing fortunes",
+        description: "The later kings of Israel and Judah through the fall of both kingdoms.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Remembering David's line",
+        description: "Genealogies and accounts of David's reign, worship, and succession.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Judah's kings and the temple",
+        description: "The history of Judah's kings, the temple, and the kingdom's exile.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "A return and a rebuilt temple",
+        description: "The return from exile and the rebuilding of the temple in Jerusalem.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Jerusalem restored",
+        description:
+            "Nehemiah's return, the rebuilding of Jerusalem's walls, and community renewal.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "Courage in the Persian court",
+        description: "A Jewish community's survival during the reign of a Persian king.",
+    },
+    BookDetails {
+        category: "wisdom-poetry",
+        tagline: "Suffering, questions, and wisdom",
+        description:
+            "A poetic dialogue about suffering, justice, and the limits of human understanding.",
+    },
+    BookDetails {
+        category: "wisdom-poetry",
+        tagline: "Songs for many seasons",
+        description: "Prayers and songs of praise, lament, thanksgiving, and trust.",
+    },
+    BookDetails {
+        category: "wisdom-poetry",
+        tagline: "Wisdom for daily life",
+        description: "Short teachings about wisdom, character, relationships, and conduct.",
+    },
+    BookDetails {
+        category: "wisdom-poetry",
+        tagline: "Reflections on life and time",
+        description: "Reflections on work, pleasure, mortality, and the search for meaning.",
+    },
+    BookDetails {
+        category: "wisdom-poetry",
+        tagline: "A poem of love and longing",
+        description: "A collection of lyrical poems about love, desire, and delight.",
+    },
+    BookDetails {
+        category: "major-prophets",
+        tagline: "Justice, warning, and hope",
+        description:
+            "Prophetic messages about Judah, surrounding nations, judgment, and restoration.",
+    },
+    BookDetails {
+        category: "major-prophets",
+        tagline: "A prophet in a changing city",
+        description: "Jeremiah's warnings and laments during the final years of Judah.",
+    },
+    BookDetails {
+        category: "major-prophets",
+        tagline: "Poems of grief for Jerusalem",
+        description: "Five poems mourning Jerusalem's destruction and expressing grief and hope.",
+    },
+    BookDetails {
+        category: "major-prophets",
+        tagline: "Visions among the exiles",
+        description: "Ezekiel's prophetic messages and symbolic visions during the exile.",
+    },
+    BookDetails {
+        category: "major-prophets",
+        tagline: "Faithfulness in a foreign court",
+        description: "Stories of life in exile and visions concerning kingdoms and future events.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Returning to faithful love",
+        description:
+            "A prophetic account using family imagery to speak about Israel's unfaithfulness.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "A call to return",
+        description:
+            "A call to turn back to God, framed by a locust crisis and a coming day of reckoning.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Justice and responsibility",
+        description: "Warnings about injustice and a vision of renewed hope for Israel.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "A warning to Edom",
+        description: "A short prophecy concerning Edom and the restoration of Zion.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "A reluctant messenger",
+        description: "The story of Jonah's mission to Nineveh and his response to its people.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Justice, humility, and hope",
+        description: "Messages about injustice, coming judgment, and a future of peace.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "A city brought low",
+        description: "A prophecy announcing Nineveh's fall and the end of its violence.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Questions in a troubled time",
+        description: "Habakkuk brings questions about injustice and receives a vision of judgment.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Judgment and a remnant",
+        description:
+            "Warnings to Judah and surrounding nations, alongside a promise of restoration.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Rebuilding the temple",
+        description: "Messages urging the returned community to resume work on the temple.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Visions of renewal",
+        description: "Visions and messages about Jerusalem, its people, and future restoration.",
+    },
+    BookDetails {
+        category: "minor-prophets",
+        tagline: "Renewed worship and justice",
+        description: "A call to faithful worship, justice, and renewed life in the community.",
+    },
+    BookDetails {
+        category: "gospels",
+        tagline: "The story of Jesus the Messiah",
+        description: "An account of Jesus' teaching, works, death, and resurrection.",
+    },
+    BookDetails {
+        category: "gospels",
+        tagline: "Good news in action",
+        description:
+            "A concise account of Jesus' ministry, journey to Jerusalem, and resurrection.",
+    },
+    BookDetails {
+        category: "gospels",
+        tagline: "An orderly account of Jesus' life",
+        description: "An account of Jesus' birth, teaching, ministry, death, and resurrection.",
+    },
+    BookDetails {
+        category: "gospels",
+        tagline: "Signs, teaching, and belief",
+        description: "Selected signs and teachings that present Jesus' identity and invite belief.",
+    },
+    BookDetails {
+        category: "history",
+        tagline: "The early church takes shape",
+        description: "The spread of the early Christian movement from Jerusalem to Rome.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Good news and a life of faith",
+        description:
+            "Paul's letter to the church in Rome about the gospel, faith, and life together.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Unity and order in the church",
+        description: "Paul addresses divisions, worship, relationships, and the resurrection.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Reconciliation and encouragement",
+        description: "Paul reflects on ministry, reconciliation, generosity, and weakness.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Freedom and a shared promise",
+        description: "Paul argues for freedom in Christ and life guided by the Spirit.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Life together in Christ",
+        description: "A letter about grace, unity, and the life of the church.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Joy, humility, and steadfastness",
+        description: "Paul writes about joy, humility, perseverance, and life centered on Christ.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Christ and the life of the church",
+        description: "A letter encouraging the Colossians to live with wisdom and gratitude.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Hope while awaiting Christ",
+        description: "Paul encourages a young church in faith, mutual care, and hope.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Steadfastness and daily work",
+        description:
+            "Paul responds to questions about Christ's return and encourages steady living.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Guidance for a young leader",
+        description: "Paul encourages Timothy in teaching, community care, and leadership.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Perseverance in ministry",
+        description: "Paul urges Timothy to remain faithful in ministry through hardship.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "Teaching for a young church",
+        description: "Paul gives Titus guidance about leadership, teaching, and community life.",
+    },
+    BookDetails {
+        category: "pauline-letters",
+        tagline: "A personal appeal for Onesimus",
+        description:
+            "Paul makes a personal appeal concerning Onesimus and their shared relationship.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Endurance and a better covenant",
+        description: "A sustained reflection on perseverance, priesthood, and covenant.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Faith expressed in action",
+        description: "Practical teaching about speech, care for others, wisdom, and active faith.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Hope and a holy life",
+        description:
+            "Peter encourages communities facing hardship to live with hope and integrity.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Remembering the first letter",
+        description:
+            "A brief letter urging readers to remember earlier teaching and remain steadfast.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Love expressed in community",
+        description: "A letter about truth, love, and care for one another.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Walking in truth and love",
+        description: "A short personal letter urging hospitality and faithful conduct.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Welcoming faithful messengers",
+        description:
+            "A short personal letter commending hospitality and warning against harmful leadership.",
+    },
+    BookDetails {
+        category: "general-letters",
+        tagline: "Contending for the faith",
+        description: "A warning against destructive teaching and a call to remain faithful.",
+    },
+    BookDetails {
+        category: "apocalyptic",
+        tagline: "Visions of witness and hope",
+        description:
+            "Apocalyptic visions addressed to seven churches and depicting judgment and renewal.",
+    },
+];
+
+const CATEGORIES: &[(&str, &str)] = &[
+    ("law", "Law"),
+    ("history", "History"),
+    ("wisdom-poetry", "Wisdom & Poetry"),
+    ("major-prophets", "Major Prophets"),
+    ("minor-prophets", "Minor Prophets"),
+    ("gospels", "Gospels"),
+    ("pauline-letters", "Pauline Letters"),
+    ("general-letters", "General Letters"),
+    ("apocalyptic", "Apocalyptic"),
+];
+
+fn selected(value: &str, current: &str) -> &'static str {
+    if value == current {
+        " selected"
+    } else {
+        ""
+    }
+}
+
+fn cover_size(params: &HashMap<String, String>) -> usize {
+    params
+        .get("size")
+        .and_then(|value| value.parse::<usize>().ok())
+        .unwrap_or(240)
+        .clamp(160, 340)
+}
+
+fn category_is_valid(value: &str) -> bool {
+    value == "all" || CATEGORIES.iter().any(|(slug, _)| *slug == value)
+}
+
+fn filtered_books(testament: &str, category: &str, sort: &str) -> Vec<usize> {
+    let testament = match testament {
+        "old" | "new" => testament,
+        _ => "all",
+    };
+    let category = if category_is_valid(category) {
+        category
+    } else {
+        "all"
+    };
+    let sort = match sort {
+        "title" | "title-desc" | "chapters-desc" => sort,
+        _ => "bible",
+    };
+    let mut books = (0..NAMES.len())
+        .filter(|&index| {
+            let testament_matches = testament == "all"
+                || (testament == "old" && index < 39)
+                || (testament == "new" && index >= 39);
+            let category_matches = category == "all" || BOOKS[index].category == category;
+            testament_matches && category_matches
+        })
+        .collect::<Vec<_>>();
+
+    match sort {
+        "title" => books.sort_by(|a, b| {
+            NAMES[*a]
+                .to_ascii_lowercase()
+                .cmp(&NAMES[*b].to_ascii_lowercase())
+        }),
+        "title-desc" => books.sort_by(|a, b| {
+            NAMES[*b]
+                .to_ascii_lowercase()
+                .cmp(&NAMES[*a].to_ascii_lowercase())
+        }),
+        "chapters-desc" => books.sort_by(|a, b| {
+            bible().books[*b]
+                .len()
+                .cmp(&bible().books[*a].len())
+                .then_with(|| a.cmp(b))
+        }),
+        _ => {}
+    }
+    books
+}
+
+fn book_slug(name: &str) -> String {
+    name.to_ascii_lowercase().replace(' ', "-")
+}
+
+fn render_controls(testament: &str, category: &str, sort: &str, size: usize) -> String {
+    let mut html = String::from(
+        "<details class=\"library-tools\" open data-library-tools><summary>Library tools</summary><form id=\"library-tools-form\" action=\"/library\" method=\"get\"><div class=\"tools-fields\"><label>Testament<select name=\"testament\" aria-label=\"Testament\">",
+    );
+    for (value, label) in [
+        ("all", "All testaments"),
+        ("old", "Old Testament"),
+        ("new", "New Testament"),
+    ] {
+        html.push_str(&format!(
+            "<option value=\"{value}\"{}>{label}</option>",
+            selected(testament, value)
+        ));
+    }
+    html.push_str(&format!("</select></label><label>Category<select name=\"category\" aria-label=\"Category\"><option value=\"all\"{}>All categories</option>", selected(category, "all")));
+    for (value, label) in CATEGORIES {
+        html.push_str(&format!(
+            "<option value=\"{value}\"{}>{label}</option>",
+            selected(category, value)
+        ));
+    }
+    html.push_str("</select></label><label>Sort<select name=\"sort\" aria-label=\"Sort books\">");
+    for (value, label) in [
+        ("bible", "Bible order"),
+        ("title", "Title A-Z"),
+        ("title-desc", "Title Z-A"),
+        ("chapters-desc", "Chapters most"),
+    ] {
+        html.push_str(&format!(
+            "<option value=\"{value}\"{}>{label}</option>",
+            selected(sort, value)
+        ));
+    }
+    html.push_str(&format!(
+        "</select></label><label>Cover size<input id=\"library-size\" type=\"range\" name=\"size\" min=\"160\" max=\"340\" step=\"20\" value=\"{size}\" aria-label=\"Cover size\"><output for=\"library-size\">{size}px</output></label></div><div class=\"tools-actions\"><button type=\"button\" data-library-reset>Reset</button><button type=\"submit\">Apply</button></div></form></details>"
+    ));
+    html
+}
+
+pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
+    let raw_testament = params.get("testament").map(String::as_str).unwrap_or("all");
+    let testament = match raw_testament {
+        "old" | "new" => raw_testament,
+        _ => "all",
+    };
+    let raw_category = params.get("category").map(String::as_str).unwrap_or("all");
+    let category = if category_is_valid(raw_category) {
+        raw_category
+    } else {
+        "all"
+    };
+    let raw_sort = params.get("sort").map(String::as_str).unwrap_or("bible");
+    let sort = match raw_sort {
+        "title" | "title-desc" | "chapters-desc" => raw_sort,
+        _ => "bible",
+    };
+    let size = cover_size(params);
+    let books = filtered_books(testament, category, sort);
+    let total = NAMES.len();
+    let count = if books.len() == total {
+        format!("Showing all {total} books")
+    } else {
+        format!("Showing {} of {total} books", books.len())
+    };
+    let mut html = format!(
+        "<section class=\"library-page\" data-library><div class=\"library-heading\"><p class=\"eyebrow\">The Bible · King James Version</p><h1>Explore the Library</h1><p>Browse the books of the Bible by testament, literary form, or title.</p></div>{}<p class=\"library-count\" role=\"status\">{count}</p>",
+        render_controls(testament, category, sort, size)
+    );
+
+    if books.is_empty() {
+        html.push_str(&format!(
+            "<div class=\"library-empty\"><h2>No books match these filters</h2><p>Clear the selections to browse all 66 books.</p><a href=\"{}\">Reset filters</a></div>",
+            esc(&route_path("/library", client))
+        ));
+    } else {
+        html.push_str(&format!(
+            "<div class=\"library-grid\" style=\"--cover-width:{size}px\">"
+        ));
+        for index in books {
+            let name = NAMES[index];
+            let detail = BOOKS[index];
+            let testament = if index < 39 { "old" } else { "new" };
+            let category_label = CATEGORIES
+                .iter()
+                .find(|(slug, _)| *slug == detail.category)
+                .map(|(_, label)| *label)
+                .unwrap_or("Book");
+            let book_path = format!("/book/{}", book_slug(name));
+            let chapter_path = format!("{book_path}/1");
+            let title_class = if name.len() > 10 {
+                "cover-title long-title"
+            } else {
+                "cover-title"
+            };
+            let cover = format!("/art/covers/{}.webp", book_slug(name));
+            html.push_str(&format!(
+                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><div class=\"cover-frame\" aria-hidden=\"true\"></div><h2 class=\"{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" href=\"{}\">Read {} →</a></article>",
+                esc(name), detail.category, esc(&route_path(&book_path, client)), esc(name),
+                cover, title_class, esc(name), esc(detail.tagline), esc(detail.description),
+                if testament == "old" { "Old Testament" } else { "New Testament" },
+                esc(&route_path(&chapter_path, client)), esc(name)
+            ));
+        }
+        html.push_str("</div>");
+    }
+    html.push_str("</section>");
+    html
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{cover_size, filtered_books, BOOKS, CATEGORIES};
+    use crate::NAMES;
+    use std::collections::HashMap;
+
+    #[test]
+    fn metadata_covers_the_canonical_66_books_and_known_genres() {
+        assert_eq!(BOOKS.len(), 66);
+        assert_eq!(NAMES.len(), 66);
+        assert_eq!(
+            filtered_books("all", "all", "bible"),
+            (0..66).collect::<Vec<_>>()
+        );
+        assert_eq!(NAMES[0], "Genesis");
+        assert_eq!(NAMES[38], "Malachi");
+        assert_eq!(NAMES[39], "Matthew");
+        assert_eq!(NAMES[65], "Revelation");
+        for book in BOOKS {
+            assert!(CATEGORIES.iter().any(|(slug, _)| *slug == book.category));
+            assert!(!book.tagline.trim().is_empty());
+            assert!(!book.description.trim().is_empty());
+        }
+    }
+
+    #[test]
+    fn filters_combine_testament_and_genre_and_preserve_canonical_indices() {
+        let old_law = filtered_books("old", "law", "bible");
+        assert_eq!(old_law, vec![0, 1, 2, 3, 4]);
+        let new_letters = filtered_books("new", "pauline-letters", "bible");
+        assert_eq!(new_letters, (44..=56).collect::<Vec<_>>());
+        assert!(filtered_books("old", "gospels", "bible").is_empty());
+    }
+
+    #[test]
+    fn unknown_filter_and_sort_values_fall_back_to_the_full_canonical_list() {
+        assert_eq!(
+            filtered_books("unknown", "unknown", "unknown"),
+            (0..66).collect::<Vec<_>>()
+        );
+    }
+
+    #[test]
+    fn sorts_follow_title_or_real_chapter_counts() {
+        let ascending = filtered_books("all", "all", "title");
+        let descending = filtered_books("all", "all", "title-desc");
+        assert_eq!(NAMES[ascending[0]], "1 Chronicles");
+        assert_eq!(NAMES[*descending.last().unwrap()], "1 Chronicles");
+        let by_chapters = filtered_books("all", "all", "chapters-desc");
+        assert_eq!(NAMES[by_chapters[0]], "Psalms");
+        assert!(
+            crate::bible().books[by_chapters[0]].len()
+                >= crate::bible().books[by_chapters[1]].len()
+        );
+    }
+
+    #[test]
+    fn cover_size_uses_the_default_and_clamps_to_the_supported_range() {
+        assert_eq!(cover_size(&HashMap::new()), 240);
+        assert_eq!(
+            cover_size(&HashMap::from([("size".into(), "40".into())])),
+            160
+        );
+        assert_eq!(
+            cover_size(&HashMap::from([("size".into(), "900".into())])),
+            340
+        );
+        assert_eq!(
+            cover_size(&HashMap::from([("size".into(), "large".into())])),
+            240
+        );
+    }
+}

@@ -6,7 +6,21 @@ use axum::{
     Router,
 };
 
+mod cover_assets;
+
 async fn serve(uri: Uri) -> Response {
+    if let Some(bytes) = cover_assets::get(uri.path()) {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "image/webp")
+            .body(Body::from(bytes))
+            .expect("cover illustration response is valid");
+    }
+    if uri.path() == "/library.js" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(include_str!("../web/library.js")))
+            .expect("library script response is valid");
+    }
     let object_art = match uri.path() {
         "/art/objects/courtyard.webp" => {
             Some(include_bytes!("../web/art/objects/courtyard.webp").as_slice())

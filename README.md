@@ -2,9 +2,17 @@
 
 Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site>. Open-source repository: <https://github.com/daeshawnballard/rust-bible>.
 
-![The Bible reader](docs/site-reader.jpg)
+![Illustrated Bible Library](docs/site-library.png)
 
-A small KJV reader with one shared Rust implementation. Run it as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. The static browser app uses Rust for Bible lookup, reference parsing, search, and page rendering; its small JavaScript file only loads the module, passes routes through the ABI, and updates the page.
+A KJV reader and illustrated Library with one shared Rust implementation. Run it as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. Rust handles Bible lookup, reference parsing, search, Library filtering and sorting, and page rendering. Small JavaScript modules connect browser routes, Library controls, and device speech playback to that Rust implementation.
+
+## Illustrated Library
+
+The default homepage is a gallery of all 66 books, with individual painted cover illustrations, live HTML titles, short editorial descriptions, and chapter links. Each cover opens its book's chapter navigation; the **Read** link starts chapter 1.
+
+The floating **Library tools** bar filters by testament and category, sorts by Bible order, title, or chapter count, and changes cover size. Filters combine, selections are reflected in the URL, and **Reset** returns to all 66 books. On narrow screens the toolbar can collapse and the gallery adjusts to the available width. The header retains the reader's explicit fuzzy book suggestions and passage lookup.
+
+The 66 cover scenes were generated individually with built-in ImageGen from the approved Library reference. Titles, descriptions, ornaments, links, and controls are rendered as HTML/CSS, not baked into a screenshot. These illustrations and descriptions are editorial aids, separate from the KJV text. Original PNGs are preserved in `assets/imagegen/source/covers/`, optimized production WebPs in `web/art/covers/`, and prompts, source output identifiers, processing, and dimensions in [the asset manifest](assets/imagegen/manifest.json) and [per-book provenance](assets/imagegen/covers/). See [artwork notes](docs/library-artwork.md).
 
 ## Native server
 
@@ -30,7 +38,7 @@ Build the static site:
 ./scripts/build-wasm.sh
 ```
 
-The command writes the site shell and WASM module, `dist/art/tabernacle.webp` for the interactive scene, and all eight dedicated images from `web/art/objects/*.webp` to `dist/art/objects/`. Publish the contents of `dist/` on any static host. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
+The command writes the site shell and WASM module, all 66 cover WebPs to `dist/art/covers/`, `dist/art/tabernacle.webp` for the interactive scene, and all eight dedicated object images to `dist/art/objects/`. Publish the contents of `dist/` on any static host. Original ImageGen PNGs and provenance stay in the source repository and are not copied into the deployed bundle. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
 
 For a local static preview after building:
 
@@ -48,6 +56,8 @@ The native service keeps its JSON routes:
 A static host cannot run Axum or provide these as HTTP endpoints. The same JSON behavior is available inside the browser page through the Rust WASM adapter, for example `window.rustBibleApi("/api/verse?ref=John%203%3A16")`. It returns the parsed JSON object. This hosted API boundary is an in-page JavaScript call into Rust WebAssembly, not a network endpoint.
 
 ## Reader features
+
+![The Bible reader](docs/site-reader.jpg)
 
 - All 66 books and chapter navigation, with previous and next chapter links across book boundaries.
 - Reference lookup such as `John 3:16`, `John 3`, `1 Cor 13:4-7`, and `ps 23`; names are case-insensitive and common abbreviations are supported.

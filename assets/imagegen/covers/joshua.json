@@ -1,0 +1,24 @@
+{
+  "id": "cover-joshua",
+  "book": "Joshua",
+  "index": 5,
+  "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+  "source": "assets/imagegen/source/covers/joshua.png",
+  "final": "web/art/covers/joshua.webp",
+  "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for Joshua. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A majestic ancient walled stone city on a rocky hill with olive trees and a glowing golden sky; no modern buildings. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+  "tool": "built-in image_gen",
+  "generated_at": "2026-10-14T22:41:43.885Z",
+  "reference": "assets/imagegen/reference/library-approved.png",
+  "processing": [
+    "full-frame resize to 768px wide",
+    "WebP quality 88"
+  ],
+  "dimensions": {
+    "width": 768,
+    "height": 1152
+  },
+  "format": "webp",
+  "alpha": false,
+  "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+  "generation_output": "exec-7dd17ef5-2330-42b7-8a4b-32a5e3b0254f.png"
+}

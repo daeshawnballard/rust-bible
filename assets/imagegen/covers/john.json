@@ -1,0 +1,24 @@
+{
+  "id": "cover-john",
+  "book": "John",
+  "index": 42,
+  "intended_use": "Library book-cover illustration; title and controls remain real HTML",
+  "source": "assets/imagegen/source/covers/john.png",
+  "final": "web/art/covers/john.webp",
+  "prompt": "Use case: illustration-story. Asset type: individual portrait Bible book-cover illustration for John. Reference image: approved Library mockup, STYLE AND SUBJECT MOOD ONLY. Create ONLY the painted scene inside one cover, not a book, frame, layout or mockup. Subject: A graceful eagle above still blue water and a luminous golden horizon, hills and light reflected in ripples, no human or divine figures. Style: richly detailed old-master-inspired historical storybook painting, convincing natural materials, delicate brush texture, elegant dramatic light, warm antique gold and amber against charcoal shadows, muted olive and deep teal accents. Portrait 2:3 composition. Main subject occupies middle 70%, with darker quieter upper 18% and lower 12% where real website title and tagline will overlay. Full-bleed art, restrained reverent atmosphere, clear small-thumbnail silhouette. No text, no letters, no writing, no numerals, no title, no caption, no symbols resembling text, no UI, no border, no binding or spine, no visible modern objects. Do not reproduce the website or other covers.",
+  "tool": "built-in image_gen",
+  "generated_at": "2026-10-14T22:47:48.175Z",
+  "reference": "assets/imagegen/reference/library-approved.png",
+  "processing": [
+    "full-frame resize to 768px wide",
+    "WebP quality 88"
+  ],
+  "dimensions": {
+    "width": 768,
+    "height": 1152
+  },
+  "format": "webp",
+  "alpha": false,
+  "notes": "Artist interpretation; not Scripture or an archaeological reconstruction.",
+  "generation_output": "exec-01855b55-1c35-43b9-b3de-7ba9f63e8212.png"
+}
