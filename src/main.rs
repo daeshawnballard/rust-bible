@@ -9,6 +9,12 @@ use axum::{
 mod cover_assets;
 
 async fn serve(uri: Uri) -> Response {
+    if uri.path() == "/progress.js" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(include_str!("../web/progress.js")))
+            .expect("progress adapter response");
+    }
     if uri.path() == "/journey.js" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")

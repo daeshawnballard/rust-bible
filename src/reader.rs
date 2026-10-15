@@ -90,6 +90,7 @@ fn reader_controls(reference: &str) -> String {
     listen_controls(reference, "reading")
         .replacen("data-read-aloud", "data-read-aloud data-reader-audio", 1)
         .replace("Listen to this reading", "Listen from here")
+        .replace("</details>", "<small data-progress-notice>Verse saved on this device. Clear it on Today.</small></details>")
         .replace("<small>Device voice", "<label class=\"reader-follow\"><input type=\"checkbox\" data-audio-follow checked> Follow reading</label><small>Continues into following chapters. Device voice")
 }
 
@@ -202,8 +203,8 @@ fn continuation(
         let href = route_path(&format!("/book/{}/{ch}", slug(b)), client);
         let heading_id = format!("continued-{b}-{ch}");
         html.push_str(&format!(
-            "<section class=\"reader-continuation\" data-continuation-book=\"{b}\" data-continuation-chapter=\"{ch}\" aria-labelledby=\"{heading_id}\"><div class=\"reader-continuation-heading\"><h2 id=\"{heading_id}\">{}</h2><a href=\"{}\" aria-label=\"Open {}\">Open chapter ↗</a></div><div class=\"scripture reader-scripture\" role=\"group\" aria-label=\"{} Scripture\">",
-            esc(&label), esc(&href), esc(&title), esc(&label)
+            "<section class=\"reader-continuation\" data-continuation-book=\"{b}\" data-continuation-chapter=\"{ch}\" data-book-index=\"{b}\" data-chapter=\"{ch}\" data-book-name=\"{}\" data-reader-route=\"/book/{}/{ch}\" aria-labelledby=\"{heading_id}\"><div class=\"reader-continuation-heading\"><h2 id=\"{heading_id}\">{}</h2><a href=\"{}\" aria-label=\"Open {}\">Open chapter ↗</a></div><div class=\"scripture reader-scripture\" role=\"group\" aria-label=\"{} Scripture\">",
+            esc(NAMES[b]), esc(&slug(b)), esc(&label), esc(&href), esc(&title), esc(&label)
         ));
         for (index, verse) in text.iter().enumerate().skip(start - 1) {
             let number = index + 1;
@@ -360,6 +361,7 @@ mod tests {
     fn continuation_crosses_book_boundaries_but_stops_at_the_end_of_scripture() {
         let malachi = chapter_content(38, 4, None, true);
         assert!(malachi.contains("<h2 id=\"continued-39-1\">Matthew 1</h2>"));
+        assert!(malachi.contains("data-book-index=\"39\" data-chapter=\"1\" data-book-name=\"Matthew\" data-reader-route=\"/book/Matthew/1\""));
         assert!(malachi.contains("href=\"#/book/Matthew/1\" aria-label=\"Open Matthew 1\""));
         let final_chapter = chapter_content(65, 22, None, true);
         assert!(!final_chapter.contains("class=\"reader-continuation\""));

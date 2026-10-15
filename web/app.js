@@ -1,6 +1,7 @@
 import { initExperience } from './experience.js';
 import { disposeLibrary, initLibrary } from './library.js';
 import { initJourney, resolveTodayDate, routeFromHash } from './journey.js';
+import { resumeRoute } from './progress.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
@@ -53,7 +54,6 @@ function installPage(response, route, { initial = false } = {}) {
     return;
   }
   app.innerHTML = response.body;
-  initExperience(app);
   initLibrary(app);
 
   const form = app.querySelector("#lookup");
@@ -64,7 +64,10 @@ function installPage(response, route, { initial = false } = {}) {
   });
 
   const journeyResult = journey?.afterRender(route, response, { initial }) || {};
-  if (response.anchor) {
+  initExperience(app);
+  if (journeyResult.restoreVerseId) {
+    requestAnimationFrame(() => document.getElementById(journeyResult.restoreVerseId)?.scrollIntoView({block: "center", behavior: "instant"}));
+  } else if (response.anchor) {
     requestAnimationFrame(() => document.getElementById(response.anchor)?.scrollIntoView());
   } else if (journeyResult.restoreScrollY !== null && journeyResult.restoreScrollY !== undefined) {
     requestAnimationFrame(() => window.scrollTo({top: journeyResult.restoreScrollY, left: 0, behavior: 'instant'}));
@@ -98,18 +101,26 @@ async function start() {
   };
 
   journey = initJourney(app, {
-    resolveReaderUri(uri) {
+    resolveReaderUri(uri, position) {
       const response = invoke(uri);
       return response.status === 200
         && response.content_type.startsWith("text/html")
-        && response.body.includes("data-reader");
+        && response.body.includes("data-reader")
+        && (!position?.verse || invoke(`/api/verse?ref=${encodeURIComponent(`${position.book} ${position.chapter}:${position.verse}`)}`).status === 200);
     },
   });
 
   let initial = true;
   const renderCurrent = () => {
     try {
-      const route = resolveTodayDate(routeFromHash(window.location.hash));
+      let route = resolveTodayDate(routeFromHash(window.location.hash));
+      if (initial) {
+        const resumed = resumeRoute(route);
+        if (resumed !== route) {
+          window.history.replaceState(null, '', `#${resumed}`);
+          route = resumed;
+        }
+      }
       journey.beforeRender(route);
       const response = invoke(route);
       installPage(response, route, { initial });

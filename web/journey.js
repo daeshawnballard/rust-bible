@@ -1,4 +1,4 @@
-const LAST_OPENED_KEY = "rust-bible:journey:last-opened:v1";
+import { LAST_OPENED_KEY, readProgress, saveProgress, progressHref, matchingVerse, resumeRoute } from "./progress.js";
 const LIBRARY_RETURN_KEY = "rust-bible:journey:library-return:v1";
 const MAX_SCROLL_Y = 10_000_000;
 const mounted = new WeakMap();
@@ -102,43 +102,6 @@ function writeJson(storageName, key, value) {
   }
 }
 
-function canonicalSavedReader(value) {
-  if (!value || typeof value !== "object") return null;
-  const route = safeInternalPath(value.route);
-  if (!route || !isReaderRoute(route)) return null;
-  const book = typeof value.book === "string" ? value.book.trim() : "";
-  if (!book || book.length > 80) return null;
-  const routeChapter = Number(route.match(/\/([1-9]\d*)$/)?.[1]);
-  const chapter = Number.isInteger(value.chapter) && value.chapter > 0 ? value.chapter : routeChapter;
-  if (!Number.isInteger(chapter) || chapter !== routeChapter) return null;
-  const result = {
-    route,
-    book,
-    chapter,
-    savedAt: Number.isFinite(value.savedAt) ? value.savedAt : 0,
-  };
-  const bookIndex = Number(value.bookIndex);
-  if (Number.isInteger(bookIndex) && bookIndex >= 0 && bookIndex < 66) result.bookIndex = bookIndex;
-  return result;
-}
-
-function savedReader() {
-  return canonicalSavedReader(readJson("localStorage", LAST_OPENED_KEY));
-}
-
-function saveReader(section) {
-  const route = safeInternalPath(section?.dataset.readerRoute);
-  const book = section?.dataset.bookName?.trim();
-  if (!route || !isReaderRoute(route) || !book || book.length > 80) return;
-  const routeChapter = Number(route.match(/\/([1-9]\d*)$/)?.[1]);
-  const dataChapter = Number(section.dataset.chapter);
-  if (Number.isFinite(dataChapter) && dataChapter > 0 && dataChapter !== routeChapter) return;
-  const record = { route, book, chapter: routeChapter, savedAt: Date.now() };
-  const bookIndex = Number(section.dataset.bookIndex);
-  if (Number.isInteger(bookIndex) && bookIndex >= 0 && bookIndex < 66) record.bookIndex = bookIndex;
-  writeJson("localStorage", LAST_OPENED_KEY, record);
-}
-
 function readLibraryReturn(memoryValue) {
   const value = readJson("sessionStorage", LIBRARY_RETURN_KEY) || memoryValue;
   if (!value || typeof value !== "object") return null;
@@ -177,11 +140,11 @@ async function updateContinuation(root, resolveReaderUri, version, expectedVersi
   const empty = container.querySelector("[data-continue-empty]");
   const savedPanel = container.querySelector("[data-continue-saved]");
   const clear = container.querySelector("[data-continue-clear]");
-  const item = savedReader();
+  const item = readProgress();
   let valid = !!item;
   if (item && typeof resolveReaderUri === "function") {
     try {
-      valid = !!(await resolveReaderUri(item.route));
+      valid = !!(await resolveReaderUri(item.route, item));
     } catch {
       valid = false;
     }
@@ -194,10 +157,10 @@ async function updateContinuation(root, resolveReaderUri, version, expectedVersi
     setHidden(clear, true);
     return;
   }
-  const displayLabel = `${item.book} ${item.chapter}`;
+  const displayLabel = `${item.book} ${item.chapter}${item.verse ? `:${item.verse}` : ""}`;
   if (label) label.textContent = displayLabel;
   if (link) {
-    link.setAttribute("href", routeHref(item.route));
+    link.setAttribute("href", routeHref(progressHref(item)));
     link.setAttribute("aria-label", `Continue reading ${displayLabel}`);
     if (!label) link.textContent = `Continue reading ${displayLabel} →`;
     link.hidden = false;
@@ -257,9 +220,43 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     void updateContinuation(root, currentResolver, version, currentVersion);
   };
 
-  const readReaderOnPage = () => {
-    const section = root.querySelector?.("section[data-reader]");
-    if (section) saveReader(section);
+  let scrollTimer = null, readingDirty = false, restoring = false, scrollIntentUntil = 0;
+  const audioOwnsPosition = () => ['starting', 'reading', 'paused'].includes(root.querySelector('[data-reader-audio]')?.dataset.audioState);
+  const rememberVisibleVerse = () => {
+    clearTimeout(scrollTimer);
+    if (!readingDirty || restoring || audioOwnsPosition()) return;
+    readingDirty = false;
+    const toolbar = root.querySelector('.reader-toolbar')?.getBoundingClientRect();
+    const line = Math.max((toolbar?.bottom || 0) + 20, window.innerHeight * .26);
+    const verses = [...root.querySelectorAll('[data-reader] .scripture .v')];
+    const node = verses.find(verse => {
+      const rect = verse.getBoundingClientRect();
+      return rect.bottom > line && rect.top < window.innerHeight - 24;
+    }) || verses.filter(verse => {
+      const rect = verse.getBoundingClientRect();
+      return rect.bottom > (toolbar?.bottom || 0) && rect.top < window.innerHeight;
+    }).at(-1);
+    if (node) saveProgress(node);
+  };
+  const readReaderOnPage = (route, response, initial) => {
+    clearTimeout(scrollTimer);
+    readingDirty = false;
+    const reader = root.querySelector('section[data-reader]');
+    if (!reader) return null;
+    const saved = readProgress();
+    const params = new URL(route, window.location.origin).searchParams;
+    const requested = Number(params.get('resume'));
+    const explicit = response?.anchor && document.getElementById(response.anchor);
+    const resumed = requested > 0 ? matchingVerse(root, {route: reader.dataset.readerRoute, verse: requested})
+      : initial && !response?.anchor && !params.has('v') && saved?.route === reader.dataset.readerRoute ? matchingVerse(root, saved) : null;
+    const node = resumed || (explicit?.matches('.scripture .v') ? explicit : null)
+      || reader.querySelector('[data-reader-primary-scripture] .hl') || reader.querySelector('.scripture .v');
+    if (node) saveProgress(node, resumed && saved?.source === 'listening' ? 'listening' : 'reading');
+    // The caller scrolls once after rendering. Ignore its scroll events, then
+    // begin tracking user scrolls. A new route cannot inherit an old timer.
+    restoring = true;
+    setTimeout(() => { restoring = false; }, 350);
+    return resumed ? resumed.id : null;
   };
 
   const rememberLibraryBeforeNavigation = (nextRoute) => {
@@ -293,7 +290,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
         anchor.setAttribute("href", routeHref(todayRoute));
       }
       const nextRoute = routeFromAnchor(anchor);
-      if (nextRoute) rememberLibraryBeforeNavigation(nextRoute);
+      if (nextRoute) { clearTimeout(scrollTimer); readingDirty = false; scrollIntentUntil = 0; rememberLibraryBeforeNavigation(nextRoute); }
 
       if (anchor.matches("[data-library-return], .book-breadcrumb a")) {
         const saved = readLibraryReturn(libraryReturnMemory);
@@ -327,11 +324,37 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     }
   };
 
+  const markScrollIntent = () => { scrollIntentUntil = Date.now() + 1800; };
+  window.addEventListener('wheel', markScrollIntent, {passive: true, signal});
+  window.addEventListener('touchmove', markScrollIntent, {passive: true, signal});
+  window.addEventListener('keydown', event => {
+    if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)
+      && !event.target?.closest?.('input, textarea, select, button, [contenteditable]')) markScrollIntent();
+  }, {signal});
+  window.addEventListener('pointerdown', event => {
+    if (event.clientX >= document.documentElement.clientWidth - 20) markScrollIntent();
+  }, {signal});
+  window.addEventListener('scroll', () => {
+    if (Date.now() > scrollIntentUntil || restoring || !root.querySelector('[data-reader]') || audioOwnsPosition()) return;
+    readingDirty = true;
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(rememberVisibleVerse, 180);
+  }, {passive: true, signal});
+  window.addEventListener('pagehide', rememberVisibleVerse, {signal});
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden' && readingDirty && !audioOwnsPosition()) {
+      // Use the last rendered geometry even when the page is backgrounded.
+      rememberVisibleVerse();
+    }
+  }, {signal});
   eventRoot.addEventListener("click", handleClick, { signal });
   eventRoot.addEventListener("change", handleChange, { signal });
 
   const api = {
     beforeRender(nextRoute) {
+      clearTimeout(scrollTimer);
+      readingDirty = false;
+      scrollIntentUntil = 0;
       const next = safeInternalPath(nextRoute) || "/";
       rememberLibraryBeforeNavigation(next);
       const previous = activeRoute && safeInternalPath(activeRoute);
@@ -346,7 +369,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     afterRender(route, response, { initial = false } = {}) {
       const safeRoute = safeInternalPath(route) || "/";
       activeRoute = safeRoute;
-      readReaderOnPage();
+      const restoreVerseId = readReaderOnPage(safeRoute, response, initial);
       updateReturnLinks();
       refreshContinuation();
 
@@ -364,9 +387,11 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
         const main = root.querySelector?.("main#main-content");
         try { main?.focus({ preventScroll: true }); } catch { main?.focus(); }
       }
-      return { restoreScrollY: response?.anchor ? null : scrollY };
+      return { restoreVerseId, restoreScrollY: response?.anchor ? null : scrollY };
     },
     dispose() {
+      rememberVisibleVerse();
+      clearTimeout(scrollTimer);
       controller.abort();
       mounted.delete(root);
     },
@@ -392,9 +417,13 @@ export function disposeJourney(root = document) {
 function autoInitNativeJourney() {
   if (typeof window.rustBibleApi === "function") return;
   if (!document.querySelector("main#main-content")) return;
+  const resumed = resumeRoute(currentNativeRoute());
+  if (resumed !== currentNativeRoute()) { window.location.replace(resumed); return; }
   const journey = initJourney(document);
   const result = journey.afterRender(currentNativeRoute(), null, { initial: true });
-  if (result.restoreScrollY !== null && result.restoreScrollY !== undefined) {
+  if (result.restoreVerseId) {
+    requestAnimationFrame(() => document.getElementById(result.restoreVerseId)?.scrollIntoView({block: 'center', behavior: 'instant'}));
+  } else if (result.restoreScrollY !== null && result.restoreScrollY !== undefined) {
     requestAnimationFrame(() => window.scrollTo({ top: result.restoreScrollY, left: 0, behavior: "instant" }));
   }
 }

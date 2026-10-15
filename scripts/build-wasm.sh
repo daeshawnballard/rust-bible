@@ -13,7 +13,7 @@ cargo build --release --target wasm32-unknown-unknown --lib
 mkdir -p dist/art/objects dist/art/covers dist/art/today dist/fonts
 cp web/fonts/eb-garamond.ttf dist/fonts/
 cp web/fonts/cormorant-garamond.ttf dist/fonts/
-cp web/index.html web/app.js web/experience.js web/library.js web/journey.js web/logo.png dist/
+cp web/index.html web/app.js web/experience.js web/library.js web/journey.js web/progress.js web/logo.png dist/
 cat web/style.css web/reader.css web/today.css > dist/style.css
 cp web/art/today/*.webp dist/art/today/
 cp web/art/tabernacle.webp dist/art/
