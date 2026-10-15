@@ -251,6 +251,17 @@ main.wrap:has(.reader-page) {
 .reader-continue-next { margin:1.5rem 0 0;padding-top:1rem;border-top:1px solid #b59a624d; }
 .reader-continue-next a { display:inline-flex;align-items:center;min-height:44px; }
 
+/* Keep continuous playback controls within reach as Scripture advances. */
+.reader-toolbar:has([data-reader-audio]:is([data-audio-state="reading"],[data-audio-state="paused"],[data-audio-state="starting"])) {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background: #121413;
+  box-shadow: 0 -12px 0 #121413, 0 28px 0 #121413;
+}
+.reader-audio-settings .reader-follow { display:flex;align-items:center;gap:.6rem;min-height:44px;cursor:pointer; }
+.reader-follow input { width:18px;height:18px;accent-color:#e3c27e; }
+
 @media (max-width: 700px) {
   main.wrap:has(.reader-page) { width: calc(100% - 36px); }
   .reader-page { padding-top: 1.15rem; }

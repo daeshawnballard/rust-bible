@@ -90,7 +90,7 @@ async function start() {
   window.rustBibleApi = (uri) => {
     const response = invoke(uri);
     if (!response.content_type.startsWith("application/json")) {
-      throw new Error("rustBibleApi expects a Rust /api/verse or /api/search URI.");
+      throw new Error("rustBibleApi expects a Rust JSON API URI.");
     }
     const value = JSON.parse(response.body);
     if (response.status >= 400) throw Object.assign(new Error(value.error || "Bible API request failed."), { response: value, status: response.status });

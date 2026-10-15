@@ -86,6 +86,13 @@ fn breadcrumb(book: usize, chapter: usize, client: bool, passage: Option<&str>) 
     html
 }
 
+fn reader_controls(reference: &str) -> String {
+    listen_controls(reference, "reading")
+        .replacen("data-read-aloud", "data-read-aloud data-reader-audio", 1)
+        .replace("Listen to this reading", "Listen from here")
+        .replace("<small>Device voice", "<label class=\"reader-follow\"><input type=\"checkbox\" data-audio-follow checked> Follow reading</label><small>Continues into following chapters. Device voice")
+}
+
 fn reader_open(book: usize, chapter: usize, client: bool) -> String {
     let route = format!("/book/{}/{chapter}", slug(book));
     let mut html = format!(
@@ -165,8 +172,8 @@ fn following_chapter(book: usize, chapter: usize) -> Option<(usize, usize)> {
 }
 
 /// Keep short readings flowing into real, sequential Scripture. Each added
-/// chapter has an explicit heading and its own route; audio stays with the
-/// selected passage. Bound the initial page instead of rendering an entire book.
+/// chapter has an explicit heading and its own route. Bound the initial page;
+/// continuous playback requests the next Rust-rendered fragment when needed.
 fn continuation(
     book: usize,
     chapter: usize,
@@ -210,17 +217,19 @@ fn continuation(
         added += 1;
         cursor = following_chapter(b, ch).map(|(b, ch)| (b, ch, 1));
     }
-    if added > 0 {
-        if let Some((b, ch, _)) = cursor {
-            let href = route_path(&format!("/book/{}/{ch}", slug(b)), client);
-            html.push_str(&format!(
-                "<p class=\"reader-continue-next\"><a href=\"{}\">Continue with {} →</a></p>",
+    if let Some((b, ch, start)) = cursor {
+        let href = route_path(&format!("/book/{}/{ch}", slug(b)), client);
+        html.push_str(&format!(
+                "<p class=\"reader-continue-next\" data-reader-next=\"/api/reader-next?book={b}&amp;chapter={ch}&amp;verse={start}\"><a href=\"{}\">Continue with {} →</a></p>",
                 esc(&href),
                 esc(&chapter_title(b, ch))
             ));
-        }
     }
     html
+}
+
+pub(super) fn next_fragment(book: usize, chapter: usize, verse: usize, client: bool) -> String {
+    continuation(book, chapter, verse, 0, client)
 }
 
 /// Render a complete chapter, keeping each verse addressable for highlighting,
@@ -233,7 +242,7 @@ pub(super) fn chapter_content(
 ) -> String {
     let mut html = reader_open(book, chapter, client);
     let reference = format!("{} {chapter}", NAMES[book]);
-    html.push_str(&listen_controls(&reference, "chapter"));
+    html.push_str(&reader_controls(&reference));
     html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (index, text) in bible().books[book][chapter - 1].iter().enumerate() {
         let number = index + 1;
@@ -280,12 +289,12 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
     html.push_str("<div class=\"reader-toolbar\"><div class=\"reader-selectors\">");
     html.push_str(&book_selector(book, chapter, client));
     html.push_str("</div>");
-    html.push_str(&listen_controls(&label, "passage"));
+    html.push_str(&reader_controls(&label));
     html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (number, text) in verses(reference) {
         html.push_str(&format!(
             "<p class=\"v\" id=\"v{number}\" data-reference=\"{}\" data-verse=\"{number}\"><sup>{number}</sup><span class=\"verse-text\">{}</span></p>",
-            esc(&label),
+            esc(&format!("{} {chapter}", NAMES[book])),
             esc(text)
         ));
     }
@@ -374,5 +383,22 @@ mod tests {
                 assert!(html.matches("class=\"reader-continuation\"").count() <= 3);
             }
         }
+    }
+
+    #[test]
+    fn continuous_audio_fragments_resume_exactly_and_end_without_wrapping() {
+        let primary = chapter_content(18, 119, None, true);
+        assert!(primary.contains("data-reader-audio"));
+        assert!(primary.contains("book=18&amp;chapter=120&amp;verse=1"));
+        let next = next_fragment(18, 120, 1, true);
+        assert!(next.contains("continued-18-120-v1"));
+        assert!(!next.contains("continued-18-119"));
+        assert!(next.contains("Psalm 121</h2>"));
+        let focused = next_fragment(0, 1, 17, true);
+        assert!(focused.contains("continued-0-1-v17"));
+        assert!(!focused.contains("continued-0-1-v16"));
+        let last = next_fragment(65, 22, 21, true);
+        assert!(last.contains("continued-65-22-v21"));
+        assert!(!last.contains("data-reader-next"));
     }
 }

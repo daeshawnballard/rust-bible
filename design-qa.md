@@ -69,3 +69,10 @@ Fresh local Rust/WASM browser checks passed for the focused passage, John 3 (36 
 Moving the footer left unused space above it; the user's correction requires more passage content. The Rust reader now continues short chapters and focused verse ranges into sequential KJV text with explicit chapter headings, separate verse anchors, and working chapter links. Psalm 23's six verses are followed immediately by Psalm 24's ten verses, visible within the same 1536 × 1024 viewport. Longer chapters keep their existing layout. The contextual audio selection remains the originally selected chapter/range, excluding the added Scripture sections.
 
 Fresh local browser journeys cover Psalm 23 → Open Psalm 24, John 3:16 → following verses 17–36, Malachi 4 → Matthew 1 across the book boundary, and 320px mobile bounds. No duplicate verse IDs or horizontal overflow observed. The reader screenshot is an actual local Rust/WASM capture. Supporting Rust tests check all 1,189 chapters for unique anchors and bounded continuation, focused range boundaries, canonical book transitions, and the end of Revelation. Hosted acceptance is recorded separately on the final source.
+
+
+## Continuous reader audio
+
+Listen from here follows the Rust-rendered Scripture stream, including the following chapters already shown. At the end of the displayed verses, a validated Rust JSON route supplies the next chapter fragments; the initial render remains bounded. Chapter/verse status and the highlighted verse advance together. Follow reading scrolls only while enabled; active playback controls remain sticky. Today, book overview, and Tabernacle retain their existing audio scopes, and explanations stay outside the speech selection.
+
+Supporting checks: 27 Rust tests, JavaScript syntax, WASM build, and diff checks passed. Local actual device speech progressed from Psalm 117 into Psalm 118 with the highlighted verse in view, and Pause, Follow reading, and Stop responded. Final hosted acceptance is recorded separately after deployment; physical phone hardware and independent acoustic quality are not claimed.

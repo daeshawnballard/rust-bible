@@ -786,6 +786,36 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
     let path = decode_component(raw_path);
     let params = query_params(raw_query);
     match path.as_str() {
+        "/api/reader-next" => {
+            let location = params
+                .get("book")
+                .and_then(|b| b.parse::<usize>().ok())
+                .zip(
+                    params
+                        .get("chapter")
+                        .and_then(|ch| ch.parse::<usize>().ok()),
+                );
+            let verse = params
+                .get("verse")
+                .map_or(Some(1), |v| v.parse::<usize>().ok())
+                .unwrap_or(0);
+            match location {
+                Some((book, chapter))
+                    if book < NAMES.len()
+                        && chapter > 0
+                        && chapter <= bible().books[book].len()
+                        && verse > 0
+                        && verse <= bible().books[book][chapter - 1].len() =>
+                {
+                    json_response(
+                        200,
+                        json!({"html": reader::next_fragment(book, chapter, verse, client)})
+                            .to_string(),
+                    )
+                }
+                _ => json_response(400, json!({"error": "Invalid reader chapter."}).to_string()),
+            }
+        }
         "/" | "/today" => today::page(&params, client),
         "/library" => html_response(
             200,
