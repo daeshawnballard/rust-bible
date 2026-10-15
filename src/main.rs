@@ -9,6 +9,25 @@ use axum::{
 mod cover_assets;
 
 async fn serve(uri: Uri) -> Response {
+    let book_material = match uri.path() {
+        "/art/book-binding.webp" => Some(include_bytes!("../web/art/book-binding.webp").as_slice()),
+        "/art/gold-foil.webp" => Some(include_bytes!("../web/art/gold-foil.webp").as_slice()),
+        _ => None,
+    };
+    if let Some(bytes) = book_material {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "image/webp")
+            .body(Body::from(bytes))
+            .expect("book material response is valid");
+    }
+    if uri.path() == "/fonts/cormorant-garamond.ttf" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "font/ttf")
+            .body(Body::from(
+                include_bytes!("../web/fonts/cormorant-garamond.ttf").as_slice(),
+            ))
+            .expect("display typeface response is valid");
+    }
     if uri.path() == "/fonts/eb-garamond.ttf" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "font/ttf")

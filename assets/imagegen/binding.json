@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "id": "book-binding",
+      "intended_use": "Dimensional binding overlay for all 66 Library covers and book overview volumes",
+      "source": "assets/imagegen/source/binding/book-binding.png",
+      "final": "web/art/book-binding.webp",
+      "generator": "built-in ImageGen",
+      "source_output": "exec-f0affe51-06a1-47cd-b556-a566ef7d61d9.png",
+      "reference": "assets/imagegen/reference/book-page-approved.png",
+      "prompt": "Use case: product-mockup / reusable website asset. Create ONE production-quality antique leather book BINDING AND GOLD FRAME OVERLAY matching the physical Genesis volume in the supplied approved reference. ONLY the book binding/frame, no website, no page layout. Portrait 3:4 canvas, straight-on frontal view with a substantial rounded spine visible along the left, exactly like the reference; the front cover is a flat rectangular plane, nearly orthographic, with parallel edges so a painting and HTML lettering can be placed behind it. Rich near-black forest-green pebbled leather, realistic rounded raised spine bands, warm metallic gold tooling and delicate ornate corner filigree, double gold hairline rectangular frame, subtle worn highlights, physical depth along the spine and cover edges. The spine occupies about the left 10 percent of the book width. The open front picture field occupies x=15% to 95%, y=5% to 95% of the image; this entire large central rectangular field MUST BE FULLY TRANSPARENT, as a clean unbroken insert window so existing paintings show through. Both the outer background and the large central picture window must have genuine alpha transparency. There is no illustration and no text anywhere: no title, no letters, no numbers, no logo, no watermark. Keep the border relatively narrow so art fills nearly the whole front cover. The gold corner filigree stays inside the leather border, not scattered inside the transparent picture window. Place the object almost edge-to-edge with about 1% transparent outer margin. Soft directional studio light from the upper left, warm gold highlights and natural dark leather creases. No floor, scenery, props, pedestal, drop-shadow background, checkerboard pattern, or cast shadow outside the cutout. The object should look as convincingly crafted and dimensional as the approved Genesis mockup. This is a reusable framing asset for all 66 book illustrations; the artwork, titles, and controls will remain separate live interface elements.",
+      "edit_prompt": "Edit target: image 1, the generated transparent book binding overlay. Image 2 is the approved appearance reference only. Preserve the exact whole-book canvas, rounded left spine, leather texture, raised bands, outer contour, and ALL gold tooling/filigree. Make ONE precise correction: enlarge the transparent picture opening to reach almost to the thin inner gold rectangular rule. Remove the broad opaque leather picture-mat area currently inside the gold frame, making that area transparent. The current central hole begins around x=23% and ends x=89%; it should extend approximately x=17.5% to x=95.5%, y=4.5% to y=96%, following the inner gold hairline. Keep the gold corner ornaments as opaque cutout details floating over this enlarged transparent picture opening, so a painting behind the frame appears underneath and between the fine gold filigree. Only a narrow leather rim should separate the picture from the cover edge, matching the approved book in image 2. Keep the leather spine fully opaque and unchanged. Keep the exterior background fully transparent. No new text, illustration, glyphs, logos, backdrop, shadows, props, or page layout. This is a reusable production image overlay, not a completed cover. Genuine alpha transparency in the large front picture field and outside the book.",
+      "draft_source": "assets/imagegen/source/binding/book-binding-initial.png",
+      "processing": [
+        "lossless_webp_no_resize"
+      ],
+      "dimensions": {
+        "width": 1086,
+        "height": 1448
+      },
+      "format": "webp",
+      "alpha": true,
+      "notes": "Outer cutout and central picture field have native alpha. Targeted edit widened the initially oversized leather mat. Paintings and all titles remain separate live interface elements."
+    },
+    {
+      "id": "book-gold-foil",
+      "intended_use": "Material background for real reading buttons and selected chapter buttons",
+      "source": "assets/imagegen/source/binding/gold-foil.png",
+      "final": "web/art/gold-foil.webp",
+      "generator": "built-in ImageGen",
+      "source_output": "exec-25533a94-9e82-49db-b04a-db3e66207431.png",
+      "prompt": "Use case: reusable material texture for website buttons. Create a single flat seamless antique gold foil material texture, square canvas, very subtle fine brushed grain, warm pale champagne gold with soft directional highlights, restrained tiny wear marks, elegant museum bookbinding quality matching the gold Begin reading button in the supplied reference. Flat evenly lit material surface only, no object, no border, no frame, no text, no symbols, no perspective, no embossing, no vignetting, no dark edges, no bright white hotspots, no large scratches. Low-contrast luminous warm gold across the whole image; intended as a repeatable real image texture behind live black interface labels.",
+      "processing": [
+        "webp_quality_90_no_resize"
+      ],
+      "format": "webp",
+      "alpha": false,
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    }
+  ]
+}

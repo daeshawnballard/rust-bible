@@ -1,38 +1,31 @@
-# Book overview design QA
+# Book material and mockup fidelity correction
 
-Source visual truth: `assets/imagegen/reference/book-page-approved.png` (the approved Genesis ImageGen concept).
-Implementation screenshot: `docs/site-book-page.png` (actual local Rust/WASM browser render).
-Combined full-view and focused comparison: `docs/book-page-comparison.png`.
-Viewport: 1536 × 1024 CSS px; both captures 1536 × 1024 pixels at density 1. Combined evidence displays both at equal scale; lower regions compare the actions and chapter grid. State: Genesis overview, audio idle, all 50 chapters.
+Source truth: `assets/imagegen/reference/library-approved.png` and `assets/imagegen/reference/book-page-approved.png`.
+Actual implementation: `docs/site-library.png` and `docs/site-book-page.png`, captured from the local Rust/WASM app at 1536 × 1024 CSS pixels, density 1. Both references are 1536 × 1024 pixels. State: default Library and Genesis overview, audio idle. Full-view and focused material comparisons are saved in `docs/binding-library-comparison.webp` and `docs/binding-book-comparison.webp`; both sides use equal scale.
 
-## Findings and comparison history
+## Findings corrected
 
-- Initial comparison found a P2 typography and vertical rhythm mismatch: the Georgia fallback appeared heavier than the concept and pushed the controls lower. Added a locally served EB Garamond typeface, tightened the desktop title/metadata spacing, and recaptured the page. The combined final comparison shows the corrected type and aligned reading/chapter hierarchy.
-- Local navigation testing found that an existing scroll position could carry over from the long Library. Fixed route installation to begin at the top unless an explicit verse anchor is supplied. Actual narrow-viewport book navigation subsequently began at scroll position 0.
-- No remaining P0/P1/P2 findings in the final comparison. The two-column composition, charcoal background, gold text, full cover artwork, real text/actions, and chapter grid retain the approved design.
+- P1: the previous implementation substituted a flat CSS border/spine and generic glyph for the dimensional leather binding and gold filigree that defined the approved mockups. That earlier visual acceptance was incorrect. Both surfaces now use an individually generated, transparent production binding asset with rounded leather spine, raised gold bands, textured leather, physical highlights, and ornate corner tooling. Each painting and every title remain separate interface elements.
+- P2: the first generated binding had too much opaque leather around its picture opening. A measured, targeted ImageGen edit expanded the alpha window to the inner gold rule. Final center and exterior alpha are 0; the actual browser shows the paintings underneath the ornate cutout, without a rectangular mat.
+- P2: typography and header rhythm differed from the reference. Added locally hosted Cormorant Garamond, corrected the desktop header to 53px, aligned the Genesis book canvas to y=113px, refined cover titles, and added generated gold foil behind real buttons. The Library toolbar now sits above the visible desktop footer, matching the approved gallery hierarchy.
+- P2: fitting titles into the real front-cover area exposed overflow in several medium/long names at narrow widths. Separate medium/long title sizes corrected those cases. A final measured Revelation adjustment reduced the remaining 151px title to fit its 149px opening. All affected medium names were rechecked; broader final-candidate browser checks follow deployment.
 
 ## Required fidelity surfaces
 
-- Typography: EB Garamond for book content, serif hierarchy and responsive long titles. Existing Library header retained. This is a close typeface match, not an identical generated font.
-- Spacing: cover and chapter panel fill the desktop layout; chapter buttons remain at least 46px high on narrow viewports. Long chapter lists flow vertically rather than clipping. Read/Listen and the expanded audio controls wrap on mobile.
-- Colors: charcoal surfaces, warm gold borders/highlight, parchment body text, and clear focus outlines.
-- Images: each book reuses its existing individual ImageGen painting; no page-sized mockup image is used. Titles and descriptions remain interface text. The existing Library binding/frame treatment is shared with the book overview.
-- Copy: real title, testament, category, chapter count, and short editorial description. KJV playback comes from a separate corpus-backed JSON payload. The concept-only label is omitted in production.
-- Icons: licensed Phosphor book-open and headphones assets, with their MIT license in `web/icons/`. Typeface license in `web/fonts/OFL.txt`.
+- Fonts/typography: Cormorant Garamond is used on the book surfaces, with real small-cap titles, serif descriptions, metadata, controls, and numbers. Medium/long names scale to the framed area. Taglines retain a readable minimum size on mobile.
+- Spacing/layout: the approved gallery and two-column book-page structure are retained. Frame and painting use percentage coordinates so they stay aligned while resizing. The binding asset maintains its 3:4 aspect ratio. Mobile layouts stack the volume and controls; the chapter grid keeps its existing touch targets.
+- Color/material: charcoal, parchment, and antique gold remain the palette. Lighting and texture come from generated raster leather/gold assets, with restrained image lighting and ordinary UI shadows.
+- Image fidelity: the flat CSS spine, border, and text-glyph ornaments are replaced by actual artwork. The accepted binding is 1086 × 1448 with native alpha, exported to lossless WebP. Existing 66 paintings remain distinct. The gold texture is a separate generated material; no page mockup is used as the interface.
+- Copy/content: book names, chapter counts, links, and Scripture remain Rust-rendered. The first five cover taglines use the approved gallery's wording. Editorial descriptions remain separate from the KJV audio payload.
 
-## Actual local interaction evidence
+## Comparison history and remaining differences
 
-First and last chapter navigation and Begin reading passed for Genesis, Psalms (150 chapters), Song of Solomon, 1 Thessalonians, Obadiah, 2 John, and Revelation at 320px. Genesis device speech start, pause, stop, restart passed. 320px viewport had no horizontal overflow. These are local outcomes; hosted acceptance is recorded separately after deployment. Console inspection is part of the hosted final-candidate check.
+The combined comparisons show the actual material correction and the subsequent layout/type fixes. The references and actual browser captures were inspected together, including a larger book crop and the first two Library covers.
 
-## Follow-up polish
+The existing individual paintings differ from the exact generated mockup scenes. The reusable binding also has a different fine tooling pattern and uses ornamented spine panels rather than an individual spine title. Those differences are visible in the comparison; this is not a pixel-identical reproduction. The physical binding, material texture, dimensional lighting, and ornate gold framing are implemented rather than deferred as minor polish.
 
-P3: the reusable book binding is flatter and has less ornate filigree than the generated concept; gold buttons use a clean fill rather than a painted material texture. These keep the established Library's real HTML cover treatment. No claim of pixel identity to the generated concept.
+## Evidence boundaries
 
-## Implementation checklist
-
-- [x] Approved concept composition implemented in shared Rust.
-- [x] Local desktop and narrow mobile browser flows exercised.
-- [x] Typography/layout correction recaptured and compared.
-- [x] No outstanding P0/P1/P2 design findings.
+Supporting checks: 20 Rust tests, native compilation, WASM packaging, and formatting. Local real browser checks covered all 66 cover/overview titles, 320/390/768px gallery bounds, representative Read flows, and all affected medium-title corrections. Hosted controls, asset identity, audio, and navigation are accepted separately on the final pushed candidate. Physical device and independent acoustic checks are outside this browser run.
 
 final result: passed

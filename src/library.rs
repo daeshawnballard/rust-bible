@@ -14,27 +14,27 @@ struct BookDetails {
 const BOOKS: [BookDetails; 66] = [
     BookDetails {
         category: "law",
-        tagline: "Beginnings, families, and promises",
+        tagline: "Beginnings & promises",
         description: "Creation, the patriarchs, and the first promises.",
     },
     BookDetails {
         category: "law",
-        tagline: "Freedom and a people formed",
+        tagline: "Deliverance & covenant",
         description: "From slavery in Egypt to the covenant at Sinai.",
     },
     BookDetails {
         category: "law",
-        tagline: "Worship and communal life",
+        tagline: "Worship & holiness",
         description: "Laws for worship, offerings, and holy living.",
     },
     BookDetails {
         category: "law",
-        tagline: "A wilderness generation",
+        tagline: "The wilderness journey",
         description: "Israel's journey and trials in the wilderness.",
     },
     BookDetails {
         category: "law",
-        tagline: "Moses speaks to a new generation",
+        tagline: "Remember the covenant",
         description: "Moses' final addresses and the covenant renewed.",
     },
     BookDetails {
@@ -459,7 +459,13 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
     } else {
         "New Testament"
     };
-    let title_class = if name.len() > 10 { " long-title" } else { "" };
+    let title_class = if name.len() > 10 {
+        " long-title"
+    } else if name.len() > 7 {
+        " medium-title"
+    } else {
+        ""
+    };
     let home = esc(&route_path("/library", client));
     let first = esc(&route_path(&format!("/book/{slug}/1"), client));
     let read_icon =
@@ -481,7 +487,7 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
         .expect("serializable KJV verses")
         .replace('<', "\\u003c");
     let mut html = format!(
-        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}">Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><div class="cover-frame" aria-hidden="true"></div><span class="cover-title{title_class}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><div class="book-audio" data-read-aloud data-book-audio data-reference="{name}"><div class="book-actions"><a class="book-begin" href="{first}">{read_icon}<span>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-version">King James Version</p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label></div><small>Synthetic device voice. Reads Scripture only, from chapter 1 to the end of the book.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
+        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}">Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><img class="cover-binding" src="/art/book-binding.webp" alt="" aria-hidden="true" width="1080" height="1440"><span class="cover-title{title_class}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><div class="book-audio" data-read-aloud data-book-audio data-reference="{name}"><div class="book-actions"><a class="book-begin" href="{first}">{read_icon}<span>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-version">King James Version</p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label></div><small>Synthetic device voice. Reads Scripture only, from chapter 1 to the end of the book.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
         tagline = esc(detail.tagline),
         description = esc(detail.description),
         chapter_word = if count == 1 { "chapter" } else { "chapters" }
@@ -592,12 +598,14 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
             let chapter_path = format!("{book_path}/1");
             let title_class = if name.len() > 10 {
                 "cover-title long-title"
+            } else if name.len() > 7 {
+                "cover-title medium-title"
             } else {
                 "cover-title"
             };
             let cover = format!("/art/covers/{}.webp", book_slug(name));
             html.push_str(&format!(
-                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><div class=\"cover-frame\" aria-hidden=\"true\"></div><h2 class=\"{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" href=\"{}\">Read {} →</a></article>",
+                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><img class=\"cover-binding\" src=\"/art/book-binding.webp\" alt=\"\" aria-hidden=\"true\" width=\"1080\" height=\"1440\"><h2 class=\"{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" href=\"{}\">Read {} →</a></article>",
                 esc(name), detail.category, esc(&route_path(&book_path, client)), esc(name),
                 cover, title_class, esc(name), esc(detail.tagline), esc(detail.description),
                 if testament == "old" { "Old Testament" } else { "New Testament" },
