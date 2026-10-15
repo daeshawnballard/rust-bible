@@ -74,11 +74,14 @@ export function initExperience(root = document) {
       }
     };
     const clearHighlight = () => nodes.forEach(node => node.classList.remove('is-speaking'));
-    stop = (message = 'Stopped.') => {
+    stop = (message = 'Stopped.', explicitStart = false) => {
+      const ownsSpeech = current !== null;
       generation++;
       clearTimeout(timer);
       current = null;
-      synth?.cancel();
+      // Device speech services can share a queue across tabs. Disposing an
+      // idle book/reader must not cancel an utterance owned by another page.
+      if (ownsSpeech || explicitStart) synth?.cancel();
       clearHighlight();
       setState('idle', message);
     };
@@ -171,7 +174,7 @@ export function initExperience(root = document) {
             : `Reading verse ${nodes[index].dataset.verse || index + 1} · ${index + 1} of ${verses.length}.`);
           return;
         }
-        stop('Starting the device voice…');
+        stop('Starting the device voice…', true);
         if (!verses.length) { setState('error', bookMode ? `There is no Scripture text available for ${bookName}.` : 'There is no Scripture passage to read here.'); return; }
         setState('starting', bookMode ? `Starting ${bookName}…` : 'Starting the device voice…');
         readVerse(generation, 0);
