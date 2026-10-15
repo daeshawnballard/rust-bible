@@ -9,6 +9,20 @@ use axum::{
 mod cover_assets;
 
 async fn serve(uri: Uri) -> Response {
+    if uri.path() == "/journey.js" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(include_str!("../web/journey.js")))
+            .expect("journey adapter response");
+    }
+    if uri.path() == "/art/today/psalms.webp" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "image/webp")
+            .body(Body::from(
+                include_bytes!("../web/art/today/psalms.webp").as_slice(),
+            ))
+            .expect("today art response");
+    }
     let book_material = match uri.path() {
         "/art/book-binding.webp" => Some(include_bytes!("../web/art/book-binding.webp").as_slice()),
         "/art/gold-foil.webp" => Some(include_bytes!("../web/art/gold-foil.webp").as_slice()),

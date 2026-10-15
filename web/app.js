@@ -1,8 +1,10 @@
 import { initExperience } from './experience.js';
 import { disposeLibrary, initLibrary } from './library.js';
+import { initJourney, resolveTodayDate, routeFromHash } from './journey.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
+let journey = null;
 
 function showError(message) {
   disposeLibrary(app);
@@ -36,16 +38,18 @@ function createRustBridge(exports) {
   return invoke;
 }
 
-function installPage(response) {
+function installPage(response, route, { initial = false } = {}) {
   disposeLibrary(app);
   if (response.location) {
-    window.location.hash = response.location;
+    const target = `#${routeFromHash(response.location)}`;
+    if (window.location.hash !== target) window.location.hash = target;
     return;
   }
 
   document.title = response.title || "The Bible";
   if (response.content_type.startsWith("application/json")) {
     app.textContent = response.body;
+    journey?.afterRender(route, response, { initial });
     return;
   }
   app.innerHTML = response.body;
@@ -59,9 +63,12 @@ function installPage(response) {
     window.location.hash = `#/go?q=${encodeURIComponent(query)}`;
   });
 
+  const journeyResult = journey?.afterRender(route, response, { initial }) || {};
   if (response.anchor) {
     requestAnimationFrame(() => document.getElementById(response.anchor)?.scrollIntoView());
-  } else {
+  } else if (journeyResult.restoreScrollY !== null && journeyResult.restoreScrollY !== undefined) {
+    requestAnimationFrame(() => window.scrollTo({top: journeyResult.restoreScrollY, left: 0, behavior: 'instant'}));
+  } else if (!initial) {
     window.scrollTo({top: 0, left: 0, behavior: 'instant'});
   }
 }
@@ -90,9 +97,23 @@ async function start() {
     return value;
   };
 
+  journey = initJourney(app, {
+    resolveReaderUri(uri) {
+      const response = invoke(uri);
+      return response.status === 200
+        && response.content_type.startsWith("text/html")
+        && response.body.includes("data-reader");
+    },
+  });
+
+  let initial = true;
   const renderCurrent = () => {
     try {
-      installPage(invoke(window.location.hash || "#/"));
+      const route = resolveTodayDate(routeFromHash(window.location.hash));
+      journey.beforeRender(route);
+      const response = invoke(route);
+      installPage(response, route, { initial });
+      if (!response.location) initial = false;
     } catch (error) {
       showError(error instanceof Error ? error.message : "An unexpected reader error occurred.");
     }

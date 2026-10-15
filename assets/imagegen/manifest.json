@@ -1786,6 +1786,38 @@
         "width": 1254,
         "height": 1254
       }
+    },
+    {
+      "id": "psalms-today-hero",
+      "intended_use": "Today page hero illustration for Psalms reading",
+      "source": "assets/imagegen/source/today/psalms-today.png",
+      "final": "web/art/today/psalms.webp",
+      "prompt": "Create one standalone production illustration for a devotional Bible reading site, inspired by the two references: a richly painterly, reverent golden-hour landscape of an ancient olive tree on the left with a substantial twisted trunk and luminous olive-green leaves, and a finely carved wooden lyre harp resting upright among flowers and rocks in the lower-left/center foreground, with the entire harp and all strings clearly visible inside the composition. Let a clear stream run from the center foreground through a peaceful green valley toward the right distance; layered hills and distant mountains catch warm sunset light beneath softly glowing clouds. Keep the tree canopy framing the upper-left without obscuring the harp; place the brightest sun and open valley toward the upper-right. Compose as a complete edge-to-edge 6:5 landscape painting, approximately 1536 x 1280: tree left, harp lower-left to center, stream and valley right. Deep olive greens, muted natural earth, textured bark and stone, luminous but restrained amber-gold highlights, rich fine painterly detail, cinematic natural light, cohesive palette and rendering quality matching the references. Artwork only, full image to every edge; no UI, no lettering, no captions, no logos, no frame or border, no external drop shadow, no humans, no angels, no divine figures. Keep all focal objects comfortably inside the frame and do not rely on later cropping.",
+      "generator": "built-in ImageGen",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a14022-2bab-7590-9144-771f6147a8dd/exec-fe3bc959-db12-4c7e-be93-cf3c768683c0.png",
+      "references": [
+        "assets/imagegen/reference/today-reader-approved.png",
+        "web/art/covers/psalms.webp"
+      ],
+      "processing": [
+        "copied original generated PNG unchanged",
+        "converted to WebP quality=90, method=6; no crop or resize"
+      ],
+      "source_dimensions": {
+        "width": 1416,
+        "height": 1111
+      },
+      "dimensions": {
+        "width": 1416,
+        "height": 1111
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "361afab7a0b75c920bb2020c2085a49d7020609f5190def99f7dbffa42624a17",
+        "final": "6e9136670854a75d37ed676ab4086512028be2133d24eaf21d80ab35a719e717"
+      },
+      "created_at_utc": "2026-10-15T15:17:59.533430+00:00"
     }
   ]
 }

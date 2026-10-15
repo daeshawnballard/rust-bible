@@ -4,10 +4,16 @@ use serde_json::json;
 use std::{collections::HashMap, sync::OnceLock};
 
 static RAW: &str = include_str!("../data/kjv.json");
-const CSS: &str = include_str!("../web/style.css");
+const CSS: &str = concat!(
+    include_str!("../web/style.css"),
+    include_str!("../web/reader.css"),
+    include_str!("../web/today.css")
+);
 
 mod library;
+mod reader;
 mod tabernacle;
+mod today;
 
 const NAMES: [&str; 66] = [
     "Genesis",
@@ -439,42 +445,27 @@ fn route_path(path: &str, client: bool) -> String {
 }
 
 fn page_body(q: &str, body: &str, client: bool) -> String {
-    let home = route_path("/", client);
-    let explore = route_path("/explore", client);
-    let listen = route_path("/book/Psalms/23", client);
-    let is_explore = body.contains("id=\"explore\"") || body.contains("class=\"explore-page\"");
-    let is_library = body.contains("data-library") || body.contains("data-book-page");
-    let read_current = if is_explore {
-        ""
-    } else {
-        " aria-current=\"page\""
-    };
-    let explore_current = if is_explore {
+    let home = esc(&route_path("/", client));
+    let library = esc(&route_path("/library", client));
+    let today_current = if body.contains("data-today ") {
         " aria-current=\"page\""
     } else {
         ""
     };
-    let header = if is_library {
-        format!(
-            r#"<header class="library-header"><div class="wrap"><a class="brand" href="{home}"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" aria-current="page">Library</a><a href="{explore}">Explore</a><a href="{listen}">Listen</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"#,
-            home = esc(&home),
-            explore = esc(&explore),
-            listen = esc(&listen),
-            q = esc(q)
-        )
+    let library_current = if body.contains("data-library")
+        || body.contains("data-book-page")
+        || body.contains("data-reader ")
+        || body.contains("search-page")
+    {
+        " aria-current=\"page\""
     } else {
-        format!(
-            r#"<header><div class="wrap"><a class="brand" href="{home}"><img src="/logo.png" alt="" width="42" height="42"><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}"{read_current}>Read</a><a href="{explore}"{explore_current}>Explore</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="John 3:16, 1 Cor 13:4-7, or search words" aria-label="Lookup or search"><button>Go</button></form></div></header>"#,
-            home = esc(&home),
-            explore = esc(&explore),
-            read_current = read_current,
-            explore_current = explore_current,
-            q = esc(q)
-        )
+        ""
     };
-    format!(
-        "{header}<main class=\"wrap\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version (public domain).</span><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></footer>"
-    )
+    let q = esc(q);
+    let header = format!(
+        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"##
+    );
+    format!("{header}<main class=\"wrap\" id=\"main-content\" tabindex=\"-1\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version · Public domain</span><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></footer>")
 }
 
 fn document(title: &str, body: &str) -> String {
@@ -483,7 +474,7 @@ fn document(title: &str, body: &str) -> String {
     } else {
         ""
     };
-    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
+    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script><script type=\"module\" src=\"/journey.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
 }
 
 fn html_response(
@@ -540,64 +531,7 @@ fn chapter_content(
     highlighted: Option<(usize, usize)>,
     client: bool,
 ) -> String {
-    let chs = &bible().books[b];
-    let reference = format!("{} {}", NAMES[b], ch);
-    let mut s = format!(
-        "<h1>{} {}</h1>{}<div class=\"scripture\">",
-        NAMES[b],
-        ch,
-        tabernacle::listen_controls(&reference)
-    );
-    for (i, verse) in chs[ch - 1].iter().enumerate() {
-        let n = i + 1;
-        let class = if highlighted.is_some_and(|(a, z)| n >= a && n <= z) {
-            "v hl"
-        } else {
-            "v"
-        };
-        s.push_str(&format!(
-            "<span class=\"{class}\" id=\"v{n}\" data-reference=\"{}\" data-verse=\"{n}\"><sup>{n}</sup>{} </span>",
-            esc(&reference),
-            esc(verse)
-        ));
-    }
-    s.push_str("</div><nav class=\"nav\">");
-    let prev = if ch > 1 {
-        Some((b, ch - 1))
-    } else if b > 0 {
-        Some((b - 1, bible().books[b - 1].len()))
-    } else {
-        None
-    };
-    let next = if ch < chs.len() {
-        Some((b, ch + 1))
-    } else if b < 65 {
-        Some((b + 1, 1))
-    } else {
-        None
-    };
-    s.push_str(&match prev {
-        Some((pb, pc)) => format!(
-            "<a rel=\"prev\" href=\"{}\">← {} {pc}</a>",
-            route_path(&format!("/book/{}/{pc}", slug(pb)), client),
-            NAMES[pb]
-        ),
-        None => "<span></span>".into(),
-    });
-    s.push_str(&format!(
-        "<a href=\"{}\">All chapters</a>",
-        route_path(&format!("/book/{}", slug(b)), client)
-    ));
-    s.push_str(&match next {
-        Some((nb, nc)) => format!(
-            "<a rel=\"next\" href=\"{}\">{} {nc} →</a>",
-            route_path(&format!("/book/{}/{nc}", slug(nb)), client),
-            NAMES[nb]
-        ),
-        None => "<span></span>".into(),
-    });
-    s.push_str("</nav>");
-    s
+    reader::chapter_content(b, ch, highlighted, client)
 }
 
 fn not_found(what: &str, client: bool, anchor: Option<String>) -> RouteResponse {
@@ -605,7 +539,7 @@ fn not_found(what: &str, client: bool, anchor: Option<String>) -> RouteResponse 
         404,
         "Not found",
         what,
-        &format!("<h1>Not found</h1><p>Couldn't find “{}”.</p>", esc(what)),
+        &format!("<section class=\"recovery-page\"><h1>Passage not found</h1><p>Couldn't find “{}”. Check the book, chapter, and verse, or choose a book from the Library.</p><a href=\"{}\" data-library-return>Browse the Library</a><a href=\"{}\">Return to Today</a></section>", esc(what), esc(&route_path("/library", client)), esc(&route_path("/", client))),
         client,
         anchor,
     )
@@ -640,24 +574,8 @@ fn verses(reference: &Ref) -> Vec<(usize, &'static str)> {
     (a..=b).map(|n| (n, chapter[n - 1].as_str())).collect()
 }
 
-fn passage_content(reference: &Ref, url: &str) -> String {
-    let mut s = format!(
-        "<h1>{}</h1>{}<div class=\"scripture\">",
-        esc(&ref_label(reference)),
-        tabernacle::listen_controls(&ref_label(reference))
-    );
-    for (n, text) in verses(reference) {
-        s.push_str(&format!(
-            "<span class=\"v\" data-reference=\"{}\" data-verse=\"{n}\"><sup>{n}</sup>{} </span>",
-            esc(&ref_label(reference)),
-            esc(text)
-        ));
-    }
-    s.push_str(&format!(
-        "</div><p><a href=\"{}\">Read full chapter →</a></p>",
-        esc(url)
-    ));
-    s
+fn passage_content(reference: &Ref, url: &str, client: bool) -> String {
+    reader::passage_content(reference, url, client)
 }
 
 const MAX_RESULTS: usize = 200;
@@ -816,7 +734,7 @@ fn highlight(text: &str, q: &str) -> String {
 fn search_content(q: &str, client: bool) -> String {
     let (results, total) = search(q);
     let mut s = format!(
-        "<h1>Search: “{}”</h1><p class=\"muted\">{} verse{} found{}.</p><div class=\"res\">",
+        "<section class=\"search-page\"><h1>Search: “{}”</h1><p class=\"muted\">{} verse{} found{}.</p><div class=\"res\">",
         esc(q),
         total,
         if total == 1 { "" } else { "s" },
@@ -834,7 +752,7 @@ fn search_content(q: &str, client: bool) -> String {
         );
         s.push_str(&format!("<p><a href=\"{target}\">{} {ch}:{verse}</a><br><span class=\"scripture\">{}</span></p>", NAMES[b], highlight(text, q)));
     }
-    s.push_str("</div>");
+    s.push_str("</div></section>");
     s
 }
 
@@ -868,14 +786,7 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
     let path = decode_component(raw_path);
     let params = query_params(raw_query);
     match path.as_str() {
-        "/" => html_response(
-            200,
-            "The Bible Library",
-            "",
-            &library::render(&params, client),
-            client,
-            anchor,
-        ),
+        "/" | "/today" => today::page(&params, client),
         "/library" => html_response(
             200,
             "The Bible Library",
@@ -888,12 +799,15 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
             let query = params.get("q").cloned().unwrap_or_default();
             let query = query.trim();
             if query.is_empty() {
-                return redirect(route_path("/", client));
+                return redirect(route_path("/library", client));
+            }
+            if let Some(book) = find_book(query) {
+                return redirect(route_path(&format!("/book/{}", slug(book)), client));
             }
             if let Some(reference) = parse_ref(query) {
                 let target = reference_url(&reference, client);
                 if reference.v1.is_some() {
-                    let content = passage_content(&reference, &target);
+                    let content = passage_content(&reference, &target, client);
                     html_response(200, &ref_label(&reference), query, &content, client, anchor)
                 } else {
                     redirect(target)
@@ -1120,7 +1034,7 @@ mod tests {
     fn unknown_book_returns_not_found() {
         let response = route("/book/Not-A-Book", true);
         assert_eq!(response.status, 404);
-        assert!(response.body.contains("Not found"));
+        assert!(response.body.contains("Passage not found"));
     }
 
     #[test]

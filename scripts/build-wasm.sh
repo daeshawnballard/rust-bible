@@ -10,10 +10,12 @@ if ! rustup target list --installed | rg -qx 'wasm32-unknown-unknown'; then
 fi
 
 cargo build --release --target wasm32-unknown-unknown --lib
-mkdir -p dist/art/objects dist/art/covers dist/fonts
+mkdir -p dist/art/objects dist/art/covers dist/art/today dist/fonts
 cp web/fonts/eb-garamond.ttf dist/fonts/
 cp web/fonts/cormorant-garamond.ttf dist/fonts/
-cp web/index.html web/app.js web/experience.js web/library.js web/style.css web/logo.png dist/
+cp web/index.html web/app.js web/experience.js web/library.js web/journey.js web/logo.png dist/
+cat web/style.css web/reader.css web/today.css > dist/style.css
+cp web/art/today/*.webp dist/art/today/
 cp web/art/tabernacle.webp dist/art/
 cp web/art/book-binding.webp web/art/gold-foil.webp dist/art/
 cp web/art/objects/*.webp dist/art/objects/

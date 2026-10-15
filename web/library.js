@@ -148,9 +148,9 @@ export function initLibrary(root = document) {
     form.querySelector("[data-library-reset]")?.addEventListener("click", (event) => {
       event.preventDefault();
       if (hashRoutingIsActive()) {
-        window.location.hash = "#/";
+        window.location.hash = "#/library";
       } else {
-        window.location.assign("/");
+        window.location.assign("/library");
       }
     }, { signal });
   }

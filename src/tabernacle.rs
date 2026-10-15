@@ -130,13 +130,6 @@ fn passage_blocks(part: &Part, client: bool) -> String {
     output
 }
 
-pub(super) fn listen_controls(reference: &str) -> String {
-    format!(
-        "<div class=\"listen-controls\" data-read-aloud data-reference=\"{}\"><div class=\"listen-actions\"><button type=\"button\" data-audio-action=\"play\">Play</button><button type=\"button\" data-audio-action=\"pause\">Pause</button><button type=\"button\" data-audio-action=\"stop\">Stop</button></div><label>Speed <select data-audio-rate aria-label=\"Speech speed\"><option value=\"0.75\">0.75×</option><option value=\"1\" selected>1×</option><option value=\"1.25\">1.25×</option><option value=\"1.5\">1.5×</option></select></label><label>Voice <select data-audio-voice aria-label=\"Voice\"><option value=\"\">Default voice</option></select></label><span data-audio-status role=\"status\" aria-live=\"polite\">Ready to read Scripture.</span><small>Synthetic voice. Availability depends on your browser and device.</small></div>",
-        esc(reference)
-    )
-}
-
 fn scene_listen_controls(reference: &str) -> String {
     // Decorative waveform silhouette, not sampled audio or a seek timeline.
     let mut wave = String::new();
@@ -205,8 +198,29 @@ fn explore_body(selected: &str, object_view: bool, client: bool) -> String {
     let current = " aria-current=\"page\"";
     let hidden = " hidden";
     let mut body = String::from("<section id=\"explore\" class=\"explore-page illustrated-explore\"><div class=\"explore-heading\"><p class=\"eyebrow\">An illustrated reconstruction · Exodus</p><h1>Inside the Tabernacle</h1><p>Read the passage, or tap a hotspot to explore an object.</p></div><div class=\"explore-layout\"><section class=\"scene-column\" aria-label=\"Interactive Tabernacle scene\">");
+    let breadcrumb = format!("<nav class=\"explore-breadcrumb\" aria-label=\"Breadcrumb\"><a href=\"{}\">Today</a> / Tabernacle</nav>", esc(&route_path("/", client)));
+    body = body.replacen(
+        "<div class=\"explore-heading\">",
+        &format!("{breadcrumb}<div class=\"explore-heading\">"),
+        1,
+    );
     body.push_str(&illustration(selected, client));
     body.push_str(&format!("</section><article class=\"object-card study-panel\" data-panel-view=\"{}\" aria-label=\"Passage and object details\"><nav class=\"panel-navigation\" aria-label=\"Panel view\"><a href=\"{}\"{}>Scripture</a><a href=\"{}\"{}>Object</a></nav><section class=\"panel-view scripture-panel\" aria-label=\"Scripture\" tabindex=\"0\"{}><div class=\"panel-title\"><p class=\"eyebrow\">Scripture · King James Version</p><h2>{}</h2></div>",if object_view {"object"} else {"scripture"},esc(&scripture_link),if object_view {""} else {current},esc(&object_link),if object_view {current} else {""},if object_view {hidden} else {""},esc(part.name)));
+    let mut parts = String::from("<label class=\"panel-part-picker\">Choose a part<select data-explore-part aria-label=\"Tabernacle part\">");
+    for item in PARTS {
+        let href = route_path(
+            &format!("/explore/tabernacle?part={}&view=scripture", item.id),
+            client,
+        );
+        parts.push_str(&format!(
+            "<option value=\"{}\"{}>{}</option>",
+            esc(&href),
+            if item.id == selected { " selected" } else { "" },
+            esc(item.name)
+        ));
+    }
+    parts.push_str("</select></label>");
+    body.push_str(&parts);
     body.push_str(&passage_blocks(part, client));
     body.push_str(&format!("</section><section class=\"panel-view object-panel\" aria-label=\"Object and explanation\" tabindex=\"0\"{}>",if object_view {""} else {hidden}));
     body.push_str(&detail_view(selected));

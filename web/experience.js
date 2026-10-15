@@ -13,6 +13,10 @@ export function initExperience(root = document) {
   let stop = () => {};
   if (controls) {
     const compact = controls.hasAttribute('data-audio-compact');
+    const rawCompactScope = controls.dataset.audioScope?.trim();
+    const compactScope = rawCompactScope
+      ? (/^(?:this|the)\s/i.test(rawCompactScope) ? rawCompactScope : `this ${rawCompactScope}`)
+      : 'Scripture';
     const bookMode = controls.hasAttribute('data-book-audio');
     const bookName = controls.dataset.reference || 'this book';
     const synth = window.speechSynthesis;
@@ -65,9 +69,11 @@ export function initExperience(root = document) {
         play.disabled = state === 'starting' || state === 'unavailable';
         if (['error', 'unavailable'].includes(state)) revealPlaybackSettings();
       } else if (compact) {
-        play.setAttribute('aria-label', state === 'reading' ? 'Pause Scripture' : state === 'paused' ? 'Resume Scripture' : 'Listen to Scripture');
+        const label = state === 'reading' ? `Pause ${compactScope}` : state === 'paused' ? `Resume ${compactScope}` : `Listen to ${compactScope}`;
+        play.setAttribute('aria-label', label);
         play.disabled = state === 'starting' || state === 'unavailable';
-        controls.querySelector('.player-title').textContent = state === 'paused' ? 'Scripture paused' : state === 'reading' ? 'Reading Scripture' : 'Listen to Scripture';
+        if (audioLabel) audioLabel.textContent = label;
+        controls.querySelector('.player-title').textContent = controls.dataset.audioScope ? label : state === 'paused' ? `${compactScope[0].toUpperCase()}${compactScope.slice(1)} paused` : state === 'reading' ? `Reading ${compactScope}` : `Listen to ${compactScope}`;
       } else {
         play.textContent = state === 'paused' ? 'Resume' : 'Listen to Scripture';
         pause.textContent = state === 'paused' ? 'Paused' : 'Pause';
