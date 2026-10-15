@@ -242,3 +242,7 @@ body:has(.library-page),body:has(.book-page){background:#121413;color:#e9e2d4}.l
 .library-card .cover-title.medium-title,.book-volume .cover-title.medium-title{font-size:13.5cqw}.library-card .cover-title.long-title{font-size:10.5cqw}.book-volume .cover-title.long-title{font-size:10cqw}.book-title.medium-title{font-size:clamp(3.8rem,7.7vw,7.4rem)}
 @media(max-width:760px){.book-title.medium-title{font-size:clamp(2.5rem,10vw,4rem)}}
 .book-volume .cover-title.medium-title{font-size:13cqw}
+/* The insert width is fixed; title fitting uses measured glyph advances, not character count alone. */
+.book-volume .cover-title,.book-volume .cover-tagline{font-family:'Bible Display',Georgia,serif}
+.library-card .cover-title{font-size:min(16cqw,calc(69.5cqw / var(--cover-word-em,6)))}.library-card .cover-title.medium-title{font-size:min(13.5cqw,calc(69.5cqw / var(--cover-word-em,6)))}.library-card .cover-title.long-title{font-size:min(10.5cqw,calc(69.5cqw / var(--cover-word-em,6)))}
+.book-volume .cover-title{font-size:min(18cqw,calc(69.5cqw / var(--cover-word-em,6)))}.book-volume .cover-title.medium-title{font-size:min(13cqw,calc(69.5cqw / var(--cover-word-em,6)))}.book-volume .cover-title.long-title{font-size:min(10cqw,calc(69.5cqw / var(--cover-word-em,6)))}

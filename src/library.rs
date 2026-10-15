@@ -371,6 +371,19 @@ const CATEGORIES: &[(&str, &str)] = &[
     ("apocalyptic", "Apocalyptic"),
 ];
 
+// Measured longest-word em advances for the locally hosted display font.
+// Recalibrate with assets/imagegen/binding-typography.json if the typeface changes.
+const COVER_WORD_EM: [f64; 66] = [
+    3.394201, 3.244800, 4.234000, 3.985400, 6.275200, 3.117400, 2.970600, 2.404200, 3.328600,
+    3.328600, 2.537200, 2.537200, 5.276800, 5.276800, 2.142000, 4.560600, 3.135401, 1.441600,
+    3.128000, 4.159001, 5.703000, 4.046799, 2.849000, 4.066800, 6.308000, 3.319400, 3.107800,
+    2.826400, 1.886000, 2.418800, 3.970800, 2.725000, 2.923400, 3.249400, 4.694200, 4.882800,
+    3.362200, 4.922400, 3.963800, 4.264400, 2.528400, 2.175000, 2.150800, 2.188400, 3.514200,
+    5.757200, 5.757200, 4.706000, 4.427401, 5.119001, 5.051600, 6.648600, 6.648600, 3.865600,
+    3.865600, 2.434000, 4.340000, 3.936401, 2.489000, 2.575400, 2.575400, 2.150800, 2.150800,
+    2.150800, 1.991600, 5.185400,
+];
+
 fn selected(value: &str, current: &str) -> &'static str {
     if value == current {
         " selected"
@@ -487,7 +500,8 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
         .expect("serializable KJV verses")
         .replace('<', "\\u003c");
     let mut html = format!(
-        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}">Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><img class="cover-binding" src="/art/book-binding.webp" alt="" aria-hidden="true" width="1080" height="1440"><span class="cover-title{title_class}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><div class="book-audio" data-read-aloud data-book-audio data-reference="{name}"><div class="book-actions"><a class="book-begin" href="{first}">{read_icon}<span>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-version">King James Version</p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label></div><small>Synthetic device voice. Reads Scripture only, from chapter 1 to the end of the book.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
+        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}">Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><img class="cover-binding" src="/art/book-binding.webp" alt="" aria-hidden="true" width="1080" height="1440"><span class="cover-title{title_class}" style="--cover-word-em:{word_em}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><div class="book-audio" data-read-aloud data-book-audio data-reference="{name}"><div class="book-actions"><a class="book-begin" href="{first}">{read_icon}<span>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-version">King James Version</p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label></div><small>Synthetic device voice. Reads Scripture only, from chapter 1 to the end of the book.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
+        word_em = COVER_WORD_EM[index],
         tagline = esc(detail.tagline),
         description = esc(detail.description),
         chapter_word = if count == 1 { "chapter" } else { "chapters" }
@@ -605,9 +619,9 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
             };
             let cover = format!("/art/covers/{}.webp", book_slug(name));
             html.push_str(&format!(
-                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><img class=\"cover-binding\" src=\"/art/book-binding.webp\" alt=\"\" aria-hidden=\"true\" width=\"1080\" height=\"1440\"><h2 class=\"{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" href=\"{}\">Read {} →</a></article>",
+                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><img class=\"cover-binding\" src=\"/art/book-binding.webp\" alt=\"\" aria-hidden=\"true\" width=\"1080\" height=\"1440\"><h2 class=\"{}\" style=\"--cover-word-em:{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" href=\"{}\">Read {} →</a></article>",
                 esc(name), detail.category, esc(&route_path(&book_path, client)), esc(name),
-                cover, title_class, esc(name), esc(detail.tagline), esc(detail.description),
+                cover, title_class, COVER_WORD_EM[index], esc(name), esc(detail.tagline), esc(detail.description),
                 if testament == "old" { "Old Testament" } else { "New Testament" },
                 esc(&route_path(&chapter_path, client)), esc(name)
             ));

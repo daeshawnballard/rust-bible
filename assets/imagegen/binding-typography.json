@@ -1,0 +1,272 @@
+{
+  "font": "small-caps 100px \"Bible Display\"",
+  "widths": [
+    {
+      "name": "Genesis",
+      "width": 3.3942010498046873
+    },
+    {
+      "name": "Exodus",
+      "width": 3.2448004150390624
+    },
+    {
+      "name": "Leviticus",
+      "width": 4.234000244140625
+    },
+    {
+      "name": "Numbers",
+      "width": 3.985400390625
+    },
+    {
+      "name": "Deuteronomy",
+      "width": 6.275199584960937
+    },
+    {
+      "name": "Joshua",
+      "width": 3.11739990234375
+    },
+    {
+      "name": "Judges",
+      "width": 2.970599975585938
+    },
+    {
+      "name": "Ruth",
+      "width": 2.404199981689453
+    },
+    {
+      "name": "1 Samuel",
+      "width": 3.328599853515625
+    },
+    {
+      "name": "2 Samuel",
+      "width": 3.328599853515625
+    },
+    {
+      "name": "1 Kings",
+      "width": 2.5372003173828124
+    },
+    {
+      "name": "2 Kings",
+      "width": 2.5372003173828124
+    },
+    {
+      "name": "1 Chronicles",
+      "width": 5.276799926757812
+    },
+    {
+      "name": "2 Chronicles",
+      "width": 5.276799926757812
+    },
+    {
+      "name": "Ezra",
+      "width": 2.1420001220703124
+    },
+    {
+      "name": "Nehemiah",
+      "width": 4.560599975585937
+    },
+    {
+      "name": "Esther",
+      "width": 3.135400695800781
+    },
+    {
+      "name": "Job",
+      "width": 1.4416001892089845
+    },
+    {
+      "name": "Psalms",
+      "width": 3.12800048828125
+    },
+    {
+      "name": "Proverbs",
+      "width": 4.159000549316406
+    },
+    {
+      "name": "Ecclesiastes",
+      "width": 5.70300048828125
+    },
+    {
+      "name": "Song of Solomon",
+      "width": 4.04679931640625
+    },
+    {
+      "name": "Isaiah",
+      "width": 2.849000244140625
+    },
+    {
+      "name": "Jeremiah",
+      "width": 4.066799926757812
+    },
+    {
+      "name": "Lamentations",
+      "width": 6.307999877929688
+    },
+    {
+      "name": "Ezekiel",
+      "width": 3.319400329589844
+    },
+    {
+      "name": "Daniel",
+      "width": 3.1077999877929687
+    },
+    {
+      "name": "Hosea",
+      "width": 2.826399841308594
+    },
+    {
+      "name": "Joel",
+      "width": 1.8859999084472656
+    },
+    {
+      "name": "Amos",
+      "width": 2.4188002014160155
+    },
+    {
+      "name": "Obadiah",
+      "width": 3.9708001708984377
+    },
+    {
+      "name": "Jonah",
+      "width": 2.7249996948242186
+    },
+    {
+      "name": "Micah",
+      "width": 2.9234002685546874
+    },
+    {
+      "name": "Nahum",
+      "width": 3.2493997192382813
+    },
+    {
+      "name": "Habakkuk",
+      "width": 4.694199829101563
+    },
+    {
+      "name": "Zephaniah",
+      "width": 4.882799682617187
+    },
+    {
+      "name": "Haggai",
+      "width": 3.36219970703125
+    },
+    {
+      "name": "Zechariah",
+      "width": 4.92239990234375
+    },
+    {
+      "name": "Malachi",
+      "width": 3.963800048828125
+    },
+    {
+      "name": "Matthew",
+      "width": 4.264400329589844
+    },
+    {
+      "name": "Mark",
+      "width": 2.5284002685546874
+    },
+    {
+      "name": "Luke",
+      "width": 2.175
+    },
+    {
+      "name": "John",
+      "width": 2.1507998657226564
+    },
+    {
+      "name": "Acts",
+      "width": 2.1884004211425783
+    },
+    {
+      "name": "Romans",
+      "width": 3.5142001342773437
+    },
+    {
+      "name": "1 Corinthians",
+      "width": 5.75719970703125
+    },
+    {
+      "name": "2 Corinthians",
+      "width": 5.75719970703125
+    },
+    {
+      "name": "Galatians",
+      "width": 4.7060003662109375
+    },
+    {
+      "name": "Ephesians",
+      "width": 4.427400817871094
+    },
+    {
+      "name": "Philippians",
+      "width": 5.119000854492188
+    },
+    {
+      "name": "Colossians",
+      "width": 5.051600341796875
+    },
+    {
+      "name": "1 Thessalonians",
+      "width": 6.648600463867187
+    },
+    {
+      "name": "2 Thessalonians",
+      "width": 6.648600463867187
+    },
+    {
+      "name": "1 Timothy",
+      "width": 3.865599975585938
+    },
+    {
+      "name": "2 Timothy",
+      "width": 3.865599975585938
+    },
+    {
+      "name": "Titus",
+      "width": 2.4340003967285155
+    },
+    {
+      "name": "Philemon",
+      "width": 4.34
+    },
+    {
+      "name": "Hebrews",
+      "width": 3.936400756835938
+    },
+    {
+      "name": "James",
+      "width": 2.489000244140625
+    },
+    {
+      "name": "1 Peter",
+      "width": 2.575400085449219
+    },
+    {
+      "name": "2 Peter",
+      "width": 2.575400085449219
+    },
+    {
+      "name": "1 John",
+      "width": 2.1507998657226564
+    },
+    {
+      "name": "2 John",
+      "width": 2.1507998657226564
+    },
+    {
+      "name": "3 John",
+      "width": 2.1507998657226564
+    },
+    {
+      "name": "Jude",
+      "width": 1.9915998840332032
+    },
+    {
+      "name": "Revelation",
+      "width": 5.185399780273437
+    }
+  ],
+  "font_asset": "web/fonts/cormorant-garamond.ttf",
+  "font_sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0",
+  "method": "Actual browser canvas at 100px, small-caps, weight 400, 1.5px letter spacing; longest word advance divided by 100. Font fitting caps the advance at 69.5% of the whole volume width."
+}
