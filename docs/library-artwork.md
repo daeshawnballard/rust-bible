@@ -9,3 +9,9 @@ Source PNGs are retained at their original resolution. Production covers are exp
 These scenes are artistic interpretations and thematic illustrations, not archaeological evidence or additions to Scripture. The short descriptions and organizing categories are editorial navigation aids. The reader and audio player use the separate embedded King James Version corpus. Existing Tabernacle illustrations and the distinction between Scripture and Explanation are preserved.
 
 The gallery loads covers lazily. Its filtering and sorting run in the shared Rust module, while the browser control module submits routes and previews cover sizing. The native Axum server embeds the same production images; the static build copies only the production WebPs into `dist/art/covers/`.
+
+## Book overview reference and interface assets
+
+The approved Genesis book-page concept is preserved at `assets/imagegen/reference/book-page-approved.png` (built-in ImageGen output `exec-a48e6061-b070-4081-8da9-4890e016f3d1.png`). The overview reuses all 66 existing cover paintings and their recorded provenance. Book titles, editorial descriptions, chapter links, and playback controls remain real HTML rendered by Rust. The concept is a design reference, not a deployed page image.
+
+Book-page typography uses EB Garamond from the Google Fonts repository (`ofl/ebgaramond/EBGaramond[wght].ttf`), licensed under the included SIL Open Font License. Book-open and headphones icons are from Phosphor Icons (`core/assets/regular/`), under the included MIT license. These assets are stored locally; the live page does not require a third-party font or icon service.

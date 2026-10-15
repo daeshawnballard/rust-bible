@@ -443,7 +443,7 @@ fn page_body(q: &str, body: &str, client: bool) -> String {
     let explore = route_path("/explore", client);
     let listen = route_path("/book/Psalms/23", client);
     let is_explore = body.contains("id=\"explore\"") || body.contains("class=\"explore-page\"");
-    let is_library = body.contains("data-library");
+    let is_library = body.contains("data-library") || body.contains("data-book-page");
     let read_current = if is_explore {
         ""
     } else {
@@ -531,16 +531,7 @@ fn json_response(status: u16, body: String) -> RouteResponse {
 }
 
 fn book_content(b: usize, client: bool) -> String {
-    let n = bible().books[b].len();
-    let mut s = format!("<h1>{}</h1><div class=\"chs\">", NAMES[b]);
-    for c in 1..=n {
-        s.push_str(&format!(
-            "<a href=\"{}\">{c}</a>",
-            route_path(&format!("/book/{}/{c}", slug(b)), client)
-        ));
-    }
-    s.push_str("</div>");
-    s
+    library::render_book(b, client)
 }
 
 fn chapter_content(

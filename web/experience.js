@@ -13,6 +13,8 @@ export function initExperience(root = document) {
   let stop = () => {};
   if (controls) {
     const compact = controls.hasAttribute('data-audio-compact');
+    const bookMode = controls.hasAttribute('data-book-audio');
+    const bookName = controls.dataset.reference || 'this book';
     const synth = window.speechSynthesis;
     const play = controls.querySelector('[data-audio-action="play"]');
     const pause = controls.querySelector('[data-audio-action="pause"]');
@@ -20,19 +22,49 @@ export function initExperience(root = document) {
     const rate = controls.querySelector('[data-audio-rate]');
     const voice = controls.querySelector('[data-audio-voice]');
     const status = controls.querySelector('[data-audio-status]');
+    const audioLabel = play?.querySelector('[data-audio-label]');
+    const playbackSettings = controls.querySelector('.book-playback-settings');
     const nodes = [...root.querySelectorAll('.scripture .v')];
-    const verses = nodes.map(node => {
-      const clone = node.cloneNode(true);
-      clone.querySelectorAll('sup').forEach(number => number.remove());
-      return clone.textContent.trim();
-    });
+    let scripture;
+    if (bookMode) {
+      try {
+        const payload = controls.querySelector('[data-book-scripture]')?.textContent || '[]';
+        const parsed = JSON.parse(payload);
+        scripture = Array.isArray(parsed) ? parsed
+          .filter(item => item && typeof item.text === 'string' && item.text.trim())
+          .map(item => ({text: item.text.trim(), chapter: item.chapter, verse: item.verse})) : [];
+      } catch {
+        scripture = [];
+      }
+    } else {
+      scripture = nodes.map(node => {
+        const clone = node.cloneNode(true);
+        clone.querySelectorAll('sup').forEach(number => number.remove());
+        return {text: clone.textContent.trim()};
+      });
+    }
+    const verses = scripture.map(item => item.text);
     let generation = 0, current = null, timer = null, index = 0;
+    const verseNumber = verseIndex => bookMode
+      ? scripture[verseIndex]?.verse ?? verseIndex + 1
+      : nodes[verseIndex].dataset.verse || nodes[verseIndex].querySelector('sup')?.textContent || verseIndex + 1;
+    const location = verseIndex => bookMode
+      ? `${bookName} ${scripture[verseIndex]?.chapter ?? '?'}:${verseNumber(verseIndex)}`
+      : `verse ${verseNumber(verseIndex)}`;
+    const revealPlaybackSettings = () => {
+      if (bookMode && playbackSettings) playbackSettings.hidden = false;
+    };
     const setState = (state, message) => {
       controls.dataset.audioState = state;
       status.textContent = message;
       if (pause) pause.disabled = !['reading', 'paused'].includes(state);
-      stopButton.disabled = !['reading', 'paused', 'starting'].includes(state);
-      if (compact) {
+      if (stopButton) stopButton.disabled = !['reading', 'paused', 'starting'].includes(state);
+      if (bookMode) {
+        if (audioLabel) audioLabel.textContent = state === 'reading' ? `Pause ${bookName}` : state === 'paused' ? `Resume ${bookName}` : `Listen to ${bookName}`;
+        play.setAttribute('aria-label', state === 'reading' ? `Pause ${bookName}` : state === 'paused' ? `Resume ${bookName}` : `Listen to ${bookName}`);
+        play.disabled = state === 'starting' || state === 'unavailable';
+        if (['error', 'unavailable'].includes(state)) revealPlaybackSettings();
+      } else if (compact) {
         play.setAttribute('aria-label', state === 'reading' ? 'Pause Scripture' : state === 'paused' ? 'Resume Scripture' : 'Listen to Scripture');
         play.disabled = state === 'starting' || state === 'unavailable';
         controls.querySelector('.player-title').textContent = state === 'paused' ? 'Scripture paused' : state === 'reading' ? 'Reading Scripture' : 'Listen to Scripture';
@@ -72,7 +104,7 @@ export function initExperience(root = document) {
         if (verseIndex >= verses.length) {
           current = null;
           clearHighlight();
-          setState('finished', 'Finished reading this passage.');
+          setState('finished', bookMode ? `Finished reading ${bookName}.` : 'Finished reading this passage.');
           return;
         }
         index = verseIndex;
@@ -88,61 +120,76 @@ export function initExperience(root = document) {
           if (run !== generation) return;
           clearTimeout(timer);
           clearHighlight();
-          nodes[verseIndex].classList.add('is-speaking');
-          const number = nodes[verseIndex].dataset.verse || nodes[verseIndex].querySelector('sup')?.textContent || verseIndex + 1;
-          setState('reading', `Reading verse ${number} · ${verseIndex + 1} of ${verses.length}.`);
-          console.info('Bible read-aloud: speech started', {verse: number, voice: utterance.voice?.name || 'device default'});
+          nodes[verseIndex]?.classList.add('is-speaking');
+          const number = verseNumber(verseIndex);
+          setState('reading', bookMode
+            ? `Reading ${location(verseIndex)} · ${verseIndex + 1} of ${verses.length}.`
+            : `Reading verse ${number} · ${verseIndex + 1} of ${verses.length}.`);
+          console.info('Bible read-aloud: speech started', {verse: bookMode ? location(verseIndex) : number, voice: utterance.voice?.name || 'device default'});
         };
         utterance.onend = () => {
           if (run === generation) readVerse(run, verseIndex, chunkIndex + 1, chunks);
         };
         utterance.onpause = () => {
-          if (run === generation) setState('paused', 'Paused. Press Resume to continue.');
+          if (run === generation) setState('paused', bookMode
+            ? `Paused at ${location(verseIndex)}. Press Resume to continue.`
+            : 'Paused. Press Resume to continue.');
         };
         utterance.onresume = () => {
-          if (run === generation) setState('reading', `Reading verse ${nodes[index].dataset.verse || index + 1} · ${index + 1} of ${verses.length}.`);
+          if (run === generation) setState('reading', bookMode
+            ? `Reading ${location(index)} · ${index + 1} of ${verses.length}.`
+            : `Reading verse ${nodes[index].dataset.verse || index + 1} · ${index + 1} of ${verses.length}.`);
         };
         utterance.onerror = event => {
           if (run !== generation) return;
-          stop(`Speech could not play (${event.error}). Choose another voice or browser.`);
+          stop(`Speech could not play${bookMode ? ` at ${location(verseIndex)}` : ''} (${event.error}). Choose another voice or browser.`);
           controls.dataset.audioState = 'error';
+          revealPlaybackSettings();
         };
         timer = setTimeout(() => {
           if (run === generation && controls.dataset.audioState === 'starting') {
-            stop('The device speech service did not start. Try another voice or browser.');
+            stop(`The device speech service did not start${bookMode ? ` for ${location(index)}` : ''}. Try another voice or browser.`);
             controls.dataset.audioState = 'error';
+            revealPlaybackSettings();
           }
         }, 7000);
         synth.speak(utterance);
       };
       on(play, 'click', () => {
-        if (compact && controls.dataset.audioState === 'reading') {
+        revealPlaybackSettings();
+        if ((compact || bookMode) && controls.dataset.audioState === 'reading') {
           synth.pause();
-          if (synth.paused) setState('paused', 'Paused. Press Resume to continue.');
+          if (synth.paused) setState('paused', bookMode
+            ? `Paused at ${location(index)}. Press Resume to continue.`
+            : 'Paused. Press Resume to continue.');
           return;
         }
         if (controls.dataset.audioState === 'paused' && current) {
           synth.resume();
-          if (!synth.paused) setState('reading', `Reading verse ${nodes[index].dataset.verse || index + 1} · ${index + 1} of ${verses.length}.`);
+          if (!synth.paused) setState('reading', bookMode
+            ? `Reading ${location(index)} · ${index + 1} of ${verses.length}.`
+            : `Reading verse ${nodes[index].dataset.verse || index + 1} · ${index + 1} of ${verses.length}.`);
           return;
         }
         stop('Starting the device voice…');
-        if (!verses.length) { setState('error', 'There is no Scripture passage to read here.'); return; }
-        setState('starting', 'Starting the device voice…');
+        if (!verses.length) { setState('error', bookMode ? `There is no Scripture text available for ${bookName}.` : 'There is no Scripture passage to read here.'); return; }
+        setState('starting', bookMode ? `Starting ${bookName}…` : 'Starting the device voice…');
         readVerse(generation, 0);
       });
       on(pause, 'click', () => {
         synth.pause();
-        if (synth.paused) setState('paused', 'Paused. Press Resume to continue.');
+        if (synth.paused) setState('paused', bookMode
+          ? `Paused at ${location(index)}. Press Resume to continue.`
+          : 'Paused. Press Resume to continue.');
       });
       on(stopButton, 'click', () => stop());
       on(rate, 'change', () => {
         try { localStorage.setItem('bible.rate', rate.value); } catch {}
-        stop('Speed changed. Press Listen to restart this passage.');
+        stop(bookMode ? `Speed changed. Press Listen to restart ${bookName}.` : 'Speed changed. Press Listen to restart this passage.');
       });
       on(voice, 'change', () => {
         try { localStorage.setItem('bible.voice', voice.value); } catch {}
-        stop('Voice changed. Press Listen to restart this passage.');
+        stop(bookMode ? `Voice changed. Press Listen to restart ${bookName}.` : 'Voice changed. Press Listen to restart this passage.');
       });
       on(window, 'pagehide', () => stop());
     }

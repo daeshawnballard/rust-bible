@@ -441,6 +441,66 @@ fn book_slug(name: &str) -> String {
     name.to_ascii_lowercase().replace(' ', "-")
 }
 
+/// Book overview, chapter destinations, and KJV-only device speech data share
+/// the same corpus in the native server and browser WASM builds.
+pub(super) fn render_book(index: usize, client: bool) -> String {
+    let name = NAMES[index];
+    let detail = BOOKS[index];
+    let chapters = &bible().books[index];
+    let count = chapters.len();
+    let slug = book_slug(name);
+    let category = CATEGORIES
+        .iter()
+        .find(|(key, _)| *key == detail.category)
+        .map(|(_, label)| *label)
+        .unwrap_or("Book");
+    let testament = if index < 39 {
+        "Old Testament"
+    } else {
+        "New Testament"
+    };
+    let title_class = if name.len() > 10 { " long-title" } else { "" };
+    let home = esc(&route_path("/library", client));
+    let first = esc(&route_path(&format!("/book/{slug}/1"), client));
+    let read_icon =
+        include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
+    let listen_icon =
+        include_str!("../web/icons/headphones.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
+    let speech = chapters
+        .iter()
+        .enumerate()
+        .flat_map(|(ch, verses)| {
+            verses.iter().enumerate().map(move |(v, text)| {
+                serde_json::json!({
+                    "text": text, "chapter": ch + 1, "verse": v + 1
+                })
+            })
+        })
+        .collect::<Vec<_>>();
+    let speech = serde_json::to_string(&speech)
+        .expect("serializable KJV verses")
+        .replace('<', "\\u003c");
+    let mut html = format!(
+        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}">Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><div class="cover-frame" aria-hidden="true"></div><span class="cover-title{title_class}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><div class="book-audio" data-read-aloud data-book-audio data-reference="{name}"><div class="book-actions"><a class="book-begin" href="{first}">{read_icon}<span>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-version">King James Version</p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label></div><small>Synthetic device voice. Reads Scripture only, from chapter 1 to the end of the book.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
+        tagline = esc(detail.tagline),
+        description = esc(detail.description),
+        chapter_word = if count == 1 { "chapter" } else { "chapters" }
+    );
+    for chapter in 1..=count {
+        let path = esc(&route_path(&format!("/book/{slug}/{chapter}"), client));
+        html.push_str(&format!(
+            "<a href=\"{path}\" aria-label=\"{name} chapter {chapter}\"{}>{chapter}</a>",
+            if chapter == 1 {
+                " class=\"first-chapter\""
+            } else {
+                ""
+            }
+        ));
+    }
+    html.push_str("</nav></section></div></div></section>");
+    html
+}
+
 fn render_controls(testament: &str, category: &str, sort: &str, size: usize) -> String {
     let mut html = String::from(
         "<details class=\"library-tools\" open data-library-tools><summary>Library tools</summary><form id=\"library-tools-form\" action=\"/library\" method=\"get\"><div class=\"tools-fields\"><label>Testament<select name=\"testament\" aria-label=\"Testament\">",
@@ -552,9 +612,40 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
 
 #[cfg(test)]
 mod tests {
-    use super::{cover_size, filtered_books, BOOKS, CATEGORIES};
+    use super::{book_slug, cover_size, filtered_books, render_book, BOOKS, CATEGORIES};
     use crate::NAMES;
     use std::collections::HashMap;
+
+    #[test]
+    fn every_book_audio_payload_is_exact_complete_kjv_with_valid_chapter_destinations() {
+        for (index, name) in NAMES.iter().enumerate() {
+            let html = render_book(index, true);
+            let data = html
+                .split("data-book-scripture>")
+                .nth(1)
+                .unwrap()
+                .split("</script>")
+                .next()
+                .unwrap();
+            let verses: Vec<serde_json::Value> = serde_json::from_str(data).unwrap();
+            let expected = &crate::bible().books[index];
+            assert_eq!(verses.len(), expected.iter().map(Vec::len).sum::<usize>());
+            let mut offset = 0;
+            for (chapter, text) in expected.iter().enumerate() {
+                let path = format!("#/book/{}/{}", book_slug(name), chapter + 1);
+                assert!(html.contains(&format!("href=\"{path}\"")));
+                for (verse, value) in text.iter().enumerate() {
+                    assert_eq!(verses[offset]["text"], *value);
+                    assert_eq!(verses[offset]["chapter"], chapter + 1);
+                    assert_eq!(verses[offset]["verse"], verse + 1);
+                    offset += 1;
+                }
+            }
+            let native = render_book(index, false);
+            assert!(native.contains(&format!("href=\"/book/{}/1\"", book_slug(name))));
+            assert!(!native.contains("href=\"#/book/"));
+        }
+    }
 
     #[test]
     fn metadata_covers_the_canonical_66_books_and_known_genres() {

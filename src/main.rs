@@ -9,6 +9,14 @@ use axum::{
 mod cover_assets;
 
 async fn serve(uri: Uri) -> Response {
+    if uri.path() == "/fonts/eb-garamond.ttf" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "font/ttf")
+            .body(Body::from(
+                include_bytes!("../web/fonts/eb-garamond.ttf").as_slice(),
+            ))
+            .expect("book typeface response is valid");
+    }
     if let Some(bytes) = cover_assets::get(uri.path()) {
         return Response::builder()
             .header(header::CONTENT_TYPE, "image/webp")
