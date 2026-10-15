@@ -60,7 +60,7 @@ export function initExperience(root = document) {
       ? `${bookName} ${scripture[verseIndex]?.chapter ?? '?'}:${verseNumber(verseIndex)}`
       : readerMode ? `${scripture[verseIndex]?.reference}:${verseNumber(verseIndex)}` : `verse ${verseNumber(verseIndex)}`;
     const readingMessage = verseIndex => (bookMode || readerMode)
-      ? `Reading ${location(verseIndex)}${readerMode ? ' · Continues into the next chapter.' : ` · ${verseIndex + 1} of ${verses.length}.`}`
+      ? `Reading ${location(verseIndex)}${readerMode ? '' : ` · ${verseIndex + 1} of ${verses.length}.`}`
       : `Reading verse ${verseNumber(verseIndex)} · ${verseIndex + 1} of ${verses.length}.`;
     const followVerse = verseIndex => {
       if (!readerMode || !follow?.checked) return;
