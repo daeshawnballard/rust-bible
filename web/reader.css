@@ -257,7 +257,7 @@ main.wrap:has(.reader-page) {
   top: 0;
   z-index: 8;
   background: #121413;
-  box-shadow: 0 -12px 0 #121413, 0 28px 0 #121413;
+  box-shadow: 0 -12px 0 #121413, 0 48px 0 #121413;
 }
 .reader-audio-settings .reader-follow { display:flex;align-items:center;gap:.6rem;min-height:44px;cursor:pointer; }
 .reader-follow input { width:18px;height:18px;accent-color:#e3c27e; }
