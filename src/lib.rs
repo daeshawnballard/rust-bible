@@ -868,7 +868,7 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
         "/api/verse" => api_verse(&params),
         "/api/search" => api_search(&params),
         "/about" => about::page(client),
-        "/explore" => learning::hub(client),
+        "/explore" => learning::hub(params.get("scene").map(String::as_str), client),
         "/explore/noahs-ark" | "/explore/sower" => learning::page(
             path.trim_start_matches("/explore/"),
             params.get("part").map(String::as_str),

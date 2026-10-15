@@ -17,7 +17,6 @@ struct Scene {
     art: &'static str,
     title: &'static str,
     subtitle: &'static str,
-    description: &'static str,
     stops: &'static [Stop],
 }
 const ARK_STOPS: [Stop; 4] = [
@@ -33,8 +32,20 @@ const SOWER_STOPS: [Stop; 4] = [
     Stop { id: "good-soil", name: "The good ground", position: (72.,60.), refs: &["Matthew 13:8-9", "Matthew 13:23"], note: "Seed in good ground bears fruit in differing amounts. Matthew 13:23 connects the good ground with hearing and understanding the word. The healthy grain illustrates fruitfulness without assigning a measured harvest to this scene.", question: "Does all the fruitful seed yield the same amount?", answer: "No. Matthew 13:8 and 13:23 name a hundredfold, sixtyfold, and thirtyfold. The pictured grain is illustrative, not a measurement of those yields." },
 ];
 const SCENES: [Scene; 2] = [
-    Scene {slug:"noahs-ark", art:"ark", title:"Inside Noah’s Ark", subtitle:"Genesis 6–8", description:"Explore the three decks, side door, window, and gathered food alongside the passages that describe them.", stops:&ARK_STOPS},
-    Scene {slug:"sower", art:"sower", title:"The Sower’s Field", subtitle:"Matthew 13", description:"Follow the seed through four kinds of ground, then read the parable and its explanation in Scripture.", stops:&SOWER_STOPS},
+    Scene {
+        slug: "noahs-ark",
+        art: "ark",
+        title: "Inside Noah’s Ark",
+        subtitle: "Genesis 6–8",
+        stops: &ARK_STOPS,
+    },
+    Scene {
+        slug: "sower",
+        art: "sower",
+        title: "The Sower’s Field",
+        subtitle: "Matthew 13",
+        stops: &SOWER_STOPS,
+    },
 ];
 fn scene_for(slug: &str) -> Option<&'static Scene> {
     SCENES.iter().find(|scene| scene.slug == slug)
@@ -45,35 +56,78 @@ fn scene_path(scene: &Scene, stop: &Stop, view: &str, client: bool) -> String {
         client,
     )
 }
-fn card(title: &str, subtitle: &str, note: &str, image: &str, href: &str, count: usize) -> String {
-    format!(
-        r#"<a class="learning-card" href="{}"><span class="learning-artwork"><img src="{image}" width="1536" height="1024" alt="" loading="lazy"></span><div class="learning-card-copy"><h2>{title}</h2><p class="learning-source">{subtitle} <span aria-hidden="true">·</span> {count} details to explore</p><p class="learning-description">{note}</p><span class="learning-open">Explore the study <span aria-hidden="true">→</span></span></div></a>"#,
-        esc(href)
-    )
+struct StudyPreview {
+    slug: &'static str,
+    name: &'static str,
+    title: &'static str,
+    reference: &'static str,
+    description: &'static str,
+    image: &'static str,
+    details: usize,
 }
-pub(super) fn hub(client: bool) -> RouteResponse {
+const STUDIES: [StudyPreview; 3] = [
+    StudyPreview {
+        slug: "tabernacle",
+        name: "The Tabernacle",
+        title: "Inside the Tabernacle",
+        reference: "Exodus 25–27",
+        description: "Explore the sanctuary and its furnishings alongside Exodus 25–27.",
+        image: "/art/tabernacle.webp",
+        details: 8,
+    },
+    StudyPreview {
+        slug: "noahs-ark",
+        name: "Noah’s Ark",
+        title: "Inside Noah’s Ark",
+        reference: "Genesis 6",
+        description: "Look inside the ark and explore its construction alongside Genesis 6–8.",
+        image: "/art/learn/ark/scene.webp",
+        details: 4,
+    },
+    StudyPreview {
+        slug: "sower",
+        name: "The Sower",
+        title: "The Sower’s Field",
+        reference: "Matthew 13",
+        description: "Follow the seed through four kinds of ground alongside Matthew 13.",
+        image: "/art/learn/sower/scene.webp",
+        details: 4,
+    },
+];
+pub(super) fn hub(selected: Option<&str>, client: bool) -> RouteResponse {
+    let study = STUDIES
+        .iter()
+        .find(|study| Some(study.slug) == selected)
+        .unwrap_or(&STUDIES[0]);
+    let arrow =
+        include_str!("../web/icons/arrow-right.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
+    let book =
+        include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
     let mut body = String::from(
-        r#"<section class="learning-page" data-learning-hub><header class="learning-heading"><h1>Explore Scripture</h1><p>Illustrated studies to read alongside the Bible.</p></header><div class="learning-grid">"#,
+        r#"<section class="learning-page" data-learning-hub><div class="learning-browser"><div class="learning-index"><header class="learning-heading"><p class="eyebrow">Illustrated studies</p><h1>Explore Scripture</h1><p>Choose a scene. Read its passage. Look closer.</p></header><nav class="learning-scenes" aria-label="Choose an illustrated study">"#,
     );
-    body.push_str(&card(
-        "Inside the Tabernacle",
-        "Exodus 25–27",
-        "Explore the courtyard, tent, and furnishings described in Exodus.",
-        "/art/tabernacle.webp",
-        &route_path("/explore/tabernacle", client),
-        8,
-    ));
-    for scene in &SCENES {
-        body.push_str(&card(
-            scene.title,
-            scene.subtitle,
-            scene.description,
-            &format!("/art/learn/{}/scene.webp", scene.art),
-            &route_path(&format!("/explore/{}", scene.slug), client),
-            scene.stops.len(),
+    for item in &STUDIES {
+        let href = route_path(&format!("/explore?scene={}", item.slug), client);
+        let current = if item.slug == study.slug {
+            " aria-current=\"true\""
+        } else {
+            ""
+        };
+        body.push_str(&format!(
+            r#"<a class="learning-scene-choice" data-study-choice="{}" href="{}"{current}><span class="learning-thumbnail"><img src="{}" width="1536" height="1024" alt=""></span><span class="learning-choice-copy"><span class="learning-choice-name">{}</span><span class="learning-choice-source">{} <span aria-hidden="true">·</span> {} details</span></span>{arrow}</a>"#,
+            item.slug, esc(&href), item.image, item.name, item.reference, item.details,
         ));
     }
-    body.push_str(&format!(r#"</div><aside class="learning-integrity" aria-label="About the illustrations"><p>Artwork is illustrative. KJV Scripture, explanations, and study questions are kept separate.</p><a href="{}">About these studies →</a></aside></section>"#,esc(&route_path("/about",client))));
+    body.push_str(&format!(
+        r#"</nav></div><article class="learning-feature" data-featured-study="{}" aria-labelledby="featured-study-title"><figure><img class="learning-feature-art" src="{}" width="1536" height="1024" alt="Illustrated reconstruction: {}" fetchpriority="high"><figcaption>An illustrated reconstruction</figcaption></figure><div class="learning-feature-copy"><h2 id="featured-study-title">{}</h2><p>{}</p><div class="learning-feature-actions"><a class="learning-enter" href="{}">{book}<span>Enter study</span>{arrow}</a><aside class="learning-integrity" aria-label="About the illustrations"><a href="{}">Illustrations and explanations accompany the KJV text.</a></aside></div></div></article></div></section>"#,
+        study.slug,
+        study.image,
+        study.name,
+        study.title,
+        study.description,
+        esc(&route_path(&format!("/explore/{}", study.slug), client)),
+        esc(&route_path("/about", client)),
+    ));
     html_response(
         200,
         "Explore Scripture · The Bible",
@@ -273,8 +327,19 @@ mod tests {
         assert_eq!(page("noahs-ark", Some("invalid"), None, true).status, 404);
         assert_eq!(page("sower", None, Some("invalid"), true).status, 404);
         assert_eq!(page("invalid", None, None, true).status, 404);
-        let gallery = hub(true);
-        assert_eq!(gallery.body.matches("class=\"learning-card\"").count(), 3);
+        for study in &STUDIES {
+            let gallery = hub(Some(study.slug), true);
+            assert_eq!(gallery.body.matches("data-study-choice=").count(), 3);
+            assert!(gallery
+                .body
+                .contains(&format!("data-featured-study=\"{}\"", study.slug)));
+            assert!(gallery
+                .body
+                .contains(&format!("href=\"#/explore/{}\"", study.slug)));
+        }
+        assert!(hub(Some("unknown"), false)
+            .body
+            .contains("data-featured-study=\"tabernacle\""));
     }
     #[test]
     fn related_studies_are_separate_from_scripture() {

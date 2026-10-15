@@ -96,3 +96,29 @@ Supporting checks: 33 Rust tests, progress validation tests, JavaScript syntax, 
 The existing Today, Library and chapter reader are the visual authority for the Explore landing page. The gallery now uses Bible Display for descriptions, the reader's compact heading scale, thin gold artwork frames, unboxed copy and Library-style text links. Its instructional note is compact; the original scenes, illustrations, routes, Scripture panels and audio behavior are retained. Header styling and other page designs are unchanged.
 
 Supporting checks: the three existing learning tests, formatting and the WASM build pass. Local browser checks at 1280px and 320px confirm three gallery links, serif copy, a full-width footer, no horizontal overflow, and a keyboard journey through a study hotspot and back to Scripture. These local checks are separate from hosted acceptance after publication.
+
+
+## Selected scene-led Explore browser
+
+Source visual truth: `assets/imagegen/reference/explore-scene-led-approved.png`, the first displayed concept selected on October 15, 2026. Implementation: `docs/site-explore.png`, a real local Rust/WASM browser capture. Both are 1536 × 1024 pixels at a 1536 × 1024 CSS viewport, density 1; no scaling was needed. State: Explore, Tabernacle selected, idle audio. Equal-scale full-view comparison: `docs/explore-scene-led-comparison.webp`; focused heading/index comparison: `docs/explore-scene-led-index-comparison.webp`. Both sides were inspected together.
+
+Corrected findings and comparison history:
+
+- P2, artwork integration: the first render isolated the image blending and exposed a hard rectangle. Removing that isolation allows the existing raster to blend into the shared charcoal. The final comparison was captured after the fix.
+- P2, rhythm and controls: the initial index began 10px too low, the study action was narrower than the reference, and thumbnails showed too much surrounding ground. Reduced the heading gap, matched the desktop action width, and gave the three existing paintings deliberate thumbnail crops. Refined artwork contrast and color without replacing the source paintings.
+- P2, intermediate width: an actual 901px render measured a 318px heading in a 286px column. A bounded responsive font size now measures 286px for both content and column at that width. The complete page fits at 320, 390, 768, 901, 1024 and 1536px.
+- Capture limitation, not a product result: raw CDP viewport captures on the hidden Mac browser surface briefly returned a cropped native-density view. The final screenshots use the supported full-page browser capture and verified 1536 × 1024 dimensions. An initial Back-to-Scripture test used the decorative arrow in its accessible name; the corrected actual accessible name reached the passage. The first locator failure is retained in private test evidence.
+
+Required fidelity surfaces:
+
+- Typography: existing locally hosted Bible Display/Cormorant serif, compact spaced eyebrow, warm gold heading, serif source labels and descriptions. The existing header is preserved.
+- Spacing/layout: compact three-scene index at left, one large scene at right, editorial title and Enter study below it, small separated source note, and the reference footer position. At narrow widths all three choices remain visible above the full-width scene and action.
+- Colors/tokens: shared charcoal, ivory and aged gold; restrained rules and active-selection indicator, with no generic gallery cards.
+- Images/icons: the three original scene paintings remain separate production assets. Their camera, object geometry and lighting differ from the ImageGen concept's reinterpretation; retaining the established study illustrations is intentional. Thumbnail crops and a modest CSS color treatment bring them closer while preserving the original files. Existing licensed Phosphor book and new Phosphor arrow icons are used. The page mockup is never a page background.
+- Copy/content: heading, instructions, scene labels, source references, counts and action are live Rust-rendered content. Selection changes the URL, artwork, introduction and study destination. KJV Scripture, explanatory notes, dedicated details and device audio remain in the existing study routes.
+
+Local browser outcomes: Ark selection/reload retains its matching introduction and link; keyboard Sower selection enters the correct default Scripture panel; a good-ground hotspot shows its dedicated illustration and Back to Scripture returns the exact cited KJV. Responsive checks cover six widths, a 56px narrow action, visible choices and no horizontal page overflow. Hosted release verification follows publication separately. Supporting checks: all 33 Rust tests before final CSS refinements, the focused three learning tests after hub markup changes, formatting, production WASM build and diff checks.
+
+No actionable P0/P1/P2 findings remain in the compared default state. Intentional differences: preserved production artwork instead of the generated preview's reinterpreted scene; narrow layouts are responsive adaptations because the selected reference is desktop only. Exhaustive all-66-book/all-16-hotspot flows and physical-device qualification are outside this scoped layout run.
+
+final result: passed

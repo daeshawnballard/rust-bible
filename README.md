@@ -94,7 +94,11 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 Explore includes the Tabernacle, Noah’s Ark, and the Sower’s Field. The Tabernacle has eight guided hotspots; the Ark and Sower scenes have four each, for 16 hotspots total. In every scene, Scripture is the default view in a fixed right-hand panel with its own scroll area. A hotspot opens a dedicated detail illustration and explanation in that panel. **Back to Scripture** returns to the passage for the selected stop. Previous/next controls move through guided stops and their questions, which point back to named passages. A labeled selector provides another way to choose a stop on narrow screens. Rust renders the scenes’ hotspots, panel views, selections, references, explanations, and KJV content in both native and WASM builds.
 
-The Explore gallery uses the Library’s display serif, unboxed descriptions and text links, with the thin gold artwork frames used on Today. Its compact heading and source note keep the studies within the same visual style as the reader.
+![Scene-led Explore browser](docs/site-explore.png)
+
+Explore opens as a scene-led study browser: a compact illustrated index beside one large scene, using the Library’s charcoal, gold, and display serif. Choose **The Tabernacle**, **Noah’s Ark**, or **The Sower** to update the featured artwork and introduction, then **Enter study** to open its Scripture panel and interactive hotspots. The selected scene is stored in the URL (`#/explore?scene=noahs-ark`, for example), so reload, shared links, and browser Back retain that selection. Unknown scene names recover to the Tabernacle. On smaller screens, the index sits above the featured scene and reading action.
+
+The selected scene-led concept is preserved in `assets/imagegen/reference/explore-scene-led-approved.png`, with its generation and reuse notes alongside it. The page reuses the existing individual scene illustrations; titles, descriptions, selection links, and the reading action remain real Rust-rendered interface elements. The Library, Today, reader, study panels, dedicated artwork, and audio retain their existing behavior.
 
 ![Dedicated object artwork](docs/site-tabernacle-objects.png)
 

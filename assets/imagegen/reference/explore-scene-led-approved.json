@@ -1,0 +1,24 @@
+{
+  "kind": "approved-ui-concept",
+  "generator": "OpenAI built-in ImageGen",
+  "generated_on": "2026-10-15",
+  "approved_on": "2026-10-15",
+  "source_output_id": "exec-df4869f4-4510-4d8f-90e5-892fddc24402",
+  "reference_file": "assets/imagegen/reference/explore-scene-led-approved.png",
+  "sha256": "e2ffe2f296e32e5cb2c37a78f42cea9203d498e2ed16c98e914bc192236532d2",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "selection": "First displayed image: scene-led Explore study browser",
+  "brief": "Match the existing Library and Today charcoal, aged gold, ivory serif header; show a compact three-study index alongside one large Tabernacle scene, an editorial introduction and Enter study action. Keep the study chooser distinct from Scripture and the interactive detail screen.",
+  "grounding": [
+    "actual Library screenshot",
+    "actual Today screenshot",
+    "web/art/tabernacle.webp",
+    "web/art/learn/ark/scene.webp",
+    "web/art/learn/sower/scene.webp"
+  ],
+  "implementation": "Reuses the existing three production scene paintings; UI text, links and selection state are rendered by Rust. This mockup is reference material, not a deployed page image.",
+  "new_production_raster_assets": []
+}
