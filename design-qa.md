@@ -38,3 +38,22 @@ final result: passed
 Kept the dimensional binding, all 66 paintings, and approved gallery composition. Descriptions now use weight 500 with more line spacing; reading links use weight 600. Library-only CSS gently reduces the binding gold saturation and painting enhancement. The desktop floating tools bar is 64px tall at 1536px, down from 84px, with a softer border/shadow and smaller tool icon. Tablet padding is also reduced; mobile keeps its collapsible form and existing controls. Book overviews, reader, Tabernacle, and speech behavior are outside this presentation change.
 
 Fresh local browser layout checks cover all 66 card texts at 1536, 1024, 768, 390, and 320 CSS pixels. No horizontal overflow or clipped titles/descriptions were observed. The updated Library screenshot above is a real local browser capture. Hosted acceptance is recorded separately after publication; these local checks do not establish physical-device or acoustic qualification.
+
+
+## Selected Today and chapter reader — option 1
+
+Authority: `assets/imagegen/reference/today-reader-approved.png`, the first displayed concept selected by the user. The paired board is 1983 × 793 pixels. Each panel was compared at 953 × 726 CSS pixels, density 1: Today crop (26,41)–(979,767), Reader crop (1006,41)–(1959,767). States: October 15, 2026 / Psalms 23:1–3 and Psalm 23 / idle playback. Current full browser captures are `docs/site-today.png` and `docs/site-reader.png` at 1536 × 1024. Equal-scale comparison revisions are retained in the private task evidence, rather than published as product assets.
+
+Corrected P2 findings: inherited audio layout produced an oversized button; static and native CSS ordering differed; reader text width and controls were too wide at the reference viewport; button labels did not visibly reflect pause/resume. The final layout uses the same CSS order in both builds, scoped compact controls, real changing labels, and responsive reader width. Mobile selectors and scene hotspots have larger usable targets; the Scripture panel also offers a named part selector.
+
+Required fidelity surfaces:
+
+- Typography: locally hosted Cormorant serif headings/Scripture, consistent small date labels and shared header. Reader type and column width track the selected quiet composition.
+- Spacing: Today retains text left, painting right, paired reading controls, and compact supporting rows. Reader preserves breadcrumbs, centered text, compact selectors/player, and previous/next navigation. Mobile stacks these elements without horizontal overflow.
+- Color: shared charcoal, parchment, muted gold rules and controls; existing book bindings remain unchanged.
+- Imagery: a dedicated detailed harp, olive tree, and valley painting was generated from the selected authority and existing Psalms art. It is a separate production asset, not the page mockup. Source, prompts, and export provenance are saved in the repository.
+- Copy and controls: actual KJV verses, accurate chapter counts, working navigation, and contextual speech are real interface elements. Illustrations, book descriptions, and Tabernacle explanations remain separate from Scripture and speech payloads.
+
+Remaining differences: the new painting differs in its exact details from the generated concept. Today adds an honest rotation disclosure, a stable dated link, and Clear for saved reading; these can place the footer below a short reference-height viewport. The named Tabernacle row uses the shared book icon. Fine texture and letter rendering differ from ImageGen. No pixel-identical claim is made. Local 320/390px checks and all 66 cover-to-last-chapter journeys passed; final hosted acceptance is a separate release-bound run. Physical phones and independent acoustic measurement are not established by these captures.
+
+final result: passed

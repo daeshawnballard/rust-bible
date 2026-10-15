@@ -2,13 +2,21 @@
 
 Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site>. Open-source repository: <https://github.com/daeshawnballard/rust-bible>.
 
-![Illustrated Bible Library](docs/site-library.png)
+![Today’s reading](docs/site-today.png)
 
-A KJV reader and illustrated Library with one shared Rust implementation. Run it as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. Rust handles Bible lookup, reference parsing, search, Library filtering and sorting, and page rendering. Small JavaScript modules connect browser routes, Library controls, and device speech playback to that Rust implementation.
+A daily KJV reading, chapter reader, and illustrated Library with one shared Rust implementation. Run it as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. Rust handles Bible lookup, reference parsing, search, Library filtering and sorting, and page rendering. Small JavaScript modules connect browser routes, Library controls, and device speech playback to that Rust implementation.
+
+## Today and navigation
+
+**Today** is the default homepage: a short KJV passage, a separate illustration, **Read** for its full chapter, and **Listen** for that passage. Edition 1 uses a clearly labeled, curated 14-day rotation. The browser selects the day using its local calendar date. **Link to this day** retains the date and edition so the selection is stable when shared. Illustrations are artistic interpretations; Scripture comes verbatim from the embedded corpus.
+
+**Library** is the gallery of all 66 books. A cover opens its book overview, and a chapter button opens the chapter reader. Reader breadcrumbs follow **Library / Book / Chapter**. The header stays consistent throughout the site. Listening belongs to the passage, chapter, or book currently open. The named **Explore the Tabernacle** feature is on Today.
+
+**Last opened on this device** appears after a chapter is opened and survives reloads. It stores only the book, chapter, route, and timestamp in browser-local storage; it is not an account, reading-completion measure, or cross-device sync. **Clear** removes that saved location. The Library also restores its filters, cover size, and scroll position within the browser session.
 
 ## Illustrated Library
 
-The default homepage is a gallery of all 66 books, with individual painted cover illustrations, live HTML titles, short editorial descriptions, and chapter links. Each cover opens its book's chapter navigation; the **Read** link starts chapter 1.
+The Library is a gallery of all 66 books, with individual painted cover illustrations, live HTML titles, short editorial descriptions, and chapter links. Each cover opens its book's chapter navigation; the **Read** link starts chapter 1.
 
 The Library uses medium-weight descriptions and stronger reading links, with restrained gold highlights on its dimensional covers. The compact floating **Library tools** bar filters by testament and category, sorts by Bible order, title, or chapter count, and changes cover size. Filters combine, selections are reflected in the URL, and **Reset** returns to all 66 books. On narrow screens the toolbar can collapse and the gallery adjusts to the available width. The header retains the reader's explicit fuzzy book suggestions and passage lookup.
 
@@ -48,7 +56,7 @@ Build the static site:
 ./scripts/build-wasm.sh
 ```
 
-The command writes the site shell and WASM module, all 66 cover WebPs to `dist/art/covers/`, `dist/art/tabernacle.webp` for the interactive scene, and all eight dedicated object images to `dist/art/objects/`. Publish the contents of `dist/` on any static host. Original ImageGen PNGs and provenance stay in the source repository and are not copied into the deployed bundle. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
+The command writes the site shell and WASM module, the Today illustration to `dist/art/today/`, all 66 cover WebPs to `dist/art/covers/`, `dist/art/tabernacle.webp` for the interactive scene, and all eight dedicated object images to `dist/art/objects/`. Publish the contents of `dist/` on any static host. Original ImageGen PNGs and provenance stay in the source repository and are not copied into the deployed bundle. The page shows a loading state, reports WebAssembly or asset-loading errors, and includes a no-JavaScript message. It does not use `wasm-bindgen`, `wasm-pack`, or a server-side process.
 
 For a local static preview after building:
 
@@ -67,9 +75,9 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 ## Reader features
 
-![The Bible reader](docs/site-reader.jpg)
+![The Bible chapter reader](docs/site-reader.png)
 
-- All 66 books and chapter navigation, with previous and next chapter links across book boundaries.
+- A quiet chapter reader for all 66 books, with book/chapter selectors, contextual speech controls, and previous/next chapter links across book boundaries.
 - Reference lookup such as `John 3:16`, `John 3`, `1 Cor 13:4-7`, and `ps 23`; names are case-insensitive and common abbreviations are supported.
 - Typo-tolerant book suggestions: `neimai` suggests Nehemiah, and `jhon` suggests John. Chapter and verse requests stay attached to valid suggestions. Corrections are explicit links; keyword search still returns exact text matches.
 - Full-text search where every query word must match, with up to 200 displayed results and escaped highlighting.
@@ -79,7 +87,7 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 ![Illustrated Tabernacle explorer](docs/site-tabernacle.png)
 
-Choose **Explore** to open a detailed illustrated Tabernacle scene. Scripture is the default view in a fixed-size right-hand panel with its own scroll area. Eight clickable scene hotspots switch that same panel to one of eight dedicated object illustrations and a short explanation. **Back to Scripture** or the panel’s **Scripture** link returns to the selected object’s KJV passage. The object-button row and separate drawer are removed. Rust renders the hotspots, panel views, selections, references, explanations, and KJV content in both native and WASM builds.
+Choose **Explore the Tabernacle** on Today to open a detailed illustrated Tabernacle scene. Scripture is the default view in a fixed-size right-hand panel with its own scroll area. Eight clickable scene hotspots switch that same panel to one of eight dedicated object illustrations and a short explanation. **Back to Scripture** or the panel’s **Scripture** link returns to the selected object’s KJV passage. A labeled part selector inside the Scripture panel provides an alternative to the scene hotspots on small screens. The outside object-button row and separate drawer are removed. Rust renders the hotspots, panel views, selections, references, explanations, and KJV content in both native and WASM builds.
 
 ![Dedicated object artwork](docs/site-tabernacle-objects.png)
 
@@ -87,7 +95,7 @@ The scene and the eight object close-ups are separate AI-generated artistic reco
 
 Scripture is rendered verbatim from the embedded KJV corpus. **Explanation** is a separate, explicitly labeled section with passage references; it is not added to Scripture playback. The supporting references are listed in [the scene source notes](docs/tabernacle-sources.md).
 
-Chapter, passage, and Explore pages include **Listen to Scripture**, pause/resume, stop, speed, and voice controls. Explore uses the concept’s circular play/pause button and waveform-styled bar; extra voice and stop controls sit under **Playback options**. The waveform is decorative, not sampled audio or a seekable timeline. Speech uses the browser's Web Speech API and available device voices, so no API key is embedded or required. Voice availability and pronunciation depend on the browser/device. Playback starts only after a user action, highlights the current verse, and stops on navigation. Browsers without working speech support show an explicit unavailable/error message.
+Today, chapter, and passage pages include contextual **Listen to this passage/chapter**, pause/resume, stop, speed, and voice controls. The Tabernacle includes **Listen to Scripture**. Explore uses the concept’s circular play/pause button and waveform-styled bar; extra voice and stop controls sit under **Playback options**. The waveform is decorative, not sampled audio or a seekable timeline. Speech uses the browser's Web Speech API and available device voices, so no API key is embedded or required. Voice availability and pronunciation depend on the browser/device. Playback starts only after a user action, highlights the current verse, and stops on navigation. Browsers without working speech support show an explicit unavailable/error message.
 
 ## Data source
 
