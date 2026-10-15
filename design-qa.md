@@ -57,3 +57,9 @@ Required fidelity surfaces:
 Remaining differences: the new painting differs in its exact details from the generated concept. Today adds an honest rotation disclosure, a stable dated link, and Clear for saved reading; these can place the footer below a short reference-height viewport. The named Tabernacle row uses the shared book icon. Fine texture and letter rendering differ from ImageGen. No pixel-identical claim is made. Local 320/390px checks and all 66 cover-to-last-chapter journeys passed; final hosted acceptance is a separate release-bound run. Physical phones and independent acoustic measurement are not established by these captures.
 
 final result: passed
+
+## Reading-page footer placement correction
+
+A fresh hosted John 3:16 passage at 1561 × 1200 placed the footer bottom at 487.53px, leaving 712.47px of viewport below it. Today also relied on a fixed viewport subtraction. Today and reader now use a column layout with a dynamic viewport minimum: short pages place the full-width footer at the bottom, and long chapters expand naturally. The Library and Tabernacle layouts are outside this scoped rule.
+
+Fresh local Rust/WASM browser checks passed for the focused passage, John 3 (36 verses), Today, and Psalm 117 (2 verses), including 320px and 390px mobile widths. Footer bounds reach the document/viewport bottom without overlapping the reading area or horizontal overflow. Hosted verification is recorded separately for the final published source; these checks do not establish physical-phone behavior.
