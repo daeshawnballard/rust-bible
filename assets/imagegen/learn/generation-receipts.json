@@ -1,0 +1,72 @@
+[
+  {
+    "id": "ark/scene",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-ba0871c0-61a8-44c0-acd6-3d5ac45293ac.png",
+    "source": "assets/imagegen/source/learn/ark/scene.png",
+    "final": "web/art/learn/ark/scene.webp"
+  },
+  {
+    "id": "ark/construction",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-a61422c1-27d0-4fe6-bb3c-72a407e67bac.png",
+    "source": "assets/imagegen/source/learn/ark/construction.png",
+    "final": "web/art/learn/ark/construction.webp"
+  },
+  {
+    "id": "ark/door",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-8f0c2f9b-1f51-49d9-9bfd-8f28d717db5c.png",
+    "source": "assets/imagegen/source/learn/ark/door.png",
+    "final": "web/art/learn/ark/door.webp"
+  },
+  {
+    "id": "ark/window",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-22ad7a2e-503c-4083-a4dd-1904f78967c1.png",
+    "source": "assets/imagegen/source/learn/ark/window.png",
+    "final": "web/art/learn/ark/window.webp"
+  },
+  {
+    "id": "ark/food",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-6fc4dcdf-45fc-4591-aebd-1a010103e77d.png",
+    "source": "assets/imagegen/source/learn/ark/food.png",
+    "final": "web/art/learn/ark/food.webp"
+  },
+  {
+    "id": "sower/scene",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-71efed13-5191-4019-ad40-baa3f5788541.png",
+    "source": "assets/imagegen/source/learn/sower/scene.png",
+    "final": "web/art/learn/sower/scene.webp"
+  },
+  {
+    "id": "sower/path",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-03ccb78c-e898-4281-8d03-a0c666a45e4d.png",
+    "source": "assets/imagegen/source/learn/sower/path.png",
+    "final": "web/art/learn/sower/path.webp"
+  },
+  {
+    "id": "sower/rocky",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-fef7dbae-672a-44e9-9a48-8e2226f9686d.png",
+    "source": "assets/imagegen/source/learn/sower/rocky.png",
+    "final": "web/art/learn/sower/rocky.webp"
+  },
+  {
+    "id": "sower/thorns",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-b593c7aa-3cd7-4d9a-9909-bac6c0d34cb2.png",
+    "source": "assets/imagegen/source/learn/sower/thorns.png",
+    "final": "web/art/learn/sower/thorns.webp"
+  },
+  {
+    "id": "sower/good-soil",
+    "generator": "built-in ImageGen",
+    "output_filename": "exec-5db4fddd-c0e8-4e38-940f-5e7a961d0183.png",
+    "source": "assets/imagegen/source/learn/sower/good-soil.png",
+    "final": "web/art/learn/sower/good-soil.webp"
+  }
+]

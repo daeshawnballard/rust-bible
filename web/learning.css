@@ -1,0 +1,48 @@
+/* Illustrated studies extend the established charcoal, gold and book typography. */
+main.wrap:has(.learning-page){max-width:1440px;width:calc(100% - 64px)}
+.learning-page{padding:2rem 0 3rem;color:#e8dfce}
+.learning-heading{background:none;border:0;margin:0 0 1.7rem;max-width:800px}
+.learning-heading .eyebrow,.learning-integrity .eyebrow,.related-study .eyebrow,.today-explore .eyebrow{font: .69rem/1.5 system-ui,sans-serif;text-transform:uppercase;letter-spacing:.13em;color:#c7ab72;margin:0 0 .4rem}
+.learning-heading h1{font:400 clamp(2.8rem,5.7vw,5rem)/1 'Bible Display',Georgia,serif;color:#efd394;margin:.4rem 0 1rem}
+.learning-heading>p:last-child{font:1.15rem/1.6 Georgia,serif;color:#c9c1b1;max-width:660px}
+.learning-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.learning-card{display:flex;flex-direction:column;border:1px solid #b59a624a;border-radius:12px;background:#191d18;overflow:hidden;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s}
+.learning-card:hover{border-color:#dbbd79;transform:translateY(-3px)}
+.learning-card:focus-visible{outline:3px solid #f0d497;outline-offset:5px}
+.learning-card>img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:#141615}
+.learning-card>div{padding:24px;display:flex;flex:1;flex-direction:column}
+.learning-card .eyebrow{font:.65rem/1.6 system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#c7ab72;margin:0 0 .8rem}
+.learning-card h2{font:400 clamp(1.8rem,2.4vw,2.45rem)/1.1 'Bible Display',Georgia,serif;color:#f0d79f;margin:0 0 .7rem}
+.learning-card p{font:1rem/1.6 Georgia,serif;color:#c9c1b1;margin:0 0 1.5rem}
+.learning-card>div>span{margin-top:auto;display:flex;justify-content:space-between;color:#e5ca8d;font:.88rem/1.4 system-ui,sans-serif}
+.learning-integrity{margin-top:30px;border-top:1px solid #b59a6240;padding:24px 0;max-width:860px}
+.learning-integrity h2{font:400 1.7rem/1.25 'Bible Display',Georgia,serif;color:#e4c88c;margin:0 0 .7rem}
+.learning-integrity p{line-height:1.7;color:#bfb7a6}
+.learning-integrity a,.all-studies{color:#e7c98c}
+.scene-caption{font:.74rem/1.5 system-ui,sans-serif;color:#b9ad98;margin:.5rem 0 0}
+.study-question{border:1px solid #b59a624a;background:#d2ac5209;border-radius:6px;padding:12px;margin:0 0 18px;font:.9rem/1.6 system-ui,sans-serif}
+.study-question summary{cursor:pointer;color:#e4c78b;min-height:36px;line-height:1.5}
+.study-question p{color:#c9c2b3}
+.study-steps{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;border-top:1px solid #b59a6240;padding:12px 4px 0;font:.75rem/1.5 system-ui,sans-serif;flex:none}
+.study-steps>span{color:#bbae96;flex:1 1 100%}
+.study-steps a{min-height:36px;display:flex;align-items:center;color:#e1c58d}
+.learning-study .scene-hotspot{width:44px;height:44px}
+.learning-study .scene-hotspot:focus-visible{outline:3px solid #ffe3a4;outline-offset:1px}
+.learning-study .passage-excerpt h3{font:.87rem/1.4 system-ui,sans-serif;color:#d5bc8a;margin:1.1rem 0 .5rem}
+.related-study{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:18px 20px;margin:1.8rem 0;border:1px solid #b59a6240;border-radius:8px;background:#191c17}
+.related-study>p{max-width:350px;font:.8rem/1.6 system-ui,sans-serif;color:#b7ad99;margin:0}
+.related-study a{font:1.35rem/1.3 'Bible Display',Georgia,serif;color:#ecd198}
+.today-explore .all-studies{font-size:.8rem;display:inline-block;margin-top:.5rem}
+.site-footer .footer-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.site-footer a:focus-visible{outline:2px solid #ead195;outline-offset:4px}
+@media(max-width:1000px){.learning-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.learning-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:1.15fr 1fr}.learning-card:first-child>img{height:100%}}
+@media(max-width:600px){main.wrap:has(.learning-page){width:calc(100% - 36px)}.learning-page{padding-top:1.5rem}.learning-grid{grid-template-columns:minmax(0,1fr);gap:18px}.learning-card:first-child{display:flex;grid-column:auto}.learning-card>div{padding:20px}.learning-heading h1{font-size:2.8rem}.related-study{display:block}.related-study>p{margin-top:8px}.site-footer .footer-links{justify-content:space-between;gap:12px}}
+@media(prefers-reduced-motion:reduce){.learning-card{transition:none}.learning-card:hover{transform:none}}
+
+@media(max-width:600px){
+  .library-header .wrap{gap:6px 8px}
+  .library-header .brand{font-size:1.25rem;gap:6px}
+  .library-header .brand-mark{width:26px;height:26px}
+  .library-header .site-navigation{gap:2px;margin-left:auto}
+  .library-header .site-navigation a{font-size:.78rem;padding:.45rem .3rem;min-height:40px}
+}

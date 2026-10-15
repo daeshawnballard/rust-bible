@@ -7,8 +7,15 @@ use axum::{
 };
 
 mod cover_assets;
+mod learning_assets;
 
 async fn serve(uri: Uri) -> Response {
+    if let Some((mime, bytes)) = learning_assets::asset(uri.path()) {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, mime)
+            .body(Body::from(bytes))
+            .expect("learning asset response");
+    }
     if uri.path() == "/progress.js" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")

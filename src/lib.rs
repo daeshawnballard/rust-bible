@@ -7,9 +7,13 @@ static RAW: &str = include_str!("../data/kjv.json");
 const CSS: &str = concat!(
     include_str!("../web/style.css"),
     include_str!("../web/reader.css"),
-    include_str!("../web/today.css")
+    include_str!("../web/today.css"),
+    include_str!("../web/learning.css"),
+    include_str!("../web/about.css")
 );
 
+mod about;
+mod learning;
 mod library;
 mod reader;
 mod tabernacle;
@@ -461,11 +465,19 @@ fn page_body(q: &str, body: &str, client: bool) -> String {
     } else {
         ""
     };
+    let explore = esc(&route_path("/explore", client));
+    let about = esc(&route_path("/about", client));
+    let explore_current = if body.contains("data-learning") || body.contains("illustrated-explore")
+    {
+        " aria-current=\"page\""
+    } else {
+        ""
+    };
     let q = esc(q);
     let header = format!(
-        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"##
+        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a><a href="{explore}"{explore_current}>Explore</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"##
     );
-    format!("{header}<main class=\"wrap\" id=\"main-content\" tabindex=\"-1\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version · Public domain</span><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></footer>")
+    format!("{header}<main class=\"wrap\" id=\"main-content\" tabindex=\"-1\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version · Public domain</span><span class=\"footer-links\"><a href=\"{about}\">About &amp; help</a><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></span></footer>")
 }
 
 fn document(title: &str, body: &str) -> String {
@@ -855,7 +867,15 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
         }
         "/api/verse" => api_verse(&params),
         "/api/search" => api_search(&params),
-        "/explore" => tabernacle::explore_page(client),
+        "/about" => about::page(client),
+        "/explore" => learning::hub(client),
+        "/explore/noahs-ark" | "/explore/sower" => learning::page(
+            path.trim_start_matches("/explore/"),
+            params.get("part").map(String::as_str),
+            params.get("view").map(String::as_str),
+            client,
+        ),
+        "/explore/tabernacle" if params.is_empty() => tabernacle::explore_page(client),
         "/explore/tabernacle" => tabernacle::selected_page(
             params.get("part").map(String::as_str),
             params.get("view").map(String::as_str),

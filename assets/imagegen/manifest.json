@@ -1818,6 +1818,385 @@
         "final": "6e9136670854a75d37ed676ab4086512028be2133d24eaf21d80ab35a719e717"
       },
       "created_at_utc": "2026-10-15T15:17:59.533430+00:00"
+    },
+    {
+      "id": "learn-ark-scene",
+      "intended_use": "Learning scene overview illustration with separate HTML hotspots",
+      "source": "assets/imagegen/source/learn/ark/scene.png",
+      "final": "web/art/learn/ark/scene.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-ba0871c0-61a8-44c0-acd6-3d5ac45293ac.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-ba0871c0-61a8-44c0-acd6-3d5ac45293ac.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: a tightly framed isometric wooden Noah's Ark model resting calmly on dry earth against the charcoal backdrop. The ark is a long rectangular box vessel with the proportions 300 cubits long, 50 wide, 30 high (6:1 length to beam); ancient planks, heavy timber ribs, dark pitch seams, modest low roof. A generous cutaway on the near long side makes EXACTLY THREE distinct stacked habitable decks visibly countable, with horizontal floors and vertical ribs. Keep a recognizable rectangular wooden side DOOR on the near right portion, an upper wooden-framed WINDOW just below the roof at that right portion, and visible baskets and sacks of stored food on the lower left interior deck. Locate the food, doorway and window in separate unmistakable zones so they can receive real HTML hotspots. Three-quarter isometric view, full ark within image. Calm scholarly reconstruction, no flood, water, death, animals, shipwheel, metal steam machinery, modern nautical fittings or gratuitous ornament.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "6e4cfc462e2a6421e75164fae75ace3e71c05bb96c85d2f31591c94b77d6922e",
+        "final": "da7ce2869d99c6d4256d00e0e98d97281d1cbfb961d2bc1524cecff9c24edd58"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:14:56.506921+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.055313+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-ark-construction",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/ark/construction.png",
+      "final": "web/art/learn/ark/construction.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-a61422c1-27d0-4fe6-bb3c-72a407e67bac.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-a61422c1-27d0-4fe6-bb3c-72a407e67bac.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one dedicated close detailed isometric architectural wooden ark cutaway model emphasizing ancient timber construction. A long rectangular vessel with 6:1 length-to-width proportions and exactly THREE distinct stacked decks, all three floors and the timber rib/post framework clearly countable, roof partly opened as an illustrative cutaway. Full complete model within frame. Hand-hewn warm brown timber, pegged joints, layered planks and dark pitch seams. No door mechanisms, machinery, shipwheel, animals, flood or separate inset panels.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "2571a2f7a7f01d9378d4e9a052115f17ac496fc1883cd017bd21d609dd05e33c",
+        "final": "1ea7cf34beda5eb89e01799c2cc46e55d2ecac0ea52e06ae720148cab66b7b96"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:14:00.284259+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.061184+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-ark-door",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/ark/door.png",
+      "final": "web/art/learn/ark/door.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-8f0c2f9b-1f51-49d9-9bfd-8f28d717db5c.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-8f0c2f9b-1f51-49d9-9bfd-8f28d717db5c.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one complete ancient wooden side doorway section of Noah's Ark as an isolated museum architectural miniature, three-quarter perspective. Thick vertical timber doorway in a short section of dark-pitched plank hull wall, simple heavy wooden door partly open so its wooden thickness and surrounding construction are clear; warm illuminated wood-grain and pegged joinery. The wall section is one complete carefully framed subject with grounded shadow. Ancient unadorned construction; no invented mechanical systems, gears, metal hinges, winches, shipwheel, modern hardware, handles with ornate fittings, human figures or scenery.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "98d83bacaf6d7b053e66e97d948f44f9d1e142a58554460f2052412d88991bcc",
+        "final": "7dabd7c9d734deb37770a6e55b13056bb1d99fb2bb625633bee3acfccd282bb1"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:14:19.138266+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.065713+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-ark-window",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/ark/window.png",
+      "final": "web/art/learn/ark/window.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-22ad7a2e-503c-4083-a4dd-1904f78967c1.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-22ad7a2e-503c-4083-a4dd-1904f78967c1.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one complete upper wood-framed ark window architectural section as an isolated detailed museum miniature, showing a modest rectangular opening just beneath a sloping timber roof edge, simple wooden shutter swung outward. Close three-quarter view, warm weathered hand-hewn brown timber grain, pitch seams, pegged joinery, convincing thickness and warm side light. This is an illustrative architectural interpretation; do not include glass, metal fittings, stained glass, carvings, gears, cranes, modern hardware or lettering. Full single subject carefully inside frame.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "8d6d99839423c1dfc7aed4e0afeffd2effac6e9fd341dd5085054249086b1809",
+        "final": "d9f0fa0627cb012b7273f85ef743bff2cb5b9e7179026b5d34839797340b75fb"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:15:26.000565+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.070556+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-ark-food",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/ark/food.png",
+      "final": "web/art/learn/ark/food.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-6fc4dcdf-45fc-4591-aebd-1a010103e77d.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-6fc4dcdf-45fc-4591-aebd-1a010103e77d.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one dedicated still life of stored food inside an ancient wooden ark: three woven reed baskets holding wheat grain and dried pulses, two coarse linen sacks with tied tops and one partially open sack of grain, a modest clay storage jar, all grouped on a wooden plank floor with a short dark timber wall behind. Complete compact group, tactile baskets, fabric, seeds and ancient wood lit in warm gold against charcoal shadows. No labels, writing, modern packaging, metal cans, ornamental treasure or people. This illustrates food storage without claiming an exact ancient inventory.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "2176d5c0036a0dc99f25409f9631060b07d90a83a7997385a549fcae48a21ff2",
+        "final": "ae65356aea804a39d0c6da3bee28423e5d74102d083f8d2995fa735158a2ae0c"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:15:47.515377+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.438552+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-sower-scene",
+      "intended_use": "Learning scene overview illustration with separate HTML hotspots",
+      "source": "assets/imagegen/source/learn/sower/scene.png",
+      "final": "web/art/learn/sower/scene.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-71efed13-5191-4019-ad40-baa3f5788541.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-71efed13-5191-4019-ad40-baa3f5788541.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one richly detailed isometric ancient agricultural landscape DIORAMA, a single continuous earth-and-stone terrain on a low organically edged earth base, viewed from above at three-quarter angle. FOUR unmistakably distinct growing conditions arranged in four zones, seamlessly joined: FRONT LEFT a hard bare dusty footpath with scattered visible seeds and two small brown birds pecking; BACK LEFT a pale rocky patch of very shallow soil over limestone with sparse frail green sprouts; BACK RIGHT dense tangled dark green thorny brambles crowding a few thin grain stems; FRONT RIGHT a lush fertile patch of healthy ripe amber-gold wheat, tall and abundant. Give all four roughly equal visual weight and open visibility with no overlap hiding the path, stones, brambles or wheat. The field itself fills the frame with fine realistic seed, feather, leaf, soil and stone textures; soft charcoal studio surroundings at image edges, museum miniature quality consistent with references. No Jesus, human figures, fences, labels, quadrants separated by lines, UI, symbols or inset panels.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "e9a66228a0694cf30bc49659217dd0c5b48189903d74ed11ec92e1c9e28a9811",
+        "final": "bde36b366f6a8bc1f35ffdebf5d0ee8e207ac13a549d8cc20e946dc6a47a587e"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:14:09.648502+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.443828+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-sower-path",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/sower/path.png",
+      "final": "web/art/learn/sower/path.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-03ccb78c-e898-4281-8d03-a0c666a45e4d.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-03ccb78c-e898-4281-8d03-a0c666a45e4d.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one dedicated close detailed agricultural vignette of grain seeds scattered visibly on a hard compacted ancient dusty footpath, TWO small brown wild birds pecking at individual seeds. One complete simple earth patch with shallow natural edges, tactile cracked hard soil, small pebbles, realistically shaped seeds, beautifully detailed bird plumage and tiny feet, warm side-lit gold accents against charcoal background edges. Isometric close view where seeds and birds are both clear. No human figures, modern road material, typography or ornamental props.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "17074eb0bb116f10ab5465b70ebd2de31b6620a0e29315d604d42c8c5b16b63b",
+        "final": "862de461db662528b8f407c9ffbcf55ef9efb3f99dbd0d90c32890399a625ff7"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:15:05.428393+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.449454+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-sower-rocky",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/sower/rocky.png",
+      "final": "web/art/learn/sower/rocky.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-fef7dbae-672a-44e9-9a48-8e2226f9686d.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-fef7dbae-672a-44e9-9a48-8e2226f9686d.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one dedicated close detailed isometric agricultural soil-profile miniature: a thin shallow layer of dry brown earth on a broad pale limestone bed, with a small sparse cluster of frail young green wheat sprouts growing above. A naturally exposed front earth cross-section makes the VERY SHORT ROOTS and obstruction by underlying stone visibly clear; soil and shallow roots are tactile, believable, not schematic. Full single connected terrain vignette, warm light, charcoal edges, rich tiny natural details, no text, no arrows, no inset labels, no human figures, no oversized roots.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "1277e4bbf031d1d3071336a38232106b27e0edba0728802378d10feab8f22ae3",
+        "final": "b140d4a32deadf80af55bcd6c372a647e2ee0575998d2da6753837361d1139ee"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:14:34.498207+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.455269+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-sower-thorns",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/sower/thorns.png",
+      "final": "web/art/learn/sower/thorns.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-b593c7aa-3cd7-4d9a-9909-bac6c0d34cb2.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-b593c7aa-3cd7-4d9a-9909-bac6c0d34cb2.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one dedicated close detailed agricultural terrain vignette of tangled thorny brambles with interlaced woody stems, visibly sharp natural thorns and muted dark green leaves CROWDING several thin struggling grain stalks. Dense brambles dominate and compete for space/light, while a few slender wheat stems can still be identified. One complete low earth patch on charcoal studio surroundings, isometric museum miniature composition, rich botanical detail and warm side lighting. No roses, colorful ornamental flowers, humans, text, symbols or modern props.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "826660534192d9548e7e6560f4e0b2bbbbfb7cddc546cd61e9ae00f8005b4231",
+        "final": "cb1941e37b15bff7728d09b3aea9252924db4312fae27adafdcb437ccf07f454"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:15:37.361487+00:00",
+      "validated_at_utc": "2026-10-15T18:16:40.817410+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "learn-sower-good-soil",
+      "intended_use": "Dedicated learning hotspot detail illustration",
+      "source": "assets/imagegen/source/learn/sower/good-soil.png",
+      "final": "web/art/learn/sower/good-soil.webp",
+      "generator": "built-in ImageGen",
+      "generation_output": "exec-5db4fddd-c0e8-4e38-940f-5e7a961d0183.png",
+      "generated_source_path": "/Users/daeshawnballard/.codex/generated_images/01a140c4-08d1-78d0-9666-154bc76338e3/exec-5db4fddd-c0e8-4e38-940f-5e7a961d0183.png",
+      "reference_role": "style only",
+      "references": [
+        "web/art/tabernacle.webp",
+        "web/art/objects/lamp.webp"
+      ],
+      "prompt": "Use case: historical-scene. Create ONE standalone production illustration for a Bible learning site, no mockup, collage, contact sheet or UI. Two supplied images are STYLE REFERENCES ONLY: match the existing tactile museum-quality realistic miniature/painted reconstruction, precise craftsmanship, rich fine detail, warm golden side lighting, subtle aged wood and earth tones, quietly charcoal-black (#141615) edges. 3:2 landscape, about 1536 by 1024 pixels; full subject carefully composed with breathing room. No text, letters, numerals, labels, logos, watermarks, border, people, divine depictions, modern props. Artist interpretation, not Scripture or archaeological evidence. SUBJECT: one dedicated close detailed agricultural terrain vignette of fertile dark brown crumbly soil supporting a full healthy stand of ripe golden wheat, abundant full grain heads bending slightly, tall stalks and a few subtle green blades, convincing fine awns and individual kernels. Full self-contained patch of fertile earth with warm amber-gold light catching the grain against charcoal backdrop edges, beautiful tactile museum miniature quality. Single continuous subject, no human figures, harvest tools, baskets, typography, diagrams or modern objects.",
+      "processing": [
+        "Copied original generated PNG unchanged",
+        "Converted full frame to WebP quality=90, method=6; no crop, resize or creative edits"
+      ],
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "sha256": {
+        "source": "3fc76f63eb153471fded7cdf6e54e7641eebcf8aad55b8fef18af4f7b2e483ae",
+        "final": "e0c73b05295312824d541628c6f6d1c5b92b841f5bfb435bc8330bc165db2adf"
+      },
+      "generated_file_modified_at_utc": "2026-10-15T18:15:58.877828+00:00",
+      "validated_at_utc": "2026-10-15T18:16:41.239539+00:00",
+      "notes": "Individually generated and visually inspected for subject, materials, framing, style and absence of text/UI. Artistic interpretation; not Scripture, a scaled engineering drawing or archaeological evidence."
+    },
+    {
+      "id": "site-social-preview",
+      "source": "assets/imagegen/source/tabernacle-illustrated.png",
+      "final": "web/social-preview.jpg",
+      "intended_use": "General site social sharing image",
+      "generator": "derivative of existing built-in ImageGen illustration",
+      "processing": [
+        "full_frame_jpeg_format_conversion_quality_90",
+        "no_crop_no_resize"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "jpeg",
+      "alpha": false,
+      "notes": "Shares the existing approved Tabernacle artwork; title/description remain real HTML metadata. Third-party card-cache refresh is not implied.",
+      "sha256": "f1cbd94000599f945bb5e00c3a501be4b80e4117461c0353394e192504f51708"
     }
   ]
 }

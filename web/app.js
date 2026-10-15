@@ -71,6 +71,8 @@ function installPage(response, route, { initial = false } = {}) {
     requestAnimationFrame(() => document.getElementById(response.anchor)?.scrollIntoView());
   } else if (journeyResult.restoreScrollY !== null && journeyResult.restoreScrollY !== undefined) {
     requestAnimationFrame(() => window.scrollTo({top: journeyResult.restoreScrollY, left: 0, behavior: 'instant'}));
+  } else if (!initial && route.startsWith('/explore/') && route.includes('part=') && window.matchMedia('(max-width:760px)').matches) {
+    requestAnimationFrame(() => app.querySelector('.study-panel')?.scrollIntoView({block: 'start', behavior: 'instant'}));
   } else if (!initial) {
     window.scrollTo({top: 0, left: 0, behavior: 'instant'});
   }

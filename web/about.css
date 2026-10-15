@@ -1,0 +1,46 @@
+/* Plain-language help page in the reader's charcoal and warm-gold palette. */
+body:has(.about-page){--bg:#131514;--fg:#eee5d6;--muted:#b9b1a2;--accent:#e4c17e;--card:#1a1d1a;--border:#a68d5860;background:#131514;color:var(--fg)}
+body:has(.about-page) .library-header{background:#131514;border-color:#a68d584d}
+body:has(.about-page) .library-header .brand{color:#ead6ad}
+body:has(.about-page) .site-navigation a{color:#d5c8ad}
+body:has(.about-page) .site-navigation a:hover{color:#fff0ce}
+main.wrap:has(.about-page){max-width:980px;width:100%;padding:clamp(24px,5vw,68px) clamp(18px,5vw,56px) 64px}
+.about-page{font:400 1.08rem/1.7 'Bible Display',Georgia,serif;color:#e8e2d5}
+.about-page h1,.about-page h2,.about-page h3{font-family:'Bible Garamond',Georgia,'Times New Roman',serif;font-weight:400;text-wrap:balance}
+.about-intro{padding:0 0 clamp(26px,5vw,48px);border-bottom:1px solid #a68d5866}
+.about-eyebrow{margin:0 0 8px;color:#c5ad7e;font:600 .78rem/1.4 system-ui,-apple-system,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.about-intro h1{margin:0;color:#efd092;font-size:clamp(2.7rem,7vw,5.3rem);line-height:1.05}
+.about-lede{max-width:710px;margin:15px 0 8px;color:#f3e7ce;font-size:clamp(1.2rem,2.5vw,1.65rem);line-height:1.45}
+.about-summary{max-width:720px;margin:0;color:#c5c0b5}
+.about-quick-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.about-quick-links a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:9px 15px;border:1px solid #b59a6270;border-radius:5px;color:#efdbb2;background:#181b18;text-decoration:none;font:600 .91rem/1.35 system-ui,-apple-system,sans-serif}
+.about-quick-links a:hover,.about-card a:hover,.about-source-links a:hover{color:#fff0ca;text-decoration:underline;text-underline-offset:3px}
+.about-quick-links a.about-primary{background:#e6c47f;color:#171a16;border-color:#f1d699}
+.about-quick-links a.about-primary:hover{background:#f1d394;color:#171a16}
+.about-section{padding:clamp(28px,5vw,46px) 0;border-bottom:1px solid #a68d5855}
+.about-section h2{margin:0 0 18px;color:#efd092;font-size:clamp(1.9rem,4vw,2.65rem);line-height:1.18}
+.about-section h3{margin:0 0 7px;color:#ebd5a5;font-size:1.45rem;line-height:1.25}
+.about-section p{max-width:790px;margin:0 0 13px}
+.about-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.about-card{min-width:0;padding:18px;border:1px solid #a68d5855;border-radius:7px;background:linear-gradient(145deg,#1b1e1b,#151715)}
+.about-card h3{font-size:1.55rem}
+.about-card a{color:#efd092;text-decoration:none}
+.about-card p{margin:0;color:#c7c0b2;font-size:.96rem;line-height:1.58}
+.about-reading-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,4vw,40px)}
+.about-reading-grid h3{margin-top:3px}
+.about-reading-grid p{font-size:.98rem}
+.about-source-links{display:flex;flex-wrap:wrap;gap:8px 12px;margin-top:21px!important;font-size:.94rem}
+.about-source-links a{color:#e6ca8d;text-underline-offset:3px}
+.about-faq{border-bottom:0;padding-bottom:8px}
+.about-faq details{border-top:1px solid #a68d5855}
+.about-faq details:last-child{border-bottom:1px solid #a68d5855}
+.about-faq summary{position:relative;min-height:54px;padding:14px 34px 14px 0;color:#f0dba9;font:500 1.18rem/1.4 'Bible Garamond',Georgia,serif;cursor:pointer;list-style:none}
+.about-faq summary::-webkit-details-marker{display:none}
+.about-faq summary::after{content:'+';position:absolute;right:3px;top:12px;color:#e7c579;font:400 1.5rem/1 system-ui,sans-serif}
+.about-faq details[open] summary::after{content:'−'}
+.about-faq details p{padding:0 0 13px;color:#c9c2b5;font-size:.97rem}
+.about-page a:focus-visible,.about-faq summary:focus-visible{outline:3px solid #ffe2a0;outline-offset:4px;border-radius:3px}
+body:has(.about-page) .site-footer{max-width:980px;margin-top:0;padding:16px clamp(18px,5vw,56px);border-color:#a68d5860;color:#c8c1b4}
+body:has(.about-page) .site-footer a{color:#e2cfaa}
+@media(max-width:700px){main.wrap:has(.about-page){padding:28px 18px 40px}.about-page{font-size:1rem}.about-intro h1{font-size:clamp(2.65rem,12vw,4rem)}.about-cards{grid-template-columns:minmax(0,1fr)}.about-card{padding:16px}.about-reading-grid{grid-template-columns:minmax(0,1fr);gap:12px}.about-section{padding:27px 0}.about-source-links{display:block}.about-source-links span{padding:0 5px}}
+@media(prefers-reduced-motion:reduce){.about-page *{scroll-behavior:auto}}

@@ -130,7 +130,7 @@ fn passage_blocks(part: &Part, client: bool) -> String {
     output
 }
 
-fn scene_listen_controls(reference: &str) -> String {
+pub(super) fn scene_listen_controls(reference: &str) -> String {
     // Decorative waveform silhouette, not sampled audio or a seek timeline.
     let mut wave = String::new();
     for i in 0..160 {
@@ -198,7 +198,7 @@ fn explore_body(selected: &str, object_view: bool, client: bool) -> String {
     let current = " aria-current=\"page\"";
     let hidden = " hidden";
     let mut body = String::from("<section id=\"explore\" class=\"explore-page illustrated-explore\"><div class=\"explore-heading\"><p class=\"eyebrow\">An illustrated reconstruction · Exodus</p><h1>Inside the Tabernacle</h1><p>Read the passage, or tap a hotspot to explore an object.</p></div><div class=\"explore-layout\"><section class=\"scene-column\" aria-label=\"Interactive Tabernacle scene\">");
-    let breadcrumb = format!("<nav class=\"explore-breadcrumb\" aria-label=\"Breadcrumb\"><a href=\"{}\">Today</a> / Tabernacle</nav>", esc(&route_path("/", client)));
+    let breadcrumb = format!("<nav class=\"explore-breadcrumb\" aria-label=\"Breadcrumb\"><a href=\"{}\">Explore</a> / Tabernacle</nav>", esc(&route_path("/explore", client)));
     body = body.replacen(
         "<div class=\"explore-heading\">",
         &format!("{breadcrumb}<div class=\"explore-heading\">"),
@@ -224,10 +224,60 @@ fn explore_body(selected: &str, object_view: bool, client: bool) -> String {
     body.push_str(&passage_blocks(part, client));
     body.push_str(&format!("</section><section class=\"panel-view object-panel\" aria-label=\"Object and explanation\" tabindex=\"0\"{}>",if object_view {""} else {hidden}));
     body.push_str(&detail_view(selected));
-    body.push_str(&format!("<div class=\"object-description\"><p class=\"eyebrow\">Selected part</p><h2>{}</h2><p class=\"object-reference\">{}</p><section class=\"context-note\"><h3>Explanation</h3><p>{}</p></section><a class=\"open-passage\" href=\"{}\">Back to Scripture <span aria-hidden=\"true\">←</span></a><small class=\"reconstruction-note\">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></section></article></div><div class=\"explore-audio\">",esc(part.name),esc(part.references[0]),esc(part.note),esc(&scripture_link)));
+    let (question, answer) = review_question(selected);
+    body.push_str(&format!("<div class=\"object-description\"><p class=\"eyebrow\">Selected part</p><h2>{}</h2><p class=\"object-reference\">{}</p><section class=\"context-note\"><h3>Explanation</h3><p>{}</p></section><details class=\"study-question\"><summary>{}</summary><p>{}</p></details><a class=\"open-passage\" href=\"{}\">Back to Scripture <span aria-hidden=\"true\">←</span></a><small class=\"reconstruction-note\">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></section>",esc(part.name),esc(part.references[0]),esc(part.note),esc(question),esc(answer),esc(&scripture_link)));
+    let index = PARTS.iter().position(|item| item.id == selected).unwrap();
+    body.push_str(&format!(
+        "<nav class=\"study-steps\" aria-label=\"Guided study\"><span>Stop {} of 8</span>",
+        index + 1
+    ));
+    let view = if object_view { "object" } else { "scripture" };
+    if index > 0 {
+        body.push_str(&format!(
+            "<a href=\"{}\" rel=\"prev\">← Previous detail</a>",
+            esc(&route_path(
+                &format!(
+                    "/explore/tabernacle?part={}&view={view}",
+                    PARTS[index - 1].id
+                ),
+                client
+            ))
+        ));
+    }
+    if index + 1 < PARTS.len() {
+        body.push_str(&format!(
+            "<a href=\"{}\" rel=\"next\">Next detail →</a>",
+            esc(&route_path(
+                &format!(
+                    "/explore/tabernacle?part={}&view={view}",
+                    PARTS[index + 1].id
+                ),
+                client
+            ))
+        ));
+    } else {
+        body.push_str(&format!(
+            "<a href=\"{}\">All illustrated studies →</a>",
+            esc(&route_path("/explore", client))
+        ));
+    }
+    body.push_str("</nav></article></div><div class=\"explore-audio\">");
     body.push_str(&scene_listen_controls(&part.references.join("; ")));
     body.push_str("</div></section>");
     body
+}
+
+fn review_question(id: &str) -> (&'static str, &'static str) {
+    match id {
+        "courtyard" => ("What material is named for the court hangings?", "Exodus 27:18 names fine twined linen. The pictured boundary helps visualize the court; its exact appearance remains an artistic reconstruction."),
+        "altar" => ("What covers the wooden altar?", "Exodus 27:2 specifies a brass overlay. The close-up illustrates that material without claiming the exact ancient finish."),
+        "basin" => ("What were Aaron and his sons to wash?", "Exodus 30:19–21 names their hands and feet. Read the passage for its instructions and setting."),
+        "tent" => ("How many linen curtains are specified?", "Exodus 26:1 specifies ten curtains. Verse 7 separately names the goats’ hair covering."),
+        "table" => ("What was to be set on the table?", "Exodus 25:30 names shewbread, to be before the Lord continually. The pictured loaves are an illustration of that instruction."),
+        "lamp" => ("How many lamps are specified?", "Exodus 25:37 specifies seven lamps. The preceding verses describe the candlestick and its branches."),
+        "veil" => ("What does the veil divide?", "Exodus 26:33 distinguishes the holy place from the most holy. The image makes that division visible without establishing an exact floor plan."),
+        _ => ("What was to be put into the ark?", "Exodus 25:16 names the testimony. The Scripture panel preserves the exact wording and its surrounding references."),
+    }
 }
 
 pub(super) fn explore_page(client: bool) -> RouteResponse {
@@ -293,7 +343,7 @@ mod tests {
 
     #[test]
     fn explore_routes_render_all_eight_named_parts_and_keyboard_links() {
-        let landing = route("/explore", false);
+        let landing = route("/explore/tabernacle", false);
         assert_eq!(landing.status, 200);
         for part in &PARTS {
             assert!(landing

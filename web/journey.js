@@ -41,7 +41,7 @@ export function resolveTodayDate(route, now = new Date()) {
   if (path === "/" || !params.has("date") || !params.get("date")) {
     params.set("date", localCalendarDate(now));
   }
-  if (!params.has("edition")) params.set("edition", "1");
+  if (!params.has("edition")) params.set("edition", "2");
   return `${path === "/" ? "/today" : path}?${params.toString()}${fragment}`;
 }
 
@@ -79,7 +79,7 @@ function isBookSelectionRoute(route) {
 
 function isExploreSelectionRoute(route) {
   const safe = safeInternalPath(route);
-  return !!safe && /^\/explore\/tabernacle\?part=(?:courtyard|altar|basin|tent|table|lamp|veil|ark)&view=(?:scripture|object)$/.test(safe);
+  return !!safe && /^\/explore\/(?:tabernacle|noahs-ark|sower)\?part=(?:courtyard|altar|basin|tent|table|lamp|veil|ark|construction|door|window|food|path|rocky|thorns|good-soil)&view=(?:scripture|object)$/.test(safe);
 }
 
 function readJson(storageName, key) {
@@ -285,7 +285,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
         const path = pathAndQuery.split("?", 1)[0];
         const params = new URLSearchParams(pathAndQuery.split("?")[1] || "");
         params.set("date", date);
-        if (!params.has("edition")) params.set("edition", "1");
+        if (!params.has("edition")) params.set("edition", "2");
         const todayRoute = `${path === "/" ? "/today" : path}?${params.toString()}`;
         anchor.setAttribute("href", routeHref(todayRoute));
       }

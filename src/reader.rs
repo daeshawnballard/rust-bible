@@ -268,6 +268,7 @@ pub(super) fn chapter_content(
         verse_count,
         client,
     ));
+    html.push_str(&super::learning::related(book, chapter, client));
     html.push_str("</section>");
     html
 }
@@ -316,6 +317,7 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
         last_verse - first_verse + 1,
         client,
     ));
+    html.push_str(&super::learning::related(book, chapter, client));
     html.push_str("</section>");
     html
 }

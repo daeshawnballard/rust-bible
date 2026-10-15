@@ -1,0 +1,167 @@
+{
+  "outcome": "Ten new individually generated learning illustrations saved with sources and provenance",
+  "art_review": "PASS - direct full-frame inspection of every generated source in this run",
+  "final_technical_validation": "PASS - PNG source identity, WebP format, dimensions, file existence and hashes checked in this run",
+  "scope": "Artwork only. Interface, hotspot interaction, navigation, persistence and hosted release checks belong to the integration owner and were NOT RUN by this artwork worker.",
+  "reviewed_at_utc": "2026-10-15T18:17:09.287Z",
+  "assets": [
+    {
+      "id": "ark/scene",
+      "source": "assets/imagegen/source/learn/ark/scene.png",
+      "final": "web/art/learn/ark/scene.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "ark/construction",
+      "source": "assets/imagegen/source/learn/ark/construction.png",
+      "final": "web/art/learn/ark/construction.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Three distinct stacked deck spaces and hand-hewn timber framework visible."
+    },
+    {
+      "id": "ark/door",
+      "source": "assets/imagegen/source/learn/ark/door.png",
+      "final": "web/art/learn/ark/door.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "ark/window",
+      "source": "assets/imagegen/source/learn/ark/window.png",
+      "final": "web/art/learn/ark/window.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "ark/food",
+      "source": "assets/imagegen/source/learn/ark/food.png",
+      "final": "web/art/learn/ark/food.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "sower/scene",
+      "source": "assets/imagegen/source/learn/sower/scene.png",
+      "final": "web/art/learn/sower/scene.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "sower/path",
+      "source": "assets/imagegen/source/learn/sower/path.png",
+      "final": "web/art/learn/sower/path.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "sower/rocky",
+      "source": "assets/imagegen/source/learn/sower/rocky.png",
+      "final": "web/art/learn/sower/rocky.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Illustrative exposed soil profile; roots visibly stop at pale rock."
+    },
+    {
+      "id": "sower/thorns",
+      "source": "assets/imagegen/source/learn/sower/thorns.png",
+      "final": "web/art/learn/sower/thorns.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    },
+    {
+      "id": "sower/good-soil",
+      "source": "assets/imagegen/source/learn/sower/good-soil.png",
+      "final": "web/art/learn/sower/good-soil.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "visual_status": "PASS",
+      "notes": "Subject, framing, charcoal/warm material style and absence of UI/text inspected."
+    }
+  ],
+  "hotspots": {
+    "coordinate_space": "Percent of unchanged 1536 x 1024 overview canvas; x from left, y from top. Visually selected centers; integration owner should verify actual CSS fit.",
+    "ark": {
+      "construction": {
+        "x": 49,
+        "y": 43
+      },
+      "door": {
+        "x": 77,
+        "y": 58
+      },
+      "window": {
+        "x": 77,
+        "y": 35
+      },
+      "food": {
+        "x": 27,
+        "y": 54
+      }
+    },
+    "sower": {
+      "path": {
+        "x": 26,
+        "y": 64
+      },
+      "rocky": {
+        "x": 27,
+        "y": 28
+      },
+      "thorns": {
+        "x": 71,
+        "y": 24
+      },
+      "good-soil": {
+        "x": 72,
+        "y": 60
+      }
+    }
+  },
+  "caveats": [
+    "All illustrations are artistic interpretations, not Scripture or archaeological evidence.",
+    "The ark uses the requested elongated form and three decks but should not be described as a measured engineering model or exact reconstruction.",
+    "Window/shutter, door joinery, food containers and field botanicals are illustrative design choices.",
+    "No image was cropped from a scene, collage or contact sheet. Every detail received a distinct built-in ImageGen call.",
+    "No existing assets were modified; only newly owned learning paths and manifest entries were written."
+  ],
+  "failed_or_refused_generations": 0,
+  "pending_generations": 0
+}
