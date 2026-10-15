@@ -69,8 +69,8 @@ function isReaderRoute(route) {
   return !!parts?.chapter && parts.safe === parts.path;
 }
 
-function isReaderNavigationRoute(route) {
-  return !!bookRouteParts(route)?.chapter;
+function isBookNavigationRoute(route) {
+  return !!bookRouteParts(route);
 }
 
 function isBookSelectionRoute(route) {
@@ -265,7 +265,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
   const rememberLibraryBeforeNavigation = (nextRoute) => {
     const next = safeInternalPath(nextRoute);
     const previous = activeRoute && safeInternalPath(activeRoute);
-    if (root.querySelector?.("[data-library]") && previous && isLibraryRoute(previous) && next && isReaderNavigationRoute(next)) {
+    if (root.querySelector?.("[data-library]") && previous && isLibraryRoute(previous) && next && isBookNavigationRoute(next)) {
       persistLibraryReturn(previous, window.scrollY, false);
     }
   };
@@ -336,7 +336,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
       rememberLibraryBeforeNavigation(next);
       const previous = activeRoute && safeInternalPath(activeRoute);
       const saved = readLibraryReturn(libraryReturnMemory);
-      if (previous && isReaderNavigationRoute(previous) && isLibraryRoute(next) && saved?.route === next) {
+      if (previous && isBookNavigationRoute(previous) && isLibraryRoute(next) && saved?.route === next) {
         restoreNext = saved;
         persistLibraryReturn(saved.route, saved.scrollY, true);
       } else {
