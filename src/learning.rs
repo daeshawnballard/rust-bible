@@ -47,18 +47,18 @@ fn scene_path(scene: &Scene, stop: &Stop, view: &str, client: bool) -> String {
 }
 fn card(title: &str, subtitle: &str, note: &str, image: &str, href: &str, count: usize) -> String {
     format!(
-        r#"<a class="learning-card" href="{}"><img src="{image}" width="1536" height="1024" alt="" loading="lazy"><div><p class="eyebrow">{subtitle} · {count} hotspots</p><h2>{title}</h2><p>{note}</p><span>Open illustrated study <span aria-hidden="true">↗</span></span></div></a>"#,
+        r#"<a class="learning-card" href="{}"><span class="learning-artwork"><img src="{image}" width="1536" height="1024" alt="" loading="lazy"></span><div class="learning-card-copy"><h2>{title}</h2><p class="learning-source">{subtitle} <span aria-hidden="true">·</span> {count} details to explore</p><p class="learning-description">{note}</p><span class="learning-open">Explore the study <span aria-hidden="true">→</span></span></div></a>"#,
         esc(href)
     )
 }
 pub(super) fn hub(client: bool) -> RouteResponse {
     let mut body = String::from(
-        r#"<section class="learning-page" data-learning-hub><header class="learning-heading"><p class="eyebrow">Read · Look closely · Understand</p><h1>Explore Scripture</h1><p>Step into an illustrated scene. Discover its details, read the passages, and follow a short guided study.</p></header><div class="learning-grid">"#,
+        r#"<section class="learning-page" data-learning-hub><header class="learning-heading"><h1>Explore Scripture</h1><p>Illustrated studies to read alongside the Bible.</p></header><div class="learning-grid">"#,
     );
     body.push_str(&card(
         "Inside the Tabernacle",
         "Exodus 25–27",
-        "Eight furnishings and spaces, with dedicated close-ups and their KJV passages.",
+        "Explore the courtyard, tent, and furnishings described in Exodus.",
         "/art/tabernacle.webp",
         &route_path("/explore/tabernacle", client),
         8,
@@ -73,7 +73,7 @@ pub(super) fn hub(client: bool) -> RouteResponse {
             scene.stops.len(),
         ));
     }
-    body.push_str(&format!(r#"</div><aside class="learning-integrity"><h2>Scripture first. Illustrations as a guide.</h2><p>These scenes are artistic reconstructions. Scripture is quoted from the King James Version; explanations and study questions are labeled separately. Images do not establish exact historical appearance.</p><a href="{}">How to use the studies →</a></aside></section>"#,esc(&route_path("/about",client))));
+    body.push_str(&format!(r#"</div><aside class="learning-integrity" aria-label="About the illustrations"><p>Artwork is illustrative. KJV Scripture, explanations, and study questions are kept separate.</p><a href="{}">About these studies →</a></aside></section>"#,esc(&route_path("/about",client))));
     html_response(
         200,
         "Explore Scripture · The Bible",

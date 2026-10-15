@@ -94,6 +94,8 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 
 Explore includes the Tabernacle, Noah’s Ark, and the Sower’s Field. The Tabernacle has eight guided hotspots; the Ark and Sower scenes have four each, for 16 hotspots total. In every scene, Scripture is the default view in a fixed right-hand panel with its own scroll area. A hotspot opens a dedicated detail illustration and explanation in that panel. **Back to Scripture** returns to the passage for the selected stop. Previous/next controls move through guided stops and their questions, which point back to named passages. A labeled selector provides another way to choose a stop on narrow screens. Rust renders the scenes’ hotspots, panel views, selections, references, explanations, and KJV content in both native and WASM builds.
 
+The Explore gallery uses the Library’s display serif, unboxed descriptions and text links, with the thin gold artwork frames used on Today. Its compact heading and source note keep the studies within the same visual style as the reader.
+
 ![Dedicated object artwork](docs/site-tabernacle-objects.png)
 
 The Tabernacle’s eight object close-ups are individual illustrations, not crops of the scene image. The Ark and Sower scenes add two scene illustrations and eight dedicated detail illustrations; the existing 66 book covers remain their own assets. Explore artwork consists of artistic interpretations and reconstructions, not archaeological evidence or proof of historical appearance. Asset provenance is recorded in [the image manifest](assets/imagegen/manifest.json); see also [Library artwork notes](docs/library-artwork.md) and [Tabernacle source notes](docs/tabernacle-sources.md).
