@@ -26,3 +26,12 @@ main.wrap:has(.today-page){padding-top:26px}.today-page h1{margin-bottom:16px}.t
 main.wrap:has(.today-page){padding-bottom:0}.today-page h1{margin-bottom:8px}.today-rotation{font-size:12px;line-height:1.4;margin:7px 0 0}
 @media(min-width:761px) and (max-width:1100px){.today-support{margin-top:10px}}
 @media(max-width:760px){main.wrap:has(.today-page){padding-bottom:18px}.today-page h1{margin-bottom:-10px}.today-rotation{font-size:12px;margin-top:12px}}
+
+/* Keep the saved location readable before the two mobile actions. */
+@media(max-width:760px){
+  .continuation-row{display:grid;grid-template-columns:29px minmax(0,1fr) auto;gap:10px 14px}
+  .continuation-row>svg{grid-column:1;grid-row:1 / span 2;align-self:start;margin-top:5px}
+  .continuation-row>div{grid-column:2 / -1;min-width:0}
+  .continuation-row [data-continue-link]{grid-column:2;margin-left:0;font-size:1.1rem}
+  .continuation-row [data-continue-clear]{grid-column:3;margin-left:0;min-height:44px}
+}
