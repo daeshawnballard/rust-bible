@@ -63,3 +63,9 @@ final result: passed
 A fresh hosted John 3:16 passage at 1561 × 1200 placed the footer bottom at 487.53px, leaving 712.47px of viewport below it. Today also relied on a fixed viewport subtraction. Today and reader now use a column layout with a dynamic viewport minimum: short pages place the full-width footer at the bottom, and long chapters expand naturally. The Library and Tabernacle layouts are outside this scoped rule.
 
 Fresh local Rust/WASM browser checks passed for the focused passage, John 3 (36 verses), Today, and Psalm 117 (2 verses), including 320px and 390px mobile widths. Footer bounds reach the document/viewport bottom without overlapping the reading area or horizontal overflow. Hosted verification is recorded separately for the final published source; these checks do not establish physical-phone behavior.
+
+## Short readings continue into Scripture
+
+Moving the footer left unused space above it; the user's correction requires more passage content. The Rust reader now continues short chapters and focused verse ranges into sequential KJV text with explicit chapter headings, separate verse anchors, and working chapter links. Psalm 23's six verses are followed immediately by Psalm 24's ten verses, visible within the same 1536 × 1024 viewport. Longer chapters keep their existing layout. The contextual audio selection remains the originally selected chapter/range, excluding the added Scripture sections.
+
+Fresh local browser journeys cover Psalm 23 → Open Psalm 24, John 3:16 → following verses 17–36, Malachi 4 → Matthew 1 across the book boundary, and 320px mobile bounds. No duplicate verse IDs or horizontal overflow observed. The reader screenshot is an actual local Rust/WASM capture. Supporting Rust tests check all 1,189 chapters for unique anchors and bounded continuation, focused range boundaries, canonical book transitions, and the end of Revelation. Hosted acceptance is recorded separately on the final source.

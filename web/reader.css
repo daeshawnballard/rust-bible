@@ -243,6 +243,14 @@ main.wrap:has(.reader-page) {
 .reader-pagination .reader-all-chapters { justify-self: center; }
 .reader-full-chapter { margin: 1.8rem 0 0; font: 1.05rem/1.5 'Bible Display', Georgia, serif; }
 
+.reader-continuation { margin-top: 1.8rem; }
+.reader-continuation-heading { display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1rem;margin-bottom:1.1rem;padding-top:1.3rem;border-top:1px solid #b59a624d; }
+.reader-continuation-heading h2 { margin:0;color:#edca87;font:400 clamp(2rem,3vw,2.75rem)/1.15 'Bible Display',Georgia,serif; }
+.reader-continuation-heading a,.reader-continue-next { font:1rem/1.5 'Bible Display',Georgia,serif; }
+.reader-continuation-heading a { display:inline-flex;align-items:center;min-height:44px; }
+.reader-continue-next { margin:1.5rem 0 0;padding-top:1rem;border-top:1px solid #b59a624d; }
+.reader-continue-next a { display:inline-flex;align-items:center;min-height:44px; }
+
 @media (max-width: 700px) {
   main.wrap:has(.reader-page) { width: calc(100% - 36px); }
   .reader-page { padding-top: 1.15rem; }

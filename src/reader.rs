@@ -154,6 +154,75 @@ fn pagination(book: usize, chapter: usize, client: bool) -> String {
     html
 }
 
+fn following_chapter(book: usize, chapter: usize) -> Option<(usize, usize)> {
+    if chapter < bible().books[book].len() {
+        Some((book, chapter + 1))
+    } else if book + 1 < NAMES.len() {
+        Some((book + 1, 1))
+    } else {
+        None
+    }
+}
+
+/// Keep short readings flowing into real, sequential Scripture. Each added
+/// chapter has an explicit heading and its own route; audio stays with the
+/// selected passage. Bound the initial page instead of rendering an entire book.
+fn continuation(
+    book: usize,
+    chapter: usize,
+    next_verse: usize,
+    visible_verses: usize,
+    client: bool,
+) -> String {
+    const MIN_READING_VERSES: usize = 16;
+    let mut count = visible_verses;
+    let mut cursor = if next_verse <= bible().books[book][chapter - 1].len() {
+        Some((book, chapter, next_verse))
+    } else {
+        following_chapter(book, chapter).map(|(b, ch)| (b, ch, 1))
+    };
+    let mut html = String::new();
+    let mut added = 0;
+    while count < MIN_READING_VERSES && added < 3 {
+        let Some((b, ch, start)) = cursor else { break };
+        let text = &bible().books[b][ch - 1];
+        let title = chapter_title(b, ch);
+        let label = if start > 1 {
+            format!("{title}:{start}–{}", text.len())
+        } else {
+            title.clone()
+        };
+        let href = route_path(&format!("/book/{}/{ch}", slug(b)), client);
+        let heading_id = format!("continued-{b}-{ch}");
+        html.push_str(&format!(
+            "<section class=\"reader-continuation\" data-continuation-book=\"{b}\" data-continuation-chapter=\"{ch}\" aria-labelledby=\"{heading_id}\"><div class=\"reader-continuation-heading\"><h2 id=\"{heading_id}\">{}</h2><a href=\"{}\" aria-label=\"Open {}\">Open chapter ↗</a></div><div class=\"scripture reader-scripture\" role=\"group\" aria-label=\"{} Scripture\">",
+            esc(&label), esc(&href), esc(&title), esc(&label)
+        ));
+        for (index, verse) in text.iter().enumerate().skip(start - 1) {
+            let number = index + 1;
+            html.push_str(&format!(
+                "<p class=\"v\" id=\"continued-{b}-{ch}-v{number}\" data-reference=\"{} {ch}\" data-verse=\"{number}\"><sup>{number}</sup><span class=\"verse-text\">{}</span></p>",
+                esc(NAMES[b]), esc(verse)
+            ));
+        }
+        html.push_str("</div></section>");
+        count += text.len() - start + 1;
+        added += 1;
+        cursor = following_chapter(b, ch).map(|(b, ch)| (b, ch, 1));
+    }
+    if added > 0 {
+        if let Some((b, ch, _)) = cursor {
+            let href = route_path(&format!("/book/{}/{ch}", slug(b)), client);
+            html.push_str(&format!(
+                "<p class=\"reader-continue-next\"><a href=\"{}\">Continue with {} →</a></p>",
+                esc(&href),
+                esc(&chapter_title(b, ch))
+            ));
+        }
+    }
+    html
+}
+
 /// Render a complete chapter, keeping each verse addressable for highlighting,
 /// speech playback, and direct links such as `#v3`.
 pub(super) fn chapter_content(
@@ -165,7 +234,7 @@ pub(super) fn chapter_content(
     let mut html = reader_open(book, chapter, client);
     let reference = format!("{} {chapter}", NAMES[book]);
     html.push_str(&listen_controls(&reference, "chapter"));
-    html.push_str("</div><div class=\"scripture reader-scripture\" role=\"group\" aria-label=\"Scripture text\">");
+    html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (index, text) in bible().books[book][chapter - 1].iter().enumerate() {
         let number = index + 1;
         let class = if highlighted.is_some_and(|(start, end)| number >= start && number <= end) {
@@ -181,6 +250,14 @@ pub(super) fn chapter_content(
     }
     html.push_str("</div>");
     html.push_str(&pagination(book, chapter, client));
+    let verse_count = bible().books[book][chapter - 1].len();
+    html.push_str(&continuation(
+        book,
+        chapter,
+        verse_count + 1,
+        verse_count,
+        client,
+    ));
     html.push_str("</section>");
     html
 }
@@ -204,7 +281,7 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
     html.push_str(&book_selector(book, chapter, client));
     html.push_str("</div>");
     html.push_str(&listen_controls(&label, "passage"));
-    html.push_str("</div><div class=\"scripture reader-scripture\" role=\"group\" aria-label=\"Scripture text\">");
+    html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (number, text) in verses(reference) {
         html.push_str(&format!(
             "<p class=\"v\" id=\"v{number}\" data-reference=\"{}\" data-verse=\"{number}\"><sup>{number}</sup><span class=\"verse-text\">{}</span></p>",
@@ -217,6 +294,85 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
         "<p class=\"reader-full-chapter\"><a href=\"{}\">Read full chapter →</a></p>",
         esc(url)
     ));
+    let last_verse = reference
+        .v2
+        .or(reference.v1)
+        .unwrap_or(bible().books[book][chapter - 1].len());
+    let first_verse = reference.v1.unwrap_or(1);
+    html.push_str(&continuation(
+        book,
+        chapter,
+        last_verse + 1,
+        last_verse - first_verse + 1,
+        client,
+    ));
     html.push_str("</section>");
     html
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::collections::HashSet;
+
+    #[test]
+    fn short_psalm_continues_in_canonical_order_without_changing_primary_scripture() {
+        let html = chapter_content(18, 23, None, true);
+        let primary = html
+            .split("data-reader-primary-scripture")
+            .nth(1)
+            .unwrap()
+            .split("</div>")
+            .next()
+            .unwrap();
+        assert_eq!(primary.matches("class=\"v\"").count(), 6);
+        assert!(html.contains("<h2 id=\"continued-18-24\">Psalm 24</h2>"));
+        assert!(html.contains(&esc(&bible().books[18][23][0])));
+        assert!(html.contains("Continue with Psalm 25 →"));
+        assert_eq!(html.matches("data-read-aloud ").count(), 1);
+    }
+
+    #[test]
+    fn focused_range_continues_after_the_range_without_repeating_it() {
+        let reference = Ref {
+            book: 42,
+            ch: 3,
+            v1: Some(16),
+            v2: Some(16),
+        };
+        let html = passage_content(&reference, "#/book/John/3?v=16-16#v16", true);
+        assert!(html.contains("John 3:17–36</h2>"));
+        assert!(html.contains("id=\"continued-42-3-v17\""));
+        assert!(!html.contains("id=\"continued-42-3-v16\""));
+        assert_eq!(html.matches("For God so loved the world").count(), 1);
+    }
+
+    #[test]
+    fn continuation_crosses_book_boundaries_but_stops_at_the_end_of_scripture() {
+        let malachi = chapter_content(38, 4, None, true);
+        assert!(malachi.contains("<h2 id=\"continued-39-1\">Matthew 1</h2>"));
+        assert!(malachi.contains("href=\"#/book/Matthew/1\" aria-label=\"Open Matthew 1\""));
+        let final_chapter = chapter_content(65, 22, None, true);
+        assert!(!final_chapter.contains("class=\"reader-continuation\""));
+        assert!(!final_chapter.contains("rel=\"next\""));
+    }
+
+    #[test]
+    fn all_chapters_keep_unique_verse_anchors_and_bounded_continuations() {
+        for book in 0..NAMES.len() {
+            for chapter in 1..=bible().books[book].len() {
+                let html = chapter_content(book, chapter, None, true);
+                let mut ids = HashSet::new();
+                for tail in html.split(" id=\"").skip(1) {
+                    let id = tail.split('"').next().unwrap();
+                    assert!(
+                        ids.insert(id),
+                        "duplicate {id} in {} {chapter}",
+                        NAMES[book]
+                    );
+                }
+                assert!(html.matches("class=\"reader-continuation\"").count() <= 3);
+            }
+        }
+    }
 }

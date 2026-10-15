@@ -28,7 +28,10 @@ export function initExperience(root = document) {
     const status = controls.querySelector('[data-audio-status]');
     const audioLabel = play?.querySelector('[data-audio-label]');
     const playbackSettings = controls.querySelector('.book-playback-settings');
-    const nodes = [...root.querySelectorAll('.scripture .v')];
+    // Short readers also show following chapters. The contextual player reads
+    // only the selected chapter/range, never the continuation or explanations.
+    const primaryScripture = root.querySelector('[data-reader-primary-scripture]');
+    const nodes = [...(primaryScripture || root).querySelectorAll(primaryScripture ? '.v' : '.scripture .v')];
     let scripture;
     if (bookMode) {
       try {

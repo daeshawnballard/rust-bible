@@ -78,6 +78,8 @@ A static host cannot run Axum or provide these as HTTP endpoints. The same JSON 
 ![The Bible chapter reader](docs/site-reader.png)
 
 - A quiet chapter reader for all 66 books, with book/chapter selectors, contextual speech controls, and previous/next chapter links across book boundaries.
+- Short readings continue directly into following Scripture, with clear chapter headings and **Open chapter** links. Verse lookups show the requested range first, then continue after its final verse. The initial page includes whole following chapters until at least 16 verses are rendered (at most three added sections, or the end of Scripture); a **Continue with…** link opens the next unread chapter. The end of Revelation stops naturally.
+- **Listen to this chapter/passage** reads only the selected chapter or range. Scripture shown beneath it for continued reading is kept outside that audio selection.
 - Reference lookup such as `John 3:16`, `John 3`, `1 Cor 13:4-7`, and `ps 23`; names are case-insensitive and common abbreviations are supported.
 - Typo-tolerant book suggestions: `neimai` suggests Nehemiah, and `jhon` suggests John. Chapter and verse requests stay attached to valid suggestions. Corrections are explicit links; keyword search still returns exact text matches.
 - Full-text search where every query word must match, with up to 200 displayed results and escaped highlighting.
