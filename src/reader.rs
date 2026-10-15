@@ -90,7 +90,7 @@ fn reader_controls(reference: &str) -> String {
     listen_controls(reference, "reading")
         .replacen("data-read-aloud", "data-read-aloud data-reader-audio", 1)
         .replace("Listen to this reading", "Listen from here")
-        .replace("</details>", "<small data-progress-notice>Verse saved on this device. Clear it on Today.</small></details>")
+        .replace("</div></details>", "<small data-progress-notice>Verse saved on this device. Clear it on Today.</small></div></details>")
         .replace("<small>Device voice", "<label class=\"reader-follow\"><input type=\"checkbox\" data-audio-follow checked> Follow reading</label><small>Continues into following chapters. Device voice")
 }
 

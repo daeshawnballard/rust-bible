@@ -155,7 +155,12 @@ export function initExperience(root = document) {
       current = null;
       // Device speech services can share a queue across tabs. Disposing an
       // idle book/reader must not cancel an utterance owned by another page.
-      if (ownsSpeech || explicitStart) synth?.cancel();
+      if (ownsSpeech || explicitStart) {
+        synth?.cancel();
+        // cancel() can leave the device queue paused. Release that state so a
+        // later Listen click can start a new utterance after Pause -> Stop.
+        if (synth?.paused) synth.resume();
+      }
       clearHighlight();
       setState('idle', message);
     };

@@ -299,3 +299,8 @@ main.wrap:has(.reader-page) {
 
 .reader-page{padding-top:1.4rem;padding-bottom:2rem}.reader-toolbar{margin-top:.65rem;margin-bottom:1.8rem}.reader-scripture .v{margin-bottom:.4rem}.reader-pagination{margin-top:1rem}
 @media(max-width:700px){.reader-toolbar{margin-bottom:2.8rem}.reader-page{padding-top:1.2rem}.reader-scripture .v{margin-bottom:.7rem}}
+
+/* Device voice names must not force the playback menu outside a phone. */
+.reader-audio-settings { width: min(20rem, calc(100vw - 36px)); min-width: 0; box-sizing: border-box; }
+.reader-audio-settings label, .reader-audio-settings small { min-width: 0; white-space: normal; }
+.reader-audio-settings select { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
