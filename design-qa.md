@@ -148,3 +148,14 @@ Supporting checks: all 36 Rust tests, native binary compilation, JavaScript synt
 No actionable P0/P1/P2 layout findings remain in compared states. Generated scenic detail and broader curated setting coverage remain explicit differences.
 
 final result: passed
+
+
+## October 16: shared visual finish
+
+The approved Library, book, Today/reader, map, and illustrated-scene compositions remain the authority. This pass refines material edges, gold rules, serif hierarchy, chapter/button states, playback menus, and study tabs. Search results now use reference headings and exact highlighted Scripture. Scene pages share the same header placement as Today and Library. No generated artwork, canonical text, geography, narration engine, or progress logic changed.
+
+Actual local browser execution covered Library filters/sorting/size/reset, typo lookup `neimai` → Nehemiah, search → John 3:16 with the correct highlighted verse, book → chapter, help FAQ disclosure, the Tabernacle candlestick hotspot and return to Scripture, and map book/chapter/Philippi-stop/context/Scripture controls with real terrain loaded. All page families, including Noah's Ark, Sower, recovery, long book titles, and study browser, mounted at 320px and 768px with no document overflow beyond the viewport. At 390px the playback menu stayed within the screen. These are browser-layout and interaction checks, not physical-device qualification.
+
+Actual browser captures: [book](docs/site-polish-book.jpg), [390px reader](docs/site-polish-reader.jpg), [study](docs/site-polish-study.jpg). The scene panel remains a fixed-height scrollable window. The shared header correction was checked again at 320px and 1280px. Native and WASM builds and all 36 Rust tests passed. One existing search-heading assertion initially failed after the intentional heading change; it was updated to check the new query heading, and the suite passed on rerun.
+
+Known limits: natural narration still needs its initial model download and can pause between generated verses; no verified downloadable Black male/female voice pair was adopted. Geographic camera-follow ranges remain curated rather than exhaustive. Physical devices and other browser engines were not run in this pass. Hosted release receipts are retained separately from these local captures.

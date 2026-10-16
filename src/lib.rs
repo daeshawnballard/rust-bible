@@ -11,7 +11,9 @@ const CSS: &str = concat!(
     include_str!("../web/learning.css"),
     include_str!("../web/about.css"),
     include_str!("../web/vendor/maplibre/maplibre-gl.css"),
-    include_str!("../web/atlas.css")
+    include_str!("../web/atlas.css"),
+    include_str!("../web/polish-library.css"),
+    include_str!("../web/polish.css")
 );
 
 mod about;
@@ -756,7 +758,7 @@ fn highlight(text: &str, q: &str) -> String {
 fn search_content(q: &str, client: bool) -> String {
     let (results, total) = search(q);
     let mut s = format!(
-        "<section class=\"search-page\"><h1>Search: “{}”</h1><p class=\"muted\">{} verse{} found{}.</p><div class=\"res\">",
+        "<section class=\"search-page\"><header class=\"search-heading\"><p class=\"page-eyebrow\">Search the Scriptures</p><h1>“{}”</h1><p class=\"muted\">{} verse{} found{} · King James Version</p></header><div class=\"res\">",
         esc(q),
         total,
         if total == 1 { "" } else { "s" },
@@ -772,7 +774,7 @@ fn search_content(q: &str, client: bool) -> String {
             &format!("/book/{}/{ch}?v={verse}-{verse}#v{verse}", slug(b)),
             client,
         );
-        s.push_str(&format!("<p><a href=\"{target}\">{} {ch}:{verse}</a><br><span class=\"scripture\">{}</span></p>", NAMES[b], highlight(text, q)));
+        s.push_str(&format!("<article class=\"search-result\"><h2><a href=\"{target}\">{} {ch}:{verse}<span aria-hidden=\"true\"> ↗</span></a></h2><p class=\"scripture\">{}</p></article>", NAMES[b], highlight(text, q)));
     }
     s.push_str("</div></section>");
     s
@@ -1074,7 +1076,7 @@ mod tests {
     fn search_requires_all_terms_and_returns_highlighted_results() {
         let response = route("/go?q=God+so+loved", false);
         assert_eq!(response.status, 200);
-        assert!(response.body.contains("Search: “God so loved”"));
+        assert!(response.body.contains("<h1>“God so loved”</h1>"));
         assert!(response.body.contains("<mark>God</mark>"));
         assert!(response.body.contains("John 3:16"));
     }

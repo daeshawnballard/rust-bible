@@ -34,6 +34,18 @@ Each of the 66 covers opens an illustrated book overview with its title, testame
 
 The approved ImageGen book-page concept is preserved in `assets/imagegen/reference/book-page-approved.png`. The page reuses the Library's individual cover paintings and shared dimensional binding, with locally hosted Cormorant Garamond typography, a detailed ImageGen leather-and-gold binding, and licensed Phosphor icons. [Design QA](design-qa.md) records the reference comparison and visual differences. The application remains Rust/WASM, with a JavaScript bridge for local natural narration and optional device voices.
 
+## Visual finish
+
+The charcoal, warm-gold, and locally hosted serif styling continues through Today, all 66 book overviews, the reader, map, illustrated studies, search, recovery, and help. Chapter buttons have clearer states; the Library keeps its illustrated covers and floating tools. Reader audio status stays in normal document flow so it cannot cover the first verse. Scripture and editorial explanations remain distinct.
+
+![Book overview with chapter navigation](docs/site-polish-book.jpg)
+
+[Mobile chapter reader](docs/site-polish-reader.jpg) · [Illustrated study and dedicated object panel](docs/site-polish-study.jpg)
+
+The screenshots above are actual browser captures, not ImageGen mockups. Approved design references and existing artwork provenance remain unchanged. The October 16 polish pass was exercised through local browser routes at desktop and narrow widths; see [design QA](design-qa.md) for its evidence boundaries.
+
+Natural narration still uses the free browser-local Kokoro voices. The available voice catalog does not document Black speaker identity, so these voices are not labeled Black. No paid narration API has been added.
+
 ## Native server
 
 Requirements: a current stable Rust toolchain. The KJV JSON is embedded in the binary with `include_str!`, so no runtime data file is needed.

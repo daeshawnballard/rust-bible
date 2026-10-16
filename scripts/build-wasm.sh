@@ -18,7 +18,7 @@ mkdir -p dist/vendor/kokoro
 cp -R web/vendor/kokoro/. dist/vendor/kokoro/
 mkdir -p dist/vendor/maplibre
 cp web/vendor/maplibre/* dist/vendor/maplibre/
-cat web/style.css web/reader.css web/today.css web/learning.css web/about.css web/vendor/maplibre/maplibre-gl.css web/atlas.css > dist/style.css
+cat web/style.css web/reader.css web/today.css web/learning.css web/about.css web/vendor/maplibre/maplibre-gl.css web/atlas.css web/polish-library.css web/polish.css > dist/style.css
 cp web/art/today/*.webp dist/art/today/
 cp web/art/learn/ark/*.webp dist/art/learn/ark/
 cp web/art/learn/sower/*.webp dist/art/learn/sower/
