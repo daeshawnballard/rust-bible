@@ -104,7 +104,7 @@ pub(super) fn hub(selected: Option<&str>, client: bool) -> RouteResponse {
     let book =
         include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
     let mut body = String::from(
-        r#"<section class="learning-page" data-learning-hub><div class="learning-browser"><div class="learning-index"><header class="learning-heading"><p class="eyebrow">Illustrated studies</p><h1>Explore Scripture</h1><p>Choose a scene. Read its passage. Look closer.</p></header><nav class="learning-scenes" aria-label="Choose an illustrated study">"#,
+        r#"<section class="learning-page" data-learning-hub><div class="learning-browser"><div class="learning-index"><header class="learning-heading"><p class="eyebrow">Illustrated studies</p><h1>Illustrated studies</h1><p>Choose a scene. Read its passage. Look closer.</p></header><nav class="learning-scenes" aria-label="Choose an illustrated study">"#,
     );
     for item in &STUDIES {
         let href = route_path(&format!("/explore?scene={}", item.slug), client);
@@ -158,7 +158,7 @@ pub(super) fn today_card(slot: usize, client: bool) -> String {
     format!(
         r#"<section class="today-explore"><div><p class="eyebrow">An illustrated study</p><a href="{}">{title} →</a><p>{description}</p><a class="all-studies" href="{}">Browse all illustrated studies →</a></div></section>"#,
         esc(&route_path(path, client)),
-        esc(&route_path("/explore", client))
+        esc(&route_path("/explore/studies", client))
     )
 }
 fn passage(stop: &Stop, client: bool) -> String {
@@ -205,9 +205,9 @@ pub(super) fn page(
     let scripture_href = scene_path(scene, stop, "scripture", client);
     let object_href = scene_path(scene, stop, "object", client);
     let mut html = format!(
-        r#"<section class="explore-page illustrated-explore learning-study" data-learning-scene="{}"><nav class="explore-breadcrumb" aria-label="Breadcrumb"><a href="{}">Explore</a><span aria-hidden="true"> / </span><span aria-current="page">{}</span></nav><div class="explore-heading"><p class="eyebrow">An illustrated study · {}</p><h1>{}</h1><p>Read the passage, or choose a hotspot to look more closely.</p></div><div class="explore-layout"><section class="scene-column" aria-label="Interactive illustrated scene"><div class="illustration"><img class="scene-art" src="/art/learn/{}/scene.webp" width="1536" height="1024" alt="Illustrated reconstruction: {}">"#,
+        r#"<section class="explore-page illustrated-explore learning-study" data-learning-scene="{}"><nav class="explore-breadcrumb" aria-label="Breadcrumb"><a href="{}">Illustrated studies</a><span aria-hidden="true"> / </span><span aria-current="page">{}</span></nav><div class="explore-heading"><p class="eyebrow">An illustrated study · {}</p><h1>{}</h1><p>Read the passage, or choose a hotspot to look more closely.</p></div><div class="explore-layout"><section class="scene-column" aria-label="Interactive illustrated scene"><div class="illustration"><img class="scene-art" src="/art/learn/{}/scene.webp" width="1536" height="1024" alt="Illustrated reconstruction: {}">"#,
         scene.slug,
-        esc(&route_path("/explore", client)),
+        esc(&route_path("/explore/studies", client)),
         esc(scene.title),
         esc(scene.subtitle),
         esc(scene.title),
@@ -253,7 +253,7 @@ pub(super) fn page(
     } else {
         html.push_str(&format!(
             r#"<a href="{}">All illustrated studies →</a>"#,
-            esc(&route_path("/explore", client))
+            esc(&route_path("/explore/studies", client))
         ));
     }
     html.push_str("</nav></article></div><div class=\"explore-audio\">");
@@ -277,7 +277,7 @@ fn missing(client: bool) -> RouteResponse {
         "",
         &format!(
             r#"<section class="recovery-page"><h1>Study detail not found</h1><p>Choose one of the illustrated studies to continue.</p><a href="{}">Browse illustrated studies →</a></section>"#,
-            esc(&route_path("/explore", client))
+            esc(&route_path("/explore/studies", client))
         ),
         client,
         None,

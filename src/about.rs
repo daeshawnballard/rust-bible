@@ -16,7 +16,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     <nav class="about-quick-links" aria-label="Start reading">
       <a class="about-primary" href="{today}">Read today’s passage <span aria-hidden="true">→</span></a>
       <a href="{library}">Browse the Library</a>
-      <a href="{explore}">Explore illustrated scenes</a>
+      <a href="{explore}">Explore the passage map</a>
     </nav>
   </header>
 
@@ -34,7 +34,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
       </article>
       <article class="about-card">
         <h3><a href="{explore}">Explore</a></h3>
-        <p>Visit the Tabernacle, Noah’s Ark, or the Sower’s Field. Scripture opens beside each illustrated scene.</p>
+        <p>Follow your reading on a real terrain map, with Scripture beside it and geographic notes in a separate tab. Illustrated studies remain available through Place context.</p>
       </article>
     </div>
   </section>
@@ -83,7 +83,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>What does Explore show?</summary>
-      <p>Explore contains three illustrated scenes: the Tabernacle, Noah’s Ark, and the Sower’s Field. Scripture is the starting view. Select a hotspot or use the labeled stop selector to open an illustrated detail and an explanation tied to named passages. Guided stops and questions point back to their cited Scripture.</p>
+      <p>Explore follows your saved book, chapter, and verse. Named places are sourced candidates, not automatic story settings. Curated camera-follow ranges currently cover Acts 16–17, Luke 2, and Revelation 1:9; elsewhere the map shows chapter or book references with an explicit unassigned-setting message. Pan freely and use Return to passage to resume following. Modern terrain needs a network connection and WebGL; Scripture and the place list remain available if it fails. Place context keeps geographic explanation separate and links to the three preserved illustrated studies.</p>
     </details>
     <details>
       <summary>Do I need an account or an API key?</summary>

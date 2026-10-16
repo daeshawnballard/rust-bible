@@ -114,6 +114,31 @@ async fn serve(uri: Uri) -> Response {
             .body(Body::from(include_bytes!("../web/logo.png").as_slice()))
             .expect("static logo response is valid");
     }
+    let map_asset = match uri.path() {
+        "/atlas.js" => Some((
+            "text/javascript; charset=utf-8",
+            include_str!("../web/atlas.js"),
+        )),
+        "/terrain.js" => Some((
+            "text/javascript; charset=utf-8",
+            include_str!("../web/terrain.js"),
+        )),
+        "/vendor/maplibre/maplibre-gl.mjs" => Some((
+            "text/javascript; charset=utf-8",
+            include_str!("../web/vendor/maplibre/maplibre-gl.mjs"),
+        )),
+        "/vendor/maplibre/maplibre-gl-worker.mjs" => Some((
+            "text/javascript; charset=utf-8",
+            include_str!("../web/vendor/maplibre/maplibre-gl-worker.mjs"),
+        )),
+        _ => None,
+    };
+    if let Some((mime, content)) = map_asset {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, mime)
+            .body(Body::from(content))
+            .expect("map asset response is valid");
+    }
     if uri.path() == "/experience.js" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")

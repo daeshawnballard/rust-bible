@@ -122,3 +122,29 @@ Local browser outcomes: Ark selection/reload retains its matching introduction a
 No actionable P0/P1/P2 findings remain in the compared default state. Intentional differences: preserved production artwork instead of the generated preview's reinterpreted scene; narrow layouts are responsive adaptations because the selected reference is desktop only. Exhaustive all-66-book/all-16-hotspot flows and physical-device qualification are outside this scoped layout run.
 
 final result: passed
+
+
+## Passage-following geographic Explore map — 2026-10-16
+
+Authority: `assets/imagegen/reference/reading-map-approved.png`, selected with “yeah this is cool” and “proceed”. Actual local Rust/WASM screenshots: `docs/site-map.png` (1536 × 1024 CSS pixels, Acts 16:12, idle audio) and `docs/site-map-mobile.png` (390 × 844). The original and desktop screenshot were inspected together at equal scale; `docs/map-design-comparison.webp` retains the comparison.
+
+Corrected findings:
+
+- P1: inherited reader grid squeezed verse text into its number column. Scoped block layout and absolute verse numbers fix it.
+- P1: the initial 3D control did not enable elevation. Initialization now sets the real DEM and tilted camera. Browser requests returned fresh NASA and DEM responses.
+- P2: narrow grid children expanded past the viewport. A minimum-zero column, bounded selectors and stacked panel fix 320/390px clipping. Map tools have 44px targets.
+- P2: resizing/font reflow could change the saved verse and retain a desktop camera offset. Reflow preserves the selected verse and recenters only while following. Acts 16:12 remains selected through desktop/390/320 changes.
+- P2: overlapping labels crowded the map. Other-place labels now appear on hover/focus; journey labels remain visible. Anchors put marker dots at their coordinates and Neapolis has a separate label offset.
+- Capture limitation: hidden in-app-browser WebGL screenshots after resizing sometimes omitted the canvas despite valid loaded state. Final screenshots were recaptured with the browser visually presented and actual terrain visible. Blank captures are not passing proof.
+
+Required fidelity surfaces: the existing locally hosted Bible Display serif, ivory/gold and charcoal remain. Terrain fills the workspace beside a floating, independently scrolling Scripture panel, route strip, tools and bottom audio. Titles, Scripture, controls, links and selectors are real UI. Geographic explanations and source confidence remain separate from Scripture and speech. Existing branding is retained.
+
+Intentional differences: real modern NASA regional imagery and sourced coordinates replace generated geography, so coastline, point spacing, color and terrain detail differ. Approximately 500m imagery is not street-level detail. Dashed connections are schematic. Device speech uses real verse progress instead of an invented waveform/time. Functional selectors, search, attribution and footer remain. Camera-follow settings are curated only for Acts 16–17, Luke 2 and Revelation 1:9; elsewhere the UI honestly shows named places/book context or no location. README, About and atlas notes disclose these limits.
+
+Direct local browser outcomes: uncached NASA/DEM HTTP 200 responses; Philippi focus; sourced pin details and Scripture return; actual device speech, pause/resume, Acts 16:40 → Acts 17 advancement with visible verse and changed map setting; navigation cancels speech and returns to its verse; settled manual scrolling updates progress; reload/contextual reader links retain it; pan disables follow and Return restores it; 2D/3D and map controls; 66 book choices, Psalm 23 book context and Philemon no-location states; keyboard tabs; 320/390/768 layouts. Controlled tile-provider blocking produced a degraded message with readable Scripture; removing it and clicking Retry restored actual terrain. This negative is controlled failure evidence, not a real provider outage. Library 66-book display, neimai → Nehemiah, Today continuation, and each retained study with a representative dedicated image were exercised. Initial QA selector errors included decorative arrows or abbreviated headings; corrected actual accessible names reached the expected screens. First attempts remain in the private execution record.
+
+Supporting checks: all 36 Rust tests, native binary compilation, JavaScript syntax, WASM production build and whitespace checks. Hosted acceptance is separate after publication. Exhaustive geographic review/all 16 hotspot journeys, physical phones, cross-browser speech and unavailable-WebGL hardware are NOT RUN.
+
+No actionable P0/P1/P2 layout findings remain in compared states. Generated scenic detail and broader curated setting coverage remain explicit differences.
+
+final result: passed

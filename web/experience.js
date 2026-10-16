@@ -72,7 +72,7 @@ export function initExperience(root = document) {
       ? `Reading ${location(verseIndex)}${readerMode ? '' : ` · ${verseIndex + 1} of ${verses.length}.`}`
       : `Reading verse ${verseNumber(verseIndex)} · ${verseIndex + 1} of ${verses.length}.`;
     const followVerse = verseIndex => {
-      if (!readerMode || !follow?.checked) return;
+      if (!readerMode || !follow?.checked || root.querySelector('[data-atlas-page]')) return;
       const node = nodes[verseIndex];
       const rect = node?.getBoundingClientRect();
       const toolbar = root.querySelector('.reader-toolbar')?.getBoundingClientRect();

@@ -245,7 +245,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     if (!reader) return null;
     const saved = readProgress();
     const params = new URL(route, window.location.origin).searchParams;
-    const requested = Number(params.get('resume'));
+    const requested = Number(params.get(root.querySelector('[data-atlas-page]') ? 'verse' : 'resume'));
     const explicit = response?.anchor && document.getElementById(response.anchor);
     const resumed = requested > 0 ? matchingVerse(root, {route: reader.dataset.readerRoute, verse: requested})
       : initial && !response?.anchor && !params.has('v') && saved?.route === reader.dataset.readerRoute ? matchingVerse(root, saved) : null;

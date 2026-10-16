@@ -1,0 +1,7 @@
+{
+  "type": "approved visual reference; not production map imagery",
+  "generated_image": "exec-1b9f410a-bc4e-492b-9965-4c4bf67a6952.png",
+  "sha256": "72228e98238648cd1cd373b98804550ad21ca4b66c52c32186b60ff2bd0f30ba",
+  "user_selection": "yeah this is cool; proceed",
+  "implementation": "Use real terrain and coordinate data; UI elements remain real controls. Generated coastline is illustrative."
+}

@@ -94,6 +94,24 @@ fn reader_controls(reference: &str) -> String {
         .replace("<small>Device voice", "<label class=\"reader-follow\"><input type=\"checkbox\" data-audio-follow checked> Follow reading</label><small>Continues into following chapters. Device voice")
 }
 
+pub(super) fn map_audio(reference: &str) -> String {
+    reader_controls(reference)
+}
+
+pub(super) fn map_panel(book: usize, chapter: usize, verse: usize, client: bool) -> String {
+    let reference = format!("{} {chapter}", NAMES[book]);
+    let mut html = format!("<section data-reader data-book-index=\"{book}\" data-book-name=\"{}\" data-chapter=\"{chapter}\" data-reader-route=\"/book/{}/{chapter}\" aria-label=\"Bible passage reader\"><div class=\"scripture reader-scripture\" data-reader-primary-scripture>", esc(NAMES[book]), slug(book));
+    for (i, text) in bible().books[book][chapter - 1].iter().enumerate() {
+        let number = i + 1;
+        html.push_str(&format!("<p class=\"v{}\" id=\"v{number}\" data-reference=\"{}\" data-verse=\"{number}\" tabindex=\"0\" aria-label=\"Select verse {number}\"><sup>{number}</sup><span class=\"verse-text\">{}</span></p>",if number==verse {" is-map-current"} else {""},esc(&reference),esc(text)));
+    }
+    let count = bible().books[book][chapter - 1].len();
+    html.push_str("</div>");
+    html.push_str(&continuation(book, chapter, count + 1, count, client));
+    html.push_str("</section>");
+    html
+}
+
 fn reader_open(book: usize, chapter: usize, client: bool) -> String {
     let route = format!("/book/{}/{chapter}", slug(book));
     let mut html = format!(
@@ -109,6 +127,7 @@ fn reader_open(book: usize, chapter: usize, client: bool) -> String {
     html.push_str("<div class=\"reader-toolbar\"><div class=\"reader-selectors\">");
     html.push_str(&book_selector(book, chapter, client));
     html.push_str("</div>");
+    html.push_str(&super::atlas::reader_link(book, chapter, client));
     html
 }
 
@@ -291,6 +310,7 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
     html.push_str("<div class=\"reader-toolbar\"><div class=\"reader-selectors\">");
     html.push_str(&book_selector(book, chapter, client));
     html.push_str("</div>");
+    html.push_str(&super::atlas::reader_link(book, chapter, client));
     html.push_str(&reader_controls(&label));
     html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (number, text) in verses(reference) {
