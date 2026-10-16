@@ -13,7 +13,9 @@ cargo build --release --target wasm32-unknown-unknown --lib
 mkdir -p dist/art/objects dist/art/covers dist/art/today dist/art/learn/ark dist/art/learn/sower dist/fonts
 cp web/fonts/eb-garamond.ttf dist/fonts/
 cp web/fonts/cormorant-garamond.ttf dist/fonts/
-cp web/index.html web/app.js web/experience.js web/library.js web/journey.js web/progress.js web/atlas.js web/terrain.js web/logo.png dist/
+cp web/index.html web/app.js web/experience.js web/local-voice.js web/local-voice-worker.js web/library.js web/journey.js web/progress.js web/atlas.js web/terrain.js web/logo.png dist/
+mkdir -p dist/vendor/kokoro
+cp -R web/vendor/kokoro/. dist/vendor/kokoro/
 mkdir -p dist/vendor/maplibre
 cp web/vendor/maplibre/* dist/vendor/maplibre/
 cat web/style.css web/reader.css web/today.css web/learning.css web/about.css web/vendor/maplibre/maplibre-gl.css web/atlas.css > dist/style.css

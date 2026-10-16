@@ -4,7 +4,7 @@ Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site>. Open-source
 
 ![Today’s reading](docs/site-today.png)
 
-A daily KJV reading, chapter reader, illustrated Library, and passage-following geographic Explore map with one shared Rust implementation. The **About** page explains how to read, listen, and use local reading progress. Run the site as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. Rust handles Bible lookup, reference parsing, search, Library filtering and sorting, and page rendering. Small JavaScript modules connect browser routes, Library controls, and device speech playback to that Rust implementation.
+A daily KJV reading, chapter reader, illustrated Library, and passage-following geographic Explore map with one shared Rust implementation. The **About** page explains how to read, listen, and use local reading progress. Run the site as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. Rust handles Bible lookup, reference parsing, search, Library filtering and sorting, and page rendering. Small JavaScript modules connect browser routes, Library controls, and local speech playback to that Rust implementation.
 
 ## Today and navigation
 
@@ -30,9 +30,9 @@ The 66 cover scenes were generated individually with built-in ImageGen from the 
 
 Each of the 66 covers opens an illustrated book overview with its title, testament, literary category, short description, and every chapter. **Begin reading** opens chapter 1; any numbered chapter opens that chapter in the existing reader. Psalms includes all 150 chapters, and single-chapter books have one chapter link. The cover, controls, and chapter grid adapt to narrow screens.
 
-**Listen to [book]** reads the book's KJV verses using a browser/device voice. When your saved reading location is in that book, playback starts at its exact verse; otherwise it starts at chapter 1. The button toggles pause/resume, and playback reveals stop, speed, and voice controls plus the current chapter and verse. Navigation cancels playback. The editorial description is never added to the speech payload. Voice support depends on the browser/device.
+**Listen to [book]** reads the book's KJV verses with a free natural Kokoro narrator generated in the browser. When your saved reading location is in that book, playback starts at its exact verse; otherwise it starts at chapter 1. The button toggles pause/resume, and playback reveals stop, speed, and voice controls plus the current chapter and verse. Navigation cancels playback. The editorial description is never added to the speech payload. The first natural listen downloads about 100 MB of public model files, which the browser can cache. Device voices remain selectable as a fallback.
 
-The approved ImageGen book-page concept is preserved in `assets/imagegen/reference/book-page-approved.png`. The page reuses the Library's individual cover paintings and shared dimensional binding, with locally hosted Cormorant Garamond typography, a detailed ImageGen leather-and-gold binding, and licensed Phosphor icons. [Design QA](design-qa.md) records the reference comparison and visual differences. The application remains Rust/WASM, with a small JavaScript adapter for actual device speech.
+The approved ImageGen book-page concept is preserved in `assets/imagegen/reference/book-page-approved.png`. The page reuses the Library's individual cover paintings and shared dimensional binding, with locally hosted Cormorant Garamond typography, a detailed ImageGen leather-and-gold binding, and licensed Phosphor icons. [Design QA](design-qa.md) records the reference comparison and visual differences. The application remains Rust/WASM, with a JavaScript bridge for local natural narration and optional device voices.
 
 ## Native server
 
@@ -112,7 +112,7 @@ The Tabernacle’s eight object close-ups are individual illustrations, not crop
 
 Scripture is rendered verbatim from the embedded KJV corpus. **Explanation** is a separate, explicitly labeled section with passage references; it is not added to Scripture playback. Source-bound questions and explanations remain separate from Scripture and point to their cited passages.
 
-Chapter and passage readers use continuous **Listen from here** playback; Today reads only its current passage, and Explore reads only the current scene’s Scripture. The controls include pause/resume, stop, speed, and voice selection. Speech uses the browser’s Web Speech API and available device voices, so there are no embedded recordings and no API key is required. Voice availability and pronunciation depend on the browser/device. Playback starts only after a user action, highlights the current verse, and stops on navigation. Browsers without working speech support show an explicit unavailable/error message.
+Chapter and passage readers use continuous **Listen from here** playback; Today reads only its current passage, and Explore reads only the current scene’s Scripture. The controls include pause/resume, stop, speed, and voice selection. The default narrator is the open-source Kokoro-82M model, running locally in a WASM worker. The first Listen downloads about 100 MB of pinned public model/voice files; the browser can cache these for later visits. No paid API, account, or API key is required, and Scripture is not sent to a speech service. Heart (American), Michael (American), and George (British) are available under Playback options, alongside device voices using the Web Speech API. All voices are synthetic; pronunciation and performance vary. See [runtime, licenses and reproducible vendoring](docs/local-voice-runtime.md). Playback starts only after a user action, highlights the current verse, and stops on navigation. Browsers without working speech support show an explicit unavailable/error message.
 
 ## Data source
 

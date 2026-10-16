@@ -50,7 +50,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
       </div>
       <div>
         <h3>Listen to the selection you opened</h3>
-        <p>Speech uses the browser’s available device voices; the app does not include prerecorded readings. Tap or click a Listen control to start—audio does not autoplay. Choose a voice and speed in the playback controls. <strong>Follow reading</strong> scrolls the spoken verse into view and can be turned off.</p>
+        <p>The default natural narrator uses the open-source Kokoro model on your device. The first listen downloads about 100 MB of model files; your browser can cache them for future visits. There is no paid speech API, account, or key. Audio is generated locally from the KJV text; Scripture is never sent to a narration service. Device voices are also available in Playback options. Tap or click a Listen control to start—audio does not autoplay. Choose a voice and speed in the playback controls. <strong>Follow reading</strong> scrolls the spoken verse into view and can be turned off.</p>
         <p>Today reads only its passage. A chapter’s <strong>Listen from here</strong> continues through later Scripture. Each Explore scene reads only its own selected Scripture. Playback ends or stops when you navigate away.</p>
       </div>
     </div>
@@ -87,7 +87,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>Do I need an account or an API key?</summary>
-      <p>No account or API key is needed to read or listen. Speech depends on voices available through your browser and device.</p>
+      <p>No account or API key is needed to read or listen. Natural speech requires a supported browser, an initial model download and enough device memory. If it cannot load, choose Device default in Playback options. All narration is synthetic.</p>
     </details>
   </section>
 </section>"#

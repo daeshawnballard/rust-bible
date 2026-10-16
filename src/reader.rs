@@ -50,12 +50,12 @@ pub(super) fn listen_controls(reference: &str, scope: &str) -> String {
   <button class="player-toggle reader-audio-play" type="button" data-audio-action="play" aria-label="Listen to this {scope}">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path class="player-play-icon" d="M8 4 21 12 8 20Z"/><path class="player-pause-icon" d="M7 5h4v14H7zm7 0h4v14h-4z"/></svg><span class="player-title">Listen to this {scope}</span>
   </button>
-  <div class="player-copy"><span data-audio-status role="status" aria-live="polite">Device voice · Scripture only.</span></div>
+  <div class="player-copy"><span data-audio-status role="status" aria-live="polite">Free natural voice · First download about 100 MB.</span></div>
   <details class="reader-audio-options"><summary aria-label="Playback options">•••</summary><div class="reader-audio-settings">
     <label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label>
-    <label>Voice<select data-audio-voice aria-label="Voice"><option value="">Device default</option></select></label>
+    <label>Voice<select data-audio-voice aria-label="Voice"><option value="kokoro:af_heart">Heart · Natural American</option></select></label>
     <button type="button" data-audio-action="stop">Stop reading</button>
-    <small>Device voice · Reads the KJV text only.</small>
+    <small data-voice-help>Free, synthetic Kokoro voice. First listen downloads about 100 MB, then generates audio on this device. Scripture only. Device voices are also available.</small>
   </div></details>
 </div>"#,
         reference = esc(reference),
@@ -91,7 +91,7 @@ fn reader_controls(reference: &str) -> String {
         .replacen("data-read-aloud", "data-read-aloud data-reader-audio", 1)
         .replace("Listen to this reading", "Listen from here")
         .replace("</div></details>", "<small data-progress-notice>Verse saved on this device. Clear it on Today.</small></div></details>")
-        .replace("<small>Device voice", "<label class=\"reader-follow\"><input type=\"checkbox\" data-audio-follow checked> Follow reading</label><small>Continues into following chapters. Device voice")
+        .replace("<small data-voice-help>", "<label class=\"reader-follow\"><input type=\"checkbox\" data-audio-follow checked> Follow reading</label><small data-voice-help>Continues into following chapters. ")
 }
 
 pub(super) fn map_audio(reference: &str) -> String {

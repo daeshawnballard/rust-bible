@@ -139,6 +139,52 @@ async fn serve(uri: Uri) -> Response {
             .body(Body::from(content))
             .expect("map asset response is valid");
     }
+    if let Some(asset) = uri.path().strip_prefix("/vendor/kokoro/") {
+        let safe = !asset.is_empty()
+            && asset.split('/').all(|part| {
+                !part.is_empty()
+                    && part != "."
+                    && part != ".."
+                    && part
+                        .bytes()
+                        .all(|c| c.is_ascii_alphanumeric() || b"._-".contains(&c))
+            });
+        if safe {
+            let path = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+                .join("web/vendor/kokoro")
+                .join(asset);
+            if let Ok(content) = std::fs::read(path) {
+                let mime = if asset.ends_with(".wasm") {
+                    "application/wasm"
+                } else if asset.ends_with(".js") || asset.ends_with(".mjs") {
+                    "text/javascript; charset=utf-8"
+                } else if asset.ends_with(".json") {
+                    "application/json"
+                } else {
+                    "text/plain; charset=utf-8"
+                };
+                return Response::builder()
+                    .header(header::CONTENT_TYPE, mime)
+                    .body(Body::from(content))
+                    .expect("voice asset response is valid");
+            }
+        }
+        return Response::builder()
+            .status(StatusCode::NOT_FOUND)
+            .body(Body::from("Voice asset not found"))
+            .expect("missing voice asset response is valid");
+    }
+    let voice_asset = match uri.path() {
+        "/local-voice.js" => Some(include_str!("../web/local-voice.js")),
+        "/local-voice-worker.js" => Some(include_str!("../web/local-voice-worker.js")),
+        _ => None,
+    };
+    if let Some(content) = voice_asset {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(content))
+            .expect("voice script response is valid");
+    }
     if uri.path() == "/experience.js" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")

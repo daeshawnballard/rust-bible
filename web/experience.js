@@ -1,4 +1,5 @@
 import { saveProgress, readProgress, saveBookProgress } from './progress.js';
+import { LocalNarrator, DEFAULT_NARRATOR } from './local-voice.js';
 
 let dispose = () => {};
 
@@ -23,7 +24,11 @@ export function initExperience(root = document) {
     const readerMode = controls.hasAttribute('data-reader-audio');
     const follow = controls.querySelector('[data-audio-follow]');
     const bookName = controls.dataset.reference || 'this book';
-    const synth = window.speechSynthesis;
+    const synth = new LocalNarrator({onProgress: progress => {
+      if(controls.dataset.audioState !== 'starting' || !current)return;
+      const total=Number(progress.total)||0,loaded=Number(progress.loaded)||0;
+      status.textContent=total>0 ? `Downloading natural voice · ${Math.round(loaded/total*100)}% (${Math.ceil(loaded/1048576)} / ${Math.ceil(total/1048576)} MB)` : progress.message || 'Preparing the free natural voice…';
+    }});
     const play = controls.querySelector('[data-audio-action="play"]');
     const pause = controls.querySelector('[data-audio-action="pause"]');
     const stopButton = controls.querySelector('[data-audio-action="stop"]');
@@ -80,11 +85,11 @@ export function initExperience(root = document) {
         node.scrollIntoView({block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
       }
     };
-    const extendReading = async run => {
+    const extendReading = async (run, quiet = false) => {
       const marker = root.querySelector('[data-reader-next]');
       if (!readerMode || !marker) return false;
       const uri = marker.dataset.readerNext;
-      setState('starting', 'Continuing into the next chapter…');
+      if(!quiet)setState('starting', 'Continuing into the next chapter…');
       const result = typeof window.rustBibleApi === 'function'
         ? window.rustBibleApi(uri)
         : await fetch(uri, {cache: 'no-store'}).then(response => {
@@ -112,15 +117,17 @@ export function initExperience(root = document) {
       if (bookMode) {
         if (audioLabel) audioLabel.textContent = state === 'reading' ? `Pause ${bookName}` : state === 'paused' ? `Resume ${bookName}` : `Listen to ${bookName}`;
         play.setAttribute('aria-label', state === 'reading' ? `Pause ${bookName}` : state === 'paused' ? `Resume ${bookName}` : `Listen to ${bookName}`);
-        play.disabled = state === 'starting' || state === 'unavailable';
+        if(state==='starting'){if(audioLabel)audioLabel.textContent='Cancel loading';play.setAttribute('aria-label','Cancel loading');}
+        play.disabled = state === 'unavailable';
         if (['error', 'unavailable'].includes(state)) revealPlaybackSettings();
       } else if (compact) {
-        const label = readerMode ? (state === 'reading' ? 'Pause reading' : state === 'paused' ? 'Resume reading' : 'Listen from here')
+        const label = state==='starting' ? 'Cancel loading' : readerMode ? (state === 'reading' ? 'Pause reading' : state === 'paused' ? 'Resume reading' : 'Listen from here')
           : state === 'reading' ? `Pause ${compactScope}` : state === 'paused' ? `Resume ${compactScope}` : `Listen to ${compactScope}`;
         play.setAttribute('aria-label', label);
-        play.disabled = state === 'starting' || state === 'unavailable';
+        if(state==='starting'){if(audioLabel)audioLabel.textContent='Cancel loading';play.setAttribute('aria-label','Cancel loading');}
+        play.disabled = state === 'unavailable';
         if (audioLabel) audioLabel.textContent = label;
-        controls.querySelector('.player-title').textContent = controls.dataset.audioScope ? label : state === 'paused' ? `${compactScope[0].toUpperCase()}${compactScope.slice(1)} paused` : state === 'reading' ? `Reading ${compactScope}` : `Listen to ${compactScope}`;
+        controls.querySelector('.player-title').textContent = (controls.dataset.audioScope || state==='starting') ? label : state === 'paused' ? `${compactScope[0].toUpperCase()}${compactScope.slice(1)} paused` : state === 'reading' ? `Reading ${compactScope}` : `Listen to ${compactScope}`;
       } else {
         play.textContent = state === 'paused' ? 'Resume' : 'Listen to Scripture';
         pause.textContent = state === 'paused' ? 'Paused' : 'Pause';
@@ -137,12 +144,13 @@ export function initExperience(root = document) {
       const selected = nodes.findIndex(node => node.id === id);
       return selected < 0 ? 0 : selected;
     };
-    const readyMessage = () => readerMode && nodes.length
-      ? `Ready at ${location(selectedReaderIndex())}` : 'Ready. Reads the KJV text only.';
+    const voiceNotice = () => voice.value.startsWith('kokoro:') ? ' · Natural voice · first download about 100 MB.' : ' · Device voice.';
+    const readyMessage = () => (readerMode && nodes.length
+      ? `Ready at ${location(selectedReaderIndex())}` : 'Ready. Scripture only.') + voiceNotice();
     on(root, 'bible:position', event => {
       if (!readerMode) return;
       if (!['starting', 'reading', 'paused'].includes(controls.dataset.audioState)) {
-        setState('idle', `Ready at ${event.detail.record.book} ${event.detail.record.chapter}:${event.detail.record.verse}`);
+        setState('idle', `Ready at ${event.detail.record.book} ${event.detail.record.chapter}:${event.detail.record.verse}${voiceNotice()}`);
       }
       controls.dataset.positionSaved = String(event.detail.persisted);
       updateProgressNotice(event.detail.persisted);
@@ -164,18 +172,21 @@ export function initExperience(root = document) {
       clearHighlight();
       setState('idle', message);
     };
-    if (!synth || !('SpeechSynthesisUtterance' in window)) {
+    if (!synth.supported) {
       [play, pause, stopButton, rate, voice].forEach(control => { if (control) control.disabled = true; });
-      setState('unavailable', 'Read-aloud is unavailable in this browser. Try a browser with device speech support.');
+      setState('unavailable', 'Read-aloud is unavailable in this browser. Try a browser with audio playback support.');
     } else {
+      let populatedVoices = false;
       const populateVoices = () => {
         let stored = '';
-        try { stored = localStorage.getItem('bible.voice') || ''; } catch {}
-        const selected = voice.value || stored;
+        try { stored = localStorage.getItem('bible.narrator') || ''; } catch {}
+        const selected = populatedVoices ? voice.value : stored || DEFAULT_NARRATOR;
+        populatedVoices = true;
         const options = synth.getVoices().filter(item => /^en\b/i.test(item.lang));
-        voice.replaceChildren(new Option('Device default', ''));
+        voice.replaceChildren();
         for (const item of options) voice.add(new Option(`${item.name} (${item.lang})`, item.voiceURI));
-        if ([...voice.options].some(item => item.value === selected)) voice.value = selected;
+        voice.add(new Option('Device default · no download','device:default'));
+        voice.value = [...voice.options].some(item => item.value === selected) ? selected : DEFAULT_NARRATOR;
       };
       try { rate.value = localStorage.getItem('bible.rate') || '1'; } catch {}
       populateVoices();
@@ -200,7 +211,7 @@ export function initExperience(root = document) {
         // Keep utterances short for engines that stall on long text.
         chunks ||= verses[verseIndex].match(/.{1,220}(?:\s|$)|\S{1,220}/g) || [verses[verseIndex]];
         if (chunkIndex >= chunks.length) { readVerse(run, verseIndex + 1); return; }
-        const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex].trim());
+        const utterance = {text:chunks[chunkIndex].trim()};
         current = utterance;
         utterance.lang = 'en-US';
         utterance.rate = Number(rate.value) || 1;
@@ -216,6 +227,14 @@ export function initExperience(root = document) {
           const number = verseNumber(verseIndex);
           setState('reading', readingMessage(verseIndex));
           console.info('Bible read-aloud: speech started', {verse: bookMode ? location(verseIndex) : number, voice: utterance.voice?.name || 'device default'});
+          const prefetchNext = () => {
+            const nextChunk=chunks[chunkIndex+1] || verses[verseIndex+1]?.match(/.{1,220}(?:\s|$)|\S{1,220}/g)?.[0];
+            synth.prefetch(nextChunk?.trim(),utterance.voice);
+          };
+          prefetchNext();
+          if(readerMode && synth.isLocalVoice(utterance.voice) && verseIndex===verses.length-1 && !chunks[chunkIndex+1]) {
+            extendReading(run,true).then(()=>{if(run===generation)prefetchNext();}).catch(()=>{});
+          }
         };
         utterance.onend = () => {
           if (run === generation) readVerse(run, verseIndex, chunkIndex + 1, chunks);
@@ -230,21 +249,23 @@ export function initExperience(root = document) {
         };
         utterance.onerror = event => {
           if (run !== generation) return;
-          stop(`Speech could not play${bookMode ? ` at ${location(verseIndex)}` : ''} (${event.error}). Choose another voice or browser.`);
+          stop(`Speech could not play${bookMode ? ` at ${location(verseIndex)}` : ''}: ${event.error}. Choose Device default in Playback options, or try Listen again.`);
           controls.dataset.audioState = 'error';
           revealPlaybackSettings();
         };
-        timer = setTimeout(() => {
+        if(!synth.isLocalVoice(utterance.voice))timer = setTimeout(() => {
           if (run === generation && controls.dataset.audioState === 'starting') {
             stop(`The device speech service did not start${bookMode ? ` for ${location(index)}` : ''}. Try another voice or browser.`);
             controls.dataset.audioState = 'error';
             revealPlaybackSettings();
           }
         }, 7000);
+        if(synth.isLocalVoice(utterance.voice))setState('starting', `Preparing natural voice · ${location(verseIndex)}…`);
         synth.speak(utterance);
       };
       on(play, 'click', () => {
         revealPlaybackSettings();
+        if(controls.dataset.audioState==='starting'){stop('Loading canceled. Press Listen to try again.');return;}
         if ((compact || bookMode) && controls.dataset.audioState === 'reading') {
           synth.pause();
           if (synth.paused) setState('paused', bookMode
@@ -257,9 +278,10 @@ export function initExperience(root = document) {
           if (!synth.paused) { setState('reading', readingMessage(index)); followVerse(index); }
           return;
         }
-        stop('Starting the device voice…', true);
+        stop('Preparing the selected voice…', true);
+        synth.unlock();
         if (!verses.length) { setState('error', bookMode ? `There is no Scripture text available for ${bookName}.` : 'There is no Scripture passage to read here.'); return; }
-        setState('starting', bookMode ? `Starting ${bookName}…` : 'Starting the device voice…');
+        setState('starting', bookMode ? `Starting ${bookName}…` : 'Preparing the selected voice…');
         readVerse(generation, readerMode ? selectedReaderIndex() : bookMode ? selectedBookIndex() : 0);
       });
       on(pause, 'click', () => {
@@ -275,11 +297,12 @@ export function initExperience(root = document) {
         stop(readerMode ? readyMessage() : bookMode ? `Speed changed. Press Listen to restart ${bookName}.` : 'Speed changed. Press Listen to restart this passage.');
       });
       on(voice, 'change', () => {
-        try { localStorage.setItem('bible.voice', voice.value); } catch {}
+        try { localStorage.setItem('bible.narrator', voice.value); } catch {}
         stop(readerMode ? readyMessage() : bookMode ? `Voice changed. Press Listen to restart ${bookName}.` : 'Voice changed. Press Listen to restart this passage.');
       });
       on(window, 'pagehide', () => stop());
     }
+    listeners.push(()=>synth.destroy());
   }
   dispose = () => { stop(); listeners.forEach(remove => remove()); };
 }

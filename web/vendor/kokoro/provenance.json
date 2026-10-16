@@ -1,0 +1,84 @@
+{
+  "model": {
+    "id": "onnx-community/Kokoro-82M-v1.0-ONNX",
+    "revision": "1939ad2a8e416c0acfeecc08a694d14ef25f2231",
+    "inference": "public Hugging Face files; no API key or inference endpoint"
+  },
+  "worker": {
+    "path": "web/local-voice-worker.js",
+    "bytes": 5998,
+    "sha256": "bf21381e088ed01ca54b9b7fd259d102e3d6237fb64c0ac88ee4ff4cb581348a"
+  },
+  "build": {
+    "sourceArchive": "https://codeload.github.com/hexgrad/kokoro/tar.gz/664c76a704021239ba59c84dcbaa4d3dece01fe9",
+    "sourceCommit": "664c76a704021239ba59c84dcbaa4d3dece01fe9",
+    "sourceArchiveSha256": "7fb00d418195be678663f7844380abaf791aba4749137ed402d0da197bfa00cb",
+    "command": "esbuild --bundle --format=esm --platform=browser --target=es2022 --minify",
+    "esbuild": "0.25.2 (pinned by upstream package-lock.json)",
+    "transformers": "3.5.1 (pinned by upstream package-lock.json)",
+    "install": "npm ci --ignore-scripts --no-audit --no-fund"
+  },
+  "phonemizer": {
+    "package": "phonemizer@1.2.1",
+    "npmUrl": "https://registry.npmjs.org/phonemizer/-/phonemizer-1.2.1.tgz",
+    "integrity": "sha512-v0KJ4mi2T4Q7eJQ0W15Xd4G9k4kICSXE8bpDeJ8jisL4RyJhNWsweKTOi88QXFc4r4LZlz5jVL5lCHhkpdT71A==",
+    "runtimeCdnUrl": "https://cdn.jsdelivr.net/npm/phonemizer@1.2.1/+esm",
+    "sourceCommit": "6835144b7ee9043129222549c1ed2f6a27216278",
+    "externalized": true,
+    "espeakNgOriginalSourceRevision": null,
+    "note": "The eSpeak NG payload is fetched by the browser from the pinned npm CDN URL and is not embedded in the self-hosted runtime.js. The published Phonemizer source snapshot does not identify the original eSpeak NG revision or provide corresponding C source/build inputs."
+  },
+  "packages": {
+    "onnxruntime-web": {
+      "version": "1.22.0-dev.20250409-89f8206ba4",
+      "url": "https://registry.npmjs.org/onnxruntime-web/-/onnxruntime-web-1.22.0-dev.20250409-89f8206ba4.tgz",
+      "integrity": "sha512-0uS76OPgH0hWCPrFKlL8kYVV7ckM7t/36HfbgoFw6Nd0CZVVbQC4PkrR8mBX8LtNUFZO25IQBqV2Hx2ho3FlbQ=="
+    }
+  },
+  "files": {
+    "runtime.js": {
+      "bytes": 711795,
+      "sha256": "ce17b36a30081e50ba3dab85f10c1e65032fc63a7da1ab527ab9e5bfdbceb7b4"
+    },
+    "ort-wasm-simd-threaded.mjs": {
+      "bytes": 20856,
+      "sha256": "43c25054b6b9ac000f786c65545ff83a45f871e0e310e8c2f4d48a363bb66db4"
+    },
+    "ort-wasm-simd-threaded.wasm": {
+      "bytes": 11133407,
+      "sha256": "f061472c6e77d6d50d079aacdc0ff9b63fee287ddd2cbf46cf62438d3891de2b"
+    },
+    "voices/af_heart.bin": {
+      "bytes": 522240,
+      "sha256": "d583ccff3cdca2f7fae535cb998ac07e9fcb90f09737b9a41fa2734ec44a8f0b"
+    },
+    "voices/am_michael.bin": {
+      "bytes": 522240,
+      "sha256": "1d1f21dd8da39c30705cd4c75d039d265e9bc4a2a93ed09bc9e1b1225eb95ba1"
+    },
+    "voices/bm_george.bin": {
+      "bytes": 522240,
+      "sha256": "c4b235a4c1f2cd3b939fed08b899ce9385638b763f7b73a59616c4fc9bd6c9bc"
+    },
+    "licenses/Apache-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/MIT.txt": {
+      "bytes": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    "licenses/GPL-3.0.txt": {
+      "bytes": 34674,
+      "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0"
+    },
+    "licenses/BSD-3-Clause.txt": {
+      "bytes": 1460,
+      "sha256": "5a93d5831e1297ab10fe643e1a631e83be392896da14ee2951285a79012df69d"
+    },
+    "licenses/ISC.txt": {
+      "bytes": 823,
+      "sha256": "f2ec607f67bb0dd3053b49835b02110d5cd0f8eb6da3aac4dc0b142a6b299be9"
+    }
+  }
+}
