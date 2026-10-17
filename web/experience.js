@@ -446,6 +446,8 @@ function togglePlayback(runtime) {
     stopPlayback(runtime);
     return;
   }
+  const visibleControls=runtime.currentRoot?.querySelector?.('[data-read-aloud]');
+  if(visibleControls)runtime.previewConfig=sourceConfig(visibleControls,runtime.currentRoot);
   const previewIsDifferent = runtime.previewConfig && runtime.previewConfig.key !== runtime.source?.key;
   const config = previewIsDifferent || runtime.previewConfig?.key === runtime.source?.key
     ? runtime.previewConfig : runtime.source?.config || runtime.previewConfig;

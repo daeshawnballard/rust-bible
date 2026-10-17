@@ -20,6 +20,8 @@ Full-view side-by-side comparisons were composed and inspected for all four targ
 
 - P1 interaction correction from public version 40: the reader root also carries `data-window-tab`, so a broad delegated selector swallowed ordinary clicks. Restricted tab handling to buttons. A new local real click now expands the title menu (44px chapter selector) and selecting Chapter 13 loads Nehemiah 13. The correction requires fresh public acceptance on the subsequent release.
 
+- P1 playback correction from public version 41: Play used the initial idle preview after an explicit source selection. It now resolves the visible reader at click time. Local source selection to Genesis 2:10 produced the canonical v10 return link and the queue advanced through that chapter. Fresh release acceptance remains separate.
+
 ## Five fidelity surfaces
 
 - Typography: bundled Cormorant Garamond display and EB Garamond Scripture; serif hierarchy, readable selected verses, compact sans-serif operational status. Exact generated-image glyph shapes are not treated as a font file. No visible clipped titles on inspected widths.
