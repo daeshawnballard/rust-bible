@@ -72,7 +72,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
       </div>
       <div>
         <h3>Listen and follow the verse</h3>
-        <p>Tap or click <strong>Listen</strong> to start; audio does not autoplay. The default Kokoro voice generates speech locally on your device. Its first use downloads about 100 MB of public model files. Device voices are also available. No account, API key, or paid speech service is used.</p>
+        <p>Tap or click <strong>Listen</strong> to start; audio does not autoplay. Choose Heart or Michael. Published chapter recordings play directly from this site, with verse highlighting and seeking. Chapters not published yet use the same selected natural voice locally; its first use downloads about 100 MB of public model files. No account, API key, or paid speech service is used.</p>
         <p><strong>Follow reading</strong> scrolls the spoken verse into view. The bottom dock names the narrated passage and offers <strong>Return to passage</strong>. It stays available as you move among Today, Library, and Codex. Choosing Listen for another reference switches narration. Choosing a Read source link in Context or Codex stops narration and opens that reference.</p>
       </div>
     </div>
@@ -113,7 +113,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>Does narration stop when I move around the app?</summary>
-      <p>The single bottom audio dock stays available across Today, Library, and Codex navigation. It identifies the passage being narrated and has Return to passage. Browsing another book or chapter keeps the current narration. Choosing Listen for another reference switches it; choosing a Read source link in Context or Codex stops it and opens that reference. Kokoro playback shows waveform, elapsed time, and seeking for its current generated audio chunk. Device voices do not provide timing, so those controls are unavailable with them.</p>
+      <p>The single bottom audio dock stays available across Today, Library, and Codex navigation. It identifies the passage being narrated and has Return to passage. Browsing another book or chapter keeps the current narration. Choosing Listen for another reference switches it; choosing a Read source link in Context or Codex stops it and opens that reference. Hosted playback uses one continuous chapter recording with verse cues. Waveform, elapsed time, and seeking describe the current verse. Unpublished chapters use generated audio segments with the same controls.</p>
     </details>
     <details>
       <summary>What does Journey cover?</summary>
@@ -132,7 +132,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>Do I need an account or an API key?</summary>
-      <p>No account or API key is needed to read or listen. Kokoro requires a supported browser, its initial model download, and enough device memory. If it cannot load, choose a device voice in Playback options. All narration is synthetic.</p>
+      <p>No account or API key is needed to read or listen. Prepared narration needs a supported browser and a network connection. Local Kokoro fallback also needs its initial model download and enough device memory. If narration cannot load, try the other natural voice or read the passage while retrying. All narration is synthetic.</p>
     </details>
   </section>
 </section>"#

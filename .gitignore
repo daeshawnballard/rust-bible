@@ -1,2 +1,9 @@
 /dist/
 /target/
+/node_modules/
+/.wrangler/
+/.dev.vars*
+/hosting/.wrangler/
+/hosting/.build/
+__pycache__/
+*.pyc

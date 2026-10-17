@@ -44,11 +44,11 @@ The Passage reader starts from the selected verse and continues into later chapt
 
 The verse being narrated receives a gold highlight in Read, Journey, and Today. It advances when the next verse actually starts playing, stays on that verse while paused, and clears when playback stops or finishes. Turning off **Follow the spoken verse** disables automatic scrolling while keeping the audio highlight.
 
-One bottom audio dock follows the active narration across SPA navigation among Today, Library, and Codex. It names the passage being narrated and has **Return to passage**. Choosing **Listen** for another reference explicitly changes the narration target; a **Read** source link in Context or Codex stops it and opens that reference. Reloading does not autoplay. Kokoro speech is generated locally; its waveform, elapsed time, and seek control describe the generated audio chunk. Device voices do not provide audio timing, so those controls are unavailable for them. Pause/resume, speed, voice, volume, and Follow reading are available in playback controls.
+One bottom audio dock follows the active narration across SPA navigation among Today, Library, and Codex. It names the passage being narrated and has **Return to passage**. Choosing **Listen** for another reference explicitly changes the narration target; a **Read** source link in Context or Codex stops it and opens that reference. Reloading does not autoplay. The only narrators are **Heart and Michael**. Published chapters play from prepared MP3 recordings on the site, with verse cues and a waveform derived from the recorded PCM. The player keeps the same chapter audio running across verse boundaries. Seeking is relative to the current verse. Pause/resume, speed, voice, volume, and Follow reading are available in playback controls.
 
-Narration prepares a small buffer of exact upcoming segments and reuses them during playback. This adds an initial preparation wait and reduces avoidable regeneration; slower devices may still pause between segments. Preparation stays on the device and the queue remains bounded.
+The next chapter is prefetched into a bounded two-chapter media cache. A chapter whose recording is not published yet falls back to the same selected Kokoro voice generated locally, with an explicit preparation message and a bounded segment buffer. Corrupt recordings or server errors produce a visible error rather than silently changing voices. Network delays and unprepared chapters can still cause pauses.
 
-The first Kokoro listen downloads about 100 MB of public model files. Speech is generated on the device from KJV text; no paid narration API is used. The available voice catalog does not identify speakers by race, so voices are not labeled Black. All narration is synthetic.
+Hosted listening does not require the speech model download. The first local fallback listen downloads about 100 MB of public model files. No paid narration API is used. The available voice catalog does not identify speakers by race, so voices are not labeled Black. All narration is synthetic. Prepared Heart/Michael recordings are generated offline with pinned open Kokoro weights and stored in the Sites R2 bucket. The full two-voice corpus is a resumable processing job; adding the transport does not mean every recording is already published. See [narration generation and storage](docs/hosted-narration.md).
 
 ## Run the app
 
@@ -80,6 +80,15 @@ python3 -m http.server 8000 --directory dist
 ```
 
 Then open <http://localhost:8000>.
+
+### Sites with hosted narration
+
+```sh
+npm ci --ignore-scripts
+npm run build:hosted
+```
+
+This keeps the Rust/WASM app and adds a small Worker for R2 audio delivery. Deploy `dist/client`, `dist/server`, and `dist/.openai` using the existing Sites project. Configure the `BUCKET` binding and the secret `NARRATION_UPLOAD_TOKEN` through Sites. Recording files, private job logs, and upload credentials belong outside the public repository. See [Worker operations](hosting/README.md).
 
 ### API boundary
 

@@ -116,7 +116,7 @@ function postAudio(id, samples, sampleRate, telemetry) {
 
 async function generate(id, text, voice, segmentId, maxCacheSamples = CACHE_SAMPLE_LIMIT) {
   if (typeof text !== 'string' || !text.trim()) throw new Error('Reading text is empty.');
-  if (!['af_heart', 'am_michael', 'bm_george'].includes(voice)) throw new Error('The selected natural voice is unavailable.');
+  if (!['af_heart', 'am_michael'].includes(voice)) throw new Error('The selected natural voice is unavailable.');
   const key = cacheKey(text, voice);
   const hit = cacheGet(key);
   if (hit) {

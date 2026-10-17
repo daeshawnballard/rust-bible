@@ -3,7 +3,6 @@
 export const NATURAL_VOICES = [
   {voiceURI:'kokoro:af_heart',name:'Heart · Natural American',lang:'en-US'},
   {voiceURI:'kokoro:am_michael',name:'Michael · Natural American',lang:'en-US'},
-  {voiceURI:'kokoro:bm_george',name:'George · Natural British',lang:'en-GB'},
 ];
 export const DEFAULT_NARRATOR = NATURAL_VOICES[0].voiceURI;
 export const MAX_SPEECH_SEGMENT_LENGTH = 220;
@@ -160,7 +159,7 @@ function getWorker() {
   };
   instance.onerror = () => {
     if (worker !== instance) return;
-    abortActiveRequest('Natural voice could not start. Try again, or choose Device default in Playback options.', 'Error');
+    abortActiveRequest('Natural voice could not start. Try again or choose the other natural voice.', 'Error');
     pumpRequests();
   };
   return instance;
@@ -185,7 +184,7 @@ function pumpRequests() {
   }
   entry.timer = setTimeout(() => {
     if (activeRequest !== entry) return;
-    abortActiveRequest('Natural voice took too long to load. Try again, or choose Device default in Playback options.', 'Error');
+    abortActiveRequest('Natural voice took too long to load. Try again or choose the other natural voice.', 'Error');
     pumpRequests();
   }, 180000);
   try {
@@ -281,32 +280,118 @@ function reportSegment(result, utterance, phase) {
   return detail;
 }
 
+function mediaMetadataReady(media, expectedURL) {
+  if (media.readyState >= 1 && media.currentSrc === expectedURL) return Promise.resolve();
+  return new Promise((resolve, reject) => {
+    const cleanup = () => {
+      media.removeEventListener('loadedmetadata', ready);
+      media.removeEventListener('error', failed);
+      media.removeEventListener('abort', failed);
+    };
+    const ready = () => {
+      if (media.currentSrc !== expectedURL) return;
+      cleanup();
+      resolve();
+    };
+    const failed = () => { cleanup(); reject(new Error('Hosted narration metadata could not load.')); };
+    media.addEventListener('loadedmetadata', ready, {once:true});
+    media.addEventListener('error', failed, {once:true});
+    media.addEventListener('abort', failed, {once:true});
+    if (media.readyState >= 1 && media.currentSrc === expectedURL) ready();
+  });
+}
+
 export class LocalNarrator extends EventTarget {
   constructor({onProgress=()=>{}}={}) {
     super();
-    this.native = window.speechSynthesis;
     this.onProgress = onProgress;
     this.token = 0;
     this.current = null;
-    this.deviceOwned = false;
     this.objectURL = null;
+    this.hostedSession = null;
+    this.hostedStorePromise = import('./hosted-voice.js').then(({HostedNarrationStore}) => {
+      this.hostedStore = new HostedNarrationStore({baseURL:window.location.origin});
+      return this.hostedStore;
+    });
+    this.hostedStorePromise.catch(() => {});
     this.audio = document.createElement('audio');
     this.audio.hidden = true;
     this.audio.preload = 'auto';
     this.audio.preservesPitch = true;
     this.audio.dataset.naturalAudio = '';
     document.body.append(this.audio);
-    this.forwardVoices = () => this.dispatchEvent(new Event('voiceschanged'));
-    this.native?.addEventListener('voiceschanged', this.forwardVoices);
+    this.audio.addEventListener('timeupdate', () => this.updateHostedSession());
   }
 
-  get supported() { return !!(window.Worker && window.WebAssembly && this.audio.canPlayType('audio/wav')) || !!this.native; }
-  get paused() { return this.mode === 'device' ? !!this.native?.paused : this.audio.paused && !!this.current; }
-  get duration() { return Number.isFinite(this.audio.duration) ? this.audio.duration : 0; }
-  get currentTime() { return Number.isFinite(this.audio.currentTime) ? this.audio.currentTime : 0; }
-  get seekable() { return this.mode === 'local' && !this.pending && !!this.current && this.duration > 0; }
-  getVoices() { return [...NATURAL_VOICES,...(this.native?.getVoices()||[])]; }
-  isLocalVoice(voice) { return voice?.voiceURI?.startsWith('kokoro:') === true; }
+  get supported() {
+    return Boolean(window.fetch && this.audio.canPlayType('audio/mpeg'))
+      || Boolean(window.Worker && window.WebAssembly && this.audio.canPlayType('audio/wav'));
+  }
+  get paused() { return this.audio.paused && Boolean(this.current); }
+  get duration() {
+    if (this.mode === 'hosted' && this.current?.route?.cue) {
+      const cue = this.current.route.cue;
+      return Math.max(0, cue.end - cue.start);
+    }
+    return Number.isFinite(this.audio.duration) ? this.audio.duration : 0;
+  }
+  get currentTime() {
+    const time = Number.isFinite(this.audio.currentTime) ? this.audio.currentTime : 0;
+    if (this.mode === 'hosted' && this.current?.route?.cue) {
+      const cue = this.current.route.cue;
+      return Math.max(0, Math.min(cue.end - cue.start, time - cue.start));
+    }
+    return time;
+  }
+  get seekable() { return ['local','hosted'].includes(this.mode) && !this.pending && !!this.current && this.duration > 0; }
+  getVoices() { return NATURAL_VOICES; }
+  isLocalVoice(voice) { return NATURAL_VOICES.some(item => item.voiceURI === voice?.voiceURI); }
+
+  async prepareVerses(records, voiceURI, {priority='active'}={}) {
+    const voice = NATURAL_VOICES.find(item => item.voiceURI === voiceURI);
+    if (!voice || !Array.isArray(records) || !records.length) throw new Error('A supported natural voice and verses are required.');
+    const first = records[0];
+    const book = Number(first.bookIndex) + 1;
+    const chapter = Number(first.chapter);
+    if (!Number.isInteger(book) || book < 1 || book > 66 || !Number.isInteger(chapter) || chapter < 1
+      || records.some(record => Number(record.bookIndex) + 1 !== book || Number(record.chapter) !== chapter)) {
+      throw new Error('Hosted narration needs one known Bible book and chapter.');
+    }
+    const {HostedNarrationStore, resolveVerseCues} = await import('./hosted-voice.js');
+    const store = await this.hostedStorePromise;
+    const asset = await store.load(book, chapter, voiceURI.slice(7), {priority});
+    if (asset.missing) {
+      return new Map(records.map(record => [Number(record.verse), {
+        kind:'local',fallbackFromHosted:true,missingAsset:asset.reason,voice,
+      }]));
+    }
+    const hosted = await resolveVerseCues(asset, records);
+    for (const route of hosted.values()) route.voice = voice;
+    return hosted;
+  }
+
+  async prefetchChapter(bookIndex, chapter, voiceURI) {
+    const voice = NATURAL_VOICES.find(item => item.voiceURI === voiceURI);
+    const book = Number(bookIndex) + 1;
+    if (!voice || !Number.isInteger(book) || book < 1 || book > 66 || !Number.isInteger(Number(chapter))) return null;
+    const store = await this.hostedStorePromise;
+    return store.prefetch(book, Number(chapter), voiceURI.slice(7));
+  }
+
+  hasHostedRoute(route) {
+    return Boolean(route?.assetKey && this.hostedStore?.has(route.assetKey));
+  }
+
+  cancelPrefetch() {
+    void this.hostedStorePromise.then(store => store.cancelPrefetch()).catch(() => {});
+    for (const entry of [...requestQueue]) {
+      if (entry.priority === 'speculative') cancelQueuedRequest(entry,'Narration prefetch canceled.');
+    }
+    if (activeRequest?.priority === 'speculative') {
+      abortActiveRequest('Narration prefetch canceled.');
+      pumpRequests();
+    }
+  }
 
   setRate(rate) {
     const value = Number(rate);
@@ -319,7 +404,8 @@ export class LocalNarrator extends EventTarget {
   seek(seconds) {
     const value = Number(seconds);
     if (!this.seekable || !Number.isFinite(value)) return false;
-    this.audio.currentTime = Math.max(0,Math.min(this.duration,value));
+    const offset = Math.max(0,Math.min(this.duration,value));
+    this.audio.currentTime = this.mode === 'hosted' ? this.current.route.cue.start + offset : offset;
     return true;
   }
 
@@ -340,36 +426,22 @@ export class LocalNarrator extends EventTarget {
       maxCacheSamples:metadata.maxCacheSamples}).catch(() => null);
   }
 
-  cancelPrefetch() {
-    for (const entry of [...requestQueue]) {
-      if (entry.priority === 'speculative') cancelQueuedRequest(entry,'Narration prefetch canceled.');
-    }
-    if (activeRequest?.priority === 'speculative') {
-      abortActiveRequest('Narration prefetch canceled.');
-      pumpRequests();
-    }
-  }
-
   speak(utterance) {
-    this.current = utterance;
-    const token = ++this.token;
-    if (!this.isLocalVoice(utterance.voice)) {
-      this.mode = 'device';
-      if (!this.native || !window.SpeechSynthesisUtterance) {
-        utterance.onerror?.({error:'Device speech is unavailable. Choose a natural voice.'});
-        return;
-      }
-      const native = new SpeechSynthesisUtterance(utterance.text);
-      native.lang = utterance.lang;native.rate = utterance.rate;native.voice = utterance.voice || null;
-      for (const event of ['start','end','pause','resume','error']) native[`on${event}`] = value => {
-        if (token === this.token) utterance[`on${event}`]?.(value);
-      };
-      this.deviceOwned = true;
-      this.native.speak(native);
+    if (utterance.route?.kind === 'hosted') return this.speakHosted(utterance);
+    if (utterance.route?.kind !== 'local') {
+      utterance.onerror?.({error:'Hosted narration was not resolved for this verse.'});
       return;
     }
-
+    this.current = utterance;
+    const token = ++this.token;
+    if (this.mode === 'hosted') {
+      this.audio.pause();
+      this.audio.onplaying = this.audio.onended = this.audio.onerror = null;
+      this.audio.removeAttribute('src');
+      this.audio.load();
+    }
     this.mode = 'local';
+    this.hostedSession = null;
     this.audio.dataset.engine = 'kokoro';
     let started = false;
     this.pending = true;
@@ -396,7 +468,7 @@ export class LocalNarrator extends EventTarget {
       };
       this.audio.onerror = () => {
         if (token === this.token && this.audio.currentSrc === url) {
-          utterance.onerror?.({error:'Natural audio could not play. Try Listen again or select Device default.'});
+          utterance.onerror?.({error:'Natural audio could not play. Try Listen again or choose the other natural voice.'});
         }
       };
       this.audio.src = url;
@@ -415,23 +487,92 @@ export class LocalNarrator extends EventTarget {
     });
   }
 
-  pause() {
-    if (this.mode === 'device') this.native?.pause();
-    else {
-      this.audio.pause();
-      this.audio.dataset.playback = 'paused';
-      this.current?.onpause?.();
+  speakHosted(utterance) {
+    const route = utterance.route;
+    const previous = this.hostedSession;
+    const continuing = this.mode === 'hosted' && previous?.route.assetKey === route.assetKey
+      && this.audio.currentSrc === route.asset.objectURL && !this.audio.paused;
+    this.current = utterance;
+    const token = ++this.token;
+    this.mode = 'hosted';
+    this.pending = !continuing;
+    this.hostedStore?.activate(route.assetKey);
+    const session = {token,route,utterance,started:false,ended:false};
+    this.hostedSession = session;
+    this.audio.dataset.engine = 'hosted';
+    this.audio.playbackRate = utterance.rate || 1;
+    delete this.audio.dataset.samples;
+    delete this.audio.dataset.sampleRate;
+    this.dispatchEvent(new CustomEvent('audiobuffer', {detail:{peaks:route.peaks,
+      duration:route.cue.end-route.cue.start,cueStart:route.cue.start,cueEnd:route.cue.end}}));
+    utterance.onbuffer?.({hosted:true,duration:route.cue.end-route.cue.start,peaks:route.peaks});
+    this.audio.onplaying = () => {
+      if (this.hostedSession === session) this.updateHostedSession();
+    };
+    this.audio.onended = () => {
+      if (this.hostedSession !== session || session.ended) return;
+      if (this.audio.currentTime + 0.05 >= route.cue.end) this.endHostedSession(session);
+      else utterance.onerror?.({error:'Hosted narration ended before this verse cue finished.'});
+    };
+    this.audio.onerror = () => {
+      if (this.hostedSession === session) utterance.onerror?.({error:'Hosted narration could not play.'});
+    };
+    if (continuing) {
+      this.updateHostedSession();
+      return;
     }
+    this.audio.pause();
+    this.audio.src = route.asset.objectURL;
+    this.audio.load();
+    this.audio.dataset.playback = 'loading';
+    return Promise.resolve(utterance.beforePlay).then(() => {
+      if (token !== this.token) return undefined;
+      return mediaMetadataReady(this.audio, route.asset.objectURL);
+    }).then(() => {
+      if (token !== this.token) return undefined;
+      this.audio.currentTime = route.cue.start;
+      this.pending = false;
+      return this.audio.play();
+    }).catch(error => {
+      if (token === this.token) utterance.onerror?.({error:error.message || 'Hosted narration could not start.'});
+    });
+  }
+
+  updateHostedSession() {
+    const session = this.hostedSession;
+    if (this.mode !== 'hosted' || !session || session.ended) return;
+    const {cue} = session.route;
+    const time = this.audio.currentTime;
+    if (!session.started && time + 0.01 >= cue.start && time < cue.end) {
+      session.started = true;
+      this.audio.dataset.playback = 'playing';
+      const detail = {book:session.route.asset.metadata.book,chapter:session.route.asset.metadata.chapter,
+        verse:cue.verse,voice:session.route.voice.voiceURI.slice(7),url:session.route.url,
+        cue:{start:cue.start,end:cue.end},currentTime:time,mediaTime:time};
+      window.dispatchEvent(new CustomEvent('bible:hosted-verse',{detail}));
+      session.utterance.onstart?.();
+    }
+    if (session.started && time + 0.005 >= cue.end) this.endHostedSession(session);
+  }
+
+  endHostedSession(session) {
+    if (this.hostedSession !== session || session.ended) return;
+    session.ended = true;
+    this.audio.dataset.playback = 'ended';
+    session.utterance.onend?.();
+  }
+
+  pause({notify=true}={}) {
+    this.audio.pause();
+    this.audio.dataset.playback = 'paused';
+    if (notify) this.current?.onpause?.();
   }
 
   resume() {
-    if (this.mode === 'device') this.native?.resume();
-    else {
-      const token = this.token;
-      this.audio.play().then(() => {
-        if (token === this.token) { this.audio.dataset.playback = 'playing'; this.current?.onresume?.(); }
-      }).catch(error => { if (token === this.token) this.current?.onerror?.({error:error.message}); });
-    }
+    const token = this.token;
+    this.audio.play().then(() => {
+      if (token === this.token) { this.audio.dataset.playback = 'playing'; this.current?.onresume?.(); }
+    }).catch(error => { if (token === this.token) this.current?.onerror?.({error:error.message}); });
   }
 
   cancel() {
@@ -441,6 +582,8 @@ export class LocalNarrator extends EventTarget {
     }
     this.pending = false;
     this.token += 1;
+    this.hostedSession = null;
+    void this.hostedStorePromise.then(store => store.cancelPending()).catch(() => {});
     this.current = null;
     this.audio.onplaying = this.audio.onended = this.audio.onerror = null;
     this.audio.pause();
@@ -450,16 +593,11 @@ export class LocalNarrator extends EventTarget {
     delete this.audio.dataset.sampleRate;
     this.audio.dataset.playback = 'stopped';
     if (this.objectURL) { URL.revokeObjectURL(this.objectURL); this.objectURL = null; }
-    if (this.deviceOwned) {
-      this.native?.cancel();
-      if (this.native?.paused) this.native.resume();
-      this.deviceOwned = false;
-    }
   }
 
   destroy() {
     this.cancel();
-    this.native?.removeEventListener('voiceschanged',this.forwardVoices);
+    void this.hostedStorePromise.then(store => store.clear()).catch(() => {});
     this.audio.remove();
   }
 }

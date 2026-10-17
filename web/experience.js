@@ -96,7 +96,7 @@ function makeDock(runtime) {
         <label class="audio-dock-menu-row audio-dock-follow"><input type="checkbox" data-dock-follow> Follow the spoken verse</label>
         <label class="audio-dock-menu-row">Natural voice volume<input data-dock-volume type="range" min="0" max="1" step="0.01" aria-label="Natural voice volume"></label>
         <button class="audio-dock-stop" data-dock-stop type="button">Stop reading</button>
-        <small>Free natural voices are generated on this device. Device voice volume follows your system settings.</small>
+        <small>Heart and Michael use hosted chapter narration when available and local natural-voice generation when a chapter is not published.</small>
       </div>
     </details>`;
   document.body.append(dock);
@@ -131,7 +131,7 @@ function makeDock(runtime) {
     writePreference(RATE_KEY, runtime.rate);
     runtime.narrator.setRate(runtime.rate);
     if (ACTIVE_STATES.has(runtime.state)) {
-      setStatus(runtime, 'Playback speed updated. The current generated audio continues at the selected speed.');
+      setStatus(runtime, 'Playback speed updated. The current narration continues at the selected speed.');
     }
   });
   runtime.ui.voice.addEventListener('change', () => {
@@ -142,6 +142,19 @@ function makeDock(runtime) {
       clearLookahead(runtime);
       settleInitialBuffer(runtime);
       setStatus(runtime, 'Voice selected. It will be used for the next verse.');
+      const keepCurrentRoute = runtime.utteranceDispatched && runtime.position && runtime.currentVerseVoice
+        ? chapterRouteKey(runtime.position, runtime.currentVerseVoice) : null;
+      for (const key of runtime.chapterRoutes.keys()) if (key !== keepCurrentRoute) runtime.chapterRoutes.delete(key);
+      if (runtime.state === 'preparing' && !runtime.utteranceDispatched) runtime.currentVerseVoice = runtime.voice;
+      const preparingCurrent = runtime.state === 'preparing' && !runtime.utteranceDispatched;
+      const nextIndex = preparingCurrent || !runtime.position ? runtime.index : runtime.index + 1;
+      const nextRecord = runtime.queue[nextIndex];
+      if (nextRecord) {
+        void chapterRoutesFor(runtime, nextRecord, runtime.voice, runtime.generation, 'prefetch').catch(() => {});
+        if (preparingCurrent) speakCurrent(runtime, runtime.generation);
+      } else if (runtime.source?.continuous && runtime.source.next) {
+        void runtime.narrator.prefetchChapter(runtime.source.next.bookIndex, runtime.source.next.chapter, runtime.voice).catch(() => {});
+      }
       if (runtime.state === 'playing') maintainLookahead(runtime, runtime.generation);
     }
   });
@@ -165,13 +178,13 @@ function makeDock(runtime) {
     media.addEventListener(event, () => updateTimeline(runtime));
   }
   runtime.narrator.addEventListener('audiobuffer', event => {
-    runtime.samples = event.detail.samples;
-    runtime.sampleRate = event.detail.sampleRate;
+    runtime.samples = event.detail.samples || null;
+    runtime.peaks = event.detail.peaks || null;
+    runtime.sampleRate = event.detail.sampleRate || 0;
     runtime.waveDuration = event.detail.duration;
     drawWaveform(runtime);
     updateTimeline(runtime);
   });
-  runtime.narrator.addEventListener('voiceschanged', () => populateVoices(runtime));
   window.addEventListener('resize', () => drawWaveform(runtime), {passive: true});
   updateDock(runtime);
   return dock;
@@ -181,15 +194,15 @@ function getRuntime() {
   if (window[RUNTIME_KEY]) return window[RUNTIME_KEY];
   const runtime = {
     narrator: null, dock: null, ui: null, source: null, previewConfig: null, queue: [], index: 0, chunkIndex: 0,
-    currentVerseVoice: null, initialBufferPending: false, initialBuffer: null,
+    currentVerseVoice: null, utteranceDispatched: false, initialBufferPending: false, initialBuffer: null,
     lookahead: new Map(), lookaheadSamples: 0, lookaheadWork: null, lookaheadRefresh: false, lookaheadEpoch: 0,
-    generation: 0, state: 'idle', position: null, samples: null, sampleRate: 0,
+    generation: 0, state: 'idle', position: null, samples: null, peaks: null, sampleRate: 0,
     waveDuration: 0, rate: Number(readPreference(RATE_KEY, '1')) || 1,
     voice: readPreference(VOICE_KEY, DEFAULT_NARRATOR),
     follow: readPreference(FOLLOW_KEY, null) === null ? true : readPreference(FOLLOW_KEY, 'true') === 'true',
     followWasSaved: readPreference(FOLLOW_KEY, null) !== null,
     volume: Math.max(0, Math.min(1, Number(readPreference(VOLUME_KEY, '1')) || 0)),
-    currentRoot: document, startTimer: null, loadingNext: null, loadError: null,
+    currentRoot: document, startTimer: null, loadingNext: null, loadError: null, chapterRoutes: new Map(),
   };
   runtime.narrator = new LocalNarrator({onProgress: progress => {
     if (runtime.state !== 'preparing') return;
@@ -228,7 +241,7 @@ function getRuntime() {
 function populateVoices(runtime) {
   if (!runtime.ui?.voice) return;
   const selected = runtime.voice || DEFAULT_NARRATOR;
-  const voices = runtime.narrator.getVoices().filter(voice => /^en\b/i.test(voice.lang));
+  const voices = runtime.narrator.getVoices();
   runtime.ui.voice.replaceChildren();
   for (const voice of voices) {
     const option = document.createElement('option');
@@ -236,10 +249,6 @@ function populateVoices(runtime) {
     option.textContent = `${voice.name} (${voice.lang})`;
     runtime.ui.voice.append(option);
   }
-  const device = document.createElement('option');
-  device.value = 'device:default';
-  device.textContent = 'Device default · no download';
-  runtime.ui.voice.append(device);
   runtime.ui.voice.value = [...runtime.ui.voice.options].some(option => option.value === selected)
     ? selected : DEFAULT_NARRATOR;
   runtime.voice = runtime.ui.voice.value;
@@ -303,8 +312,7 @@ function updateTimeline(runtime) {
   runtime.ui.seek.max = String(Math.max(duration, 0.01));
   if (!runtime.ui.seek.matches(':active')) runtime.ui.seek.value = String(currentTime);
   runtime.ui.seek.setAttribute('aria-valuetext', seekable
-    ? `${formatTime(currentTime)} of ${formatTime(duration)}` : 'Seeking is available for generated natural voice audio');
-  runtime.ui.volume.disabled = media.mode === 'device';
+    ? `${formatTime(currentTime)} of ${formatTime(duration)}` : 'Seeking is available during natural voice playback');
   drawWaveform(runtime, seekable ? runtime.samples : null);
 }
 
@@ -320,7 +328,9 @@ function drawWaveform(runtime, samples = runtime.samples) {
   const context = canvas.getContext('2d');
   if (!context) return;
   context.clearRect(0, 0, width, height);
-  if (!(samples instanceof Float32Array) || !samples.length) return;
+  const bins = Array.isArray(runtime.peaks) ? runtime.peaks : samples;
+  if (!(bins instanceof Float32Array) && !Array.isArray(bins)) return;
+  if (!bins.length) return;
   const bars = Math.max(24, Math.min(112, Math.floor(rect.width / 5)));
   const gap = Math.max(1, Math.round(2 * scale));
   const barWidth = Math.max(1, Math.floor(width / bars) - gap);
@@ -328,10 +338,10 @@ function drawWaveform(runtime, samples = runtime.samples) {
     ? runtime.narrator.currentTime / runtime.narrator.duration : 0;
   const middle = height / 2;
   for (let index = 0; index < bars; index++) {
-    const start = Math.floor(index * samples.length / bars);
-    const end = Math.max(start + 1, Math.floor((index + 1) * samples.length / bars));
+    const start = Math.floor(index * bins.length / bars);
+    const end = Math.max(start + 1, Math.floor((index + 1) * bins.length / bars));
     let peak = 0;
-    for (let sample = start; sample < end; sample++) peak = Math.max(peak, Math.abs(samples[sample]));
+    for (let sample = start; sample < end; sample++) peak = Math.max(peak, Array.isArray(bins) ? bins[sample] : Math.abs(bins[sample]));
     const barHeight = Math.max(Math.round(2 * scale), Math.round(peak * height * 0.86));
     const x = Math.floor(index * width / bars);
     context.fillStyle = index / bars <= progress ? '#e4bd65' : '#6d6b64';
@@ -486,6 +496,8 @@ function cancelUtterance(runtime) {
   settleInitialBuffer(runtime);
   clearLookahead(runtime);
   runtime.initialBufferPending = false;
+  runtime.utteranceDispatched = false;
+  runtime.chapterRoutes.clear();
   runtime.narrator.cancel();
   runtime.loadingNext = null;
   runtime.loadError = null;
@@ -503,6 +515,7 @@ function stopPlayback(runtime) {
   runtime.source = null;
   runtime.position = null;
   runtime.samples = null;
+  runtime.peaks = null;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
   updateDock(runtime);
@@ -770,6 +783,7 @@ async function appendNextChapter(runtime, generation) {
       runtime.queue.push(...additional);
       runtime.source.next = loaded.next;
       runtime.source.lastLoadedRoute = loaded.route;
+      prefetchNextChapter(runtime);
       runtime.loadError = null;
       return true;
     } catch (error) {
@@ -793,6 +807,57 @@ function segmentId(runtime, record, chunkIndex) {
 
 function voiceFor(runtime, uri) {
   return runtime.narrator.getVoices().find(item => item.voiceURI === uri) || null;
+}
+
+function chapterRouteKey(record, voiceURI) {
+  return `${record.bookIndex}:${record.chapter}:${voiceURI}`;
+}
+
+function chapterRoutesFor(runtime, record, voiceURI, generation, priority='active') {
+  const currentChapterPrefix = `${record.bookIndex}:${record.chapter}:`;
+  for (const key of runtime.chapterRoutes.keys()) {
+    if (!key.startsWith(currentChapterPrefix)) runtime.chapterRoutes.delete(key);
+  }
+  const key = chapterRouteKey(record, voiceURI);
+  const existing = runtime.chapterRoutes.get(key);
+  if (existing?.status === 'ready') return Promise.resolve(existing.routes);
+  if (existing?.status === 'pending') return existing.promise;
+  if (existing?.status === 'failed') return Promise.reject(existing.error);
+  const records = runtime.queue.filter(item => item.bookIndex === record.bookIndex && item.chapter === record.chapter);
+  const entry = {status:'pending',routes:null,promise:null};
+  runtime.chapterRoutes.set(key, entry);
+  entry.promise = runtime.narrator.prepareVerses(records, voiceURI, {priority}).then(routes => {
+    if (generation !== runtime.generation || runtime.chapterRoutes.get(key) !== entry) return null;
+    entry.status = 'ready';
+    entry.routes = routes;
+    return routes;
+  }).catch(error => {
+    if (runtime.chapterRoutes.get(key) === entry) {
+      entry.status = 'failed';
+      entry.error = error;
+    }
+    throw error;
+  });
+  return entry.promise;
+}
+
+function prefetchNextChapter(runtime) {
+  const next = runtime.source?.next;
+  if (!next) return;
+  const voice = runtime.currentVerseVoice || runtime.voice;
+  void runtime.narrator.prefetchChapter(next.bookIndex, next.chapter, voice).catch(() => {});
+}
+
+function failPlayback(runtime, error, generation) {
+  if (generation !== runtime.generation) return;
+  clearTimeout(runtime.startTimer);
+  runtime.startTimer = null;
+  settleInitialBuffer(runtime);
+  clearLookahead(runtime);
+  runtime.state = 'error';
+  runtime.narrator.cancel();
+  setStatus(runtime, `Audio could not play: ${error?.message || error?.error || 'unknown error'}. Try again or choose the other natural voice.`);
+  updateDock(runtime);
 }
 
 function settleInitialBuffer(runtime, buffer = runtime.initialBuffer) {
@@ -853,15 +918,27 @@ async function upcomingSpeechSegments(runtime, generation) {
       continue;
     }
 
+    const voiceURI = index === runtime.index ? runtime.currentVerseVoice || runtime.voice : runtime.voice;
+    const voice = voiceFor(runtime, voiceURI);
+    const routes = runtime.chapterRoutes.get(chapterRouteKey(record, voiceURI));
+    const route = routes?.status === 'ready' ? routes.routes.get(Number(record.verse)) : null;
+    if (!route) break;
+    if (route.kind === 'hosted') {
+      if (index > runtime.index || chunkIndex === 0) {
+        segments.push({text:record.text,voice,local:false,route,
+          segmentId:segmentId(runtime,record,0)});
+      }
+      index += 1;
+      chunkIndex = 0;
+      continue;
+    }
     const chunks = splitSpeech(record.text);
     while (chunkIndex < chunks.length && segments.length < LOOKAHEAD_SEGMENT_COUNT) {
       const text = chunks[chunkIndex];
-      const voiceURI = index === runtime.index ? runtime.currentVerseVoice || runtime.voice : runtime.voice;
-      const voice = voiceFor(runtime, voiceURI);
       if (text.trim()) segments.push({
         text,
         voice,
-        local: runtime.narrator.isLocalVoice(voice),
+        local: true,
         segmentId: segmentId(runtime, record, chunkIndex),
       });
       chunkIndex += 1;
@@ -973,6 +1050,7 @@ function maintainLookahead(runtime, generation, initialBuffer = null) {
 }
 
 function finishPlayback(runtime) {
+  if (runtime.narrator.mode === 'hosted' && !runtime.narrator.paused) runtime.narrator.pause({notify:false});
   runtime.state = 'finished';
   setStatus(runtime, 'Finished this passage. Use Play to listen again or return to the reader.');
   updateDock(runtime);
@@ -980,9 +1058,17 @@ function finishPlayback(runtime) {
 
 async function advance(runtime, generation) {
   if (generation !== runtime.generation) return;
+  const previous = runtime.queue[runtime.index];
   runtime.index += 1;
   runtime.chunkIndex = 0;
   runtime.currentVerseVoice = null;
+  const nextRecord = runtime.queue[runtime.index];
+  if (previous && nextRecord
+    && (nextRecord.bookIndex !== previous.bookIndex || nextRecord.chapter !== previous.chapter)) runtime.chapterRoutes.clear();
+  if (runtime.narrator.mode === 'hosted'
+    && (!nextRecord || nextRecord.bookIndex !== previous?.bookIndex || nextRecord.chapter !== previous?.chapter)) {
+    runtime.narrator.pause({notify:false});
+  }
   if (runtime.index < runtime.queue.length) {
     speakCurrent(runtime, generation);
     return;
@@ -1009,7 +1095,40 @@ function speakCurrent(runtime, generation) {
   if (generation !== runtime.generation) return;
   const record = runtime.queue[runtime.index];
   if (!record) { finishPlayback(runtime); return; }
-  const chunks = splitSpeech(record.text);
+  if (runtime.chunkIndex === 0 && !runtime.currentVerseVoice) runtime.currentVerseVoice = runtime.voice;
+  const voiceURI = runtime.currentVerseVoice || runtime.voice;
+  const voice = voiceFor(runtime, voiceURI);
+  const key = chapterRouteKey(record, voiceURI);
+  let routeEntry = runtime.chapterRoutes.get(key);
+  let route = routeEntry?.status === 'ready' ? routeEntry.routes.get(Number(record.verse)) : null;
+  if (route?.kind === 'hosted' && !runtime.narrator.hasHostedRoute(route)) {
+    runtime.chapterRoutes.delete(key);
+    routeEntry = null;
+    route = null;
+  }
+  if (!route) {
+    if (runtime.state === 'playing' && runtime.narrator.mode === 'hosted') runtime.narrator.pause({notify:false});
+    runtime.samples = null;
+    runtime.peaks = null;
+    runtime.sampleRate = 0;
+    runtime.waveDuration = 0;
+    runtime.narrator.pending = true;
+    runtime.state = 'preparing';
+    setStatus(runtime, `Checking hosted narration · ${record.book} ${record.chapter}:${record.verse}…`);
+    updateDock(runtime);
+    void chapterRoutesFor(runtime, record, voiceURI, generation, 'active').then(routes => {
+      if (generation !== runtime.generation || !routes) return;
+      if (runtime.currentVerseVoice !== voiceURI) { speakCurrent(runtime, generation); return; }
+      speakCurrent(runtime, generation);
+    }).catch(error => {
+      if (runtime.currentVerseVoice !== voiceURI) { speakCurrent(runtime, generation); return; }
+      failPlayback(runtime, error, generation);
+    });
+    return;
+  }
+  const hosted = route.kind === 'hosted';
+  const chunks = hosted ? [record.text] : splitSpeech(record.text);
+  if (hosted) runtime.chunkIndex = 0;
   if (runtime.chunkIndex >= chunks.length) {
     void advance(runtime, generation);
     return;
@@ -1021,14 +1140,13 @@ function speakCurrent(runtime, generation) {
     return;
   }
   runtime.samples = null;
+  runtime.peaks = null;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
-  if (chunkIndex === 0) runtime.currentVerseVoice = runtime.voice;
-  const voice = voiceFor(runtime,runtime.currentVerseVoice || runtime.voice);
-  const initialBuffer = runtime.initialBufferPending && runtime.narrator.isLocalVoice(voice)
+  const initialBuffer = runtime.initialBufferPending && !hosted
     ? createInitialBuffer(runtime, generation) : null;
   if (initialBuffer) runtime.initialBufferPending = false;
-  const utterance = {text: chunks[chunkIndex], lang: 'en-US', rate: runtime.rate, voice,
+  const utterance = {text: chunks[chunkIndex], lang: 'en-US', rate: runtime.rate, voice, route,
     segmentId:segmentId(runtime,record,chunkIndex), segmentIndex:chunkIndex, segmentCount:chunks.length};
   if (initialBuffer) {
     utterance.beforePlay = initialBuffer.promise;
@@ -1037,7 +1155,7 @@ function speakCurrent(runtime, generation) {
         settleInitialBuffer(runtime, initialBuffer);
         return;
       }
-      setStatus(runtime, `Preparing natural voice · buffering up to 3 segments · ${record.book} ${record.chapter}:${record.verse}…`);
+      setStatus(runtime, `Preparing local natural voice · buffering up to 3 segments · ${record.book} ${record.chapter}:${record.verse}…`);
       updateDock(runtime);
       initialBuffer.timer = setTimeout(() => settleInitialBuffer(runtime, initialBuffer), INITIAL_BUFFER_TIMEOUT_MS);
       void maintainLookahead(runtime, generation, initialBuffer);
@@ -1053,11 +1171,13 @@ function speakCurrent(runtime, generation) {
     if (chunkIndex === 0) publishPosition(runtime, record);
     dropLookahead(runtime, utterance.segmentId);
     maintainLookahead(runtime,generation);
+    prefetchNextChapter(runtime);
     updateDock(runtime);
   };
   utterance.onend = () => {
     if (generation !== runtime.generation) return;
-    if (chunkIndex + 1 < chunks.length) {
+    runtime.utteranceDispatched = false;
+    if (!hosted && chunkIndex + 1 < chunks.length) {
       runtime.chunkIndex += 1;
       speakCurrent(runtime, generation);
     } else {
@@ -1078,29 +1198,16 @@ function speakCurrent(runtime, generation) {
     updateDock(runtime);
   };
   utterance.onerror = event => {
-    if (generation !== runtime.generation) return;
-    clearTimeout(runtime.startTimer);
-    runtime.startTimer = null;
     settleInitialBuffer(runtime, initialBuffer);
-    clearLookahead(runtime);
-    runtime.state = 'error';
-    runtime.narrator.cancel();
-    setStatus(runtime, `Audio could not play: ${event.error || 'unknown error'}. Choose another voice or try again.`);
-    updateDock(runtime);
+    failPlayback(runtime, event, generation);
   };
   runtime.state = 'preparing';
-  const label = runtime.narrator.isLocalVoice(voice) ? 'Preparing the free natural voice…' : 'Starting the device voice…';
+  const label = hosted ? 'Preparing hosted chapter audio…'
+    : route.fallbackFromHosted ? 'This chapter is not published yet · preparing local narration…'
+      : 'Preparing the local natural voice…';
   setStatus(runtime, `${label} ${record.book} ${record.chapter}:${record.verse}`);
   updateDock(runtime);
-  if (!runtime.narrator.isLocalVoice(voice)) {
-    runtime.startTimer = setTimeout(() => {
-      if (generation !== runtime.generation || runtime.state !== 'preparing') return;
-      runtime.state = 'error';
-      runtime.narrator.cancel();
-      setStatus(runtime, 'The device speech service did not start. Choose another voice or try again.');
-      updateDock(runtime);
-    }, 7000);
-  }
+  runtime.utteranceDispatched = true;
   runtime.narrator.speak(utterance);
 }
 
@@ -1132,10 +1239,12 @@ function setSource(runtime, config, loaded, generation) {
   runtime.state = 'preparing';
   runtime.position = null;
   runtime.samples = null;
+  runtime.peaks = null;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
   setStatus(runtime, `Preparing ${first?.book || config.book || config.reference}…`);
   updateDock(runtime);
+  prefetchNextChapter(runtime);
   if (generation === runtime.generation) speakCurrent(runtime, generation);
 }
 
@@ -1153,8 +1262,10 @@ async function startSource(runtime, inputConfig) {
   runtime.state = 'preparing';
   runtime.position = null;
   runtime.samples = null;
+  runtime.peaks = null;
   runtime.initialBufferPending = true;
   runtime.currentVerseVoice = null;
+  runtime.utteranceDispatched = false;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
   runtime.narrator.unlock();

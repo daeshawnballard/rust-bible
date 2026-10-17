@@ -10,6 +10,12 @@ mod cover_assets;
 mod learning_assets;
 
 async fn serve(uri: Uri) -> Response {
+    if uri.path() == "/hosted-voice.js" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(include_str!("../web/hosted-voice.js")))
+            .expect("hosted narration adapter response");
+    }
     if let Some((mime, bytes)) = learning_assets::asset(uri.path()) {
         return Response::builder()
             .header(header::CONTENT_TYPE, mime)
