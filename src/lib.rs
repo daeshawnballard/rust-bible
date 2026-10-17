@@ -915,14 +915,7 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
                 let Some(book) = find_book(&book_name) else {
                     return not_found(&book_name, client, anchor);
                 };
-                html_response(
-                    200,
-                    NAMES[book],
-                    "",
-                    &book_content(book, client),
-                    client,
-                    anchor,
-                )
+                redirect(route_path(&format!("/book/{}/1", slug(book)), client))
             }
         }
         _ => not_found(raw_path, client, anchor),
@@ -1080,7 +1073,8 @@ mod tests {
         assert_eq!(response.status, 200);
         assert_eq!(response.anchor.as_deref(), Some("v16"));
         assert!(response.body.contains("class=\"v hl\" id=\"v16\""));
-        assert!(response.body.contains("href=\"#/book/John\""));
+        assert!(response.body.contains("<span>John</span>"));
+        assert!(response.body.contains("class=\"reader-chapter-menu\""));
     }
 
     #[test]
@@ -1088,6 +1082,32 @@ mod tests {
         let response = route("/book/Not-A-Book", true);
         assert_eq!(response.status, 404);
         assert!(response.body.contains("Passage not found"));
+    }
+
+    #[test]
+    fn all_66_legacy_book_links_enter_the_reader_without_an_overview() {
+        for (book, name) in super::NAMES.iter().enumerate() {
+            for client in [false, true] {
+                let path = format!("/book/{}", super::slug(book));
+                let response = route(&path, client);
+                assert_eq!(response.status, 302, "{name}");
+                assert_eq!(
+                    response.location,
+                    Some(super::route_path(&format!("{path}/1"), client))
+                );
+                let reader = route(&format!("{path}/1"), client);
+                assert_eq!(reader.status, 200, "{name}");
+                assert_eq!(
+                    reader
+                        .body
+                        .matches("data-read-aloud data-reader-audio")
+                        .count(),
+                    1
+                );
+                assert!(reader.body.contains("data-reader-chapter"));
+                assert!(!reader.body.contains("data-book-page"));
+            }
+        }
     }
 
     #[test]

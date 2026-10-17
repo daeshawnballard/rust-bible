@@ -65,12 +65,10 @@ pub(super) fn listen_controls(reference: &str, scope: &str) -> String {
 
 fn breadcrumb(book: usize, chapter: usize, client: bool, passage: Option<&str>) -> String {
     let library = route_path("/library", client);
-    let book_path = route_path(&format!("/book/{}", slug(book)), client);
     let chapter_path = route_path(&format!("/book/{}/{chapter}", slug(book)), client);
     let mut html = format!(
-        "<nav class=\"reader-breadcrumb\" aria-label=\"Breadcrumb\"><ol><li><a href=\"{}\">Library</a></li><li><a href=\"{}\">{}</a></li>",
+        "<nav class=\"reader-breadcrumb\" aria-label=\"Breadcrumb\"><ol><li><a href=\"{}\" data-library-return>Library</a></li><li><span>{}</span></li>",
         esc(&library),
-        esc(&book_path),
         esc(NAMES[book])
     );
     if let Some(label) = passage {
@@ -161,11 +159,21 @@ fn pagination(book: usize, chapter: usize, client: bool) -> String {
         html.push_str("<span aria-hidden=\"true\"></span>");
     }
 
-    let chapters_path = route_path(&format!("/book/{}", slug(book)), client);
-    html.push_str(&format!(
-        "<a class=\"reader-all-chapters\" href=\"{}\">All chapters</a>",
-        esc(&chapters_path)
-    ));
+    html.push_str("<details class=\"reader-chapter-menu\"><summary>All chapters</summary><div class=\"reader-chapter-grid\">");
+    for number in 1..=chapters.len() {
+        let href = route_path(&format!("/book/{}/{number}", slug(book)), client);
+        let current = if number == chapter {
+            " aria-current=\"page\""
+        } else {
+            ""
+        };
+        html.push_str(&format!(
+            "<a href=\"{}\" aria-label=\"{} chapter {number}\"{current}>{number}</a>",
+            esc(&href),
+            esc(NAMES[book])
+        ));
+    }
+    html.push_str("</div></details>");
 
     if let Some((book, chapter)) = next {
         let href = route_path(&format!("/book/{}/{chapter}", slug(book)), client);

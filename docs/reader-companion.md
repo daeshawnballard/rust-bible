@@ -1,6 +1,6 @@
 # Passage companion
 
-The chapter reader owns one canonical Scripture stream, one audio player, and one exact-verse bookmark. Today and Library lead into it; the book overview remains the chapter chooser. Context has no separate Scripture copy or audio queue.
+The chapter reader owns one canonical Scripture stream, one audio player, and one exact-verse bookmark. Today and Library lead into it. The main flow is Books → Passage: covers open the reader directly, resuming the saved verse when it matches that book. Book/Chapter selectors and an expandable All chapters grid keep chapter selection inside the reader. Bare legacy book links redirect to chapter 1. Context has no separate Scripture copy or audio queue.
 
 ## Interaction
 

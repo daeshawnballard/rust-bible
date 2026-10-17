@@ -19,6 +19,14 @@ main.wrap:has(.reader-page) { max-width: 90rem; width: calc(100% - 64px); }
 .reader-display label { display:grid; gap:.3rem; }
 .reader-display select { max-width:100%; min-height:44px; border:1px solid #b59a6266; border-radius:5px; background:#191c19; color:#eee7da; font:inherit; }
 .reader-workspace { display:grid; grid-template-columns:minmax(0,1fr); align-items:start; gap:2rem; }
+.reader-chapter-menu { min-width:0; justify-self:center; }
+.reader-chapter-menu summary { display:flex; justify-content:center; align-items:center; min-height:44px; padding:.3rem .65rem; color:#e4c47f; cursor:pointer; }
+.reader-chapter-menu[open] { grid-column:1 / -1; grid-row:2; width:100%; }
+.reader-chapter-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(44px,1fr)); gap:.4rem; padding:.7rem 0; }
+.reader-pagination .reader-chapter-grid a { display:flex; justify-content:center; justify-self:stretch; min-height:44px; border:1px solid #b59a624d; border-radius:5px; text-align:center; text-decoration:none; }
+.reader-chapter-grid a[aria-current=page] { background:#e2c383; color:#191c19; }
+.reader-chapter-menu summary:focus-visible, .reader-chapter-grid a:focus-visible { outline:2px solid #ffe0a0; outline-offset:3px; }
+@media(max-width:600px) { .reader-chapter-menu { grid-column:1 / -1; grid-row:2; } }
 .reader-content { min-width:0; max-width:47rem; margin:0 auto; width:100%; }
 .reader-scripture { font-family:'Bible Garamond',Georgia,serif; font-size:var(--reader-size,1.55rem); line-height:var(--reader-leading,1.65); }
 .reader-page[data-text-size=large] { --reader-size:1.8rem; }

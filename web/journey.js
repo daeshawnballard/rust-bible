@@ -143,6 +143,23 @@ function sameBook(left, right) {
 }
 
 function updateBookActions(root, item, valid) {
+  // Covers are reader entry points. Only the book matching the one saved
+  // bookmark resumes; other books keep their chapter-one destination.
+  for (const card of queryAllIncludingRoot(root, ".library-card[data-book]")) {
+    const book = card.dataset.book;
+    const matches = valid && item && sameBook(book, item.book);
+    for (const link of card.querySelectorAll("[data-book-entry]")) {
+      const first = link.dataset.bookFirstRoute || routeFromAnchor(link);
+      if (!first) continue;
+      link.dataset.bookFirstRoute = first;
+      link.setAttribute("href", routeHref(matches ? progressHref(item) : first));
+      const label = matches
+        ? `Continue ${item.book} ${item.chapter}${item.verse ? `:${item.verse}` : ""}`
+        : `Read ${book}`;
+      link.setAttribute("aria-label", label);
+      if (link.classList.contains("book-read-link")) link.textContent = `${label} →`;
+    }
+  }
   for (const page of queryAllIncludingRoot(root, "[data-book-page]")) {
     const primary = page.querySelector("[data-book-read-link]");
     if (!primary) continue;

@@ -46,7 +46,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
       </article>
       <article class="about-card">
         <h3><a href="{library}">Library</a></h3>
-        <p>Browse all 66 books, open a book’s chapter list, and choose where to begin.</p>
+        <p>Browse all 66 books. A cover opens the passage directly, resuming your saved verse when it is in that book. Choose chapters inside the reader.</p>
       </article>
       <article class="about-card">
         <h3><a href="{journey}">Journey</a></h3>
@@ -66,12 +66,12 @@ pub(super) fn page(client: bool) -> RouteResponse {
       <div>
         <h3>Find a book or reference</h3>
         <p>Use the search field in the header. Try <em>John 3:16</em>, <em>1 Cor 13:4-7</em>, or a book name. If a book name has a typo, choose the suggested correction—for example, <em>neimai</em> suggests Nehemiah. Then choose a chapter or verse link.</p>
-        <p>The usual path is <strong>Library → book → chapter</strong>. Breadcrumbs bring you back to the Library or book overview.</p>
+        <p>The usual path is <strong>Books → Passage</strong>. The Library contains the books. Inside the passage, use Book and Chapter to move around, or expand All chapters. Journey, illustrated hotspots, and the audio player stay in this reader.</p>
       </div>
       <div>
         <h3>Listen to the selection you opened</h3>
         <p>The default natural narrator uses the open-source Kokoro model on your device. The first listen downloads about 100 MB of model files; your browser can cache them for future visits. There is no paid speech API, account, or key. Audio is generated locally from the KJV text; Scripture is never sent to a narration service. Device voices are also available in Playback options. Tap or click a Listen control to start—audio does not autoplay. Choose a voice and speed in the playback controls. <strong>Follow reading</strong> scrolls the spoken verse into view and can be turned off.</p>
-        <p>Today reads only its passage. A chapter’s <strong>Listen from here</strong> continues through later Scripture. Each illustration reads only its linked Scripture. Playback ends or stops when you navigate away.</p>
+        <p>Today reads only its passage. The reader’s <strong>Listen from here</strong> continues through later Scripture. Switching Journey or browsing illustrated hotspots keeps the same audio queue. Reading an illustration’s source is an intentional verse jump and stops narration. Playback stops when you navigate to another page.</p>
       </div>
     </div>
   </section>
@@ -99,7 +99,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>How does Continue reading work?</summary>
-      <p>As you read, the current verse is saved after scrolling settles. While audio is playing, the verse being spoken takes priority. Continue reading opens at that verse, including when it is in a later chapter. A book’s Listen control resumes the saved verse when that book matches your saved reading location.</p>
+      <p>As you read, the current verse is saved after scrolling settles. While audio is playing, the verse being spoken takes priority. Continue reading opens at that verse, including when it is in a later chapter. The matching Library cover resumes that verse directly in the reader, where Listen from here starts narration.</p>
     </details>
     <details>
       <summary>What does Journey show?</summary>

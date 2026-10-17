@@ -628,8 +628,8 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
             };
             let cover = format!("/art/covers/{}.webp", book_slug(name));
             html.push_str(&format!(
-                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><img class=\"cover-binding\" src=\"/art/book-binding.webp\" alt=\"\" aria-hidden=\"true\" width=\"1080\" height=\"1440\"><h2 class=\"{}\" style=\"--cover-word-em:{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" href=\"{}\">Read {} →</a></article>",
-                esc(name), detail.category, esc(&route_path(&book_path, client)), esc(name),
+                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" data-book-entry href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><img class=\"cover-binding\" src=\"/art/book-binding.webp\" alt=\"\" aria-hidden=\"true\" width=\"1080\" height=\"1440\"><h2 class=\"{}\" style=\"--cover-word-em:{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" data-book-entry href=\"{}\">Read {} →</a></article>",
+                esc(name), detail.category, esc(&route_path(&chapter_path, client)), esc(name),
                 cover, title_class, COVER_WORD_EM[index], esc(name), esc(detail.tagline), esc(detail.description),
                 if testament == "old" { "Old Testament" } else { "New Testament" },
                 esc(&route_path(&chapter_path, client)), esc(name)
