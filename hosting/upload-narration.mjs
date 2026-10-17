@@ -249,6 +249,7 @@ async function watchNarration({ receiptPath, intervalMs }) {
       }
 
       for (const chapter of scan.chapters) {
+        if (stopRequested) break;
         const key = chapterKey(chapter);
         let signature;
         try {
@@ -310,6 +311,7 @@ async function watchNarration({ receiptPath, intervalMs }) {
         const firstAttempt = priorState?.source_signature === signature ? priorState.attempts : 0;
         let pairPassed = false;
         for (let attempt = firstAttempt + 1; attempt <= MAX_PAIR_ATTEMPTS; attempt += 1) {
+          if (stopRequested) break;
           progress.attempts_total += 1;
           try {
             const prepared = await prepareChapter(chapter);
@@ -745,7 +747,9 @@ async function readbackOne(chapter, extension, digest, size) {
   );
   url.searchParams.set("readback", randomUUID());
   const contentType = extension === "mp3" ? "audio/mpeg" : "application/json";
-  const head = await fetch(url, { method: "HEAD", cache: "no-store" });
+  // Compare stored byte lengths, not a CDN's compressed transfer size. Node
+  // otherwise advertises gzip, and Cloudflare omits Content-Length on HEAD.
+  const head = await fetch(url, { method: "HEAD", cache: "no-store", headers: { "Accept-Encoding": "identity" } });
   if (!head.ok || head.headers.get("x-content-sha256") !== digest || Number(head.headers.get("content-length")) !== size) {
     throw new Error(`HEAD readback mismatch for ${chapter.voice}/${chapter.book}/${chapter.chapter}.${extension}: HTTP ${head.status}`);
   }
@@ -753,7 +757,7 @@ async function readbackOne(chapter, extension, digest, size) {
     throw new Error(`HEAD readback content type mismatch for ${chapter.voice}/${chapter.book}/${chapter.chapter}.${extension}`);
   }
 
-  const response = await fetch(url, { method: "GET", cache: "no-store", headers: { "Cache-Control": "no-cache" } });
+  const response = await fetch(url, { method: "GET", cache: "no-store", headers: { "Cache-Control": "no-cache", "Accept-Encoding": "identity" } });
   if (!response.ok || !response.body) {
     throw new Error(`GET readback failed for ${chapter.voice}/${chapter.book}/${chapter.chapter}.${extension}: HTTP ${response.status}`);
   }
