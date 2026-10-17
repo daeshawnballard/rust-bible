@@ -8,7 +8,7 @@ main.wrap:has(.reader-page) { max-width: 90rem; width: calc(100% - 64px); }
 .reader-modes { display:flex; flex-wrap:wrap; gap:4px; padding:4px; border:1px solid #b59a624d; border-radius:8px; order:1; }
 .reader-modes button { min-height:44px; padding:.5rem .8rem; border:0; border-radius:5px; background:transparent; color:#c9bfac; font:1rem/1.2 'Bible Display',Georgia,serif; cursor:pointer; }
 .reader-modes button[aria-pressed=true] { background:#e2c383; color:#191c19; }
-.reader-modes .has-study::after { content:' •'; color:#edca87; }
+.reader-modes .has-study::after, .reader-modes .has-journey::after { content:' •'; color:currentColor; }
 .reader-audio.scripture-player { order:3; flex:1 1 100%; }
 .reader-audio [data-audio-status] { white-space:normal; font: .82rem/1.4 system-ui,sans-serif; }
 .reader-audio .reader-audio-play.player-toggle { flex:0 0 auto; min-height:44px; }
@@ -60,6 +60,10 @@ main.wrap:has(.reader-page) { max-width: 90rem; width: calc(100% - 64px); }
 .story-journey-pin > span:first-child { width:18px; height:18px; display:grid; place-items:center; border:2px solid #ffe0a0; border-radius:50%; background:#171a17; font-size:10px; }
 .story-journey-pin[aria-current] > span:first-child { background:#ffe0a0; color:#171a17; box-shadow:0 0 0 7px #ffe0a033; }
 .story-journey-pin > span:last-child { position:absolute; top:35px; left:50%; transform:translateX(-50%); font:.65rem/1.2 system-ui,sans-serif; text-shadow:0 1px 3px #000; background:#121413bd; padding:3px; white-space:nowrap; }
+.story-journey[data-story-scene] .story-journey-pin > span:last-child { width:max-content; max-width:7.5rem; white-space:normal; text-align:center; border-radius:3px; }
+.story-journey[data-story-scene] .story-journey-pin[aria-current] { z-index:2; }
+.story-journey-sources { display:flex; flex-wrap:wrap; gap:0 .4rem; align-items:center; }
+.story-journey-stops .reader-context-read { min-width:0; overflow-wrap:anywhere; }
 .story-journey-stops { display:grid; grid-template-columns:1fr 1fr; gap:.2rem .6rem; margin:.8rem 0; }
 .story-journey-stops > span { padding:.1rem .45rem; border-bottom:1px solid #b59a6240; }
 .story-journey-stops .is-current { background:#e2c38314; border-color:#e2c383; }
@@ -86,6 +90,7 @@ main.wrap:has(.reader-page) { max-width: 90rem; width: calc(100% - 64px); }
  .reader-context .reader-illustration-scene, .story-journey-art { max-width:42rem; margin-inline:auto; width:100%; }
 }
 @media(max-width:600px) {
+ .story-journey[data-story-scene] .story-journey-pin:not([aria-current]):not(:focus-visible):not(:hover) > span:last-child { display:none; }
  main.wrap:has(.reader-page) { width:calc(100% - 32px); }
  .reader-page { padding-top:1rem; }
  .reader-heading h1 { font-size:2.6rem; }

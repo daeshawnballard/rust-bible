@@ -1,6 +1,26 @@
 // Production illustrations are embedded in the native server as well as shipped to Sites.
 pub fn asset(path: &str) -> Option<(&'static str, &'static [u8])> {
     match path {
+        "/art/journey/flood.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/flood.webp").as_slice(),
+        )),
+        "/art/journey/wilderness.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/wilderness.webp").as_slice(),
+        )),
+        "/art/journey/ruth.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/ruth.webp").as_slice(),
+        )),
+        "/art/journey/bethlehem.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/bethlehem.webp").as_slice(),
+        )),
+        "/art/journey/galilee.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/galilee.webp").as_slice(),
+        )),
         "/art/journey/genesis.webp" => Some((
             "image/webp",
             include_bytes!("../web/art/journey/genesis.webp").as_slice(),

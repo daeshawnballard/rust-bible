@@ -1,0 +1,23 @@
+{
+  "id": "galilee-story-journey",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-928ec848-7c0f-4853-b168-9209186841c9",
+  "source": "assets/imagegen/source/journey/galilee.png",
+  "final": "web/art/journey/galilee.webp",
+  "style_authority": "assets/imagegen/source/journey/genesis.png",
+  "reference_image_sent": false,
+  "prompt": "Use case: illustration-story. Asset type: production landscape illustration for an interactive Bible passage companion, not a UI mockup. Create one 1536x1024 landscape image. Visual style must match the approved Genesis miniature: exquisitely detailed isometric tabletop landscape diorama on a thin dark walnut beveled base, isolated against near-black charcoal, realistic handmade terrain, richly textured stone, miniature foliage and timber, warm golden sidelight, quiet reverent atmosphere, high-end museum model photography, readable at small screen size. Entire diorama visible with modest margins, landscape fills the frame. Each landmark is spatially distinct for later HTML hotspots. This is an artistic, compressed narrative setting rather than a surveyed historic map. No words, letters, labels, pins, circles, interface, title, arrows, dotted routes, caption plaques, watermark, people, deity, angels, modern objects, modern churches, fantasy castles, or crosses. Only scenery and the explicitly requested structures. Output one full-bleed standalone artwork, no panels or contact sheet.\nSubject: Mark4\u20135, teaching by Galilee, the sea crossing, and the return to the shore. One beautiful isometric miniature lake with hills curving around it. LEFT CENTER22%x/55%y a quiet western shore beach with a modest timber jetty and small empty fishing boat at the shore (teaching and return). LAKE CENTER48%x/47%y a single second small ancient wooden fishing boat on textured deep blue water, with subdued rough waves suggesting the crossing, no people in boats. RIGHT BACK77%x/32%y a rocky opposite bank with steep hills, a path and a few ancient rock-cut tomb openings, no bodies or pigs. BACK LEFT22%x/34%y modest ancient flat-roof limestone houses in a small shore village; the foremost house has a visible courtyard (Jairus house). Golden light touches rocky ridges and olive trees; no frightening darkness, no lightning needed. Geography is illustrative; do not make an accurate modern coastline. No churches, modern buildings, figures or words. Keep western shore and the village visibly distinct for separate hotspots.",
+  "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+  "processing": [
+    "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "5d737f1ab7125a2e8bd937bed424234692dd4653ab26a25c65f41dccc56f5d10",
+  "final_sha256": "b125a48c139d4b11d9c9574ee655aaa20ff6b3193c4e747caf58547ad6a67f6f",
+  "intended_use": "Passage-following illustrated Journey companion"
+}

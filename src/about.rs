@@ -103,7 +103,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>What does Journey show?</summary>
-      <p>Journey follows the selected verse in the canonical reader. Genesis 2–4 uses symbolic story scenery. Curated geographic settings cover Acts 16–17, Luke 2, and Revelation 1:9. Only curated settings and chapter journey stops appear in this companion; named places elsewhere do not automatically establish a story setting. When no curated setting or journey applies, Journey leaves the location unassigned; it does not fall back to a world view or borrow places from another chapter in the book. Modern terrain needs a network connection and WebGL; Scripture and available place context remain readable if the map fails.</p>
+      <p>Journey follows the selected verse in the canonical reader. Genesis 2–4 uses symbolic story scenery. Other illustrated journeys cover Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth 1–2, Luke 2, and Mark 4–5. The active hotspot follows your reading or listening verse; the artwork compresses places and times. Curated geographic settings cover Acts 16–17 and Revelation 1:9. Only curated settings and chapter journey stops appear in this companion; named places elsewhere do not automatically establish a story setting. When no curated setting or journey applies, Journey leaves the location unassigned; it does not fall back to a world view or borrow places from another chapter in the book. Modern terrain needs a network connection and WebGL; Scripture and available place context remain readable if the map fails.</p>
     </details>
     <details>
       <summary>Which illustrations are available?</summary>
@@ -139,8 +139,8 @@ mod tests {
             "href=\"/book/Genesis/6?resume=14&amp;context=illustration&amp;scene=noahs-ark&amp;part=construction#v14\"",
             "href=\"/book/Matthew/13?resume=3&amp;context=illustration&amp;scene=sower&amp;part=path#v3\"",
             "href=\"/book/Exodus/25?resume=31&amp;context=illustration&amp;scene=tabernacle&amp;part=lamp#v31\"",
-            "Genesis 2–4 uses symbolic story scenery.",
-            "Acts 16–17, Luke 2, and Revelation 1:9",
+            "Genesis 2–4 uses symbolic story scenery. Other illustrated journeys cover Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth 1–2, Luke 2, and Mark 4–5. The active hotspot follows your reading or listening verse; the artwork compresses places and times.",
+            "Acts 16–17 and Revelation 1:9",
             "Genesis 6–9",
             "Exodus 25–31 and 35–40",
         ] {

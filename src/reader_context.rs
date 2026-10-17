@@ -5,14 +5,23 @@ use std::collections::HashMap;
 
 pub(super) fn controls(book: usize, chapter: usize) -> String {
     let study = learning::relevant_scene(book, chapter).is_some();
+    let journey_state = if illustrated_journey(book, chapter) {
+        " class=\"has-journey\" title=\"Illustrated Journey available in this chapter\""
+    } else {
+        " title=\"View this passage’s setting\""
+    };
     let illustration_state = if study {
         " class=\"has-study\""
     } else {
         " hidden"
     };
     format!(
-        r#"<div class="reader-modes" role="group" aria-label="Reading view"><button type="button" data-reader-mode="passage" aria-pressed="true">Passage</button><button type="button" data-reader-mode="journey" aria-pressed="false">Journey</button><button type="button" data-reader-mode="illustration" aria-pressed="false"{illustration_state}>Illustrations</button></div><details class="reader-display"><summary>Text settings</summary><div><label>Text size<select data-reader-size aria-label="Reading text size"><option value="standard">Standard</option><option value="large">Large</option><option value="larger">Larger</option></select></label><label>Line spacing<select data-reader-spacing aria-label="Reading line spacing"><option value="comfortable">Comfortable</option><option value="spacious">Spacious</option></select></label></div></details>"#
+        r#"<div class="reader-modes" role="group" aria-label="Reading view"><button type="button" data-reader-mode="passage" aria-pressed="true">Passage</button><button type="button" data-reader-mode="journey" aria-pressed="false"{journey_state}>Journey</button><button type="button" data-reader-mode="illustration" aria-pressed="false"{illustration_state}>Illustrations</button></div><details class="reader-display"><summary>Text settings</summary><div><label>Text size<select data-reader-size aria-label="Reading text size"><option value="standard">Standard</option><option value="large">Large</option><option value="larger">Larger</option></select></label><label>Line spacing<select data-reader-spacing aria-label="Reading line spacing"><option value="comfortable">Comfortable</option><option value="spacious">Spacious</option></select></label></div></details>"#
     )
+}
+
+fn illustrated_journey(book: usize, chapter: usize) -> bool {
+    (book == 0 && (2..=4).contains(&chapter)) || super::journey_scenes::available(book, chapter)
 }
 
 pub(super) fn shell() -> &'static str {
@@ -155,7 +164,7 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
     let mode = q.get("mode").map(String::as_str).unwrap_or("journey");
     let relevant = learning::relevant_scene(book, chapter);
     let mut value = if mode == "availability" {
-        json!({"relevant_scene":relevant})
+        json!({"relevant_scene":relevant,"journey_available":illustrated_journey(book, chapter)})
     } else if mode == "illustration" {
         if let Some(scene) = relevant {
             let requested = q.get("part").map(String::as_str);
@@ -174,6 +183,8 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
     } else if mode == "journey" {
         if book == 0 && (2..=4).contains(&chapter) {
             genesis(chapter, verse, client)
+        } else if let Some(scene) = super::journey_scenes::render(book, chapter, verse, client) {
+            scene
         } else {
             geography(book, chapter, verse, client)
         }
@@ -185,6 +196,7 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
     value["verse"] = json!(verse);
     value["reference"] = json!(format!("{} {chapter}:{verse}", NAMES[book]));
     value["relevant_scene"] = json!(relevant);
+    value["journey_available"] = json!(illustrated_journey(book, chapter));
     json_response(200, value.to_string())
 }
 

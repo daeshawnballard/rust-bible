@@ -1,0 +1,23 @@
+{
+  "id": "wilderness-story-journey",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-49eda174-9498-4041-9de8-0800b274deae",
+  "source": "assets/imagegen/source/journey/wilderness.png",
+  "final": "web/art/journey/wilderness.webp",
+  "style_authority": "assets/imagegen/source/journey/genesis.png",
+  "reference_image_sent": false,
+  "prompt": "Use case: illustration-story. Asset type: production landscape illustration for an interactive Bible passage companion, not a UI mockup. Create one 1536x1024 landscape image. Visual style must match the approved Genesis miniature: exquisitely detailed isometric tabletop landscape diorama on a thin dark walnut beveled base, isolated against near-black charcoal, realistic handmade terrain, richly textured stone, miniature foliage and timber, warm golden sidelight, quiet reverent atmosphere, high-end museum model photography, readable at small screen size. Entire diorama visible with modest margins, landscape fills the frame. Each landmark is spatially distinct for later HTML hotspots. This is an artistic, compressed narrative setting rather than a surveyed historic map. No words, letters, labels, pins, circles, interface, title, arrows, dotted routes, caption plaques, watermark, people, deity, angels, modern objects, modern churches, fantasy castles, or crosses. Only scenery and the explicitly requested structures. Output one full-bleed standalone artwork, no panels or contact sheet.\nSubject: Exodus wilderness journey, Exodus13\u201317, one connected miniature desert with six distinct landmarks. LEFT FOREGROUND16%x/58%y an ancient empty travel encampment of a few plain low woven tents, no people. LEFT MIDDLE35%x/42%y a narrow dry sandy corridor through dramatically parted blue sea water, walls of water on both sides, the sea stops in the middle-left rather than a river across all the land. LOWER MIDDLE52%x/66%y a small sparse desert spring with rough ground (Marah). CENTER RIGHT66%x/54%y a lush palm oasis with several pools (Elim). BACK CENTER-RIGHT72%x/29%y pale open desert with subtle light flakes on the ground and distant rocky hills (wilderness Sin), no artificial white dots. FAR RIGHT86%x/42%y a rugged large split boulder with a small stream coming from its face and a few travel tents in a rocky encampment (Rephidim). Wide warm sandstone desert connects these landmarks. Artistic compressed story terrain, not geographically accurate adjacency. No pyramids, no monumental temples, no people, no staff, no visible supernatural person. Make the parted sea and palm oasis especially beautiful.",
+  "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+  "processing": [
+    "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "f841e6735335bfba65ac5b972d02ed557e7be0bd03850cdf16c1face6b7e1f3c",
+  "final_sha256": "35277ce6defc404823fb974b4af027fce38dde69dc4ed90bacd72e246540fe33",
+  "intended_use": "Passage-following illustrated Journey companion"
+}

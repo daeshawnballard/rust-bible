@@ -2220,6 +2220,121 @@
       "notes": "Original PNG retained. Scene labels, active pins and schematic path are real interface elements. No verified coordinates assigned to Eden or Nod.",
       "prompt_summary": "One production 3:2 symbolic Genesis 2\u20134 landscape in the existing detailed isometric miniature style. Lush garden left, natural garden edge center, rough cultivated ground right, distant valley, small river and winding earth path. Warm gold lighting, charcoal ground. No UI, text, pins, arrows, people, deity, buildings, modern map, or Tabernacle objects. Symbolic illustration, not a surveyed route or precise Eden geography.",
       "prompt_record_note": "Summary of the generation request; generation ID identifies the original built-in ImageGen output."
+    },
+    {
+      "id": "flood-story-journey",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-c0238414-21d9-4924-9d24-83e126f789ef",
+      "source": "assets/imagegen/source/journey/flood.png",
+      "final": "web/art/journey/flood.webp",
+      "style_authority": "assets/imagegen/source/journey/genesis.png",
+      "reference_image_sent": false,
+      "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+      "processing": [
+        "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "a7873eb20bb80c27c10aa3058092b42cfd160f1345960739dcf4b8bbba3b6a06",
+      "final_sha256": "eb90cfdf2760907f1ca412a927b939aacce2c54c1a4be4d7b027b41393f21a72",
+      "intended_use": "Passage-following illustrated Journey companion",
+      "prompt_file": "assets/imagegen/journey/flood.json"
+    },
+    {
+      "id": "wilderness-story-journey",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-49eda174-9498-4041-9de8-0800b274deae",
+      "source": "assets/imagegen/source/journey/wilderness.png",
+      "final": "web/art/journey/wilderness.webp",
+      "style_authority": "assets/imagegen/source/journey/genesis.png",
+      "reference_image_sent": false,
+      "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+      "processing": [
+        "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "f841e6735335bfba65ac5b972d02ed557e7be0bd03850cdf16c1face6b7e1f3c",
+      "final_sha256": "35277ce6defc404823fb974b4af027fce38dde69dc4ed90bacd72e246540fe33",
+      "intended_use": "Passage-following illustrated Journey companion",
+      "prompt_file": "assets/imagegen/journey/wilderness.json"
+    },
+    {
+      "id": "ruth-story-journey",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-69197eb2-3181-4e61-b2d5-fa007f51a767",
+      "source": "assets/imagegen/source/journey/ruth.png",
+      "final": "web/art/journey/ruth.webp",
+      "style_authority": "assets/imagegen/source/journey/genesis.png",
+      "reference_image_sent": false,
+      "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+      "processing": [
+        "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "d7d9cc29a9d9e4d5b1835bbf4f8d92b60a41e933028df12bc14c1a0b20ed55b3",
+      "final_sha256": "f43fcc2f4edd31ded66cd95b40d97f85d0b557a8fa116789379c8df6e3cdb6a8",
+      "intended_use": "Passage-following illustrated Journey companion",
+      "prompt_file": "assets/imagegen/journey/ruth.json"
+    },
+    {
+      "id": "bethlehem-story-journey",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-c60802dc-e8b1-473f-b210-9a76ae6a89ba",
+      "source": "assets/imagegen/source/journey/bethlehem.png",
+      "final": "web/art/journey/bethlehem.webp",
+      "style_authority": "assets/imagegen/source/journey/genesis.png",
+      "reference_image_sent": false,
+      "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+      "processing": [
+        "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "ccb1f1b3e3a3c5390fbd1e59b960be9ceb85ab574a7b650dfb6f6d4b6f781d3f",
+      "final_sha256": "1387ad9ca03d280ea877c435c30c8d74bb59c278f262503e6241aebee20300e4",
+      "intended_use": "Passage-following illustrated Journey companion",
+      "prompt_file": "assets/imagegen/journey/bethlehem.json"
+    },
+    {
+      "id": "galilee-story-journey",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-928ec848-7c0f-4853-b168-9209186841c9",
+      "source": "assets/imagegen/source/journey/galilee.png",
+      "final": "web/art/journey/galilee.webp",
+      "style_authority": "assets/imagegen/source/journey/genesis.png",
+      "reference_image_sent": false,
+      "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+      "processing": [
+        "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "5d737f1ab7125a2e8bd937bed424234692dd4653ab26a25c65f41dccc56f5d10",
+      "final_sha256": "b125a48c139d4b11d9c9574ee655aaa20ff6b3193c4e747caf58547ad6a67f6f",
+      "intended_use": "Passage-following illustrated Journey companion",
+      "prompt_file": "assets/imagegen/journey/galilee.json"
     }
   ]
 }

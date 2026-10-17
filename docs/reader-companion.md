@@ -16,7 +16,9 @@ The chapter reader owns one canonical Scripture stream, one audio player, and on
 
 Genesis 2–4 story stages follow 2:8, 3:23, 3:24, and 4:16. Genesis 2:1–7 is explicitly unassigned before the garden is introduced. The landscape and line are schematic illustrations, not archaeological or geographic evidence. Eden and Nod have no assigned coordinates. The move to Nod follows Cain rather than Adam and Eve. No persons or deity are depicted in the scenery.
 
-Geographic camera-follow coverage remains Acts 16–17, Luke 2, and Revelation 1:9, using existing curated ranges and chapter journey stops. A named place is not automatically a setting. No all-book or all-world fallback is shown. The rest of Scripture remains available with an honest no-journey state.
+Additional illustrated story coverage is documented in [Illustrated Journey scenes](illustrated-journeys.md): Genesis 7–9:17, Exodus 13:17–17:16, Ruth 1–2, Luke 2, and Mark 4–5. Ranges are explicit and recurring places reactivate their existing hotspot.
+
+Luke 2 now uses its illustrated story world. Geographic camera-follow coverage remains Acts 16–17 and Revelation 1:9, using existing curated ranges and chapter journey stops. A named place is not automatically a setting. No all-book or all-world fallback is shown. The rest of Scripture remains available with an honest no-journey state.
 
 Illustrated studies retain Noah’s Ark (Genesis 6–9), the Tabernacle (Exodus 25–31 and 35–40), and the Sower (Matthew 13). These are chapter-context aids, not a claim that every verse depicts the selected object. Explanations and reconstruction captions are editorial material. Scripture is still the embedded KJV text.
 

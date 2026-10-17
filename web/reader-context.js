@@ -66,6 +66,10 @@ export function initReaderContext(root = document) {
     reader.querySelectorAll('.reader-modes [data-reader-mode]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.readerMode === mode));
       if (button.dataset.readerMode === 'illustration' && currentValue) {button.classList.toggle('has-study', !!currentValue.relevant_scene); button.hidden=!currentValue.relevant_scene && mode!=='illustration';}
+      if (button.dataset.readerMode === 'journey' && currentValue) {
+        button.classList.toggle('has-journey', !!currentValue.journey_available);
+        button.title = currentValue.journey_available ? 'Illustrated Journey available in this chapter' : 'View this passage’s setting';
+      }
     });
   };
   async function refresh({focusPart = null} = {}) {

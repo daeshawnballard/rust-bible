@@ -1,0 +1,23 @@
+{
+  "id": "bethlehem-story-journey",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-c60802dc-e8b1-473f-b210-9a76ae6a89ba",
+  "source": "assets/imagegen/source/journey/bethlehem.png",
+  "final": "web/art/journey/bethlehem.webp",
+  "style_authority": "assets/imagegen/source/journey/genesis.png",
+  "reference_image_sent": false,
+  "prompt": "Use case: illustration-story. Asset type: production landscape illustration for an interactive Bible passage companion, not a UI mockup. Create one 1536x1024 landscape image. Visual style must match the approved Genesis miniature: exquisitely detailed isometric tabletop landscape diorama on a thin dark walnut beveled base, isolated against near-black charcoal, realistic handmade terrain, richly textured stone, miniature foliage and timber, warm golden sidelight, quiet reverent atmosphere, high-end museum model photography, readable at small screen size. Entire diorama visible with modest margins, landscape fills the frame. Each landmark is spatially distinct for later HTML hotspots. This is an artistic, compressed narrative setting rather than a surveyed historic map. No words, letters, labels, pins, circles, interface, title, arrows, dotted routes, caption plaques, watermark, people, deity, angels, modern objects, modern churches, fantasy castles, or crosses. Only scenery and the explicitly requested structures. Output one full-bleed standalone artwork, no panels or contact sheet.\nSubject: Luke2, the birth narrative and later visits to Jerusalem, one clearly symbolic compressed story landscape with five visible separated landmarks. LOWER LEFT22%x/62%y a rough ancient road ascending to modest village houses. CENTER44%x/50%y a humble limestone domestic courtyard/open shelter with a small wooden feeding manger visible under an awning, EMPTY, no figures; no claim of a particular stable or cave. BACK LEFT26%x/30%y peaceful pastoral fields with tiny sheep grazing on terraces, no shepherd figures. BACK RIGHT77%x/29%y a miniature idealized first-century Jerusalem temple precinct, large simple pale stone rectangular courtyard and sanctuary, no dome, no modern Islamic architecture, no church, no exact archaeological claim. LOWER RIGHT81%x/63%y a separate small humble Nazareth-like hillside village with stone houses and olive trees. Earth paths and rolling terraced slopes bind these five symbolic regions, distances and times intentionally compressed. Warm dusk light with subtle natural night-blue shadows, beautiful foliage. No stars painted as signs, no angels, no people, no baby, no inscriptions.",
+  "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+  "processing": [
+    "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "ccb1f1b3e3a3c5390fbd1e59b960be9ceb85ab574a7b650dfb6f6d4b6f781d3f",
+  "final_sha256": "1387ad9ca03d280ea877c435c30c8d74bb59c278f262503e6241aebee20300e4",
+  "intended_use": "Passage-following illustrated Journey companion"
+}

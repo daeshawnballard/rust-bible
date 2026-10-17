@@ -1,0 +1,23 @@
+{
+  "id": "ruth-story-journey",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-69197eb2-3181-4e61-b2d5-fa007f51a767",
+  "source": "assets/imagegen/source/journey/ruth.png",
+  "final": "web/art/journey/ruth.webp",
+  "style_authority": "assets/imagegen/source/journey/genesis.png",
+  "reference_image_sent": false,
+  "prompt": "Use case: illustration-story. Asset type: production landscape illustration for an interactive Bible passage companion, not a UI mockup. Create one 1536x1024 landscape image. Visual style must match the approved Genesis miniature: exquisitely detailed isometric tabletop landscape diorama on a thin dark walnut beveled base, isolated against near-black charcoal, realistic handmade terrain, richly textured stone, miniature foliage and timber, warm golden sidelight, quiet reverent atmosphere, high-end museum model photography, readable at small screen size. Entire diorama visible with modest margins, landscape fills the frame. Each landmark is spatially distinct for later HTML hotspots. This is an artistic, compressed narrative setting rather than a surveyed historic map. No words, letters, labels, pins, circles, interface, title, arrows, dotted routes, caption plaques, watermark, people, deity, angels, modern objects, modern churches, fantasy castles, or crosses. Only scenery and the explicitly requested structures. Output one full-bleed standalone artwork, no panels or contact sheet.\nSubject: Ruth1\u20132, the return from Moab to Bethlehem and the harvest fields. BACK LEFT19%x/32%y a small ancient hillside settlement in dry rocky uplands, modest stone/earth houses with flat roofs. A winding unmarked earth road crosses a valley through CENTER43%x/52%y. BACK RIGHT74%x/30%y another slightly larger small ancient hill town, Bethlehem, humble flat-roof stone houses, no identifiable exact historical reconstruction, no domes/churches/minarets. LOWER RIGHT70%x/68%y rich golden barley fields with hand-harvested sheaves, narrow footpaths, and a few olive trees. Empty landscape, no people. Low dry-stone boundary walls, rough grain texture, gentle rolling hills. Rich harvest gold against olive green and warm limestone. One continuous miniature terrain, no painted route lines.",
+  "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+  "processing": [
+    "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "d7d9cc29a9d9e4d5b1835bbf4f8d92b60a41e933028df12bc14c1a0b20ed55b3",
+  "final_sha256": "f43fcc2f4edd31ded66cd95b40d97f85d0b557a8fa116789379c8df6e3cdb6a8",
+  "intended_use": "Passage-following illustrated Journey companion"
+}

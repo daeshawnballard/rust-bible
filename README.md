@@ -6,6 +6,14 @@ Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site>. Open-source
 
 A daily KJV reading, illustrated Library, and continuous chapter reader with a passage-following Journey and contextual illustrations, built from one shared Rust implementation. The **About** page explains how to read, listen, and use local reading progress. Run the site as the original Axum + Tokio server, or build it as Rust WebAssembly for static hosting. Rust handles Bible lookup, reference parsing, search, Library filtering and sorting, and page rendering. Small JavaScript modules connect browser routes, Library controls, and local speech playback to that Rust implementation.
 
+## Illustrated Journey scenes
+
+Journey now includes six illustrated story worlds: the original Eden scene plus five new individual landscapes for Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth’s return (Ruth 1–2), Luke’s birth narrative (Luke 2), and the Galilee crossing (Mark 4–5). Choose **Journey** inside the passage; a small indicator marks chapters with illustrated coverage.
+
+Real hotspots and source links sit over the artwork. The active stop follows the verse as you scroll or listen, including return visits to an earlier setting. Deliberately selecting a hotspot’s reference chooses that verse and stops narration; context updates from ongoing reading do not restart audio. Scripture remains separate from the illustrated explanations.
+
+The miniatures compress times and places into one artistic storyboard; they are not surveyed ancient maps. Explicit verse ranges prevent a setting from carrying into unrelated passages. Existing curated terrain, the three object studies, the Library, and free continuous audio remain available. See [coverage and interaction notes](docs/illustrated-journeys.md), [exact generation prompts](assets/imagegen/journey/), and [asset provenance](assets/imagegen/manifest.json).
+
 ## Today and navigation
 
 **Today** is the default homepage: a short KJV passage, a separate illustration, **Read** for its full chapter, and **Listen** for that passage. Edition 2 uses a clearly labeled, curated 42-day rotation selected from the browser’s local calendar date. The original edition 1 remains an immutable 14-day sequence, and its shared links keep their edition and date. **Link to this day** preserves both so the selection stays stable when shared. Illustrations are artistic interpretations; Scripture comes verbatim from the embedded corpus.
@@ -122,7 +130,7 @@ Legacy `#/explore`, map parameters, and the three scene URLs remain compatible t
 
 Genesis 2–4 has an **illustrated story journey**: the garden, outside the garden, the guarded way, and Cain’s land of Nod. The active stage follows the exact verse while reading or listening. The landscape and trail are symbolic scenery, with no GPS coordinates or claim to known locations, distances, or an actual route. Genesis 3:24’s guardians east of Eden do not establish a surveyed expulsion trail; Genesis 4:16’s move to Nod follows Cain.
 
-Geographic context uses sourced, curated settings in Acts 16–17, Luke 2, and Revelation 1:9. The camera follows the current setting locally. **Route overview** deliberately widens to that chapter’s curated stops; panning pauses camera follow until **Follow passage** is selected. Named places elsewhere in the book do not populate a fallback world map. Unsupported passages show a compact, honest empty state while their full Scripture remains readable.
+Geographic context uses sourced, curated settings in Acts 16–17 and Revelation 1:9. The camera follows the current setting locally. **Route overview** deliberately widens to that chapter’s curated stops; panning pauses camera follow until **Follow passage** is selected. Named places elsewhere in the book do not populate a fallback world map. Unsupported passages show a compact, honest empty state while their full Scripture remains readable.
 
 Geographic explanations, source links, and uncertainty are separate from Scripture and speech. Dashed connections are schematic, not reconstructed ancient routes. Modern NASA Blue Marble regional imagery (approximately 500 m, not street-level) and Mapzen elevation tiles require a network connection and WebGL. If terrain fails, the KJV passage and source-linked stops remain usable. The app does not request your physical location. See [atlas attribution and limits](docs/atlas-data.md), [renderer provenance](web/vendor/maplibre/provenance.json), and [reader companion notes](docs/reader-companion.md).
 

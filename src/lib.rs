@@ -21,6 +21,7 @@ const CSS: &str = concat!(
 
 mod about;
 mod atlas;
+mod journey_scenes;
 mod learning;
 mod library;
 mod reader;

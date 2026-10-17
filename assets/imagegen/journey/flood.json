@@ -1,0 +1,23 @@
+{
+  "id": "flood-story-journey",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-c0238414-21d9-4924-9d24-83e126f789ef",
+  "source": "assets/imagegen/source/journey/flood.png",
+  "final": "web/art/journey/flood.webp",
+  "style_authority": "assets/imagegen/source/journey/genesis.png",
+  "reference_image_sent": false,
+  "prompt": "Use case: illustration-story. Asset type: production landscape illustration for an interactive Bible passage companion, not a UI mockup. Create one 1536x1024 landscape image. Visual style must match the approved Genesis miniature: exquisitely detailed isometric tabletop landscape diorama on a thin dark walnut beveled base, isolated against near-black charcoal, realistic handmade terrain, richly textured stone, miniature foliage and timber, warm golden sidelight, quiet reverent atmosphere, high-end museum model photography, readable at small screen size. Entire diorama visible with modest margins, landscape fills the frame. Each landmark is spatially distinct for later HTML hotspots. This is an artistic, compressed narrative setting rather than a surveyed historic map. No words, letters, labels, pins, circles, interface, title, arrows, dotted routes, caption plaques, watermark, people, deity, angels, modern objects, modern churches, fantasy castles, or crosses. Only scenery and the explicitly requested structures. Output one full-bleed standalone artwork, no panels or contact sheet.\nSubject: Noah's flood and the receding waters, Genesis 7\u20139. One rectangular timber ark with a low roof and a visible small window, resting where receding deep blue water meets a rugged rocky rise on the LEFT CENTER, center about30%x/48%y; a rough embarkation area/ark entrance at20%x/56%y. Water dominates the left middle around42%x/39%y, fading into wet stones. Layered mountains in the RIGHT BACKGROUND around70%x/28%y, no identifiable modern peak. A small dove with a tiny olive sprig over the middle-right, subtle, near70%x/40%y. A small unadorned low stone altar on dry ground lower RIGHT about82%x/65%y, dry plants and one olive sapling. One ark only, not multiple boats. Soft post-storm light through subdued cloud. The composition symbolizes successive moments in a story; avoid portraying all phases as a single archaeological location. No rainbow needed. Keep 15% side margin for labels added separately.",
+  "notes": "New individual production artwork. Hotspots, paths, labels and active states are live interface elements. Time and places are compressed into an artistic storyboard; no precise ancient geography is asserted.",
+  "processing": [
+    "full_frame_webp_quality_90_method_6_no_crop_no_resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "a7873eb20bb80c27c10aa3058092b42cfd160f1345960739dcf4b8bbba3b6a06",
+  "final_sha256": "eb90cfdf2760907f1ca412a927b939aacce2c54c1a4be4d7b027b41393f21a72",
+  "intended_use": "Passage-following illustrated Journey companion"
+}
