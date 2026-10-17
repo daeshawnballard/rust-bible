@@ -1,6 +1,7 @@
 //! Source-bound illustrated studies. Images and editorial guidance are never Scripture.
 use super::{
-    esc, html_response, parse_ref, ref_label, reference_url, route_path, verses, Ref, RouteResponse,
+    esc, html_response, parse_ref, ref_label, reference_url, route_path, slug, verses, Ref,
+    RouteResponse,
 };
 
 struct Stop {
@@ -54,6 +55,32 @@ fn scene_path(scene: &Scene, stop: &Stop, view: &str, client: bool) -> String {
     route_path(
         &format!("/explore/{}?part={}&view={view}", scene.slug, stop.id),
         client,
+    )
+}
+
+fn reader_context_target(reference: &Ref, scene: &str, part: &str, client: bool) -> String {
+    let verse = reference.v1.unwrap_or(1);
+    let chapter = reference.ch;
+    route_path(
+        &format!(
+            "/book/{}/{chapter}?resume={verse}&context=illustration&scene={scene}&part={part}#v{verse}",
+            slug(reference.book)
+        ),
+        client,
+    )
+}
+
+fn context_read_link(reference: &Ref, scene: &str, part: &str, client: bool) -> String {
+    let book = slug(reference.book);
+    let verse = reference.v1.unwrap_or(1);
+    let label = ref_label(reference);
+    format!(
+        r#"<a class="reader-illustration-read" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" href="{}">Read {} →</a>"#,
+        esc(&book),
+        reference.ch,
+        verse,
+        esc(&reader_context_target(reference, scene, part, client)),
+        esc(&label),
     )
 }
 struct StudyPreview {
@@ -138,28 +165,140 @@ pub(super) fn hub(selected: Option<&str>, client: bool) -> RouteResponse {
     )
 }
 pub(super) fn today_card(slot: usize, client: bool) -> String {
-    let (title, description, path) = match slot % 3 {
+    let (title, description, scene, part) = match slot % 3 {
         0 => (
             "Inside Noah’s Ark",
-            "Four details to explore · Genesis 6–8",
-            "/explore/noahs-ark",
+            "Four details to explore · Genesis 6–9",
+            "noahs-ark",
+            "construction",
         ),
         1 => (
             "The Sower’s Field",
             "Four kinds of ground · Matthew 13",
-            "/explore/sower",
+            "sower",
+            "path",
         ),
         _ => (
             "Inside the Tabernacle",
-            "Eight details to explore · Exodus 25–27",
-            "/explore/tabernacle",
+            "Eight details to explore · Exodus 25–31, 35–40",
+            "tabernacle",
+            "lamp",
         ),
     };
     format!(
-        r#"<section class="today-explore"><div><p class="eyebrow">An illustrated study</p><a href="{}">{title} →</a><p>{description}</p><a class="all-studies" href="{}">Browse all illustrated studies →</a></div></section>"#,
-        esc(&route_path(path, client)),
-        esc(&route_path("/explore/studies", client))
+        r#"<section class="today-explore"><div><p class="eyebrow">An illustrated detail</p><a href="{}">{title} →</a><p>{description}</p></div></section>"#,
+        esc(&legacy_target(scene, Some(part), client).unwrap())
     )
+}
+
+pub(super) fn relevant_scene(book: usize, chapter: usize) -> Option<&'static str> {
+    match (book, chapter) {
+        (0, 6..=9) => Some("noahs-ark"),
+        (39, 13) => Some("sower"),
+        (1, 25..=31 | 35..=40) => Some("tabernacle"),
+        _ => None,
+    }
+}
+
+pub(super) fn recommended_part(
+    scene_name: &str,
+    book: usize,
+    chapter: usize,
+    verse: usize,
+) -> Option<&'static str> {
+    if scene_name == "tabernacle" {
+        return super::tabernacle::recommended_part(book, chapter, verse);
+    }
+    let scene = scene_for(scene_name)?;
+    for stop in scene.stops {
+        for source in stop.refs {
+            if let Some(reference) = parse_ref(source) {
+                if reference.book == book
+                    && reference.ch == chapter
+                    && verses(&reference)
+                        .iter()
+                        .any(|(number, _)| *number == verse)
+                {
+                    return Some(stop.id);
+                }
+            }
+        }
+    }
+    None
+}
+
+pub(super) fn legacy_target(scene: &str, part: Option<&str>, client: bool) -> Option<String> {
+    if scene == "tabernacle" {
+        return super::tabernacle::legacy_target(part, client);
+    }
+    let scene = scene_for(scene)?;
+    let selected = part.unwrap_or(match scene.slug {
+        "noahs-ark" => "construction",
+        "sower" => "path",
+        _ => return None,
+    });
+    let stop = scene.stops.iter().find(|stop| stop.id == selected)?;
+    let reference = parse_ref(stop.refs[0])?;
+    Some(reader_context_target(
+        &reference, scene.slug, stop.id, client,
+    ))
+}
+
+pub(super) fn embedded(scene_name: &str, part: Option<&str>, client: bool) -> Option<String> {
+    if scene_name == "tabernacle" {
+        return super::tabernacle::embedded(part, client);
+    }
+    let scene = scene_for(scene_name)?;
+    let selected = part.unwrap_or(match scene.slug {
+        "noahs-ark" => "construction",
+        "sower" => "path",
+        _ => return None,
+    });
+    let selected_index = scene.stops.iter().position(|stop| stop.id == selected)?;
+    let stop = &scene.stops[selected_index];
+    let source = parse_ref(stop.refs[0])?;
+    let mut html = format!(
+        r#"<section class="reader-illustration" data-context-scene="{}" data-context-selected-part="{}" aria-label="{} illustration"><figure class="reader-illustration-scene"><img src="/art/learn/{}/scene.webp" width="1536" height="1024" alt="Illustrated reconstruction of {}">"#,
+        scene.slug,
+        stop.id,
+        esc(scene.title),
+        scene.art,
+        esc(scene.title),
+    );
+    for item in scene.stops {
+        let selected = if item.id == stop.id {
+            " aria-pressed=\"true\""
+        } else {
+            " aria-pressed=\"false\""
+        };
+        html.push_str(&format!(
+            r#"<button class="reader-illustration-hotspot" type="button" data-context-part="{}" style="left:{}%;top:{}%" aria-label="Select {}"{}><span class="reader-illustration-hotspot-dot" aria-hidden="true"></span><span class="reader-illustration-hotspot-label">{}</span></button>"#,
+            item.id,
+            item.position.0,
+            item.position.1,
+            esc(item.name),
+            selected,
+            esc(item.name),
+        ));
+    }
+    html.push_str(
+        "<figcaption>Artist’s reconstruction · Scene details are illustrative.</figcaption></figure>",
+    );
+    html.push_str(&format!(
+        r#"<div class="reader-illustration-detail" data-context-detail><img class="reader-illustration-object" src="/art/learn/{}/{}.webp" width="1536" height="1024" alt="Dedicated illustration of {}" loading="lazy" decoding="async"><div class="reader-illustration-copy"><p class="reader-illustration-eyebrow">Illustrated detail · {} of {}</p><h3>{}</h3><p class="reader-illustration-reference">{}</p><section class="reader-illustration-explanation"><h4>Explanation</h4><p>{}</p></section><details class="reader-illustration-question"><summary>{}</summary><p>{}</p></details>{}<small class="reader-illustration-reconstruction-note">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></div></section>"#,
+        scene.art,
+        stop.id,
+        esc(stop.name),
+        selected_index + 1,
+        scene.stops.len(),
+        esc(stop.name),
+        esc(&stop.refs.join(" · ")),
+        esc(stop.note),
+        esc(stop.question),
+        esc(stop.answer),
+        context_read_link(&source, scene.slug, stop.id, client),
+    ));
+    Some(html)
 }
 fn passage(stop: &Stop, client: bool) -> String {
     let mut html = String::new();
@@ -284,13 +423,36 @@ fn missing(client: bool) -> RouteResponse {
     )
 }
 pub(super) fn related(book: usize, chapter: usize, client: bool) -> String {
-    let scene = match (book, chapter) {
-        (0, 6..=8) => Some(("/explore/noahs-ark", "Inside Noah’s Ark")),
-        (1, 25..=27) => Some(("/explore/tabernacle", "Inside the Tabernacle")),
-        (39, 13) => Some(("/explore/sower", "The Sower’s Field")),
-        _ => None,
+    let Some(scene) = relevant_scene(book, chapter) else {
+        return String::new();
     };
-    scene.map_or(String::new(),|(path,name)|format!(r#"<aside class="related-study" aria-label="Related illustrated study"><div><p class="eyebrow">Explore this passage</p><a href="{}">{} →</a></div><p>A separate illustrated study with Scripture, close-ups, and explanations.</p></aside>"#,esc(&route_path(path,client)),name))
+    let (part, title) = match scene {
+        "noahs-ark" => (
+            match chapter {
+                7 => "door",
+                8 => "window",
+                _ => "construction",
+            },
+            "Inside Noah’s Ark",
+        ),
+        "sower" => ("path", "The Sower’s Field"),
+        _ => (
+            match chapter {
+                26 => "tent",
+                27 => "courtyard",
+                _ => "lamp",
+            },
+            "Inside the Tabernacle",
+        ),
+    };
+    let Some(target) = legacy_target(scene, Some(part), client) else {
+        return String::new();
+    };
+    format!(
+        r#"<aside class="related-study" aria-label="Related illustration"><div><p class="eyebrow">Illustration in this passage</p><a href="{}">{} →</a></div><p>Explore a scene detail beside the King James text.</p></aside>"#,
+        esc(&target),
+        title
+    )
 }
 #[cfg(test)]
 mod tests {
@@ -342,10 +504,110 @@ mod tests {
             .contains("data-featured-study=\"tabernacle\""));
     }
     #[test]
-    fn related_studies_are_separate_from_scripture() {
-        assert!(related(0, 6, true).contains("#/explore/noahs-ark"));
-        assert!(related(1, 25, true).contains("#/explore/tabernacle"));
-        assert!(related(39, 13, true).contains("#/explore/sower"));
+    fn related_illustrations_link_into_the_reader_context() {
+        assert!(related(0, 6, true).contains(
+            "#/book/Genesis/6?resume=14&amp;context=illustration&amp;scene=noahs-ark&amp;part=construction#v14"
+        ));
+        assert!(related(1, 25, true).contains(
+            "#/book/Exodus/25?resume=31&amp;context=illustration&amp;scene=tabernacle&amp;part=lamp#v31"
+        ));
+        assert!(related(39, 13, true).contains(
+            "#/book/Matthew/13?resume=3&amp;context=illustration&amp;scene=sower&amp;part=path#v3"
+        ));
         assert!(related(42, 3, true).is_empty());
+    }
+
+    #[test]
+    fn embedded_scene_contains_only_illustration_and_context_controls() {
+        for scene in &SCENES {
+            for stop in scene.stops {
+                let html = embedded(scene.slug, Some(stop.id), false).unwrap();
+                assert!(html.contains("class=\"reader-illustration-scene\""));
+                assert!(html.contains(&format!("data-context-selected-part=\"{}\"", stop.id)));
+                assert!(html.contains(&format!("data-context-part=\"{}\"", stop.id)));
+                assert!(html.contains("data-context-read"));
+                assert!(html.contains("data-context-book=\""));
+                assert!(html.contains("class=\"reader-illustration-object\""));
+                assert!(html.contains("<h4>Explanation</h4>"));
+                assert!(html.contains("Artist’s reconstruction"));
+                for forbidden in [
+                    "data-reader",
+                    "class=\"scripture",
+                    "class=\"v\"",
+                    "data-read-aloud",
+                    "scripture-player",
+                ] {
+                    assert!(
+                        !html.contains(forbidden),
+                        "{}:{} unexpectedly includes {forbidden}",
+                        scene.slug,
+                        stop.id
+                    );
+                }
+            }
+        }
+        assert!(embedded("noahs-ark", Some("unknown"), false).is_none());
+        assert!(embedded("unknown", None, false).is_none());
+    }
+
+    #[test]
+    fn legacy_context_targets_resolve_to_reader_chapters() {
+        for scene in &SCENES {
+            for part in scene.stops {
+                let target = legacy_target(scene.slug, Some(part.id), false).unwrap();
+                assert!(target.contains("context=illustration"));
+                assert!(target.contains(&format!("scene={}&part={}", scene.slug, part.id)));
+                assert!(target.contains("#v"));
+                assert_eq!(crate::route(&target, false).status, 200, "{target}");
+            }
+        }
+        let tabernacle_target = legacy_target("tabernacle", Some("lamp"), false).unwrap();
+        assert_eq!(crate::route(&tabernacle_target, false).status, 200);
+        assert!(legacy_target("noahs-ark", Some("unknown"), true).is_none());
+        assert_eq!(
+            legacy_target("sower", None, true).as_deref(),
+            Some("#/book/Matthew/13?resume=3&context=illustration&scene=sower&part=path#v3")
+        );
+    }
+
+    #[test]
+    fn relevant_scene_ranges_follow_the_existing_study_sources() {
+        for chapter in 6..=9 {
+            assert_eq!(relevant_scene(0, chapter), Some("noahs-ark"));
+        }
+        assert_eq!(relevant_scene(39, 13), Some("sower"));
+        for chapter in (25..=31).chain(35..=40) {
+            assert_eq!(relevant_scene(1, chapter), Some("tabernacle"));
+        }
+        assert_eq!(relevant_scene(1, 32), None);
+        assert_eq!(relevant_scene(39, 12), None);
+    }
+
+    #[test]
+    fn recommended_part_requires_an_exact_source_verse() {
+        assert_eq!(
+            recommended_part("noahs-ark", 0, 6, 14),
+            Some("construction")
+        );
+        assert_eq!(recommended_part("noahs-ark", 0, 7, 16), Some("door"));
+        assert_eq!(recommended_part("noahs-ark", 0, 8, 7), Some("window"));
+        assert_eq!(recommended_part("noahs-ark", 0, 9, 1), None);
+        assert_eq!(recommended_part("sower", 39, 13, 3), Some("path"));
+        assert_eq!(recommended_part("sower", 39, 13, 20), Some("rocky"));
+        assert_eq!(recommended_part("sower", 39, 12, 1), None);
+        assert_eq!(recommended_part("tabernacle", 1, 25, 31), Some("lamp"));
+        assert_eq!(recommended_part("tabernacle", 1, 27, 2), Some("altar"));
+        assert_eq!(recommended_part("tabernacle", 1, 35, 1), None);
+        assert_eq!(recommended_part("unknown", 0, 6, 14), None);
+    }
+
+    #[test]
+    fn today_cards_link_into_a_reader_context_without_a_studies_hub() {
+        for (slot, scene) in [(0, "noahs-ark"), (1, "sower"), (2, "tabernacle")] {
+            let card = today_card(slot, true);
+            assert!(card.contains(&format!("scene={scene}")));
+            assert!(!card.contains("Browse all illustrated studies"));
+            assert!(!card.contains("/explore/studies"));
+        }
     }
 }

@@ -96,23 +96,6 @@ fn state(book: usize, chapter: usize, verse: usize) -> Value {
         .filter_map(|m| data.places.get(&m.id).map(|p| point(&m.id, p, &m.verses)))
         .collect();
     let has_chapter = !places.is_empty();
-    if !has_chapter {
-        let mut seen = std::collections::HashSet::new();
-        for ch in 1..=bible().books[book].len() {
-            for m in data
-                .chapters
-                .get(&format!("{book}:{ch}"))
-                .into_iter()
-                .flatten()
-            {
-                if seen.insert(m.id.clone()) {
-                    if let Some(p) = data.places.get(&m.id) {
-                        places.push(point(&m.id, p, &[]));
-                    }
-                }
-            }
-        }
-    }
     places.sort_by(|a, b| {
         a["name"]
             .as_str()
@@ -157,10 +140,8 @@ fn state(book: usize, chapter: usize, verse: usize) -> Value {
             places.push(stop.clone());
         }
     }
-    let scope = if has_chapter {
+    let scope = if has_chapter || !places.is_empty() {
         "chapter"
-    } else if !places.is_empty() {
-        "book"
     } else {
         "none"
     };
@@ -171,18 +152,51 @@ fn state(book: usize, chapter: usize, verse: usize) -> Value {
             "Places named in {} {chapter} · setting not established for verse {verse}",
             NAMES[book]
         )
-    } else if places.is_empty() {
-        format!("No identifiable geographic place is named in {}. No location is assigned to this passage.",NAMES[book])
-    } else {
+    } else if !stops.is_empty() {
         format!(
-            "No place is identified for this passage. Showing places named elsewhere in {}.",
-            NAMES[book]
+            "Curated journey stops are available in {} {chapter}; no setting is assigned to verse {verse}.",
+            NAMES[book],
         )
+    } else {
+        format!("No identifiable geographic place is named in {} {chapter}. No location is assigned to this passage.", NAMES[book])
     };
     json!({"book":book,"book_name":NAMES[book],"chapter":chapter,"verse":verse,"scope":scope,
         "title":journey.map(|j|j.title.as_str()).unwrap_or("Follow the passage"),"places":places,"setting":setting,"stops":stops,
         "journey_title":journey.map(|j|j.title.as_str()),"journey_note":journey.map(|j|j.note.as_str()),"message":message,
         "reader_path":format!("/book/{}/{chapter}?resume={verse}",slug(book)),"verse_count":bible().books[book][chapter-1].len(),"chapter_count":bible().books[book].len()})
+}
+
+pub(super) fn focused_state(book: usize, chapter: usize, verse: usize) -> Value {
+    let mut focused = state(book, chapter, verse);
+    let setting = focused["setting"].clone();
+    let stops = focused["stops"].as_array().cloned().unwrap_or_default();
+    let available = !setting.is_null() || !stops.is_empty();
+    let mut places = Vec::new();
+
+    if setting.is_object() {
+        places.push(setting.clone());
+    }
+    for stop in &stops {
+        if !places.iter().any(|place: &Value| place["id"] == stop["id"]) {
+            places.push(stop.clone());
+        }
+    }
+
+    focused["places"] = json!(places);
+    focused["scope"] = json!(if available { "chapter" } else { "none" });
+    focused["available"] = json!(available);
+    if !available {
+        focused["message"] = json!(format!(
+            "No curated geographic context is available for {} {chapter}:{verse}.",
+            NAMES[book]
+        ));
+    } else if setting.is_null() && !stops.is_empty() {
+        focused["message"] = json!(format!(
+            "Curated journey stops are available in {} {chapter}; no setting is assigned to verse {verse}.",
+            NAMES[book]
+        ));
+    }
+    focused
 }
 
 pub(super) fn api(q: &HashMap<String, String>) -> RouteResponse {
@@ -312,5 +326,61 @@ mod tests {
         assert!(state(18, 23, 1)["setting"].is_null());
         assert!(state(65, 21, 1)["setting"].is_null());
         assert_eq!(state(43, 16, 12)["stops"].as_array().unwrap().len(), 4);
+    }
+
+    #[test]
+    fn chapter_state_does_not_fall_back_to_other_book_chapters() {
+        let psalm = state(18, 23, 1);
+        assert_eq!(psalm["scope"], "none");
+        assert!(psalm["places"].as_array().unwrap().is_empty());
+        assert!(psalm["message"]
+            .as_str()
+            .unwrap()
+            .contains("No identifiable geographic place"));
+
+        let acts = state(43, 17, 1);
+        assert_eq!(acts["scope"], "chapter");
+        assert!(!acts["places"].as_array().unwrap().is_empty());
+    }
+
+    #[test]
+    fn focused_state_keeps_only_curated_settings_and_current_chapter_stops() {
+        let acts_16 = focused_state(43, 16, 12);
+        assert_eq!(acts_16["available"], true);
+        assert_eq!(acts_16["scope"], "chapter");
+        assert_eq!(acts_16["setting"]["name"], "Philippi");
+        assert_eq!(acts_16["stops"].as_array().unwrap().len(), 4);
+        assert!(acts_16["places"].as_array().unwrap().iter().all(|place| {
+            place["id"] == acts_16["setting"]["id"]
+                || acts_16["stops"]
+                    .as_array()
+                    .unwrap()
+                    .iter()
+                    .any(|stop| stop["id"] == place["id"])
+        }));
+        assert!(acts_16.get("reader_path").is_some());
+        assert!(acts_16.get("verse_count").is_some());
+        assert!(acts_16.get("chapter_count").is_some());
+
+        for (book, chapter, verse, name) in [
+            (43, 17, 1, "Thessalonica"),
+            (41, 2, 5, "Bethlehem"),
+            (65, 1, 9, "Patmos"),
+        ] {
+            let result = focused_state(book, chapter, verse);
+            assert_eq!(result["available"], true);
+            assert_eq!(result["setting"]["name"], name);
+        }
+
+        for (book, chapter) in [(0, 2), (0, 3), (0, 4), (18, 23)] {
+            let result = focused_state(book, chapter, 1);
+            assert_eq!(result["available"], false);
+            assert_eq!(result["scope"], "none");
+            assert!(result["places"].as_array().unwrap().is_empty());
+            assert!(result["message"]
+                .as_str()
+                .unwrap()
+                .contains("No curated geographic context"));
+        }
     }
 }

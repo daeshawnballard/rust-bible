@@ -468,7 +468,7 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> RouteRespo
         _ => unreachable!("edition was validated above"),
     };
     let body = format!(
-        r#"<section class="today-page" data-today data-today-date="{date_key}"><div class="today-hero"><div class="today-reading"><p class="today-date"><time datetime="{date_key}">{date_label}</time></p><h1>Today’s reading</h1><p class="today-reference">{title} <span>·</span> King James Version</p><div class="scripture today-scripture">{text}</div><div class="today-actions"><a class="today-read" href="{full_chapter}">{icon}<span>Read {book} {chapter}</span><span aria-hidden="true">→</span></a>{controls}</div></div><figure class="today-art"><img src="/art/{image}.webp" width="1536" height="1280" alt="{caption}" fetchpriority="high"><figcaption>{caption}</figcaption></figure></div><div class="today-support"><section class="continuation-row" data-continuation>{icon}<div data-continue-empty><p>Start with a book</p><a href="{library}">Browse the Library →</a></div><div data-continue-saved hidden><p>Saved on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{library}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section>{learning_card}</div><p class="today-rotation">{rotation} <span aria-hidden="true">·</span> <a href="{archive}">Link to this day</a></p></section>"#,
+        r#"<section class="today-page" data-today data-today-date="{date_key}"><div class="today-hero"><div class="today-reading"><p class="today-date"><time datetime="{date_key}">{date_label}</time></p><h1>Today’s reading</h1><section class="continuation-row continuation-row--today" data-continuation>{icon}<div data-continue-empty><p>Start with a book</p><a href="{library}">Browse the Library →</a></div><div data-continue-saved hidden><p>Saved on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{library}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section><p class="today-reference">{title} <span>·</span> King James Version</p><div class="scripture today-scripture">{text}</div><div class="today-actions"><a class="today-read" href="{full_chapter}">{icon}<span>Read {book} {chapter}</span><span aria-hidden="true">→</span></a>{controls}</div></div><figure class="today-art"><img src="/art/{image}.webp" width="1536" height="1280" alt="{caption}" fetchpriority="high"><figcaption>{caption}</figcaption></figure></div><div class="today-support">{learning_card}</div><p class="today-rotation">{rotation} <span aria-hidden="true">·</span> <a href="{archive}">Link to this day</a></p></section>"#,
         date_key = date.key(),
         date_label = date.label(),
         title = esc(&title),
@@ -613,6 +613,27 @@ mod tests {
         assert!(a.body.contains("/art/today/psalms.webp"));
         assert!(a.body.contains(&esc(&bible().books[18][22][0])));
         assert_eq!(scripture_html(&a.body), scripture_html(&b.body));
+    }
+
+    #[test]
+    fn today_continue_row_sits_below_the_heading_before_daily_content() {
+        let response = page(
+            &HashMap::from([("date".into(), "2026-10-15".into())]),
+            false,
+        );
+        let markup_start = response
+            .body
+            .find("<section class=\"today-page\"")
+            .expect("today page markup exists");
+        let markup = &response.body[markup_start..];
+        let heading = markup.find("<h1>Today’s reading</h1>").unwrap();
+        let continuation = markup.find("continuation-row--today").unwrap();
+        let reference = markup.find("class=\"today-reference\"").unwrap();
+        let art = markup.find("class=\"today-art\"").unwrap();
+        let scripture = markup.find("class=\"scripture today-scripture\"").unwrap();
+        assert!(heading < continuation);
+        assert!(continuation < reference && continuation < art && continuation < scripture);
+        assert_eq!(markup.matches("data-continuation").count(), 1);
     }
 
     #[test]

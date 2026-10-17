@@ -127,7 +127,7 @@ fn reader_open(book: usize, chapter: usize, client: bool) -> String {
     html.push_str("<div class=\"reader-toolbar\"><div class=\"reader-selectors\">");
     html.push_str(&book_selector(book, chapter, client));
     html.push_str("</div>");
-    html.push_str(&super::atlas::reader_link(book, chapter, client));
+    html.push_str(&super::reader_context::controls(book, chapter));
     html
 }
 
@@ -263,7 +263,7 @@ pub(super) fn chapter_content(
     let mut html = reader_open(book, chapter, client);
     let reference = format!("{} {chapter}", NAMES[book]);
     html.push_str(&reader_controls(&reference));
-    html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
+    html.push_str("</div><div class=\"reader-workspace\"><div class=\"reader-content\"><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (index, text) in bible().books[book][chapter - 1].iter().enumerate() {
         let number = index + 1;
         let class = if highlighted.is_some_and(|(start, end)| number >= start && number <= end) {
@@ -287,8 +287,9 @@ pub(super) fn chapter_content(
         verse_count,
         client,
     ));
-    html.push_str(&super::learning::related(book, chapter, client));
-    html.push_str("</section>");
+    html.push_str("</div>");
+    html.push_str(super::reader_context::shell());
+    html.push_str("</div></section>");
     html
 }
 
@@ -310,9 +311,9 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
     html.push_str("<div class=\"reader-toolbar\"><div class=\"reader-selectors\">");
     html.push_str(&book_selector(book, chapter, client));
     html.push_str("</div>");
-    html.push_str(&super::atlas::reader_link(book, chapter, client));
+    html.push_str(&super::reader_context::controls(book, chapter));
     html.push_str(&reader_controls(&label));
-    html.push_str("</div><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
+    html.push_str("</div><div class=\"reader-workspace\"><div class=\"reader-content\"><div class=\"scripture reader-scripture\" data-reader-primary-scripture role=\"group\" aria-label=\"Scripture text\">");
     for (number, text) in verses(reference) {
         html.push_str(&format!(
             "<p class=\"v\" id=\"v{number}\" data-reference=\"{}\" data-verse=\"{number}\"><sup>{number}</sup><span class=\"verse-text\">{}</span></p>",
@@ -337,8 +338,9 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
         last_verse - first_verse + 1,
         client,
     ));
-    html.push_str(&super::learning::related(book, chapter, client));
-    html.push_str("</section>");
+    html.push_str("</div>");
+    html.push_str(super::reader_context::shell());
+    html.push_str("</div></section>");
     html
 }
 

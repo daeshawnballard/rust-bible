@@ -41,12 +41,18 @@ export function progressHref(item) {
   return item.verse ? `${item.route}?resume=${item.verse}#v${item.verse}` : item.route;
 }
 
-export function resumeRoute(route, item = readProgress()) {
-  // Explicit chapter/verse links take precedence. Only a bare chapter reload
-  // resumes, including audio that advanced beyond the originally opened page.
-  const base = typeof route === 'string' && /^(\/book\/[A-Za-z0-9%-]+\/[1-9]\d*)(?:\?resume=[1-9]\d*#v[1-9]\d*)?$/.exec(route)?.[1];
-  return item?.verse && base && (item.route === base || item.entryRoute === base)
-    ? progressHref(item) : route;
+export function resumeRoute(route, item = readProgress(), {reload = false} = {}) {
+  // Resume bare reloads without losing the companion the reader selected.
+  if (typeof route !== 'string' || !item?.verse) return route;
+  const match = /^(\/book\/[A-Za-z0-9%-]+\/[1-9]\d*)(?:\?([^#]*))?(?:#(.*))?$/.exec(route);
+  if (!match || item.route !== match[1] && item.entryRoute !== match[1]) return route;
+  const params = new URLSearchParams(match[2] || '');
+  if (params.has('v')) return route;
+  if (match[3] && !params.has('resume')) return route;
+  if (!reload && params.has('resume') && Number(params.get('resume')) !== item.verse) return route;
+  for (const key of params.keys()) if (!['context','scene','part','resume'].includes(key)) return route;
+  params.set('resume', item.verse);
+  return `${item.route}?${params}#v${item.verse}`;
 }
 
 export function matchingVerse(root, item) {

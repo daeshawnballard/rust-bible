@@ -1,0 +1,187 @@
+.reader-illustration {
+  --illustration-gold: #edca87;
+  --illustration-ink: #181b18;
+  display: grid;
+  gap: 1rem;
+  margin: 1.75rem 0;
+  color: #eee7da;
+  font-family: 'Bible Display', Georgia, serif;
+}
+
+.reader-illustration-scene {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #b59a6266;
+  background: var(--illustration-ink);
+}
+
+.reader-illustration-scene > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reader-illustration-scene figcaption {
+  position: absolute;
+  right: .65rem;
+  bottom: .5rem;
+  left: .65rem;
+  z-index: 2;
+  color: #f0e8d8;
+  font: italic .8rem/1.35 Georgia, serif;
+  text-shadow: 0 1px 5px #000;
+  pointer-events: none;
+}
+
+.reader-illustration-hotspot {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid #f1d594;
+  border-radius: 50%;
+  color: #fff4d6;
+  background: #171a17d9;
+  box-shadow: 0 2px 9px #0009;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.reader-illustration-hotspot:hover,
+.reader-illustration-hotspot[aria-pressed="true"] {
+  color: #181b18;
+  background: var(--illustration-gold);
+}
+
+.reader-illustration-hotspot:focus-visible,
+.reader-illustration-read:focus-visible,
+.reader-illustration-question summary:focus-visible {
+  outline: 3px solid #fff0c3;
+  outline-offset: 3px;
+}
+
+.reader-illustration-hotspot-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+}
+
+.reader-illustration-hotspot-label {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  max-width: 10rem;
+  padding: .2rem .42rem;
+  border-radius: 3px;
+  color: #fff4d6;
+  background: #171a17e8;
+  font: 600 .73rem/1.2 system-ui, sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px #000;
+  transform: translateX(-50%);
+}
+
+.reader-illustration-detail {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
+  gap: 1.15rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid #b59a6240;
+  background: #191c19;
+}
+
+.reader-illustration-object {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid #a4894e80;
+  background: var(--illustration-ink);
+}
+
+.reader-illustration-copy { min-width: 0; }
+.reader-illustration-eyebrow {
+  margin: 0 0 .35rem;
+  color: #c7ab72;
+  font: .72rem/1.5 system-ui, sans-serif;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.reader-illustration-copy h3 {
+  margin: 0 0 .35rem;
+  color: var(--illustration-gold);
+  font: 400 clamp(1.65rem, 3vw, 2.35rem)/1.08 'Bible Display', Georgia, serif;
+}
+
+.reader-illustration-reference {
+  margin: 0 0 .8rem;
+  color: #c9bea4;
+  font: 1rem/1.4 'Bible Display', Georgia, serif;
+}
+
+.reader-illustration-explanation h4 {
+  margin: 0 0 .35rem;
+  color: #e8c682;
+  font: 400 1.2rem/1.3 'Bible Display', Georgia, serif;
+}
+
+.reader-illustration-explanation p {
+  margin: 0 0 .8rem;
+  color: #e3ded3;
+  font: 1rem/1.5 'Bible Display', Georgia, serif;
+}
+
+.reader-illustration-question {
+  margin: 0 0 .8rem;
+  padding: .55rem .7rem;
+  border: 1px solid #b59a624a;
+  border-radius: 4px;
+  color: #c9c2b3;
+  background: #d2ac5209;
+  font: .85rem/1.5 system-ui, sans-serif;
+}
+
+.reader-illustration-question summary {
+  min-height: 36px;
+  color: #e4c78b;
+  cursor: pointer;
+}
+
+.reader-illustration-question p { margin: .45rem 0 0; }
+
+.reader-illustration-read {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0 0 .8rem;
+  color: #f4dba7;
+  font: 1.05rem/1.4 'Bible Display', Georgia, serif;
+  text-underline-offset: 3px;
+}
+
+.reader-illustration-reconstruction-note {
+  display: block;
+  color: #b9ad98;
+  font: .75rem/1.45 system-ui, sans-serif;
+}
+
+@media (max-width: 680px) {
+  .reader-illustration-detail { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .reader-illustration-hotspot { width: 44px; height: 44px; }
+  .reader-illustration-hotspot-label { max-width: 7.5rem; font-size: .66rem; }
+  .reader-illustration-detail { padding: .75rem; }
+}

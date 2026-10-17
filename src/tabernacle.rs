@@ -3,7 +3,9 @@
 //! Rust renders the illustrated scene hotspots, explanation panel, and separate
 //! Scripture view in one fixed panel for both Axum and the WebAssembly reader.
 
-use super::{esc, parse_ref, ref_label, reference_url, route_path, verses, Ref, RouteResponse};
+use super::{
+    esc, parse_ref, ref_label, reference_url, route_path, slug, verses, Ref, RouteResponse,
+};
 
 const PARTS: [Part; 8] = [
     Part {
@@ -88,6 +90,110 @@ struct Part {
 
 fn part_for(id: &str) -> Option<&'static Part> {
     PARTS.iter().find(|part| part.id == id)
+}
+
+fn reader_context_target(reference: &Ref, part: &str, client: bool) -> String {
+    let verse = reference.v1.unwrap_or(1);
+    let chapter = reference.ch;
+    route_path(
+        &format!(
+            "/book/{}/{chapter}?resume={verse}&context=illustration&scene=tabernacle&part={part}#v{verse}",
+            slug(reference.book)
+        ),
+        client,
+    )
+}
+
+fn context_read_link(reference: &Ref, part: &str, client: bool) -> String {
+    let verse = reference.v1.unwrap_or(1);
+    let label = ref_label(reference);
+    format!(
+        r#"<a class="reader-illustration-read" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" href="{}">Read {} →</a>"#,
+        esc(&slug(reference.book)),
+        reference.ch,
+        verse,
+        esc(&reader_context_target(reference, part, client)),
+        esc(&label),
+    )
+}
+
+pub(super) fn recommended_part(book: usize, chapter: usize, verse: usize) -> Option<&'static str> {
+    for part in &PARTS {
+        for source in part.references {
+            if let Some(reference) = parse_ref(source) {
+                if reference.book == book
+                    && reference.ch == chapter
+                    && verses(&reference)
+                        .iter()
+                        .any(|(number, _)| *number == verse)
+                {
+                    return Some(part.id);
+                }
+            }
+        }
+    }
+    None
+}
+
+pub(super) fn legacy_target(part: Option<&str>, client: bool) -> Option<String> {
+    let selected = part.unwrap_or("lamp");
+    let part = part_for(selected)?;
+    let reference = parse_ref(part.references[0])?;
+    Some(reader_context_target(&reference, part.id, client))
+}
+
+pub(super) fn embedded(selected: Option<&str>, client: bool) -> Option<String> {
+    let selected = selected.unwrap_or("lamp");
+    let part = part_for(selected)?;
+    let source = parse_ref(part.references[0])?;
+    let positions = [
+        ("courtyard", 16.0, 60.5),
+        ("altar", 31.6, 52.7),
+        ("basin", 41.7, 53.0),
+        ("tent", 64.0, 11.5),
+        ("table", 59.0, 41.0),
+        ("lamp", 54.6, 34.0),
+        ("veil", 68.0, 28.0),
+        ("ark", 75.0, 23.5),
+    ];
+    let mut html = format!(
+        r#"<section class="reader-illustration" data-context-scene="tabernacle" data-context-selected-part="{}" aria-label="Inside the Tabernacle illustration"><figure class="reader-illustration-scene"><img src="/art/tabernacle.webp" width="1536" height="1024" alt="Illustrated reconstruction of the Tabernacle courtyard, tent, and furnishings">"#,
+        part.id,
+    );
+    for (id, x, y) in positions {
+        let item = part_for(id)?;
+        let pressed = if id == selected {
+            " aria-pressed=\"true\""
+        } else {
+            " aria-pressed=\"false\""
+        };
+        html.push_str(&format!(
+            r#"<button class="reader-illustration-hotspot" type="button" data-context-part="{id}" style="left:{x}%;top:{y}%" aria-label="Select {}"{pressed}><span class="reader-illustration-hotspot-dot" aria-hidden="true"></span><span class="reader-illustration-hotspot-label">{}</span></button>"#,
+            esc(item.name),
+            esc(item.name),
+        ));
+    }
+    html.push_str(
+        "<figcaption>Artist’s reconstruction · Scene details are illustrative.</figcaption></figure>",
+    );
+    let index = PARTS
+        .iter()
+        .position(|candidate| candidate.id == selected)?;
+    let (question, answer) = review_question(selected);
+    html.push_str(&format!(
+        r#"<div class="reader-illustration-detail" data-context-detail><img class="reader-illustration-object" src="/art/objects/{}.webp" width="1536" height="1024" alt="{}" loading="lazy" decoding="async"><div class="reader-illustration-copy"><p class="reader-illustration-eyebrow">Illustrated detail · {} of {}</p><h3>{}</h3><p class="reader-illustration-reference">{}</p><section class="reader-illustration-explanation"><h4>Explanation</h4><p>{}</p></section><details class="reader-illustration-question"><summary>{}</summary><p>{}</p></details>{}<small class="reader-illustration-reconstruction-note">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></div></section>"#,
+        part.id,
+        esc(part.image_alt),
+        index + 1,
+        PARTS.len(),
+        esc(part.name),
+        esc(&part.references.join(" · ")),
+        esc(part.note),
+        esc(question),
+        esc(answer),
+        context_read_link(&source, part.id, client),
+    ));
+    Some(html)
 }
 
 fn passage_blocks(part: &Part, client: bool) -> String {
@@ -344,6 +450,12 @@ mod tests {
     #[test]
     fn explore_routes_render_all_eight_named_parts_and_keyboard_links() {
         let landing = route("/explore/tabernacle", false);
+        assert_eq!(landing.status, 302);
+        assert_eq!(
+            landing.location.as_deref(),
+            super::legacy_target(None, false).as_deref()
+        );
+        let landing = super::selected_page(None, None, false);
         assert_eq!(landing.status, 200);
         for part in &PARTS {
             assert!(landing
@@ -359,16 +471,62 @@ mod tests {
         assert_eq!(landing.body.matches("class=\"scene-hotspot\"").count(), 8);
         assert!(landing.body.contains("data-panel-view=\"scripture\""));
         assert!(!landing.body.contains("<dialog"));
-        let object = route("/explore/tabernacle?part=ark&view=object", false);
+        let object_redirect = route("/explore/tabernacle?part=ark&view=object", false);
+        assert_eq!(object_redirect.status, 302);
+        assert_eq!(
+            object_redirect.location.as_deref(),
+            super::legacy_target(Some("ark"), false).as_deref()
+        );
+        let object = super::selected_page(Some("ark"), Some("object"), false);
         assert!(object.body.contains("data-panel-view=\"object\""));
         assert!(object.body.contains("Back to Scripture"));
     }
 
     #[test]
-    fn each_part_uses_canonical_kjv_excerpts_and_its_matching_route_state() {
+    fn all_legacy_part_routes_redirect_to_reader_and_context_api_art() {
         for part in &PARTS {
             let route_path = format!("/explore/tabernacle?part={}", part.id);
-            let response = route(&route_path, false);
+            let redirect = route(&route_path, false);
+            assert_eq!(redirect.status, 302, "{route_path}");
+            let target = redirect
+                .location
+                .expect("legacy route has a canonical target");
+            assert_eq!(
+                target,
+                super::legacy_target(Some(part.id), false).unwrap(),
+                "{route_path}"
+            );
+
+            let reader = route(&target, false);
+            assert_eq!(reader.status, 200, "{target}");
+            let reference = parse_ref(part.references[0]).expect("part source parses");
+            let expected_verse = reference.v1.expect("part source names its first verse");
+            assert!(reader.body.contains(&format!(
+                "data-reader-route=\"/book/Exodus/{}\"",
+                reference.ch
+            )));
+            assert!(reader.body.contains(&format!("id=\"v{expected_verse}\"")));
+
+            let api_path = format!(
+                "/api/reader-context?book={}&chapter={}&verse={expected_verse}&mode=illustration&part={}",
+                reference.book,
+                reference.ch,
+                part.id
+            );
+            let context = route(&api_path, true);
+            assert_eq!(context.status, 200, "{api_path}");
+            let value: serde_json::Value =
+                serde_json::from_str(&context.body).expect("reader context returns JSON");
+            assert_eq!(value["kind"], "illustration", "{api_path}");
+            assert_eq!(value["scene"], "tabernacle", "{api_path}");
+            assert_eq!(value["part"], part.id, "{api_path}");
+            let html = value["html"].as_str().expect("context HTML is present");
+            assert!(html.contains(&format!("data-context-selected-part=\"{}\"", part.id)));
+            assert!(html.contains(&format!("src=\"/art/objects/{}.webp\"", part.id)));
+
+            // Keep source text and full-page artwork assertions bound to the
+            // legacy renderer helper while the public route redirects.
+            let response = super::selected_page(Some(part.id), None, false);
             assert_eq!(response.status, 200, "{route_path}");
             assert!(response.body.contains("class=\"scripture\""));
             assert!(response.body.contains("class=\"context-note\""));
@@ -407,6 +565,56 @@ mod tests {
             }
             assert_eq!(part_for(part.id).unwrap().id, part.id);
         }
+    }
+
+    #[test]
+    fn embedded_art_uses_hotspot_controls_and_contains_no_reader_or_scripture_markup() {
+        for part in &PARTS {
+            let html = super::embedded(Some(part.id), false).unwrap();
+            assert!(html.contains(&format!("data-context-selected-part=\"{}\"", part.id)));
+            assert!(html.contains("data-context-part=\"lamp\""));
+            assert!(html.contains("data-context-read"));
+            assert!(html.contains("data-context-book=\"Exodus\""));
+            assert!(html.contains(&format!("/art/objects/{}.webp", part.id)));
+            assert!(html.contains("<h4>Explanation</h4>"));
+            assert!(html.contains("Artist’s reconstruction"));
+            for forbidden in [
+                "data-reader",
+                "class=\"scripture",
+                "class=\"v\"",
+                "data-read-aloud",
+                "scripture-player",
+            ] {
+                assert!(
+                    !html.contains(forbidden),
+                    "{} unexpectedly includes {forbidden}",
+                    part.id
+                );
+            }
+        }
+        assert!(super::embedded(Some("unknown"), false).is_none());
+    }
+
+    #[test]
+    fn every_legacy_target_points_to_a_valid_source_reference() {
+        for part in &PARTS {
+            let target = super::legacy_target(Some(part.id), false).unwrap();
+            assert!(target.contains(&format!("scene=tabernacle&part={}", part.id)));
+            assert_eq!(route(&target, false).status, 200, "{target}");
+        }
+        assert_eq!(
+            super::legacy_target(None, true).as_deref(),
+            Some("#/book/Exodus/25?resume=31&context=illustration&scene=tabernacle&part=lamp#v31")
+        );
+    }
+
+    #[test]
+    fn recommended_part_matches_exact_referenced_verses() {
+        assert_eq!(super::recommended_part(1, 25, 31), Some("lamp"));
+        assert_eq!(super::recommended_part(1, 25, 30), Some("table"));
+        assert_eq!(super::recommended_part(1, 27, 2), Some("altar"));
+        assert_eq!(super::recommended_part(1, 35, 1), None);
+        assert_eq!(super::recommended_part(0, 25, 31), None);
     }
 
     #[test]

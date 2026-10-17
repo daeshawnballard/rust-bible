@@ -5,18 +5,34 @@ use super::{esc, html_response, route_path, RouteResponse};
 pub(super) fn page(client: bool) -> RouteResponse {
     let today = esc(&route_path("/today", client));
     let library = esc(&route_path("/library", client));
-    let explore = esc(&route_path("/explore", client));
+    let journey = esc(&route_path(
+        "/book/Acts/16?resume=12&context=journey#v12",
+        client,
+    ));
+    let ark = esc(&route_path(
+        "/book/Genesis/6?resume=14&context=illustration&scene=noahs-ark&part=construction#v14",
+        client,
+    ));
+    let sower = esc(&route_path(
+        "/book/Matthew/13?resume=3&context=illustration&scene=sower&part=path#v3",
+        client,
+    ));
+    let tabernacle = esc(&route_path(
+        "/book/Exodus/25?resume=31&context=illustration&scene=tabernacle&part=lamp#v31",
+        client,
+    ));
     let content = format!(
         r#"<section class="about-page" aria-labelledby="about-title">
   <header class="about-intro">
     <p class="about-eyebrow">The Bible · King James Version</p>
     <h1 id="about-title">About this Bible</h1>
-    <p class="about-lede">A quiet place to read Scripture, listen with your device, and explore illustrated scenes.</p>
+    <p class="about-lede">A quiet place to read Scripture, listen with your device, and follow Journey or Illustrations in the reader.</p>
     <p class="about-summary">This reader presents the 66 books of the King James Version (KJV). Scripture text is kept separate from editorial notes, explanations, and artwork.</p>
     <nav class="about-quick-links" aria-label="Start reading">
       <a class="about-primary" href="{today}">Read today’s passage <span aria-hidden="true">→</span></a>
       <a href="{library}">Browse the Library</a>
-      <a href="{explore}">Explore the passage map</a>
+      <a href="{journey}">Open Journey</a>
+      <a href="{ark}">Open Illustrations</a>
     </nav>
   </header>
 
@@ -33,8 +49,12 @@ pub(super) fn page(client: bool) -> RouteResponse {
         <p>Browse all 66 books, open a book’s chapter list, and choose where to begin.</p>
       </article>
       <article class="about-card">
-        <h3><a href="{explore}">Explore</a></h3>
-        <p>Follow your reading on a real terrain map, with Scripture beside it and geographic notes in a separate tab. Illustrated studies remain available through Place context.</p>
+        <h3><a href="{journey}">Journey</a></h3>
+        <p>Follow a verse through its curated geographic context beside the canonical Scripture text. Unsupported passages keep their setting unassigned.</p>
+      </article>
+      <article class="about-card">
+        <h3><a href="{ark}">Illustrations</a></h3>
+        <p>Open a scene from its linked verse. The illustration and its notes stay alongside Scripture in the canonical reader.</p>
       </article>
     </div>
   </section>
@@ -51,7 +71,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
       <div>
         <h3>Listen to the selection you opened</h3>
         <p>The default natural narrator uses the open-source Kokoro model on your device. The first listen downloads about 100 MB of model files; your browser can cache them for future visits. There is no paid speech API, account, or key. Audio is generated locally from the KJV text; Scripture is never sent to a narration service. Device voices are also available in Playback options. Tap or click a Listen control to start—audio does not autoplay. Choose a voice and speed in the playback controls. <strong>Follow reading</strong> scrolls the spoken verse into view and can be turned off.</p>
-        <p>Today reads only its passage. A chapter’s <strong>Listen from here</strong> continues through later Scripture. Each Explore scene reads only its own selected Scripture. Playback ends or stops when you navigate away.</p>
+        <p>Today reads only its passage. A chapter’s <strong>Listen from here</strong> continues through later Scripture. Each illustration reads only its linked Scripture. Playback ends or stops when you navigate away.</p>
       </div>
     </div>
   </section>
@@ -61,13 +81,13 @@ pub(super) fn page(client: bool) -> RouteResponse {
     <h2 id="artwork-title">What is Scripture, and what is interpretation?</h2>
     <p>The KJV passages are canonical Scripture from the embedded text corpus. Editorial notes and scene explanations are separate reading aids; they are not part of the Bible text or audio.</p>
     <p>Illustrations are artistic interpretations or reconstructions. They are not archaeological evidence or proof of what a historical object or place looked like.</p>
-    <p class="about-source-links"><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Project source ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/docs/tabernacle-sources.md" target="_blank" rel="noopener noreferrer">Tabernacle source notes ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/docs/learning-sources.md" target="_blank" rel="noopener noreferrer">Illustrated study sources ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/docs/library-artwork.md" target="_blank" rel="noopener noreferrer">Library artwork notes ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/assets/imagegen/manifest.json" target="_blank" rel="noopener noreferrer">Artwork provenance ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/thiagobodruk/bible" target="_blank" rel="noopener noreferrer">KJV corpus source ↗</a></p>
+    <p class="about-source-links"><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Project source ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/docs/tabernacle-sources.md" target="_blank" rel="noopener noreferrer">Tabernacle source notes ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/docs/learning-sources.md" target="_blank" rel="noopener noreferrer">Illustration sources ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/docs/library-artwork.md" target="_blank" rel="noopener noreferrer">Library artwork notes ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/daeshawnballard/rust-bible/blob/main/assets/imagegen/manifest.json" target="_blank" rel="noopener noreferrer">Artwork provenance ↗</a> <span aria-hidden="true">·</span> <a href="https://github.com/thiagobodruk/bible" target="_blank" rel="noopener noreferrer">KJV corpus source ↗</a></p>
   </section>
 
   <section class="about-section about-access" aria-labelledby="access-title">
     <p class="about-eyebrow">Controls</p>
     <h2 id="access-title">Keyboard and display options</h2>
-    <p>Links, buttons, chapter choices, and the questions below can be used with a keyboard. In illustrated scenes, hotspots can be reached with a keyboard, and a labeled selector offers another way to choose a stop. Text and controls reflow for narrow screens; motion effects respect your device’s reduced-motion setting.</p>
+    <p>Links, buttons, chapter choices, and the questions below can be used with a keyboard. In illustrations, hotspots can be reached with a keyboard, and a labeled selector offers another way to choose a stop. Text and controls reflow for narrow screens; motion effects respect your device’s reduced-motion setting.</p>
   </section>
 
   <section class="about-section about-faq" aria-labelledby="faq-title">
@@ -82,8 +102,13 @@ pub(super) fn page(client: bool) -> RouteResponse {
       <p>As you read, the current verse is saved after scrolling settles. While audio is playing, the verse being spoken takes priority. Continue reading opens at that verse, including when it is in a later chapter. A book’s Listen control resumes the saved verse when that book matches your saved reading location.</p>
     </details>
     <details>
-      <summary>What does Explore show?</summary>
-      <p>Explore follows your saved book, chapter, and verse. Named places are sourced candidates, not automatic story settings. Curated camera-follow ranges currently cover Acts 16–17, Luke 2, and Revelation 1:9; elsewhere the map shows chapter or book references with an explicit unassigned-setting message. Pan freely and use Return to passage to resume following. Modern terrain needs a network connection and WebGL; Scripture and the place list remain available if it fails. Place context keeps geographic explanation separate and links to the three preserved illustrated studies.</p>
+      <summary>What does Journey show?</summary>
+      <p>Journey follows the selected verse in the canonical reader. Genesis 2–4 uses symbolic story scenery. Curated geographic settings cover Acts 16–17, Luke 2, and Revelation 1:9. Only curated settings and chapter journey stops appear in this companion; named places elsewhere do not automatically establish a story setting. When no curated setting or journey applies, Journey leaves the location unassigned; it does not fall back to a world view or borrow places from another chapter in the book. Modern terrain needs a network connection and WebGL; Scripture and available place context remain readable if the map fails.</p>
+    </details>
+    <details>
+      <summary>Which illustrations are available?</summary>
+      <p>The reader’s Illustrations context includes Noah’s Ark across Genesis 6–9, the Sower in Matthew 13, and the Tabernacle in Exodus 25–31 and 35–40. Each scene opens at a linked verse with its selected part; its reconstruction and explanation remain separate from canonical Scripture.</p>
+      <p><a href="{ark}">Noah’s Ark</a> · <a href="{sower}">The Sower</a> · <a href="{tabernacle}">The Tabernacle</a></p>
     </details>
     <details>
       <summary>Do I need an account or an API key?</summary>
@@ -100,4 +125,27 @@ pub(super) fn page(client: bool) -> RouteResponse {
         client,
         None,
     )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::page;
+
+    #[test]
+    fn about_page_links_to_canonical_reader_contexts_and_lists_coverage() {
+        let html = page(false).body;
+        for expected in [
+            "href=\"/book/Acts/16?resume=12&amp;context=journey#v12\"",
+            "href=\"/book/Genesis/6?resume=14&amp;context=illustration&amp;scene=noahs-ark&amp;part=construction#v14\"",
+            "href=\"/book/Matthew/13?resume=3&amp;context=illustration&amp;scene=sower&amp;part=path#v3\"",
+            "href=\"/book/Exodus/25?resume=31&amp;context=illustration&amp;scene=tabernacle&amp;part=lamp#v31\"",
+            "Genesis 2–4 uses symbolic story scenery.",
+            "Acts 16–17, Luke 2, and Revelation 1:9",
+            "Genesis 6–9",
+            "Exodus 25–31 and 35–40",
+        ] {
+            assert!(html.contains(expected), "missing about-page content: {expected}");
+        }
+        assert!(!html.contains(">Explore</a>"));
+    }
 }

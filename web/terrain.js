@@ -322,7 +322,7 @@ export async function createTerrainMap(container, {
     } else if (otherResourcesFailed) {
       reportStatus("degraded", "Some map resources failed to load. Reopen the map to retry.");
     } else if (map?.loaded()) {
-      reportStatus("ready", "NASA Blue Marble imagery is ready. Elevation relief loads when 3D is enabled.");
+      reportStatus("ready", desired3D ? "Modern imagery and 3D terrain are ready." : "NASA Blue Marble imagery is ready. Elevation relief loads when 3D is enabled.");
     }
   }
 

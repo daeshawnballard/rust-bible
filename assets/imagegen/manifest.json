@@ -2197,6 +2197,29 @@
       "alpha": false,
       "notes": "Shares the existing approved Tabernacle artwork; title/description remain real HTML metadata. Third-party card-cache refresh is not implied.",
       "sha256": "f1cbd94000599f945bb5e00c3a501be4b80e4117461c0353394e192504f51708"
+    },
+    {
+      "id": "genesis-story-journey",
+      "source": "assets/imagegen/source/journey/genesis.png",
+      "final": "web/art/journey/genesis.webp",
+      "intended_use": "Schematic story scenery for the passage companion, Genesis 2\u20134",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-736a62bb-8cf1-47fd-9115-4dfbbbb3c1ee",
+      "reference": "web/art/tabernacle.webp",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "4afbed6c9ba72f670c460b8e55e627f26197258c5891835013b91670dead13e7",
+      "final_sha256": "5f574e4d57b04df96aa824e8458e435638b6bb97af3858e4ce7412ae9360a25e",
+      "notes": "Original PNG retained. Scene labels, active pins and schematic path are real interface elements. No verified coordinates assigned to Eden or Nod.",
+      "prompt_summary": "One production 3:2 symbolic Genesis 2\u20134 landscape in the existing detailed isometric miniature style. Lush garden left, natural garden edge center, rough cultivated ground right, distant valley, small river and winding earth path. Warm gold lighting, charcoal ground. No UI, text, pins, arrows, people, deity, buildings, modern map, or Tabernacle objects. Symbolic illustration, not a surveyed route or precise Eden geography.",
+      "prompt_record_note": "Summary of the generation request; generation ID identifies the original built-in ImageGen output."
     }
   ]
 }

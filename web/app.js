@@ -2,14 +2,14 @@ import { initExperience } from './experience.js';
 import { disposeLibrary, initLibrary } from './library.js';
 import { initJourney, resolveTodayDate, routeFromHash } from './journey.js';
 import { resumeRoute } from './progress.js';
-import { initAtlas, disposeAtlas, resolveMapRoute } from './atlas.js';
+import { initReaderContext, disposeReaderContext, resolveLegacyReaderRoute } from './reader-context.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 let journey = null;
 
 function showError(message) {
-  disposeAtlas(app);
+  disposeReaderContext(app);
   disposeLibrary(app);
   app.innerHTML = "";
   const heading = document.createElement("h1");
@@ -42,7 +42,7 @@ function createRustBridge(exports) {
 }
 
 function installPage(response, route, { initial = false } = {}) {
-  disposeAtlas(app);
+  disposeReaderContext(app);
   disposeLibrary(app);
   if (response.location) {
     const target = `#${routeFromHash(response.location)}`;
@@ -68,7 +68,7 @@ function installPage(response, route, { initial = false } = {}) {
 
   const journeyResult = journey?.afterRender(route, response, { initial }) || {};
   initExperience(app);
-  initAtlas(app);
+  initReaderContext(app);
   if (app.querySelector('[data-atlas-page]')) {
     window.scrollTo({top:0,left:0,behavior:'instant'});
   } else if (journeyResult.restoreVerseId) {
@@ -122,10 +122,10 @@ async function start() {
   const renderCurrent = () => {
     try {
       let route = resolveTodayDate(routeFromHash(window.location.hash));
-      const mapped=resolveMapRoute(route);
+      const mapped=resolveLegacyReaderRoute(route);
       if(mapped!==route){window.history.replaceState(null,'',`#${mapped}`);route=mapped;}
       if (initial) {
-        const resumed = resumeRoute(route);
+        const resumed = resumeRoute(route, undefined, {reload: performance.getEntriesByType('navigation')[0]?.type === 'reload'});
         if (resumed !== route) {
           window.history.replaceState(null, '', `#${resumed}`);
           route = resumed;

@@ -115,6 +115,10 @@ async fn serve(uri: Uri) -> Response {
             .expect("static logo response is valid");
     }
     let map_asset = match uri.path() {
+        "/reader-context.js" => Some((
+            "text/javascript; charset=utf-8",
+            include_str!("../web/reader-context.js"),
+        )),
         "/atlas.js" => Some((
             "text/javascript; charset=utf-8",
             include_str!("../web/atlas.js"),

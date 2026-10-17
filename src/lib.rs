@@ -13,7 +13,10 @@ const CSS: &str = concat!(
     include_str!("../web/vendor/maplibre/maplibre-gl.css"),
     include_str!("../web/atlas.css"),
     include_str!("../web/polish-library.css"),
-    include_str!("../web/polish.css")
+    include_str!("../web/polish.css"),
+    include_str!("../web/continue.css"),
+    include_str!("../web/reader-illustrations.css"),
+    include_str!("../web/reader-context.css")
 );
 
 mod about;
@@ -21,6 +24,7 @@ mod atlas;
 mod learning;
 mod library;
 mod reader;
+mod reader_context;
 mod tabernacle;
 mod today;
 
@@ -471,23 +475,10 @@ fn page_body(q: &str, body: &str, client: bool) -> String {
     } else {
         ""
     };
-    let explore = esc(&route_path("/explore", client));
     let about = esc(&route_path("/about", client));
-    let explore_current = if body.contains("data-learning")
-        || body.contains("illustrated-explore")
-        || body.contains("data-atlas-page")
-    {
-        " aria-current=\"page\""
-    } else {
-        ""
-    };
     let q = esc(q);
     let header = format!(
-        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a><a href="{explore}"{explore_current}>Explore</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"##
-    );
-    let header = header.replace(
-        &format!("href=\"{explore}\""),
-        &format!("href=\"{explore}\" data-atlas-entry"),
+        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"##
     );
     format!("{header}<main class=\"wrap\" id=\"main-content\" tabindex=\"-1\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version · Public domain</span><span class=\"footer-links\"><a href=\"{about}\">About &amp; help</a><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></span></footer>")
 }
@@ -498,7 +489,7 @@ fn document(title: &str, body: &str) -> String {
     } else {
         ""
     };
-    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script><script type=\"module\" src=\"/journey.js\"></script><script type=\"module\" src=\"/atlas.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
+    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script><script type=\"module\" src=\"/journey.js\"></script><script type=\"module\" src=\"/reader-context.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
 }
 
 fn html_response(
@@ -880,24 +871,19 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
         "/api/verse" => api_verse(&params),
         "/api/search" => api_search(&params),
         "/api/atlas" => atlas::api(&params),
+        "/api/reader-context" => reader_context::api(&params, client),
         "/about" => about::page(client),
-        "/explore" if params.contains_key("scene") => {
-            learning::hub(params.get("scene").map(String::as_str), client)
+        "/explore" | "/explore/studies" => redirect(reader_context::legacy(&params, client)),
+        "/explore/noahs-ark" | "/explore/sower" | "/explore/tabernacle" => {
+            match learning::legacy_target(
+                path.trim_start_matches("/explore/"),
+                params.get("part").map(String::as_str),
+                client,
+            ) {
+                Some(target) => redirect(target),
+                None => not_found(&path, client, anchor),
+            }
         }
-        "/explore/studies" => learning::hub(params.get("scene").map(String::as_str), client),
-        "/explore" => atlas::page(&params, client),
-        "/explore/noahs-ark" | "/explore/sower" => learning::page(
-            path.trim_start_matches("/explore/"),
-            params.get("part").map(String::as_str),
-            params.get("view").map(String::as_str),
-            client,
-        ),
-        "/explore/tabernacle" if params.is_empty() => tabernacle::explore_page(client),
-        "/explore/tabernacle" => tabernacle::selected_page(
-            params.get("part").map(String::as_str),
-            params.get("view").map(String::as_str),
-            client,
-        ),
         _ if path.starts_with("/book/") => {
             let rest = &path[6..];
             if let Some((name, chapter)) = rest.split_once('/') {

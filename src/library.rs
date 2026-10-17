@@ -481,7 +481,9 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
         ""
     };
     let home = esc(&route_path("/library", client));
-    let first = esc(&route_path(&format!("/book/{slug}/1"), client));
+    let first_route = format!("/book/{slug}/1");
+    let first = esc(&route_path(&first_route, client));
+    let first_route = esc(&first_route);
     let read_icon =
         include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
     let listen_icon =
@@ -501,7 +503,7 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
         .expect("serializable KJV verses")
         .replace('<', "\\u003c");
     let mut html = format!(
-        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}" data-library-return>Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><img class="cover-binding" src="/art/book-binding.webp" alt="" aria-hidden="true" width="1080" height="1440"><span class="cover-title{title_class}" style="--cover-word-em:{word_em}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><div class="book-audio" data-read-aloud data-book-audio data-book-index="{index}" data-book-route="{reader_book_route}" data-reference="{name}"><div class="book-actions"><a class="book-begin" href="{first}">{read_icon}<span>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-version">King James Version · Free natural voice<br><small>First listen downloads about 100 MB.</small></p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="kokoro:af_heart">Heart · Natural American</option></select></label></div><small>Synthetic Kokoro voice, generated on this device. Device voices are also available. Reads Scripture only. Resumes your saved verse in this book, or starts at chapter 1.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
+        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}" data-library-return>Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><img class="cover-binding" src="/art/book-binding.webp" alt="" aria-hidden="true" width="1080" height="1440"><span class="cover-title{title_class}" style="--cover-word-em:{word_em}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><section class="continuation-row continuation-row--book" data-continuation data-continue-hide-empty data-continue-other-book hidden>{read_icon}<div data-continue-saved hidden><p>Last opened on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{first}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section><div class="book-audio" data-read-aloud data-book-audio data-book-index="{index}" data-book-route="{reader_book_route}" data-reference="{name}"><div class="book-actions"><a class="book-begin" data-book-read-link data-book-first-route="{first_route}" href="{first}" aria-label="Begin reading {name} chapter 1">{read_icon}<span data-book-read-label>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-start-first" data-book-start-first hidden><a data-book-start-link href="{first}">Start at chapter 1 →</a></p><p class="book-version">King James Version · Free natural voice<br><small>First listen downloads about 100 MB.</small></p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="kokoro:af_heart">Heart · Natural American</option></select></label></div><small>Synthetic Kokoro voice, generated on this device. Device voices are also available. Reads Scripture only. Resumes your saved verse in this book, or starts at chapter 1.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
         word_em = COVER_WORD_EM[index],
         tagline = esc(detail.tagline),
         description = esc(detail.description),
@@ -586,9 +588,15 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
     } else {
         format!("Showing {} of {total} books", books.len())
     };
+    let read_icon =
+        include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
+    let continuation = format!(
+        r#"<section class="continuation-row continuation-row--library" data-continuation data-continue-hide-empty hidden>{read_icon}<div data-continue-saved hidden><p>Last opened on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section>"#,
+        esc(&route_path("/library", client))
+    );
     let mut html = format!(
-        "<section class=\"library-page\" data-library><div class=\"library-heading\"><p class=\"eyebrow\">The Bible · King James Version</p><h1>Explore the Library</h1><p>Browse the books of the Bible by testament, literary form, or title.</p></div>{}<p class=\"library-count\" role=\"status\">{count}</p>",
-        render_controls(testament, category, sort, size)
+        "<section class=\"library-page\" data-library><div class=\"library-heading\"><p class=\"eyebrow\">The Bible · King James Version</p><h1>Library</h1><p>All 66 books, ready to browse by testament, literary form, or title.</p></div>{continuation}{}<p class=\"library-count\" role=\"status\">{count}</p>",
+        render_controls(testament, category, sort, size),
     );
 
     if books.is_empty() {
@@ -739,5 +747,27 @@ mod tests {
             cover_size(&HashMap::from([("size".into(), "large".into())])),
             240
         );
+    }
+
+    #[test]
+    fn continue_rows_precede_the_library_gallery_and_preserve_chapter_one() {
+        let library = super::render(&HashMap::new(), false);
+        let heading = library.find("<h1>Library</h1>").unwrap();
+        let continuation = library
+            .find("data-continuation data-continue-hide-empty hidden")
+            .unwrap();
+        let gallery = library.find("class=\"library-grid\"").unwrap();
+        assert!(library.contains("All 66 books, ready to browse"));
+        assert!(heading < continuation && continuation < gallery);
+
+        let book = render_book(0, false);
+        assert!(book.contains(
+            "data-book-read-link data-book-first-route=\"/book/genesis/1\" href=\"/book/genesis/1\""
+        ));
+        assert!(book.contains("data-book-start-first hidden"));
+        assert!(book.contains("Start at chapter 1 →"));
+        assert!(book.contains(
+            "data-continuation data-continue-hide-empty data-continue-other-book hidden"
+        ));
     }
 }

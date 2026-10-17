@@ -132,14 +132,44 @@ function setHidden(element, hidden) {
   if (element) element.hidden = hidden;
 }
 
+function queryAllIncludingRoot(root, selector) {
+  const matches = root?.matches?.(selector) ? [root] : [];
+  return [...matches, ...(root?.querySelectorAll?.(selector) || [])];
+}
+
+function sameBook(left, right) {
+  return typeof left === "string" && typeof right === "string"
+    && left.trim().toLocaleLowerCase() === right.trim().toLocaleLowerCase();
+}
+
+function updateBookActions(root, item, valid) {
+  for (const page of queryAllIncludingRoot(root, "[data-book-page]")) {
+    const primary = page.querySelector("[data-book-read-link]");
+    if (!primary) continue;
+    const label = primary.querySelector("[data-book-read-label]");
+    const secondary = page.querySelector("[data-book-start-first]");
+    const book = page.dataset.book || "";
+    const matches = valid && item && sameBook(book, item.book);
+    const displayLabel = item
+      ? `${item.book} ${item.chapter}${item.verse ? `:${item.verse}` : ""}`
+      : "";
+
+    if (matches) {
+      primary.setAttribute("href", routeHref(progressHref(item)));
+      primary.setAttribute("aria-label", `Continue reading ${displayLabel}`);
+      if (label) label.textContent = `Continue ${displayLabel}`;
+      setHidden(secondary, false);
+    } else {
+      const firstRoute = safeInternalPath(primary.dataset.bookFirstRoute);
+      if (firstRoute) primary.setAttribute("href", routeHref(firstRoute));
+      primary.setAttribute("aria-label", `Begin reading ${book} chapter 1`);
+      if (label) label.textContent = "Begin reading";
+      setHidden(secondary, true);
+    }
+  }
+}
+
 async function updateContinuation(root, resolveReaderUri, version, expectedVersion) {
-  const container = root.querySelector("[data-continuation]");
-  if (!container) return;
-  const link = container.querySelector("[data-continue-link]");
-  const label = container.querySelector("[data-continue-label]");
-  const empty = container.querySelector("[data-continue-empty]");
-  const savedPanel = container.querySelector("[data-continue-saved]");
-  const clear = container.querySelector("[data-continue-clear]");
   const item = readProgress();
   let valid = !!item;
   if (item && typeof resolveReaderUri === "function") {
@@ -149,25 +179,43 @@ async function updateContinuation(root, resolveReaderUri, version, expectedVersi
       valid = false;
     }
   }
-  if (!container.isConnected || version.current !== expectedVersion) return;
-  if (!valid || !item) {
-    setHidden(savedPanel, true);
-    setHidden(link, true);
-    setHidden(empty, false);
-    setHidden(clear, true);
-    return;
+  if (version.current !== expectedVersion) return;
+
+  updateBookActions(root, item, valid);
+  for (const container of queryAllIncludingRoot(root, "[data-continuation]")) {
+    if (container.isConnected === false) continue;
+    const link = container.querySelector("[data-continue-link]");
+    const label = container.querySelector("[data-continue-label]");
+    const empty = container.querySelector("[data-continue-empty]");
+    const savedPanel = container.querySelector("[data-continue-saved]");
+    const clear = container.querySelector("[data-continue-clear]");
+
+    if (!valid || !item) {
+      setHidden(container, container.hasAttribute("data-continue-hide-empty"));
+      setHidden(savedPanel, true);
+      setHidden(link, true);
+      setHidden(empty, false);
+      setHidden(clear, true);
+      continue;
+    }
+
+    const displayLabel = `${item.book} ${item.chapter}${item.verse ? `:${item.verse}` : ""}`;
+    if (label) label.textContent = displayLabel;
+    if (link) {
+      link.setAttribute("href", routeHref(progressHref(item)));
+      link.setAttribute("aria-label", `Continue reading ${displayLabel}`);
+      if (!label) link.textContent = `Continue reading ${displayLabel} →`;
+      link.hidden = false;
+    }
+    setHidden(savedPanel, false);
+    setHidden(empty, true);
+    setHidden(clear, false);
+
+    const currentBook = container.closest("[data-book-page]")?.dataset.book;
+    const isCurrentBook = container.hasAttribute("data-continue-other-book")
+      && sameBook(currentBook, item.book);
+    setHidden(container, isCurrentBook);
   }
-  const displayLabel = `${item.book} ${item.chapter}${item.verse ? `:${item.verse}` : ""}`;
-  if (label) label.textContent = displayLabel;
-  if (link) {
-    link.setAttribute("href", routeHref(progressHref(item)));
-    link.setAttribute("aria-label", `Continue reading ${displayLabel}`);
-    if (!label) link.textContent = `Continue reading ${displayLabel} →`;
-    link.hidden = false;
-  }
-  setHidden(savedPanel, false);
-  setHidden(empty, true);
-  setHidden(clear, false);
 }
 
 function routeFromAnchor(anchor) {
@@ -229,7 +277,13 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     const toolbar = root.querySelector('.reader-toolbar')?.getBoundingClientRect();
     const line = Math.max((toolbar?.bottom || 0) + 20, window.innerHeight * .26);
     const verses = [...root.querySelectorAll('[data-reader] .scripture .v')];
-    const node = verses.find(verse => {
+    const lastVerse = verses.at(-1);
+    const lastRect = lastVerse?.getBoundingClientRect();
+    const atDocumentEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+    // At the footer the reading line cannot move any farther down. Save the
+    // last visible verse instead of leaving the final verses unreachable.
+    const reachedLastVerse = atDocumentEnd && lastRect?.top >= 0 && lastRect.bottom <= window.innerHeight;
+    const node = (reachedLastVerse ? lastVerse : null) || verses.find(verse => {
       const rect = verse.getBoundingClientRect();
       return rect.bottom > line && rect.top < window.innerHeight - 24;
     }) || verses.filter(verse => {

@@ -161,3 +161,20 @@ Actual browser captures: [book](docs/site-polish-book.jpg), [390px reader](docs/
 Known limits: natural narration still needs its initial model download and can pause between generated verses; no verified downloadable Black male/female voice pair was adopted. Geographic camera-follow ranges remain curated rather than exhaustive. Physical devices and other browser engines were not run in this pass. Hosted release receipts are retained separately from these local captures.
 
 A final 320px screenshot on the first published polish candidate exposed native select chrome clipping three-digit chapter labels despite the text fitting the computed content width. The correction retains real native `<select>` elements, removes their extra chrome with `appearance: none`, and draws a CSS chevron with reserved space. A new actual 320px capture showed `Chapter 150` fully visible; selecting Chapter 23 navigated to Psalm 23. Reader and map selectors share this correction.
+
+
+## Integrated reader first pass — October 16–17, 2026
+
+The latest user direction supersedes the standalone Explore gallery/map navigation: Today and Library are the primary entries; the canonical chapter reader owns Passage, Journey, and contextual Illustrations. The approved covers and individual study artwork are retained. `docs/reader-journey.jpg` and `docs/reader-illustrations.jpg` are fresh local-browser captures at 1280 × 900, not mockups. The new Genesis art is explicitly schematic scenery rather than geographic evidence.
+
+Direct local UI observations on the current implementation: Genesis 2:8 → 3:23 → 3:24 updates the story stage; a browsed Tabernacle table leaves the saved verse at 25:31; its explicit Read action moves to 25:23; Today, Library and the matching book action expose that exact continuation. The chapter keeps one Scripture stream and one audio player. Narrow 390px and 320px layouts showed no horizontal overflow; the companion uses normal document flow and has no nested Scripture scroll pane. The detail selector and text size/spacing controls responded.
+
+A first source-link click exposed a tall sticky companion whose action remained below the viewport. The companion now uses a measured sticky offset for tall cards, allowing its bottom actions to enter the screen; the real source action was repeated successfully. A selector-role lookup failed because the automation surface exposed pressed mode buttons as checkboxes; inspection showed visible enabled controls and the actual DOM-backed control click succeeded. These were kept separate from product behavior claims.
+
+Real local Kokoro audio read Genesis 3:23–24, advanced into 4:1–2, and changed the Journey setting without remounting playback. Observed PCM for 3:24: 237600 samples / 9.9 seconds, with advancing native audio time and browser speech synthesis inactive. Switching Passage → Journey retained active playback into 4:1. Pause held the same audio time; Stop returned to the reached verse. This is local runtime evidence; the final hosted candidate is checked separately after publication.
+
+Supporting checks: 52 Rust tests, exact-progress validation tests, JS syntax, release WASM build, and diff checks passed. Geographic/story coverage remains explicitly limited; physical devices, other browser engines, exhaustive audio for all 66 books, and acoustic voice-identity claims are not established by these checks.
+
+A settled real PageUp key updated the reading bookmark from Genesis 3:20 to 3:14. A real End key then exposed an end-of-document edge: the reading line stayed on 3:20 even though the last verse was visible above the footer. The scroll tracker now saves the last displayed verse when the document end has been reached and that verse is fully visible. Accessibility-API page scrolling did not emit the same DOM input-intent signal in this browser, so keyboard input is used for this acceptance check.
+
+The corrected End-key journey was repeated in the actual local browser: the bookmark reached Genesis 3:24 at the document end and the companion changed to the guarded way.

@@ -1,0 +1,233 @@
+/* Shared, device-local Continue reading surface for Today, Library, and books. */
+.continuation-row {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #eee5d6;
+}
+
+.continuation-row[hidden],
+.continuation-row [hidden] {
+  display: none !important;
+}
+
+.continuation-row > svg {
+  width: 27px;
+  height: 27px;
+  flex: none;
+  color: #d9bb80;
+  fill: currentColor;
+}
+
+.continuation-row [data-continue-empty],
+.continuation-row [data-continue-saved] {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.continuation-row p {
+  margin: 0;
+  color: #b9c0ba;
+  font-size: .84rem;
+  line-height: 1.3;
+}
+
+.continuation-row [data-continue-label] {
+  color: #f0e3c5;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.continuation-row [data-continue-link],
+.continuation-row [data-continue-empty] a {
+  color: #e6ca91;
+  font-size: .98rem;
+  line-height: 1.4;
+  text-decoration-color: #c6a76a80;
+  text-underline-offset: 4px;
+}
+
+.continuation-row [data-continue-link]:hover,
+.continuation-row [data-continue-empty] a:hover {
+  color: #f4dfb0;
+}
+
+.continuation-row [data-continue-clear] {
+  min-height: 34px;
+  padding: 4px 9px;
+  border: 1px solid #8a805f66;
+  border-radius: 3px;
+  background: transparent;
+  color: #beb6a4;
+  font: inherit;
+  font-size: .78rem;
+  cursor: pointer;
+}
+
+.continuation-row [data-continue-clear]:hover {
+  border-color: #cbb478;
+  color: #f0e4c8;
+}
+
+.continuation-row :focus-visible,
+.book-start-first a:focus-visible {
+  outline: 2px solid #ffe0a0;
+  outline-offset: 4px;
+}
+
+.today-page .continuation-row--today {
+  width: min(100%, 690px);
+  min-height: 68px;
+  margin: -6px 0 21px;
+  padding: 10px 13px;
+  border: 1px solid #a68d5870;
+  border-left: 3px solid #c8a862;
+  border-radius: 3px;
+  background: linear-gradient(105deg, #1d201bdb, #171915a8);
+}
+
+.today-page .continuation-row--today [data-continue-link] {
+  margin-left: auto;
+}
+
+.library-page .library-heading {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0 0 20px;
+  padding: 0 0 14px;
+  overflow: visible;
+  clip-path: none;
+  border-bottom: 1px solid #b89d643b;
+  white-space: normal;
+}
+
+.library-page .library-heading .eyebrow {
+  margin: 0 0 3px;
+  color: #cfb77f;
+  font: 500 .78rem/1.4 'Bible Display', Georgia, serif;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.library-page .library-heading h1 {
+  margin: 0;
+  color: #edc987;
+  font: 400 clamp(2.1rem, 4vw, 3.25rem)/1.05 'Bible Display', Georgia, serif;
+}
+
+.library-page .library-heading > p:last-child {
+  margin: 5px 0 0;
+  color: #d7d0c2;
+  font: 400 1rem/1.45 'Bible Display', Georgia, serif;
+}
+
+.library-page .continuation-row--library {
+  width: min(100%, 840px);
+  min-height: 58px;
+  margin: 0 0 17px;
+  padding: 9px 13px;
+  border: 1px solid #a68d5855;
+  border-radius: 3px;
+  background: #191c18;
+}
+
+.library-page .continuation-row--library [data-continue-link] {
+  margin-left: auto;
+}
+
+.book-page .continuation-row--book {
+  width: min(100%, 620px);
+  min-height: 54px;
+  margin: -8px 0 19px;
+  padding: 8px 12px;
+  border: 1px solid #a68d5855;
+  border-radius: 3px;
+  background: #191c18;
+}
+
+.book-page .continuation-row--book [data-continue-link] {
+  margin-left: auto;
+}
+
+.book-page .book-start-first {
+  margin: 8px 0 0 2px;
+  font-size: .91rem;
+  line-height: 1.4;
+}
+
+.book-page .book-start-first a {
+  color: #d9c390;
+  text-decoration-color: #c6a76a70;
+  text-underline-offset: 4px;
+}
+
+.book-page .book-start-first a:hover {
+  color: #f3dfb2;
+}
+
+@media (max-width: 760px) {
+  .today-page .continuation-row--today {
+    grid-row: 3;
+    margin: 0;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .today-page .today-reference {
+    grid-row: 4;
+  }
+
+  .today-page .today-art {
+    grid-row: 5;
+  }
+
+  .today-page .today-scripture {
+    grid-row: 6;
+  }
+
+  .today-page .today-actions {
+    grid-row: 7;
+  }
+
+  .today-page .continuation-row--today > svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .today-page .continuation-row--today [data-continue-link] {
+    margin-left: 34px;
+    font-size: .9rem;
+  }
+
+  .today-page .continuation-row--today [data-continue-clear] {
+    margin-left: auto;
+  }
+
+  .library-page .library-heading {
+    margin-bottom: 15px;
+    padding-bottom: 11px;
+  }
+
+  .library-page .library-heading > p:last-child {
+    font-size: .93rem;
+  }
+
+  .library-page .continuation-row--library,
+  .book-page .continuation-row--book {
+    min-height: 52px;
+    padding: 8px 9px;
+    gap: 9px;
+  }
+
+  .continuation-row [data-continue-label] {
+    font-size: 1rem;
+  }
+
+  .continuation-row [data-continue-link] {
+    font-size: .9rem;
+  }
+}
