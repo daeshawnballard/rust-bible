@@ -22,6 +22,7 @@ assert.equal(resumeRoute(legacy.route, advanced), '/book/Psalms/24?resume=5#v5')
 for (const invalid of [null, {}, {...legacy,route:'//example.com'}, {...legacy,route:'/book/Psalms/23?x=1'}, {...legacy,book:'<script>'}, {...legacy,chapter:24}, {...legacy,verse:0}, {...legacy,verse:177}, {...legacy,verse:2.5}, {...legacy,bookIndex:66}]) assert.equal(canonicalProgress(invalid), null);
 assert.equal(canonicalProgress({route:'/book/1-Corinthians/13',book:'1 Corinthians',chapter:13,verse:7}).verse,7);
 assert.equal(canonicalProgress({route:'/book/Song-of-Solomon/2',book:'Song of Solomon',chapter:2,verse:1}).verse,1);
+assert.equal(resumeRoute('/book/Psalms/23?context=illustration&art=scene', verse), '/book/Psalms/23?context=illustration&art=scene&resume=5#v5');
 // Browsing remains safe when persistence is unavailable or corrupt.
 assert.equal(readProgress(), null); // localStorage absent in Node.
 globalThis.localStorage = { getItem() { return '{broken'; } };

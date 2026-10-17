@@ -28,6 +28,7 @@ export function initReaderContext(root = document) {
   let mode = ['journey', 'illustration'].includes(routeURL().searchParams.get('context')) ? routeURL().searchParams.get('context') : 'passage';
   let part = routeURL().searchParams.get('part');
   let scene = routeURL().searchParams.get('scene');
+  let artView = routeURL().searchParams.get('art') === 'scene' ? 'scene' : routeURL().searchParams.get('art') === 'detail' || part ? 'detail' : 'scene';
   let lastHTML = '', follow = true;
   const node = reader.dataset.readerPosition ? document.getElementById(reader.dataset.readerPosition) : null;
   let position = positionForVerse(node) || {bookIndex:Number(reader.dataset.bookIndex), chapter:Number(reader.dataset.chapter), verse:1, route:reader.dataset.readerRoute};
@@ -41,10 +42,11 @@ export function initReaderContext(root = document) {
 
   const writeURL = () => {
     const url = routeURL();
-    for (const key of ['context','scene','part']) url.searchParams.delete(key);
+    for (const key of ['context','scene','part','art']) url.searchParams.delete(key);
     if (mode !== 'passage') url.searchParams.set('context', mode);
     if (mode === 'illustration' && scene) url.searchParams.set('scene', scene);
     if (mode === 'illustration' && part) url.searchParams.set('part', part);
+    if (mode === 'illustration') url.searchParams.set('art',artView);
     const path = `${url.pathname}${url.search}${url.hash}`;
     history.replaceState(history.state, '', location.hash.startsWith('#/') ? `#${path}` : path);
   };
@@ -58,6 +60,8 @@ export function initReaderContext(root = document) {
   const stopMap = () => { terrain?.destroy(); terrain = null; mapState = null; if(body.querySelector('[data-context-map]')) lastHTML=''; };
   const updateButtons = () => {
     reader.dataset.contextMode = mode;
+    reader.dataset.artView = artView;
+    reader.querySelectorAll('[data-context-art-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.contextArtView===artView)));
     panel.hidden = mode === 'passage';
     reader.querySelectorAll('.reader-modes [data-reader-mode]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.readerMode === mode));
@@ -94,8 +98,11 @@ export function initReaderContext(root = document) {
         stopMap(); body.innerHTML = value.html; lastHTML = value.html;
         if (value.kind === 'illustration') {
           const tools = document.createElement('div'); tools.className = 'reader-context-follow';
+          const views=document.createElement('div'); views.className='reader-context-art-views'; views.setAttribute('role','group'); views.setAttribute('aria-label','Illustration view');
+          for(const [view,label] of [['scene','Scene'],['detail','Detail']]) {const button=document.createElement('button');button.type='button';button.dataset.contextArtView=view;button.textContent=label;views.append(button);}
+          tools.append(views);
           const button = document.createElement('button'); button.type='button'; button.dataset.contextFollow='';
-          button.textContent = part ? 'Follow details as I read' : value.source_match ? 'Following this passage' : 'Chapter illustration · Following';
+          button.textContent = part ? 'Follow passage' : 'Following passage';
           button.setAttribute('aria-pressed',String(!part)); tools.append(button);
           const label=document.createElement('label'); label.textContent='Detail ';
           const select=document.createElement('select'); select.dataset.contextPartSelect=''; select.setAttribute('aria-label','Illustrated detail');
@@ -115,8 +122,11 @@ export function initReaderContext(root = document) {
         }
       }
       const followButton=body.querySelector('[data-context-follow]');
-      if(followButton) {followButton.textContent=part ? 'Follow details as I read' : value.source_match ? 'Following this passage' : 'Chapter illustration · Following'; followButton.setAttribute('aria-pressed',String(!part));}
-      if (focusPart) body.querySelector(`[data-context-part="${CSS.escape(focusPart)}"]`)?.focus({preventScroll:true});
+      if(followButton) {followButton.textContent=part ? 'Follow passage' : 'Following passage'; followButton.setAttribute('aria-pressed',String(!part));}
+      if (focusPart) {
+        const target=artView==='detail' ? body.querySelector('.reader-illustration-copy h3') : body.querySelector(`[data-context-part="${CSS.escape(focusPart)}"]`);
+        if(target) {if(artView==='detail') target.tabIndex=-1;target.focus({preventScroll:true});}
+      }
       status.textContent = value.kind === 'illustration' ? (part ? 'Browsing a detail. Your reading position has not moved.' : value.source_match ? 'Details follow the passage. Explanations are separate from Scripture.' : 'Illustration for this chapter. The selected item’s source is shown below.') : 'Journey follows your reading and listening position.';
       updateButtons(); writeURL();
     } catch (error) {
@@ -133,7 +143,7 @@ export function initReaderContext(root = document) {
     });
   }
   root.addEventListener('click', event => {
-    const target = event.target.closest('[data-reader-mode],[data-context-part],[data-context-follow],[data-context-read],[data-context-map-action]');
+    const target = event.target.closest('[data-reader-mode],[data-context-part],[data-context-follow],[data-context-read],[data-context-map-action],[data-context-art-view]');
     if (!target || !reader.contains(target)) return;
     if (target.hasAttribute('data-context-read')) {
       const verse = findVerse(target.dataset.contextBook, target.dataset.contextChapter, target.dataset.contextVerse);
@@ -155,8 +165,9 @@ export function initReaderContext(root = document) {
       verse.tabIndex=-1; verse.focus({preventScroll:true}); refresh(); return;
     }
     event.preventDefault(); event.stopImmediatePropagation();
+    if (target.dataset.contextArtView) {artView=target.dataset.contextArtView;updateButtons();writeURL();return;}
     if (target.dataset.readerMode) {mode=target.dataset.readerMode; writeURL(); refresh(); return;}
-    if (target.dataset.contextPart) {part=target.dataset.contextPart; refresh({focusPart:part}); return;}
+    if (target.dataset.contextPart) {part=target.dataset.contextPart;artView='detail'; refresh({focusPart:part}); return;}
     if (target.hasAttribute('data-context-follow')) {part=null; refresh(); return;}
     const action=target.dataset.contextMapAction;
     if(action==='zoom-in') terrain?.zoom(1);
@@ -167,7 +178,7 @@ export function initReaderContext(root = document) {
     if(action==='follow') {follow=true; terrain?.update(mapState,{follow:true,force:true}); target.textContent='Follow passage';}
   }, {capture:true,signal});
   reader.addEventListener('change', event => {
-    if(event.target.matches('[data-context-part-select]')) {part=event.target.value;refresh();return;}
+    if(event.target.matches('[data-context-part-select]')) {part=event.target.value;artView='detail';refresh({focusPart:part});return;}
     if(!event.target.matches('[data-reader-size],[data-reader-spacing]')) return;
     const value={size:reader.querySelector('[data-reader-size]').value,spacing:reader.querySelector('[data-reader-spacing]').value};
     applyDisplay(value); try {localStorage.setItem(DISPLAY_KEY,JSON.stringify(value));}catch{}

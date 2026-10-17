@@ -105,3 +105,11 @@ main.wrap:has(.reader-page) { max-width: 90rem; width: calc(100% - 64px); }
 .reader-context-follow { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; margin-bottom:.75rem; }
 .reader-context-follow label { display:flex; align-items:center; gap:.35rem; min-width:0; flex:1; color:#c9bfac; font:.72rem/1.4 system-ui,sans-serif; }
 .reader-context-follow select { min-width:0; width:100%; min-height:44px; padding:.3rem; background:#121613; color:#ead9b3; border:1px solid #b59a6255; border-radius:5px; font:inherit; }
+
+.reader-page[data-art-view=scene] .reader-illustration-detail,
+.reader-page[data-art-view=detail] .reader-illustration-scene { display:none; }
+.reader-context-art-views { display:flex; gap:3px; }
+.reader-context-art-views button[aria-pressed=true] { background:#e2c383; color:#191c19; }
+.reader-context-follow label { flex-basis:100%; }
+.reader-context .reader-illustration-object { max-height:11rem; }
+.reader-context .reader-illustration-copy h3 { font-size:1.9rem; }
