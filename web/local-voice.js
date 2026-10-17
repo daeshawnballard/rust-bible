@@ -395,7 +395,10 @@ export class LocalNarrator extends EventTarget {
 
   setRate(rate) {
     const value = Number(rate);
-    if (Number.isFinite(value) && value >= 0.5 && value <= 2) this.audio.playbackRate = value;
+    if (Number.isFinite(value) && value >= 0.5 && value <= 2) {
+      this.audio.defaultPlaybackRate = value;
+      this.audio.playbackRate = value;
+    }
   }
   setVolume(volume) {
     const value = Number(volume);
@@ -480,6 +483,7 @@ export class LocalNarrator extends EventTarget {
       utterance.onbuffer?.(result);
       return Promise.resolve(utterance.beforePlay).then(() => {
         if (token !== this.token) return undefined;
+        this.setRate(utterance.rate || 1);
         return this.audio.play();
       });
     }).catch(error => {
@@ -532,6 +536,9 @@ export class LocalNarrator extends EventTarget {
       if (token !== this.token) return undefined;
       this.audio.currentTime = route.cue.start;
       this.pending = false;
+      // Loading a new media resource resets playbackRate to its default.
+      // Apply the user's rate after metadata is ready, including verse one.
+      this.setRate(utterance.rate || 1);
       return this.audio.play();
     }).catch(error => {
       if (token === this.token) utterance.onerror?.({error:error.message || 'Hosted narration could not start.'});
