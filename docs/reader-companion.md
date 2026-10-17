@@ -4,6 +4,7 @@ The chapter reader owns one canonical Scripture stream, one audio player, and on
 
 ## Interaction
 
+- On narrow screens, an explicit Journey or Illustration link brings the companion into view while retaining the selected verse. An intentional source jump opens the text instead, using `focus=passage` for a different chapter.
 - Passage closes the companion. Journey opens story or geographic context for the verse reached. Illustrations is offered only in chapters with one of the three existing studies.
 - Scene / Detail switches the companion between its overview and selected object card. A study hotspot opens Detail and changes editorial content only. A labeled selector provides the same choices on narrow screens and with a keyboard.
 - Read reference is an intentional navigation. A verse already present in the reading stream is selected without remounting the reader; active narration stops so the next Listen begins at the deliberately selected verse. A different chapter uses its canonical reader link. Browsing an object or switching context views does not stop narration.

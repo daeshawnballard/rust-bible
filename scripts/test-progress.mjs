@@ -23,6 +23,7 @@ for (const invalid of [null, {}, {...legacy,route:'//example.com'}, {...legacy,r
 assert.equal(canonicalProgress({route:'/book/1-Corinthians/13',book:'1 Corinthians',chapter:13,verse:7}).verse,7);
 assert.equal(canonicalProgress({route:'/book/Song-of-Solomon/2',book:'Song of Solomon',chapter:2,verse:1}).verse,1);
 assert.equal(resumeRoute('/book/Psalms/23?context=illustration&art=scene', verse), '/book/Psalms/23?context=illustration&art=scene&resume=5#v5');
+assert.equal(resumeRoute('/book/Psalms/23?context=journey&focus=passage', verse), '/book/Psalms/23?context=journey&focus=passage&resume=5#v5');
 // Browsing remains safe when persistence is unavailable or corrupt.
 assert.equal(readProgress(), null); // localStorage absent in Node.
 globalThis.localStorage = { getItem() { return '{broken'; } };

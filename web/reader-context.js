@@ -147,7 +147,14 @@ export function initReaderContext(root = document) {
     if (!target || !reader.contains(target)) return;
     if (target.hasAttribute('data-context-read')) {
       const verse = findVerse(target.dataset.contextBook, target.dataset.contextChapter, target.dataset.contextVerse);
-      if (!verse) return; // Cross-chapter navigation uses the ordinary real reader route.
+      if (!verse) {
+        // An intentional source jump opens the text even on a narrow screen.
+        const sourceURL=new URL(target.getAttribute('href').replace(/^#(?=\/)/,''),location.origin);
+        sourceURL.searchParams.set('focus','passage');
+        const href=`${sourceURL.pathname}${sourceURL.search}${sourceURL.hash}`;
+        target.setAttribute('href',location.hash.startsWith('#/')?`#${href}`:href);
+        return;
+      }
       event.preventDefault(); event.stopImmediatePropagation();
       const targetURL = new URL(target.getAttribute('href').replace(/^#(?=\/)/,''),location.origin);
       for (const key of ['context','scene','part']) if(targetURL.searchParams.has(key)) {

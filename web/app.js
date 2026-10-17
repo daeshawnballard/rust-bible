@@ -69,7 +69,11 @@ function installPage(response, route, { initial = false } = {}) {
   const journeyResult = journey?.afterRender(route, response, { initial }) || {};
   initExperience(app);
   initReaderContext(app);
-  if (app.querySelector('[data-atlas-page]')) {
+  const contextParams = new URL(route, window.location.origin).searchParams;
+  const companion = app.querySelector('[data-reader-context]');
+  if (companion && ['journey','illustration'].includes(contextParams.get('context')) && contextParams.get('focus') !== 'passage' && window.matchMedia('(max-width:999px)').matches) {
+    requestAnimationFrame(() => companion.scrollIntoView({block:'start',behavior:'instant'}));
+  } else if (app.querySelector('[data-atlas-page]')) {
     window.scrollTo({top:0,left:0,behavior:'instant'});
   } else if (journeyResult.restoreVerseId) {
     requestAnimationFrame(() => document.getElementById(journeyResult.restoreVerseId)?.scrollIntoView({block: "center", behavior: "instant"}));

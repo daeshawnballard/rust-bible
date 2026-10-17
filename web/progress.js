@@ -50,7 +50,7 @@ export function resumeRoute(route, item = readProgress(), {reload = false} = {})
   if (params.has('v')) return route;
   if (match[3] && !params.has('resume')) return route;
   if (!reload && params.has('resume') && Number(params.get('resume')) !== item.verse) return route;
-  for (const key of params.keys()) if (!['context','scene','part','art','resume'].includes(key)) return route;
+  for (const key of params.keys()) if (!['context','scene','part','art','focus','resume'].includes(key)) return route;
   params.set('resume', item.verse);
   return `${item.route}?${params}#v${item.verse}`;
 }
