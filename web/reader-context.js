@@ -55,11 +55,17 @@ export function initReaderContext(root=document) {
   const footer=document.createElement('footer');footer.className='passage-window-footer';
   const follow=document.createElement('button');follow.type='button';follow.dataset.windowFollow='';follow.textContent='Follow passage';
   const expand=document.createElement('button');expand.type='button';expand.dataset.readerMode='passage';expand.textContent='Read';expand.title='Expand Scripture';
+  expand.setAttribute('aria-label','Expand Scripture into Read view');
   footer.append(follow,expand);frame.append(footer);
+  const viewStatus=document.createElement('p');viewStatus.className='sr-only';viewStatus.setAttribute('role','status');
+  frame.append(viewStatus);
   panel.querySelector('.reader-context-heading').hidden=true;
   status.classList.add('sr-only');
   const show=()=>{
     reader.dataset.contextMode=mode;
+    const view=mode==='passage'?'Read':'Journey';
+    reader.setAttribute('aria-label','Bible passage reader — '+view+' view');
+    if(viewStatus.textContent!==view+' view')viewStatus.textContent=view+' view';
     reader.dataset.windowTab=tab;
     document.body.classList.toggle('has-scene',mode!=='passage');
     document.body.classList.add('has-reader');
@@ -69,9 +75,10 @@ export function initReaderContext(root=document) {
     tabs.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.windowTab===tab));if(b.dataset.windowTab==='context')b.hidden=mode==='passage';});
     modes.querySelectorAll('[data-reader-mode]').forEach(b=>{
       const target=b.dataset.readerMode;
+      b.removeAttribute('aria-pressed');
       const hasContext=value&&(value.journey_available||value.relevant_scene||value.geographic_available||value.kind==='geography');
       b.hidden=target==='passage'||target==='journey'&&(mode!=='passage'||!hasContext)||target==='illustration';
-      if(target==='journey')b.textContent='Journey';
+      if(target==='journey'){b.textContent='Journey';b.setAttribute('aria-label','Open Journey view');}
     });
     expand.hidden=mode==='passage';
     follow.hidden=mode==='passage';
