@@ -1,0 +1,24 @@
+{
+  "id": "daniel",
+  "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. Daniel6. An artistic Babylonian/Persian stone city cutaway compressed landscape at dawn. LEFT20%x/35%y a modest upper room with open windows facing distant Jerusalem direction, terracotta house integrated beside palace gardens. CENTER40%x/51%y an ancient royal courtyard with flat uninscribed tablet on stone plinth. Lower RIGHT61%x/69%y a visible cutaway rocky lions enclosure with stone entrance and a few calm resting lions, no humans. At80%x/45%y a dawn-lit stone approach to that same enclosure, NOT a second den. Warm stone, date palms, blue glazed details used sparingly. No written glyphs or figures.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-86ddf0e9-8390-4584-b749-f7d0d7a032f8",
+  "source": "assets/imagegen/source/journey/daniel.png",
+  "final": "web/art/journey/daniel.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "13ce25e76f1b1a194902562227705a54ada2abc6d0377cc2cc5a78fe9063e7c0",
+  "final_sha256": "dacd7e54abd17bd63f641e322285d77a4c5e5ade1ed4f7324755e0a256b25a54",
+  "provenance": "assets/imagegen/journey/daniel.json"
+}

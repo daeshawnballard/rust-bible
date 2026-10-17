@@ -1,0 +1,24 @@
+{
+  "id": "david-goliath",
+  "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. 1Samuel17. Broad dry Elah valley between low Judean hills, late afternoon. Modest ancient tent camp at LEFT18%x/45%y, shallow brook with smooth pebbles at38%x/68%y, broad empty central confrontation ground at58%x/53%y, a dusty road toward an opposing camp in RIGHT distance80%x/35%y. Olive and scrub vegetation, realistic stone and woven tent texture. No humans, weapons as decor, bodies or combat. The empty places tell the story.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-c6de560c-3251-4e36-bbb4-e8801458c0e0",
+  "source": "assets/imagegen/source/journey/david-goliath.png",
+  "final": "web/art/journey/david-goliath.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "3ab9b4b2189a0c902ed0a4b931f05dd90fa8981c9587b6f436771571f9a6826f",
+  "final_sha256": "b7239527ff2cf588445bc3332355e64f427de8f9d600c852ee801078af878da0",
+  "provenance": "assets/imagegen/journey/david-goliath.json"
+}
