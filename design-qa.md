@@ -24,6 +24,8 @@ Full-view side-by-side comparisons were composed and inspected for all four targ
 
 - P1 uncovered-range transition: live narration from Mark 5:43 reached Mark 6 but retained an empty Journey canvas. Empty context now expands into Read automatically, preserves the verse/queue, and hides the unavailable Journey action. Local direct Mark 6 Journey entry renders the full reading column. Keyboard focus also recenters object buttons as well as place links.
 
+- P2 scene reachability: native image dragging interrupted pan after about 50px, leaving some object pins behind the overlay. Disabled native image drag and separated pointer focus from keyboard recentering. Actual preview drag moved the world -400px; the revealed Ark door selected `door.webp`. Removed duplicate in-figure captions and close playback options after Stop.
+
 ## Five fidelity surfaces
 
 - Typography: bundled Cormorant Garamond display and EB Garamond Scripture; serif hierarchy, readable selected verses, compact sans-serif operational status. Exact generated-image glyph shapes are not treated as a font file. No visible clipped titles on inspected widths.

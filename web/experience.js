@@ -126,7 +126,7 @@ function makeDock(runtime) {
   populateVoices(runtime);
 
   runtime.ui.toggle.addEventListener('click', () => togglePlayback(runtime));
-  runtime.ui.stop.addEventListener('click', () => stopPlayback(runtime));
+  runtime.ui.stop.addEventListener('click', () => {stopPlayback(runtime);dock.querySelector('.audio-dock-options').open=false;});
   runtime.ui.rate.addEventListener('change', () => {
     runtime.rate = Number(runtime.ui.rate.value) || 1;
     writePreference(RATE_KEY, runtime.rate);

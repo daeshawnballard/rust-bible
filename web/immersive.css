@@ -66,11 +66,14 @@ body.has-reader main.wrap { width:100%; max-width:none; margin:0; padding:0; }
 .reader-context { background:none; position:static; top:auto!important; border:0; border-radius:0; padding:0; }
 .reader-context .reader-context-heading[hidden], [hidden] { display:none!important; }
 .passage-window-footer { display:none; }
-.reader-canvas { position:fixed; inset:0; overflow:hidden; z-index:0; background:#171a18; touch-action:none; }
+.reader-canvas { position:fixed; inset:0; overflow:hidden; z-index:0; background:#171a18; touch-action:none; user-select:none; cursor:grab; }
+.reader-canvas:active { cursor:grabbing; }
+.reader-canvas a,.reader-canvas button { cursor:pointer; }
 .journey-world { position:absolute; transition:left .65s ease; }
 .journey-world:has(.immersive-terrain) { position:absolute; inset:0; width:100%; height:100%; }
 .journey-world figure { position:absolute; inset:0; width:100%; max-width:none; height:100%; aspect-ratio:auto; margin:0; border-radius:0; overflow:visible; background:none; }
-.journey-world figure > img { display:block; width:100%; height:100%; object-fit:fill; }
+.journey-world figure > img { display:block; width:100%; height:100%; object-fit:fill; pointer-events:none; user-select:none; }
+.journey-world figure > figcaption { display:none; }
 .journey-world figure > svg { display:none; }
 .journey-world .reader-illustration-hotspot, .journey-world .story-journey-pin { width:44px; height:44px; box-shadow:none; background:transparent; border:0; }
 .journey-world .story-journey-pin > span:first-child,.journey-world .reader-illustration-hotspot-dot { width:20px; height:20px; border:3px solid #f3d894; box-shadow:0 0 0 3px #16181388; background:#252a1e; }

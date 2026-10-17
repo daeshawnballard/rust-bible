@@ -120,11 +120,13 @@ export function initReaderContext(root=document) {
     }
     world.style.left=pan+'px';
   };
-  let dragging=null;
+  let dragging=null,pointerFocus=false;
+  on(world,'pointerdown',()=>{pointerFocus=true;},{capture:true});
+  on(window,'keydown',()=>{pointerFocus=false;},{capture:true});
   on(canvas,'pointerdown',e=>{if(e.target.closest('a,button'))return;dragging={x:e.clientX,pan};canvas.setPointerCapture(e.pointerId);});
   on(canvas,'pointermove',e=>{if(!dragging)return;manualPan=true;pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,dragging.pan+e.clientX-dragging.x));world.style.left=pan+'px';});
   on(world,'focusin',e=>{
-    const pin=e.target.closest('a,button');if(!pin||!worldWidth)return;
+    const pin=e.target.closest('a,button');if(!pin||!worldWidth||pointerFocus)return;
     const r=pin.getBoundingClientRect(),right=innerWidth>=900?frame.getBoundingClientRect().left-20:canvas.clientWidth-12;
     if(r.left<12||r.right>right){manualPan=true;pan+=right*.5-(r.left+r.width*.5);pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,pan));world.style.left=pan+'px';}
   });
@@ -166,7 +168,7 @@ export function initReaderContext(root=document) {
         if(lastArt!==artKey){
           stopMap();world.replaceChildren(figure);lastArt=artKey;manualPan=false;
           const img=figure.querySelector('img');
-          img.loading='eager';img.addEventListener('load',sizeScene,{once:true,signal});
+          img.loading='eager';img.draggable=false;img.addEventListener('load',sizeScene,{once:true,signal});
           img.addEventListener('error',()=>{caption.textContent='Illustration could not load. Scripture remains available.';},{once:true,signal});
           sizeScene();
         }
