@@ -18,6 +18,8 @@ Full-view side-by-side comparisons were composed and inspected for all four targ
 - P2: Library header introduced an unnecessary extra row. Restored Library-first heading, placed metadata/Codex link on one row, and tightened spacing before covers. Revised gallery capture retains five columns and the floating tools.
 - P2: SVG play/pause paths were both visible. Fixed hidden attributes and observed a single correct action icon.
 
+- P1 interaction correction from public version 40: the reader root also carries `data-window-tab`, so a broad delegated selector swallowed ordinary clicks. Restricted tab handling to buttons. A new local real click now expands the title menu (44px chapter selector) and selecting Chapter 13 loads Nehemiah 13. The correction requires fresh public acceptance on the subsequent release.
+
 ## Five fidelity surfaces
 
 - Typography: bundled Cormorant Garamond display and EB Garamond Scripture; serif hierarchy, readable selected verses, compact sans-serif operational status. Exact generated-image glyph shapes are not treated as a font file. No visible clipped titles on inspected widths.

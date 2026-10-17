@@ -209,7 +209,7 @@ export function initReaderContext(root=document) {
     part=null;tab='context';refresh();
   };
   on(reader,'click',event=>{
-    const target=event.target.closest('[data-reader-mode],[data-window-tab],[data-window-follow],[data-context-part],[data-context-read],[data-codex-entry],[data-codex-read]');
+    const target=event.target.closest('[data-reader-mode],button[data-window-tab],[data-window-follow],[data-context-part],[data-context-read],[data-codex-entry],[data-codex-read]');
     if(!target)return;
     if(target.hasAttribute('data-codex-read')){
       window.biblePlayback?.stop();return;
