@@ -72,8 +72,8 @@ pub(super) fn page(client: bool) -> RouteResponse {
       </div>
       <div>
         <h3>Listen and follow the verse</h3>
-        <p>Tap or click <strong>Listen</strong> to start; audio does not autoplay. Choose Heart or Michael. Published chapter recordings play directly from this site, with verse highlighting and seeking. Chapters not published yet use the same selected natural voice locally; its first use downloads about 100 MB of public model files. No account, API key, or paid speech service is used.</p>
-        <p><strong>Follow reading</strong> scrolls the spoken verse into view. The bottom dock names the narrated passage and offers <strong>Return to passage</strong>. It stays available as you move among Today, Library, and Codex. Choosing Listen for another reference switches narration. Choosing a Read source link in Context or Codex stops narration and opens that reference.</p>
+        <p>Tap or click <strong>Listen</strong> to start; audio does not autoplay. Choose Heart or Michael directly in the bottom player; speed is beside the voice selector and volume uses your device’s controls. Published chapter recordings play directly from this site, with verse highlighting and seeking. Chapters not published yet use the same selected natural voice locally; its first use downloads about 100 MB of public model files. No account, API key, or paid speech service is used.</p>
+        <p>The reader automatically scrolls the spoken verse into view. The bottom dock names the narrated passage and offers <strong>Return to passage</strong>. It stays available as you move among Today, Library, and Codex. Choosing Listen for another reference switches narration. Choosing a Read source link in Context or Codex stops narration and opens that reference.</p>
       </div>
     </div>
   </section>

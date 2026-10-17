@@ -1,8 +1,4 @@
 /* The selected scene-led study browser shares the Library's type and palette. */
-#app:has(.learning-page){display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
-#app:has(.learning-page)>main{flex:1 0 auto}
-#app:has(.learning-page)>.library-header,#app:has(.learning-page)>.site-footer{flex:none}
-#app:has(.learning-page)>.site-footer{width:100%;min-height:75px}
 main.wrap:has(.learning-page){max-width:1536px;width:100%;padding:40px 3.4% 28px;overflow:clip}
 .learning-page{color:var(--fg);font:400 1.15rem/1.4 'Bible Display',Georgia,serif}
 .learning-browser{display:grid;grid-template-columns:minmax(0,31%) minmax(0,1fr);gap:28px;align-items:start}

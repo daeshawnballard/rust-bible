@@ -273,7 +273,7 @@ main.wrap:has(.today-page) {
 main.wrap:has(.library-page) {
   width: 100%;
   max-width: 1536px;
-  padding: 24px clamp(16px, 3.2vw, 50px) 126px;
+  padding: 24px clamp(16px, 3.2vw, 50px) 20px;
 }
 
 .library-page { min-width: 0; }
@@ -490,7 +490,7 @@ body.has-global-audio:has(.library-page) .library-page .library-tools {
   .today-page .today-support { margin-top: 23px; }
   .today-page .today-rotation { text-align: left; line-height: 1.7; }
 
-  main.wrap:has(.library-page) { padding: 21px 14px 132px; }
+  main.wrap:has(.library-page) { padding: 21px 14px 20px; }
   .library-topline { flex-wrap: wrap; gap: 12px 18px; margin-bottom: 13px; padding-bottom: 11px; }
   .library-page .library-heading { flex: 1 1 100%; }
   .library-page .library-heading .library-meta { margin-bottom: 3px; font-size: .87rem; }

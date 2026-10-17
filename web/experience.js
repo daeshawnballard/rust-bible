@@ -4,8 +4,6 @@ import { LocalNarrator, DEFAULT_NARRATOR, splitSpeech } from './local-voice.js';
 const RUNTIME_KEY = Symbol.for('rust-bible.global-audio.v1');
 const RATE_KEY = 'bible.rate';
 const VOICE_KEY = 'bible.narrator';
-const FOLLOW_KEY = 'bible.audio.follow';
-const VOLUME_KEY = 'bible.audio.volume';
 const LOOKAHEAD_SEGMENT_COUNT = 2;
 const LOOKAHEAD_SAMPLE_LIMIT = 24000 * 60;
 const INITIAL_BUFFER_TIMEOUT_MS = 8000;
@@ -84,21 +82,12 @@ function makeDock(runtime) {
       </div>
       <span class="audio-dock-time" data-dock-duration aria-hidden="true">—:—</span>
     </div>
+    <label class="audio-dock-voice"><span class="sr-only">Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
     <label class="audio-dock-rate" aria-label="Playback speed">
       <select data-dock-rate aria-label="Playback speed">
         <option value="0.75">0.75×</option><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option>
       </select>
-    </label>
-    <details class="audio-dock-options">
-      <summary aria-label="More playback options">•••</summary>
-      <div class="audio-dock-menu">
-        <label class="audio-dock-menu-row">Voice<select data-dock-voice aria-label="Narrator voice"></select></label>
-        <label class="audio-dock-menu-row audio-dock-follow"><input type="checkbox" data-dock-follow> Follow the spoken verse</label>
-        <label class="audio-dock-menu-row">Natural voice volume<input data-dock-volume type="range" min="0" max="1" step="0.01" aria-label="Natural voice volume"></label>
-        <button class="audio-dock-stop" data-dock-stop type="button">Stop reading</button>
-        <small>Heart and Michael use hosted chapter narration when available and local natural-voice generation when a chapter is not published.</small>
-      </div>
-    </details>`;
+    </label>`;
   document.body.append(dock);
 
   runtime.dock = dock;
@@ -114,18 +103,12 @@ function makeDock(runtime) {
     duration: dock.querySelector('[data-dock-duration]'),
     rate: dock.querySelector('[data-dock-rate]'),
     voice: dock.querySelector('[data-dock-voice]'),
-    follow: dock.querySelector('[data-dock-follow]'),
-    volume: dock.querySelector('[data-dock-volume]'),
-    stop: dock.querySelector('[data-dock-stop]'),
   };
 
   runtime.ui.rate.value = String(runtime.rate);
-  runtime.ui.follow.checked = runtime.follow;
-  runtime.ui.volume.value = String(runtime.volume);
   populateVoices(runtime);
 
   runtime.ui.toggle.addEventListener('click', () => togglePlayback(runtime));
-  runtime.ui.stop.addEventListener('click', () => {stopPlayback(runtime);dock.querySelector('.audio-dock-options').open=false;});
   runtime.ui.rate.addEventListener('change', () => {
     runtime.rate = Number(runtime.ui.rate.value) || 1;
     writePreference(RATE_KEY, runtime.rate);
@@ -158,17 +141,6 @@ function makeDock(runtime) {
       if (runtime.state === 'playing') maintainLookahead(runtime, runtime.generation);
     }
   });
-  runtime.ui.follow.addEventListener('change', () => {
-    runtime.follow = runtime.ui.follow.checked;
-    runtime.followWasSaved = true;
-    writePreference(FOLLOW_KEY, runtime.follow);
-    if (runtime.follow && runtime.position) followVerse(runtime, runtime.position);
-  });
-  runtime.ui.volume.addEventListener('input', () => {
-    runtime.volume = Number(runtime.ui.volume.value);
-    writePreference(VOLUME_KEY, runtime.volume);
-    runtime.narrator.setVolume(runtime.volume);
-  });
   runtime.ui.seek.addEventListener('input', () => {
     if (runtime.narrator.seek(Number(runtime.ui.seek.value))) updateTimeline(runtime);
   });
@@ -199,9 +171,7 @@ function getRuntime() {
     generation: 0, state: 'idle', position: null, samples: null, peaks: null, sampleRate: 0,
     waveDuration: 0, rate: Number(readPreference(RATE_KEY, '1')) || 1,
     voice: readPreference(VOICE_KEY, DEFAULT_NARRATOR),
-    follow: readPreference(FOLLOW_KEY, null) === null ? true : readPreference(FOLLOW_KEY, 'true') === 'true',
-    followWasSaved: readPreference(FOLLOW_KEY, null) !== null,
-    volume: Math.max(0, Math.min(1, Number(readPreference(VOLUME_KEY, '1')) || 0)),
+    follow: true,
     currentRoot: document, startTimer: null, loadingNext: null, loadError: null, chapterRoutes: new Map(),
   };
   runtime.narrator = new LocalNarrator({onProgress: progress => {
@@ -214,19 +184,12 @@ function getRuntime() {
       : progress.message || 'Preparing the free natural voice…';
     setStatus(runtime, message);
   }});
-  runtime.narrator.setVolume(runtime.volume);
   window[RUNTIME_KEY] = runtime;
   window.biblePlayback = Object.freeze({
     active: () => ACTIVE_STATES.has(runtime.state),
     position: () => runtime.position ? {...runtime.position} : null,
     stop: () => stopPlayback(runtime),
     returnHref: () => runtime.source?.returnHref || currentRoute(),
-    setFollow: value => {
-      runtime.follow = Boolean(value);
-      runtime.followWasSaved = true;
-      if (runtime.ui) runtime.ui.follow.checked = runtime.follow;
-      writePreference(FOLLOW_KEY, runtime.follow);
-    },
     setRate: value => {
       runtime.rate = Number(value) || 1;
       runtime.narrator.setRate(runtime.rate);
@@ -246,7 +209,7 @@ function populateVoices(runtime) {
   for (const voice of voices) {
     const option = document.createElement('option');
     option.value = voice.voiceURI;
-    option.textContent = `${voice.name} (${voice.lang})`;
+    option.textContent = voice.name.split(' · ')[0];
     runtime.ui.voice.append(option);
   }
   runtime.ui.voice.value = [...runtime.ui.voice.options].some(option => option.value === selected)
@@ -278,10 +241,8 @@ function updateDock(runtime) {
     runtime.ui.returnLink.textContent = reference ? `${activeSource && runtime.state === 'playing' ? 'Listening' : activeSource && runtime.state === 'paused' ? 'Paused' : activeSource && runtime.state === 'preparing' ? 'Preparing' : 'Listen'} · ${reference}` : 'Return to passage';
     runtime.ui.returnLink.setAttribute('aria-label', `Return to ${reference || 'the passage'}`);
     runtime.ui.returnLink.href = appHref(source.returnHref || currentRoute());
-    runtime.ui.follow.checked = runtime.follow;
     runtime.ui.rate.value = String(runtime.rate);
-    runtime.ui.volume.value = String(runtime.volume);
-    if (previewOnly) runtime.ui.status.textContent = 'Ready to listen · the voice prepares after Play';
+    if (previewOnly) runtime.ui.status.textContent = 'Ready to listen';
   }
   const playing = activeSource && runtime.state === 'playing';
   runtime.ui.playIcon.toggleAttribute('hidden', playing);
@@ -293,7 +254,6 @@ function updateDock(runtime) {
           : retainedSource && runtime.state === 'error' ? 'Try listening again' : 'Play audio';
   runtime.ui.toggle.setAttribute('aria-label', label);
   runtime.ui.toggle.title = label;
-  runtime.ui.stop.disabled = !['preparing', 'playing', 'paused'].includes(runtime.state);
   updateTimeline(runtime);
   drawWaveform(runtime);
   updateSourceButton(runtime);
@@ -709,7 +669,7 @@ function sourceConfig(controls, root) {
   }
   const key = `${kind}|${bookIndex ?? ''}|${chapter}|${verse}|${reference}|${route}`;
   return {kind, readerMode, bookMode, reference, book, bookIndex, chapter, verse, route, readerRoute: route,
-    returnHref: returnRoute, key, root, followDefault: controls.querySelector('[data-audio-follow]')?.checked !== false,
+    returnHref: returnRoute, key, root,
     rangeEnd: parsed?.lastVerse || null};
 }
 
@@ -726,7 +686,6 @@ function sourceControls(controls, root, runtime) {
   play.dataset.audioSourceKind = initialConfig.kind;
   play.dataset.audioSourceBookIndex = String(initialConfig.bookIndex ?? '');
   play.dataset.audioSourceChapter = String(initialConfig.chapter);
-  play.dataset.audioFollowDefault = String(initialConfig.followDefault);
   const text = bookMode ? `Listen to ${controls.dataset.reference || 'this book'}` : 'Listen to this passage';
   play.dataset.audioSourceDefaultContext = String(defaultInDock);
   play.dataset.audioSourceIdleLabel = text;
@@ -744,13 +703,6 @@ function sourceControls(controls, root, runtime) {
     play.addEventListener('click', event => {
       event.preventDefault();
       const config = sourceConfig(controls, root);
-      config.followDefault = play.dataset.audioFollowDefault === 'true';
-      if (!runtime.followWasSaved) {
-        runtime.follow = config.followDefault;
-        runtime.ui.follow.checked = runtime.follow;
-        runtime.followWasSaved = true;
-        writePreference(FOLLOW_KEY, runtime.follow);
-      }
       void startSource(runtime, config);
     });
   }
