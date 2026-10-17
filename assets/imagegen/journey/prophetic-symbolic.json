@@ -1,0 +1,22 @@
+{
+  "id": "prophetic-symbolic",
+  "prompt": "Use case: historical-scene. Production illustration for a full-screen illustrated Bible Journey reader. One coherent expansive landscape, richly detailed museum-diorama realism with miniature craft texture, elevated three-quarter viewpoint, warm sunlight, restrained cinematic atmosphere, earthy stone and olive greens, natural materials. 1536x1024 landscape. Fill the entire frame edge to edge with scenery, not a floating model or black margins. Leave the rightmost quarter visually calm for a real interface window; primary points of interest on left and center. No typography, no labels, no UI, no numbers, no marker dots, no painted paths or route arrows, no visible modern buildings, no watermarks, no portraits or divine figure. Artistic contextual setting, never a map or proof of exact architecture. Non-geographic symbolic prophetic landscape: LEFT ancient stone watchtower among olive trees and dry terraces, CENTER a broken clay jar and unoccupied threshing floor beside a path, distant city silhouettes beneath a vast cloud-filled dawn sky turning from storm to sunlight. Represent prophetic themes without depicting one literal vision or inventing a travel map. No angel, deity, fiery figure, or text.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-05f0af1c-15d3-41fe-a601-4aea3a6708dc",
+  "source": "assets/imagegen/source/journey/prophetic-symbolic.png",
+  "final": "web/art/journey/prophetic-symbolic.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "All-book Journey contextual landscape; chapter-section reading markers are interface layout, not geographic coordinates",
+  "processing": [
+    "Full-frame WebP quality90; no crop or resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "e76e60685c465d657384c0d3d7cf151fc7673419262ccad0c29889bf1a5b6d6c",
+  "final_sha256": "8f8b916e3657769fa41fd7f3f5ad3172fb27e75909922620f7863890cb403e89"
+}

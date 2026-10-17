@@ -1,0 +1,22 @@
+{
+  "id": "mediterranean-cities",
+  "prompt": "Use case: historical-scene. Production illustration for a full-screen illustrated Bible Journey reader. One coherent expansive landscape, richly detailed museum-diorama realism with miniature craft texture, elevated three-quarter viewpoint, warm sunlight, restrained cinematic atmosphere, earthy stone and olive greens, natural materials. 1536x1024 landscape. Fill the entire frame edge to edge with scenery, not a floating model or black margins. Leave the rightmost quarter visually calm for a real interface window; primary points of interest on left and center. No typography, no labels, no UI, no numbers, no marker dots, no painted paths or route arrows, no visible modern buildings, no watermarks, no portraits or divine figure. Artistic contextual setting, never a map or proof of exact architecture. An imagined eastern Mediterranean ancient port landscape: LEFT small wooden sailing boat moored by stone wharf, CENTER colonnaded modest coastal city with red tile roofs and hillside homes, winding road climbing toward a quiet upland settlement, blue bay and distant islands under morning haze. Broad regional context, no invented accurately plotted map, no Roman colosseum or modern lighthouse, no close people.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-a154625c-8967-40af-a649-c332346f2880",
+  "source": "assets/imagegen/source/journey/mediterranean-cities.png",
+  "final": "web/art/journey/mediterranean-cities.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "All-book Journey contextual landscape; chapter-section reading markers are interface layout, not geographic coordinates",
+  "processing": [
+    "Full-frame WebP quality90; no crop or resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "b131200e86649509a8b3978c8574ca51256c29c99fedadfdc39507d8f014f96c",
+  "final_sha256": "6a4217014ac1735ff24d1b91608538a0642b998e0658f40abfb5e7f683bb4b1c"
+}
