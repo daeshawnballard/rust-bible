@@ -1,0 +1,24 @@
+{
+  "id": "jordan",
+  "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. Joshua3\u20134. Jordan river winds diagonally through green reedbanks at LEFT28%x/58%y, a dry stony crossing visible in the watercourse at CENTER48%x/51%y with twelve natural uninscribed stones visible near it. On the far RIGHT bank76%x/55%y, a clearly separate memorial cairn of twelve rounded stones on dry ground near a modest temporary tent camp. Warm spring valley with distant arid escarpment, no cities. Continuous natural terrain, not split panels.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-829e9122-4b4d-4cf1-861e-f5d88286f148",
+  "source": "assets/imagegen/source/journey/jordan.png",
+  "final": "web/art/journey/jordan.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "957a20fafb9421704300673ef119e35a37d3b0aca4b0b321e4dcb1705cd2be9e",
+  "final_sha256": "b625c227f9f175d2661fd4ec75438f881535e41f725db5baab8d28cda0594c03",
+  "provenance": "assets/imagegen/journey/jordan.json"
+}

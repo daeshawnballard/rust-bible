@@ -1,0 +1,24 @@
+{
+  "id": "jonah",
+  "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. Jonah1\u20134 artistic compressed story landscape, not geographic distances. LEFT15%x/60%y ancient Joppa harbor with small wooden merchant vessel at dock, sea transitions to storm cloud and another distant ship under sail at36%x/40%y, calm sandy shoreline at52%x/70%y. RIGHT74%x/37%y great ancient Assyrian walled city with mudbrick gates, outside it small rough shade shelter and leafy gourd plant at86%x/65%y. No people, no painted fish monster, no text. Rich blue sea, limestone shore and ochre city, atmosphere smoothly blends successive settings.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-c7c1fd91-1e6c-459a-abc3-01957c5eb5d8",
+  "source": "assets/imagegen/source/journey/jonah.png",
+  "final": "web/art/journey/jonah.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "cc98eccf458ce52a502def125d4a737d74192b661f8708c530dc50ca2d8b5079",
+  "final_sha256": "36f300462758cad2489765185c2d28152b0e9d3a5346ae27fbc651c549914c71",
+  "provenance": "assets/imagegen/journey/jonah.json"
+}

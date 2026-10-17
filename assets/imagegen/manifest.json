@@ -2356,6 +2356,198 @@
       "final_sha256": "fd3ee8a6a83855a05206380b5124daf704ad5c3e8bff9c5ce5aab58ecd180587",
       "notes": "Visual landmark placement only; no geographic accuracy is implied. Generated background contains no UI elements, labels, route graphics, markers, people, angels, or deity.",
       "provenance": "assets/imagegen/journey/genesis-immersive-v1.json"
+    },
+    {
+      "id": "jordan",
+      "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. Joshua3\u20134. Jordan river winds diagonally through green reedbanks at LEFT28%x/58%y, a dry stony crossing visible in the watercourse at CENTER48%x/51%y with twelve natural uninscribed stones visible near it. On the far RIGHT bank76%x/55%y, a clearly separate memorial cairn of twelve rounded stones on dry ground near a modest temporary tent camp. Warm spring valley with distant arid escarpment, no cities. Continuous natural terrain, not split panels.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-829e9122-4b4d-4cf1-861e-f5d88286f148",
+      "source": "assets/imagegen/source/journey/jordan.png",
+      "final": "web/art/journey/jordan.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "957a20fafb9421704300673ef119e35a37d3b0aca4b0b321e4dcb1705cd2be9e",
+      "final_sha256": "b625c227f9f175d2661fd4ec75438f881535e41f725db5baab8d28cda0594c03",
+      "provenance": "assets/imagegen/journey/jordan.json"
+    },
+    {
+      "id": "david-goliath",
+      "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. 1Samuel17. Broad dry Elah valley between low Judean hills, late afternoon. Modest ancient tent camp at LEFT18%x/45%y, shallow brook with smooth pebbles at38%x/68%y, broad empty central confrontation ground at58%x/53%y, a dusty road toward an opposing camp in RIGHT distance80%x/35%y. Olive and scrub vegetation, realistic stone and woven tent texture. No humans, weapons as decor, bodies or combat. The empty places tell the story.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-c6de560c-3251-4e36-bbb4-e8801458c0e0",
+      "source": "assets/imagegen/source/journey/david-goliath.png",
+      "final": "web/art/journey/david-goliath.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "3ab9b4b2189a0c902ed0a4b931f05dd90fa8981c9587b6f436771571f9a6826f",
+      "final_sha256": "b7239527ff2cf588445bc3332355e64f427de8f9d600c852ee801078af878da0",
+      "provenance": "assets/imagegen/journey/david-goliath.json"
+    },
+    {
+      "id": "daniel",
+      "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. Daniel6. An artistic Babylonian/Persian stone city cutaway compressed landscape at dawn. LEFT20%x/35%y a modest upper room with open windows facing distant Jerusalem direction, terracotta house integrated beside palace gardens. CENTER40%x/51%y an ancient royal courtyard with flat uninscribed tablet on stone plinth. Lower RIGHT61%x/69%y a visible cutaway rocky lions enclosure with stone entrance and a few calm resting lions, no humans. At80%x/45%y a dawn-lit stone approach to that same enclosure, NOT a second den. Warm stone, date palms, blue glazed details used sparingly. No written glyphs or figures.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-86ddf0e9-8390-4584-b749-f7d0d7a032f8",
+      "source": "assets/imagegen/source/journey/daniel.png",
+      "final": "web/art/journey/daniel.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "13ce25e76f1b1a194902562227705a54ada2abc6d0377cc2cc5a78fe9063e7c0",
+      "final_sha256": "dacd7e54abd17bd63f641e322285d77a4c5e5ade1ed4f7324755e0a256b25a54",
+      "provenance": "assets/imagegen/journey/daniel.json"
+    },
+    {
+      "id": "jonah",
+      "prompt": "Use case: illustration-story. Production artwork only for a Rust Bible interactive Journey background. Create ONE standalone 1536x1024 landscape. Match the existing full-bleed Eden landscape style: cinematic highly detailed realistic miniature terrain, natural limestone, foliage and water, warm gold light, atmospheric mountains, rich natural colors, subtle thin dark walnut diorama edge along lower foreground only. Entire canvas filled with landscape, no floating small model in black void. Elevated three-quarter view, distant landscape at top, landmarks readable and spaced apart. This is an artistic compressed narrative storyboard, never surveyed geography. NO words, labels, symbols, markers, routes, lines, circles, UI, panels, title, watermark, people, deity, angels, crosses, modern objects. Structures are modest ancient Near Eastern or Roman-period as specified, not fantasy. Visual landmark percentages guide future real HTML hotspots. Jonah1\u20134 artistic compressed story landscape, not geographic distances. LEFT15%x/60%y ancient Joppa harbor with small wooden merchant vessel at dock, sea transitions to storm cloud and another distant ship under sail at36%x/40%y, calm sandy shoreline at52%x/70%y. RIGHT74%x/37%y great ancient Assyrian walled city with mudbrick gates, outside it small rough shade shelter and leafy gourd plant at86%x/65%y. No people, no painted fish monster, no text. Rich blue sea, limestone shore and ochre city, atmosphere smoothly blends successive settings.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-c7c1fd91-1e6c-459a-abc3-01957c5eb5d8",
+      "source": "assets/imagegen/source/journey/jonah.png",
+      "final": "web/art/journey/jonah.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "cc98eccf458ce52a502def125d4a737d74192b661f8708c530dc50ca2d8b5079",
+      "final_sha256": "36f300462758cad2489765185c2d28152b0e9d3a5346ae27fbc651c549914c71",
+      "provenance": "assets/imagegen/journey/jonah.json"
+    },
+    {
+      "id": "loaves-and-sea",
+      "prompt": "undefinedMatthew14:13\u201336. A continuous Sea of Galilee narrative landscape. LEFT20%x/61%y a grassy remote shore with five small loaves and two fish resting on cloth in foreground (notoversized) and empty woven baskets. CENTER49%x/48%y a small wooden first-century fishing boat on lake with wind-ruffled waves, no humans. RIGHT77%x/38%y distant quiet Gennesaret shore with modest stone cottages, reeds and olive terraces. Freshwater lake, gentle ochre hills. Golden hour, soft dark clouds over centerwater. No depiction of John Baptist's death.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-756f5959-7410-4b5c-83a1-f8f6d50d6c01",
+      "source": "assets/imagegen/source/journey/loaves-and-sea.png",
+      "final": "web/art/journey/loaves-and-sea.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "26bcaea9bca02947db3f95d8af76305bd746b5c220b6d39650bd78fa5ea1ecfa",
+      "final_sha256": "2d4e7aea300bf0a45777e23d90ae1c4e8c91ff17bd9619a1f22c386cd31b419d",
+      "provenance": "assets/imagegen/journey/loaves-and-sea.json"
+    },
+    {
+      "id": "emmaus",
+      "prompt": "undefinedLuke24. One artistic compressed limestone Judean landscape. LEFT18%x/54%y empty rock-cut tomb in low garden, rounded entrance stone moved beside doorway, nopeopleorlightfigures. CENTER42%x/62%y an unmarked winding road through olive groves toward a modest stone village. At65%x/45%y a small open-sided house interior, table set with plain bread. RIGHT83%x/30%y distant ancient Jerusalem walled city with low stone temple rooftops, no modern domes or churches. Warm evening light, quiet, reverent, no crucifix or bodies.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-ad2e0959-1cc6-4430-a4ac-2523904fcb74",
+      "source": "assets/imagegen/source/journey/emmaus.png",
+      "final": "web/art/journey/emmaus.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "caa9dc83d312f50f21d10d2d058a77799173d8d6226d62e025fe0cf1fcf07015",
+      "final_sha256": "23c7bedb2c29fdfb9d6b515c4ec44ec57a3c56430c588d0543abcc439bfeef32",
+      "provenance": "assets/imagegen/journey/emmaus.json"
+    },
+    {
+      "id": "samaria",
+      "prompt": "undefinedJohn4. A detailed continuous Samarian hill-country landscape. LEFT31%x/62%y an ancient stone well with small clay waterpot nearby at crossroads, rope, no roof pulley invented, one simple low well opening. CENTER61%x/36%y modest ancient Sychar hillside town of warm flat-roof stone houses, distant mountain. RIGHT84%x/61%y a road climbs toward another small Galilean settlement for the later Cana episode, distinct visual stage, not geographic scale. Olive groves and pale green grain fields in sunlight, ochre hills, natural blue sky. No humanorholyfigure, no water changed wine bottle imagery.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-adcd3fab-6e37-46e9-bbe5-7fcf2eb67b3b",
+      "source": "assets/imagegen/source/journey/samaria.png",
+      "final": "web/art/journey/samaria.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "be6f5acc6c4b224713a1038656d8317fab21cb0e062de8f110447edf64b9afb3",
+      "final_sha256": "af797a0af31064ecb7a13965817d47287d1ddee174377c5a5d696d1cce26dd2c",
+      "provenance": "assets/imagegen/journey/samaria.json"
+    },
+    {
+      "id": "paul-voyage",
+      "prompt": "undefinedActs27\u201328. One artistic compressed Mediterranean voyage storyboard, elevated three-quarter landscape. LEFT15%x/34%y a Cretan harbor with small wooden Roman merchant vessel, center37%x/51%y open sea with storm clouds and steep waves around a distant ancient sailing ship; lower RIGHT61%x/69%y Maltese rocky bay with a broken wooden ship by a sandy beach and small fire ring on shore; UPPER RIGHT81%x/29%y distant ancient Rome with modest classical masonry and an Appian road leading there. Sea turquoise to deep blue, limestone, late golden light breaking from clouds. Connected wide landscape rather than panels. No people, no violent wreck, no snake closeup, no Colosseum (anachronism), no Christian churches.",
+      "generator": "built-in ImageGen",
+      "generation_id": "exec-54342eae-0108-4301-8f25-0d4ccdefd270",
+      "source": "assets/imagegen/source/journey/paul-voyage.png",
+      "final": "web/art/journey/paul-voyage.webp",
+      "reference_image_sent": false,
+      "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+      "intended_use": "Passage-following illustrated Journey landscape",
+      "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+      "processing": [
+        "Full frame WebP encoding quality90; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "ba10acb956ba8d1dad967c9a1bc9a6443098c5d52bc33366edbdd778a21c660d",
+      "final_sha256": "1f16e8eb1ec9007f5fa738f4a5b568638bdd2fac0757734ba8d5fdcf29d0ce62",
+      "provenance": "assets/imagegen/journey/paul-voyage.json"
     }
   ]
 }

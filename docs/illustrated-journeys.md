@@ -14,8 +14,16 @@ The landscape is an artistic storyboard. Places and successive moments are compr
 | Ruth’s return | Ruth 1–2 | Moab, the road, Bethlehem, Boaz’s field |
 | Luke’s birth narrative | Luke 2 | Road to Bethlehem, manger, shepherds’ fields, temple, Nazareth |
 | Galilee | Mark 4–5 | Teaching/return shore, crossing, opposite shore, Jairus’s house |
+| Jordan crossing | Joshua 3–4:24 | River crossing, stones in Jordan, Gilgal memorial |
+| David and Goliath | 1 Samuel 17:1–53; 17:54–58 unassigned | Armies in the valley, brook, confrontation, Philistine retreat |
+| Daniel | Daniel 6:1–24; 6:25–28 unassigned | Prayer, court, lions’ den, dawn at the den |
+| Jonah | Jonah 1:1–4:11; 1:1–2 and 4:1–4 unassigned | Joppa, storm, dry land, Nineveh, outside the city |
+| Bread and sea | Matthew 14:1–36; 14:1–12 and 14:23 unassigned | Solitary place, boat crossing, Gennesaret |
+| Emmaus | Luke 24:1–53; 24:50–51 unassigned | Empty tomb, road, meal, return to Jerusalem |
+| Samaria and Cana | John 4:1–54; 4:1–4 unassigned | Jacob’s well, Sychar and its people, Cana of Galilee |
+| Paul’s voyage | Acts 27:1–28:31; 27:1–6 and 28:11–15 unassigned | Fair Havens, storm, Melita, Rome |
 
-Ranges are explicit. A return to a previously visited setting reactivates its existing hotspot: for example Luke 2 returns to the temple and then Nazareth, while Mark 5 returns to the shore. Opening verses before a setting is assigned remain unassigned. Chapters outside these ranges retain existing curated geographic context or an honest no-journey state.
+Ranges are explicit. Gaps shown as unassigned render with no active hotspot and link to their own source verses; the page does not claim a scene for those verses. A return to a previously visited setting reactivates its existing hotspot: for example Luke 2 returns to the temple and then Nazareth, Mark 5 returns to the shore, and Joshua 4 returns to the river crossing before the Gilgal memorial. Chapters outside these ranges retain existing curated geographic context or an honest no-journey state.
 
 ## Interaction
 
@@ -28,6 +36,6 @@ Ranges are explicit. A return to a previously visited setting reactivates its ex
 
 ## Assets and source
 
-Each of the five new scenes was generated separately with built-in ImageGen. Original PNGs are preserved under `assets/imagegen/source/journey/`, optimized WebPs under `web/art/journey/`, and exact prompts and generation identifiers under `assets/imagegen/journey/` and `assets/imagegen/manifest.json`. Labels are not painted into the artwork.
+Each world uses its own illustration, with labels rendered as interface elements rather than painted into the artwork. Optimized scene WebPs live under `web/art/journey/`; original PNGs, exact prompts, generation identifiers, and manifest entries are tracked under `assets/imagegen/source/journey/`, `assets/imagegen/journey/`, and `assets/imagegen/manifest.json`.
 
 `src/journey_scenes.rs` holds the new scene ranges, references, rendering, and corpus-bound checks. `src/reader_context.rs` selects the relevant illustration; `web/reader-context.js` consumes actual position events and updates only the companion.

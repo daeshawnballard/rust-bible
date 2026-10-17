@@ -56,7 +56,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
       </article>
       <article class="about-card">
         <h3><a href="{codex}">Bible Codex</a></h3>
-        <p>Browse one book-organized guide with 212 selected People, Places, Miracles, and Study notes across all 66 books.</p>
+        <p>Browse one book-organized guide with 360 selected People, Places, Miracles, and Study notes across all 66 books.</p>
       </article>
     </div>
   </section>
@@ -117,7 +117,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>What does Journey cover?</summary>
-      <p>Genesis 2–4 uses symbolic story scenery. Other illustrated journeys cover Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth 1–2, Luke 2, and Mark 4–5. The active hotspot follows your reading or listening verse; the artwork compresses places and times. Curated geographic settings cover Acts 16–17 and Revelation 1:9. Journey only uses its authored ranges and curated settings; unsupported passages remain readable without an assigned location. Modern terrain needs a network connection and WebGL.</p>
+      <p>Genesis 2–4 uses symbolic story scenery. Other illustrated journeys cover Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth 1–2, Luke 2, and Mark 4–5. New worlds cover Joshua 3–4, 1 Samuel 17, Daniel 6, Jonah 1–4, Matthew 14, Luke 24, John 4, and Acts 27–28. Some verses within those chapters are deliberately unassigned. The active hotspot follows your reading or listening verse; the artwork compresses places and times. Curated geographic settings cover Acts 16–17 and Revelation 1:9. Journey only uses its authored ranges and curated settings; unsupported passages remain readable without an assigned location. Modern terrain needs a network connection and WebGL.</p>
       <p><a href="{journey}">Open the Acts 16 Journey example</a></p>
     </details>
     <details>
@@ -127,7 +127,7 @@ pub(super) fn page(client: bool) -> RouteResponse {
     </details>
     <details>
       <summary>What is the Bible Codex?</summary>
-      <p>It is one book-organized reference guide with 212 selected entries across all 66 books: People, Places, Miracles, and Study notes. Each entry points to a KJV verse. The selection is curated, not exhaustive.</p>
+      <p>It is one book-organized reference guide with 360 selected entries across all 66 books: People, Places, Miracles, and Study notes. Each entry points to a KJV verse. The selection is curated, not exhaustive.</p>
     </details>
     <details>
       <summary>Do I need an account or an API key?</summary>
@@ -158,7 +158,7 @@ mod tests {
             "href=\"/book/Genesis/6?resume=14&amp;context=illustration&amp;scene=noahs-ark&amp;part=construction#v14\"",
             "href=\"/book/Matthew/13?resume=3&amp;context=illustration&amp;scene=sower&amp;part=path#v3\"",
             "href=\"/book/Exodus/25?resume=31&amp;context=illustration&amp;scene=tabernacle&amp;part=lamp#v31\"",
-            "Genesis 2–4 uses symbolic story scenery. Other illustrated journeys cover Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth 1–2, Luke 2, and Mark 4–5. The active hotspot follows your reading or listening verse; the artwork compresses places and times.",
+            "Genesis 2–4 uses symbolic story scenery. Other illustrated journeys cover Noah and the flood (Genesis 7–9:17), the Exodus wilderness (Exodus 13:17–17), Ruth 1–2, Luke 2, and Mark 4–5. New worlds cover Joshua 3–4, 1 Samuel 17, Daniel 6, Jonah 1–4, Matthew 14, Luke 24, John 4, and Acts 27–28. Some verses within those chapters are deliberately unassigned. The active hotspot follows your reading or listening verse; the artwork compresses places and times.",
             "Acts 16–17 and Revelation 1:9",
             "Genesis 6–9",
             "Exodus 25–31 and 35–40",

@@ -1,0 +1,24 @@
+{
+  "id": "paul-voyage",
+  "prompt": "undefinedActs27\u201328. One artistic compressed Mediterranean voyage storyboard, elevated three-quarter landscape. LEFT15%x/34%y a Cretan harbor with small wooden Roman merchant vessel, center37%x/51%y open sea with storm clouds and steep waves around a distant ancient sailing ship; lower RIGHT61%x/69%y Maltese rocky bay with a broken wooden ship by a sandy beach and small fire ring on shore; UPPER RIGHT81%x/29%y distant ancient Rome with modest classical masonry and an Appian road leading there. Sea turquoise to deep blue, limestone, late golden light breaking from clouds. Connected wide landscape rather than panels. No people, no violent wreck, no snake closeup, no Colosseum (anachronism), no Christian churches.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-54342eae-0108-4301-8f25-0d4ccdefd270",
+  "source": "assets/imagegen/source/journey/paul-voyage.png",
+  "final": "web/art/journey/paul-voyage.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "ba10acb956ba8d1dad967c9a1bc9a6443098c5d52bc33366edbdd778a21c660d",
+  "final_sha256": "1f16e8eb1ec9007f5fa738f4a5b568638bdd2fac0757734ba8d5fdcf29d0ce62",
+  "provenance": "assets/imagegen/journey/paul-voyage.json"
+}

@@ -55,9 +55,9 @@ macro_rules! e {
     };
 }
 
-// Three or more entries per book; extra entries are concentrated in books with
-// especially broad narrative or teaching material. These are selected guides,
-// not an exhaustive index.
+// The selected guide includes at least five entries per book; narrative scenes
+// with several distinct movements receive additional references. It is not an
+// exhaustive index.
 static ENTRIES: &[Entry] = &[
     e!("genesis-creation", 0, Lessons, "Creation and human vocation", "The opening account presents creation as ordered and gives humanity a role within it.", 1, 27),
     e!("genesis-eden", 0, Places, "The garden in Eden", "Eden is named as the garden setting; the text does not establish a modern map location.", 2, 8),
@@ -271,6 +271,156 @@ static ENTRIES: &[Entry] = &[
     e!("revelation-seven-churches", 65, Places, "The seven churches in Asia", "The opening names seven churches in Asia to receive the message.", 1, 4),
     e!("revelation-lamb", 65, People, "The Lamb", "The vision presents the Lamb standing as though slain before the throne.", 5, 6),
     e!("revelation-witness", 65, Lessons, "The remnant under attack", "The verse describes the dragon making war on the remnant who keep the commandments of God and have the testimony of Jesus Christ.", 12, 17),
+    // Coverage expansion: two new references for every book, with two further
+    // entries in each of the eight scene-focused books.
+    e!("genesis-abram-believes", 0, Lessons, "Abram believes the promise", "The narrative records Abram believing the Lord and that belief being counted to him for righteousness.", 15, 6),
+    e!("genesis-joseph-purpose", 0, Lessons, "Joseph reflects on the harm done", "Joseph distinguishes his brothers' intent from the good he says God brought about to preserve many lives.", 50, 20),
+    e!("exodus-manna", 1, Lessons, "Daily provision in the wilderness", "The Lord promises bread from heaven and gives the people a daily instruction to follow.", 16, 4),
+    e!("exodus-name-of-the-lord", 1, Lessons, "The Lord names his character", "The Lord describes himself to Moses as merciful, gracious, patient, and abundant in goodness and truth.", 34, 6),
+    e!("leviticus-day-of-atonement", 2, Lessons, "Cleansing on the Day of Atonement", "The instruction describes atonement and cleansing for the people from their sins before the Lord.", 16, 30),
+    e!("leviticus-jubilee", 2, Lessons, "Liberty in the Jubilee year", "The Jubilee instruction calls for liberty throughout the land and each person to return to family property.", 25, 10),
+    e!("numbers-priestly-blessing", 3, Lessons, "The priestly blessing", "The Lord gives Aaron and his sons words of blessing asking for care, grace, and peace for Israel.", 6, 24),
+    e!("numbers-caleb-and-joshua", 3, People, "Caleb and Joshua urge trust", "Caleb and Joshua say the land can be entered if the Lord delights in Israel and is with them.", 14, 8),
+    e!("deuteronomy-what-the-lord-requires", 4, Lessons, "What the Lord asks of Israel", "Moses gathers the call to fear, love, serve, and walk in the Lord's ways.", 10, 12),
+    e!("deuteronomy-choose-life", 4, Lessons, "Choose life", "Moses sets life and death before Israel and urges the people to choose life by loving and obeying the Lord.", 30, 19),
+    e!("joshua-sanctify-yourselves", 5, Lessons, "Prepare for the crossing", "Joshua tells the people to sanctify themselves before the Lord's promised wonders the next day.", 3, 5),
+    e!("joshua-jordan-priests", 5, Places, "The priests stand in the Jordan", "The priests carrying the ark stand on dry ground in the Jordan while Israel crosses.", 3, 17),
+    e!("joshua-stones-memory", 5, Lessons, "Stones to remember the crossing", "Joshua says the stones are to help later generations ask about and remember the crossing.", 4, 6),
+    e!("joshua-crossing-witness", 5, Lessons, "The crossing made known", "Joshua says the crossing is to make the Lord's hand known and call the people to reverence.", 4, 24),
+    e!("judges-deliverers", 6, People, "The judges deliver Israel", "The account says the Lord raised judges who delivered Israel from those who plundered them.", 2, 16),
+    e!("judges-deborah-song-close", 6, Lessons, "The song of Deborah closes", "The song calls for the Lord's enemies to perish and those who love him to shine; the land then has rest.", 5, 31),
+    e!("ruth-under-the-lords-wings", 7, Lessons, "Ruth seeks refuge under the Lord's wings", "Boaz blesses Ruth for seeking refuge under the wings of the Lord while describing her loyalty to Naomi.", 2, 12),
+    e!("ruth-obed", 7, People, "Obed is born", "The narrative records Ruth and Boaz's son Obed and names him as Naomi's descendant.", 4, 13),
+    e!("1-samuel-goliath-appears", 8, People, "Goliath challenges Israel", "The narrative introduces Goliath as a Philistine champion who comes forward from the opposing army.", 17, 4),
+    e!("1-samuel-david-asks", 8, People, "David asks about the challenge", "David asks what will be done for the man who removes the reproach brought by the Philistine's challenge.", 17, 26),
+    e!("1-samuel-david-refuses-armor", 8, Lessons, "David sets aside unfamiliar armor", "David tries Saul's armor, then removes it because he has not proved himself in it.", 17, 39),
+    e!("1-samuel-sling-and-stone", 8, People, "David prevails with a sling and stone", "The account says David defeats the Philistine with a sling and a stone, without a sword in his hand.", 17, 50),
+    e!("2-samuel-davids-house", 9, Lessons, "A promise concerning David's house", "Nathan's message speaks of a house, kingdom, and throne established for David's line.", 7, 16),
+    e!("2-samuel-lord-my-rock", 9, Lessons, "The Lord as rock and fortress", "David's song calls the Lord his rock, fortress, deliverer, and refuge.", 22, 2),
+    e!("1-kings-god-and-the-temple", 10, Lessons, "The temple cannot contain God", "In his prayer, Solomon asks whether even heaven can contain the Lord, much less the house he has built.", 8, 27),
+    e!("1-kings-kingdom-divides", 10, Lessons, "The tribes reject Rehoboam", "The people answer Rehoboam that they have no share in David's house and depart to their tents.", 12, 16),
+    e!("2-kings-prophets-warn-israel", 11, Lessons, "Israel is warned through the prophets", "The text says the Lord warned Israel and Judah through prophets and seers to turn from evil ways.", 17, 13),
+    e!("2-kings-book-found", 11, People, "The book is found in the temple", "Hilkiah tells Shaphan the scribe that he has found a book of the law in the house of the Lord.", 22, 8),
+    e!("1-chronicles-david-confesses", 12, People, "David confesses after the census", "David acknowledges his wrongdoing and asks that the people not bear the consequence of his sin.", 21, 17),
+    e!("1-chronicles-everything-from-god", 12, Lessons, "Everything comes from God", "David says that the people's gifts came from what already belonged to the Lord.", 29, 14),
+    e!("2-chronicles-jehoshaphat-prays", 13, People, "Jehoshaphat asks for help", "Jehoshaphat says the people do not know what to do and turns their eyes toward the Lord.", 20, 12),
+    e!("2-chronicles-cyrus-decree", 13, Places, "Cyrus permits the return", "The closing words report Cyrus's decree allowing the people to go up to Jerusalem and build the Lord's house.", 36, 23),
+    e!("ezra-temple-foundation", 14, Places, "The temple foundation is laid", "The returned community lays the foundation of the house of the Lord in Jerusalem and responds with praise.", 3, 11),
+    e!("ezra-fast-at-ahava", 14, Lessons, "A fast before the journey", "Ezra proclaims a fast by the river Ahava so the people can seek a safe way for themselves and their families.", 8, 21),
+    e!("nehemiah-call-to-rebuild", 15, People, "Nehemiah calls for rebuilding", "Nehemiah describes Jerusalem's distress and calls the people to rebuild its wall.", 2, 17),
+    e!("nehemiah-confronts-exploitation", 15, Lessons, "Nehemiah challenges exploitation", "Nehemiah rebukes the nobles for the way they are treating their fellow Jews and urges them to stop.", 5, 9),
+    e!("esther-golden-sceptre", 16, People, "The king extends the sceptre", "The king extends the golden sceptre to Esther, and she approaches to speak with him.", 5, 2),
+    e!("esther-remembrance", 16, Lessons, "The days of deliverance are remembered", "The letter establishes days of feasting and giving gifts in remembrance of relief from distress.", 9, 22),
+    e!("job-receives-adversity", 17, Lessons, "Job speaks amid loss", "Job asks whether people should receive good from God but refuse adversity, as he sits with his grief.", 2, 10),
+    e!("job-heard-and-seen", 17, Lessons, "Job contrasts hearing and seeing", "Near the book's close, Job contrasts what he had heard with what he now says he has seen.", 42, 5),
+    e!("psalms-refuge-and-strength", 18, Lessons, "God as refuge and strength", "The psalm calls God a refuge, strength, and present help in trouble.", 46, 1),
+    e!("psalms-everything-that-breathes", 18, Lessons, "Let all that breathes praise", "The final psalm closes with a call for everything that has breath to praise the Lord.", 150, 6),
+    e!("proverbs-trust-the-lord", 19, Lessons, "Trust the Lord with your heart", "The proverb urges trust in the Lord rather than relying only on one's own understanding.", 3, 5),
+    e!("proverbs-path-directed", 19, Lessons, "The Lord directs the path", "The proverb contrasts a person's plans with the Lord's direction of that person's steps.", 16, 9),
+    e!("ecclesiastes-adversity-and-prosperity", 20, Lessons, "Consider both prosperity and adversity", "The speaker tells readers to consider the day of prosperity and the day of adversity.", 7, 14),
+    e!("ecclesiastes-conclusion", 20, Lessons, "The book's concluding charge", "The closing lines call the reader to fear God and keep his commandments, describing this as the whole duty of humanity.", 12, 13),
+    e!("song-winter-past", 21, Lessons, "The winter has passed", "The speaker marks the passing of winter and rain as the beloved's invitation begins.", 2, 11),
+    e!("song-mutual-belonging", 21, Lessons, "A language of mutual belonging", "The speaker describes a bond of mutual belonging between the beloved and the lover.", 6, 3),
+    e!("isaiah-waiting-renews-strength", 22, Lessons, "Waiting on the Lord", "The poem says those who wait on the Lord renew their strength and continue without fainting.", 40, 31),
+    e!("isaiah-gods-ways", 22, Lessons, "God's ways exceed human ways", "The passage compares the heavens above the earth with the distance between God's ways and human ways.", 55, 9),
+    e!("jeremiah-potter-and-clay", 23, Places, "The potter's house", "The Lord compares the house of Israel to clay in the potter's hand.", 18, 6),
+    e!("jeremiah-law-within", 23, Lessons, "The law written within", "The promise describes a covenant in which the Lord's law is written in the people's hearts.", 31, 33),
+    e!("lamentations-yoke-in-youth", 24, Lessons, "Bearing a yoke in youth", "The poem calls it good for a person to bear a yoke in youth within its reflection on suffering and waiting.", 3, 27),
+    e!("lamentations-renew-our-days", 24, Lessons, "A prayer for renewal", "The closing prayer asks the Lord to turn the people back and renew their days as before.", 5, 21),
+    e!("ezekiel-dry-bones-live", 25, Lessons, "A vision of dry bones", "In a vision, dry bones receive breath and live as a sign concerning the house of Israel.", 37, 5),
+    e!("ezekiel-river-brings-life", 25, Places, "A river flows from the temple", "Ezekiel's vision describes water flowing from the house and bringing life where the river goes.", 47, 9),
+    e!("daniel-officials-seek-an-accusation", 26, People, "Officials secure a decree", "The officials present a decree limiting petitions to the king for thirty days, with disobedience punishable by the lions' den.", 6, 7),
+    e!("daniel-sealed-den", 26, Places, "The den is sealed", "The king has Daniel placed in the lions' den, and a stone is set over its mouth.", 6, 17),
+    e!("daniel-brought-from-den", 26, Miracles, "Daniel is brought up unharmed", "The narrative says Daniel is brought up from the den with no hurt found on him because he trusted in God.", 6, 23),
+    e!("daniel-darius-decree", 26, People, "Darius issues a decree about God", "Darius's decree tells the peoples of his realm to fear and tremble before Daniel's God.", 6, 26),
+    e!("hosea-mercy-and-knowledge", 27, Lessons, "Mercy and knowledge of God", "The prophet says the Lord desires mercy and knowledge of God rather than sacrifice alone.", 6, 6),
+    e!("hosea-heal-their-backsliding", 27, Lessons, "A promise of healing", "The closing chapter speaks of the Lord healing Israel's turning away and loving freely.", 14, 4),
+    e!("joel-spirit-poured-out", 28, Lessons, "The Spirit poured out", "Joel's prophecy says the Lord will pour out his spirit on all flesh and describes visions and dreams.", 2, 28),
+    e!("joel-refuge-for-his-people", 28, Places, "The Lord is hope for his people", "The prophecy describes the Lord as the hope of his people and strength of the children of Israel.", 3, 16),
+    e!("amos-reveals-to-prophets", 29, Lessons, "The Lord reveals his purpose", "Amos says the Lord reveals his secret to his servants the prophets before acting.", 3, 7),
+    e!("amos-seek-good", 29, Lessons, "Seek good and live", "Amos calls Israel to seek good rather than evil and so live.", 5, 14),
+    e!("obadiah-do-not-gloat", 30, Lessons, "Do not gloat over a brother's trouble", "The oracle warns Edom against rejoicing over Judah's distress and taking advantage of it.", 1, 12),
+    e!("obadiah-kingdom-is-the-lords", 30, Lessons, "The kingdom is the Lord's", "The book's final line declares that the kingdom shall be the Lord's.", 1, 21),
+    e!("jonah-flees-toward-tarshish", 31, People, "Jonah flees from his commission", "Jonah goes toward Tarshish after receiving the command to go to Nineveh.", 1, 3),
+    e!("jonah-prays-from-the-fish", 31, People, "Jonah prays from the fish", "The narrative says Jonah prays to the Lord from inside the fish.", 2, 1),
+    e!("jonah-nineveh-believes", 31, Places, "Nineveh responds to the warning", "The people of Nineveh believe God, proclaim a fast, and put on sackcloth after hearing Jonah.", 3, 5),
+    e!("jonah-explains-his-anger", 31, Lessons, "Jonah explains his anger", "Jonah says he fled because he knew the Lord to be gracious, merciful, patient, and abundant in mercy.", 4, 2),
+    e!("micah-filled-with-power", 32, People, "Micah describes his prophetic task", "Micah says he is filled with power, judgment, and might to declare Israel's transgression.", 3, 8),
+    e!("micah-who-is-like-thee", 32, Lessons, "Who is like the Lord?", "The closing praise celebrates the Lord's pardon and compassion toward the remnant of his heritage.", 7, 18),
+    e!("nahum-lord-is-good", 33, Lessons, "The Lord is good in trouble", "Nahum calls the Lord good, a stronghold in the day of trouble, and one who knows those who trust him.", 1, 7),
+    e!("nahum-bloody-city", 33, Places, "A woe against the bloody city", "The prophecy opens a woe against Nineveh, describing the city through violence and deceit.", 3, 1),
+    e!("habakkuk-stands-to-watch", 34, People, "Habakkuk waits for an answer", "Habakkuk says he will stand at his watch and look for the answer to his complaint.", 2, 1),
+    e!("habakkuk-rejoices-in-the-lord", 34, Lessons, "Rejoicing amid loss", "The speaker says he will rejoice in the Lord even if the fields and herds fail.", 3, 18),
+    e!("zephaniah-pure-language", 35, Lessons, "A people call on the Lord", "The prophecy says the Lord will turn the peoples to a pure language so they may call on his name together.", 3, 9),
+    e!("zephaniah-rejoices-over-thee", 35, Lessons, "The Lord rejoices over his people", "The poem describes the Lord in the midst of his people as mighty to save and rejoicing over them.", 3, 17),
+    e!("haggai-be-strong-and-work", 36, Lessons, "Be strong and work", "Haggai urges Zerubbabel, Joshua, and the people to be strong and work, saying the Lord is with them.", 2, 4),
+    e!("haggai-latter-glory", 36, Lessons, "The latter house's glory", "The prophecy says the latter glory of the house will be greater than the former and speaks of peace.", 2, 9),
+    e!("zechariah-not-by-might", 37, Lessons, "Not by might, but by the Spirit", "The message to Zerubbabel says the work will be accomplished by the Lord's spirit rather than by human might or power.", 4, 6),
+    e!("zechariah-king-comes-lowly", 37, People, "A king comes lowly", "The prophecy pictures Zion's king as just, bringing salvation, and riding upon a donkey.", 9, 9),
+    e!("malachi-messenger-prepares-way", 38, People, "A messenger prepares the way", "The prophecy speaks of a messenger sent to prepare the way before the Lord comes to his temple.", 3, 1),
+    e!("malachi-sun-of-righteousness", 38, Lessons, "Healing for those who fear the Lord", "The prophecy promises the sun of righteousness with healing to those who fear the Lord's name.", 4, 2),
+    e!("matthew-jesus-has-compassion", 39, People, "Jesus has compassion on the crowd", "Jesus sees the gathered crowd, is moved with compassion, and heals their sick.", 14, 14),
+    e!("matthew-walks-on-the-sea", 39, Miracles, "Jesus walks on the sea", "The disciples see Jesus walking on the sea as he comes toward their boat during the storm.", 14, 25),
+    e!("matthew-peter-cries-for-help", 39, People, "Peter cries out for help", "When Peter begins to sink, he cries out to the Lord to save him.", 14, 30),
+    e!("matthew-disciples-worship", 39, Lessons, "The disciples worship Jesus", "After the boat's wind ceases, those in it worship Jesus and call him the Son of God.", 14, 33),
+    e!("mark-repent-and-believe", 40, Lessons, "Repent and believe the gospel", "Jesus announces that the time is fulfilled and calls his hearers to repent and believe the gospel.", 1, 15),
+    e!("mark-servant-not-served", 40, Lessons, "The Son of Man serves", "Jesus says the Son of Man came to serve and give his life as a ransom for many.", 10, 45),
+    e!("luke-remember-his-words", 41, Lessons, "Remember what Jesus said", "At the empty tomb, the messengers remind the women of Jesus's words about his death and rising.", 24, 6),
+    e!("luke-road-to-emmaus", 41, Places, "Two disciples travel to Emmaus", "Two disciples walk to the village called Emmaus; the passage does not settle which present-day site is meant.", 24, 13),
+    e!("luke-breaking-of-bread", 41, People, "Recognized in the breaking of bread", "The two disciples recognize Jesus when he takes, blesses, breaks, and gives the bread.", 24, 30),
+    e!("luke-understanding-opened", 41, Lessons, "The disciples' understanding is opened", "Jesus opens the disciples' understanding so they can understand the Scriptures.", 24, 45),
+    e!("john-samaritan-woman", 42, People, "Jesus speaks with a Samaritan woman", "At Jacob's well, Jesus asks a Samaritan woman for a drink and begins a conversation about living water.", 4, 7),
+    e!("john-living-water", 42, Lessons, "The promise of living water", "Jesus tells the woman that, if she knew the gift of God, she could ask him for living water.", 4, 10),
+    e!("john-woman-tells-the-city", 42, People, "The woman tells her city", "The woman invites people to come see a man who told her all that she had done.", 4, 29),
+    e!("john-samaritans-believe", 42, Lessons, "Many Samaritans believe", "Many Samaritans in the city believe because of the woman's testimony.", 4, 39),
+    e!("acts-be-of-good-cheer", 43, Lessons, "Paul urges courage during the storm", "Paul tells those aboard to be of good cheer, saying he believes God will keep the promise made to him.", 27, 25),
+    e!("acts-all-reach-land", 43, Places, "Everyone reaches land safely", "The account says all aboard escape safely to land after the ship breaks apart.", 27, 44),
+    e!("acts-islanders-show-kindness", 43, People, "The islanders welcome the survivors", "The people on the island receive the shipwrecked group with kindness and build a fire against the rain and cold.", 28, 2),
+    e!("acts-paul-preaches-under-guard", 43, People, "Paul receives visitors under guard", "The closing lines describe Paul living under guard and receiving those who come to him as he teaches.", 28, 30),
+    e!("romans-peace-with-god", 44, Lessons, "Peace with God", "The letter connects justification by faith with peace with God through Jesus Christ.", 5, 1),
+    e!("romans-no-condemnation", 44, Lessons, "No condemnation in Christ", "The letter says there is no condemnation for those in Christ Jesus who walk after the Spirit.", 8, 1),
+    e!("1-corinthians-faithful-in-temptation", 45, Lessons, "God is faithful in temptation", "The letter says God is faithful and provides a way to endure temptation.", 10, 13),
+    e!("1-corinthians-steadfast-work", 45, Lessons, "Steadfast work in the Lord", "Following its teaching about resurrection, the letter urges steadfast work, saying labour in the Lord is not in vain.", 15, 58),
+    e!("2-corinthians-treasure-in-clay", 46, Lessons, "Treasure in earthen vessels", "The letter describes its treasure in earthen vessels so the power may be seen as God's.", 4, 7),
+    e!("2-corinthians-grace-sufficient", 46, Lessons, "Grace sufficient in weakness", "The letter recounts the Lord's answer that grace is sufficient and strength is made perfect in weakness.", 12, 9),
+    e!("galatians-one-in-christ", 47, Lessons, "One in Christ", "The letter says those baptized into Christ are one in him across the distinctions named in the passage.", 3, 28),
+    e!("galatians-bear-one-anothers-burdens", 47, Lessons, "Bear one another's burdens", "Paul tells believers to bear one another's burdens and so fulfill the law of Christ.", 6, 2),
+    e!("ephesians-saved-by-grace", 48, Lessons, "Saved by grace through faith", "The letter says salvation is by grace through faith and is the gift of God, not a ground for boasting.", 2, 8),
+    e!("ephesians-strength-in-the-lord", 48, Lessons, "Be strong in the Lord", "The letter calls readers to be strong in the Lord and in the power of his might.", 6, 10),
+    e!("philippians-mind-of-christ", 49, Lessons, "The mind of Christ", "The letter urges the community to share the mind described in the passage about Christ Jesus.", 2, 5),
+    e!("philippians-prayer-and-thanksgiving", 49, Lessons, "Bring requests with thanksgiving", "The letter tells readers to bring their requests to God through prayer and supplication with thanksgiving.", 4, 6),
+    e!("colossians-image-of-god", 50, Lessons, "Christ as the image of God", "The letter calls Christ the image of the invisible God in its description of his supremacy.", 1, 15),
+    e!("colossians-work-heartily", 50, Lessons, "Work wholeheartedly", "The letter tells servants to work heartily as serving the Lord rather than people.", 3, 23),
+    e!("1-thessalonians-grief-with-hope", 51, Lessons, "Grief with hope", "The letter tells the community not to grieve as those without hope when speaking about believers who have died.", 4, 13),
+    e!("1-thessalonians-give-thanks", 51, Lessons, "Give thanks in every circumstance", "The letter instructs its readers to give thanks in everything and calls this God's will in Christ.", 5, 18),
+    e!("2-thessalonians-the-lord-is-faithful", 52, Lessons, "The Lord is faithful", "Paul says the Lord is faithful to establish and keep believers from evil.", 3, 3),
+    e!("2-thessalonians-do-not-grow-weary", 52, Lessons, "Do not grow weary in doing good", "The letter urges believers not to grow weary in doing good.", 3, 13),
+    e!("1-timothy-pray-for-all", 53, Lessons, "Pray for all people", "The letter urges prayers, intercessions, and thanks to be made for all people.", 2, 1),
+    e!("1-timothy-godliness-and-contentment", 53, Lessons, "Godliness with contentment", "The letter describes godliness with contentment as great gain.", 6, 6),
+    e!("2-timothy-rightly-divide", 54, Lessons, "Handle the word of truth rightly", "The letter urges Timothy to study so he may present himself approved and rightly handle the word of truth.", 2, 15),
+    e!("2-timothy-finished-the-course", 54, People, "The speaker reflects on his course", "Near the letter's end, the speaker says he has fought the good fight, finished the course, and kept the faith.", 4, 7),
+    e!("titus-grace-trains-us", 55, Lessons, "Grace trains a way of life", "The letter says God's grace teaches believers to reject ungodliness and live soberly, righteously, and godly.", 2, 12),
+    e!("titus-saved-by-mercy", 55, Lessons, "Saved according to mercy", "The letter grounds salvation in God's mercy and speaks of renewal by the Holy Ghost.", 3, 5),
+    e!("philemon-beloved-brother", 56, People, "Onesimus as a beloved brother", "The letter asks Philemon to receive Onesimus not merely as a servant but as a beloved brother.", 1, 16),
+    e!("philemon-receive-him-as-me", 56, Lessons, "Receive Onesimus as a partner", "The letter asks Philemon to receive Onesimus as he would receive its speaker.", 1, 17),
+    e!("hebrews-sympathetic-high-priest", 57, People, "A high priest who knows weakness", "The letter describes Jesus as a high priest able to sympathize with human weakness, yet without sin.", 4, 15),
+    e!("hebrews-provoke-to-love", 57, Lessons, "Encourage love and good works", "The letter tells readers to consider how to provoke one another to love and good works.", 10, 24),
+    e!("james-small-member", 58, Lessons, "The tongue is a small member", "The letter compares the tongue's small size with its ability to boast of great things.", 3, 5),
+    e!("james-confess-and-pray", 58, Lessons, "Confess and pray for one another", "The letter joins confession of faults with prayer for one another and describes prayer as effective.", 5, 16),
+    e!("1-peter-chosen-people", 59, Lessons, "A people called to declare God's works", "Peter describes his readers as a chosen people called to show the praises of the one who called them.", 2, 9),
+    e!("1-peter-answer-with-meekness", 59, Lessons, "Answer with meekness and reverence", "Peter tells readers to be ready to answer for their hope with meekness and reverence.", 3, 15),
+    e!("2-peter-add-to-faith", 60, Lessons, "Add virtue to faith", "The letter urges readers to add virtue to faith and then names further qualities for spiritual growth.", 1, 5),
+    e!("2-peter-be-found-in-peace", 60, Lessons, "Be found in peace", "Peter tells readers to be diligent to be found by the Lord in peace, without spot and blameless.", 3, 14),
+    e!("1-john-love-in-deed", 61, Lessons, "Love in deed and truth", "The letter says love should be expressed in deed and truth rather than in word and tongue only.", 3, 18),
+    e!("1-john-purpose-of-writing", 61, Lessons, "Why the letter is written", "The writer says these things are written so believers may know they have eternal life.", 5, 13),
+    e!("2-john-walking-in-love", 62, Lessons, "Walking in love means keeping the commandment", "The letter describes love as walking according to the commandments received from the beginning.", 1, 6),
+    e!("2-john-face-to-face", 62, People, "The elder hopes to visit", "The elder says he has more to write but hopes to speak face to face so their joy may be full.", 1, 12),
+    e!("3-john-welcoming-travellers", 63, Lessons, "Support those who travel for the truth", "The elder commends Gaius for his faithful treatment of brothers and strangers.", 1, 5),
+    e!("3-john-follow-the-good", 63, Lessons, "Follow what is good", "The elder tells Gaius to imitate what is good rather than what is evil.", 1, 11),
+    e!("jude-build-up-your-faith", 64, Lessons, "Build one another up in faith", "The letter urges readers to build themselves up in their most holy faith and pray in the Holy Ghost.", 1, 20),
+    e!("jude-kept-from-falling", 64, Lessons, "God is able to keep you", "Jude closes by praising God as able to keep believers from falling and present them faultless.", 1, 24),
+    e!("revelation-tears-wiped-away", 65, Lessons, "Tears and death are no more", "The vision describes God wiping away tears and says death, sorrow, crying, and pain will be no more.", 21, 4),
+    e!("revelation-invitation-to-come", 65, Lessons, "An invitation to come", "The book closes with the Spirit and bride saying come and an invitation to those who thirst.", 22, 17),
 ];
 
 fn category(value: Option<&str>) -> Option<Category> {
@@ -633,7 +783,9 @@ mod tests {
     #[test]
     fn every_codex_anchor_is_a_verse_in_the_embedded_kjv() {
         let mut ids = HashSet::new();
+        let mut anchors = HashSet::new();
         let mut per_book = [0usize; 66];
+        let mut per_category = [0usize; 4];
         for entry in ENTRIES {
             assert!(ids.insert(entry.id), "duplicate Codex id: {}", entry.id);
             assert!(entry.book < NAMES.len(), "invalid book for {}", entry.id);
@@ -651,16 +803,45 @@ mod tests {
                 entry.verse
             );
             assert!(!entry.title.trim().is_empty() && !entry.summary.trim().is_empty());
+            assert!(
+                entry.summary.trim().len() >= 24,
+                "summary is too thin for {}",
+                entry.id
+            );
+            anchors.insert((entry.book, entry.chapter, entry.verse));
+            per_category[match entry.category {
+                Category::People => 0,
+                Category::Places => 1,
+                Category::Miracles => 2,
+                Category::Lessons => 3,
+            }] += 1;
             per_book[entry.book] += 1;
         }
         assert!(
-            ENTRIES.len() >= 200,
-            "expected a meaningful curated set, got {}",
+            ENTRIES.len() >= 360,
+            "expected at least 360 selected entries, got {}",
             ENTRIES.len()
         );
+        const MIN_PER_BOOK: [usize; 66] = [
+            6, 6, 5, 5, 5, 7, 5, 5, 8, 5, 6, 5, 5, 5, 5, 5, 5, 5, 6, 5, 5, 5, 6, 5, 5, 5, 8, 5, 5,
+            5, 5, 7, 5, 5, 5, 5, 5, 5, 5, 9, 6, 8, 8, 8, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+            5, 5, 5, 5, 5, 5, 5, 6,
+        ];
         assert!(
-            per_book.iter().all(|count| *count >= 2),
-            "every book needs at least two entries: {per_book:?}"
+            per_book
+                .iter()
+                .zip(MIN_PER_BOOK)
+                .all(|(count, minimum)| *count >= minimum),
+            "every book must retain its expansion coverage: {per_book:?}"
+        );
+        assert!(
+            anchors.len() >= 352,
+            "expected new entries to use distinct verse anchors while preserving legacy repeats, got {} unique anchors",
+            anchors.len()
+        );
+        assert!(
+            per_category.iter().all(|count| *count > 0),
+            "all four Codex categories should remain represented: {per_category:?}"
         );
     }
 
@@ -670,6 +851,10 @@ mod tests {
         for name in NAMES {
             assert!(html.contains(&format!("aria-label=\"{}\"", name)));
         }
+        assert_eq!(
+            html.matches("data-codex-entry-id=\"").count(),
+            ENTRIES.len()
+        );
         assert!(html.contains("Study note"));
         assert!(!html.contains("class=\"scripture\""));
         assert!(!html.contains("class=\"v\""));

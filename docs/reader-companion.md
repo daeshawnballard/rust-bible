@@ -18,7 +18,7 @@ Hotspots inspect context while the saved reading location remains unchanged. An 
 
 Genesis 2–4 story stages follow 2:8, 2:10–14 (river), 3:23, 3:24, and 4:16. Genesis 2:1–7 is explicitly unassigned before the garden is introduced. The landscape and line are schematic illustrations, not archaeological or geographic evidence. Eden and Nod have no assigned coordinates. The move to Nod follows Cain rather than Adam and Eve. No persons or deity are depicted in the scenery.
 
-Additional illustrated story coverage is documented in [Illustrated Journey scenes](illustrated-journeys.md): Genesis 7–9:17, Exodus 13:17–17:16, Ruth 1–2, Luke 2, and Mark 4–5. Ranges are explicit and recurring places reactivate their existing hotspot.
+Additional illustrated story coverage is documented in [Illustrated Journey scenes](illustrated-journeys.md): Genesis 7–9:17, Exodus 13:17–17:16, Ruth 1–2, Luke 2, Mark 4–5, Joshua 3–4, 1 Samuel 17, Daniel 6, Jonah 1–4, Matthew 14, Luke 24, John 4, and Acts 27–28. Ranges are explicit and recurring places reactivate their existing hotspot.
 
 Luke 2 now uses its illustrated story world. Geographic camera-follow coverage remains Acts 16–17 and Revelation 1:9, using existing curated ranges and chapter journey stops. A named place is not automatically a setting. No all-book or all-world fallback is shown. The rest of Scripture remains available with an honest no-journey state.
 

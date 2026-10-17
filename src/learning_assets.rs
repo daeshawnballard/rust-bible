@@ -1,6 +1,38 @@
 // Production illustrations are embedded in the native server as well as shipped to Sites.
 pub fn asset(path: &str) -> Option<(&'static str, &'static [u8])> {
     match path {
+        "/art/journey/jordan.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/jordan.webp").as_slice(),
+        )),
+        "/art/journey/david-goliath.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/david-goliath.webp").as_slice(),
+        )),
+        "/art/journey/daniel.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/daniel.webp").as_slice(),
+        )),
+        "/art/journey/jonah.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/jonah.webp").as_slice(),
+        )),
+        "/art/journey/loaves-and-sea.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/loaves-and-sea.webp").as_slice(),
+        )),
+        "/art/journey/emmaus.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/emmaus.webp").as_slice(),
+        )),
+        "/art/journey/samaria.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/samaria.webp").as_slice(),
+        )),
+        "/art/journey/paul-voyage.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/paul-voyage.webp").as_slice(),
+        )),
         "/art/journey/genesis-immersive-v1.webp" => Some((
             "image/webp",
             include_bytes!("../web/art/journey/genesis-immersive-v1.webp").as_slice(),
