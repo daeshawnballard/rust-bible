@@ -1,0 +1,2280 @@
+{
+  "schema_version": 1,
+  "books": [
+    {
+      "book_index": 0,
+      "name": "Genesis",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-genesis-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 11,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Origins and early generations",
+          "world": "origins-patriarchs",
+          "note": "Genesis opens with creation and human disobedience, then follows Cain, Noah’s flood, the generations after him, and the scattering at Babel.",
+          "basis": "Genesis 1–11"
+        },
+        {
+          "id": "ot-genesis-phase-02",
+          "first_chapter": 12,
+          "last_chapter": 25,
+          "anchor_chapter": 12,
+          "anchor_verse": 1,
+          "label": "Abraham and his household",
+          "world": "origins-patriarchs",
+          "note": "God calls Abram and makes covenant promises; the stories follow Sarah, Lot, Hagar, Isaac’s birth, and the next generation in Abraham’s household.",
+          "basis": "Genesis 12–25"
+        },
+        {
+          "id": "ot-genesis-phase-03",
+          "first_chapter": 26,
+          "last_chapter": 36,
+          "anchor_chapter": 26,
+          "anchor_verse": 1,
+          "label": "Isaac, Jacob, and Esau",
+          "world": "origins-patriarchs",
+          "note": "Isaac’s household gives way to Jacob’s flight, marriages, children, and return; the section closes with Jacob and Esau’s encounter and Esau’s descendants.",
+          "basis": "Genesis 26–36"
+        },
+        {
+          "id": "ot-genesis-phase-04",
+          "first_chapter": 37,
+          "last_chapter": 37,
+          "anchor_chapter": 37,
+          "anchor_verse": 1,
+          "label": "Joseph is sold",
+          "world": "canaan-highlands",
+          "note": "Joseph’s dreams deepen the brothers’ resentment, and they sell him to traders carrying him toward Egypt.",
+          "basis": "Genesis 37"
+        },
+        {
+          "id": "ot-genesis-phase-05",
+          "first_chapter": 38,
+          "last_chapter": 38,
+          "anchor_chapter": 38,
+          "anchor_verse": 1,
+          "label": "Judah’s household",
+          "world": "canaan-highlands",
+          "note": "Judah leaves his brothers, while Tamar’s actions expose his failure to honor his promise and preserve the family line through Perez and Zerah.",
+          "basis": "Genesis 38"
+        },
+        {
+          "id": "ot-genesis-phase-06",
+          "first_chapter": 39,
+          "last_chapter": 41,
+          "anchor_chapter": 39,
+          "anchor_verse": 1,
+          "label": "Joseph in Egypt",
+          "world": "egypt",
+          "note": "Sold into Egypt, Joseph serves in Potiphar’s house and prison before interpreting Pharaoh’s dreams and being appointed to oversee food supplies.",
+          "basis": "Genesis 39–41"
+        },
+        {
+          "id": "ot-genesis-phase-07",
+          "first_chapter": 42,
+          "last_chapter": 50,
+          "anchor_chapter": 42,
+          "anchor_verse": 1,
+          "label": "Joseph and his family in Egypt",
+          "world": "egypt",
+          "note": "Joseph tests and then recognizes his brothers; Jacob’s family settles in Egypt, and Jacob and Joseph both die after speaking about the promised land.",
+          "basis": "Genesis 42–50"
+        }
+      ]
+    },
+    {
+      "book_index": 1,
+      "name": "Exodus",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-exodus-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 12,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Israel in Egypt",
+          "world": "egypt",
+          "note": "Israel’s growth is followed by forced labor under Pharaoh; Moses is called, and the plagues culminate in Passover and the people’s departure.",
+          "basis": "Exodus 1–12"
+        },
+        {
+          "id": "ot-exodus-phase-02",
+          "first_chapter": 13,
+          "last_chapter": 18,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "Departure and wilderness episodes",
+          "world": "sinai-wilderness",
+          "note": "After leaving Egypt, Israel crosses the sea and faces hunger, thirst, and battle in the wilderness; Moses also receives practical counsel from Jethro.",
+          "basis": "Exodus 13–18"
+        },
+        {
+          "id": "ot-exodus-phase-03",
+          "first_chapter": 19,
+          "last_chapter": 24,
+          "anchor_chapter": 19,
+          "anchor_verse": 1,
+          "label": "Covenant at Sinai",
+          "world": "sinai-wilderness",
+          "note": "At Sinai, the people hear the covenant commands and laws, agree to the covenant, and Moses confirms it before going up the mountain.",
+          "basis": "Exodus 19–24"
+        },
+        {
+          "id": "ot-exodus-phase-04",
+          "first_chapter": 25,
+          "last_chapter": 31,
+          "anchor_chapter": 25,
+          "anchor_verse": 1,
+          "label": "Tabernacle instructions",
+          "world": "sinai-wilderness",
+          "note": "These chapters give instructions for the tabernacle, its furnishings, priestly garments, and the consecration of Aaron and his sons.",
+          "basis": "Exodus 25–31"
+        },
+        {
+          "id": "ot-exodus-phase-05",
+          "first_chapter": 32,
+          "last_chapter": 34,
+          "anchor_chapter": 32,
+          "anchor_verse": 1,
+          "label": "Covenant rupture and renewal",
+          "world": "sinai-wilderness",
+          "note": "While Moses is on the mountain, Israel makes a golden calf; Moses intercedes, and the covenant is renewed after the people’s breach.",
+          "basis": "Exodus 32–34"
+        },
+        {
+          "id": "ot-exodus-phase-06",
+          "first_chapter": 35,
+          "last_chapter": 40,
+          "anchor_chapter": 35,
+          "anchor_verse": 1,
+          "label": "The tabernacle is made",
+          "world": "sinai-wilderness",
+          "note": "The people bring materials and build the tabernacle as instructed; when it is set up, the cloud and the LORD’s glory fill it.",
+          "basis": "Exodus 35–40"
+        }
+      ]
+    },
+    {
+      "book_index": 2,
+      "name": "Leviticus",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-leviticus-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 7,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Offerings and priestly instructions",
+          "world": "sinai-wilderness",
+          "note": "The opening chapters describe offerings and specify how priests and worshippers are to present them.",
+          "basis": "Leviticus 1–7"
+        },
+        {
+          "id": "ot-leviticus-phase-02",
+          "first_chapter": 8,
+          "last_chapter": 10,
+          "anchor_chapter": 8,
+          "anchor_verse": 1,
+          "label": "Priests are consecrated",
+          "world": "sinai-wilderness",
+          "note": "Aaron and his sons are ordained, but Nadab and Abihu die after bringing unauthorized fire before the LORD.",
+          "basis": "Leviticus 8–10"
+        },
+        {
+          "id": "ot-leviticus-phase-03",
+          "first_chapter": 11,
+          "last_chapter": 15,
+          "anchor_chapter": 11,
+          "anchor_verse": 1,
+          "label": "Purity laws",
+          "world": "sinai-wilderness",
+          "note": "These chapters distinguish clean and unclean foods and address childbirth, skin conditions, and bodily discharges.",
+          "basis": "Leviticus 11–15"
+        },
+        {
+          "id": "ot-leviticus-phase-04",
+          "first_chapter": 16,
+          "last_chapter": 16,
+          "anchor_chapter": 16,
+          "anchor_verse": 1,
+          "label": "The Day of Atonement",
+          "world": "sinai-wilderness",
+          "note": "The high priest enters the sanctuary with prescribed offerings, and the scapegoat carries the people’s iniquities into the wilderness.",
+          "basis": "Leviticus 16"
+        },
+        {
+          "id": "ot-leviticus-phase-05",
+          "first_chapter": 17,
+          "last_chapter": 22,
+          "anchor_chapter": 17,
+          "anchor_verse": 1,
+          "label": "Holiness and priestly duties",
+          "world": "sinai-wilderness",
+          "note": "The text regulates blood, worship, sexual conduct, justice, and the responsibilities and limits of the priests.",
+          "basis": "Leviticus 17–22"
+        },
+        {
+          "id": "ot-leviticus-phase-06",
+          "first_chapter": 23,
+          "last_chapter": 25,
+          "anchor_chapter": 23,
+          "anchor_verse": 1,
+          "label": "Festivals and land provisions",
+          "world": "sinai-wilderness",
+          "note": "Israel’s calendar of appointed feasts is set out alongside sabbath years, land provisions, and the Jubilee.",
+          "basis": "Leviticus 23–25"
+        },
+        {
+          "id": "ot-leviticus-phase-07",
+          "first_chapter": 26,
+          "last_chapter": 27,
+          "anchor_chapter": 26,
+          "anchor_verse": 1,
+          "label": "Covenant outcomes and vows",
+          "world": "sinai-wilderness",
+          "note": "The covenant blessings and curses are stated, followed by instructions on vows, dedicated persons, property, and tithes.",
+          "basis": "Leviticus 26–27"
+        }
+      ]
+    },
+    {
+      "book_index": 3,
+      "name": "Numbers",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-numbers-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 10,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The camp is organized at Sinai",
+          "world": "sinai-wilderness",
+          "note": "The census, camp arrangement, and Levite duties prepare Israel to leave Sinai, where the tabernacle cloud signals when to travel.",
+          "basis": "Numbers 1–10"
+        },
+        {
+          "id": "ot-numbers-phase-02",
+          "first_chapter": 11,
+          "last_chapter": 14,
+          "anchor_chapter": 11,
+          "anchor_verse": 1,
+          "label": "Complaints and the spies",
+          "world": "sinai-wilderness",
+          "note": "Complaints spread through the camp, Miriam and Aaron challenge Moses, and the spies’ report leads the people to refuse entry into Canaan.",
+          "basis": "Numbers 11–14"
+        },
+        {
+          "id": "ot-numbers-phase-03",
+          "first_chapter": 15,
+          "last_chapter": 19,
+          "anchor_chapter": 15,
+          "anchor_verse": 1,
+          "label": "Laws and priestly episodes",
+          "world": "sinai-wilderness",
+          "note": "Further offerings and community rules accompany accounts of rebellion, priestly duties, and the red heifer’s purification rite.",
+          "basis": "Numbers 15–19"
+        },
+        {
+          "id": "ot-numbers-phase-04",
+          "first_chapter": 20,
+          "last_chapter": 21,
+          "anchor_chapter": 20,
+          "anchor_verse": 1,
+          "label": "The journey toward Moab",
+          "world": "sinai-wilderness",
+          "note": "At Kadesh Miriam dies and Moses strikes the rock; Israel then moves toward Moab through conflict and battles on the way.",
+          "basis": "Numbers 20–21"
+        },
+        {
+          "id": "ot-numbers-phase-05",
+          "first_chapter": 22,
+          "last_chapter": 25,
+          "anchor_chapter": 22,
+          "anchor_verse": 1,
+          "label": "Balaam and Moab",
+          "world": "sinai-wilderness",
+          "note": "Balak summons Balaam to curse Israel, but Balaam blesses them; the section ends with Israel’s unfaithfulness at Peor.",
+          "basis": "Numbers 22–25"
+        },
+        {
+          "id": "ot-numbers-phase-06",
+          "first_chapter": 26,
+          "last_chapter": 30,
+          "anchor_chapter": 26,
+          "anchor_verse": 1,
+          "label": "A new census and instructions",
+          "world": "sinai-wilderness",
+          "note": "A new census prepares for settlement, while the daughters of Zelophehad, inheritance, offerings, festivals, and vows receive attention.",
+          "basis": "Numbers 26–30"
+        },
+        {
+          "id": "ot-numbers-phase-07",
+          "first_chapter": 31,
+          "last_chapter": 36,
+          "anchor_chapter": 31,
+          "anchor_verse": 1,
+          "label": "The plains of Moab and inheritance",
+          "world": "sinai-wilderness",
+          "note": "Before crossing the Jordan, Israel fights Midian, assigns eastern lands, records the route and borders, and sets out inheritance and refuge rules.",
+          "basis": "Numbers 31–36"
+        }
+      ]
+    },
+    {
+      "book_index": 4,
+      "name": "Deuteronomy",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-deuteronomy-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 4,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Moses reviews the journey",
+          "world": "sinai-wilderness",
+          "note": "Moses recounts the departure from Horeb, Israel’s refusal to enter the land, and the later victories east of the Jordan.",
+          "basis": "Deuteronomy 1–4"
+        },
+        {
+          "id": "ot-deuteronomy-phase-02",
+          "first_chapter": 5,
+          "last_chapter": 11,
+          "anchor_chapter": 5,
+          "anchor_verse": 1,
+          "label": "Covenant and remembrance",
+          "world": "sinai-wilderness",
+          "note": "Moses repeats the covenant commands, calls Israel to love the LORD, and warns the people not to forget the God who brought them out of Egypt.",
+          "basis": "Deuteronomy 5–11"
+        },
+        {
+          "id": "ot-deuteronomy-phase-03",
+          "first_chapter": 12,
+          "last_chapter": 16,
+          "anchor_chapter": 12,
+          "anchor_verse": 1,
+          "label": "Worship, justice, and festivals",
+          "world": "sinai-wilderness",
+          "note": "Israel receives laws for worship, festivals, tithes, and public justice, including the instruction to worship at the place the LORD chooses.",
+          "basis": "Deuteronomy 12–16"
+        },
+        {
+          "id": "ot-deuteronomy-phase-04",
+          "first_chapter": 17,
+          "last_chapter": 20,
+          "anchor_chapter": 17,
+          "anchor_verse": 1,
+          "label": "Leaders and public duties",
+          "world": "sinai-wilderness",
+          "note": "The rules address courts, priests, prophets, kings, warfare, and cities of refuge, setting duties and limits for leaders and the community.",
+          "basis": "Deuteronomy 17–20"
+        },
+        {
+          "id": "ot-deuteronomy-phase-05",
+          "first_chapter": 21,
+          "last_chapter": 26,
+          "anchor_chapter": 21,
+          "anchor_verse": 1,
+          "label": "Community laws",
+          "world": "sinai-wilderness",
+          "note": "These varied laws concern family obligations, laborers, property, honest measures, care for the vulnerable, and firstfruits and tithes.",
+          "basis": "Deuteronomy 21–26"
+        },
+        {
+          "id": "ot-deuteronomy-phase-06",
+          "first_chapter": 27,
+          "last_chapter": 30,
+          "anchor_chapter": 27,
+          "anchor_verse": 1,
+          "label": "Covenant renewed at Moab",
+          "world": "sinai-wilderness",
+          "note": "At Moab, Moses sets out covenant blessings and curses and urges Israel to choose life by remaining faithful to the LORD.",
+          "basis": "Deuteronomy 27–30"
+        },
+        {
+          "id": "ot-deuteronomy-phase-07",
+          "first_chapter": 31,
+          "last_chapter": 34,
+          "anchor_chapter": 31,
+          "anchor_verse": 1,
+          "label": "Joshua commissioned and Moses’ final words",
+          "world": "sinai-wilderness",
+          "note": "Moses commissions Joshua, gives Israel a song and blessing, and dies after viewing the land from afar.",
+          "basis": "Deuteronomy 31–34"
+        }
+      ]
+    },
+    {
+      "book_index": 5,
+      "name": "Joshua",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-joshua-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 4,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Preparation and the Jordan crossing",
+          "world": "canaan-highlands",
+          "note": "Joshua is commissioned, spies meet Rahab, and Israel crosses the Jordan, setting up memorial stones to mark the passage.",
+          "basis": "Joshua 1–4"
+        },
+        {
+          "id": "ot-joshua-phase-02",
+          "first_chapter": 5,
+          "last_chapter": 12,
+          "anchor_chapter": 5,
+          "anchor_verse": 1,
+          "label": "Campaign narratives",
+          "world": "canaan-highlands",
+          "note": "The campaigns include Jericho, Ai, the Gibeonite treaty, and battles in the south and north as Israel takes cities in the land.",
+          "basis": "Joshua 5–12"
+        },
+        {
+          "id": "ot-joshua-phase-03",
+          "first_chapter": 13,
+          "last_chapter": 19,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "The land is apportioned",
+          "world": "canaan-highlands",
+          "note": "The remaining territories are assigned among the tribes, including the inheritance given to Caleb and the daughters of Zelophehad.",
+          "basis": "Joshua 13–19"
+        },
+        {
+          "id": "ot-joshua-phase-04",
+          "first_chapter": 20,
+          "last_chapter": 22,
+          "anchor_chapter": 20,
+          "anchor_verse": 1,
+          "label": "Cities, Levites, and eastern tribes",
+          "world": "canaan-highlands",
+          "note": "Israel appoints cities of refuge and Levitical towns; the eastern tribes’ altar nearly sparks conflict before they explain its purpose.",
+          "basis": "Joshua 20–22"
+        },
+        {
+          "id": "ot-joshua-phase-05",
+          "first_chapter": 23,
+          "last_chapter": 24,
+          "anchor_chapter": 23,
+          "anchor_verse": 1,
+          "label": "Joshua’s farewell and covenant",
+          "world": "canaan-highlands",
+          "note": "Joshua urges Israel to serve the LORD, renews the covenant at Shechem, and dies alongside Eleazar.",
+          "basis": "Joshua 23–24"
+        }
+      ]
+    },
+    {
+      "book_index": 6,
+      "name": "Judges",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-judges-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 3,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The tribes and first deliverers",
+          "world": "canaan-highlands",
+          "note": "After Joshua’s death, incomplete conquest is followed by repeated cycles of disobedience and deliverance, including the judges Othniel and Ehud.",
+          "basis": "Judges 1–3"
+        },
+        {
+          "id": "ot-judges-phase-02",
+          "first_chapter": 4,
+          "last_chapter": 5,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "Deborah and Barak",
+          "world": "canaan-highlands",
+          "note": "Deborah and Barak lead Israel against Sisera’s army, and Deborah’s song celebrates the victory.",
+          "basis": "Judges 4–5"
+        },
+        {
+          "id": "ot-judges-phase-03",
+          "first_chapter": 6,
+          "last_chapter": 8,
+          "anchor_chapter": 6,
+          "anchor_verse": 1,
+          "label": "Gideon",
+          "world": "canaan-highlands",
+          "note": "Gideon is called to confront Midian, wins with a reduced force, and later makes an ephod that becomes a snare to Israel.",
+          "basis": "Judges 6–8"
+        },
+        {
+          "id": "ot-judges-phase-04",
+          "first_chapter": 9,
+          "last_chapter": 12,
+          "anchor_chapter": 9,
+          "anchor_verse": 1,
+          "label": "Abimelech and later judges",
+          "world": "canaan-highlands",
+          "note": "Abimelech seizes power violently; later judges include Jephthah, whose vow and conflict with Ephraim shape the closing chapters of this section.",
+          "basis": "Judges 9–12"
+        },
+        {
+          "id": "ot-judges-phase-05",
+          "first_chapter": 13,
+          "last_chapter": 16,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "Samson",
+          "world": "canaan-highlands",
+          "note": "Samson’s birth is announced, and his conflicts with the Philistines lead to betrayal, capture, and his final attack on their gathering.",
+          "basis": "Judges 13–16"
+        },
+        {
+          "id": "ot-judges-phase-06",
+          "first_chapter": 17,
+          "last_chapter": 21,
+          "anchor_chapter": 17,
+          "anchor_verse": 1,
+          "label": "Tribal conflict and disorder",
+          "world": "canaan-highlands",
+          "note": "Micah’s images and Dan’s migration lead into the outrage at Gibeah, civil war, and the repeated disorder of Israel’s tribes.",
+          "basis": "Judges 17–21"
+        }
+      ]
+    },
+    {
+      "book_index": 7,
+      "name": "Ruth",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-ruth-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Naomi and Ruth return",
+          "world": "canaan-highlands",
+          "note": "A famine brings Naomi’s family to Moab; after losing her husband and sons, Naomi returns to Bethlehem with Ruth, whose loyalty is central to the story.",
+          "basis": "Ruth 1"
+        },
+        {
+          "id": "ot-ruth-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "Ruth gleans in Boaz’s field",
+          "world": "canaan-highlands",
+          "note": "Ruth gleans in Boaz’s field, and Boaz ensures she is protected and provided for.",
+          "basis": "Ruth 2"
+        },
+        {
+          "id": "ot-ruth-phase-03",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Ruth speaks with Boaz",
+          "world": "canaan-highlands",
+          "note": "At Naomi’s direction, Ruth asks Boaz to act as a family redeemer; he agrees while acknowledging that a nearer relative has prior claim.",
+          "basis": "Ruth 3"
+        },
+        {
+          "id": "ot-ruth-phase-04",
+          "first_chapter": 4,
+          "last_chapter": 4,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "The family is redeemed",
+          "world": "canaan-highlands",
+          "note": "Boaz settles the matter at the town gate, marries Ruth, and becomes the father of Obed, whose line leads to David.",
+          "basis": "Ruth 4"
+        }
+      ]
+    },
+    {
+      "book_index": 8,
+      "name": "1 Samuel",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-1-samuel-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 3,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Samuel’s birth and calling",
+          "world": "canaan-highlands",
+          "note": "Hannah prays for a son and dedicates Samuel to the LORD; Samuel is called while Eli’s sons are condemned for their conduct.",
+          "basis": "1 Samuel 1–3"
+        },
+        {
+          "id": "ot-1-samuel-phase-02",
+          "first_chapter": 4,
+          "last_chapter": 7,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "The ark and its return",
+          "world": "canaan-highlands",
+          "note": "The Philistines capture the ark, but after calamity in their cities they return it; Israel turns back to the LORD under Samuel and wins at Mizpah.",
+          "basis": "1 Samuel 4–7"
+        },
+        {
+          "id": "ot-1-samuel-phase-03",
+          "first_chapter": 8,
+          "last_chapter": 12,
+          "anchor_chapter": 8,
+          "anchor_verse": 1,
+          "label": "Israel asks for a king",
+          "world": "canaan-highlands",
+          "note": "Israel asks for a king, Saul is anointed and publicly confirmed, and Samuel warns the people about the cost of kingship.",
+          "basis": "1 Samuel 8–12"
+        },
+        {
+          "id": "ot-1-samuel-phase-04",
+          "first_chapter": 13,
+          "last_chapter": 15,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "Saul’s early reign",
+          "world": "canaan-highlands",
+          "note": "Saul’s impatience and disobedience in battle lead Samuel to announce that the LORD has rejected him as king.",
+          "basis": "1 Samuel 13–15"
+        },
+        {
+          "id": "ot-1-samuel-phase-05",
+          "first_chapter": 16,
+          "last_chapter": 17,
+          "anchor_chapter": 16,
+          "anchor_verse": 1,
+          "label": "David is chosen and Goliath falls",
+          "world": "canaan-highlands",
+          "note": "Samuel anoints David, who enters Saul’s service and defeats Goliath when Israel’s army is challenged by the Philistines.",
+          "basis": "1 Samuel 16–17"
+        },
+        {
+          "id": "ot-1-samuel-phase-06",
+          "first_chapter": 18,
+          "last_chapter": 20,
+          "anchor_chapter": 18,
+          "anchor_verse": 1,
+          "label": "David and Saul’s household",
+          "world": "canaan-highlands",
+          "note": "Jonathan and David form a close bond, while Saul’s jealousy grows and David repeatedly escapes attempts on his life.",
+          "basis": "1 Samuel 18–20"
+        },
+        {
+          "id": "ot-1-samuel-phase-07",
+          "first_chapter": 21,
+          "last_chapter": 31,
+          "anchor_chapter": 21,
+          "anchor_verse": 1,
+          "label": "David’s flight and Saul’s end",
+          "world": "canaan-highlands",
+          "note": "David hides from Saul among wilderness refuges and Philistine territory; Saul and his sons fall in battle on Mount Gilboa.",
+          "basis": "1 Samuel 21–31"
+        }
+      ]
+    },
+    {
+      "book_index": 9,
+      "name": "2 Samuel",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-2-samuel-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 4,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "David becomes king in Judah",
+          "world": "canaan-highlands",
+          "note": "After Saul’s death, David mourns Saul and Jonathan and becomes king over Judah, while conflict continues between the houses of Saul and David.",
+          "basis": "2 Samuel 1–4"
+        },
+        {
+          "id": "ot-2-samuel-phase-02",
+          "first_chapter": 5,
+          "last_chapter": 6,
+          "anchor_chapter": 5,
+          "anchor_verse": 1,
+          "label": "Jerusalem and the ark",
+          "world": "jerusalem-temple-return",
+          "note": "David is made king over all Israel, captures Jerusalem, and brings the ark there, though Uzzah dies when he touches it.",
+          "basis": "2 Samuel 5–6"
+        },
+        {
+          "id": "ot-2-samuel-phase-03",
+          "first_chapter": 7,
+          "last_chapter": 10,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "The kingdom and its promises",
+          "world": "jerusalem-temple-return",
+          "note": "God promises David an enduring house; the narrative then recounts David’s victories and his kindness to Mephibosheth.",
+          "basis": "2 Samuel 7–10"
+        },
+        {
+          "id": "ot-2-samuel-phase-04",
+          "first_chapter": 11,
+          "last_chapter": 12,
+          "anchor_chapter": 11,
+          "anchor_verse": 1,
+          "label": "David and Bathsheba",
+          "world": "jerusalem-temple-return",
+          "note": "David takes Bathsheba and arranges Uriah’s death; Nathan confronts him, and the child dies before Solomon is born.",
+          "basis": "2 Samuel 11–12"
+        },
+        {
+          "id": "ot-2-samuel-phase-05",
+          "first_chapter": 13,
+          "last_chapter": 18,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "Conflict within David’s household",
+          "world": "jerusalem-temple-return",
+          "note": "Amnon violates Tamar, Absalom kills Amnon and later rebels, forcing David to flee; Absalom dies in the ensuing battle.",
+          "basis": "2 Samuel 13–18"
+        },
+        {
+          "id": "ot-2-samuel-phase-06",
+          "first_chapter": 19,
+          "last_chapter": 24,
+          "anchor_chapter": 19,
+          "anchor_verse": 1,
+          "label": "The kingdom is restored and final accounts",
+          "world": "jerusalem-temple-return",
+          "note": "David returns to power amid further unrest; the closing chapters recount a census and plague alongside songs, warriors, and final words.",
+          "basis": "2 Samuel 19–24"
+        }
+      ]
+    },
+    {
+      "book_index": 10,
+      "name": "1 Kings",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-1-kings-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 4,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Solomon succeeds David",
+          "world": "jerusalem-temple-return",
+          "note": "Adonijah’s bid for the throne is stopped and Solomon is established as king; he asks God for wisdom and judges a disputed case.",
+          "basis": "1 Kings 1–4"
+        },
+        {
+          "id": "ot-1-kings-phase-02",
+          "first_chapter": 5,
+          "last_chapter": 9,
+          "anchor_chapter": 5,
+          "anchor_verse": 1,
+          "label": "The Temple is built and dedicated",
+          "world": "jerusalem-temple-return",
+          "note": "Solomon builds and dedicates the Temple, prays for the people, and receives a promise concerning the house and covenant.",
+          "basis": "1 Kings 5–9"
+        },
+        {
+          "id": "ot-1-kings-phase-03",
+          "first_chapter": 10,
+          "last_chapter": 11,
+          "anchor_chapter": 10,
+          "anchor_verse": 1,
+          "label": "Solomon’s wealth and decline",
+          "world": "jerusalem-temple-return",
+          "note": "The Queen of Sheba visits Solomon, whose wealth is displayed; his foreign wives turn his heart, and adversaries rise before his death.",
+          "basis": "1 Kings 10–11"
+        },
+        {
+          "id": "ot-1-kings-phase-04",
+          "first_chapter": 12,
+          "last_chapter": 16,
+          "anchor_chapter": 12,
+          "anchor_verse": 1,
+          "label": "The kingdom divides",
+          "world": "canaan-highlands",
+          "note": "Rehoboam rejects the people’s request and the kingdom divides; the account follows rival reigns in Israel and Judah through Ahab’s rise.",
+          "basis": "1 Kings 12–16"
+        },
+        {
+          "id": "ot-1-kings-phase-05",
+          "first_chapter": 17,
+          "last_chapter": 19,
+          "anchor_chapter": 17,
+          "anchor_verse": 1,
+          "label": "Elijah and the drought",
+          "world": "canaan-highlands",
+          "note": "Elijah announces drought, is sustained by a widow, confronts Baal’s prophets at Carmel, and later meets the LORD at Horeb.",
+          "basis": "1 Kings 17–19"
+        },
+        {
+          "id": "ot-1-kings-phase-06",
+          "first_chapter": 20,
+          "last_chapter": 22,
+          "anchor_chapter": 20,
+          "anchor_verse": 1,
+          "label": "Ahab and the prophets",
+          "world": "canaan-highlands",
+          "note": "Ahab fights Syria, covets Naboth’s vineyard, and hears Micaiah’s warning before he dies in battle.",
+          "basis": "1 Kings 20–22"
+        }
+      ]
+    },
+    {
+      "book_index": 11,
+      "name": "2 Kings",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-2-kings-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 8,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Elijah and Elisha",
+          "world": "canaan-highlands",
+          "note": "Elijah’s ministry passes to Elisha, whose signs include healing Naaman, restoring a child, and helping during Israel’s conflicts and famine.",
+          "basis": "2 Kings 1–8"
+        },
+        {
+          "id": "ot-2-kings-phase-02",
+          "first_chapter": 9,
+          "last_chapter": 17,
+          "anchor_chapter": 9,
+          "anchor_verse": 1,
+          "label": "Regime changes and Samaria falls",
+          "world": "canaan-highlands",
+          "note": "Jehu’s revolt destroys Ahab’s house, but Israel’s rulers continue to change until Assyria captures Samaria and carries the people away.",
+          "basis": "2 Kings 9–17"
+        },
+        {
+          "id": "ot-2-kings-phase-03",
+          "first_chapter": 18,
+          "last_chapter": 20,
+          "anchor_chapter": 18,
+          "anchor_verse": 1,
+          "label": "Hezekiah and Jerusalem",
+          "world": "jerusalem-temple-return",
+          "note": "Hezekiah reforms Judah and faces the Assyrian siege of Jerusalem; after recovery from illness, he receives envoys from Babylon.",
+          "basis": "2 Kings 18–20"
+        },
+        {
+          "id": "ot-2-kings-phase-04",
+          "first_chapter": 21,
+          "last_chapter": 23,
+          "anchor_chapter": 21,
+          "anchor_verse": 1,
+          "label": "Judah’s decline and Josiah’s reform",
+          "world": "jerusalem-temple-return",
+          "note": "Manasseh’s long reign is followed by Josiah’s discovery of the law and sweeping reforms, though Josiah dies in battle.",
+          "basis": "2 Kings 21–23"
+        },
+        {
+          "id": "ot-2-kings-phase-05",
+          "first_chapter": 24,
+          "last_chapter": 25,
+          "anchor_chapter": 24,
+          "anchor_verse": 1,
+          "label": "Jerusalem falls and exile begins",
+          "world": "babylon-exile",
+          "note": "Babylon deposes Judah’s kings, deports its people, and destroys Jerusalem and the Temple; the final verses note Jehoiachin’s release.",
+          "basis": "2 Kings 24–25"
+        }
+      ]
+    },
+    {
+      "book_index": 12,
+      "name": "1 Chronicles",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-1-chronicles-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 9,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Genealogies of Israel",
+          "world": "jerusalem-temple-return",
+          "note": "These genealogies trace families from Adam through Israel’s tribes and identify the Levites, priests, and residents of Jerusalem.",
+          "basis": "1 Chronicles 1–9"
+        },
+        {
+          "id": "ot-1-chronicles-phase-02",
+          "first_chapter": 10,
+          "last_chapter": 12,
+          "anchor_chapter": 10,
+          "anchor_verse": 1,
+          "label": "Saul’s death and David’s rise",
+          "world": "jerusalem-temple-return",
+          "note": "Saul dies in battle, and David becomes king as warriors from across Israel gather to support him.",
+          "basis": "1 Chronicles 10–12"
+        },
+        {
+          "id": "ot-1-chronicles-phase-03",
+          "first_chapter": 13,
+          "last_chapter": 16,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "The ark is brought to Jerusalem",
+          "world": "jerusalem-temple-return",
+          "note": "David organizes the ark’s journey to Jerusalem after Uzzah dies, then establishes Levites and musicians to lead worship there.",
+          "basis": "1 Chronicles 13–16"
+        },
+        {
+          "id": "ot-1-chronicles-phase-04",
+          "first_chapter": 17,
+          "last_chapter": 21,
+          "anchor_chapter": 17,
+          "anchor_verse": 1,
+          "label": "David’s reign and the census",
+          "world": "jerusalem-temple-return",
+          "note": "God’s promise to David is followed by accounts of his victories, the census, and the plague that leads him to the Temple site.",
+          "basis": "1 Chronicles 17–21"
+        },
+        {
+          "id": "ot-1-chronicles-phase-05",
+          "first_chapter": 22,
+          "last_chapter": 29,
+          "anchor_chapter": 22,
+          "anchor_verse": 1,
+          "label": "Preparation for the Temple",
+          "world": "jerusalem-temple-return",
+          "note": "David gathers materials, organizes Temple service, charges Solomon with the work, and gives thanks before his death.",
+          "basis": "1 Chronicles 22–29"
+        }
+      ]
+    },
+    {
+      "book_index": 13,
+      "name": "2 Chronicles",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-2-chronicles-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 9,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Solomon and the Temple",
+          "world": "jerusalem-temple-return",
+          "note": "Solomon asks for wisdom, builds and dedicates the Temple, and receives the Queen of Sheba as a visitor.",
+          "basis": "2 Chronicles 1–9"
+        },
+        {
+          "id": "ot-2-chronicles-phase-02",
+          "first_chapter": 10,
+          "last_chapter": 20,
+          "anchor_chapter": 10,
+          "anchor_verse": 1,
+          "label": "Judah and the divided kingdom",
+          "world": "canaan-highlands",
+          "note": "After the northern tribes break away under Rehoboam, the account follows Judah’s kings through Asa and Jehoshaphat, including their reforms and alliances.",
+          "basis": "2 Chronicles 10–20"
+        },
+        {
+          "id": "ot-2-chronicles-phase-03",
+          "first_chapter": 21,
+          "last_chapter": 28,
+          "anchor_chapter": 21,
+          "anchor_verse": 1,
+          "label": "Judah’s kings and crises",
+          "world": "jerusalem-temple-return",
+          "note": "Judah’s later kings face coups, military crises, and damage to the Temple as the account contrasts their choices and reigns.",
+          "basis": "2 Chronicles 21–28"
+        },
+        {
+          "id": "ot-2-chronicles-phase-04",
+          "first_chapter": 29,
+          "last_chapter": 32,
+          "anchor_chapter": 29,
+          "anchor_verse": 1,
+          "label": "Hezekiah’s reform",
+          "world": "jerusalem-temple-return",
+          "note": "Hezekiah cleanses the Temple, restores worship and Passover, and leads Judah through the Assyrian threat to Jerusalem.",
+          "basis": "2 Chronicles 29–32"
+        },
+        {
+          "id": "ot-2-chronicles-phase-05",
+          "first_chapter": 33,
+          "last_chapter": 35,
+          "anchor_chapter": 33,
+          "anchor_verse": 1,
+          "label": "Manasseh, Josiah, and reform",
+          "world": "jerusalem-temple-return",
+          "note": "Manasseh later humbles himself after captivity, while Josiah repairs the Temple, hears the law, and leads a major reform before his death.",
+          "basis": "2 Chronicles 33–35"
+        },
+        {
+          "id": "ot-2-chronicles-phase-06",
+          "first_chapter": 36,
+          "last_chapter": 36,
+          "anchor_chapter": 36,
+          "anchor_verse": 1,
+          "label": "Jerusalem falls and return is announced",
+          "world": "persian-court",
+          "note": "Judah’s final kings fall to Babylon, Jerusalem and the Temple are destroyed, and Cyrus’s decree opens the way for return.",
+          "basis": "2 Chronicles 36"
+        }
+      ]
+    },
+    {
+      "book_index": 14,
+      "name": "Ezra",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-ezra-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 3,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Return and altar restoration",
+          "world": "persian-court",
+          "note": "Cyrus permits the exiles to return, and the people rebuild the altar and lay the Temple foundation amid both celebration and grief.",
+          "basis": "Ezra 1–3"
+        },
+        {
+          "id": "ot-ezra-phase-02",
+          "first_chapter": 4,
+          "last_chapter": 6,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "The Temple is rebuilt",
+          "world": "jerusalem-temple-return",
+          "note": "Opposition interrupts the work, but Haggai and Zechariah encourage the builders; a Persian decree confirms the project, which is completed.",
+          "basis": "Ezra 4–6"
+        },
+        {
+          "id": "ot-ezra-phase-03",
+          "first_chapter": 7,
+          "last_chapter": 8,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "Ezra comes to Jerusalem",
+          "world": "persian-court",
+          "note": "Ezra receives authority from Artaxerxes, leads another group to Jerusalem, and entrusts the journey and its offerings to God.",
+          "basis": "Ezra 7–8"
+        },
+        {
+          "id": "ot-ezra-phase-04",
+          "first_chapter": 9,
+          "last_chapter": 10,
+          "anchor_chapter": 9,
+          "anchor_verse": 1,
+          "label": "A communal crisis and response",
+          "world": "jerusalem-temple-return",
+          "note": "Ezra responds to reports of intermarriage with prayer and public confession, followed by an assembly that addresses the crisis.",
+          "basis": "Ezra 9–10"
+        }
+      ]
+    },
+    {
+      "book_index": 15,
+      "name": "Nehemiah",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-nehemiah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Nehemiah receives a commission",
+          "world": "persian-court",
+          "note": "After hearing that Jerusalem’s wall is broken, Nehemiah prays, obtains the king’s support, and surveys the city at night.",
+          "basis": "Nehemiah 1–2"
+        },
+        {
+          "id": "ot-nehemiah-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 7,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "The wall is repaired",
+          "world": "jerusalem-temple-return",
+          "note": "Families and tradespeople repair the wall despite threats; Nehemiah also confronts debt and exploitation, and the work is completed.",
+          "basis": "Nehemiah 3–7"
+        },
+        {
+          "id": "ot-nehemiah-phase-03",
+          "first_chapter": 8,
+          "last_chapter": 10,
+          "anchor_chapter": 8,
+          "anchor_verse": 1,
+          "label": "The law is read and the people respond",
+          "world": "jerusalem-temple-return",
+          "note": "Ezra reads and explains the law, the people celebrate the Feast of Booths, confess their history, and renew their covenant commitments.",
+          "basis": "Nehemiah 8–10"
+        },
+        {
+          "id": "ot-nehemiah-phase-04",
+          "first_chapter": 11,
+          "last_chapter": 13,
+          "anchor_chapter": 11,
+          "anchor_verse": 1,
+          "label": "Jerusalem’s community and reforms",
+          "world": "jerusalem-temple-return",
+          "note": "Residents are assigned to Jerusalem and the wall is dedicated; Nehemiah later corrects abuses involving the Temple, Sabbath, and marriage.",
+          "basis": "Nehemiah 11–13"
+        }
+      ]
+    },
+    {
+      "book_index": 16,
+      "name": "Esther",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-esther-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Esther enters the Persian court",
+          "world": "persian-court",
+          "note": "After Vashti is removed, Esther is chosen as queen, and Mordecai uncovers a plot against the king.",
+          "basis": "Esther 1–2"
+        },
+        {
+          "id": "ot-esther-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 5,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Haman’s decree and Esther’s decision",
+          "world": "persian-court",
+          "note": "Haman’s decree threatens the Jews; Mordecai urges Esther to act, and she risks approaching the king before arranging a banquet.",
+          "basis": "Esther 3–5"
+        },
+        {
+          "id": "ot-esther-phase-03",
+          "first_chapter": 6,
+          "last_chapter": 8,
+          "anchor_chapter": 6,
+          "anchor_verse": 1,
+          "label": "The plot is reversed",
+          "world": "persian-court",
+          "note": "The king honors Mordecai after hearing the old record, Haman is executed, and Esther obtains a new decree to protect the Jews.",
+          "basis": "Esther 6–8"
+        },
+        {
+          "id": "ot-esther-phase-04",
+          "first_chapter": 9,
+          "last_chapter": 10,
+          "anchor_chapter": 9,
+          "anchor_verse": 1,
+          "label": "Deliverance and Purim",
+          "world": "persian-court",
+          "note": "The Jews defend themselves from attack, Purim is established as a yearly observance, and Mordecai is elevated in the Persian court.",
+          "basis": "Esther 9–10"
+        }
+      ]
+    },
+    {
+      "book_index": 17,
+      "name": "Job",
+      "kind": "poetry",
+      "sections": [
+        {
+          "id": "ot-job-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The opening frame",
+          "world": "wisdom-poetry",
+          "note": "The story’s frame presents Job as upright, then depicts the accuser’s challenges and Job’s loss of children, property, and health.",
+          "basis": "Job 1–2"
+        },
+        {
+          "id": "ot-job-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 14,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Job speaks and the first replies begin",
+          "world": "wisdom-poetry",
+          "note": "Job laments his birth, and his friends begin speeches that try to explain his suffering while Job protests and seeks an answer from God.",
+          "basis": "Job 3–14"
+        },
+        {
+          "id": "ot-job-phase-03",
+          "first_chapter": 15,
+          "last_chapter": 27,
+          "anchor_chapter": 15,
+          "anchor_verse": 1,
+          "label": "The debate continues",
+          "world": "wisdom-poetry",
+          "note": "The debate continues as Job’s friends press their case and Job rejects their certainty about his guilt and appeals to God’s justice.",
+          "basis": "Job 15–27"
+        },
+        {
+          "id": "ot-job-phase-04",
+          "first_chapter": 28,
+          "last_chapter": 31,
+          "anchor_chapter": 28,
+          "anchor_verse": 1,
+          "label": "Wisdom and Job’s defense",
+          "world": "wisdom-poetry",
+          "note": "A poem asks where wisdom can be found, then Job recalls his former standing and defends the integrity of his life.",
+          "basis": "Job 28–31"
+        },
+        {
+          "id": "ot-job-phase-05",
+          "first_chapter": 32,
+          "last_chapter": 37,
+          "anchor_chapter": 32,
+          "anchor_verse": 1,
+          "label": "Elihu speaks",
+          "world": "wisdom-poetry",
+          "note": "Elihu criticizes both Job and the friends, arguing that God may use suffering to instruct and pointing to God’s power in the world.",
+          "basis": "Job 32–37"
+        },
+        {
+          "id": "ot-job-phase-06",
+          "first_chapter": 38,
+          "last_chapter": 42,
+          "anchor_chapter": 38,
+          "anchor_verse": 1,
+          "label": "The LORD answers and Job’s story closes",
+          "world": "wisdom-poetry",
+          "note": "The LORD answers Job from the whirlwind; Job responds, the friends are rebuked, and Job’s fortunes are restored.",
+          "basis": "Job 38–42"
+        }
+      ]
+    },
+    {
+      "book_index": 18,
+      "name": "Psalms",
+      "kind": "poetry",
+      "sections": [
+        {
+          "id": "ot-psalms-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 41,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Psalms, Book I",
+          "world": "wisdom-poetry",
+          "note": "The first collection opens by contrasting the way of the righteous and the wicked; Davidic laments, confessions, thanksgiving, and praise recur throughout.",
+          "basis": "Psalms 1–41"
+        },
+        {
+          "id": "ot-psalms-phase-02",
+          "first_chapter": 42,
+          "last_chapter": 72,
+          "anchor_chapter": 42,
+          "anchor_verse": 1,
+          "label": "Psalms, Book II",
+          "world": "wisdom-poetry",
+          "note": "These psalms voice longing for God and refuge amid distress, include royal and communal prayers, and end with a prayer for the king’s just rule.",
+          "basis": "Psalms 42–72"
+        },
+        {
+          "id": "ot-psalms-phase-03",
+          "first_chapter": 73,
+          "last_chapter": 89,
+          "anchor_chapter": 73,
+          "anchor_verse": 1,
+          "label": "Psalms, Book III",
+          "world": "wisdom-poetry",
+          "note": "Many psalms confront national disaster and the apparent failure of the Davidic promise, turning toward God’s sanctuary and past acts of deliverance.",
+          "basis": "Psalms 73–89"
+        },
+        {
+          "id": "ot-psalms-phase-04",
+          "first_chapter": 90,
+          "last_chapter": 106,
+          "anchor_chapter": 90,
+          "anchor_verse": 1,
+          "label": "Psalms, Book IV",
+          "world": "wisdom-poetry",
+          "note": "The collection centers on the LORD’s kingship and human mortality, remembering Israel’s history and calling all creation to praise.",
+          "basis": "Psalms 90–106"
+        },
+        {
+          "id": "ot-psalms-phase-05",
+          "first_chapter": 107,
+          "last_chapter": 150,
+          "anchor_chapter": 107,
+          "anchor_verse": 1,
+          "label": "Psalms, Book V",
+          "world": "wisdom-poetry",
+          "note": "Thanksgiving for deliverance, instruction in God’s law, songs for pilgrims, and repeated calls to praise bring the Psalter to its close.",
+          "basis": "Psalms 107–150"
+        }
+      ]
+    },
+    {
+      "book_index": 19,
+      "name": "Proverbs",
+      "kind": "poetry",
+      "sections": [
+        {
+          "id": "ot-proverbs-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 9,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Wisdom’s instruction",
+          "world": "wisdom-poetry",
+          "note": "The opening instructions portray Wisdom calling in public and contrast her path with folly, violence, and sexual temptation.",
+          "basis": "Proverbs 1–9"
+        },
+        {
+          "id": "ot-proverbs-phase-02",
+          "first_chapter": 10,
+          "last_chapter": 21,
+          "anchor_chapter": 10,
+          "anchor_verse": 1,
+          "label": "Sayings of Solomon",
+          "world": "wisdom-poetry",
+          "note": "Brief sayings associated with Solomon contrast wisdom and folly in speech, work, justice, family life, wealth, and rule.",
+          "basis": "Proverbs 10–21"
+        },
+        {
+          "id": "ot-proverbs-phase-03",
+          "first_chapter": 22,
+          "last_chapter": 24,
+          "anchor_chapter": 22,
+          "anchor_verse": 17,
+          "label": "Sayings of the wise",
+          "world": "wisdom-poetry",
+          "note": "These sayings of the wise counsel restraint, honest dealing, care for the poor, and prudence around rulers and neighbors.",
+          "basis": "Proverbs 22–24"
+        },
+        {
+          "id": "ot-proverbs-phase-04",
+          "first_chapter": 25,
+          "last_chapter": 29,
+          "anchor_chapter": 25,
+          "anchor_verse": 1,
+          "label": "Solomon’s sayings copied by Hezekiah’s men",
+          "world": "wisdom-poetry",
+          "note": "Hezekiah’s men copied these sayings of Solomon, which address self-control, leadership, conflict, fools, and justice.",
+          "basis": "Proverbs 25–29"
+        },
+        {
+          "id": "ot-proverbs-phase-05",
+          "first_chapter": 30,
+          "last_chapter": 30,
+          "anchor_chapter": 30,
+          "anchor_verse": 1,
+          "label": "The words of Agur",
+          "world": "wisdom-poetry",
+          "note": "Agur reflects on human limits and God’s words, then uses numerical sayings to observe patterns in nature and human behavior.",
+          "basis": "Proverbs 30"
+        },
+        {
+          "id": "ot-proverbs-phase-06",
+          "first_chapter": 31,
+          "last_chapter": 31,
+          "anchor_chapter": 31,
+          "anchor_verse": 1,
+          "label": "The words of Lemuel and the capable woman",
+          "world": "wisdom-poetry",
+          "note": "Lemuel’s mother counsels the king to defend the poor and avoid excess; the closing poem praises a capable woman and her work.",
+          "basis": "Proverbs 31"
+        }
+      ]
+    },
+    {
+      "book_index": 20,
+      "name": "Ecclesiastes",
+      "kind": "poetry",
+      "sections": [
+        {
+          "id": "ot-ecclesiastes-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The question of profit",
+          "world": "wisdom-poetry",
+          "note": "The Preacher tests pleasure, wisdom, labor, and wealth, asking what lasting gain people receive from their work.",
+          "basis": "Ecclesiastes 1–2"
+        },
+        {
+          "id": "ot-ecclesiastes-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 6,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Time, labor, and limits",
+          "world": "wisdom-poetry",
+          "note": "A poem assigns seasons to human affairs, while the text considers injustice, toil, companionship, possessions, and the limits of control.",
+          "basis": "Ecclesiastes 3–6"
+        },
+        {
+          "id": "ot-ecclesiastes-phase-03",
+          "first_chapter": 7,
+          "last_chapter": 11,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "Wisdom under uncertainty",
+          "world": "wisdom-poetry",
+          "note": "These reflections weigh wisdom against adversity and uncertainty, urging action while acknowledging that people cannot know or govern every outcome.",
+          "basis": "Ecclesiastes 7–11"
+        },
+        {
+          "id": "ot-ecclesiastes-phase-04",
+          "first_chapter": 12,
+          "last_chapter": 12,
+          "anchor_chapter": 12,
+          "anchor_verse": 1,
+          "label": "Remember the Creator",
+          "world": "wisdom-poetry",
+          "note": "The closing chapter depicts aging and death and urges readers to remember their Creator; the conclusion calls them to fear God and keep his commandments.",
+          "basis": "Ecclesiastes 12"
+        }
+      ]
+    },
+    {
+      "book_index": 21,
+      "name": "Song of Solomon",
+      "kind": "poetry",
+      "sections": [
+        {
+          "id": "ot-song-of-solomon-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The speakers praise and desire",
+          "world": "wisdom-poetry",
+          "note": "The lovers exchange praise and desire, using images of gardens, fragrance, and the natural world to express their affection.",
+          "basis": "Song of Solomon 1–2"
+        },
+        {
+          "id": "ot-song-of-solomon-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 4,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Seeking and mutual praise",
+          "world": "wisdom-poetry",
+          "note": "The beloved searches for her lover, and the speakers praise one another’s beauty in a wedding-like procession and intimate poems.",
+          "basis": "Song of Solomon 3–4"
+        },
+        {
+          "id": "ot-song-of-solomon-phase-03",
+          "first_chapter": 5,
+          "last_chapter": 6,
+          "anchor_chapter": 5,
+          "anchor_verse": 1,
+          "label": "Absence and return",
+          "world": "wisdom-poetry",
+          "note": "After a delayed response and separation, the beloved searches for her lover; the poems return to mutual admiration and reunion.",
+          "basis": "Song of Solomon 5–6"
+        },
+        {
+          "id": "ot-song-of-solomon-phase-04",
+          "first_chapter": 7,
+          "last_chapter": 8,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "Love’s closing words",
+          "world": "wisdom-poetry",
+          "note": "The final songs celebrate desire and the strength of love, which cannot be bought or extinguished by many waters.",
+          "basis": "Song of Solomon 7–8"
+        }
+      ]
+    },
+    {
+      "book_index": 22,
+      "name": "Isaiah",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-isaiah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 12,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Judah, Jerusalem, and the nations",
+          "world": "prophetic-symbolic",
+          "note": "Isaiah indicts Judah and Jerusalem, recounts his call, and speaks of judgment and hope amid threats from neighboring powers.",
+          "basis": "Isaiah 1–12"
+        },
+        {
+          "id": "ot-isaiah-phase-02",
+          "first_chapter": 13,
+          "last_chapter": 23,
+          "anchor_chapter": 13,
+          "anchor_verse": 1,
+          "label": "Oracles concerning the nations",
+          "world": "prophetic-symbolic",
+          "note": "Oracles address Babylon, Moab, Egypt, Tyre, and other nations, warning that political power and alliances cannot secure them from judgment.",
+          "basis": "Isaiah 13–23"
+        },
+        {
+          "id": "ot-isaiah-phase-03",
+          "first_chapter": 24,
+          "last_chapter": 27,
+          "anchor_chapter": 24,
+          "anchor_verse": 1,
+          "label": "Judgment and hope",
+          "world": "prophetic-symbolic",
+          "note": "The earth is pictured under judgment, yet the text promises a feast on Zion, the defeat of death, and songs of trust.",
+          "basis": "Isaiah 24–27"
+        },
+        {
+          "id": "ot-isaiah-phase-04",
+          "first_chapter": 28,
+          "last_chapter": 35,
+          "anchor_chapter": 28,
+          "anchor_verse": 1,
+          "label": "Warnings and promises",
+          "world": "prophetic-symbolic",
+          "note": "Warnings against relying on Egypt and other powers are paired with promises that the redeemed will return along a way of holiness.",
+          "basis": "Isaiah 28–35"
+        },
+        {
+          "id": "ot-isaiah-phase-05",
+          "first_chapter": 36,
+          "last_chapter": 39,
+          "anchor_chapter": 36,
+          "anchor_verse": 1,
+          "label": "Hezekiah and the Assyrian threat",
+          "world": "jerusalem-temple-return",
+          "note": "Assyria besieges Judah, Hezekiah prays and Jerusalem is spared; the king’s illness and Babylonian visitors point toward future exile.",
+          "basis": "Isaiah 36–39"
+        },
+        {
+          "id": "ot-isaiah-phase-06",
+          "first_chapter": 40,
+          "last_chapter": 55,
+          "anchor_chapter": 40,
+          "anchor_verse": 1,
+          "label": "Comfort, servant passages, and return",
+          "world": "babylon-exile",
+          "note": "Words of comfort promise God’s power and a return from exile; the servant passages speak of suffering, justice, and restoration.",
+          "basis": "Isaiah 40–55"
+        },
+        {
+          "id": "ot-isaiah-phase-07",
+          "first_chapter": 56,
+          "last_chapter": 66,
+          "anchor_chapter": 56,
+          "anchor_verse": 1,
+          "label": "Justice, worship, and renewal",
+          "world": "prophetic-symbolic",
+          "note": "The closing chapters call for justice and faithful worship, challenge empty ritual, and envision renewed Zion and a new creation.",
+          "basis": "Isaiah 56–66"
+        }
+      ]
+    },
+    {
+      "book_index": 23,
+      "name": "Jeremiah",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-jeremiah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 6,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Jeremiah is called and warnings begin",
+          "world": "jerusalem-temple-return",
+          "note": "Jeremiah receives his call and sees signs of coming danger; he indicts Israel and Judah for turning from the LORD and warns of invasion.",
+          "basis": "Jeremiah 1–6"
+        },
+        {
+          "id": "ot-jeremiah-phase-02",
+          "first_chapter": 7,
+          "last_chapter": 10,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "The Temple sermon and covenant warning",
+          "world": "jerusalem-temple-return",
+          "note": "The Temple sermon rejects confidence in the building while the people persist in injustice and idolatry; Jeremiah grieves over the coming judgment.",
+          "basis": "Jeremiah 7–10"
+        },
+        {
+          "id": "ot-jeremiah-phase-03",
+          "first_chapter": 11,
+          "last_chapter": 20,
+          "anchor_chapter": 11,
+          "anchor_verse": 1,
+          "label": "Covenant dispute and opposition",
+          "world": "jerusalem-temple-return",
+          "note": "Jeremiah confronts covenant-breaking and faces plots, imprisonment, and rejection as he delivers difficult messages to Judah.",
+          "basis": "Jeremiah 11–20"
+        },
+        {
+          "id": "ot-jeremiah-phase-04",
+          "first_chapter": 21,
+          "last_chapter": 29,
+          "anchor_chapter": 21,
+          "anchor_verse": 1,
+          "label": "Kings, siege, and exile warnings",
+          "world": "jerusalem-temple-return",
+          "note": "Warnings to kings and people describe siege and exile; Jeremiah opposes false assurances and writes to exiles in Babylon.",
+          "basis": "Jeremiah 21–29"
+        },
+        {
+          "id": "ot-jeremiah-phase-05",
+          "first_chapter": 30,
+          "last_chapter": 33,
+          "anchor_chapter": 30,
+          "anchor_verse": 1,
+          "label": "Promises of restoration",
+          "world": "babylon-exile",
+          "note": "Promises of restoration include a return to the land, a renewed people, and a new covenant written on the heart.",
+          "basis": "Jeremiah 30–33"
+        },
+        {
+          "id": "ot-jeremiah-phase-06",
+          "first_chapter": 34,
+          "last_chapter": 38,
+          "anchor_chapter": 34,
+          "anchor_verse": 1,
+          "label": "Jerusalem under siege",
+          "world": "jerusalem-temple-return",
+          "note": "As Babylon presses Jerusalem, Jeremiah condemns injustice, recalls the Rechabites’ obedience, and suffers imprisonment and violence.",
+          "basis": "Jeremiah 34–38"
+        },
+        {
+          "id": "ot-jeremiah-phase-07",
+          "first_chapter": 39,
+          "last_chapter": 52,
+          "anchor_chapter": 39,
+          "anchor_verse": 1,
+          "label": "Jerusalem falls and oracles follow",
+          "world": "prophetic-symbolic",
+          "note": "Jerusalem falls, Jeremiah is taken to Egypt after Gedaliah’s murder, and the book closes with oracles against nations and a record of exile.",
+          "basis": "Jeremiah 39–52"
+        }
+      ]
+    },
+    {
+      "book_index": 24,
+      "name": "Lamentations",
+      "kind": "poetry",
+      "sections": [
+        {
+          "id": "ot-lamentations-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The city mourns",
+          "world": "jerusalem-temple-return",
+          "note": "Jerusalem is pictured as a bereaved city, and the speaker mourns its loss of people, status, and comfort.",
+          "basis": "Lamentations 1"
+        },
+        {
+          "id": "ot-lamentations-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "The city’s destruction",
+          "world": "jerusalem-temple-return",
+          "note": "The poem describes the destruction of Zion and its sanctuary, placing the suffering within a plea for God to look upon the people.",
+          "basis": "Lamentations 2"
+        },
+        {
+          "id": "ot-lamentations-phase-03",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Suffering and hope",
+          "world": "jerusalem-temple-return",
+          "note": "Amid intense affliction, the speaker remembers God’s mercies and urges waiting; the poem also gives voice to the community’s suffering.",
+          "basis": "Lamentations 3"
+        },
+        {
+          "id": "ot-lamentations-phase-04",
+          "first_chapter": 4,
+          "last_chapter": 4,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "The siege remembered",
+          "world": "jerusalem-temple-return",
+          "note": "The poem recalls famine and siege, the ruin of the sanctuary, and the humiliation of the people and their leaders.",
+          "basis": "Lamentations 4"
+        },
+        {
+          "id": "ot-lamentations-phase-05",
+          "first_chapter": 5,
+          "last_chapter": 5,
+          "anchor_chapter": 5,
+          "anchor_verse": 1,
+          "label": "A communal plea",
+          "world": "jerusalem-temple-return",
+          "note": "The final chapter is a communal plea that asks God to remember the people and restore them after their reproach.",
+          "basis": "Lamentations 5"
+        }
+      ]
+    },
+    {
+      "book_index": 25,
+      "name": "Ezekiel",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-ezekiel-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 3,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Ezekiel’s vision and call",
+          "world": "babylon-exile",
+          "note": "Ezekiel sees the LORD’s glory in a vision by the river Chebar and is commissioned to speak to the exiles as a watchman.",
+          "basis": "Ezekiel 1–3"
+        },
+        {
+          "id": "ot-ezekiel-phase-02",
+          "first_chapter": 4,
+          "last_chapter": 11,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "Signs and judgment concerning Jerusalem",
+          "world": "prophetic-symbolic",
+          "note": "Enacted signs portray Jerusalem under siege; visions of idolatry and judgment culminate in the glory of the LORD departing the Temple.",
+          "basis": "Ezekiel 4–11"
+        },
+        {
+          "id": "ot-ezekiel-phase-03",
+          "first_chapter": 12,
+          "last_chapter": 24,
+          "anchor_chapter": 12,
+          "anchor_verse": 1,
+          "label": "Warnings before the fall",
+          "world": "prophetic-symbolic",
+          "note": "Ezekiel warns that Jerusalem’s fall is near through sign-acts and oracles about the people’s unfaithfulness and coming judgment.",
+          "basis": "Ezekiel 12–24"
+        },
+        {
+          "id": "ot-ezekiel-phase-04",
+          "first_chapter": 25,
+          "last_chapter": 32,
+          "anchor_chapter": 25,
+          "anchor_verse": 1,
+          "label": "Oracles concerning neighboring nations",
+          "world": "prophetic-symbolic",
+          "note": "Oracles announce judgment on Ammon, Moab, Edom, Philistia, Tyre, Sidon, and Egypt for their violence and pride.",
+          "basis": "Ezekiel 25–32"
+        },
+        {
+          "id": "ot-ezekiel-phase-05",
+          "first_chapter": 33,
+          "last_chapter": 39,
+          "anchor_chapter": 33,
+          "anchor_verse": 1,
+          "label": "Watchman, restoration, and hope",
+          "world": "prophetic-symbolic",
+          "note": "At the news of Jerusalem’s fall, Ezekiel renews his watchman’s charge, condemns failed shepherds, and speaks of restoration, dry bones, and a final conflict.",
+          "basis": "Ezekiel 33–39"
+        },
+        {
+          "id": "ot-ezekiel-phase-06",
+          "first_chapter": 40,
+          "last_chapter": 48,
+          "anchor_chapter": 40,
+          "anchor_verse": 1,
+          "label": "The temple vision",
+          "world": "prophetic-symbolic",
+          "note": "A vision measures a restored Temple and land, with ordered worship, tribal allotments, and a river flowing from the sanctuary.",
+          "basis": "Ezekiel 40–48"
+        }
+      ]
+    },
+    {
+      "book_index": 26,
+      "name": "Daniel",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-daniel-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Daniel and his companions in exile",
+          "world": "babylon-exile",
+          "note": "Daniel and his companions are taken to Babylon, remain faithful in the royal court, and Daniel explains Nebuchadnezzar’s dream of kingdoms.",
+          "basis": "Daniel 1–2"
+        },
+        {
+          "id": "ot-daniel-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 6,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Stories at the imperial court",
+          "world": "babylon-exile",
+          "note": "Stories of the furnace, royal dreams, the writing on the wall, and the lions’ den show faithful servants facing imperial power.",
+          "basis": "Daniel 3–6"
+        },
+        {
+          "id": "ot-daniel-phase-03",
+          "first_chapter": 7,
+          "last_chapter": 12,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "Daniel’s visions",
+          "world": "prophetic-symbolic",
+          "note": "Daniel’s visions use beasts and heavenly figures to portray successive kingdoms, judgment, and the distress and deliverance of God’s people.",
+          "basis": "Daniel 7–12"
+        }
+      ]
+    },
+    {
+      "book_index": 27,
+      "name": "Hosea",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-hosea-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 3,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Hosea’s family as a sign",
+          "world": "prophetic-symbolic",
+          "note": "Hosea’s marriage and children become signs of Israel’s unfaithfulness, while the text also holds out hope of renewed relationship.",
+          "basis": "Hosea 1–3"
+        },
+        {
+          "id": "ot-hosea-phase-02",
+          "first_chapter": 4,
+          "last_chapter": 10,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "Covenant accusation",
+          "world": "prophetic-symbolic",
+          "note": "The prophet accuses Israel of covenant betrayal, corrupt worship, failed leadership, and misplaced reliance on political alliances.",
+          "basis": "Hosea 4–10"
+        },
+        {
+          "id": "ot-hosea-phase-03",
+          "first_chapter": 11,
+          "last_chapter": 14,
+          "anchor_chapter": 11,
+          "anchor_verse": 1,
+          "label": "Judgment and compassion",
+          "world": "prophetic-symbolic",
+          "note": "God recalls loving Israel from Egypt and grieves over judgment; the book ends by calling the people to return and promising healing.",
+          "basis": "Hosea 11–14"
+        }
+      ]
+    },
+    {
+      "book_index": 28,
+      "name": "Joel",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-joel-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The land is devastated",
+          "world": "prophetic-symbolic",
+          "note": "A devastating locust plague strips the land and leads Joel to call priests and people to lament and fast.",
+          "basis": "Joel 1"
+        },
+        {
+          "id": "ot-joel-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "A day of warning and promise",
+          "world": "prophetic-symbolic",
+          "note": "The prophet announces the day of the LORD, calls the people to return, and promises restoration and the outpouring of God’s Spirit.",
+          "basis": "Joel 2"
+        },
+        {
+          "id": "ot-joel-phase-03",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "The nations and restoration",
+          "world": "prophetic-symbolic",
+          "note": "The nations are summoned for judgment while Judah’s restoration and the LORD’s presence in Zion are promised.",
+          "basis": "Joel 3"
+        }
+      ]
+    },
+    {
+      "book_index": 29,
+      "name": "Amos",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-amos-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Oracles against nations",
+          "world": "prophetic-symbolic",
+          "note": "Amos announces judgment on surrounding nations before turning to Judah and Israel for their own violence and injustice.",
+          "basis": "Amos 1–2"
+        },
+        {
+          "id": "ot-amos-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 6,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Warnings to Israel",
+          "world": "prophetic-symbolic",
+          "note": "Israel is called to account for oppression and false worship; the prophet urges the people to seek good and let justice flow.",
+          "basis": "Amos 3–6"
+        },
+        {
+          "id": "ot-amos-phase-03",
+          "first_chapter": 7,
+          "last_chapter": 9,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "Visions and a promise of restoration",
+          "world": "prophetic-symbolic",
+          "note": "Visions of locusts, fire, a plumb line, and ripe fruit warn of Israel’s end, while the book closes with a promise of restoration.",
+          "basis": "Amos 7–9"
+        }
+      ]
+    },
+    {
+      "book_index": 30,
+      "name": "Obadiah",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-obadiah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "A vision concerning Edom",
+          "world": "prophetic-symbolic",
+          "note": "Obadiah condemns Edom’s pride and its violence against Judah, then looks toward the day when the LORD’s kingdom will be established.",
+          "basis": "Obadiah 1"
+        }
+      ]
+    },
+    {
+      "book_index": 31,
+      "name": "Jonah",
+      "kind": "narrative",
+      "sections": [
+        {
+          "id": "ot-jonah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Jonah is sent toward Nineveh",
+          "world": "prophetic-symbolic",
+          "note": "Jonah flees from the mission to Nineveh, and a storm at sea ends with the sailors casting him overboard.",
+          "basis": "Jonah 1"
+        },
+        {
+          "id": "ot-jonah-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "Jonah prays from the fish",
+          "world": "prophetic-symbolic",
+          "note": "From inside the fish, Jonah prays for deliverance and is brought back to dry land.",
+          "basis": "Jonah 2"
+        },
+        {
+          "id": "ot-jonah-phase-03",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Jonah goes to Nineveh",
+          "world": "prophetic-symbolic",
+          "note": "Sent again, Jonah warns Nineveh; its people repent, and God relents from the announced disaster.",
+          "basis": "Jonah 3"
+        },
+        {
+          "id": "ot-jonah-phase-04",
+          "first_chapter": 4,
+          "last_chapter": 4,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "Jonah outside the city",
+          "world": "prophetic-symbolic",
+          "note": "Jonah resents Nineveh’s reprieve, and the plant, worm, and wind expose his concern for himself beside God’s concern for the city.",
+          "basis": "Jonah 4"
+        }
+      ]
+    },
+    {
+      "book_index": 32,
+      "name": "Micah",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-micah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Judgment and lament",
+          "world": "prophetic-symbolic",
+          "note": "Micah’s messages against Samaria and Jerusalem name coming judgment and lament the loss and oppression affecting the land.",
+          "basis": "Micah 1–2"
+        },
+        {
+          "id": "ot-micah-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 5,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Leaders judged and hope announced",
+          "world": "prophetic-symbolic",
+          "note": "The prophet condemns corrupt rulers and prophets, then sets judgment beside promises of peace and a ruler from Bethlehem.",
+          "basis": "Micah 3–5"
+        },
+        {
+          "id": "ot-micah-phase-03",
+          "first_chapter": 6,
+          "last_chapter": 7,
+          "anchor_chapter": 6,
+          "anchor_verse": 1,
+          "label": "The covenant case and hope",
+          "world": "prophetic-symbolic",
+          "note": "God brings a covenant case against the people, calls for justice and mercy, and the book ends with trust in God’s compassion.",
+          "basis": "Micah 6–7"
+        }
+      ]
+    },
+    {
+      "book_index": 33,
+      "name": "Nahum",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-nahum-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "An oracle against Nineveh",
+          "world": "prophetic-symbolic",
+          "note": "Nahum portrays the LORD as judge of Nineveh and comfort to Judah, announcing the city’s coming defeat.",
+          "basis": "Nahum 1–2"
+        },
+        {
+          "id": "ot-nahum-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Nineveh’s fall described",
+          "world": "prophetic-symbolic",
+          "note": "The final chapter condemns Nineveh’s violence and deceit, depicts the city’s collapse, and declares that its wound will not be healed.",
+          "basis": "Nahum 3"
+        }
+      ]
+    },
+    {
+      "book_index": 34,
+      "name": "Habakkuk",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-habakkuk-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The prophet’s first complaint",
+          "world": "prophetic-symbolic",
+          "note": "Habakkuk asks why violence and injustice go unanswered, then questions why God would use the ruthless Chaldeans as an instrument of judgment.",
+          "basis": "Habakkuk 1"
+        },
+        {
+          "id": "ot-habakkuk-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "The answer and the woes",
+          "world": "prophetic-symbolic",
+          "note": "The prophet waits for God’s answer, hears that pride will not endure, and records woes against violence, exploitation, and idols.",
+          "basis": "Habakkuk 2"
+        },
+        {
+          "id": "ot-habakkuk-phase-03",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "A prayer in poetic form",
+          "world": "prophetic-symbolic",
+          "note": "Habakkuk’s prayer recalls God’s power and ends in trust and rejoicing even if crops and herds fail.",
+          "basis": "Habakkuk 3"
+        }
+      ]
+    },
+    {
+      "book_index": 35,
+      "name": "Zephaniah",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-zephaniah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The day of the LORD announced",
+          "world": "prophetic-symbolic",
+          "note": "Zephaniah warns Judah that the day of the LORD will expose idolatry and complacency and bring judgment on Jerusalem.",
+          "basis": "Zephaniah 1"
+        },
+        {
+          "id": "ot-zephaniah-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "Warnings to nations",
+          "world": "prophetic-symbolic",
+          "note": "The prophet calls the humble to seek the LORD and announces judgment on Philistia, Moab, Ammon, Cush, and Assyria.",
+          "basis": "Zephaniah 2"
+        },
+        {
+          "id": "ot-zephaniah-phase-03",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "Judgment and restoration",
+          "world": "prophetic-symbolic",
+          "note": "Jerusalem’s corrupt leaders are condemned, but the closing words promise a purified people and rejoicing in the LORD’s presence.",
+          "basis": "Zephaniah 3"
+        }
+      ]
+    },
+    {
+      "book_index": 36,
+      "name": "Haggai",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-haggai-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 1,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The call to rebuild",
+          "world": "jerusalem-temple-return",
+          "note": "Haggai challenges the returned community for neglecting the Temple while tending their own houses; Zerubbabel and Joshua lead the rebuilding.",
+          "basis": "Haggai 1"
+        },
+        {
+          "id": "ot-haggai-phase-02",
+          "first_chapter": 2,
+          "last_chapter": 2,
+          "anchor_chapter": 2,
+          "anchor_verse": 1,
+          "label": "Encouragement and promise",
+          "world": "jerusalem-temple-return",
+          "note": "The prophet encourages the builders, promises the Temple’s future glory, and gives Zerubbabel a sign of God’s choice.",
+          "basis": "Haggai 2"
+        }
+      ]
+    },
+    {
+      "book_index": 37,
+      "name": "Zechariah",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-zechariah-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 6,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "The night visions",
+          "world": "prophetic-symbolic",
+          "note": "Zechariah calls the people to return to God, then recounts night visions about Jerusalem, Joshua the priest, Zerubbabel, judgment, and renewal.",
+          "basis": "Zechariah 1–6"
+        },
+        {
+          "id": "ot-zechariah-phase-02",
+          "first_chapter": 7,
+          "last_chapter": 8,
+          "anchor_chapter": 7,
+          "anchor_verse": 1,
+          "label": "Fasting, justice, and hope",
+          "world": "prophetic-symbolic",
+          "note": "A question about fasting leads to warnings against injustice and promises that Jerusalem will again be a place of peace and worship.",
+          "basis": "Zechariah 7–8"
+        },
+        {
+          "id": "ot-zechariah-phase-03",
+          "first_chapter": 9,
+          "last_chapter": 14,
+          "anchor_chapter": 9,
+          "anchor_verse": 1,
+          "label": "Oracles and visions of the future",
+          "world": "prophetic-symbolic",
+          "note": "These oracles speak of a humble king, a pierced figure and struck shepherd, Jerusalem’s trials, and the LORD’s final reign.",
+          "basis": "Zechariah 9–14"
+        }
+      ]
+    },
+    {
+      "book_index": 38,
+      "name": "Malachi",
+      "kind": "prophetic",
+      "sections": [
+        {
+          "id": "ot-malachi-phase-01",
+          "first_chapter": 1,
+          "last_chapter": 2,
+          "anchor_chapter": 1,
+          "anchor_verse": 1,
+          "label": "Questions about worship and covenant",
+          "world": "jerusalem-temple-return",
+          "note": "Malachi condemns corrupt offerings and priestly failures, then confronts unfaithfulness in marriage and neglect of justice.",
+          "basis": "Malachi 1–2"
+        },
+        {
+          "id": "ot-malachi-phase-02",
+          "first_chapter": 3,
+          "last_chapter": 3,
+          "anchor_chapter": 3,
+          "anchor_verse": 1,
+          "label": "The messenger and refiner",
+          "world": "prophetic-symbolic",
+          "note": "The coming messenger and refiner announce judgment; the people are called to return to God, and the faithful are remembered.",
+          "basis": "Malachi 3"
+        },
+        {
+          "id": "ot-malachi-phase-03",
+          "first_chapter": 4,
+          "last_chapter": 4,
+          "anchor_chapter": 4,
+          "anchor_verse": 1,
+          "label": "The coming day",
+          "world": "prophetic-symbolic",
+          "note": "The final chapter warns of a coming day of judgment and promises healing, while urging Israel to remember Moses’ teaching.",
+          "basis": "Malachi 4"
+        }
+      ]
+    }
+  ]
+}

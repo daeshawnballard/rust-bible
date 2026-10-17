@@ -1,6 +1,58 @@
 // Production illustrations are embedded in the native server as well as shipped to Sites.
 pub fn asset(path: &str) -> Option<(&'static str, &'static [u8])> {
     match path {
+        "/art/journey/origins-patriarchs.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/origins-patriarchs.webp").as_slice(),
+        )),
+        "/art/journey/egypt.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/egypt.webp").as_slice(),
+        )),
+        "/art/journey/sinai-wilderness.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/sinai-wilderness.webp").as_slice(),
+        )),
+        "/art/journey/canaan-highlands.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/canaan-highlands.webp").as_slice(),
+        )),
+        "/art/journey/jerusalem-temple-return.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/jerusalem-temple-return.webp").as_slice(),
+        )),
+        "/art/journey/babylon-exile.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/babylon-exile.webp").as_slice(),
+        )),
+        "/art/journey/persian-court.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/persian-court.webp").as_slice(),
+        )),
+        "/art/journey/wisdom-poetry.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/wisdom-poetry.webp").as_slice(),
+        )),
+        "/art/journey/prophetic-symbolic.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/prophetic-symbolic.webp").as_slice(),
+        )),
+        "/art/journey/galilee-judea.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/galilee-judea.webp").as_slice(),
+        )),
+        "/art/journey/early-church-house.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/early-church-house.webp").as_slice(),
+        )),
+        "/art/journey/mediterranean-cities.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/mediterranean-cities.webp").as_slice(),
+        )),
+        "/art/journey/apocalyptic-vision.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/apocalyptic-vision.webp").as_slice(),
+        )),
         "/art/journey/jordan.webp" => Some((
             "image/webp",
             include_bytes!("../web/art/journey/jordan.webp").as_slice(),

@@ -21,7 +21,9 @@ pub(super) fn controls(book: usize, chapter: usize) -> String {
 }
 
 fn illustrated_journey(book: usize, chapter: usize) -> bool {
-    (book == 0 && (2..=4).contains(&chapter)) || super::journey_scenes::available(book, chapter)
+    (book == 0 && (2..=4).contains(&chapter))
+        || super::journey_scenes::available(book, chapter)
+        || super::journey_books::available(book, chapter)
 }
 
 pub(super) fn shell() -> &'static str {
@@ -188,6 +190,10 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
             genesis(chapter, verse, client)
         } else if let Some(scene) = super::journey_scenes::render(book, chapter, verse, client) {
             scene
+        } else if super::atlas::focused_state(book, chapter, verse)["available"] == true {
+            geography(book, chapter, verse, client)
+        } else if let Some(context) = super::journey_books::render(book, chapter, verse, client) {
+            context
         } else {
             geography(book, chapter, verse, client)
         }
@@ -296,6 +302,42 @@ mod tests {
             assert!(!html.contains("class=\"scripture"));
             assert!(!html.contains("data-read-aloud"));
             assert!(!html.contains("data-reader "));
+        }
+    }
+    #[test]
+    fn all_chapters_offer_context_and_exact_scenes_keep_priority() {
+        for (book, chapters) in bible().books.iter().enumerate() {
+            for (chapter, verses) in chapters.iter().enumerate() {
+                for verse in [1, verses.len()] {
+                    let uri = format!(
+                        "/api/reader-context?book={book}&chapter={}&verse={verse}&mode=journey",
+                        chapter + 1
+                    );
+                    let response = super::super::route(&uri, true);
+                    assert_eq!(response.status, 200);
+                    let state: Value = serde_json::from_str(&response.body).unwrap();
+                    assert_eq!(state["journey_available"], true);
+                    assert_ne!(state["kind"], "empty", "{uri}");
+                    assert!(!state["html"].as_str().unwrap().contains("data-audio"));
+                }
+            }
+        }
+        for (book, chapter, verse, kind) in [
+            (0, 2, 8, "story"),
+            (42, 4, 6, "story"),
+            (43, 16, 12, "geography"),
+            (18, 23, 1, "book-context"),
+            (44, 1, 1, "book-context"),
+            (65, 22, 1, "book-context"),
+        ] {
+            let response = super::super::route(
+                &format!(
+                    "/api/reader-context?book={book}&chapter={chapter}&verse={verse}&mode=journey"
+                ),
+                true,
+            );
+            let state: Value = serde_json::from_str(&response.body).unwrap();
+            assert_eq!(state["kind"], kind);
         }
     }
 }

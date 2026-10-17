@@ -1,5 +1,7 @@
 # Illustrated Journey scenes
 
+Journey now covers all 66 books and all 1,189 chapters through 271 authored chapter-section stages, with thirteen contextual landscapes. The broad markers indicate reading stages, not surveyed places or a literal setting for every verse. Poetry, letters, prophecy, and visions are labeled as their own forms of context. The fourteen detailed story worlds below keep priority and their exact verse-level ranges.
+
 Journey is a companion inside the canonical chapter reader. Its current stop follows the same verse position used by manual reading, continuous audio, and the local bookmark. It never supplies another Scripture stream or audio queue.
 
 The landscape is an artistic storyboard. Places and successive moments are compressed into one miniature; screen position, distance, paths, architecture, and scenery are not archaeological evidence. Hotspot names, paths, references, and active states are real interface elements over individual production images.
@@ -39,3 +41,9 @@ Ranges are explicit. Gaps shown as unassigned render with no active hotspot and 
 Each world uses its own illustration, with labels rendered as interface elements rather than painted into the artwork. Optimized scene WebPs live under `web/art/journey/`; original PNGs, exact prompts, generation identifiers, and manifest entries are tracked under `assets/imagegen/source/journey/`, `assets/imagegen/journey/`, and `assets/imagegen/manifest.json`.
 
 `src/journey_scenes.rs` holds the new scene ranges, references, rendering, and corpus-bound checks. `src/reader_context.rs` selects the relevant illustration; `web/reader-context.js` consumes actual position events and updates only the companion.
+
+## All-book context catalog
+
+`data/journey/ot.json` and `data/journey/nt.json` partition every book into contiguous chapter sections. Rust validates all 66 canonical names, all chapter intervals, unique stage identifiers, and source anchors against the embedded KJV. Each stage has a factual editorial summary and source range. `src/journey_books.rs` renders the catalog below precise story and curated terrain context. It never contributes words to Scripture or narration.
+
+The thirteen new original PNGs, production full-frame WebPs, exact prompts, generation IDs, dimensions, and SHA-256 hashes are retained under `assets/imagegen/source/journey/`, `web/art/journey/`, and `assets/imagegen/journey/`. No book cover or entire UI mockup is substituted for a Journey landscape.

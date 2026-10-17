@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "books": [
+    {
+      "book_index": 39,
+      "name": "Matthew",
+      "kind": "narrative",
+      "sections": [
+        {"id":"matthew-origins","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":1,"label":"Origins and preparation","world":"galilee-judea","note":"Matthew 1–4 moves from genealogy and birth narratives through Jesus’ baptism, temptation, and opening proclamation. The text names several settings but gives no continuous route.","basis":"Matthew 1-4"},
+        {"id":"matthew-teaching","first_chapter":5,"last_chapter":9,"anchor_chapter":5,"anchor_verse":3,"label":"Teaching and healing","world":"galilee-judea","note":"Matthew 5–9 gathers the Sermon on the Mount, healings, and calls to follow. These chapters locate activity around Galilee without fixing every episode to a precise site.","basis":"Matthew 5-9"},
+        {"id":"matthew-mission-parables","first_chapter":10,"last_chapter":13,"anchor_chapter":10,"anchor_verse":5,"label":"Mission and parables","world":"galilee-judea","note":"Matthew 10–13 combines instructions to the twelve, responses to Jesus, and parables of the kingdom. The text does not present a single continuous itinerary.","basis":"Matthew 10-13"},
+        {"id":"matthew-discipleship","first_chapter":14,"last_chapter":18,"anchor_chapter":14,"anchor_verse":13,"label":"Signs and discipleship","world":"galilee-judea","note":"Matthew 14–18 recounts signs, Peter’s confession, teaching about discipleship, and community life. Several settings are named, but the section is not a surveyed itinerary.","basis":"Matthew 14-18"},
+        {"id":"matthew-jerusalem","first_chapter":19,"last_chapter":23,"anchor_chapter":19,"anchor_verse":1,"label":"Teaching on the way to Jerusalem","world":"jerusalem-temple-return","note":"Matthew 19–23 describes teaching beyond the Jordan, entry into Jerusalem, and disputes in the temple. The text supports these named settings but not a detailed route between them.","basis":"Matthew 19-23"},
+        {"id":"matthew-passion-resurrection","first_chapter":24,"last_chapter":28,"anchor_chapter":24,"anchor_verse":1,"label":"Jerusalem, death, and resurrection","world":"jerusalem-temple-return","note":"Matthew 24–28 moves from teaching on the Mount of Olives to the passion, burial, resurrection, and closing commission. Jerusalem is explicit, while the ending’s destination is Galilee; the text does not describe a continuous route.","basis":"Matthew 24-28"}
+      ]
+    },
+    {
+      "book_index": 40,
+      "name": "Mark",
+      "kind": "narrative",
+      "sections": [
+        {"id":"mark-galilean-opening","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":1,"label":"The Galilean ministry begins","world":"galilee-judea","note":"Mark 1–4 introduces John the Baptist, Jesus’ early Galilean ministry, calls, healings, and parables. The text names places but gives no continuous route.","basis":"Mark 1-4"},
+        {"id":"mark-signs-and-confession","first_chapter":5,"last_chapter":8,"anchor_chapter":5,"anchor_verse":1,"label":"Signs and the disciples’ confession","world":"galilee-judea","note":"Mark 5–8 recounts healings, feedings, teaching, and the disciples’ growing recognition of Jesus. Events span named regions, but the text does not specify a complete route.","basis":"Mark 5-8"},
+        {"id":"mark-road-teaching","first_chapter":9,"last_chapter":12,"anchor_chapter":9,"anchor_verse":1,"label":"Discipleship and the road to Jerusalem","world":"galilee-judea","note":"Mark 9–12 combines teaching about discipleship with the journey toward Jerusalem and disputes after Jesus’ entry. The broad movement is stated, but intermediate route details are limited.","basis":"Mark 9-12"},
+        {"id":"mark-passion-resurrection","first_chapter":13,"last_chapter":16,"anchor_chapter":13,"anchor_verse":1,"label":"Jerusalem, passion, and resurrection","world":"jerusalem-temple-return","note":"Mark 13–16 moves from the Mount of Olives discourse to events in Jerusalem, the crucifixion, burial, and the empty tomb. The narrative does not resolve every location detail.","basis":"Mark 13-16"}
+      ]
+    },
+    {
+      "book_index": 41,
+      "name": "Luke",
+      "kind": "narrative",
+      "sections": [
+        {"id":"luke-birth-and-opening","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":1,"label":"Birth narratives and the ministry’s opening","world":"galilee-judea","note":"Luke 1–4 presents birth narratives, Jesus’ childhood visit to Jerusalem, baptism, temptation, and the opening of his ministry in Galilee. Multiple named settings appear, but no continuous route is given.","basis":"Luke 1-4"},
+        {"id":"luke-galilean-ministry","first_chapter":5,"last_chapter":9,"anchor_chapter":5,"anchor_verse":1,"label":"Teaching and signs in Galilee","world":"galilee-judea","note":"Luke 5–9 follows calls, teaching, healings, the sending of the twelve, and Peter’s confession. The text places much of this ministry in Galilee; exact sites for every episode remain uncertain.","basis":"Luke 5-9"},
+        {"id":"luke-teaching-and-parables","first_chapter":10,"last_chapter":14,"anchor_chapter":10,"anchor_verse":1,"label":"Teaching, parables, and meals","world":"galilee-judea","note":"Luke 10–14 gathers the sending of the seventy, parables, instruction, and meals with named hosts. The chapters do not provide a route for each teaching scene.","basis":"Luke 10-14"},
+        {"id":"luke-journey-to-jerusalem","first_chapter":15,"last_chapter":19,"anchor_chapter":15,"anchor_verse":1,"label":"Parables and the approach to Jerusalem","world":"jerusalem-temple-return","note":"Luke 15–19 includes parables, teaching, and the narrative’s movement toward Jerusalem, with Jesus’ arrival in chapter 19.","basis":"Luke 15-19"},
+        {"id":"luke-jerusalem-ending","first_chapter":20,"last_chapter":24,"anchor_chapter":20,"anchor_verse":1,"label":"Jerusalem, resurrection, and departure","world":"jerusalem-temple-return","note":"Luke 20–24 recounts temple teaching, the passion, resurrection appearances, and the closing departure near Bethany. The text names these settings but leaves some spatial details open.","basis":"Luke 20-24"}
+      ]
+    },
+    {
+      "book_index": 42,
+      "name": "John",
+      "kind": "narrative",
+      "sections": [
+        {"id":"john-opening-signs","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":1,"label":"The Word and the first signs","world":"galilee-judea","note":"John 1–4 introduces Jesus, the Cana sign, a Jerusalem visit, and a conversation in Samaria. These distinct settings do not establish one continuous route.","basis":"John 1-4"},
+        {"id":"john-signs-and-discourses","first_chapter":5,"last_chapter":10,"anchor_chapter":5,"anchor_verse":1,"label":"Signs and public teaching","world":"galilee-judea","note":"John 5–10 recounts signs and extended teaching in Jerusalem and Galilee. The narrative shifts between settings without establishing one precise location for every scene.","basis":"John 5-10"},
+        {"id":"john-lazarus-and-public-ministry","first_chapter":11,"last_chapter":12,"anchor_chapter":11,"anchor_verse":1,"label":"Lazarus and the final public signs","world":"jerusalem-temple-return","note":"John 11–12 centers on Lazarus at Bethany and Jesus’ approach and entry into Jerusalem. The text supplies these place references but not a complete travel trace.","basis":"John 11-12"},
+        {"id":"john-farewell-discourse","first_chapter":13,"last_chapter":17,"anchor_chapter":13,"anchor_verse":1,"label":"The farewell discourse","world":"jerusalem-temple-return","note":"John 13–17 presents the final meal, Jesus’ teaching to the disciples, and prayer before the arrest. The discourse is tied to the narrative’s final-night setting, but the text does not describe the room in detail.","basis":"John 13-17"},
+        {"id":"john-passion-and-appearances","first_chapter":18,"last_chapter":21,"anchor_chapter":18,"anchor_verse":1,"label":"Passion and resurrection appearances","world":"jerusalem-temple-return","note":"John 18–21 recounts arrest, trial, crucifixion, burial, and appearances in Jerusalem-area settings and by the Sea of Tiberias. The closing scenes do not provide a full route.","basis":"John 18-21"}
+      ]
+    },
+    {
+      "book_index": 43,
+      "name": "Acts",
+      "kind": "narrative",
+      "sections": [
+        {"id":"acts-jerusalem-witness","first_chapter":1,"last_chapter":7,"anchor_chapter":1,"anchor_verse":1,"label":"Witness begins in Jerusalem","world":"galilee-judea","note":"Acts 1–7 recounts the ascension, Pentecost, the Jerusalem community, and its early conflicts. Jerusalem is the stated center of these chapters.","basis":"Acts 1-7"},
+        {"id":"acts-judea-samaria-and-antioch","first_chapter":8,"last_chapter":12,"anchor_chapter":8,"anchor_verse":1,"label":"Judea, Samaria, and Antioch","world":"early-church-house","note":"Acts 8–12 describes the message spreading through Judea and Samaria, Cornelius at Caesarea, and the community at Antioch. These are narrative movements among named places, not a surveyed route.","basis":"Acts 8-12"},
+        {"id":"acts-first-mission-and-council","first_chapter":13,"last_chapter":15,"anchor_chapter":13,"anchor_verse":1,"label":"Mission from Antioch and the Jerusalem council","world":"mediterranean-cities","note":"Acts 13–15 follows a mission from Antioch through several named cities and the council in Jerusalem. The account identifies major stops but does not provide modern route precision.","basis":"Acts 13-15"},
+        {"id":"acts-aegean-ministry","first_chapter":16,"last_chapter":20,"anchor_chapter":16,"anchor_verse":1,"label":"Macedonia, Greece, and Ephesus","world":"mediterranean-cities","note":"Acts 16–20 names travel through Macedonia and Greece, including Corinth, and an extended stay at Ephesus. The narrative supports a broad Mediterranean sequence, not precise road or sea tracks.","basis":"Acts 16-20"},
+        {"id":"acts-arrest-and-hearings","first_chapter":21,"last_chapter":24,"anchor_chapter":21,"anchor_verse":1,"label":"Arrest and hearings in Jerusalem and Caesarea","world":"galilee-judea","note":"Acts 21–24 recounts Paul’s arrival in Jerusalem, arrest, and hearings after transfer to Caesarea. Both cities are named; the text does not specify every movement within them.","basis":"Acts 21-24"},
+        {"id":"acts-voyage-to-rome","first_chapter":25,"last_chapter":28,"anchor_chapter":25,"anchor_verse":1,"label":"The voyage and arrival in Rome","world":"mediterranean-cities","note":"Acts 25–28 follows appeals, a sea voyage with named stops and shipwreck, and arrival in Rome. The account supports this broad sequence, while ancient route geometry and some island identifications remain uncertain.","basis":"Acts 25-28"}
+      ]
+    },
+    {
+      "book_index": 44,
+      "name": "Romans",
+      "kind": "epistle",
+      "sections": [
+        {"id":"romans-gospel-and-faith","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":16,"label":"The gospel, sin, and faith","world":"early-church-house","note":"Romans 1–4 develops the gospel, the shared problem of sin, and justification by faith. The letter addresses believers in Rome, but this does not establish where it was composed.","basis":"Romans 1-4"},
+        {"id":"romans-life-in-christ","first_chapter":5,"last_chapter":8,"anchor_chapter":5,"anchor_verse":1,"label":"Peace, new life, and the Spirit","world":"early-church-house","note":"Romans 5–8 develops peace with God, life in Christ, and life in the Spirit; it presents theological argument rather than travel narrative.","basis":"Romans 5-8"},
+        {"id":"romans-israel-and-mercy","first_chapter":9,"last_chapter":11,"anchor_chapter":9,"anchor_verse":1,"label":"Israel, promise, and mercy","world":"early-church-house","note":"Romans 9–11 reflects on Israel, promise, and mercy, arguing from Israel’s scriptures rather than narrating a journey.","basis":"Romans 9-11"},
+        {"id":"romans-community-and-greetings","first_chapter":12,"last_chapter":16,"anchor_chapter":12,"anchor_verse":1,"label":"Community life and greetings","world":"early-church-house","note":"Romans 12–16 gives practical instruction, travel intentions, and greetings to named people and communities. The letter’s audience is Roman, but these closing references do not document a completed itinerary.","basis":"Romans 12-16"}
+      ]
+    },
+    {
+      "book_index": 45,
+      "name": "1 Corinthians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"1-corinthians-divisions-and-wisdom","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":10,"label":"Divisions and the wisdom of the cross","world":"early-church-house","note":"1 Corinthians 1–4 addresses divisions in the Corinthian community and contrasts human status with the message of the cross. The letter does not specify where the community met.","basis":"1 Corinthians 1-4"},
+        {"id":"1-corinthians-community-conduct","first_chapter":5,"last_chapter":10,"anchor_chapter":5,"anchor_verse":1,"label":"Community conduct and food questions","world":"early-church-house","note":"1 Corinthians 5–10 responds to questions of conduct, disputes, marriage, food, and communal responsibility. These are instructions to a church, not stages on a journey.","basis":"1 Corinthians 5-10"},
+        {"id":"1-corinthians-worship-and-gifts","first_chapter":11,"last_chapter":14,"anchor_chapter":11,"anchor_verse":2,"label":"Gathering, gifts, and worship","world":"early-church-house","note":"1 Corinthians 11–14 discusses shared worship, the Lord’s Supper, spiritual gifts, and order in the assembly. The letter does not identify a specific meeting place.","basis":"1 Corinthians 11-14"},
+        {"id":"1-corinthians-resurrection-and-close","first_chapter":15,"last_chapter":16,"anchor_chapter":15,"anchor_verse":1,"label":"Resurrection and closing plans","world":"early-church-house","note":"1 Corinthians 15–16 centers on resurrection and closes with collection and travel plans. These plans are not a record of completed travel.","basis":"1 Corinthians 15-16"}
+      ]
+    },
+    {
+      "book_index": 46,
+      "name": "2 Corinthians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"2-corinthians-comfort-and-reconciliation","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":3,"label":"Comfort, ministry, and reconciliation","world":"early-church-house","note":"2 Corinthians 1–4 speaks of comfort amid affliction, apostolic ministry, and the message of reconciliation. The letter does not establish where the hardships it recalls occurred.","basis":"2 Corinthians 1-4"},
+        {"id":"2-corinthians-generosity-and-defense","first_chapter":5,"last_chapter":9,"anchor_chapter":5,"anchor_verse":1,"label":"Hope, reconciliation, and generosity","world":"early-church-house","note":"2 Corinthians 5–9 develops hope, reconciliation, and the collection for other believers. The collection connects communities, but the letter gives no route or meeting place for it.","basis":"2 Corinthians 5-9"},
+        {"id":"2-corinthians-ministry-and-boasting","first_chapter":10,"last_chapter":13,"anchor_chapter":10,"anchor_verse":1,"label":"Ministry under challenge","world":"early-church-house","note":"2 Corinthians 10–13 defends the writer’s ministry and recounts hardship and weakness. The text gives no specific geographic setting for this argument.","basis":"2 Corinthians 10-13"}
+      ]
+    },
+    {
+      "book_index": 47,
+      "name": "Galatians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"galatians-opening-and-gospel","first_chapter":1,"last_chapter":2,"anchor_chapter":1,"anchor_verse":6,"label":"The gospel and its source","world":"early-church-house","note":"Galatians 1–2 defends the gospel and recounts encounters and recognition among early leaders. The autobiographical references serve the argument and do not supply a complete itinerary.","basis":"Galatians 1-2"},
+        {"id":"galatians-promise-and-faith","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"Promise, faith, and freedom","world":"early-church-house","note":"Galatians 3–4 argues from faith, promise, and the status of God’s children. The chapters are scriptural reasoning rather than geographical narrative.","basis":"Galatians 3-4"},
+        {"id":"galatians-life-in-freedom","first_chapter":5,"last_chapter":6,"anchor_chapter":5,"anchor_verse":1,"label":"Living in freedom","world":"early-church-house","note":"Galatians 5–6 applies freedom through life in the Spirit, mutual care, and perseverance. No travel scene is described here; the house label indicates a reading-community context, not an inferred address.","basis":"Galatians 5-6"}
+      ]
+    },
+    {
+      "book_index": 48,
+      "name": "Ephesians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"ephesians-blessing-and-unity","first_chapter":1,"last_chapter":2,"anchor_chapter":1,"anchor_verse":3,"label":"Blessing and reconciliation","world":"early-church-house","note":"Ephesians 1–2 presents blessing in Christ and reconciliation across former divisions. The passage is a theological address to a community, not a report of movement; the passage does not identify a specific Ephesian site.","basis":"Ephesians 1-2"},
+        {"id":"ephesians-one-body","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"One body and a shared calling","world":"early-church-house","note":"Ephesians 3–4 describes a shared calling and unity in one body. This language describes community unity and does not identify a physical gathering place or travel route.","basis":"Ephesians 3-4"},
+        {"id":"ephesians-new-life-and-steadfastness","first_chapter":5,"last_chapter":6,"anchor_chapter":5,"anchor_verse":1,"label":"New life and steadfastness","world":"early-church-house","note":"Ephesians 5–6 gives household instruction and imagery of spiritual struggle. The household language belongs to the letter’s teaching; the letter does not describe a particular room.","basis":"Ephesians 5-6"}
+      ]
+    },
+    {
+      "book_index": 49,
+      "name": "Philippians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"philippians-thanks-and-partnership","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":3,"label":"Thanks and partnership","world":"early-church-house","note":"Philippians 1 expresses thanks, partnership in the gospel, and reflection on hardship and service. The letter’s community focus does not establish the writer’s exact location.","basis":"Philippians 1"},
+        {"id":"philippians-humility-and-faithful-living","first_chapter":2,"last_chapter":3,"anchor_chapter":2,"anchor_verse":1,"label":"Humility and faithful living","world":"early-church-house","note":"Philippians 2–3 urges humility and perseverance, holding up Christ’s example and the goal of knowing him. These are exhortations to the community rather than travel scenes.","basis":"Philippians 2-3"},
+        {"id":"philippians-joy-and-generosity","first_chapter":4,"last_chapter":4,"anchor_chapter":4,"anchor_verse":4,"label":"Joy, peace, and generosity","world":"early-church-house","note":"Philippians 4 closes with instruction on joy, peace, and the community’s material support. The closing thanks are correspondence, not evidence of a particular delivery route or meeting location.","basis":"Philippians 4"}
+      ]
+    },
+    {
+      "book_index": 50,
+      "name": "Colossians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"colossians-christ-and-community","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":3,"label":"Christ and the community","world":"early-church-house","note":"Colossians 1 gives thanks for the community and presents the supremacy of Christ. This is an epistolary teaching passage; the passage does not identify a particular gathering site.","basis":"Colossians 1"},
+        {"id":"colossians-fullness-and-new-life","first_chapter":2,"last_chapter":3,"anchor_chapter":2,"anchor_verse":1,"label":"Fullness and a renewed life","world":"early-church-house","note":"Colossians 2–3 warns against being misled and describes a renewed life in Christ through theological and ethical instruction.","basis":"Colossians 2-3"},
+        {"id":"colossians-household-and-greetings","first_chapter":4,"last_chapter":4,"anchor_chapter":4,"anchor_verse":2,"label":"Prayer and greetings","world":"early-church-house","note":"Colossians 4 gives instruction on prayer and speech and closes with greetings and named coworkers. The greetings indicate correspondence across communities, not a complete itinerary or verified scene location.","basis":"Colossians 4"}
+      ]
+    },
+    {
+      "book_index": 51,
+      "name": "1 Thessalonians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"1-thessalonians-faith-and-memory","first_chapter":1,"last_chapter":2,"anchor_chapter":1,"anchor_verse":2,"label":"Faith and remembered service","world":"early-church-house","note":"1 Thessalonians 1–2 recalls the community’s reception of the message and the writer’s earlier service among them. It recalls past relations but gives no complete route.","basis":"1 Thessalonians 1-2"},
+        {"id":"1-thessalonians-encouragement-and-hope","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"Encouragement and hope","world":"early-church-house","note":"1 Thessalonians 3–4 reports encouragement and gives instruction about holy living and hope for the dead. The letter frames these concerns for a community; no physical journey is the subject of this unit.","basis":"1 Thessalonians 3-4"},
+        {"id":"1-thessalonians-day-and-community","first_chapter":5,"last_chapter":5,"anchor_chapter":5,"anchor_verse":1,"label":"The day of the Lord and community care","world":"early-church-house","note":"1 Thessalonians 5 discusses the day of the Lord, watchfulness, and care within the community; the chapter is exhortative and apocalyptic.","basis":"1 Thessalonians 5"}
+      ]
+    },
+    {
+      "book_index": 52,
+      "name": "2 Thessalonians",
+      "kind": "epistle",
+      "sections": [
+        {"id":"2-thessalonians-thanks-and-endurance","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":3,"label":"Thanks and endurance under pressure","world":"early-church-house","note":"2 Thessalonians 1 thanks the community for faith and endurance and speaks of divine judgment. This is pastoral correspondence, not a report of travel.","basis":"2 Thessalonians 1"},
+        {"id":"2-thessalonians-day-of-the-lord","first_chapter":2,"last_chapter":2,"anchor_chapter":2,"anchor_verse":1,"label":"Clarification about the day of the Lord","world":"early-church-house","note":"2 Thessalonians 2 addresses confusion about the day of the Lord and urges steadiness. The chapter uses apocalyptic language without locating a route or scene.","basis":"2 Thessalonians 2"},
+        {"id":"2-thessalonians-work-and-steadfastness","first_chapter":3,"last_chapter":3,"anchor_chapter":3,"anchor_verse":1,"label":"Prayer, work, and steadfastness","world":"early-church-house","note":"2 Thessalonians 3 requests prayer and instructs the community about work and orderly conduct. The advice concerns shared life rather than travel; it does not document a meeting location.","basis":"2 Thessalonians 3"}
+      ]
+    },
+    {
+      "book_index": 53,
+      "name": "1 Timothy",
+      "kind": "epistle",
+      "sections": [
+        {"id":"1-timothy-teaching-and-prayer","first_chapter":1,"last_chapter":2,"anchor_chapter":1,"anchor_verse":3,"label":"Sound teaching and prayer","world":"early-church-house","note":"1 Timothy 1–2 warns against disruptive teaching and gives instruction about prayer and community conduct. The letter addresses Timothy; it does not identify the setting in which these instructions were given.","basis":"1 Timothy 1-2"},
+        {"id":"1-timothy-leadership-and-godliness","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"Leadership and godliness","world":"early-church-house","note":"1 Timothy 3–4 discusses qualifications for overseers and servants and calls for disciplined teaching. These are instructions for church life, not travel narration; it does not name a specific gathering site.","basis":"1 Timothy 3-4"},
+        {"id":"1-timothy-care-and-charge","first_chapter":5,"last_chapter":6,"anchor_chapter":5,"anchor_verse":1,"label":"Care, conduct, and final charge","world":"early-church-house","note":"1 Timothy 5–6 addresses care for widows, elders, conduct, and the dangers of wealth. The material is pastoral guidance.","basis":"1 Timothy 5-6"}
+      ]
+    },
+    {
+      "book_index": 54,
+      "name": "2 Timothy",
+      "kind": "epistle",
+      "sections": [
+        {"id":"2-timothy-memory-and-courage","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":3,"label":"Memory and courage","world":"early-church-house","note":"2 Timothy 1 recalls faith, calls Timothy to courage, and refers to hardship and confinement. The chapter does not establish the precise setting of the correspondence.","basis":"2 Timothy 1"},
+        {"id":"2-timothy-teaching-and-endurance","first_chapter":2,"last_chapter":2,"anchor_chapter":2,"anchor_verse":1,"label":"Teaching and endurance","world":"early-church-house","note":"2 Timothy 2 uses images of a soldier, athlete, and farmer to urge endurance and faithful teaching; these are metaphors rather than reported events.","basis":"2 Timothy 2"},
+        {"id":"2-timothy-scripture-and-final-charge","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"Scripture and the final charge","world":"early-church-house","note":"2 Timothy 3–4 commends scripture, gives a final charge, and closes with personal greetings. The correspondence names people but does not supply a complete location record; it does not supply a complete location record or itinerary.","basis":"2 Timothy 3-4"}
+      ]
+    },
+    {
+      "book_index": 55,
+      "name": "Titus",
+      "kind": "epistle",
+      "sections": [
+        {"id":"titus-elders-and-teaching","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":5,"label":"Elders and sound teaching","world":"early-church-house","note":"Titus 1 instructs Titus about appointing elders and addressing harmful teaching. It refers to communities in Crete but gives no itinerary or precise meeting place.","basis":"Titus 1"},
+        {"id":"titus-community-conduct","first_chapter":2,"last_chapter":2,"anchor_chapter":2,"anchor_verse":1,"label":"Teaching for community life","world":"early-church-house","note":"Titus 2 gives instruction for different members of the community and grounds conduct in the grace of God. The text does not identify a specific household.","basis":"Titus 2"},
+        {"id":"titus-good-works-and-close","first_chapter":3,"last_chapter":3,"anchor_chapter":3,"anchor_verse":1,"label":"Good works and closing instructions","world":"early-church-house","note":"Titus 3 urges civic conduct and good works and closes with travel-related plans and greetings. Plans do not confirm completed travel.","basis":"Titus 3"}
+      ]
+    },
+    {
+      "book_index": 56,
+      "name": "Philemon",
+      "kind": "epistle",
+      "sections": [
+        {"id":"philemon-appeal-and-reconciliation","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":4,"label":"An appeal for welcome","world":"early-church-house","note":"Philemon is a brief personal letter that thanks God for the recipient’s faith and appeals for Onesimus to be welcomed as a brother. The closing mentions hospitality and travel plans, not a confirmed route.","basis":"Philemon 1"}
+      ]
+    },
+    {
+      "book_index": 57,
+      "name": "Hebrews",
+      "kind": "epistle",
+      "sections": [
+        {"id":"hebrews-son-and-rest","first_chapter":1,"last_chapter":4,"anchor_chapter":1,"anchor_verse":1,"label":"The Son and the promised rest","world":"early-church-house","note":"Hebrews 1–4 presents the Son, compares him with angels and Moses, and warns the hearers to enter God’s rest through scriptural argument and exhortation.","basis":"Hebrews 1-4"},
+        {"id":"hebrews-priest-and-covenant","first_chapter":5,"last_chapter":7,"anchor_chapter":5,"anchor_verse":1,"label":"The priesthood and Melchizedek","world":"early-church-house","note":"Hebrews 5–7 develops the high-priest theme through Melchizedek and scriptural interpretation. The argument is literary and theological; it does not place the audience at a reconstructable sanctuary scene.","basis":"Hebrews 5-7"},
+        {"id":"hebrews-covenant-and-sacrifice","first_chapter":8,"last_chapter":10,"anchor_chapter":8,"anchor_verse":1,"label":"Covenant, sanctuary, and sacrifice","world":"early-church-house","note":"Hebrews 8–10 contrasts covenant and sanctuary language and discusses sacrifice and access to God. The sanctuary imagery draws on scripture; the text does not locate its audience at a physical sanctuary.","basis":"Hebrews 8-10"},
+        {"id":"hebrews-faith-and-perseverance","first_chapter":11,"last_chapter":13,"anchor_chapter":11,"anchor_verse":1,"label":"Faith and perseverance","world":"early-church-house","note":"Hebrews 11–13 recalls figures of faith and urges perseverance, mutual care, and steadfastness. The historical examples span many places and times; they are not one itinerary for the letter’s audience.","basis":"Hebrews 11-13"}
+      ]
+    },
+    {
+      "book_index": 58,
+      "name": "James",
+      "kind": "epistle",
+      "sections": [
+        {"id":"james-trials-and-wisdom","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":2,"label":"Trials, wisdom, and hearing","world":"early-church-house","note":"James 1 addresses trials, wisdom, hearing and doing the word, and care for the vulnerable among dispersed communities.","basis":"James 1"},
+        {"id":"james-faith-and-partiality","first_chapter":2,"last_chapter":2,"anchor_chapter":2,"anchor_verse":1,"label":"Faith without partiality","world":"early-church-house","note":"James 2 challenges favoritism and connects faith with action, using examples from scripture. Its assembly language suggests community life but does not identify a particular building or route.","basis":"James 2"},
+        {"id":"james-speech-and-patience","first_chapter":3,"last_chapter":5,"anchor_chapter":3,"anchor_verse":1,"label":"Speech, patience, and prayer","world":"early-church-house","note":"James 3–5 treats speech, conflict, patience, prayer, and care for the sick.","basis":"James 3-5"}
+      ]
+    },
+    {
+      "book_index": 59,
+      "name": "1 Peter",
+      "kind": "epistle",
+      "sections": [
+        {"id":"1-peter-living-hope","first_chapter":1,"last_chapter":2,"anchor_chapter":1,"anchor_verse":3,"label":"Living hope and a chosen people","world":"early-church-house","note":"1 Peter 1–2 addresses scattered believers with language of living hope, holiness, and a chosen people; the audience description is broad and does not give a travel route.","basis":"1 Peter 1-2"},
+        {"id":"1-peter-conduct-and-suffering","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"Conduct, suffering, and service","world":"early-church-house","note":"1 Peter 3–4 gives household and community instruction and speaks of suffering and service. The counsel is not tied to one narrated event; the text does not specify a particular household setting.","basis":"1 Peter 3-4"},
+        {"id":"1-peter-elders-and-endurance","first_chapter":5,"last_chapter":5,"anchor_chapter":5,"anchor_verse":1,"label":"Care and steadfastness","world":"early-church-house","note":"1 Peter 5 instructs elders and the community to care for one another and remain steadfast. The chapter addresses elders and community care but does not state an exact gathering place or route.","basis":"1 Peter 5"}
+      ]
+    },
+    {
+      "book_index": 60,
+      "name": "2 Peter",
+      "kind": "epistle",
+      "sections": [
+        {"id":"2-peter-knowledge-and-growth","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":3,"label":"Knowledge, growth, and testimony","world":"early-church-house","note":"2 Peter 1 urges growth in virtue and recalls the transfiguration as testimony. The chapter refers to a past event but does not narrate its location in detail.","basis":"2 Peter 1"},
+        {"id":"2-peter-warning-and-promise","first_chapter":2,"last_chapter":3,"anchor_chapter":2,"anchor_verse":1,"label":"Warnings and the promised day","world":"early-church-house","note":"2 Peter 2–3 warns against false teachers and discusses the promised day of the Lord. Its judgment imagery is theological and future-facing.","basis":"2 Peter 2-3"}
+      ]
+    },
+    {
+      "book_index": 61,
+      "name": "1 John",
+      "kind": "epistle",
+      "sections": [
+        {"id":"1-john-life-and-light","first_chapter":1,"last_chapter":2,"anchor_chapter":1,"anchor_verse":1,"label":"Life, light, and fellowship","world":"early-church-house","note":"1 John 1–2 speaks of the message heard, fellowship, light, obedience, and love. It is a pastoral argument without travel narration.","basis":"1 John 1-2"},
+        {"id":"1-john-love-and-discernment","first_chapter":3,"last_chapter":4,"anchor_chapter":3,"anchor_verse":1,"label":"Love and discernment","world":"early-church-house","note":"1 John 3–4 connects love of one another with discernment about testimony concerning Jesus. The chapters offer communal teaching rather than a geographic episode.","basis":"1 John 3-4"},
+        {"id":"1-john-faith-and-assurance","first_chapter":5,"last_chapter":5,"anchor_chapter":5,"anchor_verse":1,"label":"Faith and assurance","world":"early-church-house","note":"1 John 5 emphasizes belief, testimony, life, and assurance. It closes as pastoral instruction rather than a journey or location account.","basis":"1 John 5"}
+      ]
+    },
+    {
+      "book_index": 62,
+      "name": "2 John",
+      "kind": "epistle",
+      "sections": [
+        {"id":"2-john-truth-and-love","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":4,"label":"Truth, love, and discernment","world":"early-church-house","note":"2 John is a short letter urging the recipient community to walk in truth and love and to discern its teachers. The address does not securely identify a named city or building.","basis":"2 John 1"}
+      ]
+    },
+    {
+      "book_index": 63,
+      "name": "3 John",
+      "kind": "epistle",
+      "sections": [
+        {"id":"3-john-hospitality-and-witness","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":5,"label":"Hospitality and faithful witness","world":"early-church-house","note":"3 John commends hospitality toward traveling coworkers and contrasts it with a leader’s refusal to receive them. The letter names people but not a secure modern location; its travel references are not a complete route.","basis":"3 John 1"}
+      ]
+    },
+    {
+      "book_index": 64,
+      "name": "Jude",
+      "kind": "epistle",
+      "sections": [
+        {"id":"jude-contend-and-keep","first_chapter":1,"last_chapter":1,"anchor_chapter":1,"anchor_verse":3,"label":"Contend for the faith","world":"early-church-house","note":"Jude urges its recipients to contend for the faith, warns against corrupt teaching, and closes with praise. Its references to earlier scriptural judgments are examples, not one contemporary setting.","basis":"Jude 1"}
+      ]
+    },
+    {
+      "book_index": 65,
+      "name": "Revelation",
+      "kind": "vision",
+      "sections": [
+        {"id":"revelation-messages-and-throne","first_chapter":1,"last_chapter":3,"anchor_chapter":1,"anchor_verse":1,"label":"Opening vision and messages to the churches","world":"apocalyptic-vision","note":"Revelation 1–3 presents an opening vision and messages addressed to seven churches. The named communities are real places in the text, but this sequence is visionary rather than a travel route.","basis":"Revelation 1-3"},
+        {"id":"revelation-seals-and-multitude","first_chapter":4,"last_chapter":7,"anchor_chapter":4,"anchor_verse":1,"label":"The throne, scroll, and seals","world":"apocalyptic-vision","note":"Revelation 4–7 depicts visions of the throne, the scroll and seals, and a multitude. These are visionary scenes rather than earthly travel stops.","basis":"Revelation 4-7"},
+        {"id":"revelation-trumpets-and-witnesses","first_chapter":8,"last_chapter":11,"anchor_chapter":8,"anchor_verse":1,"label":"Trumpets and witnesses","world":"apocalyptic-vision","note":"Revelation 8–11 unfolds trumpet visions and witness imagery. The sequence is apocalyptic symbolism, not a route across mapped terrain.","basis":"Revelation 8-11"},
+        {"id":"revelation-conflict-and-judgment","first_chapter":12,"last_chapter":16,"anchor_chapter":12,"anchor_verse":1,"label":"Conflict, beasts, and bowls","world":"apocalyptic-vision","note":"Revelation 12–16 depicts a woman, dragon, beasts, and bowls in symbolic visions, not geographic descriptions.","basis":"Revelation 12-16"},
+        {"id":"revelation-fall-of-babylon","first_chapter":17,"last_chapter":19,"anchor_chapter":17,"anchor_verse":1,"label":"Babylon and the rider","world":"apocalyptic-vision","note":"Revelation 17–19 portrays Babylon and the rider through apocalyptic imagery and judgment scenes. Babylon functions within the vision’s symbolic world; the section is not a travel account.","basis":"Revelation 17-19"},
+        {"id":"revelation-final-vision","first_chapter":20,"last_chapter":22,"anchor_chapter":20,"anchor_verse":1,"label":"Final judgment and the new creation","world":"apocalyptic-vision","note":"Revelation 20–22 presents final judgment, a new heaven and earth, and the vision of the holy city. These are eschatological visions, not geographic descriptions of a present-day place.","basis":"Revelation 20-22"}
+      ]
+    }
+  ]
+}

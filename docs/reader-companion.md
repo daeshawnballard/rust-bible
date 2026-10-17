@@ -7,7 +7,7 @@ Hotspots inspect context while the saved reading location remains unchanged. An 
 ## Interaction
 
 - Library covers enter the chapter reader directly. Book and chapter selection stays in the passage-title menu, alongside text settings.
-- Passages without an assigned illustration expand into Read automatically; narration continues unchanged.
+- All books offer contextual Journey artwork. Read remains the default; a failed image leaves Scripture and audio available.
 - Read expands the existing Scripture window into the reading column. Journey contracts it beside the scene. These view changes preserve the selected verse and audio queue.
 - Scripture, Context and Codex reuse the same window. Selecting a hotspot shows its dedicated illustration or place note in Context; Back to Scripture or Follow passage resumes the current position.
 - Read reference deliberately selects its cited verse and stops narration. Crossing a chapter or book remounts the canonical reader at that exact verse.
@@ -20,7 +20,7 @@ Genesis 2–4 story stages follow 2:8, 2:10–14 (river), 3:23, 3:24, and 4:16. 
 
 Additional illustrated story coverage is documented in [Illustrated Journey scenes](illustrated-journeys.md): Genesis 7–9:17, Exodus 13:17–17:16, Ruth 1–2, Luke 2, Mark 4–5, Joshua 3–4, 1 Samuel 17, Daniel 6, Jonah 1–4, Matthew 14, Luke 24, John 4, and Acts 27–28. Ranges are explicit and recurring places reactivate their existing hotspot.
 
-Luke 2 now uses its illustrated story world. Geographic camera-follow coverage remains Acts 16–17 and Revelation 1:9, using existing curated ranges and chapter journey stops. A named place is not automatically a setting. No all-book or all-world fallback is shown. The rest of Scripture remains available with an honest no-journey state.
+Luke 2 uses its illustrated story world. Geographic camera-follow coverage remains Acts 16–17 and Revelation 1:9, using existing curated ranges and chapter journey stops. A named place is not automatically a setting. Outside the precise scenes and curated geographic ranges, a book-context catalog supplies 271 reading stages across all 66 books and all 1,189 chapters. The thirteen contextual landscapes are labeled as broad narrative, literary, prophetic, letter, or vision context. Their markers denote reading stages rather than exact locations; no travel route is invented for poetry or letters. This provides complete chapter-context coverage, not a claim to illustrate every verse literally.
 
 Illustrated studies retain Noah’s Ark (Genesis 6–9), the Tabernacle (Exodus 25–31 and 35–40), and the Sower (Matthew 13). These are chapter-context aids, not a claim that every verse depicts the selected object. Explanations and reconstruction captions are editorial material. Scripture is still the embedded KJV text.
 
