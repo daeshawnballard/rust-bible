@@ -1,0 +1,22 @@
+{
+  "id": "sinai-wilderness",
+  "prompt": "Use case: historical-scene. Production illustration for a full-screen illustrated Bible Journey reader. One coherent expansive landscape, richly detailed museum-diorama realism with miniature craft texture, elevated three-quarter viewpoint, warm sunlight, restrained cinematic atmosphere, earthy stone and olive greens, natural materials. 1536x1024 landscape. Fill the entire frame edge to edge with scenery, not a floating model or black margins. Leave the rightmost quarter visually calm for a real interface window; primary points of interest on left and center. No typography, no labels, no UI, no numbers, no marker dots, no painted paths or route arrows, no visible modern buildings, no watermarks, no portraits or divine figure. Artistic contextual setting, never a map or proof of exact architecture. Sinai wilderness encampment: LEFT irregular beige woven tents among rocky sand, CENTER footpath curving past sparse acacia and small stony water basin, monumental rugged desert mountain background. Ancient tent textures, quiet gold sunrise, no claim of exact Sinai coordinates, no dramatic glowing divine cloud, no diagram of the Tabernacle.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-8beb4847-b56f-43f7-810f-74f828bf7197",
+  "source": "assets/imagegen/source/journey/sinai-wilderness.png",
+  "final": "web/art/journey/sinai-wilderness.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "All-book Journey contextual landscape; chapter-section reading markers are interface layout, not geographic coordinates",
+  "processing": [
+    "Full-frame WebP quality90; no crop or resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "f359081f6f96d88cc33f3ea811644ea1a05af561f4cda29fd8ac66557c48cb81",
+  "final_sha256": "6686e0b301dc6c3b6e75aed98231ddd0346dd46af1e469d0eb7ca8b8442eb952"
+}
