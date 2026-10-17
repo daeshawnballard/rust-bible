@@ -40,6 +40,8 @@ The 66 cover paintings were generated individually with built-in ImageGen from t
 
 The Passage reader starts from the selected verse and continues into later chapters. Today’s Listen reads only its selected daily passage.
 
+The verse being narrated receives a gold highlight in Read, Journey, and Today. It advances when the next verse actually starts playing, stays on that verse while paused, and clears when playback stops or finishes. Turning off **Follow the spoken verse** disables automatic scrolling while keeping the audio highlight.
+
 One bottom audio dock follows the active narration across SPA navigation among Today, Library, and Codex. It names the passage being narrated and has **Return to passage**. Choosing **Listen** for another reference explicitly changes the narration target; a **Read** source link in Context or Codex stops it and opens that reference. Reloading does not autoplay. Kokoro speech is generated locally; its waveform, elapsed time, and seek control describe the generated audio chunk. Device voices do not provide audio timing, so those controls are unavailable for them. Pause/resume, speed, voice, volume, and Follow reading are available in playback controls.
 
 The first Kokoro listen downloads about 100 MB of public model files. Speech is generated on the device from KJV text; no paid narration API is used. The available voice catalog does not identify speakers by race, so voices are not labeled Black. All narration is synthetic.

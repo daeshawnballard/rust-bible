@@ -247,6 +247,7 @@ function setStatus(runtime, message) {
 
 function updateDock(runtime) {
   if (!runtime.dock) return;
+  syncSpeakingHighlight(runtime);
   const activeSource = Boolean(runtime.source && ACTIVE_STATES.has(runtime.state));
   const retainedSource = Boolean(runtime.source && ['error', 'finished'].includes(runtime.state)
     && (!runtime.previewConfig || runtime.previewConfig.key === runtime.source.key));
@@ -340,19 +341,37 @@ function isAtCurrentReader(runtime) {
 
 function findVisibleVerse(record) {
   if (!record) return null;
-  return [...document.querySelectorAll('[data-reader-route] .scripture .v')].find(node => {
+  return [...document.querySelectorAll('.scripture .v')].find(node => {
     const position = positionForVerse(node);
-    return position && position.bookIndex === record.bookIndex
+    if (position) return position.bookIndex === record.bookIndex
       && position.chapter === record.chapter && position.verse === record.verse;
+    const reference = parseReference(node.dataset.reference);
+    return reference?.book.toLowerCase() === record.book.toLowerCase()
+      && reference.chapter === record.chapter && Number(node.dataset.verse) === record.verse;
   }) || null;
 }
 
+function syncSpeakingHighlight(runtime) {
+  const node = runtime.source && ['playing', 'paused'].includes(runtime.state)
+    ? findVisibleVerse(runtime.position) : null;
+  document.querySelectorAll('.is-speaking, [data-narration-state]').forEach(active => {
+    if (active === node) return;
+    active.classList.remove('is-speaking');
+    delete active.dataset.narrationState;
+  });
+  if (node) {
+    node.classList.add('is-speaking');
+    node.dataset.narrationState = runtime.state;
+  }
+  return node;
+}
+
 function followVerse(runtime, record) {
-  if (!runtime.follow || !isAtCurrentReader(runtime)) return;
-  const node = findVisibleVerse(record);
-  if (!node) return;
-  document.querySelectorAll('.is-speaking').forEach(active => active.classList.remove('is-speaking'));
-  node.classList.add('is-speaking');
+  const node = syncSpeakingHighlight(runtime);
+  if (!node || !runtime.follow) return;
+  const atSource = isAtCurrentReader(runtime) || (runtime.source?.kind === 'range'
+    && routeURL().pathname === routeURL(runtime.source.returnHref).pathname);
+  if (!atSource) return;
   const bounds = node.getBoundingClientRect();
   const toolbar = document.querySelector('.reader-toolbar')?.getBoundingClientRect();
   const pane=document.body.classList.contains('has-scene') ? node.closest('.reader-content') : null;
@@ -476,7 +495,6 @@ function stopPlayback(runtime) {
   runtime.samples = null;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
-  document.querySelectorAll('.is-speaking').forEach(node => node.classList.remove('is-speaking'));
   updateDock(runtime);
 }
 

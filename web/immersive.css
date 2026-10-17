@@ -61,7 +61,10 @@ body.has-reader main.wrap { width:100%; max-width:none; margin:0; padding:0; }
 .reader-scripture .v { display:flex; gap:18px; padding:9px 12px; margin:0 0 22px; border-radius:5px; scroll-margin:70px 0 130px; }
 .reader-scripture .v sup { flex:0 0 18px; font-size:.6em; line-height:2.5; color:var(--gold); }
 .reader-scripture .v .verse-text { flex:1; min-width:0; }
-.reader-scripture .v.is-context-current,.reader-scripture .v.is-speaking { background:#d6bd7b14; box-shadow:inset 3px 0 var(--gold); }
+.reader-scripture .v.is-context-current { background:#d6bd7b14; box-shadow:inset 3px 0 var(--gold); }
+.reader-scripture .v.is-speaking,.today-scripture .v.is-speaking { background:#e4c48238; color:#fff2cd; box-shadow:inset 4px 0 #f0ce83; }
+.reader-scripture .v.is-speaking sup,.today-scripture .v.is-speaking sup { color:#ffe1a0; }
+.reader-scripture .v.is-speaking[data-narration-state=paused],.today-scripture .v.is-speaking[data-narration-state=paused] { background:#e4c48228; }
 .reader-pagination { margin-top:30px; }
 .reader-context { background:none; position:static; top:auto!important; border:0; border-radius:0; padding:0; }
 .reader-context .reader-context-heading[hidden], [hidden] { display:none!important; }
