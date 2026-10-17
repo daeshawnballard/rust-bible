@@ -22,6 +22,8 @@ Full-view side-by-side comparisons were composed and inspected for all four targ
 
 - P1 playback correction from public version 41: Play used the initial idle preview after an explicit source selection. It now resolves the visible reader at click time. Local source selection to Genesis 2:10 produced the canonical v10 return link and the queue advanced through that chapter. Fresh release acceptance remains separate.
 
+- P1 uncovered-range transition: live narration from Mark 5:43 reached Mark 6 but retained an empty Journey canvas. Empty context now expands into Read automatically, preserves the verse/queue, and hides the unavailable Journey action. Local direct Mark 6 Journey entry renders the full reading column. Keyboard focus also recenters object buttons as well as place links.
+
 ## Five fidelity surfaces
 
 - Typography: bundled Cormorant Garamond display and EB Garamond Scripture; serif hierarchy, readable selected verses, compact sans-serif operational status. Exact generated-image glyph shapes are not treated as a font file. No visible clipped titles on inspected widths.

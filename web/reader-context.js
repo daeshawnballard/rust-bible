@@ -69,7 +69,8 @@ export function initReaderContext(root=document) {
     tabs.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.windowTab===tab));if(b.dataset.windowTab==='context')b.hidden=mode==='passage';});
     modes.querySelectorAll('[data-reader-mode]').forEach(b=>{
       const target=b.dataset.readerMode;
-      b.hidden=target==='passage'||target==='journey'&&mode!=='passage'||target==='illustration';
+      const hasContext=value&&(value.journey_available||value.relevant_scene||value.geographic_available||value.kind==='geography');
+      b.hidden=target==='passage'||target==='journey'&&(mode!=='passage'||!hasContext)||target==='illustration';
       if(target==='journey')b.textContent='Journey';
     });
     expand.hidden=mode==='passage';
@@ -123,7 +124,7 @@ export function initReaderContext(root=document) {
   on(canvas,'pointerdown',e=>{if(e.target.closest('a,button'))return;dragging={x:e.clientX,pan};canvas.setPointerCapture(e.pointerId);});
   on(canvas,'pointermove',e=>{if(!dragging)return;manualPan=true;pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,dragging.pan+e.clientX-dragging.x));world.style.left=pan+'px';});
   on(world,'focusin',e=>{
-    const pin=e.target.closest('a');if(!pin||!worldWidth)return;
+    const pin=e.target.closest('a,button');if(!pin||!worldWidth)return;
     const r=pin.getBoundingClientRect(),right=innerWidth>=900?frame.getBoundingClientRect().left-20:canvas.clientWidth-12;
     if(r.left<12||r.right>right){manualPan=true;pan+=right*.5-(r.left+r.width*.5);pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,pan));world.style.left=pan+'px';}
   });
@@ -153,7 +154,10 @@ export function initReaderContext(root=document) {
       journeyButton.hidden=mode!=='passage'||!available;
       if(mode==='passage')return;
       scene=result.scene||scene;
-      if(result.kind==='empty'){caption.textContent='No illustrated setting assigned to this passage';}
+      if(result.kind==='empty'){
+        stopMap();world.replaceChildren();lastArt='';mode='passage';inspected=null;
+        if(tab==='context')tab='scripture';show();selectVerse(position,true);return;
+      }
       const template=document.createElement('template');template.innerHTML=result.html||'';
       const figure=template.content.querySelector('.story-journey-art,.reader-illustration-scene');
       const sourceCaption=template.content.querySelector('.story-journey-caption');

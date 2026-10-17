@@ -7,6 +7,7 @@ Hotspots inspect context while the saved reading location remains unchanged. An 
 ## Interaction
 
 - Library covers enter the chapter reader directly. Book and chapter selection stays in the passage-title menu, alongside text settings.
+- Passages without an assigned illustration expand into Read automatically; narration continues unchanged.
 - Read expands the existing Scripture window into the reading column. Journey contracts it beside the scene. These view changes preserve the selected verse and audio queue.
 - Scripture, Context and Codex reuse the same window. Selecting a hotspot shows its dedicated illustration or place note in Context; Back to Scripture or Follow passage resumes the current position.
 - Read reference deliberately selects its cited verse and stops narration. Crossing a chapter or book remounts the canonical reader at that exact verse.
