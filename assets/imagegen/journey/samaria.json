@@ -1,0 +1,24 @@
+{
+  "id": "samaria",
+  "prompt": "undefinedJohn4. A detailed continuous Samarian hill-country landscape. LEFT31%x/62%y an ancient stone well with small clay waterpot nearby at crossroads, rope, no roof pulley invented, one simple low well opening. CENTER61%x/36%y modest ancient Sychar hillside town of warm flat-roof stone houses, distant mountain. RIGHT84%x/61%y a road climbs toward another small Galilean settlement for the later Cana episode, distinct visual stage, not geographic scale. Olive groves and pale green grain fields in sunlight, ochre hills, natural blue sky. No humanorholyfigure, no water changed wine bottle imagery.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-adcd3fab-6e37-46e9-bbe5-7fcf2eb67b3b",
+  "source": "assets/imagegen/source/journey/samaria.png",
+  "final": "web/art/journey/samaria.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "be6f5acc6c4b224713a1038656d8317fab21cb0e062de8f110447edf64b9afb3",
+  "final_sha256": "af797a0af31064ecb7a13965817d47287d1ddee174377c5a5d696d1cce26dd2c",
+  "provenance": "assets/imagegen/journey/samaria.json"
+}

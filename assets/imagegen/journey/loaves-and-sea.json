@@ -1,0 +1,24 @@
+{
+  "id": "loaves-and-sea",
+  "prompt": "undefinedMatthew14:13\u201336. A continuous Sea of Galilee narrative landscape. LEFT20%x/61%y a grassy remote shore with five small loaves and two fish resting on cloth in foreground (notoversized) and empty woven baskets. CENTER49%x/48%y a small wooden first-century fishing boat on lake with wind-ruffled waves, no humans. RIGHT77%x/38%y distant quiet Gennesaret shore with modest stone cottages, reeds and olive terraces. Freshwater lake, gentle ochre hills. Golden hour, soft dark clouds over centerwater. No depiction of John Baptist's death.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-756f5959-7410-4b5c-83a1-f8f6d50d6c01",
+  "source": "assets/imagegen/source/journey/loaves-and-sea.png",
+  "final": "web/art/journey/loaves-and-sea.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1672,
+    "height": 941
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "26bcaea9bca02947db3f95d8af76305bd746b5c220b6d39650bd78fa5ea1ecfa",
+  "final_sha256": "2d4e7aea300bf0a45777e23d90ae1c4e8c91ff17bd9619a1f22c386cd31b419d",
+  "provenance": "assets/imagegen/journey/loaves-and-sea.json"
+}

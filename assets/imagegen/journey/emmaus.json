@@ -1,0 +1,24 @@
+{
+  "id": "emmaus",
+  "prompt": "undefinedLuke24. One artistic compressed limestone Judean landscape. LEFT18%x/54%y empty rock-cut tomb in low garden, rounded entrance stone moved beside doorway, nopeopleorlightfigures. CENTER42%x/62%y an unmarked winding road through olive groves toward a modest stone village. At65%x/45%y a small open-sided house interior, table set with plain bread. RIGHT83%x/30%y distant ancient Jerusalem walled city with low stone temple rooftops, no modern domes or churches. Warm evening light, quiet, reverent, no crucifix or bodies.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-ad2e0959-1cc6-4430-a4ac-2523904fcb74",
+  "source": "assets/imagegen/source/journey/emmaus.png",
+  "final": "web/art/journey/emmaus.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "Passage-following illustrated Journey landscape",
+  "notes": "Artistic compressed storyboard; labels, routes, references, hotspots and audio are real interface elements. No geographic scale or architectural accuracy is asserted.",
+  "processing": [
+    "Full frame WebP encoding quality90; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1672,
+    "height": 941
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "caa9dc83d312f50f21d10d2d058a77799173d8d6226d62e025fe0cf1fcf07015",
+  "final_sha256": "23c7bedb2c29fdfb9d6b515c4ec44ec57a3c56430c588d0543abcc439bfeef32",
+  "provenance": "assets/imagegen/journey/emmaus.json"
+}
