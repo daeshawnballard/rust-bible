@@ -130,7 +130,7 @@ pub(super) fn render(book: usize, chapter: usize, verse: usize, client: bool) ->
         } else {
             10.0 + index as f64 * 54.0 / (count - 1) as f64
         };
-        let y = if index % 2 == 0 { 57 } else { 72 };
+        let y = if index % 2 == 0 { 57 } else { 76 };
         let active = if section.id == current.id {
             " aria-current=\"step\""
         } else {
