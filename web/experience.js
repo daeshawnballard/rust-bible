@@ -370,7 +370,7 @@ function followVerse(runtime, record) {
   const node = syncSpeakingHighlight(runtime);
   if (!node || !runtime.follow) return;
   const atSource = isAtCurrentReader(runtime) || (runtime.source?.kind === 'range'
-    && routeURL().pathname === routeURL(runtime.source.returnHref).pathname);
+    && Boolean(node.closest('[data-today]')));
   if (!atSource) return;
   const bounds = node.getBoundingClientRect();
   const toolbar = document.querySelector('.reader-toolbar')?.getBoundingClientRect();
