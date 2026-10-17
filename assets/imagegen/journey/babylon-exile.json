@@ -1,0 +1,22 @@
+{
+  "id": "babylon-exile",
+  "prompt": "Use case: historical-scene. Production illustration for a full-screen illustrated Bible Journey reader. One coherent expansive landscape, richly detailed museum-diorama realism with miniature craft texture, elevated three-quarter viewpoint, warm sunlight, restrained cinematic atmosphere, earthy stone and olive greens, natural materials. 1536x1024 landscape. Fill the entire frame edge to edge with scenery, not a floating model or black margins. Leave the rightmost quarter visually calm for a real interface window; primary points of interest on left and center. No typography, no labels, no UI, no numbers, no marker dots, no painted paths or route arrows, no visible modern buildings, no watermarks, no portraits or divine figure. Artistic contextual setting, never a map or proof of exact architecture. An imagined ancient Mesopotamian riverbank at twilight. LEFT riverside willow and reeds beside a quiet camp with hung unused harp, CENTER broad river and distant mud-brick walled city with blue-glazed gate details, quiet desert horizon. Evokes exile setting, no modern city, no fantasy tower filling frame, no humans or divine beings.",
+  "generator": "built-in ImageGen",
+  "generation_id": "exec-b3874428-11eb-47c3-928c-c88d708af6b6",
+  "source": "assets/imagegen/source/journey/babylon-exile.png",
+  "final": "web/art/journey/babylon-exile.webp",
+  "reference_image_sent": false,
+  "style_authority": "web/art/journey/genesis-immersive-v1.webp",
+  "intended_use": "All-book Journey contextual landscape; chapter-section reading markers are interface layout, not geographic coordinates",
+  "processing": [
+    "Full-frame WebP quality90; no crop or resize"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "5f7b15fa387a3b67f85dcddd7e29e05c61b2df6cf4bc251200c9a577de3500ec",
+  "final_sha256": "c7ad198a213cd077df77cedfcc69a214b7692b977cd727b9c6f46a0d60dafec9"
+}
