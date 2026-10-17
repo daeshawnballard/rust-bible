@@ -613,7 +613,7 @@ fn render_html(
     let stage = active_id.unwrap_or("intro");
     let book_slug = slug(scene.book);
     let mut html = format!(
-        r#"<section class="story-journey" data-story-scene="{}" data-story-stage="{}"><p class="reader-context-kind">Illustrated story journey · {} <span>· schematic storyboard</span></p><figure class="story-journey-art"><img src="/art/journey/{}.webp" width="1536" height="1024" alt="{}"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="{}"></path></svg>"#,
+        r#"<section class="story-journey" data-story-scene="{}" data-story-stage="{}"><p class="reader-context-kind">Illustrated Journey · {}</p><figure class="story-journey-art"><img src="/art/journey/{}.webp" width="1536" height="1024" alt="{}"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="{}"></path></svg>"#,
         esc(scene.id),
         esc(stage),
         esc(scene.coverage),
@@ -653,10 +653,27 @@ fn render_html(
             esc(stop.label)
         ));
     }
-    html.push_str("</figure><p class=\"story-journey-caption\">Schematic storyboard · story phases may be compressed · places, positions, and routes are unknown or approximate</p>");
+    html.push_str("</figure><p class=\"story-journey-caption\">Artistic storyboard · Times and places compressed</p>");
     html.push_str(&format!(
-        "<div class=\"reader-context-copy\"><h3>{}</h3><p class=\"reader-context-kind\">Editorial note</p><p>{}</p>{}</div>",
-        esc(current_title),
+        "<div class=\"story-journey-current\"><h3>{}</h3>",
+        esc(current_title)
+    ));
+    if let Some(stop) = active {
+        let source = Passage {
+            chapter: stop.anchor_chapter,
+            first: stop.anchor_verse,
+            last: stop.anchor_verse,
+        };
+        html.push_str(&read_link(
+            scene.book,
+            source,
+            client,
+            &format!("Read {} →", ref_label(scene.book, source)),
+        ));
+    }
+    html.push_str("</div><details class=\"story-journey-details\"><summary>Context &amp; journey stops</summary>");
+    html.push_str(&format!(
+        "<div class=\"reader-context-copy\"><p class=\"reader-context-kind\">Explanation</p><p>{}</p>{}</div>",
         esc(current_note),
         current_sources
     ));
@@ -695,7 +712,7 @@ fn render_html(
         };
         html.push_str(&format!("<span{current_class}>{link}</span>"));
     }
-    html.push_str("</nav></section>");
+    html.push_str("</nav></details></section>");
     json!({
         "kind": "story",
         "title": scene.title,

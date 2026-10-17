@@ -22,6 +22,7 @@ Ranges are explicit. A return to a previously visited setting reactivates its ex
 - Journey is marked when an illustrated scene exists for the chapter. Passage remains the default view.
 - Scrolling through Scripture or listening updates the active hotspot and its separate explanation. Playback remains in the same player.
 - Choosing a hotspot’s Read reference intentionally selects its source verse. This stops active narration; the next Listen starts at that selected source.
+- **Context & journey stops** expands the editorial note, source ranges, and all stop links. Keeping this closed leaves the artwork visible as reading or audio advances.
 - On smaller screens, the companion stacks in normal flow with the reading text. Its visible source links provide the same destinations as the image hotspots.
 - The original Genesis scene, curated terrain journeys, Noah’s Ark/Tabernacle/Sower object studies, Library covers, and local reading preferences remain available.
 
