@@ -1,184 +1,33 @@
-# Book material and mockup fidelity correction
-
-Source truth: `assets/imagegen/reference/library-approved.png` and `assets/imagegen/reference/book-page-approved.png`.
-Actual implementation: `docs/site-library.png` and `docs/site-book-page.png`, captured from the local Rust/WASM app at 1536 × 1024 CSS pixels, density 1. Both references are 1536 × 1024 pixels. State: default Library and Genesis overview, audio idle. Full-view and focused material comparisons are saved in `docs/binding-library-comparison.webp` and `docs/binding-book-comparison.webp`; both sides use equal scale.
-
-## Findings corrected
-
-- P1: the previous implementation substituted a flat CSS border/spine and generic glyph for the dimensional leather binding and gold filigree that defined the approved mockups. That earlier visual acceptance was incorrect. Both surfaces now use an individually generated, transparent production binding asset with rounded leather spine, raised gold bands, textured leather, physical highlights, and ornate corner tooling. Each painting and every title remain separate interface elements.
-- P2: the first generated binding had too much opaque leather around its picture opening. A measured, targeted ImageGen edit expanded the alpha window to the inner gold rule. Final center and exterior alpha are 0; the actual browser shows the paintings underneath the ornate cutout, without a rectangular mat.
-- P2: typography and header rhythm differed from the reference. Added locally hosted Cormorant Garamond, corrected the desktop header to 53px, aligned the Genesis book canvas to y=113px, refined cover titles, and added generated gold foil behind real buttons. The Library toolbar now sits above the visible desktop footer, matching the approved gallery hierarchy.
-- P2: fitting titles into the real front-cover area exposed overflow in several medium/long names at narrow widths. Separate medium/long title sizes corrected those cases. A final measured Revelation adjustment reduced the remaining 151px title to fit its 149px opening. All affected medium names were rechecked; broader final-candidate browser checks follow deployment.
-
-- P2: the first public run caught a wide short name (Numbers) in the large cover. Inspection also found an older scoped rule overriding its display font. Explicitly corrected the cover face and calibrated the longest word of all 66 names in the real loaded browser font. Rust now emits measured per-book advances and CSS caps their width to the insert. Fresh local checks of all 66 overviews at both 1536px and 320px passed (132 views, no clipping); this supersedes character-count-only fitting. Measurements and the font hash are in `assets/imagegen/binding-typography.json`.
-
-## Required fidelity surfaces
-
-- Fonts/typography: Cormorant Garamond is used on the book surfaces, with real small-cap titles, serif descriptions, metadata, controls, and numbers. Medium/long names scale to the framed area. Taglines retain a readable minimum size on mobile.
-- Spacing/layout: the approved gallery and two-column book-page structure are retained. Frame and painting use percentage coordinates so they stay aligned while resizing. The binding asset maintains its 3:4 aspect ratio. Mobile layouts stack the volume and controls; the chapter grid keeps its existing touch targets.
-- Color/material: charcoal, parchment, and antique gold remain the palette. Lighting and texture come from generated raster leather/gold assets, with restrained image lighting and ordinary UI shadows.
-- Image fidelity: the flat CSS spine, border, and text-glyph ornaments are replaced by actual artwork. The accepted binding is 1086 × 1448 with native alpha, exported to lossless WebP. Existing 66 paintings remain distinct. The gold texture is a separate generated material; no page mockup is used as the interface.
-- Copy/content: book names, chapter counts, links, and Scripture remain Rust-rendered. The first five cover taglines use the approved gallery's wording. Editorial descriptions remain separate from the KJV audio payload.
-
-## Comparison history and remaining differences
-
-The combined comparisons show the actual material correction and the subsequent layout/type fixes. The references and actual browser captures were inspected together, including a larger book crop and the first two Library covers.
-
-The existing individual paintings differ from the exact generated mockup scenes. The reusable binding also has a different fine tooling pattern and uses ornamented spine panels rather than an individual spine title. Those differences are visible in the comparison; this is not a pixel-identical reproduction. The physical binding, material texture, dimensional lighting, and ornate gold framing are implemented rather than deferred as minor polish.
-
-## Evidence boundaries
-
-Supporting checks: 20 Rust tests, native compilation, WASM packaging, and formatting. Local real browser checks covered all 66 cover/overview titles, 320/390/768px gallery bounds, representative Read flows, and all affected medium-title corrections. Hosted controls, asset identity, audio, and navigation are accepted separately on the final pushed candidate. Physical device and independent acoustic checks are outside this browser run.
+# Connected reader design QA
 
 final result: passed
 
+This is a browser-rendered **local visual comparison**, not public deployment acceptance. The source of truth is the four selected images in `assets/imagegen/reference/`: `immersive-journey-approved.png`, `reading-focus-approved.png` (corrected KJV wording), `library-polish-approved.png`, and `today-polish-approved.png`.
 
-## Library readability and restraint polish
+## Evidence and state
 
-Kept the dimensional binding, all 66 paintings, and approved gallery composition. Descriptions now use weight 500 with more line spacing; reading links use weight 600. Library-only CSS gently reduces the binding gold saturation and painting enhancement. The desktop floating tools bar is 64px tall at 1536px, down from 84px, with a softer border/shadow and smaller tool icon. Tablet padding is also reduced; mobile keeps its collapsible form and existing controls. Book overviews, reader, Tabernacle, and speech behavior are outside this presentation change.
+Implementation captures: `docs/screenshots/connected-reader/{journey,reader,library,today}-local.jpg`. Desktop CSS viewport 1536 × 1024; source images 1536 × 1024. Journey capture is 1536 × 1024; the other captures are 1521 × 1014 (same 3:2 aspect ratio, normalized to 1536 × 1024 in comparison composites). No phone frame. Captures use the same charcoal/gold theme, Genesis 2 selected verse 2 for the reading column, Genesis Journey, all-books Library and October 17 edition-2 Today (Exodus 25:23–26). Journey reference selects verse 10 while the comparison capture selects verse 2; this intentional content-state difference is not a layout mismatch. Audio is idle in captures; the reference's running waveform is a different state. The implementation renders a waveform from real generated PCM after Play, rather than decorative sample data.
 
-Fresh local browser layout checks cover all 66 card texts at 1536, 1024, 768, 390, and 320 CSS pixels. No horizontal overflow or clipped titles/descriptions were observed. The updated Library screenshot above is a real local browser capture. Hosted acceptance is recorded separately after publication; these local checks do not establish physical-device or acoustic qualification.
+Full-view side-by-side comparisons were composed and inspected for all four targets. Reading focus and Journey were also inspected at full viewport resolution for passage text, title, tabs, selected verse, scene pins and dock controls. Today and Library full-resolution views made the type and covers readable; no additional crop was needed. Comparison images are private review artifacts; only sanitized implementation screenshots are in this repository.
 
+## Comparison history
 
-## Selected Today and chapter reader — option 1
+- P2: Narrow header inherited a two-column grid and wrapped search/menu over the scene. Changed shared header to a single flex rail, retained 44px search/menu targets, and condensed the non-reader brand at 320px. Post-fix browser measurements: no horizontal overflow at 320 or 390px; both tools stay on the top rail.
+- P2: Mobile Scripture sheet left too little text visible, with detached text settings. Increased the sheet to 340px at an 844px height, matched scene clearance, and moved text settings into the book/chapter menu. Post-fix screenshot shows scene, scrolling Scripture and audio separately accessible.
+- P2: Today artwork had a framed letterbox and appeared too small/dim. Removed frame/shadow, preserved source artwork aspect ratio, softened its edge, increased desktop scale/brightness and clipped only page overflow. Revised Today capture shows the large detailed object; document scroll width equals client width.
+- P2: Library header introduced an unnecessary extra row. Restored Library-first heading, placed metadata/Codex link on one row, and tightened spacing before covers. Revised gallery capture retains five columns and the floating tools.
+- P2: SVG play/pause paths were both visible. Fixed hidden attributes and observed a single correct action icon.
 
-Authority: `assets/imagegen/reference/today-reader-approved.png`, the first displayed concept selected by the user. The paired board is 1983 × 793 pixels. Each panel was compared at 953 × 726 CSS pixels, density 1: Today crop (26,41)–(979,767), Reader crop (1006,41)–(1959,767). States: October 15, 2026 / Psalms 23:1–3 and Psalm 23 / idle playback. Current full browser captures are `docs/site-today.png` and `docs/site-reader.png` at 1536 × 1024. Equal-scale comparison revisions are retained in the private task evidence, rather than published as product assets.
+## Five fidelity surfaces
 
-Corrected P2 findings: inherited audio layout produced an oversized button; static and native CSS ordering differed; reader text width and controls were too wide at the reference viewport; button labels did not visibly reflect pause/resume. The final layout uses the same CSS order in both builds, scoped compact controls, real changing labels, and responsive reader width. Mobile selectors and scene hotspots have larger usable targets; the Scripture panel also offers a named part selector. Final public screenshot review caught a saved-reading row whose text squeezed between its actions on mobile. A two-row grid now gives the location the full text width and keeps Continue/Clear below it; fresh 320/390px checks show a readable two-line location and a 44px Clear target.
+- Typography: bundled Cormorant Garamond display and EB Garamond Scripture; serif hierarchy, readable selected verses, compact sans-serif operational status. Exact generated-image glyph shapes are not treated as a font file. No visible clipped titles on inspected widths.
+- Spacing/layout: full landscape, floating right window, central expanded reading column, persistent bottom dock; Library tools reserve audio clearance. Mobile becomes a scene plus inset sheet, not a compressed desktop panel.
+- Colors/tokens: charcoal #121313, warm ivory #eee6d4, muted gold #e4c482; active verse uses a gold rule and translucent wash. Focus and selected states retain contrast.
+- Imagery: dedicated full-frame generated Genesis landscape, existing individual book covers and object artwork. All labels, Scripture, controls and links are live interface elements. Original source assets and generation provenance remain in the repo.
+- Copy/content: embedded KJV is unchanged, including corrected Genesis 2:2. Context and Codex are labeled editorial material, with explicit source links and uncertainty for illustrated locations. No claims that illustrations are geographic evidence or that Codex coverage is exhaustive.
 
-Required fidelity surfaces:
+## Interaction and runtime boundary
 
-- Typography: locally hosted Cormorant serif headings/Scripture, consistent small date labels and shared header. Reader type and column width track the selected quiet composition.
-- Spacing: Today retains text left, painting right, paired reading controls, and compact supporting rows. Reader preserves breadcrumbs, centered text, compact selectors/player, and previous/next navigation. Mobile stacks these elements without horizontal overflow.
-- Color: shared charcoal, parchment, muted gold rules and controls; existing book bindings remain unchanged.
-- Imagery: a dedicated detailed harp, olive tree, and valley painting was generated from the selected authority and existing Psalms art. It is a separate production asset, not the page mockup. Source, prompts, and export provenance are saved in the repository.
-- Copy and controls: actual KJV verses, accurate chapter counts, working navigation, and contextual speech are real interface elements. Illustrations, book descriptions, and Tabernacle explanations remain separate from Scripture and speech payloads.
+Local real-browser checks covered Read/Journey selection preserving verse, hotspot inspection versus explicit Read, inline Codex, mobile resizing, and generated Kokoro audio continuing into the next chapter. Source checks: 63 Rust tests plus progress and JavaScript syntax checks. These support implementation; they do not substitute for fresh public-site end-to-end acceptance. Public release results are recorded separately by exact source/deployment identity.
 
-Remaining differences: the new painting differs in its exact details from the generated concept. Today adds an honest rotation disclosure, a stable dated link, and Clear for saved reading; these can place the footer below a short reference-height viewport. The named Tabernacle row uses the shared book icon. Fine texture and letter rendering differ from ImageGen. No pixel-identical claim is made. Local 320/390px checks and all 66 cover-to-last-chapter journeys passed; final hosted acceptance is a separate release-bound run. Physical phones and independent acoustic measurement are not established by these captures.
-
-final result: passed
-
-## Reading-page footer placement correction
-
-A fresh hosted John 3:16 passage at 1561 × 1200 placed the footer bottom at 487.53px, leaving 712.47px of viewport below it. Today also relied on a fixed viewport subtraction. Today and reader now use a column layout with a dynamic viewport minimum: short pages place the full-width footer at the bottom, and long chapters expand naturally. The Library and Tabernacle layouts are outside this scoped rule.
-
-Fresh local Rust/WASM browser checks passed for the focused passage, John 3 (36 verses), Today, and Psalm 117 (2 verses), including 320px and 390px mobile widths. Footer bounds reach the document/viewport bottom without overlapping the reading area or horizontal overflow. Hosted verification is recorded separately for the final published source; these checks do not establish physical-phone behavior.
-
-## Short readings continue into Scripture
-
-Moving the footer left unused space above it; the user's correction requires more passage content. The Rust reader now continues short chapters and focused verse ranges into sequential KJV text with explicit chapter headings, separate verse anchors, and working chapter links. Psalm 23's six verses are followed immediately by Psalm 24's ten verses, visible within the same 1536 × 1024 viewport. Longer chapters keep their existing layout. The contextual audio selection remains the originally selected chapter/range, excluding the added Scripture sections.
-
-Fresh local browser journeys cover Psalm 23 → Open Psalm 24, John 3:16 → following verses 17–36, Malachi 4 → Matthew 1 across the book boundary, and 320px mobile bounds. No duplicate verse IDs or horizontal overflow observed. The reader screenshot is an actual local Rust/WASM capture. Supporting Rust tests check all 1,189 chapters for unique anchors and bounded continuation, focused range boundaries, canonical book transitions, and the end of Revelation. Hosted acceptance is recorded separately on the final source.
-
-
-## Continuous reader audio
-
-Listen from here follows the Rust-rendered Scripture stream, including the following chapters already shown. At the end of the displayed verses, a validated Rust JSON route supplies the next chapter fragments; the initial render remains bounded. Chapter/verse status and the highlighted verse advance together. Follow reading scrolls only while enabled; active playback controls remain sticky. Today, book overview, and Tabernacle retain their existing audio scopes, and explanations stay outside the speech selection.
-
-Supporting checks: 27 Rust tests, JavaScript syntax, WASM build, and diff checks passed. Local actual device speech progressed from Psalm 117 into Psalm 118 with the highlighted verse in view, and Pause, Follow reading, and Stop responded. Final hosted acceptance is recorded separately after deployment; physical phone hardware and independent acoustic quality are not claimed.
-
-## Exact verse continuation
-
-Reading and listening now share one local browser bookmark containing the canonical book, chapter, and verse. Settled user scrolling updates the reading position; automatic scrolling/focus and active or paused speech cannot replace the spoken verse. Today Continue reading and chapter reloads restore the verse without auto-play. Continuous playback records the actual later chapter, and book-overview Listen resumes its saved verse. Clear removes the bookmark; storage failure is disclosed under Playback options. No account or cross-device sync is introduced.
-
-Supporting checks: 27 Rust tests, progress validation/migration tests, JavaScript syntax, and the production WASM build passed. Local browser journeys exercised actual scrolling, Today Continue, real device speech, a Psalm 23 to 24 transition, reload without auto-play, book-overview resume, and Clear followed by reload. An initial local navigation-focus overwrite was reproduced and corrected before publication. Final hosted flows are checked separately against the published asset identities; local checks do not establish phone-hardware or cross-browser acceptance.
-
-## Illustrated learning expansion and finish pass
-
-Explore now has a three-scene gallery. The preserved Tabernacle has eight hotspots and dedicated object images; Noah’s Ark and the Sower’s Field add four each, with two overview paintings and eight individually generated detail illustrations. All sixteen stops have passage views, separate editorial explanations, review questions, and previous/next navigation. On narrow screens a selected hotspot brings the shared detail panel into view. Related links connect Genesis 6–8, Exodus 25–27, and Matthew 13 readers with their studies.
-
-Today defaults to a curated 42-day Edition 2, with varied existing and new artwork. Edition 1’s original 14-day date mapping and share links remain available. About/help explains the text, images, device speech, and local progress. The footer links there and to the open-source repository. Sharing metadata includes a full-frame JPEG derivative of the existing Tabernacle painting; third-party preview-cache refresh is not implied.
-
-Supporting checks: 33 Rust tests, progress validation tests, JavaScript syntax, the production WASM build, and diff checks passed. Local actual browser checks exercised scene selection, a dedicated close-up, source-bound questions, Scripture return, narrow-screen part selection, Today Edition 2, chapter-related study links, keyboard skip-to-content, keyboard hotspot selection, and About FAQs. The new artwork and unchanged source PNGs are recorded in the image manifest and learning provenance. Current public acceptance is performed separately after publication through Sites and the actual hosted UI; neither source tests nor a deployment receipt replaces that execution.
-
-## Explore gallery consistency
-
-The existing Today, Library and chapter reader are the visual authority for the Explore landing page. The gallery now uses Bible Display for descriptions, the reader's compact heading scale, thin gold artwork frames, unboxed copy and Library-style text links. Its instructional note is compact; the original scenes, illustrations, routes, Scripture panels and audio behavior are retained. Header styling and other page designs are unchanged.
-
-Supporting checks: the three existing learning tests, formatting and the WASM build pass. Local browser checks at 1280px and 320px confirm three gallery links, serif copy, a full-width footer, no horizontal overflow, and a keyboard journey through a study hotspot and back to Scripture. These local checks are separate from hosted acceptance after publication.
-
-
-## Selected scene-led Explore browser
-
-Source visual truth: `assets/imagegen/reference/explore-scene-led-approved.png`, the first displayed concept selected on October 15, 2026. Implementation: `docs/site-explore.png`, a real local Rust/WASM browser capture. Both are 1536 × 1024 pixels at a 1536 × 1024 CSS viewport, density 1; no scaling was needed. State: Explore, Tabernacle selected, idle audio. Equal-scale full-view comparison: `docs/explore-scene-led-comparison.webp`; focused heading/index comparison: `docs/explore-scene-led-index-comparison.webp`. Both sides were inspected together.
-
-Corrected findings and comparison history:
-
-- P2, artwork integration: the first render isolated the image blending and exposed a hard rectangle. Removing that isolation allows the existing raster to blend into the shared charcoal. The final comparison was captured after the fix.
-- P2, rhythm and controls: the initial index began 10px too low, the study action was narrower than the reference, and thumbnails showed too much surrounding ground. Reduced the heading gap, matched the desktop action width, and gave the three existing paintings deliberate thumbnail crops. Refined artwork contrast and color without replacing the source paintings.
-- P2, intermediate width: an actual 901px render measured a 318px heading in a 286px column. A bounded responsive font size now measures 286px for both content and column at that width. The complete page fits at 320, 390, 768, 901, 1024 and 1536px.
-- Capture limitation, not a product result: raw CDP viewport captures on the hidden Mac browser surface briefly returned a cropped native-density view. The final screenshots use the supported full-page browser capture and verified 1536 × 1024 dimensions. An initial Back-to-Scripture test used the decorative arrow in its accessible name; the corrected actual accessible name reached the passage. The first locator failure is retained in private test evidence.
-
-Required fidelity surfaces:
-
-- Typography: existing locally hosted Bible Display/Cormorant serif, compact spaced eyebrow, warm gold heading, serif source labels and descriptions. The existing header is preserved.
-- Spacing/layout: compact three-scene index at left, one large scene at right, editorial title and Enter study below it, small separated source note, and the reference footer position. At narrow widths all three choices remain visible above the full-width scene and action.
-- Colors/tokens: shared charcoal, ivory and aged gold; restrained rules and active-selection indicator, with no generic gallery cards.
-- Images/icons: the three original scene paintings remain separate production assets. Their camera, object geometry and lighting differ from the ImageGen concept's reinterpretation; retaining the established study illustrations is intentional. Thumbnail crops and a modest CSS color treatment bring them closer while preserving the original files. Existing licensed Phosphor book and new Phosphor arrow icons are used. The page mockup is never a page background.
-- Copy/content: heading, instructions, scene labels, source references, counts and action are live Rust-rendered content. Selection changes the URL, artwork, introduction and study destination. KJV Scripture, explanatory notes, dedicated details and device audio remain in the existing study routes.
-
-Local browser outcomes: Ark selection/reload retains its matching introduction and link; keyboard Sower selection enters the correct default Scripture panel; a good-ground hotspot shows its dedicated illustration and Back to Scripture returns the exact cited KJV. Responsive checks cover six widths, a 56px narrow action, visible choices and no horizontal page overflow. Hosted release verification follows publication separately. Supporting checks: all 33 Rust tests before final CSS refinements, the focused three learning tests after hub markup changes, formatting, production WASM build and diff checks.
-
-No actionable P0/P1/P2 findings remain in the compared default state. Intentional differences: preserved production artwork instead of the generated preview's reinterpreted scene; narrow layouts are responsive adaptations because the selected reference is desktop only. Exhaustive all-66-book/all-16-hotspot flows and physical-device qualification are outside this scoped layout run.
-
-final result: passed
-
-
-## Passage-following geographic Explore map — 2026-10-16
-
-Authority: `assets/imagegen/reference/reading-map-approved.png`, selected with “yeah this is cool” and “proceed”. Actual local Rust/WASM screenshots: `docs/site-map.png` (1536 × 1024 CSS pixels, Acts 16:12, idle audio) and `docs/site-map-mobile.png` (390 × 844). The original and desktop screenshot were inspected together at equal scale; `docs/map-design-comparison.webp` retains the comparison.
-
-Corrected findings:
-
-- P1: inherited reader grid squeezed verse text into its number column. Scoped block layout and absolute verse numbers fix it.
-- P1: the initial 3D control did not enable elevation. Initialization now sets the real DEM and tilted camera. Browser requests returned fresh NASA and DEM responses.
-- P2: narrow grid children expanded past the viewport. A minimum-zero column, bounded selectors and stacked panel fix 320/390px clipping. Map tools have 44px targets.
-- P2: resizing/font reflow could change the saved verse and retain a desktop camera offset. Reflow preserves the selected verse and recenters only while following. Acts 16:12 remains selected through desktop/390/320 changes.
-- P2: overlapping labels crowded the map. Other-place labels now appear on hover/focus; journey labels remain visible. Anchors put marker dots at their coordinates and Neapolis has a separate label offset.
-- Capture limitation: hidden in-app-browser WebGL screenshots after resizing sometimes omitted the canvas despite valid loaded state. Final screenshots were recaptured with the browser visually presented and actual terrain visible. Blank captures are not passing proof.
-
-Required fidelity surfaces: the existing locally hosted Bible Display serif, ivory/gold and charcoal remain. Terrain fills the workspace beside a floating, independently scrolling Scripture panel, route strip, tools and bottom audio. Titles, Scripture, controls, links and selectors are real UI. Geographic explanations and source confidence remain separate from Scripture and speech. Existing branding is retained.
-
-Intentional differences: real modern NASA regional imagery and sourced coordinates replace generated geography, so coastline, point spacing, color and terrain detail differ. Approximately 500m imagery is not street-level detail. Dashed connections are schematic. Device speech uses real verse progress instead of an invented waveform/time. Functional selectors, search, attribution and footer remain. Camera-follow settings are curated only for Acts 16–17, Luke 2 and Revelation 1:9; elsewhere the UI honestly shows named places/book context or no location. README, About and atlas notes disclose these limits.
-
-Direct local browser outcomes: uncached NASA/DEM HTTP 200 responses; Philippi focus; sourced pin details and Scripture return; actual device speech, pause/resume, Acts 16:40 → Acts 17 advancement with visible verse and changed map setting; navigation cancels speech and returns to its verse; settled manual scrolling updates progress; reload/contextual reader links retain it; pan disables follow and Return restores it; 2D/3D and map controls; 66 book choices, Psalm 23 book context and Philemon no-location states; keyboard tabs; 320/390/768 layouts. Controlled tile-provider blocking produced a degraded message with readable Scripture; removing it and clicking Retry restored actual terrain. This negative is controlled failure evidence, not a real provider outage. Library 66-book display, neimai → Nehemiah, Today continuation, and each retained study with a representative dedicated image were exercised. Initial QA selector errors included decorative arrows or abbreviated headings; corrected actual accessible names reached the expected screens. First attempts remain in the private execution record.
-
-Supporting checks: all 36 Rust tests, native binary compilation, JavaScript syntax, WASM production build and whitespace checks. Hosted acceptance is separate after publication. Exhaustive geographic review/all 16 hotspot journeys, physical phones, cross-browser speech and unavailable-WebGL hardware are NOT RUN.
-
-No actionable P0/P1/P2 layout findings remain in compared states. Generated scenic detail and broader curated setting coverage remain explicit differences.
-
-final result: passed
-
-
-## October 16: shared visual finish
-
-The approved Library, book, Today/reader, map, and illustrated-scene compositions remain the authority. This pass refines material edges, gold rules, serif hierarchy, chapter/button states, playback menus, and study tabs. Search results now use reference headings and exact highlighted Scripture. Scene pages share the same header placement as Today and Library. No generated artwork, canonical text, geography, narration engine, or progress logic changed.
-
-Actual local browser execution covered Library filters/sorting/size/reset, typo lookup `neimai` → Nehemiah, search → John 3:16 with the correct highlighted verse, book → chapter, help FAQ disclosure, the Tabernacle candlestick hotspot and return to Scripture, and map book/chapter/Philippi-stop/context/Scripture controls with real terrain loaded. All page families, including Noah's Ark, Sower, recovery, long book titles, and study browser, mounted at 320px and 768px with no document overflow beyond the viewport. At 390px the playback menu stayed within the screen. These are browser-layout and interaction checks, not physical-device qualification.
-
-Actual browser captures: [book](docs/site-polish-book.jpg), [390px reader](docs/site-polish-reader.jpg), [study](docs/site-polish-study.jpg). The scene panel remains a fixed-height scrollable window. The shared header correction was checked again at 320px and 1280px. Native and WASM builds and all 36 Rust tests passed. One existing search-heading assertion initially failed after the intentional heading change; it was updated to check the new query heading, and the suite passed on rerun.
-
-Known limits: natural narration still needs its initial model download and can pause between generated verses; no verified downloadable Black male/female voice pair was adopted. Geographic camera-follow ranges remain curated rather than exhaustive. Physical devices and other browser engines were not run in this pass. Hosted release receipts are retained separately from these local captures.
-
-A final 320px screenshot on the first published polish candidate exposed native select chrome clipping three-digit chapter labels despite the text fitting the computed content width. The correction retains real native `<select>` elements, removes their extra chrome with `appearance: none`, and draws a CSS chevron with reserved space. A new actual 320px capture showed `Chapter 150` fully visible; selecting Chapter 23 navigated to Psalm 23. Reader and map selectors share this correction.
-
-
-## Integrated reader first pass — October 16–17, 2026
-
-The latest user direction supersedes the standalone Explore gallery/map navigation: Today and Library are the primary entries; the canonical chapter reader owns Passage, Journey, and contextual Illustrations. The approved covers and individual study artwork are retained. `docs/reader-journey.jpg` and `docs/reader-illustrations.jpg` are fresh local-browser captures at 1280 × 900, not mockups. The new Genesis art is explicitly schematic scenery rather than geographic evidence.
-
-Direct local UI observations on the current implementation: Genesis 2:8 → 3:23 → 3:24 updates the story stage; a browsed Tabernacle table leaves the saved verse at 25:31; its explicit Read action moves to 25:23; Today, Library and the matching book action expose that exact continuation. The chapter keeps one Scripture stream and one audio player. Narrow 390px and 320px layouts showed no horizontal overflow; the companion uses normal document flow and has no nested Scripture scroll pane. The detail selector and text size/spacing controls responded.
-
-A first source-link click exposed a tall sticky companion whose action remained below the viewport. The companion now uses a measured sticky offset for tall cards, allowing its bottom actions to enter the screen; the real source action was repeated successfully. A selector-role lookup failed because the automation surface exposed pressed mode buttons as checkboxes; inspection showed visible enabled controls and the actual DOM-backed control click succeeded. These were kept separate from product behavior claims.
-
-Real local Kokoro audio read Genesis 3:23–24, advanced into 4:1–2, and changed the Journey setting without remounting playback. Observed PCM for 3:24: 237600 samples / 9.9 seconds, with advancing native audio time and browser speech synthesis inactive. Switching Passage → Journey retained active playback into 4:1. Pause held the same audio time; Stop returned to the reached verse. This is local runtime evidence; the final hosted candidate is checked separately after publication.
-
-Supporting checks: 52 Rust tests, exact-progress validation tests, JS syntax, release WASM build, and diff checks passed. Geographic/story coverage remains explicitly limited; physical devices, other browser engines, exhaustive audio for all 66 books, and acoustic voice-identity claims are not established by these checks.
-
-A settled real PageUp key updated the reading bookmark from Genesis 3:20 to 3:14. A real End key then exposed an end-of-document edge: the reading line stayed on 3:20 even though the last verse was visible above the footer. The scroll tracker now saves the last displayed verse when the document end has been reached and that verse is fully visible. Accessibility-API page scrolling did not emit the same DOM input-intent signal in this browser, so keyboard input is used for this acceptance check.
-
-The corrected End-key journey was repeated in the actual local browser: the bookmark reached Genesis 3:24 at the document end and the companion changed to the guarded way.
-
-Hosted version 34 exposed a further tall-panel problem during the live audio/hotspot check: the scene hotspots sat above the viewport while the stacked object detail was pinned. The attempted native click paused playback instead of selecting the requested table, so that check failed and was not counted as success. The follow-up candidate adds real Scene / Detail controls inside the same companion, displaying only one illustration surface at a time. This materially changes the unreachable-card layout; the corrected visible-hotspot/audio flow must be repeated on the published follow-up candidate.
-
-The 390px entry check also found that an explicit illustrated deep link restored its verse below the companion, initially hiding the illustration above the viewport. The final entry correction prioritizes the requested companion at narrow widths. Intentional cross-chapter Read reference links carry `focus=passage` so they still open the source text; ordinary Continue links keep their exact-verse restoration. Capture artifacts taken during rapid viewport resizing were retained as rejected evidence; a stable native capture showed the Sower scene normally without any image-asset change.
+No open P0/P1/P2 visual finding remains in this comparison. P3 differences retained: existing cover illustrations vary from mockup subjects, Today retains a contextual-study link below its main content, and the Codex adds a third window tab. The reader's source artwork is a dedicated generated variant, not a pixel-for-pixel copy of the concept landscape. Whole-Bible illustrated coverage and physical-device qualification are not claimed.

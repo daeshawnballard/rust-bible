@@ -136,6 +136,18 @@ Geographic explanations, source links, and uncertainty are separate from Scriptu
 
 The app, reference validation, scene selection, source matching, journey state, and API/page rendering stay in Rust/WASM. Small JavaScript bridges handle browser events, WebGL terrain, and narration. The approved earlier map concept is retained as design provenance; generated scenery is never substituted for geographic terrain.
 
+## Connected reading experience
+
+Today and Library open the same canonical passage reader. The selected **Quiet Canvas** treatment lets Scripture expand into a reading column or contract into a floating window over a full-screen Journey. The window switches between Scripture, clearly labeled context, and the Bible Codex. Inspecting a hotspot keeps the reading location; its explicit source link moves to that passage.
+
+One browser-local narrator and bottom audio dock survive navigation within the WASM app. The dock names the actual playing passage, returns to it, supports pause/resume, speed, voice, volume and follow controls, and continues across chapter boundaries. The waveform, elapsed time and seek control use the generated Kokoro audio chunk; they are not a chapter-duration estimate. Device voices do not expose PCM or timing, so waveform, duration and seek remain unavailable for that option. Reloading remembers the verse; it does not autoplay.
+
+The **Bible Codex** is one book-by-book reference companion with 212 selected entries across all 66 books: people, places, miracles and study notes. Each entry links to a valid KJV verse. This is a curated starting index, not an exhaustive list of every person, place, event or interpretation. It is available from Library and the reader window, with book/category/text filters. Scripture continues to come from the embedded corpus, separately from editorial notes.
+
+Journey coverage stays limited to the authored passage ranges documented in [reader companion notes](docs/reader-companion.md). Unassigned passages retain the full reading/listening experience. The Genesis scenery is illustrative, with unknown real-world locations; it is not a geographic reconstruction. Existing Tabernacle object artwork and the other illustrated studies remain in the passage.
+
+Approved screen references are kept in [the reference folder](assets/imagegen/reference). The new full-screen Genesis background has [source and generation provenance](assets/imagegen/journey/genesis-immersive-v1.json). Covers, scene art and object illustrations are individual production assets; titles, Scripture, descriptions, navigation and controls remain real Rust-rendered interface elements.
+
 ## Data source
 
 <https://raw.githubusercontent.com/thiagobodruk/bible/master/json/en_kjv.json> (KJV, public domain). The source file's book names are in Portuguese, so English names are supplied in code by book order.

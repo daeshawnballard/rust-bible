@@ -1,7 +1,8 @@
 import { initExperience } from './experience.js';
 import { disposeLibrary, initLibrary } from './library.js';
 import { initJourney, resolveTodayDate, routeFromHash } from './journey.js';
-import { resumeRoute } from './progress.js';
+import { resumeRoute, saveListeningPosition, matchingVerse } from './progress.js';
+import { initCodex, disposeCodex } from './codex.js';
 import { initReaderContext, disposeReaderContext, resolveLegacyReaderRoute } from './reader-context.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
@@ -11,6 +12,7 @@ let journey = null;
 function showError(message) {
   disposeReaderContext(app);
   disposeLibrary(app);
+  disposeCodex(app);
   app.innerHTML = "";
   const heading = document.createElement("h1");
   heading.textContent = "Reader couldn't start";
@@ -44,6 +46,7 @@ function createRustBridge(exports) {
 function installPage(response, route, { initial = false } = {}) {
   disposeReaderContext(app);
   disposeLibrary(app);
+  disposeCodex(app);
   if (response.location) {
     const target = `#${routeFromHash(response.location)}`;
     if (window.location.hash !== target) window.location.hash = target;
@@ -58,6 +61,7 @@ function installPage(response, route, { initial = false } = {}) {
   }
   app.innerHTML = response.body;
   initLibrary(app);
+  initCodex(app);
 
   const form = app.querySelector("#lookup");
   form?.addEventListener("submit", (event) => {
@@ -70,14 +74,11 @@ function installPage(response, route, { initial = false } = {}) {
   initExperience(app);
   initReaderContext(app);
   const contextParams = new URL(route, window.location.origin).searchParams;
-  const companion = app.querySelector('[data-reader-context]');
-  if (companion && ['journey','illustration'].includes(contextParams.get('context')) && contextParams.get('focus') !== 'passage' && window.matchMedia('(max-width:999px)').matches) {
-    requestAnimationFrame(() => companion.scrollIntoView({block:'start',behavior:'instant'}));
-  } else if (app.querySelector('[data-atlas-page]')) {
+  if (app.querySelector('[data-atlas-page]')) {
     window.scrollTo({top:0,left:0,behavior:'instant'});
-  } else if (journeyResult.restoreVerseId) {
+  } else if (journeyResult.restoreVerseId && !['journey','illustration'].includes(contextParams.get('context'))) {
     requestAnimationFrame(() => document.getElementById(journeyResult.restoreVerseId)?.scrollIntoView({block: "center", behavior: "instant"}));
-  } else if (response.anchor) {
+  } else if (response.anchor && !['journey','illustration'].includes(contextParams.get('context'))) {
     requestAnimationFrame(() => document.getElementById(response.anchor)?.scrollIntoView());
   } else if (journeyResult.restoreScrollY !== null && journeyResult.restoreScrollY !== undefined) {
     requestAnimationFrame(() => window.scrollTo({top: journeyResult.restoreScrollY, left: 0, behavior: 'instant'}));
@@ -143,6 +144,19 @@ async function start() {
       showError(error instanceof Error ? error.message : "An unexpected reader error occurred.");
     }
   };
+  let lastAudioPosition=null;
+  window.addEventListener('bible:audio-position',event=>{
+    const record=event.detail?.record;if(!record)return;
+    const previous=lastAudioPosition;lastAudioPosition=record;
+    saveListeningPosition(record,app);
+    const reader=app.querySelector('[data-reader]');
+    const visible=matchingVerse(app,record);
+    if(reader&&record.route!==new URL(routeFromHash(location.hash),location.origin).pathname&&previous?.route===new URL(routeFromHash(location.hash),location.origin).pathname){
+      const params=new URL(routeFromHash(location.hash),location.origin).searchParams;
+      const context=params.get('context');
+      location.hash='#'+record.route+'?resume='+record.verse+(context?'&context='+context:'')+'#v'+record.verse;
+    }
+  });
   window.addEventListener("hashchange", renderCurrent);
   renderCurrent();
 }

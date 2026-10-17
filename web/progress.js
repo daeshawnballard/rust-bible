@@ -82,3 +82,15 @@ export function saveBookProgress(controls, chapter, verse) {
   if (!record) return false;
   try { localStorage.setItem(LAST_OPENED_KEY, JSON.stringify(record)); return true; } catch { return false; }
 }
+
+// Narration owns a canonical position even while the reader is off-screen.
+export function saveListeningPosition(value, root=document) {
+  const record=canonicalProgress({...value,source:'listening',savedAt:Date.now()});
+  if(!record)return false;
+  let persisted=false;
+  try{localStorage.setItem(LAST_OPENED_KEY,JSON.stringify(record));persisted=true;}catch{}
+  const node=matchingVerse(root,record),reader=node?.closest('[data-reader]');
+  if(reader){reader.dataset.readerPosition=node.id;reader.dataset.positionSaved=String(persisted);}
+  (node||root).dispatchEvent(new CustomEvent('bible:position',{bubbles:true,detail:{record,persisted,nodeId:node?.id||null}}));
+  return persisted;
+}

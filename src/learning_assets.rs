@@ -1,6 +1,10 @@
 // Production illustrations are embedded in the native server as well as shipped to Sites.
 pub fn asset(path: &str) -> Option<(&'static str, &'static [u8])> {
     match path {
+        "/art/journey/genesis-immersive-v1.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/genesis-immersive-v1.webp").as_slice(),
+        )),
         "/art/journey/flood.webp" => Some((
             "image/webp",
             include_bytes!("../web/art/journey/flood.webp").as_slice(),

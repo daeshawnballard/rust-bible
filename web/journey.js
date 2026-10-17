@@ -286,17 +286,19 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
   };
 
   let scrollTimer = null, readingDirty = false, restoring = false, scrollIntentUntil = 0;
-  const audioOwnsPosition = () => ['starting', 'reading', 'paused'].includes(root.querySelector('[data-reader-audio]')?.dataset.audioState);
+  const audioOwnsPosition = () => window.biblePlayback?.active?.() || ['starting', 'reading', 'paused'].includes(document.querySelector('[data-global-audio]')?.dataset.audioState);
   const rememberVisibleVerse = () => {
     clearTimeout(scrollTimer);
     if (!readingDirty || restoring || audioOwnsPosition()) return;
     readingDirty = false;
     const toolbar = root.querySelector('.reader-toolbar')?.getBoundingClientRect();
-    const line = Math.max((toolbar?.bottom || 0) + 20, window.innerHeight * .26);
+    const panel=root.querySelector('.reader-content');
+    const inset=document.body.classList.contains('has-scene')?panel?.getBoundingClientRect():null;
+    const line = inset ? inset.top + 35 : Math.max((toolbar?.bottom || 0) + 20, window.innerHeight * .26);
     const verses = [...root.querySelectorAll('[data-reader] .scripture .v')];
     const lastVerse = verses.at(-1);
     const lastRect = lastVerse?.getBoundingClientRect();
-    const atDocumentEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+    const atDocumentEnd = inset ? panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 4 : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
     // At the footer the reading line cannot move any farther down. Save the
     // last visible verse instead of leaving the final verses unreachable.
     const reachedLastVerse = atDocumentEnd && lastRect?.top >= 0 && lastRect.bottom <= window.innerHeight;
@@ -320,14 +322,16 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     const explicit = response?.anchor && document.getElementById(response.anchor);
     const resumed = requested > 0 ? matchingVerse(root, {route: reader.dataset.readerRoute, verse: requested})
       : initial && !response?.anchor && !params.has('v') && saved?.route === reader.dataset.readerRoute ? matchingVerse(root, saved) : null;
-    const node = resumed || (explicit?.matches('.scripture .v') ? explicit : null)
+    const playing = audioOwnsPosition() ? matchingVerse(root,window.biblePlayback?.position?.()) : null;
+    const node = playing || resumed || (explicit?.matches('.scripture .v') ? explicit : null)
       || reader.querySelector('[data-reader-primary-scripture] .hl') || reader.querySelector('.scripture .v');
-    if (node) saveProgress(node, resumed && saved?.source === 'listening' ? 'listening' : 'reading');
+    if (node && !audioOwnsPosition()) saveProgress(node, resumed && saved?.source === 'listening' ? 'listening' : 'reading');
+    if(node && audioOwnsPosition()) reader.dataset.readerPosition=node.id;
     // The caller scrolls once after rendering. Ignore its scroll events, then
     // begin tracking user scrolls. A new route cannot inherit an old timer.
     restoring = true;
     setTimeout(() => { restoring = false; }, 350);
-    return resumed ? resumed.id : null;
+    return playing?.id || (resumed ? resumed.id : null);
   };
 
   const rememberLibraryBeforeNavigation = (nextRoute) => {
@@ -403,6 +407,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
       && !event.target?.closest?.('input, textarea, select, button, [contenteditable]')) markScrollIntent();
   }, {signal});
   window.addEventListener('pointerdown', event => {
+    if(event.target?.closest?.('.reader-content'))markScrollIntent();
     if (event.clientX >= document.documentElement.clientWidth - 20) markScrollIntent();
   }, {signal});
   window.addEventListener('scroll', () => {
@@ -411,6 +416,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
     clearTimeout(scrollTimer);
     scrollTimer = setTimeout(rememberVisibleVerse, 180);
   }, {passive: true, signal});
+  eventRoot.addEventListener('bible:panel-scroll',()=>{if(Date.now()<=scrollIntentUntil&&!audioOwnsPosition()&&!restoring){readingDirty=true;clearTimeout(scrollTimer);scrollTimer=setTimeout(rememberVisibleVerse,200);}},{signal});
   window.addEventListener('pagehide', rememberVisibleVerse, {signal});
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden' && readingDirty && !audioOwnsPosition()) {
@@ -418,6 +424,7 @@ export function initJourney(root = document, { resolveReaderUri } = {}) {
       rememberVisibleVerse();
     }
   }, {signal});
+  eventRoot.addEventListener("bible:position",refreshContinuation,{signal});
   eventRoot.addEventListener("click", handleClick, { signal });
   eventRoot.addEventListener("change", handleChange, { signal });
 

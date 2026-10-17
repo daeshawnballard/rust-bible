@@ -103,7 +103,7 @@ export function initLibrary(root = document) {
       tools.open = false;
       mobileCollapseApplied = true;
     } else {
-      tools.open = true;
+      tools.open = false;
     }
     rememberToolsOpen(tools.open);
 
@@ -116,8 +116,8 @@ export function initLibrary(root = document) {
       if (isMobile === wasMobile) return;
       wasMobile = isMobile;
       if (!isMobile) {
-        tools.open = true;
-        rememberToolsOpen(true);
+        tools.open = false;
+        rememberToolsOpen(false);
       }
     }, { signal });
   }

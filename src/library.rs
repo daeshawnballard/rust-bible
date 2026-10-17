@@ -526,7 +526,7 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
 
 fn render_controls(testament: &str, category: &str, sort: &str, size: usize) -> String {
     let mut html = String::from(
-        "<details class=\"library-tools\" open data-library-tools><summary>Library tools</summary><form id=\"library-tools-form\" action=\"/library\" method=\"get\"><div class=\"tools-fields\"><label>Testament<select name=\"testament\" aria-label=\"Testament\">",
+        "<details class=\"library-tools\" data-library-tools><summary>Library tools</summary><form id=\"library-tools-form\" action=\"/library\" method=\"get\"><div class=\"tools-fields\"><label>Testament<select name=\"testament\" aria-label=\"Testament\">",
     );
     for (value, label) in [
         ("all", "All testaments"),
@@ -591,11 +591,12 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
     let read_icon =
         include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
     let continuation = format!(
-        r#"<section class="continuation-row continuation-row--library" data-continuation data-continue-hide-empty hidden>{read_icon}<div data-continue-saved hidden><p>Last opened on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section>"#,
+        r#"<section class="continuation-row continuation-row--library" data-continuation data-continue-hide-empty hidden>{read_icon}<div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href="{}" aria-label="Continue reading">→</a><details class="continue-options"><summary aria-label="Saved reading options" title="Saved reading options"><span aria-hidden="true">•••</span></summary><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear saved location</button></details></section>"#,
         esc(&route_path("/library", client))
     );
     let mut html = format!(
-        "<section class=\"library-page\" data-library><div class=\"library-heading\"><p class=\"eyebrow\">The Bible · King James Version</p><h1>Library</h1><p>All 66 books, ready to browse by testament, literary form, or title.</p></div>{continuation}{}<p class=\"library-count\" role=\"status\">{count}</p>",
+        "<section class=\"library-page\" data-library><div class=\"library-topline\"><div class=\"library-heading\"><p class=\"library-meta\">66 books <span aria-hidden=\"true\">·</span> King James Version</p><h1>Library</h1><a class=\"library-codex-link\" href=\"{}\">Codex reference →</a></div>{continuation}</div>{}<p class=\"library-count\" role=\"status\">{count}</p>",
+        esc(&route_path("/codex", client)),
         render_controls(testament, category, sort, size),
     );
 
@@ -757,7 +758,7 @@ mod tests {
             .find("data-continuation data-continue-hide-empty hidden")
             .unwrap();
         let gallery = library.find("class=\"library-grid\"").unwrap();
-        assert!(library.contains("All 66 books, ready to browse"));
+        assert!(library.contains("66 books <span aria-hidden=\"true\">·</span> King James Version"));
         assert!(heading < continuation && continuation < gallery);
 
         let book = render_book(0, false);

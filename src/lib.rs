@@ -16,11 +16,16 @@ const CSS: &str = concat!(
     include_str!("../web/polish.css"),
     include_str!("../web/continue.css"),
     include_str!("../web/reader-illustrations.css"),
-    include_str!("../web/reader-context.css")
+    include_str!("../web/reader-context.css"),
+    include_str!("../web/gallery-polish.css"),
+    include_str!("../web/codex.css"),
+    include_str!("../web/audio-dock.css"),
+    include_str!("../web/immersive.css")
 );
 
 mod about;
 mod atlas;
+mod codex;
 mod journey_scenes;
 mod learning;
 mod library;
@@ -477,9 +482,10 @@ fn page_body(q: &str, body: &str, client: bool) -> String {
         ""
     };
     let about = esc(&route_path("/about", client));
+    let codex = esc(&route_path("/codex", client));
     let q = esc(q);
     let header = format!(
-        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a></nav><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></div></header>"##
+        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a></nav><a class="header-back" href="{library}" data-library-return>← Library</a><div class="site-tools"><details class="site-search"><summary aria-label="Search"><img src="/icons/magnifying-glass-thin.svg" alt=""></summary><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></details><details class="site-menu"><summary aria-label="Site menu">•••</summary><nav aria-label="Site tools"><a href="{home}" data-today-link>Today</a><a href="{library}" data-library-return>Library</a><a href="{codex}">Bible Codex</a><a href="{about}">About &amp; help</a><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></nav></details></div></div></header>"##
     );
     format!("{header}<main class=\"wrap\" id=\"main-content\" tabindex=\"-1\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version · Public domain</span><span class=\"footer-links\"><a href=\"{about}\">About &amp; help</a><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></span></footer>")
 }
@@ -490,7 +496,7 @@ fn document(title: &str, body: &str) -> String {
     } else {
         ""
     };
-    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script><script type=\"module\" src=\"/journey.js\"></script><script type=\"module\" src=\"/reader-context.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
+    format!("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{}</title><style>{CSS}</style><script type=\"module\" src=\"/experience.js\"></script><script type=\"module\" src=\"/journey.js\"></script><script type=\"module\" src=\"/reader-context.js\"></script><script type=\"module\" src=\"/codex.js\"></script>{library_script}</head><body>{body}</body></html>", esc(title))
 }
 
 fn html_response(
@@ -772,11 +778,36 @@ fn search_content(q: &str, client: bool) -> String {
     s
 }
 
+fn audio_chapter(q: &HashMap<String, String>) -> RouteResponse {
+    let book = q
+        .get("book")
+        .and_then(|v| v.parse::<usize>().ok())
+        .unwrap_or(66);
+    let chapter = q
+        .get("chapter")
+        .and_then(|v| v.parse::<usize>().ok())
+        .unwrap_or(0);
+    if book >= 66 || chapter == 0 || chapter > bible().books[book].len() {
+        return json_response(400, json!({"error":"Choose a valid chapter."}).to_string());
+    }
+    let next = if chapter < bible().books[book].len() {
+        Some(json!({"book":book,"chapter":chapter+1}))
+    } else if book < 65 {
+        Some(json!({"book":book+1,"chapter":1}))
+    } else {
+        None
+    };
+    json_response(200,json!({"book":NAMES[book],"book_index":book,"chapter":chapter,
+        "route":format!("/book/{}/{chapter}",slug(book)),
+        "verses":bible().books[book][chapter-1].iter().enumerate().map(|(i,t)|json!({"verse":i+1,"text":t})).collect::<Vec<_>>(),
+        "next":next}).to_string())
+}
+
 fn api_verse(q: &HashMap<String, String>) -> RouteResponse {
     let input = q.get("ref").cloned().unwrap_or_default();
     match parse_ref(&input) {
         Some(reference) => json_response(200, json!({
-            "reference": ref_label(&reference), "book": NAMES[reference.book], "chapter": reference.ch,
+            "reference": ref_label(&reference), "book": NAMES[reference.book], "book_index":reference.book, "chapter": reference.ch, "route":format!("/book/{}/{}",slug(reference.book),reference.ch),
             "verses": verses(&reference).iter().map(|(verse, text)| json!({"verse": verse, "text": text})).collect::<Vec<_>>(),
             "text": verses(&reference).iter().map(|(_, text)| *text).collect::<Vec<_>>().join(" "),
             "translation": "KJV"
@@ -873,6 +904,16 @@ pub fn route(uri: &str, client: bool) -> RouteResponse {
         "/api/search" => api_search(&params),
         "/api/atlas" => atlas::api(&params),
         "/api/reader-context" => reader_context::api(&params, client),
+        "/api/codex" => codex::api(&params, client),
+        "/codex" => html_response(
+            200,
+            "Bible Codex",
+            "",
+            &codex::page(&params, client),
+            client,
+            anchor,
+        ),
+        "/api/audio-chapter" => audio_chapter(&params),
         "/about" => about::page(client),
         "/explore" | "/explore/studies" => redirect(reader_context::legacy(&params, client)),
         "/explore/noahs-ark" | "/explore/sower" | "/explore/tabernacle" => {
@@ -1115,5 +1156,51 @@ mod tests {
     fn highlighting_handles_unicode_case_expansion_and_escapes_markup() {
         assert_eq!(super::highlight("İstanbul", "i"), "<mark>İ</mark>stanbul");
         assert_eq!(super::highlight("<Tag>", "tag"), "&lt;<mark>Tag</mark>&gt;");
+    }
+}
+
+#[cfg(test)]
+mod connected_reader_tests {
+    use super::*;
+    #[test]
+    fn audio_api_uses_exact_corpus_and_handles_chapter_and_book_boundaries() {
+        for (book, chapter) in [(0, 2), (18, 23), (38, 4), (65, 22)] {
+            let response = route(
+                &format!("/api/audio-chapter?book={book}&chapter={chapter}"),
+                true,
+            );
+            assert_eq!(response.status, 200);
+            let value: serde_json::Value = serde_json::from_str(&response.body).unwrap();
+            assert_eq!(
+                value["verses"][0]["text"],
+                bible().books[book][chapter - 1][0]
+            );
+            assert_eq!(
+                value["verses"].as_array().unwrap().len(),
+                bible().books[book][chapter - 1].len()
+            );
+            if book == 65 {
+                assert!(value["next"].is_null());
+            }
+        }
+        let cross: serde_json::Value =
+            serde_json::from_str(&route("/api/audio-chapter?book=38&chapter=4", true).body)
+                .unwrap();
+        assert_eq!(cross["next"]["book"], 39);
+        assert_eq!(cross["next"]["chapter"], 1);
+    }
+    #[test]
+    fn new_api_inputs_are_validated_and_codex_is_one_reference_surface() {
+        for route_uri in [
+            "/api/audio-chapter?book=66&chapter=1",
+            "/api/audio-chapter?book=0&chapter=0",
+            "/api/audio-chapter?book=0&chapter=51",
+        ] {
+            assert_eq!(route(route_uri, true).status, 400);
+        }
+        let codex = route("/codex", true);
+        assert_eq!(codex.status, 200);
+        assert!(codex.body.contains("data-codex-page"));
+        assert!(!codex.body.contains("data-read-aloud"));
     }
 }

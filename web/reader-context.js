@@ -4,207 +4,267 @@ import { createTerrainMap } from './terrain.js';
 const mounted = new WeakMap();
 const DISPLAY_KEY = 'rust-bible:reader-display:v1';
 const routeURL = () => new URL(location.hash.startsWith('#/') ? location.hash.slice(1) : location.pathname + location.search + location.hash, location.origin);
-const requestContext = async (uri) => typeof window.rustBibleApi === 'function' ? window.rustBibleApi(uri) : fetch(uri).then(async response => {const value = await response.json(); if (!response.ok) throw new Error(value.error); return value;});
-
+const request = async uri => typeof window.rustBibleApi === 'function' ? window.rustBibleApi(uri) : fetch(uri,{cache:'no-store'}).then(async r=>{const value=await r.json();if(!r.ok)throw new Error(value.error);return value;});
 export function resolveLegacyReaderRoute(route) {
-  const url = new URL(route, location.origin);
-  if ((url.pathname === '/explore' || url.pathname === '/explore/studies') && !url.searchParams.has('book') && !url.searchParams.has('scene')) {
-    const saved = readProgress();
-    return `${saved?.route || '/book/Genesis/1'}?resume=${saved?.verse || 1}&context=journey#v${saved?.verse || 1}`;
+  const u=new URL(route,location.origin);
+  if(['/explore','/explore/studies'].includes(u.pathname)&&!u.searchParams.has('book')&&!u.searchParams.has('scene')){
+    const saved=readProgress();return (saved?.route||'/book/Genesis/1')+'?resume='+(saved?.verse||1)+'&context=journey#v'+(saved?.verse||1);
   }
   return route;
 }
-
-export function disposeReaderContext(root = document) { mounted.get(root)?.(); mounted.delete(root); }
-
-export function initReaderContext(root = document) {
+export function disposeReaderContext(root=document){mounted.get(root)?.();mounted.delete(root);}
+export function initReaderContext(root=document) {
   disposeReaderContext(root);
-  const reader = root.querySelector('.reader-page[data-reader]');
-  const panel = reader?.querySelector('[data-reader-context]');
-  if (!reader || !panel) return;
-  const body = panel.querySelector('[data-context-body]');
-  const status = panel.querySelector('[data-context-status]');
-  let active = true, generation = 0, terrain = null, mapState = null, currentValue = null;
-  let mode = ['journey', 'illustration'].includes(routeURL().searchParams.get('context')) ? routeURL().searchParams.get('context') : 'passage';
-  let part = routeURL().searchParams.get('part');
-  let scene = routeURL().searchParams.get('scene');
-  let artView = routeURL().searchParams.get('art') === 'scene' ? 'scene' : routeURL().searchParams.get('art') === 'detail' || part ? 'detail' : 'scene';
-  let lastHTML = '', follow = true;
-  const node = reader.dataset.readerPosition ? document.getElementById(reader.dataset.readerPosition) : null;
-  let position = positionForVerse(node) || {bookIndex:Number(reader.dataset.bookIndex), chapter:Number(reader.dataset.chapter), verse:1, route:reader.dataset.readerRoute};
-  const abort = new AbortController();
-  const { signal } = abort;
-  // A tall companion scrolls until its bottom is reachable, then stays beside
-  // the passage. No nested scrolling area or unreachable sticky-card actions.
-  const sizePanel=()=>{panel.style.top=`${Math.min(20,innerHeight-panel.offsetHeight-20)}px`;};
-  const panelObserver=new ResizeObserver(sizePanel); panelObserver.observe(panel);
-  window.addEventListener('resize',sizePanel,{signal});
-
-  const writeURL = () => {
-    const url = routeURL();
-    for (const key of ['context','scene','part','art']) url.searchParams.delete(key);
-    if (mode !== 'passage') url.searchParams.set('context', mode);
-    if (mode === 'illustration' && scene) url.searchParams.set('scene', scene);
-    if (mode === 'illustration' && part) url.searchParams.set('part', part);
-    if (mode === 'illustration') url.searchParams.set('art',artView);
-    const path = `${url.pathname}${url.search}${url.hash}`;
-    history.replaceState(history.state, '', location.hash.startsWith('#/') ? `#${path}` : path);
-  };
-  const applyDisplay = (value) => {
-    reader.dataset.textSize = ['standard','large','larger'].includes(value?.size) ? value.size : 'standard';
-    reader.dataset.lineSpacing = value?.spacing === 'spacious' ? 'spacious' : 'comfortable';
-    reader.querySelector('[data-reader-size]').value = reader.dataset.textSize;
-    reader.querySelector('[data-reader-spacing]').value = reader.dataset.lineSpacing;
-  };
-  try { applyDisplay(JSON.parse(localStorage.getItem(DISPLAY_KEY))); } catch { applyDisplay(null); }
-  const stopMap = () => { terrain?.destroy(); terrain = null; mapState = null; if(body.querySelector('[data-context-map]')) lastHTML=''; };
-  const updateButtons = () => {
-    reader.dataset.contextMode = mode;
-    reader.dataset.artView = artView;
-    reader.querySelectorAll('[data-context-art-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.contextArtView===artView)));
-    panel.hidden = mode === 'passage';
-    reader.querySelectorAll('.reader-modes [data-reader-mode]').forEach(button => {
-      button.setAttribute('aria-pressed', String(button.dataset.readerMode === mode));
-      if (button.dataset.readerMode === 'illustration' && currentValue) {button.classList.toggle('has-study', !!currentValue.relevant_scene); button.hidden=!currentValue.relevant_scene && mode!=='illustration';}
-      if (button.dataset.readerMode === 'journey' && currentValue) {
-        button.classList.toggle('has-journey', !!currentValue.journey_available);
-        button.title = currentValue.journey_available ? 'Illustrated Journey available in this chapter' : 'View this passage’s setting';
-      }
-    });
-  };
-  async function refresh({focusPart = null} = {}) {
-    updateButtons();
-    const request = ++generation;
-    if (mode === 'passage') {
-      stopMap();
-      try {const value=await requestContext(`/api/reader-context?book=${position.bookIndex}&chapter=${position.chapter}&verse=${position.verse}&mode=availability`); if(active && request===generation) {currentValue=value; updateButtons();}}catch{}
-      return;
-    }
-    status.textContent = 'Following the passage…';
-    const params = new URLSearchParams({book:position.bookIndex, chapter:position.chapter, verse:position.verse, mode});
-    if (part) params.set('part', part);
-    try {
-      const value = await requestContext(`/api/reader-context?${params}`);
-      if (!active || request !== generation) return;
-      const sceneChanged = scene && value.scene && scene !== value.scene;
-      if (sceneChanged && part) { part = null; scene = value.scene; return refresh(); }
-      currentValue = value;
-      scene = value.scene || null;
-      panel.querySelector('[data-context-title]').textContent = value.title;
-      panel.querySelector('[data-context-reference]').textContent = value.reference;
-      const sameGeo = value.kind === 'geography' && mapState && mapState.book === value.book && mapState.chapter === value.chapter;
-      if (sameGeo) {
-        mapState = value.map;
-        terrain?.update(value.map, {follow, animate:true});
-        body.querySelector('[data-context-place-title]').textContent = value.map.setting?.name || value.map.title;
-        body.querySelector('[data-context-place-note]').textContent = value.map.setting?.note || value.map.message;
-      } else if (lastHTML !== value.html) {
-        stopMap(); body.innerHTML = value.html; lastHTML = value.html;
-        if (value.kind === 'illustration') {
-          const tools = document.createElement('div'); tools.className = 'reader-context-follow';
-          const views=document.createElement('div'); views.className='reader-context-art-views'; views.setAttribute('role','group'); views.setAttribute('aria-label','Illustration view');
-          for(const [view,label] of [['scene','Scene'],['detail','Detail']]) {const button=document.createElement('button');button.type='button';button.dataset.contextArtView=view;button.textContent=label;views.append(button);}
-          tools.append(views);
-          const button = document.createElement('button'); button.type='button'; button.dataset.contextFollow='';
-          button.textContent = part ? 'Follow passage' : 'Following passage';
-          button.setAttribute('aria-pressed',String(!part)); tools.append(button);
-          const label=document.createElement('label'); label.textContent='Detail ';
-          const select=document.createElement('select'); select.dataset.contextPartSelect=''; select.setAttribute('aria-label','Illustrated detail');
-          for(const hotspot of body.querySelectorAll('[data-context-part]')) {const option=document.createElement('option'); option.value=hotspot.dataset.contextPart; option.textContent=hotspot.getAttribute('aria-label').replace(/^Select /,''); option.selected=hotspot.getAttribute('aria-pressed')==='true'; select.append(option);}
-          label.append(select); tools.append(label); body.prepend(tools);
-        }
-        if (value.kind === 'geography') {
-          mapState = value.map;
-          const mapHost=body.querySelector('[data-context-map]');
-          const controller = await createTerrainMap(mapHost, {
-            onInteract() { follow = false; const button=body.querySelector('[data-context-map-action="follow"]'); if(button) button.textContent='Return to passage'; },
-            onPlaceSelect(place) { const heading=body.querySelector('[data-context-place-title]'); if(heading) heading.textContent=place.name; const note=body.querySelector('[data-context-place-note]'); if(note) note.textContent=`${place.confidence || 'Approximate'} identification. Use a journey-stop link to read its passage.`; },
-            onStatus(event) { const node=body.querySelector('[data-context-map-status]'); if(node) node.textContent=event.message || 'Modern terrain · Approximate locations'; const retry=body.querySelector('[data-context-map-action="retry"]'); if(retry) retry.hidden=!['error','degraded'].includes(event.state); }
-          });
-          if (!active || !mapHost.isConnected || mapHost!==body.querySelector('[data-context-map]')) {controller.destroy(); return;}
-          terrain = controller; terrain.set3D(true); terrain.update(mapState, {follow, animate:false, force:true});
-        }
-      }
-      const followButton=body.querySelector('[data-context-follow]');
-      if(followButton) {followButton.textContent=part ? 'Follow passage' : 'Following passage'; followButton.setAttribute('aria-pressed',String(!part));}
-      if (focusPart) {
-        const target=artView==='detail' ? body.querySelector('.reader-illustration-copy h3') : body.querySelector(`[data-context-part="${CSS.escape(focusPart)}"]`);
-        if(target) {if(artView==='detail') target.tabIndex=-1;target.focus({preventScroll:true});}
-      }
-      status.textContent = value.kind === 'illustration' ? (part ? 'Browsing a detail. Your reading position has not moved.' : value.source_match ? 'Details follow the passage. Explanations are separate from Scripture.' : 'Illustration for this chapter. The selected item’s source is shown below.') : 'Journey follows your reading and listening position.';
-      updateButtons(); writeURL();
-    } catch (error) {
-      if (!active || request !== generation) return;
-      if (part) {part = null; return refresh();}
-      status.textContent = 'The companion could not load. Scripture and audio remain available.';
-      console.warn('Reader companion:', error.message);
-    }
+  const reader=root.querySelector('.reader-page[data-reader]');
+  const panel=reader?.querySelector('[data-reader-context]');
+  if(!reader||!panel)return;
+  const abort=new AbortController(), signal=abort.signal;
+  const on=(target,event,fn,options={})=>target?.addEventListener(event,fn,{...options,signal});
+  const content=reader.querySelector('.reader-content');
+  const heading=reader.querySelector('.reader-heading');
+  const toolbar=reader.querySelector('.reader-toolbar');
+  const body=panel.querySelector('[data-context-body]');
+  const status=panel.querySelector('[data-context-status]');
+  let active=true, generation=0, terrain=null, lastArt='', value=null, inspected=null;
+  let mode=['journey','illustration'].includes(routeURL().searchParams.get('context'))?routeURL().searchParams.get('context'):'passage';
+  let tab=routeURL().searchParams.get('entry')?'codex':'scripture';
+  let part=routeURL().searchParams.get('part'), entry=routeURL().searchParams.get('entry'), scene=routeURL().searchParams.get('scene');
+  const start=reader.querySelector('#'+CSS.escape(reader.dataset.readerPosition||'v1'));
+  let position=positionForVerse(start)||{book:reader.dataset.bookName,bookIndex:Number(reader.dataset.bookIndex),chapter:Number(reader.dataset.chapter),verse:1,route:reader.dataset.readerRoute};
+  const workspace=reader.querySelector('.reader-workspace');
+  const frame=document.createElement('section');frame.className='passage-window';frame.setAttribute('aria-label','Passage window');
+  workspace.before(frame);frame.append(heading,toolbar,content,panel);workspace.remove();
+  const canvas=document.createElement('div');canvas.className='reader-canvas';canvas.hidden=true;canvas.setAttribute('aria-label','Illustrated passage journey');
+  const world=document.createElement('div');world.className='journey-world';
+  const caption=document.createElement('p');caption.className='journey-caption';
+  canvas.append(world,caption);reader.prepend(canvas);
+  const selectors=toolbar.querySelector('.reader-selectors');
+  selectors.append(toolbar.querySelector('.reader-display'));
+  const locationMenu=document.createElement('details');locationMenu.className='reader-location';
+  const locationSummary=document.createElement('summary');locationSummary.setAttribute('aria-label','Choose book and chapter');
+  locationSummary.append(heading.querySelector('h1'));
+  locationMenu.append(locationSummary,selectors);heading.prepend(locationMenu);
+  const modes=toolbar.querySelector('.reader-modes');
+  heading.append(modes);
+  const codexButton=document.createElement('button');codexButton.type='button';codexButton.dataset.windowTab='codex';codexButton.className='reader-codex-button';codexButton.textContent='Codex';heading.append(codexButton);
+  const tabs=document.createElement('nav');tabs.className='passage-tabs';tabs.setAttribute('aria-label','Passage window content');
+  for(const key of ['scripture','context','codex']){
+    const b=document.createElement('button');b.type='button';b.dataset.windowTab=key;b.textContent=key==='scripture'?'Scripture':key==='context'?'Context':'Codex';tabs.append(b);
   }
-  function findVerse(book, chapter, verse) {
-    return [...reader.querySelectorAll('.scripture .v')].find(node => {
-      const value = positionForVerse(node);
-      return value && value.route === `/book/${book}/${chapter}` && value.verse === Number(verse);
+  toolbar.after(tabs);
+  const footer=document.createElement('footer');footer.className='passage-window-footer';
+  const follow=document.createElement('button');follow.type='button';follow.dataset.windowFollow='';follow.textContent='Follow passage';
+  const expand=document.createElement('button');expand.type='button';expand.dataset.readerMode='passage';expand.textContent='Read';expand.title='Expand Scripture';
+  footer.append(follow,expand);frame.append(footer);
+  panel.querySelector('.reader-context-heading').hidden=true;
+  status.classList.add('sr-only');
+  const show=()=>{
+    reader.dataset.contextMode=mode;
+    reader.dataset.windowTab=tab;
+    document.body.classList.toggle('has-scene',mode!=='passage');
+    document.body.classList.add('has-reader');
+    canvas.hidden=mode==='passage';
+    content.hidden=tab!=='scripture';
+    panel.hidden=tab==='scripture';
+    tabs.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.windowTab===tab));if(b.dataset.windowTab==='context')b.hidden=mode==='passage';});
+    modes.querySelectorAll('[data-reader-mode]').forEach(b=>{
+      const target=b.dataset.readerMode;
+      b.hidden=target==='passage'||target==='journey'&&mode!=='passage'||target==='illustration';
+      if(target==='journey')b.textContent='Journey';
     });
-  }
-  root.addEventListener('click', event => {
-    const target = event.target.closest('[data-reader-mode],[data-context-part],[data-context-follow],[data-context-read],[data-context-map-action],[data-context-art-view]');
-    if (!target || !reader.contains(target)) return;
-    if (target.hasAttribute('data-context-read')) {
-      const verse = findVerse(target.dataset.contextBook, target.dataset.contextChapter, target.dataset.contextVerse);
-      if (!verse) {
-        // An intentional source jump opens the text even on a narrow screen.
-        const sourceURL=new URL(target.getAttribute('href').replace(/^#(?=\/)/,''),location.origin);
-        sourceURL.searchParams.set('focus','passage');
-        const href=`${sourceURL.pathname}${sourceURL.search}${sourceURL.hash}`;
-        target.setAttribute('href',location.hash.startsWith('#/')?`#${href}`:href);
-        return;
-      }
-      event.preventDefault(); event.stopImmediatePropagation();
-      const targetURL = new URL(target.getAttribute('href').replace(/^#(?=\/)/,''),location.origin);
-      for (const key of ['context','scene','part']) if(targetURL.searchParams.has(key)) {
-        if(key==='context') mode=targetURL.searchParams.get(key);
-        if(key==='part') part=targetURL.searchParams.get(key);
-        if(key==='scene') scene=targetURL.searchParams.get(key);
-      }
-      const url=routeURL(); url.searchParams.set('resume',target.dataset.contextVerse); url.hash=`v${target.dataset.contextVerse}`;
-      history.replaceState(history.state,'',location.hash.startsWith('#/')?`#${url.pathname}${url.search}${url.hash}`:`${url.pathname}${url.search}${url.hash}`);
-      const player=reader.querySelector('[data-reader-audio]');
-      if(['starting','reading','paused'].includes(player?.dataset.audioState)) player.querySelector('[data-audio-action="stop"]')?.click();
-      saveProgress(verse); verse.classList.add('is-context-current');
-      reader.querySelectorAll('.is-context-current').forEach(node=>{if(node!==verse) node.classList.remove('is-context-current');});
-      verse.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
-      verse.tabIndex=-1; verse.focus({preventScroll:true}); refresh(); return;
+    expand.hidden=mode==='passage';
+    follow.hidden=mode==='passage';
+    follow.textContent=inspected?'Follow passage':'Following passage';
+    follow.setAttribute('aria-pressed',String(!inspected));
+    const u=routeURL();for(const key of ['context','part','scene','entry'])u.searchParams.delete(key);
+    if(mode!=='passage')u.searchParams.set('context',mode);
+    if(mode==='illustration'&&part)u.searchParams.set('part',part);
+    if(mode==='illustration'&&scene)u.searchParams.set('scene',scene);
+    if(tab==='codex'&&entry)u.searchParams.set('entry',entry);
+    const path=u.pathname+u.search+u.hash;
+    history.replaceState(history.state,'',location.hash.startsWith('#/')?'#'+path:path);
+  };
+  const applyDisplay=value=>{
+    reader.dataset.textSize=['standard','large','larger'].includes(value?.size)?value.size:'standard';
+    reader.dataset.lineSpacing=value?.spacing==='spacious'?'spacious':'comfortable';
+    reader.querySelector('[data-reader-size]').value=reader.dataset.textSize;
+    reader.querySelector('[data-reader-spacing]').value=reader.dataset.lineSpacing;
+  };
+  try{applyDisplay(JSON.parse(localStorage.getItem(DISPLAY_KEY)));}catch{applyDisplay(null);}
+  const selectVerse=(record,scroll=false)=>{
+    const found=[...reader.querySelectorAll('.scripture .v')].find(n=>{const p=positionForVerse(n);return p?.route===record.route&&p.verse===record.verse;});
+    if(!found)return;
+    reader.querySelectorAll('.is-context-current').forEach(n=>n.classList.toggle('is-context-current',n===found));
+    found.classList.add('is-context-current');
+    if(scroll&&tab==='scripture')found.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
+  };
+  let pan=0,worldWidth=0,worldHeight=0,manualPan=false;
+  const sizeScene=()=>{
+    const figure=world.querySelector('figure'), img=figure?.querySelector('img');
+    if(!figure||!img)return;
+    const w=canvas.clientWidth,h=canvas.clientHeight;
+    const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024));
+    worldWidth=(img.naturalWidth||1536)*scale;worldHeight=(img.naturalHeight||1024)*scale;
+    world.style.width=worldWidth+'px';world.style.height=worldHeight+'px';
+    world.style.top=(h-worldHeight)/2+'px';
+    const selected=figure.querySelector('[aria-current],[aria-pressed="true"]');
+    if(!manualPan){
+      const x=selected?parseFloat(selected.style.left)/100:.3;
+      const desktop=innerWidth>=900;
+      const target=w*(desktop ? 0.4 : 0.45);
+      const initial=(w-worldWidth)/2;
+      const scenePoint=initial+x*worldWidth;
+      pan=scenePoint>w*(desktop ? 0.65 : 0.78)||scenePoint<44?target-x*worldWidth:initial;
+      pan=Math.max(w-worldWidth-(desktop?w*.28:0),Math.min(0,pan));
     }
-    event.preventDefault(); event.stopImmediatePropagation();
-    if (target.dataset.contextArtView) {artView=target.dataset.contextArtView;updateButtons();writeURL();return;}
-    if (target.dataset.readerMode) {mode=target.dataset.readerMode; writeURL(); refresh(); return;}
-    if (target.dataset.contextPart) {part=target.dataset.contextPart;artView='detail'; refresh({focusPart:part}); return;}
-    if (target.hasAttribute('data-context-follow')) {part=null; refresh(); return;}
-    const action=target.dataset.contextMapAction;
-    if(action==='zoom-in') terrain?.zoom(1);
-    if(action==='zoom-out') terrain?.zoom(-1);
-    if(action==='overview') {follow=false; terrain?.fit();}
-    if(action==='terrain') {const enabled=target.getAttribute('aria-pressed')!=='true';target.setAttribute('aria-pressed',String(enabled));terrain?.set3D(enabled);}
-    if(action==='retry') {stopMap();lastHTML='';refresh();}
-    if(action==='follow') {follow=true; terrain?.update(mapState,{follow:true,force:true}); target.textContent='Follow passage';}
-  }, {capture:true,signal});
-  reader.addEventListener('change', event => {
-    if(event.target.matches('[data-context-part-select]')) {part=event.target.value;artView='detail';refresh({focusPart:part});return;}
-    if(!event.target.matches('[data-reader-size],[data-reader-spacing]')) return;
-    const value={size:reader.querySelector('[data-reader-size]').value,spacing:reader.querySelector('[data-reader-spacing]').value};
-    applyDisplay(value); try {localStorage.setItem(DISPLAY_KEY,JSON.stringify(value));}catch{}
-  },{signal});
-  reader.addEventListener('bible:position', event => {
-    const next=event.detail?.record;
-    if(!next || next.bookIndex===position.bookIndex && next.chapter===position.chapter && next.verse===position.verse) return;
-    if(next.bookIndex!==position.bookIndex || next.chapter!==position.chapter) part=null;
-    position=next; refresh();
-  },{signal});
-  const dispose=()=>{active=false;generation++;abort.abort();panelObserver.disconnect();stopMap();};
-  mounted.set(root,dispose); refresh();
+    world.style.left=pan+'px';
+  };
+  let dragging=null;
+  on(canvas,'pointerdown',e=>{if(e.target.closest('a,button'))return;dragging={x:e.clientX,pan};canvas.setPointerCapture(e.pointerId);});
+  on(canvas,'pointermove',e=>{if(!dragging)return;manualPan=true;pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,dragging.pan+e.clientX-dragging.x));world.style.left=pan+'px';});
+  on(world,'focusin',e=>{
+    const pin=e.target.closest('a');if(!pin||!worldWidth)return;
+    const r=pin.getBoundingClientRect(),right=innerWidth>=900?frame.getBoundingClientRect().left-20:canvas.clientWidth-12;
+    if(r.left<12||r.right>right){manualPan=true;pan+=right*.5-(r.left+r.width*.5);pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,pan));world.style.left=pan+'px';}
+  });
+  on(canvas,'pointerup',()=>{dragging=null;});
+  on(canvas,'pointercancel',()=>{dragging=null;});
+  on(window,'resize',sizeScene);
+  const stopMap=()=>{terrain?.destroy();terrain=null;};
+  async function loadCodex(){
+    const p=new URLSearchParams({book:position.bookIndex,chapter:position.chapter,verse:position.verse});if(entry)p.set('entry',entry);
+    const result=await request('/api/codex?'+p);
+    if(active&&tab==='codex'){body.innerHTML=result.html;show();}
+  }
+  async function refresh({scroll=false}={}){
+    show();selectVerse(position,scroll);
+    const run=++generation;
+    if(tab==='codex'){try{await loadCodex();}catch{body.textContent='The Codex could not load. Try again.';}}
+    const reference=inspected||position;
+    const kind=mode==='passage'?'availability':mode;
+    const params=new URLSearchParams({book:reference.bookIndex,chapter:reference.chapter,verse:reference.verse,mode:kind});
+    if(part)params.set('part',part);
+    try{
+      const result=await request('/api/reader-context?'+params);
+      if(!active||run!==generation)return;
+      value=result;
+      const available=result.journey_available||result.relevant_scene||result.geographic_available||result.kind==='geography';
+      const journeyButton=modes.querySelector('[data-reader-mode="journey"]');
+      journeyButton.hidden=mode!=='passage'||!available;
+      if(mode==='passage')return;
+      scene=result.scene||scene;
+      if(result.kind==='empty'){caption.textContent='No illustrated setting assigned to this passage';}
+      const template=document.createElement('template');template.innerHTML=result.html||'';
+      const figure=template.content.querySelector('.story-journey-art,.reader-illustration-scene');
+      const sourceCaption=template.content.querySelector('.story-journey-caption');
+      if(figure){
+        const artKey=figure.outerHTML;
+        if(lastArt!==artKey){
+          stopMap();world.replaceChildren(figure);lastArt=artKey;manualPan=false;
+          const img=figure.querySelector('img');
+          img.loading='eager';img.addEventListener('load',sizeScene,{once:true,signal});
+          img.addEventListener('error',()=>{caption.textContent='Illustration could not load. Scripture remains available.';},{once:true,signal});
+          sizeScene();
+        }
+        caption.textContent=sourceCaption?.textContent||'Illustrated reconstruction · appearance and placement are illustrative';
+      }else if(result.kind==='geography'){
+        const map=template.content.querySelector('[data-context-map]');
+        if(lastArt!=='geo:'+reference.bookIndex+':'+reference.chapter){
+          stopMap();world.replaceChildren(map);world.style.cssText='';map.classList.add('immersive-terrain');
+          lastArt='geo:'+reference.bookIndex+':'+reference.chapter;
+          terrain=await createTerrainMap(map,{onInteract(){manualPan=true;},onPlaceSelect(place){if(tab==='context'){body.querySelector('h3')?.replaceChildren(document.createTextNode(place.name));}},onStatus(e){caption.textContent=e.message||'Modern terrain · approximate locations';}});
+          if(!active){terrain.destroy();return;}terrain.set3D(true);
+        }
+        terrain?.update(result.map,{follow:!inspected&&!manualPan,animate:true,force:true});
+        caption.textContent='Modern terrain · approximate locations and schematic journey';
+      }else{
+        stopMap();world.replaceChildren();lastArt='';canvas.classList.add('is-unassigned');
+      }
+      if(tab==='context'){
+        const detail=template.content.querySelector('[data-context-detail]');
+        body.replaceChildren();
+        if(detail)body.append(detail);
+        else{
+          const copy=template.content.querySelector('.reader-context-copy,.story-journey-current,.reader-context-empty');
+          if(copy)body.append(copy);
+          const explanatory=template.content.querySelector('.story-journey-details');
+          if(explanatory){explanatory.open=true;body.append(explanatory);}
+          const stops=template.content.querySelector('.reader-geo-stops');if(stops)body.append(stops);
+          const sources=template.content.querySelector('.reader-context-sources');if(sources)body.append(sources);
+        }
+        if(inspected){
+          const jump=document.createElement('a');jump.className='reader-context-read';jump.dataset.contextRead='';
+          jump.href=(typeof window.rustBibleApi==='function'?'#':'')+inspected.route+'?resume='+inspected.verse+'&context='+mode+'#v'+inspected.verse;
+          jump.dataset.contextBook=inspected.book; jump.dataset.contextChapter=inspected.chapter;jump.dataset.contextVerse=inspected.verse;
+          jump.textContent='Read '+inspected.book+' '+inspected.chapter+':'+inspected.verse+' →';body.append(jump);
+        }
+      }
+      status.textContent=inspected?'Browsing context. Your reading position has not moved.':'Following '+position.book+' '+position.chapter+':'+position.verse;
+      show();
+    }catch(error){if(active&&run===generation){status.textContent='Context could not load. Scripture and audio remain available.';if(tab==='context')body.textContent=status.textContent;}}
+  }
+  const inspectLink=target=>{
+    const ch=Number(target.dataset.contextChapter),v=Number(target.dataset.contextVerse);
+    inspected={book:target.dataset.contextBook,bookIndex:position.bookIndex,chapter:ch,verse:v,route:'/book/'+target.dataset.contextBook.replaceAll(' ','-')+'/'+ch};
+    part=null;tab='context';refresh();
+  };
+  on(reader,'click',event=>{
+    const target=event.target.closest('[data-reader-mode],[data-window-tab],[data-window-follow],[data-context-part],[data-context-read],[data-codex-entry],[data-codex-read]');
+    if(!target)return;
+    if(target.hasAttribute('data-codex-read')){
+      window.biblePlayback?.stop();return;
+    }
+    if(target.hasAttribute('data-context-read')){
+      if(canvas.contains(target)){event.preventDefault();event.stopImmediatePropagation();inspectLink(target);return;}
+      const chapter=Number(target.dataset.contextChapter),verse=Number(target.dataset.contextVerse);
+      const record={book:target.dataset.contextBook,chapter,verse,route:'/book/'+target.dataset.contextBook.replaceAll(' ','-')+'/'+chapter};
+      const found=[...reader.querySelectorAll('.scripture .v')].find(n=>{const p=positionForVerse(n);return p?.route===record.route&&p.verse===verse;});
+      window.biblePlayback?.stop();
+      if(found){event.preventDefault();event.stopImmediatePropagation();inspected=null;tab='scripture';saveProgress(found);position=positionForVerse(found);refresh({scroll:true});}return;
+    }
+    event.preventDefault();event.stopImmediatePropagation();
+    if(target.dataset.readerMode){
+      mode=target.dataset.readerMode;
+      if(mode==='journey'&&!value?.journey_available&&value?.relevant_scene)mode='illustration';
+      tab='scripture';inspected=null;part=null;manualPan=false;refresh({scroll:true});return;
+    }
+    if(target.dataset.windowTab){tab=target.dataset.windowTab;if(tab==='scripture'){inspected=null;part=null;}refresh({scroll:tab==='scripture'});return;}
+    if(target.hasAttribute('data-window-follow')){inspected=null;part=null;entry=null;manualPan=false;tab='scripture';refresh({scroll:true});return;}
+    if(target.dataset.contextPart){part=target.dataset.contextPart;tab='context';inspected={...position};refresh();return;}
+    if(target.dataset.codexEntry){entry=target.dataset.codexEntry;tab='codex';loadCodex();show();}
+  },{capture:true});
+  on(reader,'change',event=>{
+    if(!event.target.matches('[data-reader-size],[data-reader-spacing]'))return;
+    const settings={size:reader.querySelector('[data-reader-size]').value,spacing:reader.querySelector('[data-reader-spacing]').value};
+    applyDisplay(settings);try{localStorage.setItem(DISPLAY_KEY,JSON.stringify(settings));}catch{}
+  });
+  on(reader,'bible:position',event=>{
+    const p=event.detail?.record;if(!p)return;
+    position=p;
+    const u=routeURL();
+    if(p.source!=='listening'&&p.route!==reader.dataset.readerRoute&&document.getElementById('app')){
+      u.pathname=p.route;u.searchParams.set('resume',p.verse);u.hash='v'+p.verse;
+      location.hash='#'+u.pathname+u.search+u.hash;return;
+    }
+    if(p.source!=='listening'||p.route===reader.dataset.readerRoute){
+      u.pathname=p.route;u.searchParams.set('resume',p.verse);u.hash='v'+p.verse;
+      history.replaceState(history.state,'',location.hash.startsWith('#/')?'#'+u.pathname+u.search+u.hash:u.pathname+u.search+u.hash);
+    }
+    locationSummary.querySelector('h1').textContent=p.book+' '+p.chapter;
+    const chapters=selectors.querySelector('[data-reader-chapter]');
+    const base=p.route.substring(0,p.route.lastIndexOf('/')+1);
+    const chapterOption=[...chapters.options].find(o=>o.value.replace(/^#/,'')===p.route);
+    if(chapterOption)chapters.value=chapterOption.value;
+    selectVerse(p);if(!inspected)refresh();
+  });
+  // The inset uses the same Scripture nodes. Scrolling it is real reading input,
+  // and the shared journey tracker records the visible verse.
+  on(content,'scroll',()=>reader.dispatchEvent(new CustomEvent('bible:panel-scroll',{bubbles:true})),{passive:true});
+  const cleanup=()=>{active=false;generation++;abort.abort();stopMap();document.body.classList.remove('has-scene','has-reader');};
+  mounted.set(root,cleanup);refresh({scroll:mode!=='passage'});
+  document.fonts.ready.then(()=>{if(active&&mode!=='passage'&&tab==='scripture'&&!inspected){selectVerse(position,true);sizeScene();}});
 }
-
-if (!document.getElementById('app')) {
+if(!document.getElementById('app')){
   const run=()=>initReaderContext(document);
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run,{once:true}); else run();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run,{once:true});else run();
 }

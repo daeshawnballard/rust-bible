@@ -53,6 +53,7 @@ fn read_link(
 
 fn genesis(chapter: usize, verse: usize, client: bool) -> Value {
     let active = match (chapter, verse) {
+        (2, 10..=14) => "river",
         (2, 8..) | (3, 1..=22) => "garden",
         (3, 23) | (4, 1..=15) => "outside",
         (3, 24) => "way",
@@ -60,6 +61,7 @@ fn genesis(chapter: usize, verse: usize, client: bool) -> Value {
         _ => "introduced",
     };
     let (title, note) = match active {
+        "river" => ("The river from Eden", "Genesis 2:10 describes a river watering the garden and dividing into four heads. Its course and modern location are unknown."),
         "garden" => ("In the garden", "Genesis introduces the garden in Eden at 2:8. The scene places the reading within the story, not at a verified modern coordinate."),
         "outside" => ("Outside the garden", "Genesis 3:23 describes the man being sent out to till the ground. The text does not identify a surveyed route or the location of his new home."),
         "way" => ("The way to the tree of life", "Genesis 3:24 places the cherubims and flaming sword east of the garden. This illustration marks a story boundary; it does not establish a real-world route."),
@@ -67,13 +69,14 @@ fn genesis(chapter: usize, verse: usize, client: bool) -> Value {
         _ => ("The garden is introduced at Genesis 2:8", "No location is assigned to these opening verses. The garden scene introduces the setting that appears later in the chapter."),
     };
     let stops = [
-        ("garden", "Garden", 2, 8, 31, 35),
-        ("outside", "Outside the garden", 3, 23, 69, 57),
-        ("way", "Guarded way", 3, 24, 53, 44),
-        ("nod", "Land of Nod", 4, 16, 85, 29),
+        ("garden", "Garden", 2, 8, 19, 35),
+        ("river", "River", 2, 10, 28, 65),
+        ("outside", "Outside the garden", 3, 23, 71, 50),
+        ("way", "Guarded way", 3, 24, 53, 43),
+        ("nod", "Land of Nod", 4, 16, 88, 54),
     ];
     let mut html = format!(
-        r#"<section class="story-journey" data-story-stage="{active}"><p class="reader-context-kind">Illustrated story journey · Genesis 2–4</p><figure class="story-journey-art"><img src="/art/journey/genesis.webp" width="1536" height="1024" alt="Symbolic landscape with a lush garden and rough ground beyond; this is not a geographic map"><svg viewBox="0 0 100 66.667" aria-hidden="true"><path d="M31 23 C44 25 50 32 69 38 S81 30 85 19"/></svg>"#
+        r#"<section class="story-journey" data-story-stage="{active}"><p class="reader-context-kind">Illustrated story journey · Genesis 2–4</p><figure class="story-journey-art"><img src="/art/journey/genesis-immersive-v1.webp" width="1536" height="1024" alt="Symbolic landscape with a lush garden and rough ground beyond; this is not a geographic map"><svg viewBox="0 0 100 66.667" aria-hidden="true"><path d="M31 23 C44 25 50 32 69 38 S81 30 85 19"/></svg>"#
     );
     for (id, label, ch, v, x, y) in stops {
         let current = if id == active {
@@ -164,7 +167,7 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
     let mode = q.get("mode").map(String::as_str).unwrap_or("journey");
     let relevant = learning::relevant_scene(book, chapter);
     let mut value = if mode == "availability" {
-        json!({"relevant_scene":relevant,"journey_available":illustrated_journey(book, chapter)})
+        json!({"relevant_scene":relevant,"journey_available":illustrated_journey(book, chapter),"geographic_available":super::atlas::focused_state(book,chapter,verse)["available"] == true})
     } else if mode == "illustration" {
         if let Some(scene) = relevant {
             let requested = q.get("part").map(String::as_str);

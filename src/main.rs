@@ -16,6 +16,20 @@ async fn serve(uri: Uri) -> Response {
             .body(Body::from(bytes))
             .expect("learning asset response");
     }
+    if uri.path() == "/codex.js" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")
+            .body(Body::from(include_str!("../web/codex.js")))
+            .unwrap();
+    }
+    if uri.path() == "/icons/magnifying-glass-thin.svg" {
+        return Response::builder()
+            .header(header::CONTENT_TYPE, "image/svg+xml")
+            .body(Body::from(include_str!(
+                "../web/icons/magnifying-glass-thin.svg"
+            )))
+            .unwrap();
+    }
     if uri.path() == "/progress.js" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "text/javascript; charset=utf-8")

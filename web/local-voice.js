@@ -54,8 +54,25 @@ export class LocalNarrator extends EventTarget {
   }
   get supported(){return !!(window.Worker&&window.WebAssembly&&this.audio.canPlayType('audio/wav'))||!!this.native;}
   get paused(){return this.mode==='device'?!!this.native?.paused:this.audio.paused&&!!this.current;}
+  get duration(){return Number.isFinite(this.audio.duration)?this.audio.duration:0;}
+  get currentTime(){return Number.isFinite(this.audio.currentTime)?this.audio.currentTime:0;}
+  get seekable(){return this.mode==='local'&&!this.pending&&!!this.current&&this.duration>0;}
   getVoices(){return [...NATURAL_VOICES,...(this.native?.getVoices()||[])];}
   isLocalVoice(voice){return voice?.voiceURI?.startsWith('kokoro:')===true;}
+  setRate(rate){
+    const value=Number(rate);
+    if(Number.isFinite(value)&&value>=0.5&&value<=2)this.audio.playbackRate=value;
+  }
+  setVolume(volume){
+    const value=Number(volume);
+    if(Number.isFinite(value))this.audio.volume=Math.max(0,Math.min(1,value));
+  }
+  seek(seconds){
+    const value=Number(seconds);
+    if(!this.seekable||!Number.isFinite(value))return false;
+    this.audio.currentTime=Math.max(0,Math.min(this.duration,value));
+    return true;
+  }
   unlock(){
     // Start this media element during the user's click so subsequent generated
     // chunks can play after asynchronous model/inference work on mobile.
@@ -85,6 +102,7 @@ export class LocalNarrator extends EventTarget {
       this.audio.onerror=()=>{if(token===this.token&&this.audio.currentSrc===url)utterance.onerror?.({error:'Natural audio could not play. Try Listen again or select Device default.'});};
       this.audio.src=url;this.audio.playbackRate=utterance.rate||1;
       this.audio.dataset.samples=String(samples.length);this.audio.dataset.sampleRate=String(sampleRate);
+      this.dispatchEvent(new CustomEvent('audiobuffer',{detail:{samples,sampleRate,duration:samples.length/sampleRate,text:utterance.text}}));
       return this.audio.play();
     }).catch(error=>{if(token===this.token)utterance.onerror?.({error:error.message||'Natural voice could not load.'});});
   }
