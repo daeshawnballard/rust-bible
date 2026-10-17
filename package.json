@@ -1,0 +1,13 @@
+{
+  "name": "rust-bible-sites-audio-hosting",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:hosted": "node scripts/build-hosted.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.37.1",
+    "vite": "8.0.13",
+    "wrangler": "4.92.0"
+  }
+}

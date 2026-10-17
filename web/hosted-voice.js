@@ -122,7 +122,9 @@ export class HostedNarrationStore {
     cryptoImpl = globalThis.crypto, maxBytes = MAX_MEDIA_BYTES, maxEntries = MAX_ENTRIES} = {}) {
     if (typeof fetchImpl !== 'function') throw new TypeError('Fetch is required for hosted narration.');
     this.baseURL = baseURL;
-    this.fetch = fetchImpl;
+    // WebKit's native fetch requires its Window receiver. Keeping it as a
+    // store method otherwise invokes it with HostedNarrationStore as `this`.
+    this.fetch = (...args) => fetchImpl.call(globalThis, ...args);
     this.crypto = cryptoImpl;
     this.maxBytes = Number.isFinite(maxBytes) ? Math.max(1, Math.min(MAX_MEDIA_BYTES, Math.floor(maxBytes))) : MAX_MEDIA_BYTES;
     this.maxEntries = Number.isFinite(maxEntries) ? Math.max(1, Math.min(MAX_ENTRIES, Math.floor(maxEntries))) : MAX_ENTRIES;
