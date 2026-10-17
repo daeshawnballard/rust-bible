@@ -3,9 +3,10 @@ import { KokoroTTS, env } from './vendor/kokoro/runtime.js';
 const MODEL_ID = 'onnx-community/Kokoro-82M-v1.0-ONNX';
 const MODEL_REVISION = '1939ad2a8e416c0acfeecc08a694d14ef25f2231';
 const SAMPLE_RATE = 24000;
-const MAX_CHUNK_LENGTH = 180;
-const CACHE_LIMIT = 2;
-const CACHE_SAMPLE_LIMIT = SAMPLE_RATE * 60 * 2;
+const MAX_CHUNK_LENGTH = 220;
+const CACHE_LIMIT = 3;
+const MAX_SEGMENT_SAMPLES = SAMPLE_RATE * 45;
+const CACHE_SAMPLE_LIMIT = SAMPLE_RATE * 60;
 
 env.backends.onnx.wasm.wasmPaths = {
   mjs: new URL('./vendor/kokoro/ort-wasm-simd-threaded.mjs', import.meta.url),
@@ -108,23 +109,33 @@ function cachePut(key, samples, sampleRate) {
   }
 }
 
-function postAudio(id, samples, sampleRate) {
+function postAudio(id, samples, sampleRate, telemetry) {
   const transferable = samples.slice();
-  self.postMessage({ id, type: 'audio', samples: transferable, sampleRate }, [transferable.buffer]);
+  self.postMessage({ id, type: 'audio', samples: transferable, sampleRate, telemetry }, [transferable.buffer]);
 }
 
-async function generate(id, text, voice) {
+async function generate(id, text, voice, segmentId, maxCacheSamples = CACHE_SAMPLE_LIMIT) {
   if (typeof text !== 'string' || !text.trim()) throw new Error('Reading text is empty.');
   if (!['af_heart', 'am_michael', 'bm_george'].includes(voice)) throw new Error('The selected natural voice is unavailable.');
   const key = cacheKey(text, voice);
   const hit = cacheGet(key);
   if (hit) {
-    postAudio(id, hit.samples, hit.sampleRate);
+    postAudio(id, hit.samples, hit.sampleRate, {
+      workerCacheHit: true,
+      modelWaitMs: 0,
+      generationMs: 0,
+      textCodeUnits: text.length,
+      chunkCount: 0,
+      segmentId: segmentId || null,
+    });
     return;
   }
 
+  const modelWaitStarted = performance.now();
   const tts = await getModel(id);
+  const modelWaitMs = performance.now() - modelWaitStarted;
   const chunks = splitTextLosslessly(text);
+  const generationStarted = performance.now();
   const pieces = [];
   let totalSamples = 0;
   let sampleRate = SAMPLE_RATE;
@@ -144,6 +155,7 @@ async function generate(id, text, voice) {
     sampleRate = rate;
     pieces.push(samples);
     totalSamples += samples.length;
+    if (totalSamples > MAX_SEGMENT_SAMPLES) throw new Error('Natural voice audio exceeded the segment memory limit.');
   }
 
   const combined = new Float32Array(totalSamples);
@@ -152,8 +164,17 @@ async function generate(id, text, voice) {
     combined.set(piece, offset);
     offset += piece.length;
   }
-  cachePut(key, combined, sampleRate);
-  postAudio(id, combined, sampleRate);
+  const retentionLimit = Math.max(0, Math.min(CACHE_SAMPLE_LIMIT,
+    Number.isFinite(maxCacheSamples) ? Math.floor(maxCacheSamples) : CACHE_SAMPLE_LIMIT));
+  if (combined.length <= retentionLimit) cachePut(key, combined, sampleRate);
+  postAudio(id, combined, sampleRate, {
+    workerCacheHit: false,
+    modelWaitMs,
+    generationMs: performance.now() - generationStarted,
+    textCodeUnits: text.length,
+    chunkCount: chunks.length,
+    segmentId: segmentId || null,
+  });
 }
 
 async function handle(message) {
@@ -164,7 +185,7 @@ async function handle(message) {
     return;
   }
   if (type !== 'generate') throw new Error('Unsupported worker request.');
-  await generate(id, message.text, message.voice);
+  await generate(id, message.text, message.voice, message.segmentId, message.maxCacheSamples);
 }
 
 self.onmessage = (event) => {

@@ -1,11 +1,14 @@
 import { readProgress, positionForVerse } from './progress.js';
-import { LocalNarrator, DEFAULT_NARRATOR } from './local-voice.js';
+import { LocalNarrator, DEFAULT_NARRATOR, splitSpeech } from './local-voice.js';
 
 const RUNTIME_KEY = Symbol.for('rust-bible.global-audio.v1');
 const RATE_KEY = 'bible.rate';
 const VOICE_KEY = 'bible.narrator';
 const FOLLOW_KEY = 'bible.audio.follow';
 const VOLUME_KEY = 'bible.audio.volume';
+const LOOKAHEAD_SEGMENT_COUNT = 2;
+const LOOKAHEAD_SAMPLE_LIMIT = 24000 * 60;
+const INITIAL_BUFFER_TIMEOUT_MS = 8000;
 const ACTIVE_STATES = new Set(['preparing', 'playing', 'paused']);
 const SOURCE_BUTTONS = new WeakSet();
 
@@ -54,10 +57,6 @@ function formatTime(value) {
   if (!Number.isFinite(value) || value < 0) return '—:—';
   const seconds = Math.floor(value);
   return `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
-}
-
-function splitSpeech(text) {
-  return String(text || '').match(/.{1,220}(?:\s|$)|\S{1,220}/g)?.map(part => part.trim()).filter(Boolean) || [];
 }
 
 function makeDock(runtime) {
@@ -139,7 +138,11 @@ function makeDock(runtime) {
     runtime.voice = runtime.ui.voice.value || DEFAULT_NARRATOR;
     writePreference(VOICE_KEY, runtime.voice);
     if (ACTIVE_STATES.has(runtime.state)) {
+      runtime.narrator.cancelPrefetch();
+      clearLookahead(runtime);
+      settleInitialBuffer(runtime);
       setStatus(runtime, 'Voice selected. It will be used for the next verse.');
+      if (runtime.state === 'playing') maintainLookahead(runtime, runtime.generation);
     }
   });
   runtime.ui.follow.addEventListener('change', () => {
@@ -178,6 +181,8 @@ function getRuntime() {
   if (window[RUNTIME_KEY]) return window[RUNTIME_KEY];
   const runtime = {
     narrator: null, dock: null, ui: null, source: null, previewConfig: null, queue: [], index: 0, chunkIndex: 0,
+    currentVerseVoice: null, initialBufferPending: false, initialBuffer: null,
+    lookahead: new Map(), lookaheadSamples: 0, lookaheadWork: null, lookaheadRefresh: false, lookaheadEpoch: 0,
     generation: 0, state: 'idle', position: null, samples: null, sampleRate: 0,
     waveDuration: 0, rate: Number(readPreference(RATE_KEY, '1')) || 1,
     voice: readPreference(VOICE_KEY, DEFAULT_NARRATOR),
@@ -188,6 +193,7 @@ function getRuntime() {
   };
   runtime.narrator = new LocalNarrator({onProgress: progress => {
     if (runtime.state !== 'preparing') return;
+    if (runtime.initialBuffer && !runtime.initialBuffer.settled) return;
     const total = Number(progress.total) || 0;
     const loaded = Number(progress.loaded) || 0;
     const message = total > 0
@@ -477,6 +483,9 @@ function cancelUtterance(runtime) {
   clearTimeout(runtime.startTimer);
   runtime.startTimer = null;
   runtime.generation += 1;
+  settleInitialBuffer(runtime);
+  clearLookahead(runtime);
+  runtime.initialBufferPending = false;
   runtime.narrator.cancel();
   runtime.loadingNext = null;
   runtime.loadError = null;
@@ -490,6 +499,7 @@ function stopPlayback(runtime) {
   runtime.queue = [];
   runtime.index = 0;
   runtime.chunkIndex = 0;
+  runtime.currentVerseVoice = null;
   runtime.source = null;
   runtime.position = null;
   runtime.samples = null;
@@ -753,7 +763,10 @@ async function appendNextChapter(runtime, generation) {
       if (generation !== runtime.generation || !loaded) return false;
       const existing = new Set(runtime.queue.map(item => `${item.bookIndex}:${item.chapter}:${item.verse}`));
       const additional = loaded.records.filter(item => !existing.has(`${item.bookIndex}:${item.chapter}:${item.verse}`));
-      if (!additional.length) return false;
+      if (!additional.length) {
+        runtime.loadError = new Error('The next chapter did not add any readable verses.');
+        return false;
+      }
       runtime.queue.push(...additional);
       runtime.source.next = loaded.next;
       runtime.source.lastLoadedRoute = loaded.route;
@@ -770,13 +783,193 @@ async function appendNextChapter(runtime, generation) {
   return pending;
 }
 
-function prefetchUpcoming(runtime, generation) {
-  if (!runtime.source?.continuous || runtime.index !== runtime.queue.length - 1) return;
-  void appendNextChapter(runtime, generation);
-}
-
 function readingStatus(record) {
   return `Listening · ${record.book} ${record.chapter}:${record.verse}`;
+}
+
+function segmentId(runtime, record, chunkIndex) {
+  return `${runtime.generation}:${record.bookIndex ?? 'x'}:${record.chapter}:${record.verse}:${chunkIndex}`;
+}
+
+function voiceFor(runtime, uri) {
+  return runtime.narrator.getVoices().find(item => item.voiceURI === uri) || null;
+}
+
+function settleInitialBuffer(runtime, buffer = runtime.initialBuffer) {
+  if (!buffer || buffer.settled) return;
+  buffer.settled = true;
+  clearTimeout(buffer.timer);
+  if (runtime.initialBuffer === buffer) runtime.initialBuffer = null;
+  buffer.resolve();
+}
+
+function createInitialBuffer(runtime, generation) {
+  let resolve;
+  const buffer = {
+    generation,
+    promise: new Promise(done => { resolve = done; }),
+    resolve: () => resolve?.(),
+    settled: false,
+    timer: null,
+  };
+  runtime.initialBuffer = buffer;
+  return buffer;
+}
+
+function clearLookahead(runtime) {
+  runtime.lookaheadEpoch += 1;
+  runtime.lookahead.clear();
+  runtime.lookaheadSamples = 0;
+  runtime.lookaheadWork = null;
+  runtime.lookaheadRefresh = false;
+}
+
+function dropLookahead(runtime, id, expected) {
+  const entry = runtime.lookahead.get(id);
+  if (!entry || (expected && entry !== expected)) return;
+  if (entry.status === 'ready') runtime.lookaheadSamples = Math.max(0, runtime.lookaheadSamples - entry.sampleCount);
+  runtime.lookahead.delete(id);
+}
+
+function failLookahead(runtime, id, entry) {
+  if (runtime.lookahead.get(id) !== entry) return;
+  entry.status = 'failed';
+  entry.sampleCount = 0;
+}
+
+async function upcomingSpeechSegments(runtime, generation) {
+  const segments = [];
+  let index = runtime.index;
+  let chunkIndex = runtime.chunkIndex + 1;
+  let loadedBoundary = false;
+
+  while (segments.length < LOOKAHEAD_SEGMENT_COUNT) {
+    if (generation !== runtime.generation) return [];
+    const record = runtime.queue[index];
+    if (!record) {
+      if (loadedBoundary || !runtime.source?.continuous || !runtime.source.next) break;
+      loadedBoundary = true;
+      if (!await appendNextChapter(runtime, generation)) break;
+      continue;
+    }
+
+    const chunks = splitSpeech(record.text);
+    while (chunkIndex < chunks.length && segments.length < LOOKAHEAD_SEGMENT_COUNT) {
+      const text = chunks[chunkIndex];
+      const voiceURI = index === runtime.index ? runtime.currentVerseVoice || runtime.voice : runtime.voice;
+      const voice = voiceFor(runtime, voiceURI);
+      if (text.trim()) segments.push({
+        text,
+        voice,
+        local: runtime.narrator.isLocalVoice(voice),
+        segmentId: segmentId(runtime, record, chunkIndex),
+      });
+      chunkIndex += 1;
+    }
+    if (chunkIndex >= chunks.length) {
+      index += 1;
+      chunkIndex = 0;
+    } else {
+      break;
+    }
+  }
+
+  return segments;
+}
+
+function maintainLookahead(runtime, generation, initialBuffer = null) {
+  if (generation !== runtime.generation) return Promise.resolve();
+  const epoch = runtime.lookaheadEpoch;
+  const cursor = `${runtime.index}:${runtime.chunkIndex}`;
+  const currentWork = runtime.lookaheadWork;
+  if (currentWork && currentWork.generation === generation && currentWork.epoch === epoch
+    && currentWork.cursor === cursor) {
+    if (initialBuffer) currentWork.initialBuffers.add(initialBuffer);
+    if (runtime.state === 'playing') runtime.lookaheadRefresh = true;
+    return currentWork.promise;
+  }
+
+  const workRecord = {generation, epoch, cursor, promise: null, initialBuffers: new Set()};
+  if (initialBuffer) workRecord.initialBuffers.add(initialBuffer);
+  const work = (async () => {
+    try {
+      const candidates = await upcomingSpeechSegments(runtime, generation);
+      if (generation !== runtime.generation || epoch !== runtime.lookaheadEpoch) return;
+
+      const candidateIds = new Set(candidates.map(candidate => candidate.segmentId));
+      for (const id of runtime.lookahead.keys()) {
+        if (!candidateIds.has(id)) dropLookahead(runtime, id);
+      }
+
+      for (const candidate of candidates) {
+        if (generation !== runtime.generation || epoch !== runtime.lookaheadEpoch) break;
+        if (`${runtime.index}:${runtime.chunkIndex}` !== cursor) {
+          runtime.lookaheadRefresh = true;
+          break;
+        }
+        if (!candidate.local) continue;
+
+        const existing = runtime.lookahead.get(candidate.segmentId);
+        if (existing?.status === 'ready') continue;
+        if (existing?.status === 'failed') break;
+        if (existing?.status === 'pending') {
+          if (!await existing.promise) break;
+          continue;
+        }
+
+        const activeSamples = runtime.samples instanceof Float32Array ? runtime.samples.length : 0;
+        const availableSamples = Math.max(0, LOOKAHEAD_SAMPLE_LIMIT - activeSamples - runtime.lookaheadSamples);
+        if (!availableSamples) break;
+
+        const entry = {status: 'pending', sampleCount: 0, promise: null};
+        runtime.lookahead.set(candidate.segmentId, entry);
+        const request = runtime.narrator.prefetch(candidate.text, candidate.voice, {
+          segmentId: candidate.segmentId,
+          maxCacheSamples: availableSamples,
+        });
+        if (!request) {
+          failLookahead(runtime, candidate.segmentId, entry);
+          break;
+        }
+
+        entry.promise = Promise.resolve(request).then(result => {
+          if (generation !== runtime.generation || epoch !== runtime.lookaheadEpoch
+            || runtime.lookahead.get(candidate.segmentId) !== entry) return false;
+          const sampleCount = result?.samples?.length || 0;
+          const currentSamples = runtime.samples instanceof Float32Array ? runtime.samples.length : 0;
+          if (!sampleCount || sampleCount > availableSamples
+            || currentSamples + runtime.lookaheadSamples + sampleCount > LOOKAHEAD_SAMPLE_LIMIT) {
+            failLookahead(runtime, candidate.segmentId, entry);
+            return false;
+          }
+          entry.status = 'ready';
+          entry.sampleCount = sampleCount;
+          runtime.lookaheadSamples += sampleCount;
+          return true;
+        }).catch(() => {
+          failLookahead(runtime, candidate.segmentId, entry);
+          return false;
+        });
+
+        if (!await entry.promise) break;
+      }
+    } catch {
+      // Lookahead is opportunistic: the current segment can still play.
+    } finally {
+      const ownsCurrentWork = runtime.lookaheadWork === workRecord;
+      if (ownsCurrentWork) runtime.lookaheadWork = null;
+      for (const buffer of workRecord.initialBuffers) settleInitialBuffer(runtime, buffer);
+      if (ownsCurrentWork && epoch === runtime.lookaheadEpoch && runtime.lookaheadRefresh
+        && generation === runtime.generation && runtime.state === 'playing') {
+        runtime.lookaheadRefresh = false;
+        queueMicrotask(() => { void maintainLookahead(runtime, generation); });
+      }
+    }
+  })();
+
+  workRecord.promise = work;
+  runtime.lookaheadWork = workRecord;
+  return work;
 }
 
 function finishPlayback(runtime) {
@@ -789,6 +982,7 @@ async function advance(runtime, generation) {
   if (generation !== runtime.generation) return;
   runtime.index += 1;
   runtime.chunkIndex = 0;
+  runtime.currentVerseVoice = null;
   if (runtime.index < runtime.queue.length) {
     speakCurrent(runtime, generation);
     return;
@@ -821,11 +1015,34 @@ function speakCurrent(runtime, generation) {
     return;
   }
   const chunkIndex = runtime.chunkIndex;
+  if (!chunks[chunkIndex].trim()) {
+    runtime.chunkIndex += 1;
+    speakCurrent(runtime,generation);
+    return;
+  }
   runtime.samples = null;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
-  const voice = runtime.narrator.getVoices().find(item => item.voiceURI === runtime.voice) || null;
-  const utterance = {text: chunks[chunkIndex], lang: 'en-US', rate: runtime.rate, voice};
+  if (chunkIndex === 0) runtime.currentVerseVoice = runtime.voice;
+  const voice = voiceFor(runtime,runtime.currentVerseVoice || runtime.voice);
+  const initialBuffer = runtime.initialBufferPending && runtime.narrator.isLocalVoice(voice)
+    ? createInitialBuffer(runtime, generation) : null;
+  if (initialBuffer) runtime.initialBufferPending = false;
+  const utterance = {text: chunks[chunkIndex], lang: 'en-US', rate: runtime.rate, voice,
+    segmentId:segmentId(runtime,record,chunkIndex), segmentIndex:chunkIndex, segmentCount:chunks.length};
+  if (initialBuffer) {
+    utterance.beforePlay = initialBuffer.promise;
+    utterance.onbuffer = () => {
+      if (generation !== runtime.generation || initialBuffer.generation !== generation) {
+        settleInitialBuffer(runtime, initialBuffer);
+        return;
+      }
+      setStatus(runtime, `Preparing natural voice · buffering up to 3 segments · ${record.book} ${record.chapter}:${record.verse}…`);
+      updateDock(runtime);
+      initialBuffer.timer = setTimeout(() => settleInitialBuffer(runtime, initialBuffer), INITIAL_BUFFER_TIMEOUT_MS);
+      void maintainLookahead(runtime, generation, initialBuffer);
+    };
+  }
   runtime.narrator.current = utterance;
   utterance.onstart = () => {
     if (generation !== runtime.generation) return;
@@ -834,9 +1051,8 @@ function speakCurrent(runtime, generation) {
     runtime.state = 'playing';
     setStatus(runtime, readingStatus(record));
     if (chunkIndex === 0) publishPosition(runtime, record);
-    prefetchUpcoming(runtime, generation);
-    const nextChunk = chunks[chunkIndex + 1] || runtime.queue[runtime.index + 1]?.text;
-    runtime.narrator.prefetch(nextChunk, voice);
+    dropLookahead(runtime, utterance.segmentId);
+    maintainLookahead(runtime,generation);
     updateDock(runtime);
   };
   utterance.onend = () => {
@@ -858,12 +1074,15 @@ function speakCurrent(runtime, generation) {
     if (generation !== runtime.generation) return;
     runtime.state = 'playing';
     setStatus(runtime, readingStatus(record));
+    maintainLookahead(runtime,generation);
     updateDock(runtime);
   };
   utterance.onerror = event => {
     if (generation !== runtime.generation) return;
     clearTimeout(runtime.startTimer);
     runtime.startTimer = null;
+    settleInitialBuffer(runtime, initialBuffer);
+    clearLookahead(runtime);
     runtime.state = 'error';
     runtime.narrator.cancel();
     setStatus(runtime, `Audio could not play: ${event.error || 'unknown error'}. Choose another voice or try again.`);
@@ -934,6 +1153,8 @@ async function startSource(runtime, inputConfig) {
   runtime.state = 'preparing';
   runtime.position = null;
   runtime.samples = null;
+  runtime.initialBufferPending = true;
+  runtime.currentVerseVoice = null;
   runtime.sampleRate = 0;
   runtime.waveDuration = 0;
   runtime.narrator.unlock();
