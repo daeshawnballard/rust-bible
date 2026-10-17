@@ -1,0 +1,62 @@
+{
+  "id": "genesis-immersive-v1",
+  "intended_use": "Full-screen Genesis Journey background artwork; art-only layer.",
+  "source": "assets/imagegen/source/journey/genesis-immersive-v1.png",
+  "final": "web/art/journey/genesis-immersive-v1.webp",
+  "prompt": "Use case: stylized-concept. Generate one production-quality, full-bleed landscape background for a full-screen Genesis Journey interface.\n\nImage 1 is the selected UI reference and is the authority for the landscape composition, atmosphere, palette, and exact art style. Use it only as a visual reference; do not reproduce any interface. Image 2 is the existing Genesis artwork and is an additional reference for its diorama materials and detailed terrain.\n\nScene and composition: a complete landscape fills the whole canvas edge to edge, in the same 3:2 wide composition as Image 1 (1536 x 1024 preferred, or a wider image with the same 3:2 ratio). Dense, lush garden/orchard with mature trees, layered leaves, flowering shrubs, rocks, and a clear lively stream fills roughly the left 70 percent. On the right, a rough sunlit rocky footpath winds through dry mountain country toward distant layered mountains. The boundary between lush garden and outside country is naturally legible in the terrain. Soft distant clouds and luminous warm sky sit above the mountains. Keep the foreground readable and textured, with a narrow carved walnut diorama edge along the bottom foreground only. The landscape itself must extend to every canvas edge; do not put a small model in a dark void, add a tabletop, or surround it with empty black space.\n\nStyle: match the selected reference's cinematic polished realistic 3D diorama illustration: rich fine foliage and water detail, physically believable rock and wood textures, golden late-afternoon light, luminous soft clouds, natural atmospheric distance, deep greens, warm ochres, and clean readable separation of the garden, trail, and far mountains. Preserve the same broad viewing angle and depth cues as Image 1.\n\nArt only. No UI, text, labels, numbers, icons, circles, dots, routes, lines, markers, watermarks, people, humans, angels, or deity. Keep the garden, stream, trail, mountains, clouds, and lower walnut edge as landscape elements only.",
+  "generation": {
+    "tool": "Built-in ImageGen via image_gen.imagegen",
+    "generated_at_utc": "2026-10-17T05:40:38Z",
+    "generated_output_sha256": "49961e81d272ffbccd1934ab7ce04f1ddd57bdb13e617320fbf7546d544b7469",
+    "provenance": "Single built-in ImageGen generation; Image 1 used as selected UI composition/style authority and Image 2 as existing Genesis diorama/material reference.",
+    "generated_output_id": "exec-bc81fbcb-8158-426a-a0a2-ebcd16ccc49f"
+  },
+  "references": [
+    {
+      "role": "Selected full-screen UI composition and style authority",
+      "path": "assets/imagegen/reference/immersive-journey-approved.png",
+      "sha256": "a3fee7e2e6ce06f68ddfd36bb9981d2c1822073fcd0355b3fcad6a8586d5fabe"
+    },
+    {
+      "role": "Existing Genesis artwork material and terrain reference",
+      "path": "assets/imagegen/source/journey/genesis.png",
+      "sha256": "4afbed6c9ba72f670c460b8e55e627f26197258c5891835013b91670dead13e7"
+    }
+  ],
+  "processing": [
+    "Copied generated PNG unchanged into project source.",
+    "Encoded full-frame WebP at quality 90 with ImageMagick; no crop or resize."
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "49961e81d272ffbccd1934ab7ce04f1ddd57bdb13e617320fbf7546d544b7469",
+  "final_sha256": "fd3ee8a6a83855a05206380b5124daf704ad5c3e8bff9c5ce5aab58ecd180587",
+  "anchors": {
+    "coordinate_system": "Normalized image coordinates; origin at top-left; x and y range from 0 to 1. Illustrative story positions, not GPS.",
+    "Garden": {
+      "x": 0.19,
+      "y": 0.35,
+      "visual_basis": "Lush orchard grove and mature trees."
+    },
+    "Guarded boundary": {
+      "x": 0.53,
+      "y": 0.43,
+      "visual_basis": "Conceptual garden-to-rocky-country transition; no gate or guardian is depicted."
+    },
+    "Outside path": {
+      "x": 0.71,
+      "y": 0.5,
+      "visual_basis": "Winding sunlit trail through the rough right-side country."
+    },
+    "Nod": {
+      "x": 0.88,
+      "y": 0.54,
+      "visual_basis": "Illustrative farther-east waypoint on the rocky country beyond the garden."
+    }
+  },
+  "notes": "Visual landmark placement only; no geographic accuracy is implied. Generated background contains no UI elements, labels, route graphics, markers, people, angels, or deity."
+}

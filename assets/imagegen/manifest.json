@@ -2335,6 +2335,27 @@
       "final_sha256": "b125a48c139d4b11d9c9574ee655aaa20ff6b3193c4e747caf58547ad6a67f6f",
       "intended_use": "Passage-following illustrated Journey companion",
       "prompt_file": "assets/imagegen/journey/galilee.json"
+    },
+    {
+      "id": "genesis-immersive-v1",
+      "intended_use": "Full-screen Genesis Journey background artwork; art-only layer.",
+      "source": "assets/imagegen/source/journey/genesis-immersive-v1.png",
+      "final": "web/art/journey/genesis-immersive-v1.webp",
+      "prompt": "Use case: stylized-concept. Generate one production-quality, full-bleed landscape background for a full-screen Genesis Journey interface.\n\nImage 1 is the selected UI reference and is the authority for the landscape composition, atmosphere, palette, and exact art style. Use it only as a visual reference; do not reproduce any interface. Image 2 is the existing Genesis artwork and is an additional reference for its diorama materials and detailed terrain.\n\nScene and composition: a complete landscape fills the whole canvas edge to edge, in the same 3:2 wide composition as Image 1 (1536 x 1024 preferred, or a wider image with the same 3:2 ratio). Dense, lush garden/orchard with mature trees, layered leaves, flowering shrubs, rocks, and a clear lively stream fills roughly the left 70 percent. On the right, a rough sunlit rocky footpath winds through dry mountain country toward distant layered mountains. The boundary between lush garden and outside country is naturally legible in the terrain. Soft distant clouds and luminous warm sky sit above the mountains. Keep the foreground readable and textured, with a narrow carved walnut diorama edge along the bottom foreground only. The landscape itself must extend to every canvas edge; do not put a small model in a dark void, add a tabletop, or surround it with empty black space.\n\nStyle: match the selected reference's cinematic polished realistic 3D diorama illustration: rich fine foliage and water detail, physically believable rock and wood textures, golden late-afternoon light, luminous soft clouds, natural atmospheric distance, deep greens, warm ochres, and clean readable separation of the garden, trail, and far mountains. Preserve the same broad viewing angle and depth cues as Image 1.\n\nArt only. No UI, text, labels, numbers, icons, circles, dots, routes, lines, markers, watermarks, people, humans, angels, or deity. Keep the garden, stream, trail, mountains, clouds, and lower walnut edge as landscape elements only.",
+      "processing": [
+        "Copied generated PNG unchanged into project source.",
+        "Encoded full-frame WebP at quality 90 with ImageMagick; no crop or resize."
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "49961e81d272ffbccd1934ab7ce04f1ddd57bdb13e617320fbf7546d544b7469",
+      "final_sha256": "fd3ee8a6a83855a05206380b5124daf704ad5c3e8bff9c5ce5aab58ecd180587",
+      "notes": "Visual landmark placement only; no geographic accuracy is implied. Generated background contains no UI elements, labels, route graphics, markers, people, angels, or deity.",
+      "provenance": "assets/imagegen/journey/genesis-immersive-v1.json"
     }
   ]
 }
