@@ -1,0 +1,22 @@
+{
+  "id": "passage-abraham-meal-detail",
+  "source": "assets/imagegen/source/journey/abraham-meal-detail.png",
+  "final": "web/art/journey/abraham-meal-detail.webp",
+  "intended_use": "Passage-specific Journey scene or subject detail",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-339514ac-23b0-4f0f-92d9-249720a896f1.png",
+  "reference_generation": "matching production scene",
+  "prompt": "Use case: historical-scene. Assettype: individual production DETAIL illustration for Bible Genesis18:6\u20138. Referenceimage is the selected productionAbrahamscene; use its exact humble ceramic vessels, warm textured linens, breadcakes and cooked meat aesthetic as material/subject reference. Make a close-up of the meal on a low woven groundcloth beneath a shade tree: breadcakes, a ceramic milk vessel, small butterdish and a generous ceramicbowl of preparedmeat. Threehuman visitors may be softly suggested by robehems/hands at the edges but nofacesneeded. Period ancientLevant, beautiful cinematic warm natural shade, photo-real historicalillustration, verytactile. Detailed food mustlookordinary and prepared, no rawanimal, no modernutensils/glass, no elaborategoldtreasures. Compositionclearcentered objects fill frame withgentlebreathingroom, landscape1536x1024, noUI,text,labels,pins,borders,watermark. One coherent detail asset, no collage.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "6e1e8367a41e4cb8580e9e866b34f6f8aa1589deae6c50ba480ba14cde6223eb",
+  "sha256": "70a8f45d6259fca4a6d0c16b46ef00a050cbfb70261aca639b8ba19ba2358b2c",
+  "notes": "Artwork inspected for visible subjects and lack of interface text. Reconstruction details remain separate from Scripture."
+}
