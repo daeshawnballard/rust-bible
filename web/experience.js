@@ -1120,6 +1120,7 @@ function speakCurrent(runtime, generation) {
     ? createInitialBuffer(runtime, generation) : null;
   if (initialBuffer) runtime.initialBufferPending = false;
   const utterance = {text: chunks[chunkIndex], lang: 'en-US', rate: runtime.rate, voice, route,
+    stopAtCueEnd: hosted && !runtime.source?.continuous && runtime.index === runtime.queue.length - 1,
     segmentId:segmentId(runtime,record,chunkIndex), segmentIndex:chunkIndex, segmentCount:chunks.length};
   if (initialBuffer) {
     utterance.beforePlay = initialBuffer.promise;

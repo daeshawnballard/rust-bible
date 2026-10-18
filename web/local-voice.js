@@ -320,7 +320,9 @@ export class LocalNarrator extends EventTarget {
     this.audio.preservesPitch = true;
     this.audio.dataset.naturalAudio = '';
     document.body.append(this.audio);
-    this.audio.addEventListener('timeupdate', () => this.updateHostedSession());
+    for (const event of ['timeupdate','ratechange','seeked']) {
+      this.audio.addEventListener(event, () => this.updateHostedSession());
+    }
   }
 
   get supported() {
@@ -494,6 +496,7 @@ export class LocalNarrator extends EventTarget {
   speakHosted(utterance) {
     const route = utterance.route;
     const previous = this.hostedSession;
+    clearTimeout(previous?.cutoffTimer);
     const continuing = this.mode === 'hosted' && previous?.route.assetKey === route.assetKey
       && this.audio.currentSrc === route.asset.objectURL && !this.audio.paused;
     this.current = utterance;
@@ -560,17 +563,30 @@ export class LocalNarrator extends EventTarget {
       window.dispatchEvent(new CustomEvent('bible:hosted-verse',{detail}));
       session.utterance.onstart?.();
     }
-    if (session.started && time + 0.005 >= cue.end) this.endHostedSession(session);
+    if (session.started && time + 0.005 >= cue.end) {
+      this.endHostedSession(session);
+    } else if (session.started && session.utterance.stopAtCueEnd) {
+      // timeupdate can arrive a quarter-second apart. A selected range needs
+      // its own deadline so the next verse's opening is not played meanwhile.
+      clearTimeout(session.cutoffTimer);
+      const remaining=(cue.end-time)/this.audio.playbackRate;
+      session.cutoffTimer=setTimeout(()=>{
+        if(this.hostedSession===session&&!session.ended&&!this.audio.paused)this.updateHostedSession();
+      },Math.max(4,remaining*1000));
+    }
   }
 
   endHostedSession(session) {
     if (this.hostedSession !== session || session.ended || this.audio.dataset.playback === 'paused') return;
     session.ended = true;
+    clearTimeout(session.cutoffTimer);
+    if(session.utterance.stopAtCueEnd)this.audio.pause();
     this.audio.dataset.playback = 'ended';
     session.utterance.onend?.();
   }
 
   pause({notify=true}={}) {
+    clearTimeout(this.hostedSession?.cutoffTimer);
     this.audio.pause();
     this.audio.dataset.playback = 'paused';
     if (notify) this.current?.onpause?.();
@@ -599,6 +615,7 @@ export class LocalNarrator extends EventTarget {
     }
     this.pending = false;
     this.token += 1;
+    clearTimeout(this.hostedSession?.cutoffTimer);
     this.hostedSession = null;
     void this.hostedStorePromise.then(store => store.cancelPending()).catch(() => {});
     this.current = null;
