@@ -128,7 +128,9 @@ async function serveNarration(request, bucket, parsed) {
   }
 
   let status = 200;
-  const responseRange = object.range ?? (rangeAllowed ? range : null);
+  // R2 can report the full object's range even when no Range was requested.
+  // Only an accepted request range should turn a complete response into 206.
+  const responseRange = range ?? null;
   if (!isCues && responseRange) {
     const { offset, length } = responseRange;
     headers.set("Content-Range", `bytes ${offset}-${offset + length - 1}/${object.size}`);
