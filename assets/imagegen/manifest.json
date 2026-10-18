@@ -2658,6 +2658,69 @@
       "source_sha256": "28f0457b2da80454a0375b11a6c35d4dfcfced53c3d365e641e0c9cfe1b0c751",
       "sha256": "ccc4ff0db47a4876947d42c8716bd974247bebbf9aa4a763bf7cd401eb425ad7",
       "notes": "Recomposed after measured desktop panel occlusion. All three visitors, meal, and Sarah are inside the left70percent; final browser checks still apply."
+    },
+    {
+      "id": "passage-numbers-balaam-donkey",
+      "source": "assets/imagegen/source/journey/numbers-balaam-donkey.png",
+      "final": "web/art/journey/numbers-balaam-donkey.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-e9827da5-26f2-4bc3-b74b-94e29e7cd677.png",
+      "prompt": "Landscape 1536x1024 (3:2), one individual full-frame background illustration for the existing Bible Journey reader. Match the project\u2019s cinematic realistic historical editorial illustration quality, warm ivory/gold/earth colors, tactile period materials, and natural anatomy. Artistic reconstruction only; do not imply archaeological certainty. Keep every critical person, face, hand, animal, weapon, vessel, and hotspot target inside the left 65% of the canvas. Preserve the right 30% of the image (x=70\u2013100%) as quiet, soft, low-detail scene background for the reader overlay; no figure, important prop, or focal event there. Keep the top 12% and bottom 12% noncritical background, with all faces and story objects between y=12\u201388%. One continuous scene, not a collage, storyboard, map, or repeated figures. No UI, text, lettering, captions, labels, verse numbers, speech bubbles, pins, markers, callouts, borders, controls, logos, or watermark.\n\nScene: Numbers 22:21\u201335, one coherent encounter on a narrow vineyard path with a low wall on each side, as described in verses 24\u201327. Show exactly one Balaam, one donkey, and one angel of the LORD. Balaam is halted beside the donkey; the donkey is turned toward Balaam with its mouth slightly open to suggest the narrated speech, without humanlike facial expression or any written speech. The angel stands ahead on the path with one drawn sword, clearly visible to the viewer; Balaam is in the act of recognizing the angel and bowing. Keep the donkey, Balaam, angel, sword, and enclosing vineyard walls all readable in the left 65%. Use one continuous illustrative composition compressing adjacent moments from the same episode, not separate panels or duplicate actors. The angel\u2019s form and garments are an editorial reconstruction, not a claim about appearance. Do not duplicate Balaam, the donkey, or the angel. The two servants named in Numbers 22:22 are optional minor figures; omit them if they crowd the encounter, and do not add other attendants, princes, weapons, wings, halos, a divine portrait, fantasy glow, a crossroads, distant city, or modern site marker.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "74cb90bb987c185be5f45fe5c9075ea597493e31831fe5918a582133b01db01e",
+      "sha256": "3dae89d1740689f98dde8c3b55e9417d97369a68d78085e8afc678b6dc4c4fc8",
+      "notes": "Inspected as one coherent episode with visible subjects. Appearance and materials remain artistic reconstruction. Anchors are authored after image review."
+    },
+    {
+      "id": "passage-deuteronomy-choose-life",
+      "source": "assets/imagegen/source/journey/deuteronomy-choose-life.png",
+      "final": "web/art/journey/deuteronomy-choose-life.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-3c189726-c91a-4a6e-9a94-ea38c19bfd17.png",
+      "prompt": "Landscape 1536x1024 (3:2), one individual full-frame background illustration for the existing Bible Journey reader. Match the project\u2019s cinematic realistic historical editorial illustration quality, warm ivory/gold/earth colors, tactile period materials, and natural anatomy. Artistic reconstruction only; do not imply archaeological certainty. Keep every critical person, face, hand, animal, weapon, vessel, and hotspot target inside the left 65% of the canvas. Preserve the right 30% of the image (x=70\u2013100%) as quiet, soft, low-detail scene background for the reader overlay; no figure, important prop, or focal event there. Keep the top 12% and bottom 12% noncritical background, with all faces and story objects between y=12\u201388%. One continuous scene, not a collage, storyboard, map, or repeated figures. No UI, text, lettering, captions, labels, verse numbers, speech bubbles, pins, markers, callouts, borders, controls, logos, or watermark.\n\nScene: Deuteronomy 30:15\u201320, one restrained address by Moses to a gathered assembly of Israelites. Show Moses speaking to the listeners, with attentive people grouped beside him in the left portion of the frame. Use only natural, unmarked ground and open sky as the background; those are ordinary scene surroundings, not personified witnesses. No scroll, tablets, road, fork, crossroads, two landscapes, road signs, icons, idols, or objects representing life and death. Do not show anyone physically turning away: the passage speaks of the heart turning. Do not render words or labels. Keep the composition focused on Moses and the listening assembly in the left 65%; the rest is quiet low-detail background. The passage does not name a specific location here, so make no site claim.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "8a5c4433b0ea30d3845e5901134a567b74871e63abd76308ca7ae6fac401db96",
+      "sha256": "d404a48d6156a66d997bce19129dcde34116dab6201665fdcd46743fca5a5b2d",
+      "notes": "Inspected as one coherent episode with visible subjects. Appearance and materials remain artistic reconstruction. Anchors are authored after image review."
+    },
+    {
+      "id": "passage-jeremiah-potter",
+      "source": "assets/imagegen/source/journey/jeremiah-potter.png",
+      "final": "web/art/journey/jeremiah-potter.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-5e26c276-817a-4ad3-9cbc-a7721146a906.png",
+      "prompt": "Landscape 1536x1024 (3:2), one individual full-frame background illustration for the existing Bible Journey reader. Match the project\u2019s cinematic realistic historical editorial illustration quality, warm ivory/gold/earth colors, tactile period materials, and natural anatomy. Artistic reconstruction only; do not imply archaeological certainty. Keep every critical person, face, hand, animal, weapon, vessel, and hotspot target inside the left 65% of the canvas. Preserve the right 30% of the image (x=70\u2013100%) as quiet, soft, low-detail scene background for the reader overlay; no figure, important prop, or focal event there. Keep the top 12% and bottom 12% noncritical background, with all faces and story objects between y=12\u201388%. One continuous scene, not a collage, storyboard, map, or repeated figures. No UI, text, lettering, captions, labels, verse numbers, speech bubbles, pins, markers, callouts, borders, controls, logos, or watermark.\n\nScene: Jeremiah 18:1\u20136, one visit to the potter\u2019s house. Show Jeremiah watching a single potter work at a simple hand-turned potter\u2019s wheel apparatus; the potter\u2019s hands reshape one marred clay vessel into a vessel that can be made again. Keep Jeremiah\u2019s face, potter\u2019s hands, wheel, and vessel clearly visible together in the left 65% of the image. Use a modest, uncluttered workshop with only the objects needed for this described work. The word of the LORD is narrated in the passage but is not a visible figure or inscription. Do not depict Israel as a person made of clay; the oracle states the comparison in words. Do not show a before-and-after split, multiple pottery scenes, written labels, scroll, map, landmark, or archaeological reconstruction. Keep the right 30% quiet and low-detail.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "9fef0223d8d7279513d8ff790a0e09a197dd8c1fd1eafd084fca3e224b8a1e37",
+      "sha256": "27770a875d95ccc20dfb51d1610b7db5c6ed44dc2e008c3879aa3fa3db74e96c",
+      "notes": "Inspected as one coherent episode with visible subjects. Appearance and materials remain artistic reconstruction. Anchors are authored after image review."
     }
   ]
 }

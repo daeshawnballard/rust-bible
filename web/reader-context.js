@@ -175,8 +175,11 @@ export function initReaderContext(root=document) {
       if(selected){
         const y=parseFloat(selected.style.top)/100;
         const headerBottom=reader.ownerDocument.querySelector('.library-header')?.getBoundingClientRect().bottom||0;
-        const top=Math.max(0,headerBottom-canvas.getBoundingClientRect().top)+22;
-        const bottom=h-22;
+        // A face or other illustrated subject needs more breathing room than
+        // the marker's 44px hit area when a portrait scene is cropped.
+        const margin=figure.hasAttribute('data-passage-scene')?Math.max(22,Math.min(64,h/3)):22;
+        const top=Math.max(0,headerBottom-canvas.getBoundingClientRect().top)+margin;
+        const bottom=h-margin;
         const sceneY=panY+y*worldHeight;
         if(bottom>=top&&(sceneY<top||sceneY>bottom))panY=(top+bottom)/2-y*worldHeight;
       }

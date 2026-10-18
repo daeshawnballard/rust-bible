@@ -5,14 +5,14 @@
       "id": "abraham-sarah-visitors",
       "book": 0,
       "title": "Abraham welcomes the visitors and Sarah hears the promise",
-      "coverage": "Genesis 18:1\u201315",
+      "coverage": "Genesis 18:1–15",
       "art": {
         "path": "/art/journey/abraham-sarah-visitors-v2.webp",
         "width": 1536,
         "height": 1024,
         "alt": "Abraham serves three seated visitors beneath a tree, while Sarah listens from the open tent entrance; artistic reconstruction"
       },
-      "caption": "Illustrated reconstruction \u00b7 Genesis 18:1\u201315",
+      "caption": "Illustrated reconstruction · Genesis 18:1–15",
       "ranges": [
         {
           "chapter": 18,
@@ -49,7 +49,7 @@
               "last": 5
             }
           ],
-          "note": "Abraham runs to meet the three men and offers water, rest, and food. The visible visitors help explain the welcome described in Genesis 18:2\u20135.",
+          "note": "Abraham runs to meet the three men and offers water, rest, and food. The visible visitors help explain the welcome described in Genesis 18:2–5.",
           "detail": null
         },
         {
@@ -124,7 +124,7 @@
         "height": 1024,
         "alt": "A stone signet, braided bracelets, and a wooden staff arranged on cloth; reconstructed forms of the pledge objects named in Genesis"
       },
-      "caption": "Illustrated object study \u00b7 Genesis 38:18 \u00b7 Object forms are reconstructed",
+      "caption": "Illustrated object study · Genesis 38:18 · Object forms are reconstructed",
       "ranges": [
         {
           "chapter": 38,
@@ -166,7 +166,7 @@
               "last": 26
             }
           ],
-          "note": "Tamar asks for Judah\u2019s signet, bracelets, and staff as a pledge. Later, these objects identify him. This object study illustrates their role without depicting the encounter described in the verse.",
+          "note": "Tamar asks for Judah’s signet, bracelets, and staff as a pledge. Later, these objects identify him. This object study illustrates their role without depicting the encounter described in the verse.",
           "detail": {
             "path": "/art/journey/judah-pledge-detail.webp",
             "width": 1536,
@@ -180,14 +180,14 @@
       "id": "judah-tamar-recognition",
       "book": 0,
       "title": "Judah recognizes the pledge",
-      "coverage": "Genesis 38:25\u201326",
+      "coverage": "Genesis 38:25–26",
       "art": {
         "path": "/art/journey/judah-tamar-pledge.webp",
         "width": 1536,
         "height": 1024,
         "alt": "The pledge objects are presented to Judah, who responds with recognition; artistic reconstruction of the recognition episode"
       },
-      "caption": "Illustrated reconstruction \u00b7 Genesis 38:25\u201326",
+      "caption": "Illustrated reconstruction · Genesis 38:25–26",
       "ranges": [
         {
           "chapter": 38,
@@ -262,6 +262,300 @@
             }
           ],
           "note": "Judah recognizes the objects and acknowledges his failure to give Tamar to Shelah his son. The illustration focuses on his recognition and admission.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "numbers-balaam-donkey",
+      "book": 3,
+      "title": "Balaam, the donkey, and the angel",
+      "coverage": "Numbers 22:21–35",
+      "art": {
+        "path": "/art/journey/numbers-balaam-donkey.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A donkey beside a vineyard wall, Balaam bowing, and a messenger holding a drawn sword in the narrow path; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Numbers 22:21–35 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 22,
+          "first": 21,
+          "last": 35
+        }
+      ],
+      "intro": {
+        "title": "Balaam, the donkey, and the angel",
+        "note": "The donkey sees the angel before Balaam does. This single illustration brings together the encounter’s adjacent moments; it is not an ancient map."
+      },
+      "hotspots": [
+        {
+          "id": "donkey-turns",
+          "title": "The donkey turns aside from the sword",
+          "x": 11,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 21,
+              "last": 27
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 21,
+              "last": 27
+            }
+          ],
+          "note": "The donkey sees the angel with a drawn sword, turns aside, and presses against the wall before falling down. Balaam strikes it because he does not yet see what it sees.",
+          "detail": null
+        },
+        {
+          "id": "donkey-speaks",
+          "title": "The donkey speaks to Balaam",
+          "x": 25,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 28,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 28,
+            "last": 28
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 28,
+              "last": 30
+            }
+          ],
+          "note": "The LORD opens the donkey’s mouth. It asks Balaam why he has struck it, and he answers. The image identifies the speaking animal without adding words to Scripture.",
+          "detail": null
+        },
+        {
+          "id": "balaam-sees",
+          "title": "Balaam sees the angel blocking the way",
+          "x": 44,
+          "y": 30,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 31,
+              "last": 35
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 31,
+            "last": 31
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 31,
+              "last": 35
+            }
+          ],
+          "note": "Balaam’s eyes are opened, and he sees the angel with the drawn sword. He bows and is instructed to speak only the word given to him. The messenger’s appearance is reconstructed.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "deuteronomy-choose-life",
+      "book": 4,
+      "title": "Moses calls Israel to choose life",
+      "coverage": "Deuteronomy 30:15–20",
+      "art": {
+        "path": "/art/journey/deuteronomy-choose-life.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Moses addresses seated listeners under an open sky; the people and setting are artistically reconstructed"
+      },
+      "caption": "Illustrated reconstruction · Deuteronomy 30:15–20 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 30,
+          "first": 15,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "Moses calls Israel to choose life",
+        "note": "Moses places a choice before Israel through his words. The illustration shows the speaker and hearers, without turning life and death into invented geographic routes."
+      },
+      "hotspots": [
+        {
+          "id": "moses-choice",
+          "title": "Moses sets life and good before Israel",
+          "x": 30,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "note": "Moses sets life and good against death and evil. He calls Israel to love the LORD, walk in his ways, and keep his commandments. The visible speaker represents this address.",
+          "detail": null
+        },
+        {
+          "id": "israel-warning",
+          "title": "Israel hears the warning against turning away",
+          "x": 18,
+          "y": 46,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 17,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 17,
+              "last": 18
+            }
+          ],
+          "note": "Moses warns what will follow if Israel turns away to serve other gods. The listeners stand for those addressed; their presence does not depict them rejecting the warning.",
+          "detail": null
+        },
+        {
+          "id": "heaven-earth-witness",
+          "title": "Moses calls heaven and earth as witnesses",
+          "x": 44,
+          "y": 23,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "note": "Moses calls heaven and earth to record the choice and urges Israel to choose life, love the LORD, obey his voice, and cleave to him. The raised hand and sky illustrate his address.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "jeremiah-potter",
+      "book": 23,
+      "title": "Jeremiah at the potter’s house",
+      "coverage": "Jeremiah 18:1–6",
+      "art": {
+        "path": "/art/journey/jeremiah-potter.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A potter shapes a clay vessel at a wheel while Jeremiah watches nearby; reconstructed workshop and objects"
+      },
+      "caption": "Illustrated reconstruction · Jeremiah 18:1–6 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 18,
+          "first": 1,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "Jeremiah at the potter’s house",
+        "note": "Jeremiah watches a potter rework a vessel, and the following words explain the clay comparison. The workshop is an illustration, not a recovered historic location."
+      },
+      "hotspots": [
+        {
+          "id": "potter-remakes",
+          "title": "The potter remakes the marred vessel",
+          "x": 37,
+          "y": 66,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "note": "The vessel is marred in the potter’s hand, so he makes it again into another vessel. His hands and the clay identify the action Jeremiah observes; the wheel’s design is reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "jeremiah-clay",
+          "title": "Jeremiah hears the comparison to clay",
+          "x": 50,
+          "y": 25,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "The LORD asks whether he can do with the house of Israel as this potter does. The clay in the potter’s hand is the passage’s comparison; the image does not settle every later application.",
           "detail": null
         }
       ]
