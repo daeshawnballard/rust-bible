@@ -72,6 +72,7 @@ function makeDock(runtime) {
     </button>
     <div class="audio-dock-info">
       <a class="audio-dock-return" data-dock-return href="#" aria-label="Return to the passage"></a>
+      <label class="audio-dock-voice"><span>Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
       <span class="audio-dock-status" data-dock-status role="status" aria-live="polite">Preparing the free natural voice…</span>
     </div>
     <div class="audio-dock-timeline" data-dock-timeline>
@@ -82,7 +83,6 @@ function makeDock(runtime) {
       </div>
       <span class="audio-dock-time" data-dock-duration aria-hidden="true">—:—</span>
     </div>
-    <label class="audio-dock-voice"><span class="sr-only">Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
     <label class="audio-dock-rate" aria-label="Playback speed">
       <select data-dock-rate aria-label="Playback speed">
         <option value="0.75">0.75×</option><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option>
@@ -157,7 +157,22 @@ function makeDock(runtime) {
     drawWaveform(runtime);
     updateTimeline(runtime);
   });
-  window.addEventListener('resize', () => drawWaveform(runtime), {passive: true});
+  // Preparation/error messages can grow the title group. Reserve the actual
+  // player height so the document and Journey pane always clear the dock.
+  runtime.syncDockClearance = () => {
+    if (dock.hidden) {
+      document.body.style.removeProperty('--global-audio-dock-clearance');
+      return;
+    }
+    const rect = dock.getBoundingClientRect();
+    const bottom = Math.max(0, window.innerHeight - rect.bottom);
+    document.body.style.setProperty('--global-audio-dock-clearance', `${Math.ceil(rect.height + bottom + 12)}px`);
+  };
+  if (typeof ResizeObserver === 'function') new ResizeObserver(runtime.syncDockClearance).observe(dock);
+  window.addEventListener('resize', () => {
+    runtime.syncDockClearance();
+    drawWaveform(runtime);
+  }, {passive: true});
   updateDock(runtime);
   return dock;
 }
@@ -257,6 +272,7 @@ function updateDock(runtime) {
   updateTimeline(runtime);
   drawWaveform(runtime);
   updateSourceButton(runtime);
+  runtime.syncDockClearance?.();
 }
 
 function updateTimeline(runtime) {
