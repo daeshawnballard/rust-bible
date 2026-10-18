@@ -1,0 +1,22 @@
+{
+  "id": "passage-judah-tamar-pledge",
+  "source": "assets/imagegen/source/journey/judah-tamar-pledge.png",
+  "final": "web/art/journey/judah-tamar-pledge.webp",
+  "intended_use": "Passage-specific Journey scene or subject detail",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-7ff61fc7-d6b9-4761-88e5-d861ec284a96.png",
+  "reference_generation": "exec-0d619168-a011-4b67-8ea1-76e66a900bb7.png",
+  "prompt": "Use case: historical-scene. Asset type: individual production background illustration for a Bible Journey reader; landscape1536x1024, full-frame, nointerfaceortext.\nReference image role: the approved Abraham UIconcept is STYLE reference only; preserve its cinematic realistic ancient Near Eastern illustration quality, warmivory/gold/earth colors and tactile historical materials. Entirely different passage.\nPrimary subject: Genesis38:18,25\u201326, the pledge objects that Judah recognizes. Restrained non-graphic scene illustrating the recognition of the pledge. An elderly ancientNearEastern Judah with gray beard sits or stands LEFT-CENTER by a tent/shaded stone courtyard, looking with sober recognition at three specific objects presented in foreground center by an adult messenger. Tamar, adult ancientNearEastern woman in modest period garment, is visible left in the midground, calm serious dignity; no violence, sexual encounter, threat or execution depicted.\nEssential foreground subject: a readable simple ancient engraved stone cylinder signet with cord; a pair of woven bracelets/cord loops; a full wooden shepherd walking staff with naturally worn wood. The signet, bracelets and staff must be visually distinct, large enough to identify, and resting partly on a plain cloth supported by the messenger. No modernwristwatch, gemcrown, jeweledroyalring or metalfantasystaff. Exact form is artistic reconstruction. Judah's receptive hand/face clearly visible next toobjects; messenger's hands visibly hold/presentcloth. The narrative is recognition of these objects, not an invented generalhouseholdview.\nComposition: cinematic slightly elevated three-quarter view with natural anatomy. Critical objects centeredx39%y62%, messenger's presentinghands aboutx50%y56%, Judah's faceaboutx25%y37%, Tamaraboutx12%y50%. Right25%quietcontinuingterrain/tents for readeroverlay, bottom15%nonessentialforaudiodock. No overlappingbadfingers, objectsnotburied. Warmafternoonsun, realisticwovenfabric and limestone, ancientLevant setting without claimed exactsite, no palace/fullcity panorama. Polished historicallyinspired illustration matching reference's dignity and detail.\nAvoid text, labels, UI, pins, panels, waveform, collage, halos, nudity, sex, violence, fire, modernobjects, watermark. ONE coherent landscape scene with highly legible pledgeobjects and recognition. ",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "13ed4992273d30786fae37f34bac7c621d49be6c032a669df8913663fe8e0a9d",
+  "sha256": "b1078f19df5215ce15a478a4574f5a5234001754a883c6c52fc61e8ecf8e2053",
+  "notes": "Artwork inspected for visible subjects and lack of interface text. Reconstruction details remain separate from Scripture."
+}
