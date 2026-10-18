@@ -146,12 +146,12 @@ export function initReaderContext(root=document) {
     reader.querySelector('[data-reader-spacing]').value=reader.dataset.lineSpacing;
   };
   try{applyDisplay(JSON.parse(localStorage.getItem(DISPLAY_KEY)));}catch{applyDisplay(null);}
-  const selectVerse=(record,scroll=false)=>{
+  const selectVerse=(record,scroll=false,behavior='smooth')=>{
     const found=[...reader.querySelectorAll('.scripture .v')].find(n=>{const p=positionForVerse(n);return p?.route===record.route&&p.verse===record.verse;});
     if(!found)return;
     reader.querySelectorAll('.is-context-current').forEach(n=>n.classList.toggle('is-context-current',n===found));
     found.classList.add('is-context-current');
-    if(scroll&&tab==='scripture')found.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
+    if(scroll&&tab==='scripture')found.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':behavior});
   };
   let pan=0,worldWidth=0,worldHeight=0,manualPan=false;
   const sizeScene=()=>{
@@ -186,7 +186,10 @@ export function initReaderContext(root=document) {
   });
   on(canvas,'pointerup',()=>{dragging=null;});
   on(canvas,'pointercancel',()=>{dragging=null;});
-  on(window,'resize',sizeScene);
+  on(window,'resize',()=>{
+    sizeScene();
+    if(mode!=='passage'&&tab==='scripture'&&!inspected)selectVerse(position,true,'instant');
+  });
   const sceneResize=typeof ResizeObserver==='function'?new ResizeObserver(sizeScene):null;
   sceneResize?.observe(canvas);
   const stopMap=()=>{terrain?.destroy();terrain=null;};
