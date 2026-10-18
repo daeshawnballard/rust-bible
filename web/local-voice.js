@@ -547,7 +547,8 @@ export class LocalNarrator extends EventTarget {
 
   updateHostedSession() {
     const session = this.hostedSession;
-    if (this.mode !== 'hosted' || !session || session.ended) return;
+    // Seeking fires timeupdate even while paused; it must not advance or restart narration.
+    if (this.mode !== 'hosted' || !session || session.ended || this.audio.paused) return;
     const {cue} = session.route;
     const time = this.audio.currentTime;
     if (!session.started && time + 0.01 >= cue.start && time < cue.end) {
@@ -563,7 +564,7 @@ export class LocalNarrator extends EventTarget {
   }
 
   endHostedSession(session) {
-    if (this.hostedSession !== session || session.ended) return;
+    if (this.hostedSession !== session || session.ended || this.audio.dataset.playback === 'paused') return;
     session.ended = true;
     this.audio.dataset.playback = 'ended';
     session.utterance.onend?.();
