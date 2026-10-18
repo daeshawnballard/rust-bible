@@ -51,6 +51,7 @@ export function initReaderContext(root=document) {
   const setSheetExpanded=expanded=>{
     sheetExpanded=expanded;updateSheet();
     try{sessionStorage.setItem(SHEET_KEY,String(expanded));}catch{}
+    if(tab==='scripture'&&!inspected)selectVerse(position,true,'instant');
   };
   updateSheet();
   let sheetPointer=null,suppressSheetClick=false;
