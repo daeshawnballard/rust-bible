@@ -1,0 +1,22 @@
+{
+  "id": "passage-judah-pledge-detail",
+  "source": "assets/imagegen/source/journey/judah-pledge-detail.png",
+  "final": "web/art/journey/judah-pledge-detail.webp",
+  "intended_use": "Passage-specific Journey scene or subject detail",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-2a22e222-72c6-4eb7-b53b-bf915140ba66.png",
+  "reference_generation": "matching production scene",
+  "prompt": "Use case: historical-scene. Assettype: individual production DETAIL illustration of the three pledge items in Genesis38:18 and25. Use suppliedJudahrecognitionscene as objectidentity and visualstyle reference. Show the SAME engraved ancient stone cylinder signet with its short leatherloop, the SAME two braided bracelets/cordloops, and the SAME wooden curved shepherd staff. Arrange allthree visibly on a simple naturalwoven cloth. This is a close-up objectstudy, no people and nofacerecognitionmoment. Cylinderleft third, braceletscenter, long woodenstaff diagonally spans right+bottom withoutcutofforhidingotheritems. AncientLevant artifactreconstruction, no modernringstyle/wristwatch, no gemencrustedroyalobjects. Restrained warmlight fromside, quiet darkearthtentbackground, realisticwornstone, braidedwool andwoodgrain. Entire subjectsvisible no UI,text,labels,pins,plaques,frames,watermark. Landscape1536x1024, highquality cinematicdetail, no collage.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "f5552b3271a3a25a8265a05e6a6930973b73d754551c282ca27d586d2b0e95a4",
+  "sha256": "cbb0fa8672f7ba02b52a8a787f70faa5e10d96f5620fc7d6ee63b2d992903469",
+  "notes": "Artwork inspected for visible subjects and lack of interface text. Reconstruction details remain separate from Scripture."
+}
