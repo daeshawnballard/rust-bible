@@ -21,3 +21,23 @@ node hosting/upload-narration.mjs --watch https://<site-origin> /path/to/narrati
 The watcher checks the live health endpoint, scans for complete chapter pairs every 15 seconds, waits for each pair to remain stable across two scans, and uploads pairs sequentially. It retries a failed pair at most three times with backoff, then leaves it marked `FAIL` until its source changes. The receipt is mode `0600`, contains no token or source paths, and records only safe object keys, hashes, byte counts, timestamps, and statuses. A second watcher using the same receipt is rejected while the first is active. When a prior receipt names the same known Worker revision, a resumed run re-reads its prior objects from the current server before counting them again; otherwise it uploads and reads them back again. `COMPLETE` requires fresh readbacks for all 2,378 voice/chapter pairs; missing or failed pairs remain listed in `missing_pair_keys`. Remote uploads require HTTPS; plain HTTP is accepted only for `localhost`, `127.0.0.1`, or `::1` local testing.
 
 Public URLs are `/audio/v1/{voice}/{book}/{chapter}.mp3` and `.json`, using one-based numeric book and chapter identifiers. R2 keys are `kokoro-v1/{voice}/{book}/{chapter}.mp3` and `.json`. MP3 objects use a one-hour cache lifetime and ETags; cue JSON is `no-store` while chapter audio is still changing. Uploads are limited to those two voices and valid KJV chapter ranges.
+
+## Read-only public verification
+
+`verify-narration.mjs` checks the exact 2,378 Heart/Michael chapter pairs from `audio-contract.mjs`. It enumerates the expected KJV chapter ranges and validates each complete local cue/audio pair and its SHA-256 values. At the start of each scan it sends one lightweight public audio `HEAD` with a fresh UUID in `?verify=<UUID>` and requires the exact `X-Narration-Verification` echo before starting per-object reads. If the Worker does not echo the UUID, locally valid pairs stay `UNVERIFIED`, bulk object reads are skipped, and watch mode retries the gate on the next scan. Once the gate passes, every `.mp3` and `.json` `HEAD` and `GET` gets its own fresh UUID and must echo it exactly. Requests use `Cache-Control: no-cache, no-store` and the fetch client's `no-store` mode. Cache headers are recorded separately; they do not replace the request-specific Worker echo. Audio responses are hashed as streams so the corpus is not held in memory.
+
+Run one pass with a new absolute private receipt path outside the narration source root:
+
+```sh
+node hosting/verify-narration.mjs https://<site-origin> /path/to/narration --receipt /private/path/narration-public-check-<run-id>.json
+```
+
+To keep checking pairs as the existing generator and uploader publish them, use watch mode:
+
+```sh
+node hosting/verify-narration.mjs --watch https://<site-origin> /path/to/narration --receipt /private/path/narration-public-watch-<run-id>.json --interval-seconds 15
+```
+
+The verifier is read-only against the site: it has no upload route, accepts no token, and only performs public `GET`/`HEAD` requests. It does not change source files, credentials, or hosting configuration. Concurrency is capped at four chapter pairs. Missing local pairs and public 404s with an exact Worker echo remain pending during publication; missing or mismatched echoes remain `UNVERIFIED`, never terminal failures. Other contract, hash, metadata, HTTP, or network failures are retained with their route stage and safe status details. Transient failures get at most two attempts for unchanged evidence. A mismatch is reopened only after a changed source signature or measured, echoed remote `HEAD` metadata/ETag signature; a fresh run starts with no passes imported from an earlier receipt.
+
+The receipt and exclusive lock are mode `0600`, contain no source paths or secrets, and are written outside the source root. Choose a new receipt path for each run. A normal stop renames the lock to a run-specific `.closed-<run-id>` file. If a process is interrupted before it closes the lock, use a new private receipt path. `COMPLETE` means every expected pair had local contract evidence and fresh public `HEAD`/`GET` responses with exact request-specific Worker echoes during this run. Health data, including any reported Worker revision, is recorded as observed; release identity remains `UNKNOWN` and must be bound separately to the appropriate Sites archive/native API and the actual public assets.

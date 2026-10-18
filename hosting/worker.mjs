@@ -48,7 +48,17 @@ export default {
       if (!env.BUCKET || typeof env.BUCKET.get !== "function") {
         return jsonError("audio_storage_unavailable", 503, request.method === "HEAD");
       }
-      return serveNarration(request, env.BUCKET, parsed);
+      const response = await serveNarration(request, env.BUCKET, parsed);
+      // A fresh audit nonce proves that this read traversed the storage Worker.
+      // Ordinary playback retains its existing cache policy.
+      const verification = url.searchParams.get("verify");
+      if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(verification ?? "")) {
+        return response;
+      }
+      const headers = new Headers(response.headers);
+      headers.set("X-Narration-Verification", verification);
+      headers.set("Cache-Control", "no-store");
+      return new Response(response.body, { status: response.status, headers });
     }
 
     if (path === "/_narration/import" || path.startsWith("/_narration/import/")) {
