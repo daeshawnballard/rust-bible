@@ -577,6 +577,15 @@ export class LocalNarrator extends EventTarget {
   }
 
   resume() {
+    const session = this.hostedSession;
+    if (this.mode === 'hosted' && session && !session.ended
+      && (this.audio.ended || this.audio.currentTime + 0.02 >= session.route.cue.end)) {
+      // play() on an ended chapter restarts the entire file. Finish this cue
+      // deliberately so Resume advances to the next verse or chapter instead.
+      this.audio.dataset.playback = 'playing';
+      this.endHostedSession(session);
+      return;
+    }
     const token = this.token;
     this.audio.play().then(() => {
       if (token === this.token) { this.audio.dataset.playback = 'playing'; this.current?.onresume?.(); }
