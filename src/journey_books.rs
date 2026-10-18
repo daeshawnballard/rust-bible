@@ -1,5 +1,5 @@
 //! Book-section context for every chapter, below the curated verse-level scenes.
-//! Pin positions represent reading stages, never coordinates or surveyed routes.
+//! Chapter-stage links live in Context; broad book artwork has no image hotspots.
 use super::{bible, esc, route_path, slug, NAMES};
 use serde::Deserialize;
 use serde_json::{json, Value};
@@ -91,68 +91,37 @@ fn link(book: usize, section: &Section, client: bool) -> String {
 
 pub(super) fn render(book: usize, chapter: usize, verse: usize, client: bool) -> Option<Value> {
     let (profile, current) = selected(book, chapter)?;
-    let (kind, caption) = match profile.kind.as_str() {
-        "poetry" => (
-            "Literary context",
-            "Literary illustration · Reading stages, not a travel route",
-        ),
-        "epistle" => (
-            "Letter context",
-            "Illustrated letter context · Reading stages, not a travel route",
-        ),
-        "prophetic" => (
-            "Prophetic context",
-            "Illustrated prophetic context · Symbols and settings are interpretive",
-        ),
-        "vision" => (
-            "Vision context",
-            "Symbolic illustration · Vision imagery is not mapped geography",
-        ),
-        _ => (
-            "Book context",
-            "Illustrated book context · Reading stages, not a mapped route",
-        ),
+    let kind = match profile.kind.as_str() {
+        "poetry" => "Literary context",
+        "epistle" => "Letter context",
+        "prophetic" => "Prophetic context",
+        "vision" => "Vision context",
+        _ => "Book context",
     };
+    let caption = "Literary illustration of broad book context · No named reading stage depicted";
     let mut html = format!(
-        r#"<section class="story-journey book-journey" data-story-stage="{}"><p class="reader-context-kind">{} · {}</p><figure class="story-journey-art" data-hotspot-layout="reading-stages"><img src="/art/journey/{}.webp" width="1536" height="1024" alt="{}; an artistic contextual illustration, not a reconstruction of this exact verse">"#,
+        r#"<section class="story-journey book-journey" data-story-stage="{}"><p class="reader-context-kind">{} · {}</p><figure class="story-journey-art" data-hotspot-layout="none"><img src="/art/journey/{}.webp" width="1536" height="1024" alt="Literary context illustration for {}; no named reading stage is depicted">"#,
         esc(&current.id),
         kind,
         esc(&profile.name),
         esc(&current.world),
-        esc(&current.label)
+        esc(&profile.name)
     );
-    // Pins form a reading-stage sequence. They deliberately do not claim to mark
-    // the real positions of people or objects in this broad contextual artwork.
-    let count = profile.sections.len();
-    for (index, section) in profile.sections.iter().enumerate() {
-        let x = if count == 1 {
-            30.0
-        } else {
-            10.0 + index as f64 * 54.0 / (count - 1) as f64
-        };
-        let y = if index % 2 == 0 { 57 } else { 76 };
-        let active = if section.id == current.id {
-            " aria-current=\"step\""
-        } else {
-            ""
-        };
-        html.push_str(&format!(
-            r#"<a class="story-journey-pin" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" style="left:{x:.2}%;top:{y}%" aria-label="Read {} {}:{}: {}"{active}><span aria-hidden="true">●</span><span>{}</span></a>"#,
-            esc(&link(book, section, client)), esc(NAMES[book]), section.anchor_chapter,
-            section.anchor_verse, esc(NAMES[book]), section.anchor_chapter,
-            section.anchor_verse, esc(&section.label), esc(&section.label)
-        ));
-    }
     html.push_str(&format!(
-        r#"</figure><p class="story-journey-caption">{caption}</p><div class="reader-context-copy"><p class="reader-context-kind">{kind} · Explanation</p><h3>{}</h3><p>{}</p><p class="book-journey-range">Context for {} {chapter}:{verse} · Section: {}</p><p>This scene gives context for a section of the book. It does not show the literal location of every verse. The markers connect reading stages; their positions are interface layout.</p><a class="reader-context-read" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}">Read {} {}:{} →</a></div><details class="reader-context-sources"><summary>Reading stages &amp; sources</summary><p>Source: {}. The King James text is available in the Scripture tab. These notes and the artistic setting are editorial explanations.</p><nav aria-label="{} reading stages">"#,
+        r#"</figure><p class="story-journey-caption">{caption}</p><div class="reader-context-copy"><p class="reader-context-kind">{kind} · Explanation</p><h3>{}</h3><p>{}</p><p class="book-journey-range">Context for {} {chapter}:{verse} · Section: {}</p><p>The illustration gives broad literary context for the book; it does not depict the named reading stage or the literal setting of every verse.</p><a class="reader-context-read" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}">Read {} {}:{} →</a></div><details class="reader-context-sources"><summary>Reading stages &amp; sources</summary><p>Source: {}. The King James text is available in the Scripture tab. These notes and the artistic setting are editorial explanations.</p><nav aria-label="{} reading stages">"#,
         esc(&current.label), esc(&current.note), esc(NAMES[book]), esc(&current.basis),
         esc(&link(book, current, client)), esc(NAMES[book]), current.anchor_chapter,
         current.anchor_verse, esc(NAMES[book]), current.anchor_chapter,
         current.anchor_verse, esc(&current.basis), esc(NAMES[book])
     ));
     for section in &profile.sections {
+        let active = if section.id == current.id {
+            " aria-current=\"step\""
+        } else {
+            ""
+        };
         html.push_str(&format!(
-            r#"<a class="reader-context-read" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}">{} · {}</a>"#,
+            r#"<a class="reader-context-read" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}"{active}>{} · {}</a>"#,
             esc(&link(book, section, client)), esc(NAMES[book]), section.anchor_chapter,
             section.anchor_verse, esc(&section.label), esc(&section.basis)
         ));
@@ -161,7 +130,7 @@ pub(super) fn render(book: usize, chapter: usize, verse: usize, client: bool) ->
     Some(
         json!({"kind":"book-context","title":current.label,"html":html,
         "scene":format!("book-{}",book),"world":current.world,"active":current.id,
-        "stage_kind":profile.kind,"hotspot_layout":"reading-stages",
+        "stage_kind":profile.kind,"hotspot_layout":"none",
         "source_range":{"first_chapter":current.first_chapter,"last_chapter":current.last_chapter},
         "basis":current.basis}),
     )
@@ -214,8 +183,50 @@ mod tests {
                 }
                 let state = render(index, ch + 1, 1, true).unwrap();
                 let html = state["html"].as_str().unwrap();
-                assert!(html.contains("data-hotspot-layout=\"reading-stages\""));
-                assert!(html.contains("aria-current=\"step\""));
+                assert_eq!(state["hotspot_layout"], "none");
+                assert!(html.contains("data-hotspot-layout=\"none\""));
+                assert!(!html.contains("story-journey-pin"));
+                let (_, current) = selected(index, ch + 1).unwrap();
+                assert_eq!(html.matches("aria-current=\"step\"").count(), 1);
+                let figure_end = html.find("</figure>").unwrap();
+                let figure = &html[..figure_end];
+                assert!(!figure.contains("<a "));
+                assert!(!figure.contains(&current.label));
+                let caption_start = html.find("<p class=\"story-journey-caption\">").unwrap();
+                let caption_end = caption_start + html[caption_start..].find("</p>").unwrap();
+                assert!(!html[caption_start..caption_end].contains(&current.label));
+                let details_start = html
+                    .find("<details class=\"reader-context-sources\">")
+                    .unwrap();
+                let details_end = details_start + html[details_start..].find("</details>").unwrap();
+                let details = &html[details_start..details_end];
+                assert!(details.contains("<summary>Reading stages &amp; sources</summary>"));
+                let nav_start = details.find("<nav aria-label=\"").unwrap();
+                let nav_end = nav_start + details[nav_start..].find("</nav>").unwrap();
+                let nav = &details[nav_start..nav_end];
+                assert!(nav.contains(&format!("aria-label=\"{} reading stages\"", NAMES[index])));
+                for section in &book.sections {
+                    let active = if section.id == current.id {
+                        " aria-current=\"step\""
+                    } else {
+                        ""
+                    };
+                    let expected = format!(
+                        r#"<a class="reader-context-read" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}"{active}>{} · {}</a>"#,
+                        esc(&link(index, section, true)),
+                        esc(NAMES[index]),
+                        section.anchor_chapter,
+                        section.anchor_verse,
+                        esc(&section.label),
+                        esc(&section.basis)
+                    );
+                    assert!(
+                        nav.contains(&expected),
+                        "missing stage navigation for {}: {}",
+                        book.name,
+                        section.id
+                    );
+                }
                 assert!(
                     !html.contains("<svg")
                         && !html.contains("data-audio")
