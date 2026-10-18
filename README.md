@@ -48,6 +48,8 @@ One bottom audio dock follows the active narration across SPA navigation among T
 
 The next chapter is prefetched into a bounded two-chapter media cache. A chapter whose recording is not published yet falls back to the same selected Kokoro voice generated locally, with an explicit preparation message and a bounded segment buffer. Corrupt recordings or server errors produce a visible error rather than silently changing voices. Network delays and unprepared chapters can still cause pauses.
 
+On portrait phones and tablets, Journey's passage window has a small grab handle. Click it or use the Up/Down arrow keys to expand or collapse the window without changing the verse, scrolling position, illustration, or audio session. Escape closes an open selector before collapsing the window. The handle also accepts a vertical pointer drag; touch-device behavior requires separate device qualification. The window remembers its size for the browser session. Short landscape layouts keep the passage beside the scene.
+
 Hosted listening does not require the speech model download. The first local fallback listen downloads about 100 MB of public model files. No paid narration API is used. The available voice catalog does not identify speakers by race, so voices are not labeled Black. All narration is synthetic. Prepared Heart/Michael recordings are generated offline with pinned open Kokoro weights and stored in the Sites R2 bucket. The full two-voice corpus is a resumable processing job; adding the transport does not mean every recording is already published. See [narration generation and storage](docs/hosted-narration.md).
 
 ## Run the app

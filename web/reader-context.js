@@ -3,6 +3,7 @@ import { createTerrainMap } from './terrain.js';
 
 const mounted = new WeakMap();
 const DISPLAY_KEY = 'rust-bible:reader-display:v1';
+const SHEET_KEY = 'rust-bible:reader-sheet-expanded:v1';
 const routeURL = () => new URL(location.hash.startsWith('#/') ? location.hash.slice(1) : location.pathname + location.search + location.hash, location.origin);
 const request = async uri => typeof window.rustBibleApi === 'function' ? window.rustBibleApi(uri) : fetch(uri,{cache:'no-store'}).then(async r=>{const value=await r.json();if(!r.ok)throw new Error(value.error);return value;});
 export function resolveLegacyReaderRoute(route) {
@@ -33,7 +34,52 @@ export function initReaderContext(root=document) {
   let position=positionForVerse(start)||{book:reader.dataset.bookName,bookIndex:Number(reader.dataset.bookIndex),chapter:Number(reader.dataset.chapter),verse:1,route:reader.dataset.readerRoute};
   const workspace=reader.querySelector('.reader-workspace');
   const frame=document.createElement('section');frame.className='passage-window';frame.setAttribute('aria-label','Passage window');
+  frame.id='reader-passage-window';
   workspace.before(frame);frame.append(heading,toolbar,content,panel);workspace.remove();
+  const sheetHandle=document.createElement('button');sheetHandle.type='button';sheetHandle.className='passage-sheet-handle';
+  sheetHandle.setAttribute('aria-controls',frame.id);
+  frame.prepend(sheetHandle);
+  let sheetExpanded=false;
+  try{sheetExpanded=sessionStorage.getItem(SHEET_KEY)==='true';}catch{}
+  const mobileSheet=()=>matchMedia('(max-width:899px)').matches&&!matchMedia('(min-width:500px) and (max-height:500px)').matches;
+  const updateSheet=()=>{
+    reader.dataset.sheetExpanded=String(sheetExpanded);
+    sheetHandle.setAttribute('aria-expanded',String(sheetExpanded));
+    sheetHandle.setAttribute('aria-label',sheetExpanded?'Collapse passage window':'Expand passage window');
+    sheetHandle.title=sheetExpanded?'Collapse passage window':'Expand passage window';
+  };
+  const setSheetExpanded=expanded=>{
+    sheetExpanded=expanded;updateSheet();
+    try{sessionStorage.setItem(SHEET_KEY,String(expanded));}catch{}
+  };
+  updateSheet();
+  let sheetPointer=null,suppressSheetClick=false;
+  on(sheetHandle,'pointerdown',event=>{
+    if(event.button!==0)return;
+    sheetPointer={id:event.pointerId,y:event.clientY};suppressSheetClick=false;
+    sheetHandle.setPointerCapture(event.pointerId);
+  });
+  on(sheetHandle,'pointerup',event=>{
+    if(!sheetPointer||sheetPointer.id!==event.pointerId)return;
+    const delta=event.clientY-sheetPointer.y;sheetPointer=null;
+    if(Math.abs(delta)<28)return;
+    suppressSheetClick=true;setSheetExpanded(delta<0);
+  });
+  on(sheetHandle,'pointercancel',()=>{sheetPointer=null;suppressSheetClick=false;});
+  on(sheetHandle,'click',()=>{
+    if(suppressSheetClick){suppressSheetClick=false;return;}
+    setSheetExpanded(!sheetExpanded);
+  });
+  on(sheetHandle,'keydown',event=>{
+    if(!['ArrowUp','ArrowDown'].includes(event.key))return;
+    event.preventDefault();setSheetExpanded(event.key==='ArrowUp');
+  });
+  on(frame,'keydown',event=>{
+    if(event.key!=='Escape'||!mobileSheet())return;
+    const open=event.target.closest('details[open]');
+    if(open){event.preventDefault();open.open=false;open.querySelector('summary')?.focus();return;}
+    if(sheetExpanded){event.preventDefault();setSheetExpanded(false);sheetHandle.focus();}
+  });
   const canvas=document.createElement('div');canvas.className='reader-canvas';canvas.hidden=true;canvas.setAttribute('aria-label','Illustrated passage journey');
   const world=document.createElement('div');world.className='journey-world';
   const caption=document.createElement('p');caption.className='journey-caption';
@@ -70,6 +116,7 @@ export function initReaderContext(root=document) {
     document.body.classList.toggle('has-scene',mode!=='passage');
     document.body.classList.add('has-reader');
     canvas.hidden=mode==='passage';
+    sheetHandle.hidden=mode==='passage';
     content.hidden=tab!=='scripture';
     panel.hidden=tab==='scripture';
     tabs.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.windowTab===tab));if(b.dataset.windowTab==='context')b.hidden=mode==='passage';});
@@ -140,6 +187,8 @@ export function initReaderContext(root=document) {
   on(canvas,'pointerup',()=>{dragging=null;});
   on(canvas,'pointercancel',()=>{dragging=null;});
   on(window,'resize',sizeScene);
+  const sceneResize=typeof ResizeObserver==='function'?new ResizeObserver(sizeScene):null;
+  sceneResize?.observe(canvas);
   const stopMap=()=>{terrain?.destroy();terrain=null;};
   async function loadCodex(){
     const p=new URLSearchParams({book:position.bookIndex,chapter:position.chapter,verse:position.verse});if(entry)p.set('entry',entry);
@@ -273,7 +322,7 @@ export function initReaderContext(root=document) {
   // The inset uses the same Scripture nodes. Scrolling it is real reading input,
   // and the shared journey tracker records the visible verse.
   on(content,'scroll',()=>reader.dispatchEvent(new CustomEvent('bible:panel-scroll',{bubbles:true})),{passive:true});
-  const cleanup=()=>{active=false;generation++;abort.abort();stopMap();document.body.classList.remove('has-scene','has-reader');};
+  const cleanup=()=>{active=false;generation++;abort.abort();sceneResize?.disconnect();stopMap();document.body.classList.remove('has-scene','has-reader');};
   mounted.set(root,cleanup);refresh({scroll:mode!=='passage'});
   document.fonts.ready.then(()=>{if(active&&mode!=='passage'&&tab==='scripture'&&!inspected){selectVerse(position,true);sizeScene();}});
 }
