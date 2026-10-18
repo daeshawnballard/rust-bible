@@ -186,6 +186,8 @@ body.has-scene .reader-codex-button { display:none; }
  body.has-scene .passage-window { top:64px; right:10px; bottom:var(--global-audio-dock-clearance,88px); left:auto; width:42vw; min-width:0; max-width:none; height:auto; max-height:none; padding:8px 12px 0; border-radius:12px; }
  body.has-scene .reader-heading { margin-bottom:0; }
  body.has-scene .reader-toolbar { margin:0; }
+ body.has-scene .audio-source-only { position:fixed; top:64px; left:12px; right:calc(42vw + 20px); max-width:none; margin:0; z-index:12; }
+ body.has-scene .audio-source-action { background:#171a18ed!important; }
  body.has-scene .reader-location h1 { font-size:clamp(22px,3vw,25px); }
  body.has-scene .reader-heading > p { top:18px; right:16px; }
  body.has-scene .passage-tabs { margin-bottom:4px; gap:4px; }
