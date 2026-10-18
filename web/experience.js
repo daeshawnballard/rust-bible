@@ -288,6 +288,11 @@ function drawWaveform(runtime, samples = runtime.samples) {
   const context = canvas.getContext('2d');
   if (!context) return;
   context.clearRect(0, 0, width, height);
+  if (!runtime.source || !ACTIVE_STATES.has(runtime.state)) {
+    context.fillStyle = '#6d6b64';
+    context.fillRect(0, Math.floor(height / 2), width, Math.max(1, Math.round(scale)));
+    return;
+  }
   const bins = Array.isArray(runtime.peaks) ? runtime.peaks : samples;
   if (!(bins instanceof Float32Array) && !Array.isArray(bins)) return;
   if (!bins.length) return;
