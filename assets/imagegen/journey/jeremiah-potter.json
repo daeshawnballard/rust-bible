@@ -1,0 +1,21 @@
+{
+  "id": "passage-jeremiah-potter",
+  "source": "assets/imagegen/source/journey/jeremiah-potter.png",
+  "final": "web/art/journey/jeremiah-potter.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-5e26c276-817a-4ad3-9cbc-a7721146a906.png",
+  "prompt": "Landscape 1536x1024 (3:2), one individual full-frame background illustration for the existing Bible Journey reader. Match the project’s cinematic realistic historical editorial illustration quality, warm ivory/gold/earth colors, tactile period materials, and natural anatomy. Artistic reconstruction only; do not imply archaeological certainty. Keep every critical person, face, hand, animal, weapon, vessel, and hotspot target inside the left 65% of the canvas. Preserve the right 30% of the image (x=70–100%) as quiet, soft, low-detail scene background for the reader overlay; no figure, important prop, or focal event there. Keep the top 12% and bottom 12% noncritical background, with all faces and story objects between y=12–88%. One continuous scene, not a collage, storyboard, map, or repeated figures. No UI, text, lettering, captions, labels, verse numbers, speech bubbles, pins, markers, callouts, borders, controls, logos, or watermark.\n\nScene: Jeremiah 18:1–6, one visit to the potter’s house. Show Jeremiah watching a single potter work at a simple hand-turned potter’s wheel apparatus; the potter’s hands reshape one marred clay vessel into a vessel that can be made again. Keep Jeremiah’s face, potter’s hands, wheel, and vessel clearly visible together in the left 65% of the image. Use a modest, uncluttered workshop with only the objects needed for this described work. The word of the LORD is narrated in the passage but is not a visible figure or inscription. Do not depict Israel as a person made of clay; the oracle states the comparison in words. Do not show a before-and-after split, multiple pottery scenes, written labels, scroll, map, landmark, or archaeological reconstruction. Keep the right 30% quiet and low-detail.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "9fef0223d8d7279513d8ff790a0e09a197dd8c1fd1eafd084fca3e224b8a1e37",
+  "sha256": "27770a875d95ccc20dfb51d1610b7db5c6ed44dc2e008c3879aa3fa3db74e96c",
+  "notes": "Inspected as one coherent episode with visible subjects. Appearance and materials remain artistic reconstruction. Anchors are authored after image review."
+}
