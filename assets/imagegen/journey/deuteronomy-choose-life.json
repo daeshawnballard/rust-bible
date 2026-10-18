@@ -1,0 +1,21 @@
+{
+  "id": "passage-deuteronomy-choose-life",
+  "source": "assets/imagegen/source/journey/deuteronomy-choose-life.png",
+  "final": "web/art/journey/deuteronomy-choose-life.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-3c189726-c91a-4a6e-9a94-ea38c19bfd17.png",
+  "prompt": "Landscape 1536x1024 (3:2), one individual full-frame background illustration for the existing Bible Journey reader. Match the project’s cinematic realistic historical editorial illustration quality, warm ivory/gold/earth colors, tactile period materials, and natural anatomy. Artistic reconstruction only; do not imply archaeological certainty. Keep every critical person, face, hand, animal, weapon, vessel, and hotspot target inside the left 65% of the canvas. Preserve the right 30% of the image (x=70–100%) as quiet, soft, low-detail scene background for the reader overlay; no figure, important prop, or focal event there. Keep the top 12% and bottom 12% noncritical background, with all faces and story objects between y=12–88%. One continuous scene, not a collage, storyboard, map, or repeated figures. No UI, text, lettering, captions, labels, verse numbers, speech bubbles, pins, markers, callouts, borders, controls, logos, or watermark.\n\nScene: Deuteronomy 30:15–20, one restrained address by Moses to a gathered assembly of Israelites. Show Moses speaking to the listeners, with attentive people grouped beside him in the left portion of the frame. Use only natural, unmarked ground and open sky as the background; those are ordinary scene surroundings, not personified witnesses. No scroll, tablets, road, fork, crossroads, two landscapes, road signs, icons, idols, or objects representing life and death. Do not show anyone physically turning away: the passage speaks of the heart turning. Do not render words or labels. Keep the composition focused on Moses and the listening assembly in the left 65%; the rest is quiet low-detail background. The passage does not name a specific location here, so make no site claim.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "8a5c4433b0ea30d3845e5901134a567b74871e63abd76308ca7ae6fac401db96",
+  "sha256": "d404a48d6156a66d997bce19129dcde34116dab6201665fdcd46743fca5a5b2d",
+  "notes": "Inspected as one coherent episode with visible subjects. Appearance and materials remain artistic reconstruction. Anchors are authored after image review."
+}
