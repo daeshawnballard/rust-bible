@@ -137,6 +137,7 @@ body.has-scene .passage-window-footer { display:flex; align-items:center; justif
  body.has-scene .passage-window { top:auto; left:10px; right:10px; bottom:var(--global-audio-dock-clearance,132px); width:auto; min-width:0; max-width:none; height:var(--mobile-sheet-height); max-height:none; border-radius:16px 16px 0 0; padding:12px 16px 0; }
  body.has-scene .reader-location h1 { font-size:27px; }
  body.has-scene .reader-heading { margin-bottom:2px; }
+ body.has-scene .reader-toolbar { margin:0; }
  body.has-scene .reader-heading > p { top:18px; right:24px; }
  body.has-scene .passage-tabs { margin-bottom:6px; }
  body.has-scene .passage-tabs button { font-size:16px; min-height:36px; }
@@ -176,3 +177,24 @@ body.has-scene .passage-window-footer { display:flex; align-items:center; justif
 body.has-scene .reader-codex-button { display:none; }
 .reader-page[data-window-tab=codex] .passage-tabs { position:static; width:auto; height:auto; clip:auto; overflow:visible; }
 @media(max-width:420px) { .reader-codex-button { font-size:15px; } }
+
+/* In phone landscape, keep a usable Scripture pane beside the illustration. */
+@media (min-width: 500px) and (max-height: 500px) {
+ body.has-scene .library-header { height:56px; }
+ body.has-scene .library-header .wrap { min-height:56px; }
+ body.has-scene .reader-canvas { top:56px; right:calc(42vw + 20px); bottom:var(--global-audio-dock-clearance,88px); }
+ body.has-scene .passage-window { top:64px; right:10px; bottom:var(--global-audio-dock-clearance,88px); left:auto; width:42vw; min-width:0; max-width:none; height:auto; max-height:none; padding:8px 12px 0; border-radius:12px; }
+ body.has-scene .reader-heading { margin-bottom:0; }
+ body.has-scene .reader-toolbar { margin:0; }
+ body.has-scene .reader-location h1 { font-size:clamp(22px,3vw,25px); }
+ body.has-scene .reader-heading > p { top:18px; right:16px; }
+ body.has-scene .passage-tabs { margin-bottom:4px; gap:4px; }
+ body.has-scene .passage-tabs button { min-height:44px; padding-inline:8px; font-size:15px; }
+ body.has-scene .reader-scripture { font-size:18px; }
+ body.has-scene .passage-window-footer { min-height:44px; margin-top:2px; }
+ body.has-scene .journey-caption { left:8px; bottom:4px; max-width:calc(100% - 16px); }
+}
+
+@media (min-width: 500px) and (max-height: 380px) {
+ body.has-scene .passage-window-footer { position:fixed; left:12px; right:calc(42vw + 20px); bottom:var(--global-audio-dock-clearance,88px); margin:0; padding:0 4px; border:1px solid #d6bd7b40; border-radius:8px; background:#121616ed; }
+}

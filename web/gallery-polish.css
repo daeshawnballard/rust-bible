@@ -445,51 +445,61 @@ body.has-global-audio:has(.library-page) .library-page .library-tools {
   .library-page .library-tools[open] { gap: 12px; }
 }
 
-@media (max-width: 760px) {
-  main.wrap:has(.today-page) { padding: 23px 18px 18px; }
-  .today-hero {
+/* A single mobile/tablet flow owns every Today grid area. Numeric legacy
+   rows used to collide with these areas and place Read inside the verses. */
+@media (max-width: 900px) {
+  main.wrap:has(.today-page) { padding: 22px 18px 18px; }
+  .today-page .today-hero {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "heading" "art" "kicker" "reference" "scripture" "actions";
+    grid-template-areas: "heading" "kicker" "reference" "art" "scripture" "actions";
+    align-items: start;
     gap: 0;
   }
-  .today-reading { display: contents; }
-  .today-heading {
+  .today-page .today-reading { display: contents; }
+  .today-page .today-heading {
     grid-area: heading;
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
     margin: 0 0 20px;
   }
-  .today-date { grid-column: 1; grid-row: 1; margin-bottom: 3px; font-size: .9rem; }
+  .today-page .today-date { grid-column: 1; grid-row: 1; margin: 0 0 3px; font-size: .9rem; }
   .today-page .today-heading h1 { grid-column: 1; grid-row: 2; font-size: 2.9rem; }
   .today-page .continuation-row--today {
+    display: flex;
+    flex-wrap: nowrap;
     grid-column: 1;
     grid-row: 3;
     width: 100%;
+    max-width: 420px;
     margin-top: 10px;
   }
-  .today-page .continuation-row--today > svg { width: 26px; height: 26px; }
+  .today-page .continuation-row--today > svg { width: 26px; height: 26px; flex: none; }
   .today-page .continuation-row--today p { font-size: .88rem; }
   .today-page .continuation-row--today [data-continue-label] { font-size: .94rem; }
-  .today-art { grid-area: art; margin: 0 0 23px; }
-  .today-art img {
-    width:100%;
-    margin-left:0;
-    width: 100%;
+  .today-page .today-art { grid-area: art; width: 100%; max-width: 420px; justify-self: center; margin: 0 0 20px; }
+  .today-page .today-art img {
+    width: auto;
+    max-width: 100%;
     height: auto;
-    aspect-ratio: 1536 / 1280;
-    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 88%, transparent 100%);
-    mask-image: linear-gradient(180deg, #000 0%, #000 88%, transparent 100%);
+    max-height: min(300px, 38svh);
+    margin: 0 auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 90%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 90%, transparent 100%);
   }
-  .today-art figcaption { font-size: .75rem; }
-  .today-kicker { grid-area: kicker; margin-bottom: 5px; font-size: .7rem; letter-spacing: .14em; }
-  .today-page h2.today-reference { grid-area: reference; margin-bottom: 14px; font-size: 1.8rem; }
-  .today-scripture { grid-area: scripture; font-size: 1.13rem; line-height: 1.58; }
-  .today-scripture .v { margin-bottom: 12px; padding-left: 25px; }
-  .today-page .today-actions { grid-area: actions; margin-top: 11px; }
-  .today-page .today-read { min-height: 44px; font-size: 1.02rem; }
-  .today-page .today-support { margin-top: 23px; }
+  .today-page .today-art figcaption { margin: 6px 0 0; font-size: .75rem; line-height: 1.4; }
+  .today-page .today-kicker { grid-area: kicker; margin: 0 0 5px; font-size: .7rem; letter-spacing: .14em; }
+  .today-page h2.today-reference { grid-area: reference; margin: 0 0 12px; font-size: 1.8rem; }
+  .today-page .today-scripture { grid-area: scripture; font-size: 1.13rem; line-height: 1.58; }
+  .today-page .today-scripture .v { margin-bottom: 12px; padding-left: 25px; }
+  .today-page .today-actions { grid-area: actions; margin: 6px 0 0; width: 100%; }
+  .today-page .today-read { min-height: 44px; font-size: 1.05rem; }
+  .today-page .today-support { margin-top: 20px; }
   .today-page .today-rotation { text-align: left; line-height: 1.7; }
+}
 
+@media (max-width: 760px) {
   main.wrap:has(.library-page) { padding: 21px 14px 20px; }
   .library-topline { flex-wrap: wrap; gap: 12px 18px; margin-bottom: 13px; padding-bottom: 11px; }
   .library-page .library-heading { flex: 1 1 100%; }

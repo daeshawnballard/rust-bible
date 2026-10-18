@@ -177,22 +177,6 @@
     gap: 10px;
   }
 
-  .today-page .today-reference {
-    grid-row: 4;
-  }
-
-  .today-page .today-art {
-    grid-row: 5;
-  }
-
-  .today-page .today-scripture {
-    grid-row: 6;
-  }
-
-  .today-page .today-actions {
-    grid-row: 7;
-  }
-
   .today-page .continuation-row--today > svg {
     width: 24px;
     height: 24px;

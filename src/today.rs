@@ -435,6 +435,13 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> RouteRespo
     };
     let index = (date.ordinal() - origin.ordinal()).rem_euclid(readings.len() as i64) as usize;
     let (reference, image, caption) = readings[index];
+    let (image_width, image_height) = if image.starts_with("covers/") {
+        (768, 1152)
+    } else if image == "today/psalms" {
+        (1416, 1111)
+    } else {
+        (1536, 1024)
+    };
     let passage = parse_ref(reference).expect("reviewed readings reference the embedded corpus");
     let book = NAMES[passage.book];
     let chapter = passage.ch;
@@ -468,7 +475,7 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> RouteRespo
         _ => unreachable!("edition was validated above"),
     };
     let body = format!(
-        r#"<section class="today-page" data-today data-today-date="{date_key}"><div class="today-hero"><div class="today-reading"><div class="today-heading"><p class="today-date"><time datetime="{date_key}">{date_label}</time></p><h1>Today</h1><section class="continuation-row continuation-row--today" data-continuation>{icon}<div data-continue-empty><p>Begin with a book</p><a href="{library}">Browse the Library →</a></div><div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href="{library}" aria-label="Continue reading">→</a><details class="continue-options"><summary aria-label="Saved reading options" title="Saved reading options"><span aria-hidden="true">•••</span></summary><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear saved location</button></details></section></div><p class="today-kicker">Today’s passage <span aria-hidden="true">·</span> King James Version</p><h2 class="today-reference">{title}</h2><div class="scripture today-scripture">{text}</div><div class="today-actions"><a class="today-read" href="{full_chapter}">{icon}<span>Read {book} {chapter}</span><span aria-hidden="true">→</span></a>{controls}</div></div><figure class="today-art"><img src="/art/{image}.webp" width="1536" height="1280" alt="{caption}" fetchpriority="high"><figcaption>{caption}</figcaption></figure></div><div class="today-support">{learning_card}</div><p class="today-rotation">{rotation} <span aria-hidden="true">·</span> <a href="{archive}">Link to this day</a></p></section>"#,
+        r#"<section class="today-page" data-today data-today-date="{date_key}"><div class="today-hero"><div class="today-reading"><div class="today-heading"><p class="today-date"><time datetime="{date_key}">{date_label}</time></p><h1>Today</h1><section class="continuation-row continuation-row--today" data-continuation>{icon}<div data-continue-empty><p>Begin with a book</p><a href="{library}">Browse the Library →</a></div><div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href="{library}" aria-label="Continue reading">→</a><details class="continue-options"><summary aria-label="Saved reading options" title="Saved reading options"><span aria-hidden="true">•••</span></summary><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear saved location</button></details></section></div><p class="today-kicker">Today’s passage <span aria-hidden="true">·</span> King James Version</p><h2 class="today-reference">{title}</h2><div class="scripture today-scripture">{text}</div><div class="today-actions"><a class="today-read" href="{full_chapter}">{icon}<span>Read {book} {chapter}</span><span aria-hidden="true">→</span></a>{controls}</div></div><figure class="today-art"><img src="/art/{image}.webp" width="{image_width}" height="{image_height}" alt="{caption}" fetchpriority="high"><figcaption>{caption}</figcaption></figure></div><div class="today-support">{learning_card}</div><p class="today-rotation">{rotation} <span aria-hidden="true">·</span> <a href="{archive}">Link to this day</a></p></section>"#,
         date_key = date.key(),
         date_label = date.label(),
         title = esc(&title),
