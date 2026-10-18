@@ -1,6 +1,14 @@
 # Illustrated Journey scenes
 
-Journey now covers all 66 books and all 1,189 chapters through 271 authored chapter-section stages, with thirteen contextual landscapes. The broad markers indicate reading stages, not surveyed places or a literal setting for every verse. Poetry, letters, prophecy, and visions are labeled as their own forms of context. The fourteen detailed story worlds below keep priority and their exact verse-level ranges.
+Journey covers all 66 books and all 1,189 chapters through 271 authored chapter-section stages, with thirteen contextual landscapes. Broad stages are navigation inside the Context window, with no image hotspots. Poetry, letters, prophecy, and visions are labeled as their own forms of context. The fourteen detailed story worlds below keep priority and their exact verse-level ranges.
+
+## Passage subjects
+
+The passage scene catalog at `data/journey/passage-scenes.json` adds Genesis 18:1–15, Genesis 38:18, and Genesis 38:25–26. Each hotspot identifies a visible subject and a meaningful connection to the cited passage. The catalog supplies explicit active ranges, source anchors, artwork coordinates, and optional subject detail images. No authored scene is selected outside its ranges.
+
+Genesis 18 shows Abraham welcoming three visitors, serving their meal, and Sarah hearing the promise from the tent door. The tent has no standalone hotspot: Sarah’s listening is the relevant event. Genesis 38:18 uses a reconstructed study of the signet, bracelets, and staff; verses 25–26 switch to the recognition scene. The exact appearance of the people, objects, and setting remains an artistic reconstruction.
+
+The first Abraham scene is retained in source provenance after a desktop check found the third visitor behind the passage panel. The recomposed `abraham-sarah-visitors-v2` places all three visitors within the visible scene area. The meal and pledge details are separate generated assets. Broad contextual artwork retains its reading-stage links in the native Context disclosure; it does not claim those stages are depicted objects.
 
 Journey is a companion inside the canonical chapter reader. Its current stop follows the same verse position used by manual reading, continuous audio, and the local bookmark. It never supplies another Scripture stream or audio queue.
 

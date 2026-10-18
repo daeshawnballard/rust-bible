@@ -154,7 +154,7 @@ export function initReaderContext(root=document) {
     found.classList.add('is-context-current');
     if(scroll&&tab==='scripture')found.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':behavior});
   };
-  let pan=0,worldWidth=0,worldHeight=0,manualPan=false;
+  let pan=0,panY=0,worldWidth=0,worldHeight=0,manualPan=false;
   const sizeScene=()=>{
     const figure=world.querySelector('figure'), img=figure?.querySelector('img');
     if(!figure||!img)return;
@@ -162,7 +162,6 @@ export function initReaderContext(root=document) {
     const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024));
     worldWidth=(img.naturalWidth||1536)*scale;worldHeight=(img.naturalHeight||1024)*scale;
     world.style.width=worldWidth+'px';world.style.height=worldHeight+'px';
-    world.style.top=(h-worldHeight)/2+'px';
     const selected=figure.querySelector('[aria-current],[aria-pressed="true"]');
     if(!manualPan){
       const x=selected?parseFloat(selected.style.left)/100:.3;
@@ -172,18 +171,31 @@ export function initReaderContext(root=document) {
       const scenePoint=initial+x*worldWidth;
       pan=scenePoint>w*(desktop ? 0.65 : 0.78)||scenePoint<44?target-x*worldWidth:initial;
       pan=Math.max(w-worldWidth-(desktop?w*.28:0),Math.min(0,pan));
+      panY=(h-worldHeight)/2;
+      if(selected){
+        const y=parseFloat(selected.style.top)/100;
+        const headerBottom=reader.ownerDocument.querySelector('.library-header')?.getBoundingClientRect().bottom||0;
+        const top=Math.max(0,headerBottom-canvas.getBoundingClientRect().top)+22;
+        const bottom=h-22;
+        const sceneY=panY+y*worldHeight;
+        if(bottom>=top&&(sceneY<top||sceneY>bottom))panY=(top+bottom)/2-y*worldHeight;
+      }
     }
+    panY=Math.max(h-worldHeight,Math.min(0,panY));
     world.style.left=pan+'px';
+    world.style.top=panY+'px';
   };
   let dragging=null,pointerFocus=false;
   on(world,'pointerdown',()=>{pointerFocus=true;},{capture:true});
   on(window,'keydown',()=>{pointerFocus=false;},{capture:true});
-  on(canvas,'pointerdown',e=>{if(e.target.closest('a,button'))return;dragging={x:e.clientX,pan};canvas.setPointerCapture(e.pointerId);});
-  on(canvas,'pointermove',e=>{if(!dragging)return;manualPan=true;pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,dragging.pan+e.clientX-dragging.x));world.style.left=pan+'px';});
+  on(canvas,'pointerdown',e=>{if(e.target.closest('a,button'))return;dragging={x:e.clientX,y:e.clientY,pan,panY};canvas.setPointerCapture(e.pointerId);});
+  on(canvas,'pointermove',e=>{if(!dragging)return;manualPan=true;pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,dragging.pan+e.clientX-dragging.x));panY=Math.max(canvas.clientHeight-worldHeight,Math.min(0,dragging.panY+e.clientY-dragging.y));world.style.left=pan+'px';world.style.top=panY+'px';});
   on(world,'focusin',e=>{
     const pin=e.target.closest('a,button');if(!pin||!worldWidth||pointerFocus)return;
     const r=pin.getBoundingClientRect(),right=innerWidth>=900?frame.getBoundingClientRect().left-20:canvas.clientWidth-12;
     if(r.left<12||r.right>right){manualPan=true;pan+=right*.5-(r.left+r.width*.5);pan=Math.max(canvas.clientWidth-worldWidth-(innerWidth>=900?innerWidth*.28:0),Math.min(0,pan));world.style.left=pan+'px';}
+    const bounds=canvas.getBoundingClientRect(),top=Math.max(bounds.top,reader.ownerDocument.querySelector('.library-header')?.getBoundingClientRect().bottom||0)+4,bottom=bounds.bottom-4;
+    if(bottom-top>=44&&(r.top<top||r.bottom>bottom)){manualPan=true;panY+=(top+bottom)/2-(r.top+r.height*.5);panY=Math.max(canvas.clientHeight-worldHeight,Math.min(0,panY));world.style.top=panY+'px';}
   });
   on(canvas,'pointerup',()=>{dragging=null;});
   on(canvas,'pointercancel',()=>{dragging=null;});
@@ -262,7 +274,9 @@ export function initReaderContext(root=document) {
           const jump=document.createElement('a');jump.className='reader-context-read';jump.dataset.contextRead='';
           jump.href=(typeof window.rustBibleApi==='function'?'#':'')+inspected.route+'?resume='+inspected.verse+'&context='+mode+'#v'+inspected.verse;
           jump.dataset.contextBook=inspected.book; jump.dataset.contextChapter=inspected.chapter;jump.dataset.contextVerse=inspected.verse;
-          jump.textContent='Read '+inspected.book+' '+inspected.chapter+':'+inspected.verse+' →';body.append(jump);
+          jump.textContent='Read '+inspected.book+' '+inspected.chapter+':'+inspected.verse+' →';
+          const hasJump=[...body.querySelectorAll('[data-context-read]:not([data-context-inspect])')].some(link=>link.dataset.contextBook===inspected.book&&Number(link.dataset.contextChapter)===inspected.chapter&&Number(link.dataset.contextVerse)===inspected.verse);
+          if(!hasJump)body.append(jump);
         }
       }
       status.textContent=inspected?'Browsing context. Your reading position has not moved.':'Following '+position.book+' '+position.chapter+':'+position.verse;
@@ -281,7 +295,7 @@ export function initReaderContext(root=document) {
       window.biblePlayback?.stop();return;
     }
     if(target.hasAttribute('data-context-read')){
-      if(canvas.contains(target)){event.preventDefault();event.stopImmediatePropagation();inspectLink(target);return;}
+      if(canvas.contains(target)||target.hasAttribute('data-context-inspect')){event.preventDefault();event.stopImmediatePropagation();inspectLink(target);return;}
       const chapter=Number(target.dataset.contextChapter),verse=Number(target.dataset.contextVerse);
       const record={book:target.dataset.contextBook,chapter,verse,route:'/book/'+target.dataset.contextBook.replaceAll(' ','-')+'/'+chapter};
       const found=[...reader.querySelectorAll('.scripture .v')].find(n=>{const p=positionForVerse(n);return p?.route===record.route&&p.verse===verse;});

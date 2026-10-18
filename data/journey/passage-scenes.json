@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "scenes": [
+    {
+      "id": "abraham-sarah-visitors",
+      "book": 0,
+      "title": "Abraham welcomes the visitors and Sarah hears the promise",
+      "coverage": "Genesis 18:1\u201315",
+      "art": {
+        "path": "/art/journey/abraham-sarah-visitors-v2.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abraham serves three seated visitors beneath a tree, while Sarah listens from the open tent entrance; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 18:1\u201315",
+      "ranges": [
+        {
+          "chapter": 18,
+          "first": 1,
+          "last": 15
+        }
+      ],
+      "intro": {
+        "title": "Visitors at Mamre",
+        "note": "Genesis 18:1 introduces Abraham at the tent door in Mamre. The illustration gathers the welcome, meal, and Sarah hearing the promise into a single editorial scene. It does not establish the appearance of these people or a precise campsite."
+      },
+      "hotspots": [
+        {
+          "id": "abraham-welcome",
+          "title": "Abraham welcomes the visitors",
+          "x": 29,
+          "y": 50,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 2,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 2,
+              "last": 5
+            }
+          ],
+          "note": "Abraham runs to meet the three men and offers water, rest, and food. The visible visitors help explain the welcome described in Genesis 18:2\u20135.",
+          "detail": null
+        },
+        {
+          "id": "abraham-meal",
+          "title": "Abraham serves the meal",
+          "x": 36,
+          "y": 72,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "Sarah prepares cakes, a young man prepares the calf, and Abraham serves butter, milk, and the prepared calf beneath the tree. He stands by the visitors while they eat.",
+          "detail": {
+            "path": "/art/journey/abraham-meal-detail.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "Close view of bread cakes, a milk vessel, butter, and prepared meat on a woven cloth; artistic reconstruction"
+          }
+        },
+        {
+          "id": "sarah-promise",
+          "title": "Sarah hears the promise",
+          "x": 10,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 9,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 9,
+              "last": 15
+            }
+          ],
+          "note": "Sarah hears from the tent door that she will have a son. She laughs within herself because of their age, and the Lord questions her response. The doorway matters because she listens there.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "judah-pledge-objects",
+      "book": 0,
+      "title": "The pledge Judah gives",
+      "coverage": "Genesis 38:18",
+      "art": {
+        "path": "/art/journey/judah-pledge-detail.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A stone signet, braided bracelets, and a wooden staff arranged on cloth; reconstructed forms of the pledge objects named in Genesis"
+      },
+      "caption": "Illustrated object study \u00b7 Genesis 38:18 \u00b7 Object forms are reconstructed",
+      "ranges": [
+        {
+          "chapter": 38,
+          "first": 18,
+          "last": 18
+        }
+      ],
+      "intro": {
+        "title": "Judah's pledge",
+        "note": "Genesis names the objects Judah gives as a pledge. The exact design and materials are reconstructed."
+      },
+      "hotspots": [
+        {
+          "id": "judah-pledge",
+          "title": "The pledge that identifies Judah",
+          "x": 41,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 38,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 38,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 38,
+              "first": 18,
+              "last": 18
+            },
+            {
+              "chapter": 38,
+              "first": 25,
+              "last": 26
+            }
+          ],
+          "note": "Tamar asks for Judah\u2019s signet, bracelets, and staff as a pledge. Later, these objects identify him. This object study illustrates their role without depicting the encounter described in the verse.",
+          "detail": {
+            "path": "/art/journey/judah-pledge-detail.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "The signet, bracelets, and wooden staff shown together as a reconstructed object study"
+          }
+        }
+      ]
+    },
+    {
+      "id": "judah-tamar-recognition",
+      "book": 0,
+      "title": "Judah recognizes the pledge",
+      "coverage": "Genesis 38:25\u201326",
+      "art": {
+        "path": "/art/journey/judah-tamar-pledge.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "The pledge objects are presented to Judah, who responds with recognition; artistic reconstruction of the recognition episode"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 38:25\u201326",
+      "ranges": [
+        {
+          "chapter": 38,
+          "first": 25,
+          "last": 26
+        }
+      ],
+      "intro": {
+        "title": "Recognizing the evidence",
+        "note": "The returned pledge objects connect the accusation with Judah's earlier promise. The staging of this scene is an artistic reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "tamar-evidence",
+          "title": "Tamar sends the evidence",
+          "x": 53,
+          "y": 73,
+          "active": [
+            {
+              "chapter": 38,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 38,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 38,
+              "first": 18,
+              "last": 18
+            },
+            {
+              "chapter": 38,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "note": "Tamar sends word to Judah, asking him to recognize the signet, bracelets, and staff. These are the objects he gave as a pledge earlier in the chapter.",
+          "detail": {
+            "path": "/art/journey/judah-pledge-detail.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "Detail of the reconstructed signet, bracelets, and staff that identify the pledge"
+          }
+        },
+        {
+          "id": "judah-acknowledges",
+          "title": "Judah acknowledges his failure",
+          "x": 35,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 38,
+              "first": 26,
+              "last": 26
+            }
+          ],
+          "anchor": {
+            "chapter": 38,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 38,
+              "first": 26,
+              "last": 26
+            }
+          ],
+          "note": "Judah recognizes the objects and acknowledges his failure to give Tamar to Shelah his son. The illustration focuses on his recognition and admission.",
+          "detail": null
+        }
+      ]
+    }
+  ]
+}

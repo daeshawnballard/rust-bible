@@ -1,0 +1,22 @@
+{
+  "id": "passage-abraham-sarah-visitors",
+  "source": "assets/imagegen/source/journey/abraham-sarah-visitors.png",
+  "final": "web/art/journey/abraham-sarah-visitors.webp",
+  "intended_use": "Passage-specific Journey scene or subject detail",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-a8a938f1-e065-4c54-b57c-2eee1e01c6ce.png",
+  "reference_generation": "exec-0d619168-a011-4b67-8ea1-76e66a900bb7.png",
+  "prompt": "Use case: historical-scene. Asset type: individual production background illustration for an existing Bible Journey reader; landscape 1536x1024, full frame, no interface or text.\nReference image role: approved UI concept is a STYLE, CHARACTER AND SUBJECT reference only. Create the underlying scene as a clean standalone illustration, not a screenshot and do not reproduce any panel, marker, waveform, lettering, label, button, frame or browser.\nScene: Genesis 18:1\u201315, Abraham welcoming three visitors and Sarah listening to the promise. Intimate coherent encampment near Mamre, warm late afternoon light, exquisite realistic historical illustration, tactile woven wool and goat-hair tent, olive/oak shade tree, dusty limestone and distant hills. No grand city backdrop.\nCritical subjects all clearly visible left and middle: exactly THREE adult ancient Near Eastern male visitors seated beneath the tree around a low ground cloth; elderly brown-skinned Abraham with gray beard stands beside them serving a ceramic dish. On the foreground cloth are bread cakes, a milk vessel and simple bowls of prepared meat. Left third: an open goat-hair tent entrance; adult elderly Sarah visibly standing/listening at that opening, her face and upper body readable rather than buried in shadow. Sarah represents the later promise moment; composition is an editorial illustration of the passage, not an archaeological photograph or a measured map.\nComposition: camera pulled back enough for full human bodies and an unambiguous tent doorway, seated group and meal; cinematic slightly elevated 3/4 view. Put Sarah aboutx17%y43%, visitors aboutx40%y56%, meal aboutx43%y73%, Abraham aboutx55%y47%; allow natural composition, no forced exact placements. Right25% should continue as soft landscape with no essential subjects because reader panel overlays it. Keep important subjects above bottom15%playeroverlap. High material detail, beautiful gold sun through leaves, natural anatomy, period clothing, restrained jewel tones and charcoal shadows matching reference.\nAvoid halos, divine portraits, fantasyeffects, modernutensils, furnituretable, modernbuildings, fakewrittenmanuscripts, extrapeople, text, lettering, ornamental UI, watermark. ONE continuous scene, not a collage. The image must clearly show all three teachable subjects: visitors being welcomed, meal being served, Sarah listening at the tent.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "9a94eb65086189710bf4a67555e272db9c84f13284f97319462b6d7e02b7513a",
+  "sha256": "358e1f9aca1d5461757e866f5b7813a530ab86dc89857bfc9b1f6a7ca97b014b",
+  "notes": "First image retained for provenance; the desktop reader panel occluded the rightmost visitor. Replaced by passage-abraham-sarah-visitors-v2."
+}

@@ -22,6 +22,7 @@ pub(super) fn controls(book: usize, chapter: usize) -> String {
 
 fn illustrated_journey(book: usize, chapter: usize) -> bool {
     (book == 0 && (2..=4).contains(&chapter))
+        || super::passage_scenes::available(book, chapter)
         || super::journey_scenes::available(book, chapter)
         || super::journey_books::available(book, chapter)
 }
@@ -188,6 +189,8 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
     } else if mode == "journey" {
         if book == 0 && (2..=4).contains(&chapter) {
             genesis(chapter, verse, client)
+        } else if let Some(scene) = super::passage_scenes::render(book, chapter, verse, client) {
+            scene
         } else if let Some(scene) = super::journey_scenes::render(book, chapter, verse, client) {
             scene
         } else if super::atlas::focused_state(book, chapter, verse)["available"] == true {

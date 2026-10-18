@@ -1,0 +1,22 @@
+{
+  "id": "passage-abraham-sarah-visitors-v2",
+  "source": "assets/imagegen/source/journey/abraham-sarah-visitors-v2.png",
+  "final": "web/art/journey/abraham-sarah-visitors-v2.webp",
+  "intended_use": "Passage-specific Journey scene or subject detail",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-7bae0c77-5030-4f37-aa8d-49e7eb6f329d.png",
+  "reference_generation": "exec-a8a938f1-e065-4c54-b57c-2eee1e01c6ce.png",
+  "prompt": "Edit target: supplied production Genesis18 illustration. Keep the same characters, scene, warm light, textile and pottery details, tent, Sarah visible at the left tent entrance, large tree, hills, and 1536x1024 full-frame historical illustration. Change only the spatial arrangement of the group to fix an actual UI occlusion: a reader panel covers the RIGHT 30% of this image. In the current asset, the rightmost seated visitor is partly covered. Reposition ALL THREE seated visitors closer together toward the left-center so all three heads and bodies and the entire meal are visibly within x22%\u201362% of the frame; Abraham standing/serving within x52%\u201365%; keep Sarah at x10% at the tent entrance. The man with his back partly to the camera must move from far right to front-middle at x58%, with his recognizable head no farther right than x62%. Keep the meal prominently visible at x44%y70%, do not hide it behind the shifted man. Keep exactly THREE seated visitors plus ONE standing Abraham and Sarah at tent; natural anatomy, no extra humans, no added figures. The rightmost30% contains only quiet continuing landscape, tree shade and background, no narrative subjects. Do NOT simply crop the whole existing image or move Sarah offscreen. Recompose this single coherent scene to make all subjects readable when the right panel is present. No UI, text, labels, markers, frame, watermark. High-quality historically inspired realistic illustration matching the source.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "28f0457b2da80454a0375b11a6c35d4dfcfced53c3d365e641e0c9cfe1b0c751",
+  "sha256": "ccc4ff0db47a4876947d42c8716bd974247bebbf9aa4a763bf7cd401eb425ad7",
+  "notes": "Recomposed after measured desktop panel occlusion. All three visitors, meal, and Sarah are inside the left70percent; final browser checks still apply."
+}
