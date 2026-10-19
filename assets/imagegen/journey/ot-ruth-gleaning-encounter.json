@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-ruth-gleaning-encounter",
+  "source": "assets/imagegen/source/journey/ot-ruth-gleaning-encounter.png",
+  "final": "web/art/journey/ot-ruth-gleaning-encounter.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-4b835d61-022b-4ac2-b172-a98e83d872c3.png",
+  "prompt": "prompts/ruth-gleaning-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "cd4a202184f5b627a1fa079c95556bbd2ae66b280cbce172a82c58114d9d6021",
+  "sha256": "ad31f43a6c86cb0dae646f040ad26e53f61dffc3b484717211380366e754da50",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
