@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-acts",
+  "source": "assets/imagegen/source/journey/nt-acts.png",
+  "final": "web/art/journey/nt-acts.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-88ab78d4-6bff-4b9d-9275-8e4cdc766f29.png",
+  "prompt": "Use case: historical-scene.\nAsset type: individual production background illustration for a Bible Journey reader, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural human proportions, tactile ancient materials, nuanced light, and respectful storytelling. Do not reproduce their characters, settings, or compositions.\nScene/backdrop: Pentecost gathering in Jerusalem as described in Acts 2:1–13, inside an unspecified house setting with no precise architectural layout or modern landmark.\nSubject/action: A gathered group of Jesus’ followers speaks while small divided flame-like appearances rest above each of them, echoing the text’s “tongues like as of fire” without burning or injuring anyone. At the open edge of the gathering, a larger group of hearers listen in amazement; some are questioning and a few are skeptical. Show a range of ordinary first-century clothing without assigning modern ethnic identities or making one person stand for a named nation.\nComposition/framing: Wide three-quarter view. Keep followers, flame-like appearances, and listeners fully within the left 65%; reserve the right 30% as quiet wall and open air for a reading panel. Keep the top and bottom 12% free of essential subjects. One continuous gathering, no collage or sequential panels.\nStyle/materials: Warm cinematic realistic historical illustration; worn woven garments, plaster and stone surfaces, natural expressive faces, restrained daylight, tactile detail.\nConstraints: Preserve the passage’s comparison of tongues to fire. Do not show burning bodies, halos, written languages, banners, maps, named costumes, modern buildings, an asserted exact room, extra supernatural figures, text, labels, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "95bbd0a1c9f1ba1f35c6ed383951f585189ec9496e57af67691f4a8ecef8ccaa",
+  "sha256": "0d878246b98674abd3be9da8daf8b0ce75745be5f8e14bdda76a24477d36e84c",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
