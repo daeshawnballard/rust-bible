@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-romans",
+  "source": "assets/imagegen/source/journey/nt-romans.png",
+  "final": "web/art/journey/nt-romans.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-9c90ee76-e0bc-4fe2-bb46-30e87df038e3.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of a letter’s metaphor, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, tactile materials, nuanced natural light, and readable composition. Do not reproduce their scenes, characters, or objects.\nScene/backdrop: One olive tree presented as Paul’s illustrative comparison in Romans 11:17–18, not as a documented historical event or located tree.\nSubject/action: Make one foreground graft union the unmistakable focal subject: a healthy cultivated olive trunk with a living, visibly separate wild-olive branch inserted into a clean angled notch in the trunk and firmly bound at the junction with thin natural fiber strips. The inserted branch must visibly cross into and emerge from the trunk at that exact bound join, with fresh leaves growing beyond the join; it must not merely lean against the tree or look like an ordinary branch. Keep a second leafy natural branch growing from the tree and a few old pruned stubs nearby to distinguish the graft from pruning. Show a little exposed root at the base. No people are required.\nComposition/framing: Wide, slightly elevated three-quarter view, with the large trunk and graft junction clearly visible around center-left. Keep root, trunk, junction, and important branches fully within the left 65%; reserve the right 30% as quiet sunlit ground and soft landscape for a reading panel. Keep the top and bottom 12% free of essential details. One continuous tree image, not a diagram, collage, or sequence.\nStyle/materials: Warm realistic historical illustration; gnarled olive bark, silvery green leaves, a tactile cut scar and clearly visible fiber binding, earthy soil, soft gold light, fine detail.\nConstraints: This is a literary comparison, not a literal event. Show horticultural joining at the trunk, not a branch merely resting against it. Do not add labels, writing, banners, maps, humans, an orchard procession, modern tools, text, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "27f4b177d5523485778f5dcad350efc4422054db182ac0cc65f62265c4b43123",
+  "sha256": "a7e18e0ee79c06f3e00fed2450493f2ac2a2299c92fd096f808694dc0e04a557",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
