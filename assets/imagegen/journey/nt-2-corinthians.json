@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-2-corinthians",
+  "source": "assets/imagegen/source/journey/nt-2-corinthians.png",
+  "final": "web/art/journey/nt-2-corinthians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-832c1451-4e6c-479e-acfc-e008e4cd1f4e.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the earthen-vessel comparison in 2 Corinthians 4:7–10, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, tactile materials, nuanced natural light, and readable composition. Do not reproduce their scenes, characters, or objects.\nScene/backdrop: A symbolic scene for Paul’s words about treasure in earthen vessels. This is an illustrative comparison, not a documented historical event or located place.\nSubject/action: Show one fully clothed ordinary adult from the waist up, carefully holding an intact, weathered clay vessel with both hands at chest level. The vessel has subtle hairline cracks and worn edges but remains whole; a restrained warm light within suggests the treasure metaphor without depicting coins or any specific physical object. The person looks down at the vessel with a calm, steady expression. Keep the full head, hands, and complete vessel visible with clear space around them.\nComposition/framing: Wide three-quarter view. Place the person and vessel in the left half; keep the very top 15% and bottom 12% free of the person’s head, hands, and vessel. Do not crop the person’s head, face, hands, or vessel at any frame edge. Reserve the right 30% as quiet, low-detail background for a reading panel. One continuous symbolic composition.\nStyle/materials: Warm realistic historical illustration; tactile clay, simple woven garment, natural hands and face, soft golden light, subtle earth pigments, nuanced shadows.\nConstraints: The light is an editorial symbol for “treasure,” not a literal object named in the text. Do not show destruction, injury, a dramatic miracle effect, coins, written scrolls, a specific historical setting, text, labels, banners, maps, modern objects, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "79ad7c59501166099f7147f95bdcd889501f98d097691aa3d471ba9c2b28bc33",
+  "sha256": "e9f452915ea3eb23790503eb7641b041394226092cb6f7437a82110d8224d2f2",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
