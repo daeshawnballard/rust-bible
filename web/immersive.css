@@ -84,6 +84,8 @@ body.has-reader main.wrap { width:100%; max-width:none; margin:0; padding:0; }
 .journey-world .story-journey-pin > span:first-child { font-size:0; }
 .journey-world .story-journey-pin[aria-current] > span:first-child,.journey-world .reader-illustration-hotspot[aria-pressed=true] .reader-illustration-hotspot-dot { background:#f3d894; box-shadow:0 0 0 4px #d6bd7b33,0 0 20px #d6bd7b80; }
 .journey-world .story-journey-pin > span:last-child,.journey-world .reader-illustration-hotspot-label { display:none; }
+.journey-world .story-journey-pin > span:last-child,.journey-world .reader-illustration-hotspot-label { pointer-events:none; }
+.journey-world .story-journey-pin[aria-current] { z-index:2; }
 .journey-world .story-journey-pin[aria-current] > span:last-child,.journey-world .story-journey-pin:hover > span:last-child,.journey-world .story-journey-pin:focus-visible > span:last-child,.journey-world .reader-illustration-hotspot[aria-pressed=true] .reader-illustration-hotspot-label,.journey-world .reader-illustration-hotspot:hover .reader-illustration-hotspot-label,.journey-world .reader-illustration-hotspot:focus-visible .reader-illustration-hotspot-label { display:block; position:absolute; left:36px; top:6px; transform:none; padding:6px 12px; border:1px solid #d6bd7b88; border-radius:30px; background:#151918ed; font:16px 'Bible Display',Georgia,serif; width:max-content; max-width:170px; white-space:normal; text-align:left; }
 .journey-caption { position:absolute; left:34px; bottom:calc(var(--global-audio-dock-clearance,112px) + 16px); color:#ded9cb; background:#12131388; padding:4px 8px; border-radius:4px; font:12px/1.4 'Bible Garamond',Georgia,serif; max-width:55vw; }
 body.has-scene { overflow:hidden; }
