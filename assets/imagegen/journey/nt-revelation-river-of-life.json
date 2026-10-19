@@ -1,0 +1,29 @@
+{
+  "id": "passage-nt-revelation-river-of-life",
+  "source": "assets/imagegen/source/journey/nt-revelation-river-of-life.png",
+  "final": "web/art/journey/nt-revelation-river-of-life.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-416e6b78-2259-4acf-8176-fb3aa0062d00.png",
+  "prompt": "EDIT the supplied target image to fix its measurable composition while preserving the same vision elements and warm cinematic style. Recompose the scene as a tighter left-side cluster: scale the entire tree and river-bank composition smaller and lower, with the whole tree canopy, trunk, fruit, throne, river, and servants inside x=6–58% and y=18–82%. Keep all leaves below y=18%; do not crop the canopy at the top. Keep the throne near x=10–23%, y=28–50%; keep the tree trunk near x=30–38%, its complete leafy canopy within x=8–56%, y=18–52%, and the river flowing from the throne toward the foreground only within x=16–57%, y=43–80%. Move the servants to x=8–48%, y=48–78%. The rightmost x=65–100% must be clean quiet warm stone/plaster only, with absolutely no water, riverbank, rocks, plants, people, throne, or paving detail. Preserve one throne, one unmistakable tree of life with fruit and healing leaves, a clear river flowing from the throne, and anonymous servants facing its light. No person or divine form on the throne. Convey no night by warm steady radiance, without a sun or moon disc. No new objects, architectural landmarks, city skyline, timeline, map, denominational symbols, extra tree or throne, human God, face/silhouette, halo, marks on foreheads, text, pseudo-writing, UI, labels, pins, logos, borders, or watermark. The result stays a symbolic editorial illustration of Revelation 22:1–5.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "ae75ffc0ac3a72495f8c44b03bd964aead94152e26dad7b122efb2d49ea8a849",
+  "sha256": "29aa001d8695faf430177f299dda630253d730aab4ae07ba43e87733c5466f62",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "edit_source": {
+    "generation_file": "exec-cb31f712-53c1-4c2e-a001-aa4cf7fd4c4f.png",
+    "sha256": "58f4b740f0271cd7d4432917ff09421e6bad308c6e22c2b36621ee43110dd9ef"
+  }
+}
