@@ -93,6 +93,9 @@ export function initReaderContext(root=document) {
   locationMenu.append(locationSummary,selectors);heading.prepend(locationMenu);
   const modes=toolbar.querySelector('.reader-modes');
   heading.append(modes);
+  const updateModeDock=()=>reader.classList.toggle('has-floating-journey',mode==='passage'&&heading.getBoundingClientRect().bottom<0);
+  on(window,'scroll',updateModeDock,{passive:true});
+  on(window,'resize',updateModeDock,{passive:true});
   const codexButton=document.createElement('button');codexButton.type='button';codexButton.dataset.windowTab='codex';codexButton.className='reader-codex-button';codexButton.textContent='Codex';heading.append(codexButton);
   const tabs=document.createElement('nav');tabs.className='passage-tabs';tabs.setAttribute('aria-label','Passage window content');
   for(const key of ['scripture','context','codex']){
@@ -139,6 +142,7 @@ export function initReaderContext(root=document) {
     if(tab==='codex'&&entry)u.searchParams.set('entry',entry);
     const path=u.pathname+u.search+u.hash;
     history.replaceState(history.state,'',location.hash.startsWith('#/')?'#'+path:path);
+    updateModeDock();
   };
   const applyDisplay=value=>{
     reader.dataset.textSize=['standard','large','larger'].includes(value?.size)?value.size:'standard';

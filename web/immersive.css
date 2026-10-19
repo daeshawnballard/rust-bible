@@ -49,6 +49,8 @@ body.has-reader main.wrap { width:100%; max-width:none; margin:0; padding:0; }
 .reader-modes button { background:none!important; color:var(--gold)!important; font:24px 'Bible Display',Georgia,serif; padding:0 10px; }
 .reader-modes .has-study::after,.reader-modes .has-journey::after { content:none; }
 .reader-toolbar { display:flex; justify-content:flex-end; padding:0; border:0; margin:0; min-height:0; }
+body.has-reader:not(.has-scene) .has-floating-journey .reader-modes { position:fixed; top:12px; right:max(16px,calc((100vw - 930px)/2)); z-index:31; width:auto; }
+body.has-reader:not(.has-scene) .has-floating-journey .reader-modes button { background:#121616f7!important; border:1px solid #d6bd7b66; border-radius:8px; }
 .reader-toolbar .reader-display { position:absolute; right:0; top:66px; z-index:20; font-size:13px; }
 .reader-display summary { min-height:32px; }
 .reader-display[open] > div { position:absolute; right:0; background:#171a19; border:1px solid #d6bd7b66; border-radius:8px; padding:14px; width:280px; }
