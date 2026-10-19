@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-1-thessalonians",
+  "source": "assets/imagegen/source/journey/nt-1-thessalonians.png",
+  "final": "web/art/journey/nt-1-thessalonians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-7fb07372-4577-46fb-b075-eec82077c788.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the armor metaphor in 1 Thessalonians 5:8, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One quiet, unlocated moment of getting dressed, illustrating Paul’s armor comparison; no battle or claimed historical event.\nSubject/action: Show one fully clothed adult in a simple woven tunic, calmly adjusting the straps of a practical, historically plausible breastplate. Place one clearly visible, separate simple helmet on a low wooden bench beside the person. The person’s hands and attentive expression make this a human preparation scene rather than a vacant armor display. The armor illustrates Paul’s figurative language; it does not imply this individual or moment appears in the letter.\nComposition/framing: Medium-wide view, with the person, breastplate, bench, and helmet fully visible in the left 60%. The breastplate and helmet must be separate, easy-to-target objects below the upper 12% of image height; keep the person’s head below the 15% line and feet above the 88% line if shown. Reserve the right 30% as quiet, low-detail ground and soft background for a reading panel. Leave clear open air above and ground below. One continuous scene.\nStyle/materials: Warm realistic period illustration; believable first-century-inspired bronze and leather armor, tactile woven linen and worn wood, natural hands and face, soft gold natural light, subdued earth pigments.\nConstraints: The breastplate and helmet represent the qualities named in 1 Thessalonians 5:8. Do not print faith, love, or hope on the armor or clothing. No weapons, shield, enemy, battlefield, violence, text, inscriptions, symbols, map, modern items, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "9274414bc40e878e0c741962c7f6b6bd93d360817a9330bf1fe2f3020a5e4452",
+  "sha256": "40505ca122d2e46c8dad08f96a6d468414776f3f41537e951b10e3c636825de8",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
