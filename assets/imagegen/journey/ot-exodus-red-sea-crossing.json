@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-exodus-red-sea-crossing",
+  "source": "assets/imagegen/source/journey/ot-exodus-red-sea-crossing.png",
+  "final": "web/art/journey/ot-exodus-red-sea-crossing.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-74049c83-9ba7-4e6b-8dce-b0170da70bf7.png",
+  "prompt": "prompts/exodus-crossing-v2.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "17f0ad159ca2eeb8b3260f439cb4f527483b6276b1feb4b7f5521c8c43a1d69c",
+  "sha256": "e2703e6cd8125b8dfa0f16a87999ae07cf861ca0caf57c4f62bd171cc477300e",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
