@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-hebrews-run-with-endurance",
+  "source": "assets/imagegen/source/journey/nt-hebrews-run-with-endurance.png",
+  "final": "web/art/journey/nt-hebrews-run-with-endurance.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-a926951d-6eb6-47de-b538-b32edd747f92.png",
+  "prompt": "Create a finished 1536x1024 landscape symbolic editorial illustration for a Bible-reading website, based on Hebrews 12:1–2. Show one ancient-style runner moving with steady purpose across an unmarked patch of earth, a small bundled weight just set down near him, and a quiet crowd of anonymous witnesses surrounding the scene in the background. The runner is the main figure and clearly looks ahead while running; no named witness or person representing Jesus is depicted. The crowd and discarded weight express the passage’s own race image. Treat this as a literary metaphor, not a documented sporting event, named stadium, or geographic route. Keep all story-critical people and the weight entirely within the left 65 percent of the frame. Reserve the rightmost 30 percent as quiet, low-detail warm earth and open sky for a passage panel. Keep the top and bottom 12 percent free of critical details. Match the accepted reference illustrations only in realistic cinematic historical-literary style, tactile gold and earth materials, natural light, detailed cloth, stone, and skin, with restrained human expressions. Do not copy their composition. No map, route markers, banner, readable writing, text, UI, labels, pins, borders, logo, watermark, enemy, or supernatural effects. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "0d470a4f24c9abd4b33f714fde21124b5d10c46df0c698d4ef797ecb9504ee9a",
+  "sha256": "75bf1c1d3f98b1e983887cfcfea9be0ec1872e4a0a3513c0ec200ee06e9b4f11",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
