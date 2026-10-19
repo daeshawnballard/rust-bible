@@ -1,0 +1,26 @@
+{
+  "id": "passage-jonah",
+  "source": "assets/imagegen/source/journey/passage-jonah.png",
+  "final": "web/art/journey/passage-jonah.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-7f53c6ed-ed35-4e8c-80a0-c94088f88fc0.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Jonah 4:5–11, landscape 3:2, requested 1536x1024.\n\nOne coherent, subject-led scene from the closing episode. Jonah, an adult man in plain ancient Near Eastern clothing, sits beside a small makeshift booth on a bare hillside. He looks frustrated and overheated, one hand at his brow, while the appointed gourd-like plant that had grown over his head droops beside the shelter. Make the plant visually clear: broad leaves, a few withering yellow edges, and one small but discernible worm on the stem. Jonah, booth, plant, and worm are the only meaningful subjects. No city, buildings, ship, sea, fish, or other story episode; the text's closing question about Nineveh is explained in the scene note rather than depicted as a map or panorama.\n\nThis single image compresses verses 5–11 into a literary illustration: Jonah sits outside the city, the plant grows, a worm strikes it, and Jonah suffers the heat before the closing question. The partly green, partly wilted plant and the visible worm are a visual summary, not a claim that the narrated moments occur simultaneously. Do not show God/LORD as a person or depict divine action directly.\n\nComposition: keep Jonah, booth, plant, and worm entirely within x=8–58%; Jonah around x=25%, plant around x=43%, worm around x=47%. Reserve x=62–100% as quiet low-detail pale sky and sunlit hillside for reader overlay, with no structures or silhouettes; x=58–62% is a clear margin. Top and bottom 12% noncritical. One natural continuous scene, not montage or paneling. Readable human figure and plant, not an empty landscape.\n\nSetting: generic arid hillside without city or identifiable location, no archaeological claim. Warm sun, restrained ochre, muted olive, cream cloth, dusty earth; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile woven shelter, vine stem, leaf, and soil. Thoughtful and restrained.\n\nThe plant's appointed growth and loss prompt the story's closing question about God's concern for Nineveh's inhabitants and animals. Preserve this as the narrated literary frame without implying certainty about a specific place or historical reconstruction.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, route diagrams, modern objects, recognizable monuments, city, harbor, ship, sea, fish, exaggerated giant worm, magical glow, deity, halo, religious iconography, violence, self-harm imagery, corpses, people or detailed objects in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "070eda9678ebeb1a7a3966b9b4e26646251b67838d2660a4b32ea97565031667",
+  "sha256": "43cdadf6de735a5903232f09755495a98822580e667d433f9e58f7bc4a2a39c8",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "shared_artwork": "passage-jonah"
+}
