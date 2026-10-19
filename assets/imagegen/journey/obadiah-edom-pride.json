@@ -1,0 +1,25 @@
+{
+  "id": "passage-obadiah-edom-pride",
+  "source": "assets/imagegen/source/journey/obadiah-edom-pride.png",
+  "final": "web/art/journey/obadiah-edom-pride.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-7022eb0d-b485-45e3-9630-8cc8b87c0523.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Obadiah 1:3–14, landscape 3:2, requested 1536x1024.\n\nOne coherent prophetic metaphor. A single adult figure, used symbolically to represent Edom's collective pride, stands on a high rocky ledge beside a simple rough shelter set among clefts of stone. The figure looks down toward a small neighboring settlement far below, suggesting the oracle's accusation of standing apart and gloating over Judah's distress. Keep the person clearly visible and human, with a restrained, self-assured posture rather than a sneer or caricature. No battle or violence.\n\nComposition: keep the figure, high rock dwelling, and distant settlement entirely within x=8–60%. Figure around x=22%, rocky shelter around x=40%, valley settlement around x=52%. Reserve x=63–100% as uncluttered muted sky and pale distant hills for reader overlay; x=60–63% clear margin. Top and bottom 12% noncritical. One continuous scene, no montage. The cliff and human figure are the subjects; do not make an empty landform diorama.\n\nSetting: generic ancient rocky hill country; no named city, archaeological site, identifiable architecture, or settled historical identification. Natural crags and a modest cave-like refuge only, not monumental buildings. Late-afternoon gold, muted sandstone, dusty olive, cream cloth; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile stone and woven cloth. Somber and restrained.\n\nInterpretation: this is a literary reconstruction of Obadiah's oracle. The high dwelling visualizes the text's image of pride and security in the clefts of rock; the distant community evokes the oracle's condemnation of looking on and rejoicing over a brother's distress. The figure is symbolic, not a named person. Do not claim this depicts a specific Edomite site, identified historical event, or archaeological reconstruction. No divine human figure or religious iconography.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments or Petra-like architecture, soldiers, weapons, fire, corpses, violence, captive figures, overt celebration, deity, halo, magic, crowding or detailed settlement in right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "4f57d98b463906c257a5ee2dec9d9385b48e8f9540e6605ba37fa5abce3573f1",
+  "sha256": "dd892c7f907c859fdbf879f7fbbbf68fe45e2c4ef489c2b5b784dbb656edf13d",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
