@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-james-bit-and-rudder",
+  "source": "assets/imagegen/source/journey/nt-james-bit-and-rudder.png",
+  "final": "web/art/journey/nt-james-bit-and-rudder.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-ea503671-a0bc-44f5-9ecd-7596fa60565d.png",
+  "prompt": "Create a second, materially reframed 1536x1024 landscape symbolic editorial illustration for James 3:3–4. Show James’s two linked comparisons in one coherent editorial tableau: at the far left foreground, a horse’s head with a clearly visible small bit and bridle; immediately to its right but fully within the left 65 percent, a large ancient sailing ship on wind-driven open water, with its small stern steering oar/rudder clearly visible. Keep the horse within x=0–30%, ship and rudder within x=32–65%; the two examples have visual separation and are not physically connected. Lower the ship in the frame so its sail begins below 20% image height and its full mast is visible; the top 12% is uninterrupted open sky. Keep the bottom 12% free of critical objects. Reserve the rightmost 30% as smooth, quiet low-detail sky and water suitable for a passage panel, with only soft broad color transitions and very subtle water texture. Both the horse bit and ship rudder must be immediately legible. No harbor, route, destination, map, flag, battle, modern vessel, readable writing, text, UI, labels, pins, borders, logo, or watermark. Use realistic cinematic historical-literary rendering with warm tactile gold and earth materials, natural wind and light, weathered timber, woven sailcloth, and dignified animal detail. Match only the accepted references’ material and lighting style; do not copy their compositions. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "9465e82ea86433254a2b668df3c181d981f9b012e745b473a9431f4bf552d501",
+  "sha256": "1bbfe8ba45547cd0f606055cf0d86c97c37dd3513a4a91e528c2b4dd1fa2c7cf",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
