@@ -1,0 +1,26 @@
+{
+  "id": "passage-daniel",
+  "source": "assets/imagegen/source/journey/daniel-lions-dawn.png",
+  "final": "web/art/journey/daniel-lions-dawn.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-a226fa1d-0fd3-41c4-9c97-94e93c0b17df.png",
+  "prompt": "Use case: illustration-story. Make one realistic cinematic historical/literary illustration for Daniel 6:19–23, landscape 3:2, requested 1536x1024.\n\nThe main subject is the dawn meeting at the mouth of the lions' den. King Darius, a middle-aged ruler in restrained ancient court clothing, leans toward the den opening and calls down with concern. Daniel, a dignified older adult in simple woven garments, stands safely within the den and answers him. Two or three calm lions are clearly visible near Daniel; they are at rest and do not threaten him. The moment is the king discovering Daniel unharmed. Show no angel or divine figure; Daniel's spoken explanation about God's angel belongs to the text, not an extra visual being.\n\nKeep Darius, Daniel, the visible lions, and the stone entrance within the left 60% of the canvas. Place the king near x=18%, Daniel around x=42%, lions around x=52%; keep faces and bodies readable. Reserve the right 38% as quiet low-detail shadowed limestone and dawn sky for reader text overlay. Top and bottom 12% noncritical. Single continuous scene, no multi-panel retelling of the night, sealing, and dawn.\n\nWarm dawn light enters the den; tactile limestone, wool, and linen; golden earth colors and restrained shadow, grounded literary reconstruction matching supplied biblical image references. Do not specify the den's exact construction or depict a recognizable archaeological site. Text says the angel shut the lions' mouths; do not show that angel, God, a halo, luminous person, or spirit in human form. The peaceful lions are an illustration of the passage, not zoological documentation.\nAvoid: text, writing, verse labels, pins, UI, logos, watermark, maps, modern objects, palace plan, battle, injured figures, blood, cages, chains, exaggerated snarling, deity, divine human figure, angel, religious iconography, fantasy armor, empty cave diorama, tiny subjects, or any figure/lion in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "67ae4583466d633853f8e188022ca2a6393b6fc914c9351ba9ed058363c68efd",
+  "sha256": "056f2a238f6c3f0423c9d533976509b838fc55cf23adcc5dd94b9902711ec89b",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "shared_artwork": "daniel-lions-dawn"
+}
