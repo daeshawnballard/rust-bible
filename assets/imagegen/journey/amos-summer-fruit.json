@@ -1,0 +1,25 @@
+{
+  "id": "passage-amos-summer-fruit",
+  "source": "assets/imagegen/source/journey/amos-summer-fruit.png",
+  "final": "web/art/journey/amos-summer-fruit.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-a3091308-a8c5-445d-b78c-a023e5de0e94.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Amos 8:1–6, landscape 3:2, requested 1536x1024.\n\nOne coherent ancient market scene, explicitly a symbolic prophetic vision. An adult Israelite prophet, Amos, studies a woven basket of ripe summer fruit at a simple stall. Just behind the basket, one merchant uses a balance with subtly false measures to weigh grain while one poor adult buyer waits beside him. Keep all four elements unmistakable: Amos, fruit basket, balance, waiting buyer. The basket is the clear central subject of the vision; the nearby scale and buyer connect the vision to the same oracle's condemnation of dishonest trade. Fruit types are visual choices, not stated varieties.\n\nComposition is strict: contain every person, basket, balance, stall detail, and grain measure fully within x=8–57%; keep the buyer's full body and garments left of x=57%. Amos stands around x=18%, basket around x=34%, merchant and scale around x=46%, buyer around x=53%. Reserve all of x=62–100% as low-detail sunlit plaster wall and quiet market ground for reader overlay; x=57–62% is a clear margin. No people, objects, or detailed architecture in that right third. Top and bottom 12% noncritical. One continuous scene, no montage or split panels.\n\nGeneric ancient Levantine market courtyard, no identifiable city or archaeological claim. Warm late-morning gold, restrained ochre, dusty olive, cream cloth, and clay; realistic cinematic historical/literary painting matching the supplied Bible illustration references, tactile wicker, grain, woven cloth, and balance. Respectful and restrained.\n\nThis is a literary reconstruction of Amos's reported vision and the social accusation in the same oracle. The summer fruit carries the text's wordplay with the announced end; the market scale visualizes the condemnation of dishonest trade and exploitation of the needy. Do not assert one historical reconstruction or modern location. Do not show corpses or turn the image into a disaster scene. No God/LORD in human form, religious iconography, or supernatural spectacle.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, extra episode, split scenes, battle, violence, corpses, deity, halo, magical glow, malformed scales, illegible tiny people, fruit growing on basket, background crowds, clutter, or any person or meaningful detail beyond x=57%.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "19b1fb86e58cc3f5720a34e88b29ae4915666c9011fe90cb45b3c33c414c268d",
+  "sha256": "d4f74fddae660b8890a6b8d26735acd52c8bd6399ef10486f2a2a7ac232c3bcd",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
