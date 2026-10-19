@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-3-john-hospitality-support",
+  "source": "assets/imagegen/source/journey/nt-3-john-hospitality-support.png",
+  "final": "web/art/journey/nt-3-john-hospitality-support.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-b1467339-e639-4b48-9f1c-172623eb753f.png",
+  "prompt": "Edit the supplied target image while preserving its same three-person hospitality scene, doorway, provisions, blank papyrus letter, warm cinematic earth palette, and right-side passage panel. Correct the measured margin failure by scaling the people and doorway down by about 25 percent and moving the whole interacting group lower. Keep all three heads at y=22 percent or lower, with a clear empty top margin of at least 16 percent; keep faces, hands, bread, cloth, and waterskin inside the left 58 percent and between y=22 and y=72. Keep the blank letter and table between y=68 and y=84 so the bottom 12 percent stays free of critical detail. Maintain the rightmost 35 percent as quiet softly lit plaster and stone. Keep the papyrus truly empty, without writing, pseudo-writing, lines, columns, ink, seal, or symbols. Do not add people, change the welcoming gesture, invent a named house or route, or introduce text, UI, labels, pins, borders, logo, watermark, map, halo, or supernatural symbolism. The revised scene remains an anonymous editorial illustration for 3 John 1:5–8.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "c7349052cae1b3aba09b0db56551ebf700bf3fbdbf3cd895f57070af0c4c7a29",
+  "sha256": "d980a3d41348e355cf35ae4b9cfd35655aecfef278207058a3ac9ed712b54576",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
