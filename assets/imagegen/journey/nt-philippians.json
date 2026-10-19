@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-philippians",
+  "source": "assets/imagegen/source/journey/nt-philippians.png",
+  "final": "web/art/journey/nt-philippians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-cfa5fa1a-6ec6-4691-957b-ba2c5f5cd296.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of Paul’s athletic metaphor in Philippians 3:12–14, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and readable composition. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One symbolic runner presses toward a mark, illustrating Paul’s words. This is a literary comparison, not a documented race or named historical event.\nSubject/action: Show one fully clothed adult athlete in simple period-evocative running clothes, moving forward in a determined but natural stride. A plain low finish marker stands just ahead within the left half; the runner leans and reaches forward toward it. Keep the person distinct and dignified, without modern sports gear or a literal trophy.\nComposition/framing: Use a wider view from several paces away; the full runner should occupy about 60% of the canvas height. Place the top of the runner’s head below the 18% line and the feet above the 84% line; leave generous open sky above and ground below, and do not crop any part. Keep runner and marker fully within the left 60%. Reserve the right 30% as quiet open ground and soft sky for a reading panel. One continuous symbolic composition.\nStyle/materials: Warm realistic historical illustration; natural face and hands, simple woven garment and leather footwear, textured earth, restrained earth pigments, soft directional light.\nConstraints: The runner and marker illustrate Paul’s metaphor, not a historical sporting event. No crowd, stadium, route map, text, inscriptions, crown, modern gear, banners, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "1d33981e0677556ec59e4634dc01d0b7de6f517ec503b3eba0988a255bbb97a2",
+  "sha256": "ac6cfbcd3c25f71589ab14a69a60f3fd982d2cf544945b3932e53a9cac27b5c4",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
