@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-judges-deborah-and-barak",
+  "source": "assets/imagegen/source/journey/ot-judges-deborah-and-barak.png",
+  "final": "web/art/journey/ot-judges-deborah-and-barak.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-c5a40340-77fa-4b10-866a-7adc612031ff.png",
+  "prompt": "prompts/judges-deborah-barak-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "630d12d6530cffc92774c86028be71fb954b45f0bb90b241d22c1d8c4aade768",
+  "sha256": "ef30005f3403e83e957b122ba5b6416dbf7f072930ef8c4bdf1ff85fcf6e4c6e",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
