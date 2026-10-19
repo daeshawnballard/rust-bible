@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-2-peter-lamp-daystar",
+  "source": "assets/imagegen/source/journey/nt-2-peter-lamp-daystar.png",
+  "final": "web/art/journey/nt-2-peter-lamp-daystar.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-64fb54a1-5a24-4be6-ba27-d73b6ca4a84e.png",
+  "prompt": "Create a second, materially reframed 1536x1024 landscape symbolic editorial illustration for 2 Peter 1:19. Make a close, low three-quarter view of one small ancient clay oil lamp with a steady flame on a dark stone ledge in the left foreground. Above the ledge, keep one small bright morning star and the first soft dawn glow close together in the upper-left to center-left sky; place both entirely left of x=55%. Show dawn only as a gentle broad color change above a low, indistinct horizon, with no visible sun, sun disc, second star, or bright point anywhere in the right half. Keep the lamp, flame, star, and all meaningful horizon detail entirely inside the left 55 percent. The entire rightmost 40 percent must be a quiet, evenly defocused warm stone-and-sky gradient, free of focal lights, objects, mountains, or distinct landscape. Top and bottom 12 percent contain no critical details. This one symbolic literary image represents Peter's words about a light shining in a dark place until day dawns and the day star rises in the heart; it asserts no prophetic timetable. Do not depict a calendar, sequence, chart, zodiac, cosmic map, identifiable location, temple, or historical event. Use the accepted references only for realistic cinematic historical-literary materials, tactile gold and earth tones, and soft natural light, without copying their compositions. No scroll writing, text, UI, labels, pins, borders, logo, watermark, figures, or supernatural symbolism. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "5764cf056b00ce950d79e0b8f2d04b2555c46c966a26f404c2d6321344527e65",
+  "sha256": "c482f562f8b7c2ec30856f8321be2eb4ea0e70fb336affd7fe3036a9e51ddd23",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
