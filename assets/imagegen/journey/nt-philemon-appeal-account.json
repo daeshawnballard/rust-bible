@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-philemon-appeal-account",
+  "source": "assets/imagegen/source/journey/nt-philemon-appeal-account.png",
+  "final": "web/art/journey/nt-philemon-appeal-account.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-ee978b0c-e80c-41be-8b27-22409a8b9bc5.png",
+  "prompt": "Create a finished landscape literary still life for a Bible-reading website, exactly 1536x1024, illustrating Philemon 1:8–19. Use a close, slightly elevated three-quarter camera over a plain warm stone writing surface, with no visible landscape or room beyond it. Arrange one open, completely blank papyrus letter and one separate open, completely blank ledger tablet, with a reed pen resting nearby but not touching the pages. Both writing surfaces, the pen, and every other story-critical object must fit inside the left 55 percent of the image, centered vertically between 25 and 75 percent; nothing important enters the rightmost 40 percent. The right side should be a plain, softly lit, low-detail stone surface kept quiet for a passage panel. The blank letter stands for Paul’s appeal concerning Onesimus; the blank ledger stands for the debt/account language, while actual words remain in the app. Writing surfaces must be genuinely empty: no letters, pseudo-writing, ink marks, lines, columns, numbers, seals, or symbols. No people, meeting, recipient, response, chains, or other invented event. Use the accepted references only for realistic cinematic historical-literary material handling, warm gold and earth color, natural light, and tactile papyrus, wood and stone. Do not copy their composition. Keep top and bottom 12 percent free of critical details. No text, UI, label, pin, border, logo, watermark, or claim that this is the exact document or room.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "8f7d01c7155234182b7b57e1d2ab6a390ae331b60adbeddd5ae5f347a45efabe",
+  "sha256": "cedac457c2d664cf584cba5d1bbd5e1241ad97722f0a38d7584a4e55fa8ce055",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
