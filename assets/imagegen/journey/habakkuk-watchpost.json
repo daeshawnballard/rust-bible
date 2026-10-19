@@ -1,0 +1,25 @@
+{
+  "id": "passage-habakkuk-watchpost",
+  "source": "assets/imagegen/source/journey/habakkuk-watchpost.png",
+  "final": "web/art/journey/habakkuk-watchpost.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-aa8a6854-e548-4500-9b08-160e281b49ed.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Habakkuk 2:1–4, landscape 3:2, requested 1536x1024.\n\nOne coherent scene of the prophet waiting for an answer. Habakkuk, an adult man in plain ancient Near Eastern clothing, stands on a modest rocky watchpost at dawn, looking toward the open horizon. Beside him is a simple writing tablet and stylus, ready for the vision to be written plainly. The tablet is blank or has only faint non-legible marks: no readable words, letters, or symbols. The prophet and tablet are the human-scale subjects.\n\nComposition: keep Habakkuk, the watchpost, and tablet entirely within x=8–58%; Habakkuk around x=24%, tablet around x=43%. Reserve x=63–100% as quiet pale sky and muted distant hills for reader overlay; x=58–63% is clear margin. Top and bottom 12% noncritical. One continuous moment, no montage. Readable prophet and tablet rather than an empty landscape.\n\nSetting: generic ancient hillside lookout; the tower is poetic staging, not a reconstructed archaeological structure or identified site. Warm first light, muted sandstone, dusty olive, cream cloth, and distant blue-gray hills; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile stone, wood, and parchment. Thoughtful, attentive mood.\n\nThis is a literary reconstruction of Habakkuk waiting to hear and write the vision. The text says the vision is for an appointed time and tells the just to live by faith; preserve interpretive nuance in the scene note rather than encode one doctrine in the image. Do not depict God/LORD as a person or represent the answer through supernatural effects.\n\nAvoid: text, letters, captions, labels, names, legible marks, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, elaborate tower, deity, halo, magical glow, extra figures, crowded scene, clutter or meaningful details in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "c4ab0e621e620d7cfff0139bebea528f8d805a5f003beabd3bf1ab8f1f0ecf23",
+  "sha256": "cb9ad961883c79181e5687962e939ec57d754691a929fa71e3e30502cacda736",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
