@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-colossians",
+  "source": "assets/imagegen/source/journey/nt-colossians.png",
+  "final": "web/art/journey/nt-colossians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-8d34d76c-a7e4-4424-b110-640e3a58dc8b.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the clothing metaphor in Colossians 3:12–14, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One unlocated, quiet moment that openly illustrates the letter’s clothing language; it is not a documented event or historical scene.\nSubject/action: Show two fully clothed adults in a calm, respectful act of reconciliation. In the same continuous moment, one person is putting on a plain, soft outer mantle and closing it with one simple woven tie; the other gently clasps their hand. The garment and single tie make Paul’s metaphor visible, while the joined hands suggest forbearance and forgiveness. The people are illustrative, not named individuals.\nComposition/framing: Medium-wide full-frame view; keep both people, the mantle, the tie, and joined hands wholly inside the left 60%. Heads begin below 15% of image height and feet end above 88%. Leave open air above and ground below. Keep the right 30% low-detail and quiet for a reading panel. The garment, tie, and hands must remain separate, readable focal targets.\nStyle/materials: Warm, cinematic realistic period illustration; simple period-evocative woven clothing with natural drape; visible tactile fabric weave and a clearly discernible braided tie; natural human hands and faces; soft golden natural light and subdued earth pigments.\nConstraints: The mantle, reconciliation, and tie are visual explanations of Colossians 3:12–14, not a claimed historical event. No words or virtue labels on garments; no text, writing, icons, symbols, map, spectacle, modern items, pins, logos, border, or watermark. Do not add objects or people that suggest a specific dispute or named setting.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "4a6f56342d388fdb879eb55403aa13bd576d418bde3dd996b876c02fb105691b",
+  "sha256": "b2ccce53b95879d801595b42f499978633b2fd0411c05ab3052046f6a50e79d2",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
