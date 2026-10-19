@@ -1,0 +1,29 @@
+{
+  "id": "passage-nt-jude-mercy-rescue",
+  "source": "assets/imagegen/source/journey/nt-jude-mercy-rescue.png",
+  "final": "web/art/journey/nt-jude-mercy-rescue.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-f8bb4a9a-e209-4599-960e-d838c96fd857.png",
+  "prompt": "EDIT the supplied target image to correct its measured framing, while preserving the same three anonymous people, compassion gesture, rescue action, small stylized flame, warm historical-literary editorial finish, and quiet right-side panel. Scale the entire interacting group down to about 75% of its current size and move it slightly right and lower. Reframe so the three heads are clearly below y=22% (target y=23–34%), all three faces and the reaching/pulling hands stay within x=6–56% and y=23–70%, and the low symbolic flame stays within x=43–56% and y=68–78%. Keep all feet above y=82%. Maintain a clear top margin through y=22% and bottom margin from y=88%; reserve x=65–100% as quiet softly lit warm plaster with no people or fire. Keep the helper's open hand reaching toward the hesitant person and the other hand firmly drawing the third person away from the ground flame. Do not add people, objects, text, symbols, halos, architecture, or scenery. Do not burn or injure anyone; no inferno, demons, supernatural figures, or doctrinal interpretation of the fire. The fire remains Jude's image, with its meaning left open. The result remains one coherent editorial illustration for Jude 1:22–23, with no readable text, pseudo-writing, UI, labels, pins, logos, border, watermark, or map.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "b54ee62f0893102533d61339e3ef97df4dee361ee3697cf0df3237d52dad18f6",
+  "sha256": "573b822d07285765f19be5b3e2a0092eae5aa2b84ee83c32261af13a79733686",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "edit_source": {
+    "generation_file": "exec-b2d9f129-b942-406f-b74e-bf55067c2e52.png",
+    "sha256": "a35ffb38a3bbcea8b16fa09cf916e1cc81a3c443103cebaeef2322cd8584033f"
+  }
+}
