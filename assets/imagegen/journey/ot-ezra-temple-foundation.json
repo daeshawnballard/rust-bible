@@ -1,0 +1,27 @@
+{
+  "id": "passage-ot-ezra-temple-foundation",
+  "source": "assets/imagegen/source/journey/ot-ezra-temple-foundation.png",
+  "final": "web/art/journey/ot-ezra-temple-foundation.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-59ec1623-7c8b-4578-90fd-6a0635096207.png",
+  "prompt": "Create one historically grounded biblical illustration for Ezra 3:8–13.\nShow the returned families and builders laying the temple foundation together at one construction site. Keep the freshly laid foundation as the central subject, with one builder setting a stone and other builders nearby. Show priests in their garments with trumpets and Levites with cymbals praising; among the families, some older people weep while others shout with joy, as the text describes. Make the mixed response clear but dignified, without exaggeration. This is one coherent foundation-laying scene, not a multi-panel collage.\nKeep the architecture schematic and limited to a low foundation course; the passage does not give a reconstructable building plan. Do not identify a precise modern archaeological site.\nCompose full-frame 3:2 landscape at intended native 1536x1024. Keep the foundation, builders, priests, musicians, and people within the left 65%. Reserve the rightmost 30% as quiet, low-contrast muted earth and sky for text overlay, with no people or bright focal object there; top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use plausible ancient fabrics, natural human proportions, restrained light, painterly detail. No lettering, labels, pins, interface, borders, modern tools, route markings, or invented temple architecture. This is an artistic reconstruction of the textual event.\n\n\nImage 1 is the Ezra 3 temple foundation scene. Edit only the far-right third, x>=68%. Remove the people/builders and the bright sun in that zone. Replace it with an uninterrupted, low-contrast muted grey-blue sky and soft earth haze with only subtle distant ground texture, suitable for a text overlay. No people, sun disc, bright reflection, sharp highlights, or focal objects in the rightmost 32%.\nKeep the builders setting the foundation, priests with trumpets, Levites with cymbals, families, and the elders with mixed grief and joy unchanged in the left two-thirds. Keep the stone foundation clearly visible in the left area; do not change people's faces, clothing, positions, or the story. Preserve the full-frame 3:2 landscape at 1536x1024 and the warm, tactile historical realism. No labels, writing, borders, modern items, or extra people.\n\nInput: local-reference:ezra-foundation-v1.png\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "e5b64cbd8e1cb0f42eb3564f2e72437c25302c763df0fc6c1ee06e4fd452f7c7",
+  "sha256": "42537a4ac4acfb3f47857e445878c92ba6eb5bab4a0d73c727c89eb40c11620b",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "original_prompt_sha256": "a1f698aeab6eb4994cc204e1a29a77a455f3601e6da1c57edcdd7f5318a9a75f",
+  "prompt_local_paths_redacted": true
+}
