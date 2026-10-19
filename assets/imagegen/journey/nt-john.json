@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-john",
+  "source": "assets/imagegen/source/journey/nt-john.png",
+  "final": "web/art/journey/nt-john.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-cea002fa-6155-47c4-b211-2c41022fdde3.png",
+  "prompt": "Use case: historical-scene.\nAsset type: individual production background illustration for a Bible Journey passage reader, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural human proportions, tactile cloth and pottery, nuanced golden light, and dignified storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One footwashing moment from John 13:4–10 during supper. Keep the room simple and historically restrained, with no precise architectural layout implied.\nSubject/action: Jesus kneels with a towel tied around him, washing Peter’s feet in a plain basin. Peter sits facing him with a surprised, questioning gesture; the other disciples remain present nearby, watching quietly. Show natural body language and respectful, non-sensational expressions.\nComposition/framing: Wide three-quarter view at seated height. Keep Jesus, Peter, basin, towel, and the watching disciples fully within the left 65%; reserve the right 30% as quiet wall and floor for a reading panel. Keep the top and bottom 12% free of essential subjects. One continuous scene, no collage or sequential panels.\nStyle/materials: Warm cinematic realistic historical illustration; worn linen and wool, simple wooden seating, clay basin and water, natural hands and faces, soft lamplight with warm earth tones.\nConstraints: The visible action is Jesus washing Peter’s feet and Peter questioning him. Keep all people clothed and dignified. No modern furnishings, exact room claims, text, lettering, labels, pins, logos, border, watermark, or supernatural effects.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "e4f84ca21e755bbb784cc41c96773950e02c883211bc606467e1b29182c4a02f",
+  "sha256": "9f49d898f3de6e658975f3dcb2131000be7a619e837815c94b4975bcc5e28232",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
