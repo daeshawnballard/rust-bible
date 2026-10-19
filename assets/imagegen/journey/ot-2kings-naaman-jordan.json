@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-2kings-naaman-jordan",
+  "source": "assets/imagegen/source/journey/ot-2kings-naaman-jordan.png",
+  "final": "web/art/journey/ot-2kings-naaman-jordan.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-cdc23be6-3494-44c7-88cb-e250e75bb3d9.png",
+  "prompt": "prompts/2kings-naaman-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "759bf515382c148c5fdabd89a45caaf2785418518a3ea076ac67d07d7e3f929f",
+  "sha256": "da1625945ce36fe29adb802dd01e6e523eff3578db579155ed22f45ddeb9b2b4",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
