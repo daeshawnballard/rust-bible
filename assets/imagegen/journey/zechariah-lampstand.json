@@ -1,0 +1,25 @@
+{
+  "id": "passage-zechariah-lampstand",
+  "source": "assets/imagegen/source/journey/zechariah-lampstand.png",
+  "final": "web/art/journey/zechariah-lampstand.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-c370a0fe-a37a-46bf-b9db-27ed830c49ad.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic symbolic-vision illustration for Zechariah 4:1–10, landscape 3:2, requested 1536x1024.\n\nOne coherent prophetic vision scene, unmistakably described as a vision in the metadata, not a recovered temple object or archaeological reconstruction. Zechariah, an adult prophet in plain ancient clothing, looks toward a single golden lampstand with one bowl and seven distinct lamps, alongside two olive trees, one on either side of the bowl. An interpreting angel stands near Zechariah as the passage says. In the same continuous visionary scene, include one generic adult builder identified only through the passage's role of Zerubbabel, carefully setting a modest cornerstone and holding a simple plumb line beside a schematic unfinished wall. No exact likeness or invented personal details. The lampstand, seven lamps, two trees, prophet, angel, builder, plumb line, and small building elements must all read clearly as the subjects.\n\nStrict composition: keep every person, lamp, tree, branch, vessel, tool, and stone inside x=5–56%. Group Zechariah around x=12%, angel around x=22%, lampstand around x=33%, two modest olive trees around x=24% and x=43%, builder and small cornerstone/wall around x=50%. Reserve x=63–100% as quiet pale sky and low-detail open courtyard ground for reader overlay; x=56–63% is an empty buffer. No people or meaningful objects beyond x=56%. Top and bottom 12% noncritical. One continuous scene, no montage, split panels, map, inset, or repeated figures.\n\nThe lampstand has seven distinct small flames and simple pipes, but remains a symbolic vision rather than a documented artifact. Use two living olive trees with restrained branches, not oversized vegetation. The builder's unfinished wall is only a few generic stones, with no identifiable architectural style or temple facade. Do not add supernatural beams, a human divine figure, or a visual explanation of every symbol. No eyes, faces, or extra symbols added to the lampstand; preserve the oracle's open question rather than resolving identities. Warm gold and muted olive, limestone, ochre, dust, and cream cloth; realistic cinematic historical painting matching supplied Bible illustration references, tactile metal, leaves, stone, and garments. Reverent but restrained.\n\nThis illustrates Zechariah's vision and its encouragement to Zerubbabel. The text says the work will be completed by the LORD's spirit rather than human might; state this in the accompanying explanation but do not depict the LORD. No fixed future-fulfillment interpretation or historical reconstruction is asserted.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, archaeological claims, elaborate temple, deity, human divine figure, halo, magical glow, religious iconography, additional lamps beyond seven, extra episodes, crowds, overly large trees, detailed background architecture, clutter or meaningful details in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "3acc2811a3809f97b7e8b20559dd24fcb1f9daf3ef4ad13d1193eab9a4aa3d4e",
+  "sha256": "091a157811ba8f288dfc30c6de85c99a048209f9577b5636c02e37b5c0d4e240",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
