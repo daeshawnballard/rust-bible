@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-mark",
+  "source": "assets/imagegen/source/journey/nt-mark.png",
+  "final": "web/art/journey/nt-mark.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-7848f1f5-369a-4a34-b10d-cbfe06cda1b9.png",
+  "prompt": "Use case: historical-scene.\nAsset type: individual production background illustration for a Bible Journey passage reader, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile period materials, nuanced light, and readable human storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: The moment after the storm is stilled in Mark 4:39–41. A small first-century fishing boat rests on calm water beneath clouds beginning to clear. Do not identify a modern or archaeological site.\nSubject/action: Jesus stands in the boat after rebuking the wind and sea; the disciples around him turn toward him in astonishment and fear. Show wet planks, a simple pillow in the stern as a quiet reminder of the earlier moment, and water now calm around the vessel. Keep each person natural and dignified, without invented named identities.\nComposition/framing: Wide three-quarter view from just above the water. Keep Jesus, the disciples, boat, and immediate calm water fully within the left 65%; reserve the right 30% as quiet open water and soft sky for a reading panel. Keep the top and bottom 12% free of essential subjects. One continuous scene, no collage or sequential panels.\nStyle/materials: Warm cinematic realistic historical illustration, weathered wood, simple woven clothing, natural faces and hands, subtle sea spray fading into golden light, restrained earth pigments; believable human scale.\nConstraints: Show the calm described after Jesus speaks, without supernatural effects or glowing figures. The pillow is unoccupied. No modern boats, named shoreline, route, later event, extra spectacle, text, lettering, labels, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "f0630c06e265568d5a1bfcd091fba7dd8ac3ad007b103bd175614c742d700029",
+  "sha256": "51f56212de956e47d4ae3c638ddf9cd3065bab37d710a98a69ce854477a71c5f",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
