@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-job-whirlwind",
+  "source": "assets/imagegen/source/journey/ot-job-whirlwind.png",
+  "final": "web/art/journey/ot-job-whirlwind.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-64cd665a-05b5-4206-8643-149189923aef.png",
+  "prompt": "prompts/job-whirlwind-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "238fa9c6b13faa86a59447a79eae04682c94454bac45744f593ed4bd3973eec3",
+  "sha256": "9b43f245a958280e304bb5e82478485609ed6329a1c228ec699a9edde1fa1e5b",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
