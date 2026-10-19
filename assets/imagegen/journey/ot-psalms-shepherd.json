@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-psalms-shepherd",
+  "source": "assets/imagegen/source/journey/ot-psalms-shepherd.png",
+  "final": "web/art/journey/ot-psalms-shepherd.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-f4e4d77a-9cf4-46f5-9e17-35dc32880984.png",
+  "prompt": "prompts/psalms-shepherd-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "f9fb07650ecc27e286a488c9b5d9f660aa9dd339562113cd508456d58eada6a0",
+  "sha256": "1f479fbd827c6baa0241e3ee34bec071e167ed76d1d92197503dea09cf70fe57",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
