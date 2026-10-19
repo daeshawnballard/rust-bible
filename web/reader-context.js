@@ -158,6 +158,11 @@ export function initReaderContext(root=document) {
   const sizeScene=()=>{
     const figure=world.querySelector('figure'), img=figure?.querySelector('img');
     if(!figure||!img)return;
+    // Authored subjects near the top edge must remain below the real header.
+    // Keep the artwork in the available scene area rather than hiding faces
+    // or small source objects underneath the navigation.
+    const headerBottom=reader.ownerDocument.querySelector('.library-header')?.getBoundingClientRect().bottom||0;
+    canvas.style.top=figure.hasAttribute('data-passage-scene')?Math.max(0,headerBottom)+'px':'';
     const w=canvas.clientWidth,h=canvas.clientHeight;
     const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024));
     worldWidth=(img.naturalWidth||1536)*scale;worldHeight=(img.naturalHeight||1024)*scale;
@@ -174,7 +179,6 @@ export function initReaderContext(root=document) {
       panY=(h-worldHeight)/2;
       if(selected){
         const y=parseFloat(selected.style.top)/100;
-        const headerBottom=reader.ownerDocument.querySelector('.library-header')?.getBoundingClientRect().bottom||0;
         // A face or other illustrated subject needs more breathing room than
         // the marker's 44px hit area when a portrait scene is cropped.
         const margin=figure.hasAttribute('data-passage-scene')?Math.max(22,Math.min(64,h/3)):22;
