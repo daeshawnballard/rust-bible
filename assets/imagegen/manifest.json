@@ -3046,6 +3046,1254 @@
         "web/art/journey/numbers-balaam-donkey.webp"
       ],
       "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+    },
+    {
+      "id": "passage-nt-1-thessalonians",
+      "source": "assets/imagegen/source/journey/nt-1-thessalonians.png",
+      "final": "web/art/journey/nt-1-thessalonians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-7fb07372-4577-46fb-b075-eec82077c788.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the armor metaphor in 1 Thessalonians 5:8, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One quiet, unlocated moment of getting dressed, illustrating Paul’s armor comparison; no battle or claimed historical event.\nSubject/action: Show one fully clothed adult in a simple woven tunic, calmly adjusting the straps of a practical, historically plausible breastplate. Place one clearly visible, separate simple helmet on a low wooden bench beside the person. The person’s hands and attentive expression make this a human preparation scene rather than a vacant armor display. The armor illustrates Paul’s figurative language; it does not imply this individual or moment appears in the letter.\nComposition/framing: Medium-wide view, with the person, breastplate, bench, and helmet fully visible in the left 60%. The breastplate and helmet must be separate, easy-to-target objects below the upper 12% of image height; keep the person’s head below the 15% line and feet above the 88% line if shown. Reserve the right 30% as quiet, low-detail ground and soft background for a reading panel. Leave clear open air above and ground below. One continuous scene.\nStyle/materials: Warm realistic period illustration; believable first-century-inspired bronze and leather armor, tactile woven linen and worn wood, natural hands and face, soft gold natural light, subdued earth pigments.\nConstraints: The breastplate and helmet represent the qualities named in 1 Thessalonians 5:8. Do not print faith, love, or hope on the armor or clothing. No weapons, shield, enemy, battlefield, violence, text, inscriptions, symbols, map, modern items, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "9274414bc40e878e0c741962c7f6b6bd93d360817a9330bf1fe2f3020a5e4452",
+      "sha256": "40505ca122d2e46c8dad08f96a6d468414776f3f41537e951b10e3c636825de8",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-1corinthians",
+      "source": "assets/imagegen/source/journey/nt-1corinthians.png",
+      "final": "web/art/journey/nt-1corinthians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-1b3a997c-974c-4ab2-b1a3-51ff23dbc058.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of Paul’s literary comparison in 1 Corinthians 12:12–27, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One unlocated community gathering used to illustrate Paul’s comparison of one body with many members. This is not a documented historical event or a claim about a specific church meeting.\nSubject/action: Show a small group of distinct, fully clothed ordinary people who belong together. Their faces and ages vary naturally; no one is a copy or a stand-in for a named person. One member sits comfortably while companions make room, gently offer a hand, and respond with attentive, caring expressions. Keep them visibly separate human beings with ordinary intact bodies; this illustrates mutual care, not anatomical parts.\nComposition/framing: Use a medium-wide view from several paces away; the group should occupy about 60% of the canvas height, not fill the frame vertically. Show the figures from waist or knee up, with all heads fully visible and their hair beginning below the 18% line; keep the group’s lower edge above the 85% line. Do not crop any head, hand, or caring interaction at a frame edge. Place the whole group within the left 60%; reserve the right 30% as quiet, low-detail wall and open floor for a reading panel. Leave visible space above the heads and below the group. One continuous scene.\nStyle/materials: Warm cinematic realistic illustration; simple period-evocative woven garments without assigning identities, tactile cloth and wood, natural expressive faces and hands, restrained earth pigments, soft natural light.\nConstraints: This is an editorial visual aid for Paul’s body-and-members comparison, not a historical scene. No hybrid bodies, floating body parts, gore, rank insignia, disability stereotypes, text, labels, captions, writing, symbols, banners, maps, modern objects, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "81e882e581127ab2340ea90e2048d1f32e9b762dbcd7e851cf67a5e53a7c0a7c",
+      "sha256": "09a85aff9d63a8dd44656eda35fec63cd19314eb6ad3fa8ede6fd3654469636b",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-2-corinthians",
+      "source": "assets/imagegen/source/journey/nt-2-corinthians.png",
+      "final": "web/art/journey/nt-2-corinthians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-832c1451-4e6c-479e-acfc-e008e4cd1f4e.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the earthen-vessel comparison in 2 Corinthians 4:7–10, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, tactile materials, nuanced natural light, and readable composition. Do not reproduce their scenes, characters, or objects.\nScene/backdrop: A symbolic scene for Paul’s words about treasure in earthen vessels. This is an illustrative comparison, not a documented historical event or located place.\nSubject/action: Show one fully clothed ordinary adult from the waist up, carefully holding an intact, weathered clay vessel with both hands at chest level. The vessel has subtle hairline cracks and worn edges but remains whole; a restrained warm light within suggests the treasure metaphor without depicting coins or any specific physical object. The person looks down at the vessel with a calm, steady expression. Keep the full head, hands, and complete vessel visible with clear space around them.\nComposition/framing: Wide three-quarter view. Place the person and vessel in the left half; keep the very top 15% and bottom 12% free of the person’s head, hands, and vessel. Do not crop the person’s head, face, hands, or vessel at any frame edge. Reserve the right 30% as quiet, low-detail background for a reading panel. One continuous symbolic composition.\nStyle/materials: Warm realistic historical illustration; tactile clay, simple woven garment, natural hands and face, soft golden light, subtle earth pigments, nuanced shadows.\nConstraints: The light is an editorial symbol for “treasure,” not a literal object named in the text. Do not show destruction, injury, a dramatic miracle effect, coins, written scrolls, a specific historical setting, text, labels, banners, maps, modern objects, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "79ad7c59501166099f7147f95bdcd889501f98d097691aa3d471ba9c2b28bc33",
+      "sha256": "e9f452915ea3eb23790503eb7641b041394226092cb6f7437a82110d8224d2f2",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-2-thessalonians",
+      "source": "assets/imagegen/source/journey/nt-2-thessalonians.png",
+      "final": "web/art/journey/nt-2-thessalonians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-a7ff3daf-82b5-48b1-99c3-0259c2ffe60e.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of 2 Thessalonians 3:10–13, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One ordinary, unlocated household moment used only as an editorial example of quiet work and continuing to do good; not a specific historical event or named occupation.\nSubject/action: Show three fully clothed adults at one simple low worktable. One calmly kneads dough by hand, absorbed in steady useful work. Beside them, the other two share a small loaf across the table with unhurried, kind expressions; they are peers, with no depiction of destitution. Make the handwork and bread exchange distinct and readable within one continuous communal moment. The tasks are illustrative examples of the letter’s general instruction, not an event or occupation named by the text.\nComposition/framing: Medium-wide view from several paces away. Keep all people, kneading hands, dough, and the bread exchange wholly within the left 60%, with both focal hand actions below the upper 12% of the image. Keep heads below the 15% line and feet above the 88% line if visible. Leave open air above and ground below. Reserve the right 30% as quiet, low-detail background for a reading panel. One continuous scene, not a collage or sequence.\nStyle/materials: Warm realistic historical illustration; period-evocative simple woven garments, natural hands and faces, tactile dough, wooden table and plain bread, soft golden natural light, subdued earth pigments.\nConstraints: This scene is illustrative, not a documented event or specific trade. Keep the focus on useful handwork, calm persistence, and a modest act of care. No poverty spectacle, scolding, laziness caricature, text, inscriptions, symbols, map, modern items, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "6862c44f2ffad7d4d9944f53261dd9314644d18a77233bf6a399272935a5ea3d",
+      "sha256": "9622469439c2528de4c1774c7c5fc7d724423315a9613cf93efe0aded9f35615",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-acts",
+      "source": "assets/imagegen/source/journey/nt-acts.png",
+      "final": "web/art/journey/nt-acts.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-88ab78d4-6bff-4b9d-9275-8e4cdc766f29.png",
+      "prompt": "Use case: historical-scene.\nAsset type: individual production background illustration for a Bible Journey reader, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural human proportions, tactile ancient materials, nuanced light, and respectful storytelling. Do not reproduce their characters, settings, or compositions.\nScene/backdrop: Pentecost gathering in Jerusalem as described in Acts 2:1–13, inside an unspecified house setting with no precise architectural layout or modern landmark.\nSubject/action: A gathered group of Jesus’ followers speaks while small divided flame-like appearances rest above each of them, echoing the text’s “tongues like as of fire” without burning or injuring anyone. At the open edge of the gathering, a larger group of hearers listen in amazement; some are questioning and a few are skeptical. Show a range of ordinary first-century clothing without assigning modern ethnic identities or making one person stand for a named nation.\nComposition/framing: Wide three-quarter view. Keep followers, flame-like appearances, and listeners fully within the left 65%; reserve the right 30% as quiet wall and open air for a reading panel. Keep the top and bottom 12% free of essential subjects. One continuous gathering, no collage or sequential panels.\nStyle/materials: Warm cinematic realistic historical illustration; worn woven garments, plaster and stone surfaces, natural expressive faces, restrained daylight, tactile detail.\nConstraints: Preserve the passage’s comparison of tongues to fire. Do not show burning bodies, halos, written languages, banners, maps, named costumes, modern buildings, an asserted exact room, extra supernatural figures, text, labels, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "95bbd0a1c9f1ba1f35c6ed383951f585189ec9496e57af67691f4a8ecef8ccaa",
+      "sha256": "0d878246b98674abd3be9da8daf8b0ce75745be5f8e14bdda76a24477d36e84c",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-colossians",
+      "source": "assets/imagegen/source/journey/nt-colossians.png",
+      "final": "web/art/journey/nt-colossians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-8d34d76c-a7e4-4424-b110-640e3a58dc8b.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the clothing metaphor in Colossians 3:12–14, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One unlocated, quiet moment that openly illustrates the letter’s clothing language; it is not a documented event or historical scene.\nSubject/action: Show two fully clothed adults in a calm, respectful act of reconciliation. In the same continuous moment, one person is putting on a plain, soft outer mantle and closing it with one simple woven tie; the other gently clasps their hand. The garment and single tie make Paul’s metaphor visible, while the joined hands suggest forbearance and forgiveness. The people are illustrative, not named individuals.\nComposition/framing: Medium-wide full-frame view; keep both people, the mantle, the tie, and joined hands wholly inside the left 60%. Heads begin below 15% of image height and feet end above 88%. Leave open air above and ground below. Keep the right 30% low-detail and quiet for a reading panel. The garment, tie, and hands must remain separate, readable focal targets.\nStyle/materials: Warm, cinematic realistic period illustration; simple period-evocative woven clothing with natural drape; visible tactile fabric weave and a clearly discernible braided tie; natural human hands and faces; soft golden natural light and subdued earth pigments.\nConstraints: The mantle, reconciliation, and tie are visual explanations of Colossians 3:12–14, not a claimed historical event. No words or virtue labels on garments; no text, writing, icons, symbols, map, spectacle, modern items, pins, logos, border, or watermark. Do not add objects or people that suggest a specific dispute or named setting.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "4a6f56342d388fdb879eb55403aa13bd576d418bde3dd996b876c02fb105691b",
+      "sha256": "b2ccce53b95879d801595b42f499978633b2fd0411c05ab3052046f6a50e79d2",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-ephesians",
+      "source": "assets/imagegen/source/journey/nt-ephesians.png",
+      "final": "web/art/journey/nt-ephesians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-32604fe0-70ce-4512-a0e2-05ec3049fa43.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the armor metaphor in Ephesians 6:10–17, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and dignified tone. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One symbolic figure illustrates Paul’s description of spiritual armor. This is a literary comparison, not a documented battle or historical event.\nSubject/action: Show one fully clothed adult standing calmly in simple, period-evocative protective armor: belt, breastplate, sturdy footwear, shield, helmet, and a lowered sword. The figure’s posture is steady and prepared, not attacking or fighting. Make the armor pieces distinct and readable without labels or inscriptions. There is no human opponent.\nComposition/framing: Use a medium-wide view from several paces away. The full figure should occupy about 60% of the canvas height, centered vertically with the helmet starting near 18% from the top and footwear ending near 84% from the bottom. Leave generous open sky above and ground below; do not crop any part. Keep the person and all armor pieces within the left half. Reserve the right 30% as quiet, low-detail ground and soft background for a reading panel. One continuous symbolic composition.\nStyle/materials: Warm realistic historical illustration; worn leather, bronze, woven cloth, natural face and hands, tactile materials, restrained earth pigments and soft directional light.\nConstraints: The armor is Paul’s metaphor, not an actual combat scene. Do not add an enemy, violence, arrows, supernatural combatants, battle standards, words on garments, writing, text, labels, modern military gear, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "b1d1531ce206501f3869db4cb7dc0be9e3a0671a6aa3056b022a6f9dab669175",
+      "sha256": "da15438b31a5089a0be60967d1d831deb52f7a9c7796db34c46bd260585c2036",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-galatians",
+      "source": "assets/imagegen/source/journey/nt-galatians.png",
+      "final": "web/art/journey/nt-galatians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-6f2385b5-ebf3-4709-9a8f-0731e5dd56d4.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of two connected instructions in Galatians 6:1–2, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One unlocated symbolic moment illustrating gentle restoration and bearing one another’s burdens. This is not a documented event or a claimed historical journey.\nSubject/action: Show two fully clothed ordinary people helping one another in a quiet open setting. One carries a heavy woven bundle, and the other approaches gently, offers a steadying hand, and helps take some of the load. Their expressions are calm and respectful, with no humiliation, injury, or blame. The shared bundle is a visual metaphor for the burden Paul names, not an object from a specific event.\nComposition/framing: Medium-wide view from several paces away; do not fill the frame vertically. Show both figures from head to lower leg, smaller within the scene, with their heads beginning below the 15% line and feet ending above the 88% line. Keep the shared bundle and helpful hand readable. Place the pair entirely within the left 60%; reserve the right 30% as quiet, low-detail ground and soft background for a reading panel. Leave open air above the heads and ground below the feet. One continuous interaction.\nStyle/materials: Warm realistic historical illustration; simple period-evocative woven garments without assigning identities, natural hands and faces, tactile cloth and basket weave, soft golden natural light, subdued earth pigments.\nConstraints: Do not imply a particular fault, disability, route, or historical location. No text, labels, symbols, map, spectacle, modern items, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "1e0bc4a477f9a93177679c621bd42cc86b82d9b33561df56214cb1596207ad2f",
+      "sha256": "1b1f3554370ce52b362e5f65b4d979c275e35039399f06741344e9015f75f70a",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-philippians",
+      "source": "assets/imagegen/source/journey/nt-philippians.png",
+      "final": "web/art/journey/nt-philippians.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-cfa5fa1a-6ec6-4691-957b-ba2c5f5cd296.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of Paul’s athletic metaphor in Philippians 3:12–14, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and readable composition. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One symbolic runner presses toward a mark, illustrating Paul’s words. This is a literary comparison, not a documented race or named historical event.\nSubject/action: Show one fully clothed adult athlete in simple period-evocative running clothes, moving forward in a determined but natural stride. A plain low finish marker stands just ahead within the left half; the runner leans and reaches forward toward it. Keep the person distinct and dignified, without modern sports gear or a literal trophy.\nComposition/framing: Use a wider view from several paces away; the full runner should occupy about 60% of the canvas height. Place the top of the runner’s head below the 18% line and the feet above the 84% line; leave generous open sky above and ground below, and do not crop any part. Keep runner and marker fully within the left 60%. Reserve the right 30% as quiet open ground and soft sky for a reading panel. One continuous symbolic composition.\nStyle/materials: Warm realistic historical illustration; natural face and hands, simple woven garment and leather footwear, textured earth, restrained earth pigments, soft directional light.\nConstraints: The runner and marker illustrate Paul’s metaphor, not a historical sporting event. No crowd, stadium, route map, text, inscriptions, crown, modern gear, banners, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "1d33981e0677556ec59e4634dc01d0b7de6f517ec503b3eba0988a255bbb97a2",
+      "sha256": "ac6cfbcd3c25f71589ab14a69a60f3fd982d2cf544945b3932e53a9cac27b5c4",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-romans",
+      "source": "assets/imagegen/source/journey/nt-romans.png",
+      "final": "web/art/journey/nt-romans.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-9c90ee76-e0bc-4fe2-bb46-30e87df038e3.png",
+      "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of a letter’s metaphor, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, tactile materials, nuanced natural light, and readable composition. Do not reproduce their scenes, characters, or objects.\nScene/backdrop: One olive tree presented as Paul’s illustrative comparison in Romans 11:17–18, not as a documented historical event or located tree.\nSubject/action: Make one foreground graft union the unmistakable focal subject: a healthy cultivated olive trunk with a living, visibly separate wild-olive branch inserted into a clean angled notch in the trunk and firmly bound at the junction with thin natural fiber strips. The inserted branch must visibly cross into and emerge from the trunk at that exact bound join, with fresh leaves growing beyond the join; it must not merely lean against the tree or look like an ordinary branch. Keep a second leafy natural branch growing from the tree and a few old pruned stubs nearby to distinguish the graft from pruning. Show a little exposed root at the base. No people are required.\nComposition/framing: Wide, slightly elevated three-quarter view, with the large trunk and graft junction clearly visible around center-left. Keep root, trunk, junction, and important branches fully within the left 65%; reserve the right 30% as quiet sunlit ground and soft landscape for a reading panel. Keep the top and bottom 12% free of essential details. One continuous tree image, not a diagram, collage, or sequence.\nStyle/materials: Warm realistic historical illustration; gnarled olive bark, silvery green leaves, a tactile cut scar and clearly visible fiber binding, earthy soil, soft gold light, fine detail.\nConstraints: This is a literary comparison, not a literal event. Show horticultural joining at the trunk, not a branch merely resting against it. Do not add labels, writing, banners, maps, humans, an orchard procession, modern tools, text, pins, logos, border, or watermark.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "27f4b177d5523485778f5dcad350efc4422054db182ac0cc65f62265c4b43123",
+      "sha256": "a7e18e0ee79c06f3e00fed2450493f2ac2a2299c92fd096f808694dc0e04a557",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-1-john-walk-in-light",
+      "source": "assets/imagegen/source/journey/nt-1-john-walk-in-light.png",
+      "final": "web/art/journey/nt-1-john-walk-in-light.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-fe6a84e5-cb51-4550-9eaf-48152db4a7ec.png",
+      "prompt": "Create a third, materially reframed 1536x1024 landscape symbolic editorial illustration for 1 John 1:5–7. Use a medium-wide view with two anonymous adults walking side by side in mid-step on a short softly illuminated patch of rough ground, all entirely inside the left 50 percent of the frame. Make each full figure modest in scale, about 55 percent of image height: place both heads below y=20% and both feet above y=80%, leaving the top 12 percent and bottom 12 percent completely free of people or critical detail. Their posture suggests fellowship and walking together. A clear warm field of natural light surrounds them, while a small shaded edge at far left provides contrast; do not draw a road continuing into the distance. This is symbolic illustration, not a literal route or specific historical journey. Keep the entire rightmost 42 percent as a smooth, softly lit warm earth-toned gradient with no rocks, boulders, trees, shrubs, buildings, props, horizon, or focal light shape. Do not add objects around the figures. Use anonymous adults in simple timeless garments and no identifiable setting. Follow only the accepted references' cinematic realism, warm tactile gold and earth materials, natural light, and detailed cloth; do not copy their composition. No visible divine figure, halo, religious icon, readable writing, text, UI, labels, pins, borders, logo, watermark, map, or destination. The image itself contains no biblical wording.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "3704a70239e3883151d2ea82ab80d497e5afb9c54a954d900a0e999a904bc7cb",
+      "sha256": "ddc5d9c00a7856f30e759827f415e26c481e2dd65b828b608f715e0469f14924",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-1-peter-living-stones",
+      "source": "assets/imagegen/source/journey/nt-1-peter-living-stones.png",
+      "final": "web/art/journey/nt-1-peter-living-stones.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-19f08e63-d3f2-4921-b11e-ce34f7d95e3a.png",
+      "prompt": "Create a second, materially reframed 1536x1024 landscape symbolic editorial illustration for 1 Peter 2:4–8. Use a close three-quarter view of a small, low, unfinished arrangement of rough stones being fitted together by two visible hands. A single angular cornerstone at the base is the main focal object; smaller irregular stones form one compact, simple wall segment around it. Keep every story-critical stone and both hands completely inside the left 55 percent of the frame. Do not include a separate large loose stone anywhere in the right half. The rightmost 38 percent must remain quiet, softly lit low-detail earth and blurred stone, clear for a passage panel; top and bottom 12 percent contain no critical detail. This is an editorial rendering of Peter’s “living stones,” “spiritual house,” “cornerstone,” and “stone of stumbling” images. The stones remain actual stones and the arrangement is symbolic; do not depict a sanctuary, temple, city, named site, or archaeological reconstruction. Match the accepted references only in their realistic cinematic historical-literary style, tactile gold and earth palette, natural soft light, and detailed stone surfaces; do not copy their composition. No people made of stone, columns, altar, icons, inscriptions, readable writing, text, UI, labels, pins, borders, logo, watermark, or supernatural glow. The image itself contains no biblical wording.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "263a5e3658abed41d4e19032482ac95285ab550330fdd7019241a331d5ff0e51",
+      "sha256": "6c170950282bc39ed6b14f882c80835c67b1b595f0c9d06668dc7752b59221ff",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-2-john-truth-and-love",
+      "source": "assets/imagegen/source/journey/nt-2-john-truth-and-love.png",
+      "final": "web/art/journey/nt-2-john-truth-and-love.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-1626b630-b4b5-4ea1-9864-0915828f443a.png",
+      "prompt": "Create a third, materially reframed 1536x1024 landscape literary editorial illustration for 2 John 1:4–6. Use a wide, calm composition with one modest blank open papyrus letter in the lower-left foreground and, beside it in the middle distance, two clearly recognizable but small full-body adults walking together along a short symbolic strip of ground. Make each walker no taller than 18 percent of image height; place their heads around y=35% and their feet around y=53%, entirely inside x=18–46%. Keep the short path between y=48–64%, ending before the center. Place the blank letter between x=5–38% and y=66–82%; it has no ink, pseudo-writing, lines, columns, seals, or symbols. Leave the top 15% and bottom 15% entirely free of people and letter. The figures, adjacent path, and letter are one editorial image of walking in truth, love, and the commandment; the path does not continue to a horizon or suggest a real trip. The rightmost 40% is an empty, smooth warm stone-and-earth gradient with no objects. Use anonymous people in simple period-neutral garments and no identifiable place, house, or event. Follow the accepted references only in realistic cinematic rendering, warm tactile gold and earth materials, soft natural light, and detailed papyrus; do not copy their composition. No writing of any kind, readable text, UI, labels, pins, borders, logo, watermark, route, map, destination, halo, or supernatural symbolism. The image itself contains no biblical wording.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "d6745a104e6bc79038ab0bc808daeefe1080da975b6f6c239dba374e3cd86747",
+      "sha256": "ce07bac1a5744c1af14cf17fe7ee3c6c8e206621e07c3f8183f39acf0af62afd",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-2-peter-lamp-daystar",
+      "source": "assets/imagegen/source/journey/nt-2-peter-lamp-daystar.png",
+      "final": "web/art/journey/nt-2-peter-lamp-daystar.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-64fb54a1-5a24-4be6-ba27-d73b6ca4a84e.png",
+      "prompt": "Create a second, materially reframed 1536x1024 landscape symbolic editorial illustration for 2 Peter 1:19. Make a close, low three-quarter view of one small ancient clay oil lamp with a steady flame on a dark stone ledge in the left foreground. Above the ledge, keep one small bright morning star and the first soft dawn glow close together in the upper-left to center-left sky; place both entirely left of x=55%. Show dawn only as a gentle broad color change above a low, indistinct horizon, with no visible sun, sun disc, second star, or bright point anywhere in the right half. Keep the lamp, flame, star, and all meaningful horizon detail entirely inside the left 55 percent. The entire rightmost 40 percent must be a quiet, evenly defocused warm stone-and-sky gradient, free of focal lights, objects, mountains, or distinct landscape. Top and bottom 12 percent contain no critical details. This one symbolic literary image represents Peter's words about a light shining in a dark place until day dawns and the day star rises in the heart; it asserts no prophetic timetable. Do not depict a calendar, sequence, chart, zodiac, cosmic map, identifiable location, temple, or historical event. Use the accepted references only for realistic cinematic historical-literary materials, tactile gold and earth tones, and soft natural light, without copying their compositions. No scroll writing, text, UI, labels, pins, borders, logo, watermark, figures, or supernatural symbolism. The image itself contains no biblical wording.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "5764cf056b00ce950d79e0b8f2d04b2555c46c966a26f404c2d6321344527e65",
+      "sha256": "c482f562f8b7c2ec30856f8321be2eb4ea0e70fb336affd7fe3036a9e51ddd23",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-3-john-hospitality-support",
+      "source": "assets/imagegen/source/journey/nt-3-john-hospitality-support.png",
+      "final": "web/art/journey/nt-3-john-hospitality-support.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-b1467339-e639-4b48-9f1c-172623eb753f.png",
+      "prompt": "Edit the supplied target image while preserving its same three-person hospitality scene, doorway, provisions, blank papyrus letter, warm cinematic earth palette, and right-side passage panel. Correct the measured margin failure by scaling the people and doorway down by about 25 percent and moving the whole interacting group lower. Keep all three heads at y=22 percent or lower, with a clear empty top margin of at least 16 percent; keep faces, hands, bread, cloth, and waterskin inside the left 58 percent and between y=22 and y=72. Keep the blank letter and table between y=68 and y=84 so the bottom 12 percent stays free of critical detail. Maintain the rightmost 35 percent as quiet softly lit plaster and stone. Keep the papyrus truly empty, without writing, pseudo-writing, lines, columns, ink, seal, or symbols. Do not add people, change the welcoming gesture, invent a named house or route, or introduce text, UI, labels, pins, borders, logo, watermark, map, halo, or supernatural symbolism. The revised scene remains an anonymous editorial illustration for 3 John 1:5–8.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "c7349052cae1b3aba09b0db56551ebf700bf3fbdbf3cd895f57070af0c4c7a29",
+      "sha256": "d980a3d41348e355cf35ae4b9cfd35655aecfef278207058a3ac9ed712b54576",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nt-jude-mercy-rescue",
+      "source": "assets/imagegen/source/journey/nt-jude-mercy-rescue.png",
+      "final": "web/art/journey/nt-jude-mercy-rescue.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-f8bb4a9a-e209-4599-960e-d838c96fd857.png",
+      "prompt": "EDIT the supplied target image to correct its measured framing, while preserving the same three anonymous people, compassion gesture, rescue action, small stylized flame, warm historical-literary editorial finish, and quiet right-side panel. Scale the entire interacting group down to about 75% of its current size and move it slightly right and lower. Reframe so the three heads are clearly below y=22% (target y=23–34%), all three faces and the reaching/pulling hands stay within x=6–56% and y=23–70%, and the low symbolic flame stays within x=43–56% and y=68–78%. Keep all feet above y=82%. Maintain a clear top margin through y=22% and bottom margin from y=88%; reserve x=65–100% as quiet softly lit warm plaster with no people or fire. Keep the helper's open hand reaching toward the hesitant person and the other hand firmly drawing the third person away from the ground flame. Do not add people, objects, text, symbols, halos, architecture, or scenery. Do not burn or injure anyone; no inferno, demons, supernatural figures, or doctrinal interpretation of the fire. The fire remains Jude's image, with its meaning left open. The result remains one coherent editorial illustration for Jude 1:22–23, with no readable text, pseudo-writing, UI, labels, pins, logos, border, watermark, or map.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "b54ee62f0893102533d61339e3ef97df4dee361ee3697cf0df3237d52dad18f6",
+      "sha256": "573b822d07285765f19be5b3e2a0092eae5aa2b84ee83c32261af13a79733686",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "edit_source": {
+        "generation_file": "exec-b2d9f129-b942-406f-b74e-bf55067c2e52.png",
+        "sha256": "a35ffb38a3bbcea8b16fa09cf916e1cc81a3c443103cebaeef2322cd8584033f"
+      }
+    },
+    {
+      "id": "passage-nt-revelation-river-of-life",
+      "source": "assets/imagegen/source/journey/nt-revelation-river-of-life.png",
+      "final": "web/art/journey/nt-revelation-river-of-life.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-416e6b78-2259-4acf-8176-fb3aa0062d00.png",
+      "prompt": "EDIT the supplied target image to fix its measurable composition while preserving the same vision elements and warm cinematic style. Recompose the scene as a tighter left-side cluster: scale the entire tree and river-bank composition smaller and lower, with the whole tree canopy, trunk, fruit, throne, river, and servants inside x=6–58% and y=18–82%. Keep all leaves below y=18%; do not crop the canopy at the top. Keep the throne near x=10–23%, y=28–50%; keep the tree trunk near x=30–38%, its complete leafy canopy within x=8–56%, y=18–52%, and the river flowing from the throne toward the foreground only within x=16–57%, y=43–80%. Move the servants to x=8–48%, y=48–78%. The rightmost x=65–100% must be clean quiet warm stone/plaster only, with absolutely no water, riverbank, rocks, plants, people, throne, or paving detail. Preserve one throne, one unmistakable tree of life with fruit and healing leaves, a clear river flowing from the throne, and anonymous servants facing its light. No person or divine form on the throne. Convey no night by warm steady radiance, without a sun or moon disc. No new objects, architectural landmarks, city skyline, timeline, map, denominational symbols, extra tree or throne, human God, face/silhouette, halo, marks on foreheads, text, pseudo-writing, UI, labels, pins, logos, borders, or watermark. The result stays a symbolic editorial illustration of Revelation 22:1–5.\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "ae75ffc0ac3a72495f8c44b03bd964aead94152e26dad7b122efb2d49ea8a849",
+      "sha256": "29aa001d8695faf430177f299dda630253d730aab4ae07ba43e87733c5466f62",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "edit_source": {
+        "generation_file": "exec-cb31f712-53c1-4c2e-a001-aa4cf7fd4c4f.png",
+        "sha256": "58f4b740f0271cd7d4432917ff09421e6bad308c6e22c2b36621ee43110dd9ef"
+      }
+    },
+    {
+      "id": "passage-ot-1chronicles-ark-procession",
+      "source": "assets/imagegen/source/journey/ot-2samuel-ark-procession.png",
+      "final": "web/art/journey/ot-2samuel-ark-procession.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-e8cd45bd-5dd0-4912-b397-6e340d0e3571.png",
+      "prompt": "Create one historically grounded biblical illustration for the procession in 2 Samuel 6:12–15.\nShow the Ark of the LORD borne on poles as David dances before it with all his might, wearing a simple linen ephod, while members of Israel follow with shouting and trumpets. Keep the moment joyful and reverent, with David and the carried Ark as the unmistakable focal subjects. Show the Ark as an artistic reconstruction consistent with Exodus 25: gold overlay, golden mercy seat, and two facing cherubim with wings over the lid. Do not include Michal at the window; this scene focuses on the procession described in verses 12–15. Do not invent a detailed city plan or claim a precise Jerusalem layout.\nCompose full-frame 3:2 landscape at intended native size 1536x1024. Keep David, Ark, bearers, and main procession within the left 65%. Keep the rightmost 30% a quiet, low-contrast muted background suitable for passage text; no people, readable architecture, or bright focal objects there. Top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use natural human proportions, ancient fabrics, restrained light, painterly detail. No lettering, labels, pins, interface, borders, modern objects, route markings, invented inscriptions, or supernatural figures. This is an artistic reconstruction, not a recovered historical artifact or verified city scene.\n\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the ark procession illustration for 2 Samuel 6. Make one localized background edit: add Michal as a small, clearly human figure watching the procession through a single simple window opening in a distant, nondescript building wall, as described in 2 Samuel 6:16. Place the window and Michal in the left half of the background, separate from David and the Ark, small enough to remain secondary. Use a reserved expression; do not exaggerate or add visual judgment beyond the text.\nDo not alter David, his dancing, the Ark, its gold-covered chest and cherubim, the bearers, musicians, or their positions. Do not add other buildings, city gates, streets, or a readable city plan. Keep the rightmost 30% quiet and free of people and focal points. Preserve the full-frame 3:2 at native 1536x1024 and the existing warm, tactile historical realism. No labels, lettering, borders, modern objects, or new story events.\n\nInput: local-reference:2samuel-ark-procession-michal-omitted-v1.png\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the ark procession illustration. It currently has two women in two separate background window openings. Edit only the far-left background: remove the woman and window opening at the extreme left and blend that small area into the existing plain wall and foliage. Retain exactly one small woman figure looking through exactly one simple window opening, the more central one around x=30% of the image. Do not add any other people or openings.\nKeep this sole observer small and secondary, with a reserved expression. Preserve David's dance, the gold-overlaid Ark with paired cherubim, bearers, musicians, and every foreground figure unchanged. Keep the rightmost 30% quiet and free of people or focal points. Do not add city gates, streets, or a detailed layout. Preserve full-frame 3:2 at native 1536x1024 and the existing warm, tactile historical realism. No other changes.\n\nInput: local-reference:2samuel-ark-procession-two-window-figures-v2.png\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "a4edb9b2f8ea2119f1d8b54288d7829bebdd85fa45dc850504defc4a40b1304c",
+      "sha256": "b67c9cce024ccb4f8c495a9f11c819ced608a23996df9927b5743574a4a36142",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "shared_artwork": "ot-2samuel-ark-procession",
+      "original_prompt_sha256": "3e00378089335f6c0cafac27d3f922879af2830a9cc5a4c0669c436f9b1ad6ec",
+      "prompt_local_paths_redacted": true
+    },
+    {
+      "id": "passage-ot-1kings-temple-cloud",
+      "source": "assets/imagegen/source/journey/ot-1kings-temple-cloud.png",
+      "final": "web/art/journey/ot-1kings-temple-cloud.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-347e1032-b9d4-456b-884f-ca82f85afcbd.png",
+      "prompt": "prompts/1kings-temple-cloud-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "5c969ac41b3bb7d3b1a8598034d481f07e9b76a11c2e09a30fe76e3cfc371ab6",
+      "sha256": "4a3e5d7b4fcfa40e375f55315893ca836c4b776bc01d38d6dfc220dd47a817b1",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-1samuel-david-goliath",
+      "source": "assets/imagegen/source/journey/ot-1samuel-david-goliath.png",
+      "final": "web/art/journey/ot-1samuel-david-goliath.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-e8a3d716-61b7-412e-84f6-976aa95c3b7b.png",
+      "prompt": "prompts/1samuel-david-goliath-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "34b52329613ef6a714b7def8b2138287dec20fc55c08d0814441cd2da6ad9f05",
+      "sha256": "8e20eccc354082cdd58b6e68640c96bb5f646c8a25eacbefbb3492cf8897f66f",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-2chronicles-temple-cloud",
+      "source": "assets/imagegen/source/journey/ot-1kings-temple-cloud.png",
+      "final": "web/art/journey/ot-1kings-temple-cloud.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-347e1032-b9d4-456b-884f-ca82f85afcbd.png",
+      "prompt": "prompts/1kings-temple-cloud-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "5c969ac41b3bb7d3b1a8598034d481f07e9b76a11c2e09a30fe76e3cfc371ab6",
+      "sha256": "4a3e5d7b4fcfa40e375f55315893ca836c4b776bc01d38d6dfc220dd47a817b1",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "shared_artwork": "ot-1kings-temple-cloud"
+    },
+    {
+      "id": "passage-ot-2kings-naaman-jordan",
+      "source": "assets/imagegen/source/journey/ot-2kings-naaman-jordan.png",
+      "final": "web/art/journey/ot-2kings-naaman-jordan.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-cdc23be6-3494-44c7-88cb-e250e75bb3d9.png",
+      "prompt": "prompts/2kings-naaman-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "759bf515382c148c5fdabd89a45caaf2785418518a3ea076ac67d07d7e3f929f",
+      "sha256": "da1625945ce36fe29adb802dd01e6e523eff3578db579155ed22f45ddeb9b2b4",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-2samuel-ark-procession",
+      "source": "assets/imagegen/source/journey/ot-2samuel-ark-procession.png",
+      "final": "web/art/journey/ot-2samuel-ark-procession.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-e8cd45bd-5dd0-4912-b397-6e340d0e3571.png",
+      "prompt": "Create one historically grounded biblical illustration for the procession in 2 Samuel 6:12–15.\nShow the Ark of the LORD borne on poles as David dances before it with all his might, wearing a simple linen ephod, while members of Israel follow with shouting and trumpets. Keep the moment joyful and reverent, with David and the carried Ark as the unmistakable focal subjects. Show the Ark as an artistic reconstruction consistent with Exodus 25: gold overlay, golden mercy seat, and two facing cherubim with wings over the lid. Do not include Michal at the window; this scene focuses on the procession described in verses 12–15. Do not invent a detailed city plan or claim a precise Jerusalem layout.\nCompose full-frame 3:2 landscape at intended native size 1536x1024. Keep David, Ark, bearers, and main procession within the left 65%. Keep the rightmost 30% a quiet, low-contrast muted background suitable for passage text; no people, readable architecture, or bright focal objects there. Top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use natural human proportions, ancient fabrics, restrained light, painterly detail. No lettering, labels, pins, interface, borders, modern objects, route markings, invented inscriptions, or supernatural figures. This is an artistic reconstruction, not a recovered historical artifact or verified city scene.\n\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the ark procession illustration for 2 Samuel 6. Make one localized background edit: add Michal as a small, clearly human figure watching the procession through a single simple window opening in a distant, nondescript building wall, as described in 2 Samuel 6:16. Place the window and Michal in the left half of the background, separate from David and the Ark, small enough to remain secondary. Use a reserved expression; do not exaggerate or add visual judgment beyond the text.\nDo not alter David, his dancing, the Ark, its gold-covered chest and cherubim, the bearers, musicians, or their positions. Do not add other buildings, city gates, streets, or a readable city plan. Keep the rightmost 30% quiet and free of people and focal points. Preserve the full-frame 3:2 at native 1536x1024 and the existing warm, tactile historical realism. No labels, lettering, borders, modern objects, or new story events.\n\nInput: local-reference:2samuel-ark-procession-michal-omitted-v1.png\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the ark procession illustration. It currently has two women in two separate background window openings. Edit only the far-left background: remove the woman and window opening at the extreme left and blend that small area into the existing plain wall and foliage. Retain exactly one small woman figure looking through exactly one simple window opening, the more central one around x=30% of the image. Do not add any other people or openings.\nKeep this sole observer small and secondary, with a reserved expression. Preserve David's dance, the gold-overlaid Ark with paired cherubim, bearers, musicians, and every foreground figure unchanged. Keep the rightmost 30% quiet and free of people or focal points. Do not add city gates, streets, or a detailed layout. Preserve full-frame 3:2 at native 1536x1024 and the existing warm, tactile historical realism. No other changes.\n\nInput: local-reference:2samuel-ark-procession-two-window-figures-v2.png\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "a4edb9b2f8ea2119f1d8b54288d7829bebdd85fa45dc850504defc4a40b1304c",
+      "sha256": "b67c9cce024ccb4f8c495a9f11c819ced608a23996df9927b5743574a4a36142",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "original_prompt_sha256": "3e00378089335f6c0cafac27d3f922879af2830a9cc5a4c0669c436f9b1ad6ec",
+      "prompt_local_paths_redacted": true
+    },
+    {
+      "id": "passage-ot-ecclesiastes-times",
+      "source": "assets/imagegen/source/journey/ot-ecclesiastes-times.png",
+      "final": "web/art/journey/ot-ecclesiastes-times.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-0e725e01-5268-4e6d-be51-de45de792095.png",
+      "prompt": "prompts/ecclesiastes-times-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "0e3a82f6965ff20240e49d406a2c37f17e43f966c1960c14b9151fd007da73af",
+      "sha256": "d13dad6d7b90693f0564edaa696a69876e994a55e24527142c81adad8b1b12bf",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-esther-second-banquet",
+      "source": "assets/imagegen/source/journey/ot-esther-second-banquet.png",
+      "final": "web/art/journey/ot-esther-second-banquet.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-cb9b0d9f-b93f-4880-a714-8be9558cd4c1.png",
+      "prompt": "prompts/esther-second-banquet-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "e4bdeefc91a9e074146df56d571a6fe7125e9d439fa19188d5b272f4d0354393",
+      "sha256": "2a9ec696e2d4d6c927677f6f2e5932c9227cf90ebbcb2b7172d85a51ae0f613c",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-exodus-red-sea-crossing",
+      "source": "assets/imagegen/source/journey/ot-exodus-red-sea-crossing.png",
+      "final": "web/art/journey/ot-exodus-red-sea-crossing.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-74049c83-9ba7-4e6b-8dce-b0170da70bf7.png",
+      "prompt": "prompts/exodus-crossing-v2.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "17f0ad159ca2eeb8b3260f439cb4f527483b6276b1feb4b7f5521c8c43a1d69c",
+      "sha256": "e2703e6cd8125b8dfa0f16a87999ae07cf861ca0caf57c4f62bd171cc477300e",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-ezra-temple-foundation",
+      "source": "assets/imagegen/source/journey/ot-ezra-temple-foundation.png",
+      "final": "web/art/journey/ot-ezra-temple-foundation.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-59ec1623-7c8b-4578-90fd-6a0635096207.png",
+      "prompt": "Create one historically grounded biblical illustration for Ezra 3:8–13.\nShow the returned families and builders laying the temple foundation together at one construction site. Keep the freshly laid foundation as the central subject, with one builder setting a stone and other builders nearby. Show priests in their garments with trumpets and Levites with cymbals praising; among the families, some older people weep while others shout with joy, as the text describes. Make the mixed response clear but dignified, without exaggeration. This is one coherent foundation-laying scene, not a multi-panel collage.\nKeep the architecture schematic and limited to a low foundation course; the passage does not give a reconstructable building plan. Do not identify a precise modern archaeological site.\nCompose full-frame 3:2 landscape at intended native 1536x1024. Keep the foundation, builders, priests, musicians, and people within the left 65%. Reserve the rightmost 30% as quiet, low-contrast muted earth and sky for text overlay, with no people or bright focal object there; top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use plausible ancient fabrics, natural human proportions, restrained light, painterly detail. No lettering, labels, pins, interface, borders, modern tools, route markings, or invented temple architecture. This is an artistic reconstruction of the textual event.\n\n\nImage 1 is the Ezra 3 temple foundation scene. Edit only the far-right third, x>=68%. Remove the people/builders and the bright sun in that zone. Replace it with an uninterrupted, low-contrast muted grey-blue sky and soft earth haze with only subtle distant ground texture, suitable for a text overlay. No people, sun disc, bright reflection, sharp highlights, or focal objects in the rightmost 32%.\nKeep the builders setting the foundation, priests with trumpets, Levites with cymbals, families, and the elders with mixed grief and joy unchanged in the left two-thirds. Keep the stone foundation clearly visible in the left area; do not change people's faces, clothing, positions, or the story. Preserve the full-frame 3:2 landscape at 1536x1024 and the warm, tactile historical realism. No labels, writing, borders, modern items, or extra people.\n\nInput: local-reference:ezra-foundation-v1.png\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "e5b64cbd8e1cb0f42eb3564f2e72437c25302c763df0fc6c1ee06e4fd452f7c7",
+      "sha256": "42537a4ac4acfb3f47857e445878c92ba6eb5bab4a0d73c727c89eb40c11620b",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "original_prompt_sha256": "a1f698aeab6eb4994cc204e1a29a77a455f3601e6da1c57edcdd7f5318a9a75f",
+      "prompt_local_paths_redacted": true
+    },
+    {
+      "id": "passage-ot-job-whirlwind",
+      "source": "assets/imagegen/source/journey/ot-job-whirlwind.png",
+      "final": "web/art/journey/ot-job-whirlwind.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-64cd665a-05b5-4206-8643-149189923aef.png",
+      "prompt": "prompts/job-whirlwind-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "238fa9c6b13faa86a59447a79eae04682c94454bac45744f593ed4bd3973eec3",
+      "sha256": "9b43f245a958280e304bb5e82478485609ed6329a1c228ec699a9edde1fa1e5b",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-joshua-jordan-crossing",
+      "source": "assets/imagegen/source/journey/ot-joshua-jordan-crossing.png",
+      "final": "web/art/journey/ot-joshua-jordan-crossing.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-b8463a54-3dcd-49a1-b033-8b9072fc0194.png",
+      "prompt": "prompts/joshua-jordan-crossing-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "c96343b4f28203c23d700be907ee2e5769bebc57385c75e4692a15bd0deae2f4",
+      "sha256": "dc29920d77de9e7db05c6ea86a9531405cfc6804cc3e03dca94be7905c8f0803",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-judges-deborah-and-barak",
+      "source": "assets/imagegen/source/journey/ot-judges-deborah-and-barak.png",
+      "final": "web/art/journey/ot-judges-deborah-and-barak.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-c5a40340-77fa-4b10-866a-7adc612031ff.png",
+      "prompt": "prompts/judges-deborah-barak-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "630d12d6530cffc92774c86028be71fb954b45f0bb90b241d22c1d8c4aade768",
+      "sha256": "ef30005f3403e83e957b122ba5b6416dbf7f072930ef8c4bdf1ff85fcf6e4c6e",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-leviticus-live-goat",
+      "source": "assets/imagegen/source/journey/ot-leviticus-live-goat.png",
+      "final": "web/art/journey/ot-leviticus-live-goat.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-47c3c6f6-296e-48d4-bc84-4f6aa74b70ff.png",
+      "prompt": "Create one historically grounded biblical illustration for Leviticus 16:20–22.\nThe exact action is Aaron laying both hands on the head of the live goat after the sanctuary rites, with a fit man ready to lead the goat away into the wilderness. Keep this as one coherent moment, not a collage. Show Aaron in simple white linen garments, the live goat calm and clearly visible, and the attendant beside it. Use a sparse wilderness edge beyond the camp; do not invent detailed sacred architecture or imply a recovered floor plan.\nCompose as a full-frame 3:2 landscape, intended native size 1536x1024. Keep all essential people and the goat within the left 65%. The rightmost 30% should be quiet, low-contrast muted earth and haze suitable for text overlay; keep top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references: natural human proportions, believable ancient fabrics and objects, restrained light, painterly realism. No lettering, labels, pins, interface, borders, modern objects, route markings, extra animals, or supernatural visual effects. The image illustrates the text and is not a claim about the exact appearance of the historical rite or landscape.\n\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the edit target: the Leviticus live-goat scene. Image 2 and Image 3 are style references.\nEdit only the rightmost 32% of Image 1. Remove the bright sun disc and its glow completely. Replace that section with an even, low-contrast blue-grey and muted earth-tone haze over softly shaded distant hills, suitable for dark text overlay. No sun, bright reflection, luminous horizon, sharp contrast, or focal object in the rightmost 32%.\nKeep Aaron with both hands on the live goat's head, the goat's body and horns, and the attendant and lead exactly unchanged. Preserve all people and the goat within the left 65%; do not alter their faces, posture, clothing, proportions, or placement. Preserve the full-frame 3:2 image at native 1536x1024.\nKeep the overall warm, tactile historical realism of the style references. No lettering, labels, UI, borders, new people or animals, route markings, or changes to the story.\n\nInput paths:\n- local-reference:leviticus-goat-v1.png\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "7d31af8dd8df42bc2af05c8835992ef5d5151a11f36fba688d0bd7ace4b93023",
+      "sha256": "9e9cf4a7ee46fc4e41f0d1d544e2bc4dbc53a3c6586e81ce390871017b59e4fb",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "original_prompt_sha256": "0c11694f4d10c567feb09386e275462affba33731e259bfca93d93cf733f3911",
+      "prompt_local_paths_redacted": true
+    },
+    {
+      "id": "passage-ot-nehemiah-wall-watch",
+      "source": "assets/imagegen/source/journey/ot-nehemiah-wall-watch.png",
+      "final": "web/art/journey/ot-nehemiah-wall-watch.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-c6ceeef0-9eb8-46e9-b8ee-a43272314e63.png",
+      "prompt": "Create one historically grounded biblical illustration for Nehemiah 4:15–23.\nShow the returned families and workers rebuilding one unfinished stretch of Jerusalem's wall while staying alert. At the left, builders set stones and carry loads; some have a tool in one hand and a weapon ready at the belt, reflecting the text. A nearby watchman holds a spear, and a trumpet signaler stands with Nehemiah, who coordinates the watch. Suggest the transition from day work to night guard through dusk light, not through a split-scene or montage. No battle or attack is shown.\nKeep the wall as a short, generic unfinished stone section, not a precise city layout or named gate. Use only the tools, weapons, clothing, and watch arrangement described in the passage.\nCompose full-frame 3:2 landscape at intended native 1536x1024. Keep builders, wall, Nehemiah, and watchers within the left 65%. Keep the rightmost 30% as quiet, low-contrast muted dusk sky and plain distant ground, with no people or bright focal point for text overlay; top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use believable proportions and ancient fabrics, restrained evening light, painterly detail. No lettering, labels, pins, interface, borders, modern tools, route markings, or invented battle action. This is an artistic reconstruction, not a surveyed wall plan.\n\n\nImage 1 is the Nehemiah wall and watch scene. Edit only the far-right 30%: remove the bright sun and its intense glow, replacing them with a uniform, low-contrast muted blue-grey and dusky earth-tone sky and distant hills suitable for text overlay. No sun disc, bright reflection, sharp highlights, people, or focal objects in that area.\nKeep Nehemiah, all builders and watchers, the trumpet signaler, the tools and weapons, and the unfinished wall unchanged in the left 65%. Do not alter any people, faces, positions, or actions. Preserve the full-frame 3:2 landscape at 1536x1024, warm tactile historical realism, and the same scene. No new architecture, lettering, labels, or battle action.\n\nInput: local-reference:nehemiah-wall-v1.png\n",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "168e665815cc89922e67c402211dfd06510f311effb9a68a2e0bfa0cb0e02c4f",
+      "sha256": "916e6239666ee0938a37a035744e0d53d8d4c98ff72f7bc0e477eb9b2adf2b58",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "original_prompt_sha256": "cf388ec346181a6cec00b32838062d88783300b60734219a69accafa84f63f8b",
+      "prompt_local_paths_redacted": true
+    },
+    {
+      "id": "passage-ot-proverbs-wisdom-calls",
+      "source": "assets/imagegen/source/journey/ot-proverbs-wisdom-calls.png",
+      "final": "web/art/journey/ot-proverbs-wisdom-calls.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-948b3065-7cd7-40cd-ba71-f46fa41ebf13.png",
+      "prompt": "prompts/proverbs-wisdom-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "62314654ee51d3c4b0b9e7433a502458b8e4c0b533faedcd5f755c1a1cf4b519",
+      "sha256": "e199ceeaa0bc1fe50b867e8cd542434ff9d4d9f25c805a1f346b2dd810b4e4e1",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-psalms-shepherd",
+      "source": "assets/imagegen/source/journey/ot-psalms-shepherd.png",
+      "final": "web/art/journey/ot-psalms-shepherd.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-f4e4d77a-9cf4-46f5-9e17-35dc32880984.png",
+      "prompt": "prompts/psalms-shepherd-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "f9fb07650ecc27e286a488c9b5d9f660aa9dd339562113cd508456d58eada6a0",
+      "sha256": "1f479fbd827c6baa0241e3ee34bec071e167ed76d1d92197503dea09cf70fe57",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-ot-ruth-gleaning-encounter",
+      "source": "assets/imagegen/source/journey/ot-ruth-gleaning-encounter.png",
+      "final": "web/art/journey/ot-ruth-gleaning-encounter.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-4b835d61-022b-4ac2-b172-a98e83d872c3.png",
+      "prompt": "prompts/ruth-gleaning-v1.txt",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "cd4a202184f5b627a1fa079c95556bbd2ae66b280cbce172a82c58114d9d6021",
+      "sha256": "ad31f43a6c86cb0dae646f040ad26e53f61dffc3b484717211380366e754da50",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-amos-summer-fruit",
+      "source": "assets/imagegen/source/journey/amos-summer-fruit.png",
+      "final": "web/art/journey/amos-summer-fruit.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-a3091308-a8c5-445d-b78c-a023e5de0e94.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Amos 8:1–6, landscape 3:2, requested 1536x1024.\n\nOne coherent ancient market scene, explicitly a symbolic prophetic vision. An adult Israelite prophet, Amos, studies a woven basket of ripe summer fruit at a simple stall. Just behind the basket, one merchant uses a balance with subtly false measures to weigh grain while one poor adult buyer waits beside him. Keep all four elements unmistakable: Amos, fruit basket, balance, waiting buyer. The basket is the clear central subject of the vision; the nearby scale and buyer connect the vision to the same oracle's condemnation of dishonest trade. Fruit types are visual choices, not stated varieties.\n\nComposition is strict: contain every person, basket, balance, stall detail, and grain measure fully within x=8–57%; keep the buyer's full body and garments left of x=57%. Amos stands around x=18%, basket around x=34%, merchant and scale around x=46%, buyer around x=53%. Reserve all of x=62–100% as low-detail sunlit plaster wall and quiet market ground for reader overlay; x=57–62% is a clear margin. No people, objects, or detailed architecture in that right third. Top and bottom 12% noncritical. One continuous scene, no montage or split panels.\n\nGeneric ancient Levantine market courtyard, no identifiable city or archaeological claim. Warm late-morning gold, restrained ochre, dusty olive, cream cloth, and clay; realistic cinematic historical/literary painting matching the supplied Bible illustration references, tactile wicker, grain, woven cloth, and balance. Respectful and restrained.\n\nThis is a literary reconstruction of Amos's reported vision and the social accusation in the same oracle. The summer fruit carries the text's wordplay with the announced end; the market scale visualizes the condemnation of dishonest trade and exploitation of the needy. Do not assert one historical reconstruction or modern location. Do not show corpses or turn the image into a disaster scene. No God/LORD in human form, religious iconography, or supernatural spectacle.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, extra episode, split scenes, battle, violence, corpses, deity, halo, magical glow, malformed scales, illegible tiny people, fruit growing on basket, background crowds, clutter, or any person or meaningful detail beyond x=57%.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "19b1fb86e58cc3f5720a34e88b29ae4915666c9011fe90cb45b3c33c414c268d",
+      "sha256": "d4f74fddae660b8890a6b8d26735acd52c8bd6399ef10486f2a2a7ac232c3bcd",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-daniel",
+      "source": "assets/imagegen/source/journey/daniel-lions-dawn.png",
+      "final": "web/art/journey/daniel-lions-dawn.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-a226fa1d-0fd3-41c4-9c97-94e93c0b17df.png",
+      "prompt": "Use case: illustration-story. Make one realistic cinematic historical/literary illustration for Daniel 6:19–23, landscape 3:2, requested 1536x1024.\n\nThe main subject is the dawn meeting at the mouth of the lions' den. King Darius, a middle-aged ruler in restrained ancient court clothing, leans toward the den opening and calls down with concern. Daniel, a dignified older adult in simple woven garments, stands safely within the den and answers him. Two or three calm lions are clearly visible near Daniel; they are at rest and do not threaten him. The moment is the king discovering Daniel unharmed. Show no angel or divine figure; Daniel's spoken explanation about God's angel belongs to the text, not an extra visual being.\n\nKeep Darius, Daniel, the visible lions, and the stone entrance within the left 60% of the canvas. Place the king near x=18%, Daniel around x=42%, lions around x=52%; keep faces and bodies readable. Reserve the right 38% as quiet low-detail shadowed limestone and dawn sky for reader text overlay. Top and bottom 12% noncritical. Single continuous scene, no multi-panel retelling of the night, sealing, and dawn.\n\nWarm dawn light enters the den; tactile limestone, wool, and linen; golden earth colors and restrained shadow, grounded literary reconstruction matching supplied biblical image references. Do not specify the den's exact construction or depict a recognizable archaeological site. Text says the angel shut the lions' mouths; do not show that angel, God, a halo, luminous person, or spirit in human form. The peaceful lions are an illustration of the passage, not zoological documentation.\nAvoid: text, writing, verse labels, pins, UI, logos, watermark, maps, modern objects, palace plan, battle, injured figures, blood, cages, chains, exaggerated snarling, deity, divine human figure, angel, religious iconography, fantasy armor, empty cave diorama, tiny subjects, or any figure/lion in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "67ae4583466d633853f8e188022ca2a6393b6fc914c9351ba9ed058363c68efd",
+      "sha256": "056f2a238f6c3f0423c9d533976509b838fc55cf23adcc5dd94b9902711ec89b",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "shared_artwork": "daniel-lions-dawn"
+    },
+    {
+      "id": "passage-habakkuk-watchpost",
+      "source": "assets/imagegen/source/journey/habakkuk-watchpost.png",
+      "final": "web/art/journey/habakkuk-watchpost.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-aa8a6854-e548-4500-9b08-160e281b49ed.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Habakkuk 2:1–4, landscape 3:2, requested 1536x1024.\n\nOne coherent scene of the prophet waiting for an answer. Habakkuk, an adult man in plain ancient Near Eastern clothing, stands on a modest rocky watchpost at dawn, looking toward the open horizon. Beside him is a simple writing tablet and stylus, ready for the vision to be written plainly. The tablet is blank or has only faint non-legible marks: no readable words, letters, or symbols. The prophet and tablet are the human-scale subjects.\n\nComposition: keep Habakkuk, the watchpost, and tablet entirely within x=8–58%; Habakkuk around x=24%, tablet around x=43%. Reserve x=63–100% as quiet pale sky and muted distant hills for reader overlay; x=58–63% is clear margin. Top and bottom 12% noncritical. One continuous moment, no montage. Readable prophet and tablet rather than an empty landscape.\n\nSetting: generic ancient hillside lookout; the tower is poetic staging, not a reconstructed archaeological structure or identified site. Warm first light, muted sandstone, dusty olive, cream cloth, and distant blue-gray hills; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile stone, wood, and parchment. Thoughtful, attentive mood.\n\nThis is a literary reconstruction of Habakkuk waiting to hear and write the vision. The text says the vision is for an appointed time and tells the just to live by faith; preserve interpretive nuance in the scene note rather than encode one doctrine in the image. Do not depict God/LORD as a person or represent the answer through supernatural effects.\n\nAvoid: text, letters, captions, labels, names, legible marks, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, elaborate tower, deity, halo, magical glow, extra figures, crowded scene, clutter or meaningful details in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "c4ab0e621e620d7cfff0139bebea528f8d805a5f003beabd3bf1ab8f1f0ecf23",
+      "sha256": "cb9ad961883c79181e5687962e939ec57d754691a929fa71e3e30502cacda736",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-haggai-rebuild",
+      "source": "assets/imagegen/source/journey/haggai-rebuild.png",
+      "final": "web/art/journey/haggai-rebuild.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-3ac2e00b-8f15-460d-bbef-46b0edd6782c.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic historical illustration for Haggai 1:12–15, landscape 3:2, requested 1536x1024.\n\nA small, coherent worksite moment after Haggai's message. Three clearly readable adult men stand together: Haggai speaking, with Zerubbabel and Joshua listening as the named leaders; nearby, one worker lifts a short timber to begin the work. Use generic adult figures without invented likenesses or extra identities. Show the people turning toward the work together. No ornate priestly costume or royal crown.\n\nComposition is strict: keep all people, the small timber, tools, stones, and unfinished foundation within x=5–55%. Haggai around x=19%, the two leaders around x=32%, worker around x=47%. Reserve all of x=60–100% as completely open, low-detail pale sky and bare courtyard ground for reader overlay; x=55–60% is an empty buffer. No structures, materials, or people beyond x=55%. Top and bottom 12% noncritical. One continuous scene, not a montage or map.\n\nShow only a small schematic unfinished foundation and a few simple stones and timber pieces at the group's feet, all ending by x=52%. No scaffolding, long walls, background work crew, temple facade, columns, ornaments, or invented architectural details. Generic ancient setting without identifiable ruins, modern city boundary, or archaeological claim. Warm afternoon gold, muted limestone, ochre, dusty olive, and cream cloth; realistic cinematic historical painting matching supplied Bible illustration references, tactile stone, timber, and work clothing. Purposeful and hopeful.\n\nThis illustrates the text's account: Zerubbabel, Joshua, and the remnant heed Haggai and begin work in the house of the LORD. The passage dates the renewed work to the twenty-fourth day of the sixth month in Darius's second year. Do not add chronology or architectural claims. Do not depict the LORD as a person or represent divine stirring through supernatural effects.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, elaborate temple, structures or materials beyond x=55%, background workers, ornate regalia, deity, human divine figure, halo, magical glow, religious iconography, extra episodes, crowded backdrop, clutter or meaningful details in right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "ee6d275e38c541e023f0f1a5dbbb96090cf55ff1cbd1cb9462d035cb333fb7a7",
+      "sha256": "c6dcda5e260d32cba63296bf4bc9d2bd3f4bd8d4d095a07a45e63af0c3a3bcf4",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-hosea-family-sign",
+      "source": "assets/imagegen/source/journey/hosea-family-sign.png",
+      "final": "web/art/journey/hosea-family-sign.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-25bb9a7a-86aa-466b-b704-161e9bba0779.png",
+      "prompt": "Use case: illustration-story. Create a realistic cinematic literary illustration for Hosea 1:8–9, landscape 3:2, requested 1536x1024.\n\nShow one quiet, coherent family moment: the adult prophet Hosea holds a fully clothed newborn son, while an adult woman representing Gomer sits close by and a young daughter stands beside her. The daughter has recently been weaned; the new boy is the child whose naming the text reports in Hosea 1:9. Keep all three human subjects clearly readable, dignified, and non-sensual. Do not show distress, coercion, or stigmatizing cues. This is a textual family sign, not a portrait.\n\nPlace the family together entirely within x=12% to x=48%, with the baby visible near center of that group. Keep all people and meaningful props left of x=60%. Leave the right 38% as quiet low-detail pale plaster courtyard wall and soft olive foliage for reader text overlay. Top and bottom 12% noncritical. One natural moment, no collage or multiple episodes.\n\nSetting: a modest generic ancient Levantine domestic courtyard, with simple limestone, woven cloth, a small olive branch. Do not claim a specific site or archaeology. Warm morning gold, restrained ochre, olive, cream and clay; realistic cinematic historical/literary painting with tactile woven fabric and limestone, matching the supplied biblical illustration references. Avoid melodrama.\n\nThe passage frames Hosea's family as a sign concerning Israel. The scene represents the text's report of the son being born and named; the names carry the passage's symbolic message, but no written name or lettering should appear. Preserve debate about the episode's historical/literary mode and do not invent identity details beyond the named text. No depiction of God, the LORD, or spirit as a person or figure.\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, scrolls, modern objects, recognizable monuments, sexualized portrayal, stigma, violence, despair, deity, divine human figure, halo, magical glow, religious iconography, noisy detail in right third, or tiny people.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "a78fb03f482d5fe368d03e1c3809c9154a8e33deb68f6b5243342a823531f746",
+      "sha256": "0bfc71e3877b91d2097bab70db762944d1777f9d2a772a8821118902ea0ea24a",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-isaiah-branch-and-peace",
+      "source": "assets/imagegen/source/journey/isaiah-branch-and-peace.png",
+      "final": "web/art/journey/isaiah-branch-and-peace.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-e84c1a91-3bf4-4fba-b8a2-3d49f7973f5e.png",
+      "prompt": "Use case: illustration-story\nAsset type: one full-bleed production illustration for a literary Bible passage. Requested canvas 1536x1024 pixels, landscape 3:2.\nPrimary request: Depict the oracle in Isaiah 11:1–9 as a prophetic vision of a righteous ruler and a peaceable creation. Show a green shoot growing from an old cut tree stump in the foreground, a dignified adult ruler in simple ancient Judean clothing standing nearby, and a small child safely among a clearly readable group of animals at rest. Include the text's wolf with lamb, leopard with young goat, calf and young lion, and bear and cow; do not turn it into a crowded animal collage. The child may lead the group along a quiet hillside.\nScene/backdrop: A restrained Levantine hillside with olive and terebinth foliage, dry-stone ground, and softly layered hills. The atmosphere is visionary and literary, not an observed historical landscape.\nStyle/medium: Realistic cinematic historical/literary illustration matching the supplied reference images' warm golden light, tactile earth, cloth, stone, and restrained realism. No fantasy costume or medieval aesthetic.\nComposition/framing: Wide 3:2 landscape. Keep the stump and shoot, ruler, child, and animals entirely within the left 62% of the canvas. Group them legibly in one coherent scene. Leave the entire right 35–38% as low-detail soft hillside, pale sky, and distant foliage with quiet contrast suitable for reader text overlay. Keep the top and bottom 12% noncritical. No montage, collage, panels, or cutaway.\nLighting/mood: Warm late-afternoon gold, gentle, hopeful, contemplative; no dramatic battle or disaster.\nColor palette: Ochre, muted olive, cream linen, sandstone, restrained gold, dusty green.\nMaterials/textures: Natural wool, woven linen, living green shoot, old bark, limestone, dry grasses, animal coats.\nInterpretation: This is a prophetic vision. The peaceful proximity of predator and prey must read as visionary imagery, not an observed historical landscape, archaeological reconstruction, or fixed end-times interpretation. The ruler is a literary representation of the oracle; do not identify him with a named historical portrait. Show only visible visual cues; do not render the spirit of the LORD as a person, face, halo, beam, or humanlike being.\nAvoid: Text, letters, captions, labels, verse numbers, pins, UI, logos, watermark, modern objects, buildings that imply a specific site, ornate religious iconography, deity or God-in-human-form, halos, glowing figures, graphic injury, predator aggression, empty landform diorama, tiny unreadable subject cluster, animal rows, or realistic interaction that makes the scene seem zoologically documented.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "84cb525adcc2f27b1c475e7029e9e3b8fc45ff0ff8c084b95a99c3211b68af0b",
+      "sha256": "25de37df89a299c34382c8fa1c9f4a426c9a1ac4d52c3c7a408301a368cd5ef5",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "provenance_status": "Original output_hint receipt unavailable; output filename reconstructed from session sequence, saved prompt and visual match. Source and final byte hashes are verified."
+    },
+    {
+      "id": "passage-joel-locust-devastation",
+      "source": "assets/imagegen/source/journey/joel-locust-devastation.png",
+      "final": "web/art/journey/joel-locust-devastation.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-1be0b452-46a7-47a7-934b-a098a5ecbceb.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Joel 1:7–12, landscape 3:2, requested 1536x1024.\n\nMain subject: one adult farmer or vinedresser in plain ancient Levantine work clothes, clearly visible at left foreground, mourning the ruined harvest. He stands beside a stripped grapevine and a fig tree with barked white branches, looking at the bare crop with a hand resting on the vine. A small, readable locust swarm crosses the left half of the image and gathers on damaged plants. Show dried grain stalks, vine and fig, not a battle. The farmer is the subject; do not make this an empty landscape.\n\nComposition: keep the farmer, damaged vines and trees, and all visible locusts left of x=62%. Farmer around x=24%; vines and fig tree around x=40–55%. Reserve the entire right 38% as low-detail dry field and muted sky for reader overlay. Top and bottom 12% noncritical. One continuous scene, no montage.\n\nSetting and mood: generic ancient agricultural hillside, no identifiable location, no ruins or buildings. Sunlit but subdued, with warm ochre, dusty olive, pale bark, faded grape leaves and cream cloth. Realistic cinematic historical/literary painting matching the supplied Bible illustration references; tactile woven cloth, bark, dry soil. Mournful without sensationalism.\nInterpretation: Joel's poem describes successive locusts and widespread agricultural loss, then uses national language in the same oracle. Show locusts and crop damage as the poem's imagery; do not label them as a specific army, invasion, or archaeologically documented event. Do not add religious iconography or depict God/LORD in human form.\nAvoid: text, letters, captions, labels, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, weapons, soldiers, fires, corpses, fantasy, empty landform diorama, too many insects obscuring the farmer, and any person or dense crop detail in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "2a92f622d43c7cd567736f4a05de2840eb3d5a156b7d80a26ef1d1653fd1fb67",
+      "sha256": "6f18c62f10923f0edb811e45a25648ee215e2b083d164093774fe1ccaf727ee1",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-jonah",
+      "source": "assets/imagegen/source/journey/passage-jonah.png",
+      "final": "web/art/journey/passage-jonah.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-7f53c6ed-ed35-4e8c-80a0-c94088f88fc0.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Jonah 4:5–11, landscape 3:2, requested 1536x1024.\n\nOne coherent, subject-led scene from the closing episode. Jonah, an adult man in plain ancient Near Eastern clothing, sits beside a small makeshift booth on a bare hillside. He looks frustrated and overheated, one hand at his brow, while the appointed gourd-like plant that had grown over his head droops beside the shelter. Make the plant visually clear: broad leaves, a few withering yellow edges, and one small but discernible worm on the stem. Jonah, booth, plant, and worm are the only meaningful subjects. No city, buildings, ship, sea, fish, or other story episode; the text's closing question about Nineveh is explained in the scene note rather than depicted as a map or panorama.\n\nThis single image compresses verses 5–11 into a literary illustration: Jonah sits outside the city, the plant grows, a worm strikes it, and Jonah suffers the heat before the closing question. The partly green, partly wilted plant and the visible worm are a visual summary, not a claim that the narrated moments occur simultaneously. Do not show God/LORD as a person or depict divine action directly.\n\nComposition: keep Jonah, booth, plant, and worm entirely within x=8–58%; Jonah around x=25%, plant around x=43%, worm around x=47%. Reserve x=62–100% as quiet low-detail pale sky and sunlit hillside for reader overlay, with no structures or silhouettes; x=58–62% is a clear margin. Top and bottom 12% noncritical. One natural continuous scene, not montage or paneling. Readable human figure and plant, not an empty landscape.\n\nSetting: generic arid hillside without city or identifiable location, no archaeological claim. Warm sun, restrained ochre, muted olive, cream cloth, dusty earth; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile woven shelter, vine stem, leaf, and soil. Thoughtful and restrained.\n\nThe plant's appointed growth and loss prompt the story's closing question about God's concern for Nineveh's inhabitants and animals. Preserve this as the narrated literary frame without implying certainty about a specific place or historical reconstruction.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, route diagrams, modern objects, recognizable monuments, city, harbor, ship, sea, fish, exaggerated giant worm, magical glow, deity, halo, religious iconography, violence, self-harm imagery, corpses, people or detailed objects in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "070eda9678ebeb1a7a3966b9b4e26646251b67838d2660a4b32ea97565031667",
+      "sha256": "43cdadf6de735a5903232f09755495a98822580e667d433f9e58f7bc4a2a39c8",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+      "shared_artwork": "passage-jonah"
+    },
+    {
+      "id": "passage-malachi-messenger-refiner",
+      "source": "assets/imagegen/source/journey/malachi-messenger-refiner.png",
+      "final": "web/art/journey/malachi-messenger-refiner.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-1d90a731-4c73-4ecc-b8ff-01907fa2a815.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic symbolic literary tableau for Malachi 3:1–4, landscape 3:2, requested 1536x1024.\n\nA single coherent prophetic tableau that makes Malachi's metaphors legible without claiming a documented historical visit to a specific temple workshop or settling later fulfillment identities. In a modest generic stone courtyard, an ordinary adult messenger approaches a simple open doorway, carrying a closed, unreadable scroll. Nearby, a seated adult refiner tends a small controlled furnace and carefully purifies a piece of silver in a crucible. Two adult priests in plain linen wait beside a simple offering bowl. At the refiner's feet, a small basin of water and pale soap supports one folded cloth, a quiet visual cue for the fuller's soap in the oracle. No named portrait or invented identity is claimed. The people and their work are the subjects.\n\nComposition: keep every person, doorway, furnace, crucible, bowl, cloth, basin, and offering within x=5–57%. Messenger and doorway around x=18%, refiner around x=34%, priests around x=48%, soap basin around x=43%. Reserve x=63–100% as completely open, low-detail pale sky and bare courtyard ground for reader overlay; x=57–63% is an empty buffer. No structures, people, tools, or materials beyond x=57%. Top and bottom 12% noncritical. One continuous tableau, no montage, split panels, inset, or repeated figures.\n\nThe messenger is a generic person, not a named later fulfillment; do not depict the Lord as a human figure. The refiner and fuller references are prophetic metaphors, not a claim that this exact workshop or visit occurred. Show restrained natural furnace fire and careful work, not magical or supernatural effects. Generic ancient setting without identifiable temple architecture, recognizable ruins, or archaeological claim. Warm gold, muted limestone, ochre, olive, and cream cloth; realistic cinematic historical painting matching supplied Bible illustration references, tactile silver, stone, wool, and earth. Dignified, purposeful, restrained.\n\nThe passage says the messenger prepares the way, compares the coming to a refiner's fire and fuller's soap, and describes purification so the offering may be righteous. Preserve that as the oracle's language without assigning a settled fulfillment.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, identifiable monuments, elaborate temple, archaeological claims, deity, human divine figure, halo, magical glow, religious iconography, extra episodes, crowds, dramatic violence, large conflagration, detailed background architecture, clutter or meaningful details in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "163dcc28bb05932ae6c77b3d5339e36eca35247af57c73f3463e6d6b698ed87d",
+      "sha256": "41db64e7606f1ee0afabef76b0d89fdcda4098044a27ac8bd0c8d82854227442",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-micah-what-god-requires",
+      "source": "assets/imagegen/source/journey/micah-what-god-requires.png",
+      "final": "web/art/journey/micah-what-god-requires.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-437349d2-e250-43d7-ad70-0f4d0b96b4d1.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Micah 6:6–8, landscape 3:2, requested 1536x1024.\n\nAn explicitly literary covenant-court tableau, not a literal courtroom or map. At an open-air gathering, the prophet Micah addresses a few ordinary listeners while holding an open but completely blank scroll. In the foreground, one worshipper has brought a small oil vessel and a lamb, then pauses to listen; beside him, another listener offers a steadying hand to an older neighbor carrying a basket. These are restrained visual cues for the questions about offerings in verses 6–7 and the call to justice, mercy, and humble walking in verse 8. Do not present the imagined extreme gifts as requirements or as actual practice. No written words on the scroll.\n\nKeep the people and meaningful objects clearly visible but grouped naturally within x=10–58%: Micah around x=35%, listeners around x=23–48%, scroll and modest offerings around x=42%. Reserve the entire right 38% as quiet open ground and muted sky for reader overlay; no people or objects there. Top and bottom 12% noncritical. One coherent gathering, not a montage, with readable human subjects rather than an empty landscape.\n\nUse a simple ancient Levantine outdoor assembly place under distant mountain ridges. The mountains are poetic witnesses in the passage, not a geographic diagram. Avoid identifiable sites, monumental architecture, or archaeological claims. Warm golden light, restrained ochre, dusty olive, cream and clay; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile cloth, unmarked parchment, stone, and earth. Thoughtful and compassionate.\n\nThe scene is a literary reconstruction of Micah 6:6–8. The passage asks whether offerings of increasing scale could satisfy God, then states that what is good is to do justly, love mercy, and walk humbly with God. The helping gesture is a visual interpretation of the text's ethical language, not a complete definition. Do not depict God/LORD as a person or add religious iconography.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, sacrificial fire, blood, harm to a child, spectacle of mass animal sacrifice, deity, halo, magical glow, theatrical preaching, extra scenes, clutter or meaningful details in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "07b51534f60cb4eca5fd1b0f2eec25b5f8e43b50c4787b07005bf19505fdf12a",
+      "sha256": "9e2aae385eda49d883593da948fa364f5414ad0f1c71a01a359f342ec42b2b4f",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-nahum-nineveh-fall",
+      "source": "assets/imagegen/source/journey/nahum-nineveh-fall.png",
+      "final": "web/art/journey/nahum-nineveh-fall.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-7ed8aa4d-745d-4cbb-97d4-15c492ae9140.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Nahum 2:3–8, landscape 3:2, requested 1536x1024.\n\nOne coherent, non-graphic siege image from Nahum's poetic oracle. At a generic town gate, the gate has swung open as river water surges through the entrance. A single chariot moves through the shallow water nearby; two or three defenders hurry back toward the gate. Show disruption and retreat, not hand-to-hand fighting. Keep the open gate, the one chariot, and the retreating defenders as the readable foreground subjects. No second chariot, no other vehicles, no named ruler or specific city.\n\nComposition: confine the gate, walls, chariot, defenders, water action and all visible objects and people to x=5–57%. Gate around x=23%, chariot around x=40%, retreating figures around x=33%. Reserve x=62–100% as calm low-detail river edge, open plain, and pale sky for reader overlay; x=57–62% is an empty buffer. No people, vehicles, buildings, or dramatic splash beyond x=57%. Top and bottom 12% noncritical. One continuous episode, no montage. Do not extend a busy city or battle scene into the right third.\n\nSetting: generic ancient Near Eastern town edge; no specific wall design, landmark, archaeological reconstruction, verified attack route, modern boundary, or map. Use simple weathered stonework only. Warm late-afternoon earth tones with muted iron red, dusty olive, limestone, and restrained water reflections. Realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile wood, stone, wheels, and water. Tense but restrained.\n\nThis illustrates the oracle's siege language and description of Nineveh's defenses failing. It does not claim a precise reconstruction of ancient Nineveh or identify one historical attack path. Keep violence non-graphic and show no bodies. No deity or divine human figure.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, route lines, modern objects, recognizable monuments, extra chariots or vehicles, detailed architecture on right, dramatic water on right, gore, corpses, burning city, graphic violence, cruelty, deity, halo, magical spectacle, or crowded battle.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "e4a0a44ce1c5df32f786553af72ac0afbb40c270ea3b9c5dcbe9f324ace578bb",
+      "sha256": "59887004ad0596fb09f99fcacbdd22955ada59633e3a8434c1eae06282790ea6",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-obadiah-edom-pride",
+      "source": "assets/imagegen/source/journey/obadiah-edom-pride.png",
+      "final": "web/art/journey/obadiah-edom-pride.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-7022eb0d-b485-45e3-9630-8cc8b87c0523.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic historical/literary illustration for Obadiah 1:3–14, landscape 3:2, requested 1536x1024.\n\nOne coherent prophetic metaphor. A single adult figure, used symbolically to represent Edom's collective pride, stands on a high rocky ledge beside a simple rough shelter set among clefts of stone. The figure looks down toward a small neighboring settlement far below, suggesting the oracle's accusation of standing apart and gloating over Judah's distress. Keep the person clearly visible and human, with a restrained, self-assured posture rather than a sneer or caricature. No battle or violence.\n\nComposition: keep the figure, high rock dwelling, and distant settlement entirely within x=8–60%. Figure around x=22%, rocky shelter around x=40%, valley settlement around x=52%. Reserve x=63–100% as uncluttered muted sky and pale distant hills for reader overlay; x=60–63% clear margin. Top and bottom 12% noncritical. One continuous scene, no montage. The cliff and human figure are the subjects; do not make an empty landform diorama.\n\nSetting: generic ancient rocky hill country; no named city, archaeological site, identifiable architecture, or settled historical identification. Natural crags and a modest cave-like refuge only, not monumental buildings. Late-afternoon gold, muted sandstone, dusty olive, cream cloth; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile stone and woven cloth. Somber and restrained.\n\nInterpretation: this is a literary reconstruction of Obadiah's oracle. The high dwelling visualizes the text's image of pride and security in the clefts of rock; the distant community evokes the oracle's condemnation of looking on and rejoicing over a brother's distress. The figure is symbolic, not a named person. Do not claim this depicts a specific Edomite site, identified historical event, or archaeological reconstruction. No divine human figure or religious iconography.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments or Petra-like architecture, soldiers, weapons, fire, corpses, violence, captive figures, overt celebration, deity, halo, magic, crowding or detailed settlement in right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "4f57d98b463906c257a5ee2dec9d9385b48e8f9540e6605ba37fa5abce3573f1",
+      "sha256": "dd892c7f907c859fdbf879f7fbbbf68fe45e2c4ef489c2b5b784dbb656edf13d",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-zechariah-lampstand",
+      "source": "assets/imagegen/source/journey/zechariah-lampstand.png",
+      "final": "web/art/journey/zechariah-lampstand.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-c370a0fe-a37a-46bf-b9db-27ed830c49ad.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic symbolic-vision illustration for Zechariah 4:1–10, landscape 3:2, requested 1536x1024.\n\nOne coherent prophetic vision scene, unmistakably described as a vision in the metadata, not a recovered temple object or archaeological reconstruction. Zechariah, an adult prophet in plain ancient clothing, looks toward a single golden lampstand with one bowl and seven distinct lamps, alongside two olive trees, one on either side of the bowl. An interpreting angel stands near Zechariah as the passage says. In the same continuous visionary scene, include one generic adult builder identified only through the passage's role of Zerubbabel, carefully setting a modest cornerstone and holding a simple plumb line beside a schematic unfinished wall. No exact likeness or invented personal details. The lampstand, seven lamps, two trees, prophet, angel, builder, plumb line, and small building elements must all read clearly as the subjects.\n\nStrict composition: keep every person, lamp, tree, branch, vessel, tool, and stone inside x=5–56%. Group Zechariah around x=12%, angel around x=22%, lampstand around x=33%, two modest olive trees around x=24% and x=43%, builder and small cornerstone/wall around x=50%. Reserve x=63–100% as quiet pale sky and low-detail open courtyard ground for reader overlay; x=56–63% is an empty buffer. No people or meaningful objects beyond x=56%. Top and bottom 12% noncritical. One continuous scene, no montage, split panels, map, inset, or repeated figures.\n\nThe lampstand has seven distinct small flames and simple pipes, but remains a symbolic vision rather than a documented artifact. Use two living olive trees with restrained branches, not oversized vegetation. The builder's unfinished wall is only a few generic stones, with no identifiable architectural style or temple facade. Do not add supernatural beams, a human divine figure, or a visual explanation of every symbol. No eyes, faces, or extra symbols added to the lampstand; preserve the oracle's open question rather than resolving identities. Warm gold and muted olive, limestone, ochre, dust, and cream cloth; realistic cinematic historical painting matching supplied Bible illustration references, tactile metal, leaves, stone, and garments. Reverent but restrained.\n\nThis illustrates Zechariah's vision and its encouragement to Zerubbabel. The text says the work will be completed by the LORD's spirit rather than human might; state this in the accompanying explanation but do not depict the LORD. No fixed future-fulfillment interpretation or historical reconstruction is asserted.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, archaeological claims, elaborate temple, deity, human divine figure, halo, magical glow, religious iconography, additional lamps beyond seven, extra episodes, crowds, overly large trees, detailed background architecture, clutter or meaningful details in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "3acc2811a3809f97b7e8b20559dd24fcb1f9daf3ef4ad13d1193eab9a4aa3d4e",
+      "sha256": "091a157811ba8f288dfc30c6de85c99a048209f9577b5636c02e37b5c0d4e240",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+    },
+    {
+      "id": "passage-zephaniah-restoration",
+      "source": "assets/imagegen/source/journey/zephaniah-restoration.png",
+      "final": "web/art/journey/zephaniah-restoration.webp",
+      "intended_use": "Passage-specific Journey illustration",
+      "generator": "built-in ImageGen",
+      "generation_file": "exec-0b35fea6-ea49-483f-a99f-9f969047c00e.png",
+      "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Zephaniah 3:14–20, landscape 3:2, requested 1536x1024.\n\nA joyful gathering in a generic ancient town courtyard, explicitly a literary personification of “Daughter Zion.” One adult woman stands among her neighbors as the personified city, singing with them; she is an ordinary human figure used symbolically, not a named portrait or divine being. A few people return and are welcomed, including an adult woman walking with a staff and another person helping her. The gathered community is the subject: open, relieved expressions and attentive, celebratory gestures, without triumphalism.\n\nComposition: group the personified woman and all gathered people within x=10–58%, with the central woman around x=33% and the welcoming group around x=45%. Reserve x=63–100% as quiet, low-detail sunlit plaster wall and muted sky for reader overlay; x=58–63% is a clear margin. No people or meaningful objects in the right third. Top and bottom 12% noncritical. One continuous gathering, no montage, no crowd filling the whole frame.\n\nSetting: modest generic ancient courtyard with simple stone and plaster; no identifiable city, ruins, landmarks, or archaeological claim. Warm natural light, restrained ochre, dusty olive, cream and muted blue; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile woven cloth, stone, and earth. Hopeful, dignified, and restrained.\n\nThis image presents Zephaniah’s poem as prophetic hope, not as a dated event or a settled future-fulfillment map. The text personifies Zion as “Daughter Zion,” says the LORD is in her midst and rejoices over her, and promises to gather those who were scattered, afflicted, or put to shame. The image does not depict God/LORD as a person; no halo, divine figure, or supernatural beam. The walking staff and welcoming gesture are respectful visual cues, not a complete explanation of every person named in the text.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, deity, human divine figure, halo, magical glow, religious iconography, caricature, stigma, distressed crowd, violence, triumphal battle, clutter or meaningful details in the right third.",
+      "processing": [
+        "webp_quality_90_no_resizing"
+      ],
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "format": "webp",
+      "alpha": false,
+      "source_sha256": "a7967cf673f27b9fbc8440c0254225a929fcabf9bd9793a00523322f0f9c9dc0",
+      "sha256": "8a7b02e4cd064a512140d35a05c52cde7897d38b3249341e14ab3b80415fe5fb",
+      "style_references": [
+        "web/art/journey/abraham-sarah-visitors-v2.webp",
+        "web/art/journey/numbers-balaam-donkey.webp"
+      ],
+      "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
     }
   ]
 }

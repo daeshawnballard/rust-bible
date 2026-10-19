@@ -267,6 +267,110 @@
       ]
     },
     {
+      "id": "ot-exodus-red-sea-crossing",
+      "book": 1,
+      "title": "Israel crosses on dry ground between divided waters",
+      "coverage": "Exodus 14:21–29",
+      "art": {
+        "path": "/art/journey/ot-exodus-red-sea-crossing.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Moses and Israelites cross the exposed seabed between walls of water; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Exodus 14:21–29 · not a geographic map or verified modern site",
+      "ranges": [
+        {
+          "chapter": 14,
+          "first": 21,
+          "last": 29
+        }
+      ],
+      "intro": {
+        "title": "Crossing on dry ground",
+        "note": "Exodus says the waters divide and Israel crosses on dry ground, with the waters as a wall on either side. This illustration represents that passage and does not establish a surveyed location or modern route."
+      },
+      "hotspots": [
+        {
+          "id": "ot-exodus-crossing",
+          "title": "Israel crosses between the divided waters",
+          "x": 42,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 21,
+              "last": 29
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 21,
+              "last": 29
+            }
+          ],
+          "note": "Exodus 14:21–29 describes the LORD making the sea dry land, the children of Israel entering into the midst of the sea on dry ground, and the waters standing as a wall on both sides. The hotspot focuses on the crossing."
+        }
+      ]
+    },
+    {
+      "id": "ot-leviticus-live-goat",
+      "book": 2,
+      "title": "Aaron lays his hands on the live goat",
+      "coverage": "Leviticus 16:20–22",
+      "art": {
+        "path": "/art/journey/ot-leviticus-live-goat.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Aaron lays both hands on the live goat as an attendant prepares to lead it toward the wilderness; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Leviticus 16:20–22",
+      "ranges": [
+        {
+          "chapter": 16,
+          "first": 20,
+          "last": 22
+        }
+      ],
+      "intro": {
+        "title": "The live goat",
+        "note": "Leviticus 16:21–22 says Aaron lays both hands on the live goat's head, confesses Israel's iniquities, and sends it with a fit man into the wilderness. The image illustrates that passage; it does not claim an exact historical setting or appearance."
+      },
+      "hotspots": [
+        {
+          "id": "ot-leviticus-live-goat",
+          "title": "Aaron lays his hands on the live goat",
+          "x": 43,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 21,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 21,
+            "last": 21
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 21,
+              "last": 22
+            }
+          ],
+          "note": "Aaron lays both his hands upon the head of the live goat and confesses over it the iniquities of Israel. A fit man is to send the goat away into the wilderness (Leviticus 16:21–22)."
+        }
+      ]
+    },
+    {
       "id": "numbers-balaam-donkey",
       "book": 3,
       "title": "Balaam, the donkey, and the angel",
@@ -481,6 +585,1139 @@
       ]
     },
     {
+      "id": "ot-joshua-jordan-crossing",
+      "book": 5,
+      "title": "The priests stand in the Jordan as Israel crosses",
+      "coverage": "Joshua 3:14–17",
+      "art": {
+        "path": "/art/journey/ot-joshua-jordan-crossing.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Priests carry the gold-overlaid Ark with a gold mercy seat and paired cherubim while Israelites cross; artistic reconstruction based on Exodus 25:10–22"
+      },
+      "caption": "Illustrated reconstruction · Joshua 3:14–17; Ark details based on Exodus 25:10–22 · not a verified modern site",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 14,
+          "last": 17
+        }
+      ],
+      "intro": {
+        "title": "The crossing of the Jordan",
+        "note": "Joshua 3:14–17 describes priests bearing the Ark standing firm on dry ground in the midst of the Jordan while the Israelites pass over. The Ark is depicted as an artistic reconstruction using the gold overlay, mercy seat, and paired cherubim described in Exodus 25:10–22; no modern crossing location is identified."
+      },
+      "hotspots": [
+        {
+          "id": "ot-joshua-priests-in-jordan",
+          "title": "The priests stand with the Ark in the river",
+          "x": 44,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "note": "The priests bearing the Ark of the covenant stand firm on dry ground in the midst of the Jordan until all the people have passed over (Joshua 3:14–17)."
+        }
+      ]
+    },
+    {
+      "id": "ot-judges-deborah-and-barak",
+      "book": 6,
+      "title": "Deborah speaks with Barak beneath the palm",
+      "coverage": "Judges 4:4–10",
+      "art": {
+        "path": "/art/journey/ot-judges-deborah-and-barak.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Deborah addresses Barak beneath a palm tree as a few people wait nearby; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Judges 4:4–10",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 4,
+          "last": 10
+        }
+      ],
+      "intro": {
+        "title": "Deborah and Barak",
+        "note": "Judges 4:4–10 identifies Deborah as a prophetess who judged Israel beneath her palm tree, and describes her calling Barak and going with him. This illustration depicts their conversation without claiming a precise historical appearance or place."
+      },
+      "hotspots": [
+        {
+          "id": "ot-judges-deborah-calls-barak",
+          "title": "Deborah calls Barak",
+          "x": 45,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 5,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 5,
+              "last": 9
+            }
+          ],
+          "note": "Deborah sends and calls Barak, tells him the LORD has commanded him to gather men, and agrees to go with him (Judges 4:5–9)."
+        }
+      ]
+    },
+    {
+      "id": "ot-ruth-gleaning-encounter",
+      "book": 7,
+      "title": "Boaz welcomes Ruth to glean among the reapers",
+      "coverage": "Ruth 2:8–17",
+      "art": {
+        "path": "/art/journey/ot-ruth-gleaning-encounter.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Boaz speaks with Ruth in a barley field as she gleans among the reapers; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Ruth 2:8–17",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 8,
+          "last": 17
+        }
+      ],
+      "intro": {
+        "title": "Ruth gleans in Boaz's field",
+        "note": "Ruth 2:8–17 describes Boaz telling Ruth to remain with his maidens, drink from the vessels, and glean among the sheaves; he instructs his workers to leave grain for her. The illustration represents one encounter in the field and does not establish property boundaries or a precise location."
+      },
+      "hotspots": [
+        {
+          "id": "ot-ruth-boaz-protects-ruth",
+          "title": "Boaz tells Ruth to stay with his workers",
+          "x": 38,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 8,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 8,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 8,
+              "last": 9
+            },
+            {
+              "chapter": 2,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "note": "Boaz tells Ruth to glean with his maidens and commands his workers to leave handfuls of grain for her (Ruth 2:8–9, 15–16)."
+        }
+      ]
+    },
+    {
+      "id": "ot-1samuel-david-goliath",
+      "book": 8,
+      "title": "David advances toward Goliath with his sling",
+      "coverage": "1 Samuel 17:40–50",
+      "art": {
+        "path": "/art/journey/ot-1samuel-david-goliath.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Unarmored young David advances with a sling toward the armored Goliath and his shield-bearer; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · 1 Samuel 17:40–50 · the scene shows the approach before the strike",
+      "ranges": [
+        {
+          "chapter": 17,
+          "first": 40,
+          "last": 50
+        }
+      ],
+      "intro": {
+        "title": "David faces Goliath",
+        "note": "First Samuel 17:40–50 tells how David, carrying a sling and stones, runs toward the approaching Philistine and prevails with a sling and a stone. This illustration shows the tense approach before the strike, not the blow or its aftermath."
+      },
+      "hotspots": [
+        {
+          "id": "ot-1samuel-david-approaches-goliath",
+          "title": "David approaches with his sling",
+          "x": 24,
+          "y": 57,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 40,
+              "last": 48
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 48,
+            "last": 48
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 40,
+              "last": 41
+            },
+            {
+              "chapter": 17,
+              "first": 48,
+              "last": 48
+            }
+          ],
+          "note": "David takes his sling and stones and draws near to the Philistine; Goliath approaches with a shield-bearer before him. The scene focuses on the moment before their encounter (1 Samuel 17:40–41, 48)."
+        }
+      ]
+    },
+    {
+      "id": "ot-2samuel-ark-procession",
+      "book": 9,
+      "title": "David dances before the Ark as it enters Jerusalem",
+      "coverage": "2 Samuel 6:12–23",
+      "art": {
+        "path": "/art/journey/ot-2samuel-ark-procession.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "David dances as the gold-overlaid Ark is carried in procession, with Michal watching from one distant window; compressed artistic reconstruction"
+      },
+      "caption": "Compressed illustrated reconstruction · 2 Samuel 6:12–23 · no city layout implied",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 12,
+          "last": 23
+        }
+      ],
+      "intro": {
+        "title": "The Ark enters Jerusalem",
+        "note": "Second Samuel 6 describes the Ark's procession, David dancing before the LORD, and Michal watching from a window. This compressed illustration places those textual details in one editorial scene; it does not reconstruct Jerusalem's layout. The Ark's gold overlay and cherubim are an artistic reconstruction following Exodus 25:10–22."
+      },
+      "hotspots": [
+        {
+          "id": "ot-2samuel-david-dances-before-ark",
+          "title": "David dances before the Ark",
+          "x": 50,
+          "y": 44,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 12,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 12,
+              "last": 15
+            }
+          ],
+          "note": "David dances before the LORD as the Ark is brought up with shouting and the sound of the trumpet (2 Samuel 6:12–15)."
+        },
+        {
+          "id": "ot-2samuel-michal-window",
+          "title": "Michal watches from the window",
+          "x": 29,
+          "y": 8,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            },
+            {
+              "chapter": 6,
+              "first": 20,
+              "last": 23
+            }
+          ],
+          "note": "Michal sees David leaping and dancing before the LORD from a window and later speaks with him when he returns to bless his household (2 Samuel 6:16, 20–23)."
+        }
+      ]
+    },
+    {
+      "id": "ot-1kings-temple-cloud",
+      "book": 10,
+      "title": "The cloud fills the house of the LORD",
+      "coverage": "1 Kings 8:10–11",
+      "art": {
+        "path": "/art/journey/ot-1kings-temple-cloud.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Priests withdraw as a cloud fills the sanctuary; Levite musicians with trumpet and cymbals stand near the Ark; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · 1 Kings 8:10–11 · interior layout is not historical documentation",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 10,
+          "last": 11
+        }
+      ],
+      "intro": {
+        "title": "The cloud fills the house",
+        "note": "First Kings 8:10–11 says that when the priests came out of the holy place, the cloud filled the house of the LORD and the priests could not stand to minister. Musicians are included because the same dedication account in 2 Chronicles 5 describes Levite singers and instruments; the interior is an artistic reconstruction, not a documented temple plan."
+      },
+      "hotspots": [
+        {
+          "id": "ot-1kings-cloud-fills-house",
+          "title": "The cloud fills the house of the LORD",
+          "x": 49,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 10,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "note": "The priests come out of the holy place; the cloud fills the house of the LORD, and the priests cannot stand to minister because of the cloud (1 Kings 8:10–11)."
+        }
+      ]
+    },
+    {
+      "id": "ot-2kings-naaman-jordan",
+      "book": 11,
+      "title": "Naaman washes in the Jordan at Elisha's word",
+      "coverage": "2 Kings 5:9–14",
+      "art": {
+        "path": "/art/journey/ot-2kings-naaman-jordan.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Naaman begins washing in a river while an attendant and Elisha's messenger stand on the bank; compressed artistic reconstruction"
+      },
+      "caption": "Compressed illustrated reconstruction · 2 Kings 5:9–14 · no modern river location implied",
+      "ranges": [
+        {
+          "chapter": 5,
+          "first": 9,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "Naaman washes in the Jordan",
+        "note": "Second Kings 5:9–14 tells how Elisha's messenger gives Naaman the instruction to wash in Jordan seven times, his servants encourage him, and he dips himself and is clean. The image compresses these ordered moments into an educational scene; it does not claim an exact location or ritual detail."
+      },
+      "hotspots": [
+        {
+          "id": "ot-2kings-elisha-message",
+          "title": "Elisha's messenger gives the instruction",
+          "x": 54,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 9,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "Elisha sends a messenger with the instruction that Naaman wash in Jordan seven times (2 Kings 5:9–10)."
+        },
+        {
+          "id": "ot-2kings-servants-urge-naaman",
+          "title": "Naaman's servants urge him to follow the instruction",
+          "x": 18,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "note": "Naaman's servants reason with him and encourage him to do as the prophet said (2 Kings 5:13)."
+        },
+        {
+          "id": "ot-2kings-naaman-washes",
+          "title": "Naaman dips in the Jordan and is made clean",
+          "x": 37,
+          "y": 61,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Naaman dips himself seven times in Jordan according to the word of the man of God; his flesh comes again and he is clean (2 Kings 5:14)."
+        }
+      ]
+    },
+    {
+      "id": "ot-1chronicles-ark-procession",
+      "book": 12,
+      "title": "Levites carry the Ark as David celebrates",
+      "coverage": "1 Chronicles 15:25–29",
+      "art": {
+        "path": "/art/journey/ot-2samuel-ark-procession.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Levites carry the gold-overlaid Ark as David dances and Michal watches from one distant window; compressed artistic reconstruction"
+      },
+      "caption": "Compressed illustrated reconstruction · 1 Chronicles 15:25–29 · shared event art, no city layout implied",
+      "ranges": [
+        {
+          "chapter": 15,
+          "first": 25,
+          "last": 29
+        }
+      ],
+      "intro": {
+        "title": "The Ark procession",
+        "note": "First Chronicles 15:25–29 describes the Levites bearing the Ark, David's celebration with singers and instruments, and Michal seeing him from a window. The same procession is illustrated in the 2 Samuel scene; this compressed reconstruction does not imply a precise city layout."
+      },
+      "hotspots": [
+        {
+          "id": "ot-1chronicles-levites-carry-ark",
+          "title": "The Levites carry the Ark with rejoicing",
+          "x": 35,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 25,
+              "last": 28
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 27,
+            "last": 28
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 25,
+              "last": 28
+            }
+          ],
+          "note": "The Levites bear the Ark while David, the singers, and the people celebrate with trumpets, cymbals, psalteries, and harps (1 Chronicles 15:25–28)."
+        },
+        {
+          "id": "ot-1chronicles-michal-window",
+          "title": "Michal watches David from the window",
+          "x": 29,
+          "y": 8,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 29,
+              "last": 29
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 29,
+              "last": 29
+            }
+          ],
+          "note": "Michal sees King David dancing and playing before the LORD from a window (1 Chronicles 15:29)."
+        }
+      ]
+    },
+    {
+      "id": "ot-2chronicles-temple-cloud",
+      "book": 13,
+      "title": "Levite musicians praise as the cloud fills the temple",
+      "coverage": "2 Chronicles 5:11–14",
+      "art": {
+        "path": "/art/journey/ot-1kings-temple-cloud.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Priests withdraw as the cloud fills the sanctuary; Levite musicians sound a trumpet and cymbals beside the Ark; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · 2 Chronicles 5:11–14 · interior layout is not historical documentation",
+      "ranges": [
+        {
+          "chapter": 5,
+          "first": 11,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "The cloud fills the house of God",
+        "note": "Second Chronicles 5:11–14 describes the priests, Levite singers, instruments, Ark, and cloud filling the house. The image is shared with the corresponding 1 Kings dedication event and does not claim a documented temple plan."
+      },
+      "hotspots": [
+        {
+          "id": "ot-2chronicles-cloud-and-praise",
+          "title": "The cloud fills the house as the musicians praise",
+          "x": 17,
+          "y": 52,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 11,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 13,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 11,
+              "last": 14
+            }
+          ],
+          "note": "The Levite singers and 120 priests sound instruments as one in praise; the house is filled with a cloud, and the priests cannot stand to minister (2 Chronicles 5:11–14)."
+        }
+      ]
+    },
+    {
+      "id": "ot-ezra-temple-foundation",
+      "book": 14,
+      "title": "The returned families lay the temple foundation",
+      "coverage": "Ezra 3:8–13",
+      "art": {
+        "path": "/art/journey/ot-ezra-temple-foundation.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Builders set a stone foundation as priests sound trumpets, Levites play cymbals, and people show both grief and joy; artistic reconstruction"
+      },
+      "caption": "Artistic reconstruction · Ezra 3:8–13 · temple design unspecified",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 8,
+          "last": 13
+        }
+      ],
+      "intro": {
+        "title": "A foundation and mixed voices",
+        "note": "Ezra describes the work of laying the temple foundation and the people’s mixed response, but gives no reconstructable plan or architectural measurements. The buildings and foundation here are generic artistic reconstruction, not a historical site rendering."
+      },
+      "hotspots": [
+        {
+          "id": "ot-ezra-foundation-work",
+          "title": "Builders begin the house’s foundation",
+          "x": 52,
+          "y": 66,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 8,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 8,
+              "last": 10
+            }
+          ],
+          "note": "The returned community organizes the work. As the builders lay the foundation, priests with trumpets and Levites with cymbals praise the LORD (Ezra 3:8–10)."
+        },
+        {
+          "id": "ot-ezra-mixed-voices",
+          "title": "Joy and grief rise together",
+          "x": 18,
+          "y": 60,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 12,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "note": "The people shout with joy, while older priests, Levites, and family heads who saw the first house weep; the sounds mingle (Ezra 3:11–13)."
+        }
+      ]
+    },
+    {
+      "id": "ot-nehemiah-wall-watch",
+      "book": 15,
+      "title": "Families rebuild the wall while keeping watch",
+      "coverage": "Nehemiah 4:15–23",
+      "art": {
+        "path": "/art/journey/ot-nehemiah-wall-watch.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Builders repair an unfinished wall as armed guards and a trumpet signaler keep watch with Nehemiah; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Nehemiah 4:15–23 · no wall plan implied",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 15,
+          "last": 23
+        }
+      ],
+      "intro": {
+        "title": "Work and watch",
+        "note": "Nehemiah 4:15–23 describes the people returning to work, some holding weapons while others build, a trumpet signal for gathering, and a night guard arrangement. The illustration does not show an attack or reconstruct a precise wall layout."
+      },
+      "hotspots": [
+        {
+          "id": "ot-nehemiah-builders-and-weapons",
+          "title": "Builders keep a weapon at hand",
+          "x": 19,
+          "y": 18,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 15,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 17,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 15,
+              "last": 18
+            }
+          ],
+          "note": "The builders work with one hand while holding a weapon in the other, with swords at their sides (Nehemiah 4:15–18)."
+        },
+        {
+          "id": "ot-nehemiah-watch-arrangement",
+          "title": "Nehemiah organizes the watch",
+          "x": 39,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 19,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 19,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 19,
+              "last": 23
+            }
+          ],
+          "note": "The trumpet signals people to gather, and workers lodge within Jerusalem so they can guard at night and labor by day (Nehemiah 4:19–23)."
+        }
+      ]
+    },
+    {
+      "id": "ot-esther-second-banquet",
+      "book": 16,
+      "title": "Esther names Haman at the banquet",
+      "coverage": "Esther 7:1–8",
+      "art": {
+        "path": "/art/journey/ot-esther-second-banquet.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Esther names Haman as the king returns and Haman pleads beside her couch; artistic reconstruction"
+      },
+      "caption": "Compressed illustrated reconstruction · Esther 7:1–8 · room arrangement unspecified",
+      "ranges": [
+        {
+          "chapter": 7,
+          "first": 1,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "The second banquet",
+        "note": "Esther 7:1–8 describes Esther identifying Haman and the king returning from the garden as Haman pleads beside Esther's couch. This compressed illustration does not claim a palace room plan or depict physical assault. The narrative continues with Haman's execution in verses 9–10, which is not shown here."
+      },
+      "hotspots": [
+        {
+          "id": "ot-esther-names-haman",
+          "title": "Esther identifies Haman",
+          "x": 34,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 1,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 1,
+              "last": 6
+            }
+          ],
+          "note": "When the king asks who threatens Esther and her people, she identifies Haman as the adversary and enemy (Esther 7:1–6)."
+        },
+        {
+          "id": "ot-esther-haman-pleads",
+          "title": "The king returns as Haman pleads",
+          "x": 49,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "note": "Haman stands to plead for his life; when the king returns from the garden, he finds Haman by the bed where Esther reclines and interprets what he sees as an assault (Esther 7:7–8). The illustration shows pleading without physical contact."
+        }
+      ]
+    },
+    {
+      "id": "ot-job-whirlwind",
+      "book": 17,
+      "title": "Job hears questions from the whirlwind",
+      "coverage": "Job 38:1–11",
+      "art": {
+        "path": "/art/journey/ot-job-whirlwind.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Job listens before a non-personified whirlwind as waves meet the shore; poetic illustration"
+      },
+      "caption": "Poetic landscape illustration · Job 38:1–11 · literary frame, location unspecified",
+      "ranges": [
+        {
+          "chapter": 38,
+          "first": 1,
+          "last": 11
+        }
+      ],
+      "intro": {
+        "title": "Questions from the whirlwind",
+        "note": "Job 38 uses poetic questions about the earth, morning stars, and the sea’s limits. This illustration treats the book as a literary frame and does not claim a datable location or depict God as a human or angel."
+      },
+      "hotspots": [
+        {
+          "id": "ot-job-listens-to-whirlwind",
+          "title": "Job listens as the speech asks about creation",
+          "x": 22,
+          "y": 69,
+          "active": [
+            {
+              "chapter": 38,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 38,
+            "first": 1,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 38,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "note": "The speech begins from the whirlwind and asks Job where he was when the earth’s foundation was laid; it also evokes the morning stars (Job 38:1–7)."
+        },
+        {
+          "id": "ot-job-sea-boundary",
+          "title": "The poem gives the sea a boundary",
+          "x": 60,
+          "y": 70,
+          "active": [
+            {
+              "chapter": 38,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 38,
+            "first": 10,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 38,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "note": "The poem pictures the sea as emerging from the womb and being bounded by doors and bars, a limit beyond human control (Job 38:8–11)."
+        }
+      ]
+    },
+    {
+      "id": "ot-psalms-shepherd",
+      "book": 18,
+      "title": "The shepherd leads and prepares a table",
+      "coverage": "Psalm 23:1–6",
+      "art": {
+        "path": "/art/journey/ot-psalms-shepherd.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A shepherd leads sheep beside still water while a speaker sits beside a prepared table with bread, an overflowing cup, and oil vessel; poetic illustration"
+      },
+      "caption": "Poetic image · Psalm 23:1–6 · no specific journey or landscape claimed",
+      "ranges": [
+        {
+          "chapter": 23,
+          "first": 1,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "The shepherd and the table",
+        "note": "Psalm 23 uses shepherding, safe passage, and hospitality as poetic images of the LORD’s care. This illustration is not a reconstruction of one historical journey, location, or literal divine appearance."
+      },
+      "hotspots": [
+        {
+          "id": "ot-psalms-shepherd-still-water",
+          "title": "The shepherd leads beside still waters",
+          "x": 29,
+          "y": 29,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "The speaker describes the LORD as a shepherd who provides, leads beside still waters, restores the soul, and guides in right paths (Psalm 23:1–3)."
+        },
+        {
+          "id": "ot-psalms-table-cup",
+          "title": "A table and overflowing cup express welcome",
+          "x": 28,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 4,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 4,
+              "last": 6
+            }
+          ],
+          "note": "The poem holds danger and welcome together: a table is prepared in the presence of enemies, the speaker is anointed, and the cup overflows (Psalm 23:4–6)."
+        }
+      ]
+    },
+    {
+      "id": "ot-proverbs-wisdom-calls",
+      "book": 19,
+      "title": "Wisdom calls aloud in the public places",
+      "coverage": "Proverbs 1:20–33",
+      "art": {
+        "path": "/art/journey/ot-proverbs-wisdom-calls.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A woman representing poetic Wisdom calls at a town gate as some listeners turn toward her and another passes by"
+      },
+      "caption": "Literary personification · Proverbs 1:20–33 · no historical woman or city claimed",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 20,
+          "last": 33
+        }
+      ],
+      "intro": {
+        "title": "Wisdom calls in public",
+        "note": "Proverbs personifies Wisdom as a woman speaking in the streets and at the gates. This is a teaching poem; the figure is not identified as a historical individual, and the warnings are not depicted as a literal event."
+      },
+      "hotspots": [
+        {
+          "id": "ot-proverbs-wisdom-calls-listeners",
+          "title": "Wisdom calls to the inexperienced",
+          "x": 35,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 20,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 21,
+            "last": 21
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 20,
+              "last": 23
+            }
+          ],
+          "note": "The poem places Wisdom’s call in the streets, busy gathering places, and openings of the gates; she urges listeners to turn at her reproof (Proverbs 1:20–23)."
+        },
+        {
+          "id": "ot-proverbs-wisdom-response",
+          "title": "The poem contrasts refusal with listening",
+          "x": 60,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 24,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 24,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 24,
+              "last": 33
+            }
+          ],
+          "note": "Wisdom says some refuse her counsel, then contrasts the consequences of that refusal with the security of one who listens. The image shows a passerby continuing on, not the poem’s warnings as literal events (Proverbs 1:24–33)."
+        }
+      ]
+    },
+    {
+      "id": "ot-ecclesiastes-times",
+      "book": 20,
+      "title": "The preacher names a time for every purpose",
+      "coverage": "Ecclesiastes 3:1–14",
+      "art": {
+        "path": "/art/journey/ot-ecclesiastes-times.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A symbolic montage pairs planting with uprooting and mourning with dancing, while a worker pauses beside finished masonry and an open scroll; literary illustration"
+      },
+      "caption": "Literary montage · Ecclesiastes 3:1–14 · no single historical episode claimed",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 1,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "A time for every purpose",
+        "note": "Ecclesiastes 3 lists changing seasons of human action and then asks what profit labor gives. These vignettes are literary illustrations rather than one event; the open scroll is a reading cue with no quoted text."
+      },
+      "hotspots": [
+        {
+          "id": "ot-ecclesiastes-times-and-actions",
+          "title": "The poem pairs planting, uprooting, mourning, and dancing",
+          "x": 38,
+          "y": 25,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 2,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "note": "The poem names contrasting seasons, including planting and uprooting, weeping and laughter, mourning and dancing, without saying people control their timing (Ecclesiastes 3:1–8)."
+        },
+        {
+          "id": "ot-ecclesiastes-labor-reflection",
+          "title": "The preacher asks what lasting profit labor gives",
+          "x": 31,
+          "y": 69,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 9,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 9,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 9,
+              "last": 14
+            }
+          ],
+          "note": "The seated worker and open scroll frame the preacher’s question about labor and his reflection on human toil, daily enjoyment, and the enduring work of God (Ecclesiastes 3:9–14)."
+        }
+      ]
+    },
+    {
       "id": "song-beloved-spring",
       "book": 21,
       "title": "The beloved hears her lover call in spring",
@@ -556,6 +1793,86 @@
             }
           ],
           "note": "The lover invites her to rise and come away as winter passes and flowers, birds, vines, and figs mark spring. The seasonal details are poetic, not a claim about a specific calendar or place.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "isaiah-branch-and-peace",
+      "book": 22,
+      "title": "A shoot from Jesse and a vision of peace",
+      "coverage": "Isaiah 11:1–9",
+      "art": {
+        "path": "/art/journey/isaiah-branch-and-peace.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A small shoot grows from a stump as a child stands with a ruler and calm predator and prey animals on a hillside; prophetic vision, not a documentary scene"
+      },
+      "caption": "Prophetic vision · Isaiah 11:1–9 · Literary imagery, not a documentary landscape.",
+      "ranges": [
+        {
+          "chapter": 11,
+          "first": 1,
+          "last": 9
+        }
+      ],
+      "intro": {
+        "title": "A shoot from Jesse and a vision of peace",
+        "note": "Isaiah 11:1–5 describes a shoot from Jesse and a ruler who judges with righteousness; verses 6–9 picture peace among creatures. This image combines those parts of one oracle. The ruler is an open literary representation, and the animals’ peaceful proximity is prophetic imagery rather than an observed encounter or fixed end-times reading."
+      },
+      "hotspots": [
+        {
+          "id": "isaiah-righteous-ruler",
+          "title": "A shoot from Jesse and a righteous ruler",
+          "x": 31,
+          "y": 32,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "The oracle begins with a rod and branch from Jesse’s line and describes judgment marked by righteousness and faithfulness. The shoot at the stump illustrates the branch; the nearby adult is a literary rendering, not an identified historical portrait.",
+          "detail": null
+        },
+        {
+          "id": "isaiah-vision-of-peace",
+          "title": "Predator and prey rest together in the vision",
+          "x": 45,
+          "y": 52,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 6,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 6,
+              "last": 9
+            }
+          ],
+          "note": "Isaiah pictures the wolf with the lamb, the leopard with the young goat, and other creatures at peace, with a child among them. The scene is explicitly prophetic imagery, not a documented real encounter.",
           "detail": null
         }
       ]
@@ -796,6 +2113,1100 @@
             }
           ],
           "note": "The passage says the breath came into them, they lived, and stood on their feet as a great army. The clothed figures represent this moment in the prophet’s vision; no weaponry or battle is shown.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "daniel",
+      "book": 26,
+      "title": "At dawn the king finds Daniel unharmed",
+      "coverage": "Daniel 6:19–23",
+      "art": {
+        "path": "/art/journey/daniel-lions-dawn.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "King Darius calls down to Daniel at dawn; Daniel stands unharmed among calm lions inside a generic stone den, literary reconstruction"
+      },
+      "caption": "Literary reconstruction · Daniel 6:19–23 · No angel or divine figure is depicted.",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 19,
+          "last": 23
+        }
+      ],
+      "intro": {
+        "title": "The king calls at dawn",
+        "note": "Daniel 6:19–23 recounts the king’s early visit to the lions’ den, his question to Daniel, and Daniel’s answer that he was unharmed. The image gathers the call and reply into one moment; it does not specify a known den or depict the angel Daniel mentions."
+      },
+      "hotspots": [
+        {
+          "id": "daniel-darius-calls",
+          "title": "Darius calls to Daniel at the den",
+          "x": 22,
+          "y": 18,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "note": "At dawn the king hurries to the den and calls to Daniel with concern. The stone opening is a literary reconstruction; no specific site is identified.",
+          "detail": null
+        },
+        {
+          "id": "daniel-unharmed",
+          "title": "Daniel answers, unharmed by the lions",
+          "x": 35,
+          "y": 52,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 21,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 21,
+              "last": 23
+            }
+          ],
+          "note": "Daniel says God sent an angel who shut the lions’ mouths, and the text says he was found without injury. The angel is described in the note but not visualized.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "hosea-family-sign",
+      "book": 27,
+      "title": "The son’s name is given as a prophetic sign",
+      "coverage": "Hosea 1:8–9",
+      "art": {
+        "path": "/art/journey/hosea-family-sign.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Hosea holds a newborn son while an adult woman and young daughter sit close by in a quiet courtyard; textual family sign, not a portrait"
+      },
+      "caption": "Textual family sign · Hosea 1:8–9 · The episode’s historical or literary mode remains open.",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 8,
+          "last": 9
+        }
+      ],
+      "intro": {
+        "title": "A son is born and named",
+        "note": "Hosea 1:8–9 reports the birth of another son after Lo-ruhamah is weaned and gives the name Lo-ammi as a sign of broken relationship. The family scene is a literary reconstruction, not a portrait, and does not settle the passage’s historical/literary mode. The image includes no written name."
+      },
+      "hotspots": [
+        {
+          "id": "hosea-family-new-son",
+          "title": "Another son is born after Lo-ruhamah is weaned",
+          "x": 24,
+          "y": 46,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "note": "The verse says Lo-ruhamah had been weaned and that Gomer then gave birth to another son. The older daughter and newborn appear together in the family scene.",
+          "detail": null
+        },
+        {
+          "id": "hosea-lo-ammi-name",
+          "title": "The child’s name carries the sign of separation",
+          "x": 43,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "The text names the son Lo-ammi and interprets the name as a sign that Israel is not the LORD’s people. The sign is stated in the text, not written into the image or placed on the child.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "joel-locust-devastation",
+      "book": 28,
+      "title": "The vine and fig tree are laid waste",
+      "coverage": "Joel 1:7–12",
+      "art": {
+        "path": "/art/journey/joel-locust-devastation.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "An ancient farmer mourns beside a stripped vine and barked fig tree as locusts cross the ruined crop; literary reconstruction, no specific army or event identified"
+      },
+      "caption": "Joel's locust imagery · Joel 1:7–12 · Literary reconstruction; no specific army or event asserted.",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 7,
+          "last": 12
+        }
+      ],
+      "intro": {
+        "title": "A harvest is stripped",
+        "note": "Joel 1:7 pictures the vine laid waste and the fig tree stripped; verses 10–12 describe loss in field and orchard and the people's mourning. The locusts recall the oracle's earlier locust imagery (1:4), but the illustration does not identify them with a named army, date, or archaeological event."
+      },
+      "hotspots": [
+        {
+          "id": "joel-stripped-vine-fig",
+          "title": "The vine and fig tree are stripped",
+          "x": 48,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 7,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "note": "The verse says the vine is laid waste and the fig tree barked and stripped. The bare white branches and damaged vine visualize that description.",
+          "detail": null
+        },
+        {
+          "id": "joel-farmer-mourns",
+          "title": "The field and growers mourn the crop loss",
+          "x": 24,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 11,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "note": "The passage says the field is wasted and the vine, fig, and other crops fail. The farmer is a visual representative of the mourning, not a named person in the text.",
+          "detail": null
+        },
+        {
+          "id": "joel-locust-imagery",
+          "title": "Locusts cross the damaged crop",
+          "x": 28,
+          "y": 17,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 7,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 4,
+              "last": 7
+            }
+          ],
+          "note": "The swarm recalls the successive locusts described earlier in the same oracle (1:4). It is a literary visualization and does not assert a specific army or historical identification.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "amos-summer-fruit",
+      "book": 29,
+      "title": "A basket of summer fruit signals the end",
+      "coverage": "Amos 8:1–6",
+      "art": {
+        "path": "/art/journey/amos-summer-fruit.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "The prophet Amos studies a basket of ripe summer fruit beside a merchant weighing grain on a balance as a poor buyer waits; symbolic literary reconstruction"
+      },
+      "caption": "Symbolic vision and social accusation · Amos 8:1–6 · Literary reconstruction, with no modern site asserted.",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 1,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "Summer fruit and the announced end",
+        "note": "Amos 8:1–3 presents a basket of summer fruit as a sign of the announced end; the Hebrew wording plays on the sound of 'summer fruit' and 'end.' Verses 4–6 condemn merchants who cheat the poor. The market setting is a literary reconstruction joining two moments from the same oracle, not a claim about one historical place or exact event."
+      },
+      "hotspots": [
+        {
+          "id": "amos-summer-fruit-basket",
+          "title": "Amos sees a basket of summer fruit",
+          "x": 34,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 1,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "Amos identifies what he sees as a basket of summer fruit; the LORD then says the end has come. The wordplay is in the text, not written on the fruit.",
+          "detail": null
+        },
+        {
+          "id": "amos-false-measures",
+          "title": "The merchant’s weighing balance",
+          "x": 39,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 4,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 5,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 4,
+              "last": 6
+            }
+          ],
+          "note": "Amos 8:4–6 condemns dishonest measures and exploitation of the needy. The visible balance represents that accusation; the illustration cannot establish whether a particular weighing is dishonest.",
+          "detail": null
+        },
+        {
+          "id": "amos-poor-buyer",
+          "title": "The needy wait while grain is weighed",
+          "x": 51,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 4,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 4,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 4,
+              "last": 6
+            }
+          ],
+          "note": "The waiting buyer represents the poor whom the text says merchants exploit. The person is not named in Amos.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "obadiah-edom-pride",
+      "book": 30,
+      "title": "Edom's high refuge cannot secure it",
+      "coverage": "Obadiah 1:3–4",
+      "art": {
+        "path": "/art/journey/obadiah-edom-pride.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A symbolic figure stands beside a rough shelter in high rock clefts and looks toward a small valley settlement; literary metaphor, not an identified Edomite site"
+      },
+      "caption": "Prophetic metaphor · Obadiah 1:3–4 · Not an identified Edomite site or historical event.",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 3,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "Pride in a high refuge",
+        "note": "Obadiah 1:3–4 challenges the pride of those dwelling in rock clefts and a high habitation. The cliff shelter illustrates this metaphor; its architecture and setting are imagined. The later accusations about Judah are not assigned a marker because those events are not depicted."
+      },
+      "hotspots": [
+        {
+          "id": "obadiah-high-rock-dwelling",
+          "title": "The oracle challenges Edom’s high dwelling",
+          "x": 13,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 3,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 3,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 3,
+              "last": 4
+            }
+          ],
+          "note": "The oracle describes a proud dwelling in rocky clefts and asks who can bring it down. The ledge and rough shelter visualize that claim without identifying a ruin or site.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "jonah",
+      "book": 31,
+      "title": "Jonah, the appointed plant, and the worm",
+      "coverage": "Jonah 4:5–11",
+      "art": {
+        "path": "/art/journey/passage-jonah.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jonah sits beside a woven shelter beneath an appointed plant whose leaves wilt after a small worm strikes it; a literary composite of the narrated sequence"
+      },
+      "caption": "Closing narrative episode · Jonah 4:5–11 · Single-frame literary composite of successive events.",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 5,
+          "last": 11
+        }
+      ],
+      "intro": {
+        "title": "The plant and the closing question",
+        "note": "Jonah 4:5–11 narrates a sequence: Jonah makes a booth, a plant grows and shades him, a worm strikes it, the plant withers, and heat troubles Jonah before the closing question about Nineveh. This image compresses that sequence into one literary frame; it does not claim all events happened simultaneously. Nineveh is discussed in the text but not depicted as an identified city."
+      },
+      "hotspots": [
+        {
+          "id": "jonah-plant-shade",
+          "title": "An appointed plant grows over Jonah",
+          "x": 43,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "Jonah sits beneath a temporary booth; the text says an appointed plant then grew over his head and gave him shade. The plant is shown as a literary image, not a botanical identification.",
+          "detail": null
+        },
+        {
+          "id": "jonah-worm-and-withered-plant",
+          "title": "A worm strikes the plant and it withers",
+          "x": 51,
+          "y": 44,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 7,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 7,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 7,
+              "last": 9
+            }
+          ],
+          "note": "The next morning, the text says a worm smote the plant; sunlight and a vehement east wind then trouble Jonah. The image compresses the sequence and does not show divine action as a figure.",
+          "detail": null
+        },
+        {
+          "id": "jonah-closing-question",
+          "title": "The closing question turns from the plant to Nineveh",
+          "x": 25,
+          "y": 44,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 10,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "note": "The text contrasts Jonah’s pity for the plant with the LORD’s concern for Nineveh’s people and animals. The city and its inhabitants are not pictured here.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "micah-what-god-requires",
+      "book": 32,
+      "title": "The covenant case and the call to justice",
+      "coverage": "Micah 6:6–8",
+      "art": {
+        "path": "/art/journey/micah-what-god-requires.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "In a literary outdoor assembly, Micah holds a blank scroll while a worshipper pauses with a lamb and oil vessel and listeners help an older neighbor"
+      },
+      "caption": "Literary covenant-court tableau · Micah 6:6–8 · The mountains are poetic witnesses.",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 6,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "The offerings question and the answer",
+        "note": "Micah 6:6–7 asks whether offerings of increasing scale could satisfy God, including an extreme hypothetical question about a firstborn. Verse 8 states what is good: doing justly, loving mercy, and walking humbly with God. The scroll is blank to avoid adding text; the helping gesture is an interpretive visual cue, not a complete definition of those commands. This is a literary reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "micah-offerings-question",
+          "title": "The people ask what offering could satisfy the LORD",
+          "x": 20,
+          "y": 51,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 6,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 6,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 6,
+              "last": 7
+            }
+          ],
+          "note": "The worshipper, lamb, and small oil vessel refer to the text’s questions about offerings. The extreme gifts are hypothetical questions, not instructions or a claim about actual practice.",
+          "detail": null
+        },
+        {
+          "id": "micah-justice-mercy-humility",
+          "title": "Micah names justice, mercy, and humble walking",
+          "x": 55,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "note": "Micah holds an unmarked scroll while listeners gather; one offers support to an older neighbor. This small gesture visually suggests the ethical words in verse 8 but does not exhaust their meaning.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nahum-nineveh-fall",
+      "book": 33,
+      "title": "Nineveh's defenses fail under the oracle",
+      "coverage": "Nahum 2:3–8",
+      "art": {
+        "path": "/art/journey/nahum-nineveh-fall.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A chariot and retreating defenders move through shallow water beside a generic opened town gate, illustrating Nahum’s poetic siege imagery without claiming a specific route or site"
+      },
+      "caption": "Poetic siege imagery · Nahum 2:3–8 · No verified route or wall design asserted.",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 3,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "The gates open and the defense fails",
+        "note": "Nahum 2:3–8 uses chariots, opened river gates, an exposed palace, and flight to describe Nineveh’s defenses failing. This scene illustrates the oracle’s poetic siege language, not a precise reconstruction of a wall, attack route, or archaeological event. Violence is kept non-graphic."
+      },
+      "hotspots": [
+        {
+          "id": "nahum-chariots-and-retreat",
+          "title": "Chariots move as defenders hurry back",
+          "x": 42,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 3,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 4,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 3,
+              "last": 5
+            }
+          ],
+          "note": "The oracle describes chariots rushing through the streets and defenders hurrying to the wall. The scene is literary and does not identify an actual battle route.",
+          "detail": null
+        },
+        {
+          "id": "nahum-river-gates-open",
+          "title": "The river gates open and the palace is exposed",
+          "x": 27,
+          "y": 44,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 6,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "The text says the river gates are opened, the palace exposed, and people flee. The moving water is a visual interpretation of the oracle, not a verified account of a particular flood or breach.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "habakkuk-watchpost",
+      "book": 34,
+      "title": "Habakkuk waits for the vision",
+      "coverage": "Habakkuk 2:1–4",
+      "art": {
+        "path": "/art/journey/habakkuk-watchpost.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Habakkuk stands on a modest rocky watchpost at dawn beside a blank writing tablet, waiting for the vision; literary reconstruction, not a specific tower"
+      },
+      "caption": "Literary watchpost · Habakkuk 2:1–4 · The tablet carries no added words.",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 1,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "Waiting for the vision",
+        "note": "Habakkuk says he will stand at his watch and wait; the answer tells him to write the vision plainly and wait for its appointed time. Verse 4 contrasts the proud with the just person who lives by faith. The KJV phrase is retained as a text anchor; the image does not choose one interpretive gloss for “faith.” The rocky lookout is poetic staging, not a site reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "habakkuk-waits-at-watchpost",
+          "title": "Habakkuk waits at his watchpost for an answer",
+          "x": 25,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 1,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "Habakkuk describes standing watch and waiting for an answer. The text then says the vision is for an appointed time and instructs him to write it plainly.",
+          "detail": null
+        },
+        {
+          "id": "habakkuk-vision-written",
+          "title": "The vision says the just shall live by faith",
+          "x": 42,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 2,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "note": "The tablet points to the instruction to write the vision. The KJV says, “the just shall live by his faith”; the image leaves the phrase open and adds no words or interpretive gloss.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "zephaniah-restoration",
+      "book": 35,
+      "title": "Daughter Zion is told to sing",
+      "coverage": "Zephaniah 3:14–20",
+      "art": {
+        "path": "/art/journey/zephaniah-restoration.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A symbolic Daughter Zion sings with a gathered community as neighbors welcome one another in a generic courtyard; prophetic hope, not a dated event"
+      },
+      "caption": "Prophetic hope · Zephaniah 3:14–20 · No dated event or fulfillment map asserted.",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 14,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "Daughter Zion sings and the people are gathered",
+        "note": "The poem personifies Zion as Daughter Zion, calls her to rejoice, and says the LORD is in her midst. It then promises gathering, help, and honor for those scattered or put to shame. This image uses one woman as a literary personification and a generic gathering as a visual cue; it does not depict God as a person or identify an already-dated event or future-fulfillment map. The older woman is not identified as any one figure named by the text."
+      },
+      "hotspots": [
+        {
+          "id": "zephaniah-daughter-zion-sings",
+          "title": "Daughter Zion is told to sing because the LORD is in her midst",
+          "x": 33,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 14,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "note": "The text calls Daughter Zion to sing and says the LORD is in her midst. The central woman is a literary personification of the city; the artwork does not represent the LORD visually.",
+          "detail": null
+        },
+        {
+          "id": "zephaniah-people-gathered",
+          "title": "The scattered and afflicted are gathered and restored",
+          "x": 50,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 18,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 19,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 18,
+              "last": 20
+            }
+          ],
+          "note": "The final verses promise gathering, help for the lame, and honor for those put to shame. The scene shows a neighbor being welcomed; no specific person or historical return is identified. A walking staff from the image brief is not visible in this generated frame.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "haggai-rebuild",
+      "book": 36,
+      "title": "The people resume work on the temple",
+      "coverage": "Haggai 1:12–15",
+      "art": {
+        "path": "/art/journey/haggai-rebuild.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Haggai speaks with two leaders as a worker lifts timber beside a small schematic foundation; a textual reconstruction, not an archaeological depiction"
+      },
+      "caption": "Historical narrative · Haggai 1:12–15 · Schematic reconstruction; no archaeological claim.",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 12,
+          "last": 15
+        }
+      ],
+      "intro": {
+        "title": "The people resume the temple work",
+        "note": "Haggai 1:12–15 names Zerubbabel, Joshua, and the remnant as they heed the message and begin work. The image uses generic adult figures and a small schematic foundation to visualize that response; it does not claim a specific likeness, recovered structure, or archaeological reconstruction. The date in verse 15 is stated by the text, not depicted."
+      },
+      "hotspots": [
+        {
+          "id": "haggai-leaders-heed-message",
+          "title": "The leaders and remnant heed Haggai’s message",
+          "x": 31,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 12,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "note": "The passage names Zerubbabel, Joshua, and the remnant as those who heed Haggai. The three foreground men are generic visual figures; the image does not assign a particular face or costume to a named person, and does not depict the LORD or the text’s statement that he stirred their spirit.",
+          "detail": null
+        },
+        {
+          "id": "haggai-work-begins",
+          "title": "The people begin work on the house of the LORD",
+          "x": 48,
+          "y": 59,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 14,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "note": "A worker lifts a timber beside a few stones as a restrained visual cue for beginning the work. The foundation is schematic; verse 15 gives the date of the renewed work.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "zechariah-lampstand",
+      "book": 37,
+      "title": "The lampstand and two olive trees",
+      "coverage": "Zechariah 4:1–10",
+      "art": {
+        "path": "/art/journey/zechariah-lampstand.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Zechariah watches an interpreting angel, a seven-lamp golden stand between two olive trees, and a generic builder setting a schematic cornerstone; prophetic vision, not archaeology"
+      },
+      "caption": "Prophetic vision · Zechariah 4:1–10 · Identities in the imagery remain open.",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 1,
+          "last": 10
+        }
+      ],
+      "intro": {
+        "title": "The lampstand and two olive trees",
+        "note": "Zechariah sees a golden lampstand with seven lamps and two olive trees, asks the angel what he is seeing, and receives an oracle encouraging Zerubbabel. The vision says the work will be completed by the LORD’s spirit rather than human might. The builder is a generic visual figure for the named role; the artwork does not depict the LORD, settle every symbol’s identity, or claim a recovered historical object or archaeological reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "zechariah-lampstand-vision",
+          "title": "Zechariah sees the lampstand between two olive trees",
+          "x": 34,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 2,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "Zechariah describes one golden lampstand with seven lamps and two olive trees beside it, then asks the angel what they mean. The artwork presents the vision without resolving every symbol or claiming an archaeological object.",
+          "detail": null
+        },
+        {
+          "id": "zechariah-work-encouraged",
+          "title": "The vision encourages Zerubbabel to finish the work",
+          "x": 51,
+          "y": 57,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 6,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 9,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 6,
+              "last": 10
+            }
+          ],
+          "note": "The oracle says Zerubbabel will finish the work and that it is by the LORD’s spirit, not human might. The plumb line and small wall are visual cues; the builder is generic and the LORD is not depicted.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "malachi-messenger-refiner",
+      "book": 38,
+      "title": "The messenger and the refiner",
+      "coverage": "Malachi 3:1–4",
+      "art": {
+        "path": "/art/journey/malachi-messenger-refiner.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A generic messenger approaches a plain doorway as a refiner tends silver near priests, an offering bowl, and a basin with folded cloth; prophetic metaphors, not a documented workshop"
+      },
+      "caption": "Prophetic metaphor · Malachi 3:1–4 · No fulfillment identity or historical workshop asserted.",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 1,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "The messenger and the refiner",
+        "note": "The oracle says a messenger will prepare the way, compares the coming to a refiner’s fire and fuller’s soap, and describes purification so that the offering may be righteous. The scene uses a generic messenger and symbolic refining/cleansing work; it does not depict the Lord as a human figure, settle a later fulfillment identity, or claim a documented visit to a specific temple workshop."
+      },
+      "hotspots": [
+        {
+          "id": "malachi-messenger-prepares-way",
+          "title": "A messenger is promised to prepare the way",
+          "x": 17,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The opening verse promises a messenger to prepare the way. The person approaching the generic doorway is an illustrative figure only; no later fulfillment identity is asserted.",
+          "detail": null
+        },
+        {
+          "id": "malachi-refiner-purifies",
+          "title": "The LORD is likened to a refiner and purifier",
+          "x": 39,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 2,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "note": "The oracle uses the metaphors of a refiner’s fire and fuller’s soap, and describes purified offerings. The furnace, silver, and basin with cloth are symbolic cues; the scene is not a documented workshop and does not depict the LORD.",
           "detail": null
         }
       ]
@@ -1148,6 +3559,928 @@
       ]
     },
     {
+      "id": "nt-acts",
+      "book": 43,
+      "title": "Pentecost in Jerusalem",
+      "coverage": "Acts 2:1–12",
+      "art": {
+        "path": "/art/journey/nt-acts.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Followers speak beneath small tongues like fire while hearers listen and ask questions at Pentecost; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Acts 2:1–12",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 1,
+          "last": 12
+        }
+      ],
+      "intro": {
+        "title": "The followers gather at Pentecost",
+        "note": "Acts describes the followers together in a house and hearers in Jerusalem responding to their speech. This illustration does not identify a precise room or assign modern identities to people from the named regions."
+      },
+      "hotspots": [
+        {
+          "id": "acts-tongues",
+          "title": "The followers gather together",
+          "x": 31,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "note": "Text: The followers are together when a sound from heaven comes and tongues like fire rest on them; they speak as the Spirit gives utterance. Editorial: The image keeps the fire as the passage’s comparison, without showing injury.",
+          "detail": null
+        },
+        {
+          "id": "acts-hearers",
+          "title": "Hearers recognize their languages",
+          "x": 54,
+          "y": 44,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 5,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 5,
+              "last": 11
+            }
+          ],
+          "note": "Text: Hearers from many regions recognize their own languages as the followers speak of God’s works. Editorial: The figures are not assigned modern national identities.",
+          "detail": null
+        },
+        {
+          "id": "acts-questions",
+          "title": "The crowd asks what it means",
+          "x": 53,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "Text: The people are amazed and ask one another what it means. Editorial: The picture adds no written or spoken words.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-romans",
+      "book": 44,
+      "title": "The olive-tree illustration",
+      "coverage": "Romans 11:17–18",
+      "art": {
+        "path": "/art/journey/nt-romans.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A wild olive branch is visibly bound into an olive trunk above exposed roots; an illustrative comparison"
+      },
+      "caption": "Illustrative comparison · Romans 11:17–18",
+      "ranges": [
+        {
+          "chapter": 11,
+          "first": 17,
+          "last": 18
+        }
+      ],
+      "intro": {
+        "title": "A wild branch joined to the olive tree",
+        "note": "Paul uses the olive tree to illustrate branches, root, and grafting. This picture depicts that comparison, not a documented event or located tree."
+      },
+      "hotspots": [
+        {
+          "id": "romans-grafted-branch",
+          "title": "The wild branch is grafted in",
+          "x": 43,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "note": "Text: Paul says a wild olive branch is grafted among the branches and shares the olive tree’s root and richness. Editorial: The tree is Paul’s illustration, not a historical event.",
+          "detail": null
+        },
+        {
+          "id": "romans-root",
+          "title": "The root bears the branch",
+          "x": 25,
+          "y": 80,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "note": "Text: Paul says the branch does not bear the root; the root bears the branch, and he warns against boasting. Editorial: Root and branch belong to one illustrative comparison.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-1corinthians",
+      "book": 45,
+      "title": "One body, many members",
+      "coverage": "1 Corinthians 12:12–27",
+      "art": {
+        "path": "/art/journey/nt-1corinthians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A gathered community makes room for and supports one another; illustrative comparison for Paul's one body and many members"
+      },
+      "caption": "Illustrative comparison · 1 Corinthians 12:12–27",
+      "ranges": [
+        {
+          "chapter": 12,
+          "first": 12,
+          "last": 27
+        }
+      ],
+      "intro": {
+        "title": "Paul’s comparison of one body with many members",
+        "note": "Paul compares the community to one body with many members. This image is an editorial illustration of that comparison, not a documented historical gathering or a mapping of people to named body parts."
+      },
+      "hotspots": [
+        {
+          "id": "1cor-body-members",
+          "title": "One body, many members",
+          "x": 33,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 12,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 12,
+              "last": 20
+            }
+          ],
+          "note": "Text: Paul says one body has many members, and the members belong together. Editorial: The gathered figures illustrate his comparison; they are not a recorded church meeting.",
+          "detail": null
+        },
+        {
+          "id": "1cor-same-care",
+          "title": "The members share the same care",
+          "x": 47,
+          "y": 51,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 22,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 22,
+              "last": 25
+            }
+          ],
+          "note": "Text: Paul says seemingly weaker members are necessary and that members should have the same care for one another. Editorial: The image shows care without assigning anyone a status or body part.",
+          "detail": null
+        },
+        {
+          "id": "1cor-shared-joy",
+          "title": "Members rejoice with one another",
+          "x": 35,
+          "y": 32,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 26,
+              "last": 27
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 26,
+              "last": 27
+            }
+          ],
+          "note": "Text: Paul says that when one member is honoured, all rejoice with it, and calls the Corinthians members of Christ’s body. Editorial: The image emphasizes shared concern and encouragement, not a specific historical event.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-2-corinthians",
+      "book": 46,
+      "title": "Treasure in Earthen Vessels",
+      "coverage": "2 Corinthians 4:7–10",
+      "art": {
+        "path": "/art/journey/nt-2-corinthians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "An ordinary person holds an intact, visibly cracked clay vessel with a restrained warm glow; a symbolic illustration for 2 Corinthians 4:7–10."
+      },
+      "caption": "Illustrative comparison · 2 Corinthians 4:7–10",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 7,
+          "last": 10
+        }
+      ],
+      "intro": {
+        "title": "Treasure in an earthen vessel",
+        "note": "Paul uses an earthen vessel to illustrate how divine power is held in human weakness. This image is a symbolic comparison, not an artifact or a documented event."
+      },
+      "hotspots": [
+        {
+          "id": "2cor-treasure-vessel",
+          "title": "Treasure in an earthen vessel",
+          "x": 39,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "note": "Paul says the treasure is held in earthen vessels so the power is of God, not of the people. The clay vessel is his metaphor; its restrained glow is editorial, not a literal object named in the text.",
+          "detail": null
+        },
+        {
+          "id": "2cor-troubled-not-destroyed",
+          "title": "Troubled, but not destroyed",
+          "x": 40,
+          "y": 64,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 8,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 8,
+              "last": 10
+            }
+          ],
+          "note": "Paul describes being troubled, perplexed, persecuted, and cast down, yet not destroyed. The vessel remains intact despite visible cracks as an editorial analogy, not a literal event.",
+          "detail": null
+        }
+      ],
+      "candidate_review": {
+        "status": "candidate_pending_parent_ui_frame_review",
+        "asset_path": "assets/2corinthians-candidate-v2-q90.webp",
+        "source_png": "assets/2corinthians-candidate-v2.png",
+        "provenance_book": "2 Corinthians",
+        "provenance_attempt": 2
+      }
+    },
+    {
+      "id": "nt-galatians",
+      "book": 47,
+      "title": "Restore gently and bear one another’s burdens",
+      "coverage": "Galatians 6:1–2",
+      "art": {
+        "path": "/art/journey/nt-galatians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "One person gently steadies another and helps carry a woven bundle as an illustration of Galatians 6:1–2"
+      },
+      "caption": "Illustrative comparison · Galatians 6:1–2",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 1,
+          "last": 2
+        }
+      ],
+      "intro": {
+        "title": "Gentle restoration and shared burden-bearing",
+        "note": "Paul instructs believers to restore gently and bear one another’s burdens. The bundle is an editorial metaphor, not a documented object or journey."
+      },
+      "hotspots": [
+        {
+          "id": "galatians-restore",
+          "title": "Restore one another gently",
+          "x": 37,
+          "y": 32,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "Text: Paul says that if someone is overtaken in a fault, others should restore that person in a spirit of meekness. Editorial: The image shows a gentle, nonjudgmental steadying hand without depicting a specific fault.",
+          "detail": null
+        },
+        {
+          "id": "galatians-burden",
+          "title": "Bear one another’s burdens",
+          "x": 24,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 2,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 2,
+              "last": 2
+            }
+          ],
+          "note": "Text: Paul tells the believers to bear one another’s burdens. Editorial: The shared bundle represents the metaphor; it is not a named object in the letter.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-ephesians",
+      "book": 48,
+      "title": "The Armor of God",
+      "coverage": "Ephesians 6:10–17",
+      "art": {
+        "path": "/art/journey/nt-ephesians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A calm, fully armored figure holds a shield and lowered sword; a symbolic illustration for Ephesians 6:10–17 with no human opponent."
+      },
+      "caption": "Illustrative comparison · Ephesians 6:10–17",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 10,
+          "last": 17
+        }
+      ],
+      "intro": {
+        "title": "Stand in the whole armor of God",
+        "note": "Paul names armor as a comparison for spiritual readiness. The single figure is symbolic; no battle or human enemy is depicted."
+      },
+      "hotspots": [
+        {
+          "id": "ephesians-stand-ready",
+          "title": "Stand in truth, righteousness, and peace",
+          "x": 29,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 13,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 13,
+              "last": 15
+            }
+          ],
+          "note": "Paul names the belt of truth, breastplate of righteousness, and feet prepared with the gospel of peace. These are parts of his armor comparison, not historical equipment in a battle.",
+          "detail": null
+        },
+        {
+          "id": "ephesians-shield-faith",
+          "title": "Take up the shield of faith",
+          "x": 40,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "Paul calls the shield a shield of faith and says it can quench the fiery darts. The shield remains a metaphor; no opponent is shown.",
+          "detail": null
+        },
+        {
+          "id": "ephesians-helmet-sword",
+          "title": "Take the helmet and the sword",
+          "x": 30,
+          "y": 10,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "note": "Paul names the helmet of salvation and the sword of the Spirit, which is the word of God. Both are visible on the same calm figure; the sword is lowered and no opponent is shown.",
+          "detail": null
+        }
+      ],
+      "candidate_review": {
+        "status": "candidate_pending_parent_ui_frame_review",
+        "asset_path": "assets/ephesians-candidate-v2-q90.webp",
+        "source_png": "assets/ephesians-candidate-v2.png",
+        "provenance_book": "Ephesians",
+        "provenance_attempt": 2
+      }
+    },
+    {
+      "id": "nt-philippians",
+      "book": 49,
+      "title": "Pressing toward the mark",
+      "coverage": "Philippians 3:12–14",
+      "art": {
+        "path": "/art/journey/nt-philippians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A runner reaches toward a simple finish marker as an illustration of Paul's athletic metaphor"
+      },
+      "caption": "Illustrative comparison · Philippians 3:12–14",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 12,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "Paul’s runner presses toward the mark",
+        "note": "Paul describes reaching forward and pressing toward a mark for the prize. The runner and marker illustrate his comparison; they do not depict a specific race or route."
+      },
+      "hotspots": [
+        {
+          "id": "philippians-reach",
+          "title": "Not attained, but reaching forward",
+          "x": 26,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 12,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 12,
+              "last": 13
+            }
+          ],
+          "note": "Text: Paul says he has not yet attained and describes reaching forward to what is before. Editorial: The runner gives this pursuit a visible subject without claiming a literal race.",
+          "detail": null
+        },
+        {
+          "id": "philippians-mark",
+          "title": "Press toward the mark",
+          "x": 28,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Text: Paul says he presses toward the mark for the prize of God’s high calling in Christ Jesus. Editorial: The simple marker represents the metaphor’s mark, not a location or event.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-colossians",
+      "book": 50,
+      "title": "Put on compassion and love",
+      "coverage": "Colossians 3:12–14",
+      "art": {
+        "path": "/art/journey/nt-colossians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Two adults gently clasp hands beside a woven mantle secured with a plain tie, illustrating Paul’s clothing metaphor"
+      },
+      "caption": "Illustrative comparison · Colossians 3:12–14",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 12,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "A garment and the bond of love",
+        "note": "Paul tells believers to put on mercy, kindness, humility, meekness, and longsuffering, and to forbear and forgive one another. He calls charity the bond of perfectness. The mantle and tie make that language visible; the people illustrate the instruction, not a specific event."
+      },
+      "hotspots": [
+        {
+          "id": "colossians-put-on",
+          "title": "Put on compassion and patience",
+          "x": 42,
+          "y": 66,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "Text: Paul tells the chosen to put on mercies, kindness, humbleness of mind, meekness, and longsuffering. Editorial: The mantle renders the passage’s clothing language without placing words on the garment.",
+          "detail": null
+        },
+        {
+          "id": "colossians-forbear-forgive",
+          "title": "Forbear and forgive one another",
+          "x": 31,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "note": "Text: Paul tells them to forbear and forgive one another as Christ forgave them. Editorial: The gentle clasped hands illustrate the instruction, not a named reconciliation event.",
+          "detail": null
+        },
+        {
+          "id": "colossians-love-bond",
+          "title": "Love binds the virtues together",
+          "x": 40,
+          "y": 49,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Text: Paul calls charity the bond of perfectness. Editorial: The plain woven tie is a visible form of that bond, not a symbol with additional meaning.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-1-thessalonians",
+      "book": 51,
+      "title": "The breastplate and helmet",
+      "coverage": "1 Thessalonians 5:8",
+      "art": {
+        "path": "/art/journey/nt-1-thessalonians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A fully clothed person adjusts a bronze breastplate beside a separate helmet resting on a low bench"
+      },
+      "caption": "Illustrative comparison · 1 Thessalonians 5:8",
+      "ranges": [
+        {
+          "chapter": 5,
+          "first": 8,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "Faith, love, and hope pictured as armor",
+        "note": "Paul names the breastplate of faith and love and the helmet as the hope of salvation. The quiet act of adjusting armor illustrates the verse’s comparison; it depicts no battle or specific person from the letter."
+      },
+      "hotspots": [
+        {
+          "id": "1thessalonians-breastplate",
+          "title": "The breastplate of faith and love",
+          "x": 39,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "note": "Text: Paul names the breastplate of faith and love. Editorial: The visible breastplate renders his comparison without words or labels on the armor.",
+          "detail": null
+        },
+        {
+          "id": "1thessalonians-helmet",
+          "title": "The helmet of hope for salvation",
+          "x": 19,
+          "y": 67,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "note": "Text: Paul describes the helmet as the hope of salvation. Editorial: The separate helmet illustrates the verse’s figurative armor, not a battle scene.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-2-thessalonians",
+      "book": 52,
+      "title": "Work quietly and do good",
+      "coverage": "2 Thessalonians 3:10–13",
+      "art": {
+        "path": "/art/journey/nt-2-thessalonians.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Three adults share a quiet table, with one kneading dough and two passing a small loaf between them"
+      },
+      "caption": "Illustrative comparison · 2 Thessalonians 3:10–13",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 10,
+          "last": 13
+        }
+      ],
+      "intro": {
+        "title": "Quiet work and a continuing good deed",
+        "note": "Paul recalls the instruction to work quietly and eat one’s own bread, then tells the brethren not to be weary in well doing. The household handwork and bread sharing are editorial examples, not named occupations or a recorded event."
+      },
+      "hotspots": [
+        {
+          "id": "2thessalonians-work-quietly",
+          "title": "Work quietly and eat your own bread",
+          "x": 20,
+          "y": 58,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "note": "Text: Paul recalls the rule about refusing work and tells people to work with quietness and eat their own bread. Editorial: Kneading is a simple household example, not a trade the letter names.",
+          "detail": null
+        },
+        {
+          "id": "2thessalonians-do-good",
+          "title": "Do not grow weary in doing good",
+          "x": 44,
+          "y": 49,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "note": "Text: Paul tells the brethren not to be weary in well doing. Editorial: The small bread-sharing gesture is one imagined example of continuing to do good, not an event described in the letter.",
+          "detail": null
+        }
+      ]
+    },
+    {
       "id": "nt-1-timothy-riches-generosity",
       "book": 53,
       "title": "Be Rich in Good Works",
@@ -1201,8 +4534,8 @@
         {
           "id": "nt-1-timothy-riches-generosity-ready-to-share",
           "title": "Be ready to distribute",
-          "x": 48,
-          "y": 53,
+          "x": 36,
+          "y": 55,
           "active": [
             {
               "chapter": 6,
@@ -1280,7 +4613,7 @@
         },
         {
           "id": "nt-2-timothy-good-soldier-avoid-entanglement",
-          "title": "Please the one who enlisted you",
+          "title": "Avoid entanglement in life’s affairs",
           "x": 18,
           "y": 75,
           "active": [
@@ -1628,8 +4961,8 @@
         {
           "id": "nt-james-bit-and-rudder-ship-rudder",
           "title": "A small rudder turns a ship",
-          "x": 55,
-          "y": 76,
+          "x": 59,
+          "y": 78,
           "active": [
             {
               "chapter": 3,
@@ -1650,6 +4983,593 @@
             }
           ],
           "note": "James says a great ship, driven by fierce winds, is turned by a very small helm. The steering oar shows the second example in the comparison.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-1-peter-living-stones",
+      "book": 59,
+      "title": "Living Stones and the Corner Stone",
+      "coverage": "1 Peter 2:4–8",
+      "art": {
+        "path": "/art/journey/nt-1-peter-living-stones.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Two hands fit rough stones into a short wall around a large angular base stone; an editorial image for 1 Peter 2:4–8."
+      },
+      "caption": "Symbolic editorial illustration · 1 Peter 2:4–8",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 4,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "Living stones",
+        "note": "Peter calls Christ a living stone and describes believers as lively stones built up as a spiritual house; he also cites the chief corner stone and the stone of stumbling. This editorial arrangement illustrates those images without depicting a temple or reconstructing a specific place."
+      },
+      "hotspots": [
+        {
+          "id": "nt-1-peter-living-stones-living-stones",
+          "title": "Living stones and a spiritual house",
+          "x": 27,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "note": "Peter describes Christ as a living stone and the faithful as lively stones built up as a spiritual house. The hands and fitted stones are an editorial illustration of that metaphor.",
+          "detail": null
+        },
+        {
+          "id": "nt-1-peter-living-stones-corner-stone",
+          "title": "The chief corner stone",
+          "x": 43,
+          "y": 63,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "Peter cites the chosen chief corner stone, then describes the stone as a stone of stumbling to some. The large base stone gives the image a focal point; the passage text supplies the meaning.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-2-peter-lamp-daystar",
+      "book": 60,
+      "title": "A Lamp Until the Day",
+      "coverage": "2 Peter 1:19",
+      "art": {
+        "path": "/art/journey/nt-2-peter-lamp-daystar.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A small clay lamp shines from a dark stone ledge as a single star hangs over a soft dawn horizon; symbolic image for 2 Peter 1:19."
+      },
+      "caption": "Symbolic editorial illustration · 2 Peter 1:19",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 19,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "A lamp until the day",
+        "note": "Peter compares attention to the prophetic word to a light shining in a dark place until day dawns and the day star rises in the heart. The lamp, star, and dawn are kept as the verse’s literary images; this scene does not assign a prophetic timetable."
+      },
+      "hotspots": [
+        {
+          "id": "nt-2-peter-lamp-daystar-lamp",
+          "title": "A lamp shines in a dark place",
+          "x": 27,
+          "y": 61,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "Peter says readers do well to heed the word, as to a light shining in a dark place. The clay lamp is an editorial rendering of that comparison.",
+          "detail": null
+        },
+        {
+          "id": "nt-2-peter-lamp-daystar-day-star",
+          "title": "The day dawns and the day star rises",
+          "x": 21,
+          "y": 21,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "The same verse speaks of the day dawning and the day star arising in the heart. The small star and broad warm horizon keep the wording symbolic without adding a timetable.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-1-john-walk-in-light",
+      "book": 61,
+      "title": "Walk in the Light",
+      "coverage": "1 John 1:5–7",
+      "art": {
+        "path": "/art/journey/nt-1-john-walk-in-light.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Two anonymous adults walk side by side across softly lit earth; symbolic illustration for 1 John 1:5–7."
+      },
+      "caption": "Symbolic editorial illustration · 1 John 1:5–7",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 5,
+          "last": 7
+        }
+      ],
+      "intro": {
+        "title": "God is light",
+        "note": "John says that God is light and in him is no darkness, then contrasts walking in darkness with walking in the light and having fellowship one with another. The figures and light are an editorial illustration of those words, not a literal route or a depiction of God."
+      },
+      "hotspots": [
+        {
+          "id": "nt-1-john-walk-in-light-light",
+          "title": "God is light",
+          "x": 50,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "John states that God is light and in him is no darkness at all. The clear warm field is a symbolic editorial image; it does not depict God as a figure.",
+          "detail": null
+        },
+        {
+          "id": "nt-1-john-walk-in-light-walk-together",
+          "title": "Walk in the light together",
+          "x": 31,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 6,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 6,
+              "last": 7
+            }
+          ],
+          "note": "John contrasts walking in darkness with walking in the light, fellowship one with another, and cleansing from sin. The two anonymous figures illustrate walking together without implying a literal journey.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-2-john-truth-and-love",
+      "book": 62,
+      "title": "Walk in Truth and Love",
+      "coverage": "2 John 1:4–6",
+      "art": {
+        "path": "/art/journey/nt-2-john-truth-and-love.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A blank open papyrus letter rests in the foreground beside two small figures walking together on a short path; a symbolic image for 2 John 1:4–6."
+      },
+      "caption": "Symbolic editorial illustration · 2 John 1:4–6",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 4,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "Walk in truth and love",
+        "note": "John rejoices to find children walking in truth, asks that they love one another, and describes love as walking after the commandments. The blank letter and adjacent path are editorial images of the letter’s words; they do not depict a literal trip or named setting."
+      },
+      "hotspots": [
+        {
+          "id": "nt-2-john-truth-and-love-walk-in-truth",
+          "title": "The children walk in truth",
+          "x": 29,
+          "y": 41,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "John says he rejoiced greatly to find children walking in truth. The small figures on the short symbolic path illustrate that phrase; the letter remains blank to avoid invented wording.",
+          "detail": null
+        },
+        {
+          "id": "nt-2-john-truth-and-love-love-and-commandment",
+          "title": "Love one another and walk by the commandment",
+          "x": 36,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "John asks them to love one another and says love is walking after his commandments. The paired walkers and nearby letter are editorial imagery, not a recorded journey.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-3-john-hospitality-support",
+      "book": 63,
+      "title": "Hospitality and Support",
+      "coverage": "3 John 1:5–8",
+      "art": {
+        "path": "/art/journey/nt-3-john-hospitality-support.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "At a simple doorway, a host offers bread, folded cloth, and a waterskin to visitors; a blank letter rests nearby, an editorial image for 3 John 1:5–8."
+      },
+      "caption": "Editorial illustration · 3 John 1:5–8",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 5,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "Hospitality and support",
+        "note": "John commends faithful care for brethren and strangers and asks that they be sent forward worthily and helped. The anonymous host, visitors, provisions, and blank letter are editorial images, not a named house or route."
+      },
+      "hotspots": [
+        {
+          "id": "nt-3-john-hospitality-support-welcome",
+          "title": "Receive the brethren and strangers",
+          "x": 28,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "John commends faithful care shown to the brethren and to strangers. The doorway and welcoming gesture are generic editorial imagery, not a named setting.",
+          "detail": null
+        },
+        {
+          "id": "nt-3-john-hospitality-support-send-forward",
+          "title": "Send them forward worthily",
+          "x": 28,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "John asks that they be sent forward worthily and says such workers should be helped. Bread, cloth, and a waterskin illustrate support without implying a particular route or outcome.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-jude-mercy-rescue",
+      "book": 64,
+      "title": "Mercy for Those Who Doubt",
+      "coverage": "Jude 1:22–23",
+      "art": {
+        "path": "/art/journey/nt-jude-mercy-rescue.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A helper reaches toward a hesitant person while drawing another away from a small stylized flame; an editorial image for Jude 1:22–23."
+      },
+      "caption": "Symbolic editorial illustration · Jude 1:22–23",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 22,
+          "last": 23
+        }
+      ],
+      "intro": {
+        "title": "Mercy for those who doubt",
+        "note": "Jude closes by urging compassion for those who doubt and rescue of others from the fire. This symbolic image holds both exhortations together and leaves the fire’s meaning open."
+      },
+      "hotspots": [
+        {
+          "id": "nt-jude-mercy-rescue-compassion",
+          "title": "Show compassion to those who doubt",
+          "x": 22,
+          "y": 49,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "note": "Jude urges compassion for some who doubt. The open hand reaching toward a hesitant person illustrates that exhortation; the figures are anonymous editorial imagery, not people identified in the letter.",
+          "detail": null
+        },
+        {
+          "id": "nt-jude-mercy-rescue-pull-from-fire",
+          "title": "Pull some from the fire",
+          "x": 44,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 23,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 23,
+              "last": 23
+            }
+          ],
+          "note": "Jude describes saving others with fear, pulling them out of the fire. The helper and small flame follow that image without assigning the fire a separate doctrinal meaning.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-revelation-river-of-life",
+      "book": 65,
+      "title": "The River of Life",
+      "coverage": "Revelation 22:1–5",
+      "art": {
+        "path": "/art/journey/nt-revelation-river-of-life.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A radiant throne sends a river past a fruit-bearing tree while three robed servants face its light; a symbolic image for Revelation 22:1–5."
+      },
+      "caption": "Symbolic editorial illustration · Revelation 22:1–5",
+      "ranges": [
+        {
+          "chapter": 22,
+          "first": 1,
+          "last": 5
+        }
+      ],
+      "intro": {
+        "title": "The river of life",
+        "note": "John’s closing vision joins the river of life proceeding from the throne, the tree with fruit and healing leaves, and God’s servants serving him under unending light. The throne and waterscape are symbolic editorial imagery; the servants are unnamed, God is not shown as a human figure, and the city architecture is not a claimed plan. The scene does not decode a timetable or a denomination."
+      },
+      "hotspots": [
+        {
+          "id": "nt-revelation-river-of-life-river-from-throne",
+          "title": "The river flows from the throne",
+          "x": 25,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "John sees a pure river of water of life proceeding from the throne of God and the Lamb. The image shows water flowing from one throne and does not depict God as a person.",
+          "detail": null
+        },
+        {
+          "id": "nt-revelation-river-of-life-tree-healing-leaves",
+          "title": "The tree bears fruit and healing leaves",
+          "x": 43,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 2,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 2,
+              "last": 2
+            }
+          ],
+          "note": "The tree bears twelve manner of fruits and its leaves are for the healing of the nations. The visible fruit and leaves are symbolic illustration, not an identified species or separate decoding of the vision.",
+          "detail": null
+        },
+        {
+          "id": "nt-revelation-river-of-life-servants-before-throne",
+          "title": "The servants serve and see his face",
+          "x": 19,
+          "y": 76,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 3,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 3,
+              "last": 5
+            }
+          ],
+          "note": "The servants serve God, see his face, bear his name, and reign for ever; the vision says the Lord God gives them light and there is no night. The anonymous figures face the throne’s radiance; the illustration does not draw marks on their foreheads or decode the passage.",
           "detail": null
         }
       ]

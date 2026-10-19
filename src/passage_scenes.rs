@@ -325,7 +325,9 @@ mod tests {
         assert_eq!(catalog().schema_version, 1);
         let (mut scene_ids, mut hotspot_ids, mut covered) =
             (HashSet::new(), HashSet::new(), HashSet::new());
+        let mut covered_books = HashSet::new();
         for scene in scenes() {
+            covered_books.insert(scene.book);
             assert!(scene_ids.insert(scene.id.as_str()));
             assert!(scene.book < NAMES.len());
             assert!(!scene.title.trim().is_empty() && !scene.coverage.trim().is_empty());
@@ -379,6 +381,7 @@ mod tests {
                 }
             }
         }
+        assert_eq!(covered_books, (0..NAMES.len()).collect());
         for (book, chapters) in bible().books.iter().enumerate() {
             for (i, verses) in chapters.iter().enumerate() {
                 let chapter = i + 1;

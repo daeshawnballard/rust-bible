@@ -335,9 +335,12 @@ mod tests {
             (0, 2, 8, "story"),
             (42, 4, 6, "story"),
             (43, 16, 12, "geography"),
-            (18, 23, 1, "book-context"),
+            (18, 23, 1, "story"),
+            (18, 24, 1, "book-context"),
+            (30, 1, 5, "book-context"),
             (44, 1, 1, "book-context"),
-            (65, 22, 1, "book-context"),
+            (65, 22, 1, "story"),
+            (65, 22, 6, "book-context"),
         ] {
             let response = super::super::route(
                 &format!(
