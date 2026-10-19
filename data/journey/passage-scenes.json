@@ -481,6 +481,86 @@
       ]
     },
     {
+      "id": "song-beloved-spring",
+      "book": 21,
+      "title": "The beloved hears her lover call in spring",
+      "coverage": "Song of Solomon 2:8–14",
+      "art": {
+        "path": "/art/journey/song-beloved-spring.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "The beloved looks through a wooden lattice toward her lover beyond a low wall amid spring flowers; literary illustration of poetic speakers, not a documented couple."
+      },
+      "caption": "Literary illustration · Song of Solomon 2:8–14 · The poetic speakers are not identified as a historical couple.",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 8,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "A spring invitation",
+        "note": "The poem gives the beloved and her lover speaking voices. The lattice, wall, flowers, vine, and fig leaves draw on its seasonal imagery; faces, clothing, and dwelling details are artistic reconstruction. The scene leaves the speakers’ identities and interpretation open."
+      },
+      "hotspots": [
+        {
+          "id": "beloved-at-lattice",
+          "title": "The beloved hears her lover at the lattice",
+          "x": 24,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "note": "The beloved describes her lover standing behind the wall and showing himself through the lattice. The image gives the poetic speakers visual form but does not identify them as a dated or documented couple.",
+          "detail": null
+        },
+        {
+          "id": "lover-calls-in-spring",
+          "title": "The lover calls her into spring",
+          "x": 48,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 10,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 10,
+              "last": 14
+            }
+          ],
+          "note": "The lover invites her to rise and come away as winter passes and flowers, birds, vines, and figs mark spring. The seasonal details are poetic, not a claim about a specific calendar or place.",
+          "detail": null
+        }
+      ]
+    },
+    {
       "id": "jeremiah-potter",
       "book": 23,
       "title": "Jeremiah at the potter’s house",
@@ -556,6 +636,1020 @@
             }
           ],
           "note": "The LORD asks whether he can do with the house of Israel as this potter does. The clay in the potter’s hand is the passage’s comparison; the image does not settle every later application.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "lamentations-city-mourns",
+      "book": 24,
+      "title": "The city sits alone like a widow",
+      "coverage": "Lamentations 1:1–3",
+      "art": {
+        "path": "/art/journey/lamentations-city-mourns.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A grieving woman sits alone on a stone threshold beside a deserted street, a small figure turned away in the distance; literary personification of Daughter Zion, not a historical portrait"
+      },
+      "caption": "Literary personification · Lamentations 1:1–3 · Daughter Zion as a grieving widow, not a historical portrait.",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 1,
+          "last": 3
+        }
+      ],
+      "intro": {
+        "title": "A city rendered as a lone widow",
+        "note": "Lamentations 1:1–3 compares the once-populous city to a widow and describes tears, abandonment, and exile. The woman is the poem’s personification, not an identified historical person or archaeological reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "lament-city-alone",
+          "title": "The city sits alone like a widow",
+          "x": 24,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The opening verse says the city that was full of people now sits alone, like a widow. The seated figure illustrates that comparison.",
+          "detail": null
+        },
+        {
+          "id": "lament-no-comforter",
+          "title": "The mourner weeps without comfort",
+          "x": 29,
+          "y": 52,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 2,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 2,
+              "last": 3
+            }
+          ],
+          "note": "The poem says she weeps and finds no comforter, then describes Judah’s captivity. The outstretched hand echoes the plea for comfort; it is an illustrative gesture, not a separate event.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "ezekiel-dry-bones",
+      "book": 25,
+      "title": "Ezekiel sees the breath enter and the company stand",
+      "coverage": "Ezekiel 37:9–10",
+      "art": {
+        "path": "/art/journey/ezekiel-dry-bones.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Ezekiel gestures toward a clothed company standing in a valley as wind moves their garments; a few dry bones lie nearby; prophetic vision"
+      },
+      "caption": "Prophetic vision · Ezekiel 37:9–10 · The wind and breath are suggested, not personified.",
+      "ranges": [
+        {
+          "chapter": 37,
+          "first": 9,
+          "last": 10
+        }
+      ],
+      "intro": {
+        "title": "The breath enters the vision",
+        "note": "This focused scene depicts Ezekiel 37:9–10: the prophet speaks to the wind, breath enters the bodies, and they stand. Dust and moving garments suggest wind without depicting a divine or humanlike figure. The image is a prophetic vision, not archaeological evidence or a resolution of disputed historical or resurrection readings."
+      },
+      "hotspots": [
+        {
+          "id": "ezekiel-speaks-wind",
+          "title": "Ezekiel prophesies to the wind",
+          "x": 21,
+          "y": 30,
+          "active": [
+            {
+              "chapter": 37,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 37,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 37,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "Ezekiel is told to prophesy to the wind and call for breath. The outstretched gesture and moving cloth suggest wind without portraying it as a being.",
+          "detail": null
+        },
+        {
+          "id": "ezekiel-company-stands",
+          "title": "The breath enters and the company stands",
+          "x": 47,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 37,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 37,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 37,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "note": "The passage says the breath came into them, they lived, and stood on their feet as a great army. The clothed figures represent this moment in the prophet’s vision; no weaponry or battle is shown.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-matthew",
+      "book": 39,
+      "title": "Feeding the Five Thousand",
+      "coverage": "Matthew 14:13–21",
+      "art": {
+        "path": "/art/journey/nt-matthew.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jesus with a seated crowd on grass as disciples bring loaves and fish and bread is shared; baskets of fragments remain; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Matthew 14:13–21",
+      "ranges": [
+        {
+          "chapter": 14,
+          "first": 13,
+          "last": 21
+        }
+      ],
+      "intro": {
+        "title": "Bread among the multitude",
+        "note": "Matthew places this episode in a desert place apart. The illustration gathers the crowd, the food exchange, the meal, and the remaining baskets into one editorial scene; it does not claim a modern site or a headcount beyond Matthew’s words."
+      },
+      "hotspots": [
+        {
+          "id": "matthew-crowd",
+          "title": "Jesus receives the crowd",
+          "x": 51,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "note": "Text: Jesus sees the great multitude, has compassion, and heals their sick. Editorial: The scene follows Matthew without naming a modern location.",
+          "detail": null
+        },
+        {
+          "id": "matthew-food",
+          "title": "The disciples bring the food",
+          "x": 28,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 15,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 17,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 15,
+              "last": 18
+            }
+          ],
+          "note": "Text: The disciples say they have five loaves and two fishes, which Jesus tells them to bring. Editorial: The basket illustrates the exchange; the exact quantities are stated in Matthew.",
+          "detail": null
+        },
+        {
+          "id": "matthew-feeding",
+          "title": "The crowd is fed",
+          "x": 57,
+          "y": 81,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 19,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 19,
+              "last": 21
+            }
+          ],
+          "note": "Text: The people sit on the grass, eat, and twelve baskets of fragments remain. Editorial: Matthew says about five thousand men besides women and children; the illustration makes no total headcount claim.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-mark",
+      "book": 40,
+      "title": "Jesus Stills the Storm",
+      "coverage": "Mark 4:39–41",
+      "art": {
+        "path": "/art/journey/nt-mark.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jesus stands in a small boat addressing calm water as the disciples turn toward him in astonishment; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Mark 4:39–41",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 39,
+          "last": 41
+        }
+      ],
+      "intro": {
+        "title": "The wind and sea obey",
+        "note": "This focused scene depicts Mark’s account after Jesus rebukes the wind and speaks to the sea. The preceding storm and sleep are outside this narrowed coverage; no exact shoreline or modern location is implied."
+      },
+      "hotspots": [
+        {
+          "id": "mark-calm",
+          "title": "The wind and sea obey",
+          "x": 43,
+          "y": 25,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 39,
+              "last": 39
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 39,
+            "last": 39
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 39,
+              "last": 39
+            }
+          ],
+          "note": "Text: Jesus rebukes the wind and tells the sea, Peace, be still; the wind ceases and there is a great calm. Editorial: The illustration shows the calm without adding a visual effect.",
+          "detail": null
+        },
+        {
+          "id": "mark-question",
+          "title": "The disciples ask who he is",
+          "x": 22,
+          "y": 51,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 40,
+              "last": 41
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 41,
+            "last": 41
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 40,
+              "last": 41
+            }
+          ],
+          "note": "Text: Jesus questions their fear, and the disciples ask what manner of man this is, whom wind and sea obey. Editorial: Their response remains the focus of this passage ending.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-luke",
+      "book": 41,
+      "title": "Parable of the Good Samaritan",
+      "coverage": "Luke 10:33–35",
+      "art": {
+        "path": "/art/journey/nt-luke.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "In a parable illustration, the Samaritan gives two coins to an innkeeper beside the bandaged traveler resting at the inn; artistic reconstruction"
+      },
+      "caption": "Parable illustration · Luke 10:33–35",
+      "ranges": [
+        {
+          "chapter": 10,
+          "first": 33,
+          "last": 35
+        }
+      ],
+      "intro": {
+        "title": "The Samaritan shows mercy",
+        "note": "Jesus tells this as a parable. This focused illustration gathers the Samaritan’s care for the wounded traveler and his arrangement with the innkeeper; it is not a documented event and does not identify a real road or town."
+      },
+      "hotspots": [
+        {
+          "id": "luke-care",
+          "title": "The Samaritan cares for the wounded man",
+          "x": 18,
+          "y": 54,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 33,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 33,
+              "last": 34
+            }
+          ],
+          "note": "Text: The Samaritan has compassion, binds the traveler’s wounds, sets him on his beast, and takes him to an inn. Editorial: This illustrates Jesus’ parable, not a documented event.",
+          "detail": null
+        },
+        {
+          "id": "luke-innkeeper",
+          "title": "The Samaritan entrusts him to the innkeeper",
+          "x": 44,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 35,
+              "last": 35
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 35,
+            "last": 35
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 35,
+              "last": 35
+            }
+          ],
+          "note": "Text: On the next day, the Samaritan gives the host two pence and asks him to care for the traveler. Editorial: The inn belongs to the parable’s account and is not a located site.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-john",
+      "book": 42,
+      "title": "Jesus Washes Feet",
+      "coverage": "John 13:4–10",
+      "art": {
+        "path": "/art/journey/nt-john.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jesus kneels to wash Peter’s feet in a basin as Peter gestures in question and the other disciples watch; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · John 13:4–10",
+      "ranges": [
+        {
+          "chapter": 13,
+          "first": 4,
+          "last": 10
+        }
+      ],
+      "intro": {
+        "title": "Jesus washes Peter’s feet",
+        "note": "This focused scene depicts the washing and Peter’s exchange with Jesus. John’s later words about the example and washing one another are outside this narrowed coverage; no exact room layout is implied."
+      },
+      "hotspots": [
+        {
+          "id": "john-towel-basin",
+          "title": "Jesus takes a towel and basin",
+          "x": 40,
+          "y": 69,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "note": "Text: Jesus rises from supper, takes a towel, pours water into a basin, and begins washing the disciples’ feet. Editorial: The image focuses on this opening action.",
+          "detail": null
+        },
+        {
+          "id": "john-peter-question",
+          "title": "Peter questions the washing",
+          "x": 23,
+          "y": 41,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 6,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 8,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 6,
+              "last": 10
+            }
+          ],
+          "note": "Text: Peter asks whether Jesus will wash his feet, objects, and then asks to be washed; Jesus answers him. Editorial: The image shows their exchange during the footwashing.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-1-timothy-riches-generosity",
+      "book": 53,
+      "title": "Be Rich in Good Works",
+      "coverage": "1 Timothy 6:17–19",
+      "art": {
+        "path": "/art/journey/nt-1-timothy-riches-generosity.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "One person sets a modest coin purse aside and shares bread and cloth with another; editorial illustration of 1 Timothy 6:17–19."
+      },
+      "caption": "Editorial illustration · 1 Timothy 6:17–19",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 17,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "Wealth and generosity",
+        "note": "In 1 Timothy 6:17–19, Paul tells the rich to trust in the living God and be rich in good works, ready to distribute. The purse, bread, and cloth are editorial examples; the text does not specify these particular goods."
+      },
+      "hotspots": [
+        {
+          "id": "nt-1-timothy-riches-generosity-uncertain-riches",
+          "title": "Do not trust uncertain riches",
+          "x": 13,
+          "y": 66,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "note": "Paul charges those who are rich not to be high-minded or trust in uncertain riches, but in the living God. The visible purse is an editorial prop for the verse’s mention of riches.",
+          "detail": null
+        },
+        {
+          "id": "nt-1-timothy-riches-generosity-ready-to-share",
+          "title": "Be ready to distribute",
+          "x": 48,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "Paul tells the rich to do good, be rich in good works, and be ready to distribute. Bread and cloth make the shared provisions visible as editorial examples.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-2-timothy-good-soldier",
+      "book": 54,
+      "title": "The Good Soldier",
+      "coverage": "2 Timothy 2:3–4",
+      "art": {
+        "path": "/art/journey/nt-2-timothy-good-soldier.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A solitary soldier stands steady in wind, with loose cords and ordinary goods nearby as an editorial image of Paul’s good-soldier comparison."
+      },
+      "caption": "Symbolic illustration · 2 Timothy 2:3–4",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 3,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "Paul’s soldier comparison",
+        "note": "In 2 Timothy 2:3–4, Paul compares endurance and freedom from entanglement to a good soldier’s service. The figure, clothing, and objects are editorial imagery for the comparison, not a report of combat or a particular military journey."
+      },
+      "hotspots": [
+        {
+          "id": "nt-2-timothy-good-soldier-endure-hardship",
+          "title": "Endure hardship as a good soldier",
+          "x": 38,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "Paul tells Timothy to endure hardship as a good soldier of Jesus Christ. The figure stands in wind as a visual example of the comparison; no battle is depicted.",
+          "detail": null
+        },
+        {
+          "id": "nt-2-timothy-good-soldier-avoid-entanglement",
+          "title": "Please the one who enlisted you",
+          "x": 18,
+          "y": 75,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "Paul says a soldier avoids entanglement in the affairs of life to please the one who chose him. The loose cords and ordinary goods are illustrative details; they do not bind the soldier or define the passage as a literal journey.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-titus-maintain-good-works",
+      "book": 55,
+      "title": "Maintain Good Works",
+      "coverage": "Titus 3:14",
+      "art": {
+        "path": "/art/journey/nt-titus-maintain-good-works.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "One person mends a woven basket as another offers folded cloth and bread; editorial examples for Titus 3:14."
+      },
+      "caption": "Editorial illustration · Titus 3:14",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 14,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "Useful work and necessary needs",
+        "note": "Titus 3:14 urges readers to maintain good works for necessary uses. The basket repair and shared supplies are editorial examples; the verse does not name an occupation, task, congregation, or setting."
+      },
+      "hotspots": [
+        {
+          "id": "nt-titus-maintain-good-works-useful-work",
+          "title": "Maintain good works",
+          "x": 28,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "The verse says the people should learn to maintain good works. Basket mending is one visual example; the passage does not assign this occupation or task.",
+          "detail": null
+        },
+        {
+          "id": "nt-titus-maintain-good-works-necessary-needs",
+          "title": "Provide for necessary needs",
+          "x": 49,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "The verse connects good works with necessary uses. Folded cloth and bread illustrate practical supplies without setting out a complete social or economic program.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-philemon-appeal-account",
+      "book": 56,
+      "title": "An Appeal for Onesimus",
+      "coverage": "Philemon 1:8–19",
+      "art": {
+        "path": "/art/journey/nt-philemon-appeal-account.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A blank papyrus letter and an open, unmarked ledger rest beside a pen; a literary still life for Philemon 1:8–19."
+      },
+      "caption": "Literary still life · Philemon 1:8–19",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 8,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "An appeal in writing",
+        "note": "In Philemon 1:8–19, Paul appeals for Onesimus and asks Philemon to receive him as a beloved brother. Paul also says that any debt should be put to his account. The blank letter and ledger are editorial objects for these parts of the letter; the biblical wording appears in the passage panel."
+      },
+      "hotspots": [
+        {
+          "id": "nt-philemon-appeal-account-appeal",
+          "title": "Paul appeals for Onesimus",
+          "x": 28,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 8,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 8,
+              "last": 17
+            }
+          ],
+          "note": "Paul appeals for Onesimus, whom he calls his son begotten in his bonds, and asks Philemon to receive him as a beloved brother. The blank papyrus represents the written appeal; the actual wording remains in Scripture.",
+          "detail": null
+        },
+        {
+          "id": "nt-philemon-appeal-account-account",
+          "title": "Put any debt to my account",
+          "x": 48,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "Paul writes that if Onesimus owes anything, it should be put to Paul’s account, and says he has written this with his own hand. The blank ledger makes the account language visible without adding an amount or quotation.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-hebrews-run-with-endurance",
+      "book": 57,
+      "title": "Run with Endurance",
+      "coverage": "Hebrews 12:1–2",
+      "art": {
+        "path": "/art/journey/nt-hebrews-run-with-endurance.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A runner moves forward past a bundled weight, with a crowd of anonymous witnesses behind him; symbolic illustration of Hebrews 12:1–2."
+      },
+      "caption": "Symbolic illustration · Hebrews 12:1–2",
+      "ranges": [
+        {
+          "chapter": 12,
+          "first": 1,
+          "last": 2
+        }
+      ],
+      "intro": {
+        "title": "A race of endurance",
+        "note": "Hebrews 12:1–2 speaks of a great cloud of witnesses, laying aside weights, running with patience, and looking to Jesus. The runner, bundle, and crowd render the passage’s race image; the people in the crowd remain anonymous."
+      },
+      "hotspots": [
+        {
+          "id": "nt-hebrews-run-with-endurance-witnesses",
+          "title": "A cloud of witnesses surrounds the race",
+          "x": 20,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The passage describes a great cloud of witnesses surrounding the hearers. The background crowd is an editorial rendering of that phrase.",
+          "detail": null
+        },
+        {
+          "id": "nt-hebrews-run-with-endurance-lay-aside-weight",
+          "title": "Lay aside every weight",
+          "x": 12,
+          "y": 70,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The verse urges readers to lay aside every weight and the sin that besets them. The small bundle makes the weight in the race image visible.",
+          "detail": null
+        },
+        {
+          "id": "nt-hebrews-run-with-endurance-run-with-patience",
+          "title": "Run with patience looking to Jesus",
+          "x": 43,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "note": "Hebrews calls hearers to run with patience the race set before them and, in verse 2, to look to Jesus. The runner’s forward gaze carries the literary image; Jesus is named in the text.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "nt-james-bit-and-rudder",
+      "book": 58,
+      "title": "The Bit and the Rudder",
+      "coverage": "James 3:3–4",
+      "art": {
+        "path": "/art/journey/nt-james-bit-and-rudder.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A horse with a visible bit in the foreground and a sailing ship with its rudder in wind-driven water, paired examples from James 3:3–4."
+      },
+      "caption": "Symbolic illustration · James 3:3–4",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 3,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "Two examples of direction",
+        "note": "James pairs two examples: a bit turns a horse’s body, and a small helm turns a great ship driven by fierce winds. The horse and vessel are placed together as the paragraph’s related images."
+      },
+      "hotspots": [
+        {
+          "id": "nt-james-bit-and-rudder-horse-bit",
+          "title": "A bit turns the horse",
+          "x": 21,
+          "y": 59,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "James says bits in horses’ mouths can turn their whole bodies. The visible bit in the bridle is his first example.",
+          "detail": null
+        },
+        {
+          "id": "nt-james-bit-and-rudder-ship-rudder",
+          "title": "A small rudder turns a ship",
+          "x": 55,
+          "y": 76,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "James says a great ship, driven by fierce winds, is turned by a very small helm. The steering oar shows the second example in the comparison.",
           "detail": null
         }
       ]
