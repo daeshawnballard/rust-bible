@@ -1,0 +1,27 @@
+{
+  "id": "passage-ot-nehemiah-wall-watch",
+  "source": "assets/imagegen/source/journey/ot-nehemiah-wall-watch.png",
+  "final": "web/art/journey/ot-nehemiah-wall-watch.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-c6ceeef0-9eb8-46e9-b8ee-a43272314e63.png",
+  "prompt": "Create one historically grounded biblical illustration for Nehemiah 4:15–23.\nShow the returned families and workers rebuilding one unfinished stretch of Jerusalem's wall while staying alert. At the left, builders set stones and carry loads; some have a tool in one hand and a weapon ready at the belt, reflecting the text. A nearby watchman holds a spear, and a trumpet signaler stands with Nehemiah, who coordinates the watch. Suggest the transition from day work to night guard through dusk light, not through a split-scene or montage. No battle or attack is shown.\nKeep the wall as a short, generic unfinished stone section, not a precise city layout or named gate. Use only the tools, weapons, clothing, and watch arrangement described in the passage.\nCompose full-frame 3:2 landscape at intended native 1536x1024. Keep builders, wall, Nehemiah, and watchers within the left 65%. Keep the rightmost 30% as quiet, low-contrast muted dusk sky and plain distant ground, with no people or bright focal point for text overlay; top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use believable proportions and ancient fabrics, restrained evening light, painterly detail. No lettering, labels, pins, interface, borders, modern tools, route markings, or invented battle action. This is an artistic reconstruction, not a surveyed wall plan.\n\n\nImage 1 is the Nehemiah wall and watch scene. Edit only the far-right 30%: remove the bright sun and its intense glow, replacing them with a uniform, low-contrast muted blue-grey and dusky earth-tone sky and distant hills suitable for text overlay. No sun disc, bright reflection, sharp highlights, people, or focal objects in that area.\nKeep Nehemiah, all builders and watchers, the trumpet signaler, the tools and weapons, and the unfinished wall unchanged in the left 65%. Do not alter any people, faces, positions, or actions. Preserve the full-frame 3:2 landscape at 1536x1024, warm tactile historical realism, and the same scene. No new architecture, lettering, labels, or battle action.\n\nInput: local-reference:nehemiah-wall-v1.png\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "168e665815cc89922e67c402211dfd06510f311effb9a68a2e0bfa0cb0e02c4f",
+  "sha256": "916e6239666ee0938a37a035744e0d53d8d4c98ff72f7bc0e477eb9b2adf2b58",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "original_prompt_sha256": "cf388ec346181a6cec00b32838062d88783300b60734219a69accafa84f63f8b",
+  "prompt_local_paths_redacted": true
+}
