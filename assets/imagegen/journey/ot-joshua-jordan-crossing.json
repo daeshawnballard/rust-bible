@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-joshua-jordan-crossing",
+  "source": "assets/imagegen/source/journey/ot-joshua-jordan-crossing.png",
+  "final": "web/art/journey/ot-joshua-jordan-crossing.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-b8463a54-3dcd-49a1-b033-8b9072fc0194.png",
+  "prompt": "prompts/joshua-jordan-crossing-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "c96343b4f28203c23d700be907ee2e5769bebc57385c75e4692a15bd0deae2f4",
+  "sha256": "dc29920d77de9e7db05c6ea86a9531405cfc6804cc3e03dca94be7905c8f0803",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
