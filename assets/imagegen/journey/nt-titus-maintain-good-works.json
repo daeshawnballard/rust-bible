@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-titus-maintain-good-works",
+  "source": "assets/imagegen/source/journey/nt-titus-maintain-good-works.png",
+  "final": "web/art/journey/nt-titus-maintain-good-works.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-0b3ef6a2-2fb5-4b0c-96f7-5d4119adf45b.png",
+  "prompt": "Create a finished 1536x1024 landscape editorial illustration for a Bible-reading website, inspired by Titus 3:14. Show one quiet, coherent example of people maintaining useful work and providing necessary supplies: on the left, two ordinary adults in simple ancient Mediterranean-style clothing work together, one mending a sturdy woven basket while the other hands over folded cloth and a small loaf from a modest supply basket. Keep the useful task and the shared necessities immediately clear. This is an editorial example because the verse names no task, occupation, congregation, or setting; do not invent one. Keep all people and story-critical objects entirely within the left 65 percent of the frame. Reserve the rightmost 30 percent as quiet, low-detail warm stone and softly lit background for a passage panel; keep the top and bottom 12 percent free of critical details. Match the accepted visual references only in their realistic cinematic historical-literary style, tactile gold and earth palette, natural light, nuanced cloth and pottery, and dignified expressions. Do not copy their composition or people. No readable writing, letters, symbols, modern objects, church congregation, trade tools that imply a specific occupation, text, UI, labels, pins, borders, logo, or watermark. No supernatural reward glow and no guarantee of outcome. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "54b589aa310be108c5de58e039d021b6149a96003d58ca0eaa71b5b972fb926b",
+  "sha256": "b0b8c3735871eaefa814b53de5b3c5445634f96d93989b644ab13a3dab392602",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
