@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-galatians",
+  "source": "assets/imagegen/source/journey/nt-galatians.png",
+  "final": "web/art/journey/nt-galatians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-6f2385b5-ebf3-4709-9a8f-0731e5dd56d4.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of two connected instructions in Galatians 6:1–2, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One unlocated symbolic moment illustrating gentle restoration and bearing one another’s burdens. This is not a documented event or a claimed historical journey.\nSubject/action: Show two fully clothed ordinary people helping one another in a quiet open setting. One carries a heavy woven bundle, and the other approaches gently, offers a steadying hand, and helps take some of the load. Their expressions are calm and respectful, with no humiliation, injury, or blame. The shared bundle is a visual metaphor for the burden Paul names, not an object from a specific event.\nComposition/framing: Medium-wide view from several paces away; do not fill the frame vertically. Show both figures from head to lower leg, smaller within the scene, with their heads beginning below the 15% line and feet ending above the 88% line. Keep the shared bundle and helpful hand readable. Place the pair entirely within the left 60%; reserve the right 30% as quiet, low-detail ground and soft background for a reading panel. Leave open air above the heads and ground below the feet. One continuous interaction.\nStyle/materials: Warm realistic historical illustration; simple period-evocative woven garments without assigning identities, natural hands and faces, tactile cloth and basket weave, soft golden natural light, subdued earth pigments.\nConstraints: Do not imply a particular fault, disability, route, or historical location. No text, labels, symbols, map, spectacle, modern items, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "1e0bc4a477f9a93177679c621bd42cc86b82d9b33561df56214cb1596207ad2f",
+  "sha256": "1b1f3554370ce52b362e5f65b4d979c275e35039399f06741344e9015f75f70a",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
