@@ -1,0 +1,27 @@
+{
+  "id": "passage-ot-leviticus-live-goat",
+  "source": "assets/imagegen/source/journey/ot-leviticus-live-goat.png",
+  "final": "web/art/journey/ot-leviticus-live-goat.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-47c3c6f6-296e-48d4-bc84-4f6aa74b70ff.png",
+  "prompt": "Create one historically grounded biblical illustration for Leviticus 16:20–22.\nThe exact action is Aaron laying both hands on the head of the live goat after the sanctuary rites, with a fit man ready to lead the goat away into the wilderness. Keep this as one coherent moment, not a collage. Show Aaron in simple white linen garments, the live goat calm and clearly visible, and the attendant beside it. Use a sparse wilderness edge beyond the camp; do not invent detailed sacred architecture or imply a recovered floor plan.\nCompose as a full-frame 3:2 landscape, intended native size 1536x1024. Keep all essential people and the goat within the left 65%. The rightmost 30% should be quiet, low-contrast muted earth and haze suitable for text overlay; keep top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references: natural human proportions, believable ancient fabrics and objects, restrained light, painterly realism. No lettering, labels, pins, interface, borders, modern objects, route markings, extra animals, or supernatural visual effects. The image illustrates the text and is not a claim about the exact appearance of the historical rite or landscape.\n\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the edit target: the Leviticus live-goat scene. Image 2 and Image 3 are style references.\nEdit only the rightmost 32% of Image 1. Remove the bright sun disc and its glow completely. Replace that section with an even, low-contrast blue-grey and muted earth-tone haze over softly shaded distant hills, suitable for dark text overlay. No sun, bright reflection, luminous horizon, sharp contrast, or focal object in the rightmost 32%.\nKeep Aaron with both hands on the live goat's head, the goat's body and horns, and the attendant and lead exactly unchanged. Preserve all people and the goat within the left 65%; do not alter their faces, posture, clothing, proportions, or placement. Preserve the full-frame 3:2 image at native 1536x1024.\nKeep the overall warm, tactile historical realism of the style references. No lettering, labels, UI, borders, new people or animals, route markings, or changes to the story.\n\nInput paths:\n- local-reference:leviticus-goat-v1.png\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "7d31af8dd8df42bc2af05c8835992ef5d5151a11f36fba688d0bd7ace4b93023",
+  "sha256": "9e9cf4a7ee46fc4e41f0d1d544e2bc4dbc53a3c6586e81ce390871017b59e4fb",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "original_prompt_sha256": "0c11694f4d10c567feb09386e275462affba33731e259bfca93d93cf733f3911",
+  "prompt_local_paths_redacted": true
+}
