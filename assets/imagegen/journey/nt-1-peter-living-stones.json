@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-1-peter-living-stones",
+  "source": "assets/imagegen/source/journey/nt-1-peter-living-stones.png",
+  "final": "web/art/journey/nt-1-peter-living-stones.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-19f08e63-d3f2-4921-b11e-ce34f7d95e3a.png",
+  "prompt": "Create a second, materially reframed 1536x1024 landscape symbolic editorial illustration for 1 Peter 2:4–8. Use a close three-quarter view of a small, low, unfinished arrangement of rough stones being fitted together by two visible hands. A single angular cornerstone at the base is the main focal object; smaller irregular stones form one compact, simple wall segment around it. Keep every story-critical stone and both hands completely inside the left 55 percent of the frame. Do not include a separate large loose stone anywhere in the right half. The rightmost 38 percent must remain quiet, softly lit low-detail earth and blurred stone, clear for a passage panel; top and bottom 12 percent contain no critical detail. This is an editorial rendering of Peter’s “living stones,” “spiritual house,” “cornerstone,” and “stone of stumbling” images. The stones remain actual stones and the arrangement is symbolic; do not depict a sanctuary, temple, city, named site, or archaeological reconstruction. Match the accepted references only in their realistic cinematic historical-literary style, tactile gold and earth palette, natural soft light, and detailed stone surfaces; do not copy their composition. No people made of stone, columns, altar, icons, inscriptions, readable writing, text, UI, labels, pins, borders, logo, watermark, or supernatural glow. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "263a5e3658abed41d4e19032482ac95285ab550330fdd7019241a331d5ff0e51",
+  "sha256": "6c170950282bc39ed6b14f882c80835c67b1b595f0c9d06668dc7752b59221ff",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
