@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-ephesians",
+  "source": "assets/imagegen/source/journey/nt-ephesians.png",
+  "final": "web/art/journey/nt-ephesians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-32604fe0-70ce-4512-a0e2-05ec3049fa43.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of the armor metaphor in Ephesians 6:10–17, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and dignified tone. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One symbolic figure illustrates Paul’s description of spiritual armor. This is a literary comparison, not a documented battle or historical event.\nSubject/action: Show one fully clothed adult standing calmly in simple, period-evocative protective armor: belt, breastplate, sturdy footwear, shield, helmet, and a lowered sword. The figure’s posture is steady and prepared, not attacking or fighting. Make the armor pieces distinct and readable without labels or inscriptions. There is no human opponent.\nComposition/framing: Use a medium-wide view from several paces away. The full figure should occupy about 60% of the canvas height, centered vertically with the helmet starting near 18% from the top and footwear ending near 84% from the bottom. Leave generous open sky above and ground below; do not crop any part. Keep the person and all armor pieces within the left half. Reserve the right 30% as quiet, low-detail ground and soft background for a reading panel. One continuous symbolic composition.\nStyle/materials: Warm realistic historical illustration; worn leather, bronze, woven cloth, natural face and hands, tactile materials, restrained earth pigments and soft directional light.\nConstraints: The armor is Paul’s metaphor, not an actual combat scene. Do not add an enemy, violence, arrows, supernatural combatants, battle standards, words on garments, writing, text, labels, modern military gear, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "b1d1531ce206501f3869db4cb7dc0be9e3a0671a6aa3056b022a6f9dab669175",
+  "sha256": "da15438b31a5089a0be60967d1d831deb52f7a9c7796db34c46bd260585c2036",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
