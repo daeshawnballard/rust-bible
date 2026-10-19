@@ -1,0 +1,27 @@
+{
+  "id": "passage-ot-2samuel-ark-procession",
+  "source": "assets/imagegen/source/journey/ot-2samuel-ark-procession.png",
+  "final": "web/art/journey/ot-2samuel-ark-procession.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-e8cd45bd-5dd0-4912-b397-6e340d0e3571.png",
+  "prompt": "Create one historically grounded biblical illustration for the procession in 2 Samuel 6:12–15.\nShow the Ark of the LORD borne on poles as David dances before it with all his might, wearing a simple linen ephod, while members of Israel follow with shouting and trumpets. Keep the moment joyful and reverent, with David and the carried Ark as the unmistakable focal subjects. Show the Ark as an artistic reconstruction consistent with Exodus 25: gold overlay, golden mercy seat, and two facing cherubim with wings over the lid. Do not include Michal at the window; this scene focuses on the procession described in verses 12–15. Do not invent a detailed city plan or claim a precise Jerusalem layout.\nCompose full-frame 3:2 landscape at intended native size 1536x1024. Keep David, Ark, bearers, and main procession within the left 65%. Keep the rightmost 30% a quiet, low-contrast muted background suitable for passage text; no people, readable architecture, or bright focal objects there. Top and bottom 12% noncritical.\nMatch the warm, tactile, cinematic historical realism of the supplied accepted Abraham and Sarah hospitality and Balaam and donkey references. Use natural human proportions, ancient fabrics, restrained light, painterly detail. No lettering, labels, pins, interface, borders, modern objects, route markings, invented inscriptions, or supernatural figures. This is an artistic reconstruction, not a recovered historical artifact or verified city scene.\n\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the ark procession illustration for 2 Samuel 6. Make one localized background edit: add Michal as a small, clearly human figure watching the procession through a single simple window opening in a distant, nondescript building wall, as described in 2 Samuel 6:16. Place the window and Michal in the left half of the background, separate from David and the Ark, small enough to remain secondary. Use a reserved expression; do not exaggerate or add visual judgment beyond the text.\nDo not alter David, his dancing, the Ark, its gold-covered chest and cherubim, the bearers, musicians, or their positions. Do not add other buildings, city gates, streets, or a readable city plan. Keep the rightmost 30% quiet and free of people and focal points. Preserve the full-frame 3:2 at native 1536x1024 and the existing warm, tactile historical realism. No labels, lettering, borders, modern objects, or new story events.\n\nInput: local-reference:2samuel-ark-procession-michal-omitted-v1.png\nStyle reference paths:\n- local-reference:abraham-sarah-visitors-v2.webp\n- local-reference:numbers-balaam-donkey.webp\n\n\nImage 1 is the ark procession illustration. It currently has two women in two separate background window openings. Edit only the far-left background: remove the woman and window opening at the extreme left and blend that small area into the existing plain wall and foliage. Retain exactly one small woman figure looking through exactly one simple window opening, the more central one around x=30% of the image. Do not add any other people or openings.\nKeep this sole observer small and secondary, with a reserved expression. Preserve David's dance, the gold-overlaid Ark with paired cherubim, bearers, musicians, and every foreground figure unchanged. Keep the rightmost 30% quiet and free of people or focal points. Do not add city gates, streets, or a detailed layout. Preserve full-frame 3:2 at native 1536x1024 and the existing warm, tactile historical realism. No other changes.\n\nInput: local-reference:2samuel-ark-procession-two-window-figures-v2.png\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "a4edb9b2f8ea2119f1d8b54288d7829bebdd85fa45dc850504defc4a40b1304c",
+  "sha256": "b67c9cce024ccb4f8c495a9f11c819ced608a23996df9927b5743574a4a36142",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "original_prompt_sha256": "3e00378089335f6c0cafac27d3f922879af2830a9cc5a4c0669c436f9b1ad6ec",
+  "prompt_local_paths_redacted": true
+}
