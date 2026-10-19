@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-matthew",
+  "source": "assets/imagegen/source/journey/nt-matthew.png",
+  "final": "web/art/journey/nt-matthew.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-c68611bc-8139-4ad3-b87c-6543c8f3bb96.png",
+  "prompt": "Use case: historical-scene.\nAsset type: individual production background illustration for a Bible Journey passage reader, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural human proportions, tactile period materials, nuanced golden light, and readable storytelling. Do not reproduce their scenes, characters, compositions, or objects.\nScene/backdrop: One open grassy place in Matthew 14:13–21, without naming or depicting a specific modern site. Late afternoon natural light, low grasses, a few distant hills, tactile woven baskets and simple first-century Judean clothing.\nSubject/action: Show one coherent moment that gathers the passage’s episode: Jesus receives a large seated crowd with compassion; nearby, disciples bring exactly five small loaves and two fish to him; Jesus shares bread with people seated on the grass, with baskets for fragments visible. Include a few sick people near Jesus without making them the only focus. Keep all figures dignified, clothed, natural, and individually readable. Do not imply a headcount beyond what Matthew states.\nComposition/framing: Wide, slightly elevated three-quarter view. Keep every story-critical person, food item, and basket fully inside the left 65% of the canvas; reserve the right 30% as quiet, low-detail grass and distant landscape for a reading panel. Keep the top and bottom 12% free of essential subjects. Place Jesus and the feeding action in the central-left; let the seated crowd recede naturally through the left half. One continuous scene, no collage or sequential panels.\nStyle/materials: Warm cinematic realistic historical illustration, detailed natural faces and hands, worn linen and wool, woven baskets, simple bread and fish, nuanced earth pigments, tactile grass, restrained golden light; dignified human expressions.\nConstraints: Five loaves and two fish are the food the disciples bring. Do not show a miracle effect, glowing hands, duplicated people, spectacle, modern objects, a named location, or invented action. No UI, text, lettering, labels, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "c289bf256106ff7ef05580edc15fab0070124e58437c249ce776cf207a108bda",
+  "sha256": "6f71e189dd03a54f9feb35431f6b178844106342538443dde9cd198411fb36fa",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
