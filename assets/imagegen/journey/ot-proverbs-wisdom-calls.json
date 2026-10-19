@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-proverbs-wisdom-calls",
+  "source": "assets/imagegen/source/journey/ot-proverbs-wisdom-calls.png",
+  "final": "web/art/journey/ot-proverbs-wisdom-calls.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-948b3065-7cd7-40cd-ba71-f46fa41ebf13.png",
+  "prompt": "prompts/proverbs-wisdom-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "62314654ee51d3c4b0b9e7433a502458b8e4c0b533faedcd5f755c1a1cf4b519",
+  "sha256": "e199ceeaa0bc1fe50b867e8cd542434ff9d4d9f25c805a1f346b2dd810b4e4e1",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
