@@ -1,0 +1,25 @@
+{
+  "id": "passage-hosea-family-sign",
+  "source": "assets/imagegen/source/journey/hosea-family-sign.png",
+  "final": "web/art/journey/hosea-family-sign.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-25bb9a7a-86aa-466b-b704-161e9bba0779.png",
+  "prompt": "Use case: illustration-story. Create a realistic cinematic literary illustration for Hosea 1:8–9, landscape 3:2, requested 1536x1024.\n\nShow one quiet, coherent family moment: the adult prophet Hosea holds a fully clothed newborn son, while an adult woman representing Gomer sits close by and a young daughter stands beside her. The daughter has recently been weaned; the new boy is the child whose naming the text reports in Hosea 1:9. Keep all three human subjects clearly readable, dignified, and non-sensual. Do not show distress, coercion, or stigmatizing cues. This is a textual family sign, not a portrait.\n\nPlace the family together entirely within x=12% to x=48%, with the baby visible near center of that group. Keep all people and meaningful props left of x=60%. Leave the right 38% as quiet low-detail pale plaster courtyard wall and soft olive foliage for reader text overlay. Top and bottom 12% noncritical. One natural moment, no collage or multiple episodes.\n\nSetting: a modest generic ancient Levantine domestic courtyard, with simple limestone, woven cloth, a small olive branch. Do not claim a specific site or archaeology. Warm morning gold, restrained ochre, olive, cream and clay; realistic cinematic historical/literary painting with tactile woven fabric and limestone, matching the supplied biblical illustration references. Avoid melodrama.\n\nThe passage frames Hosea's family as a sign concerning Israel. The scene represents the text's report of the son being born and named; the names carry the passage's symbolic message, but no written name or lettering should appear. Preserve debate about the episode's historical/literary mode and do not invent identity details beyond the named text. No depiction of God, the LORD, or spirit as a person or figure.\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, scrolls, modern objects, recognizable monuments, sexualized portrayal, stigma, violence, despair, deity, divine human figure, halo, magical glow, religious iconography, noisy detail in right third, or tiny people.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "a78fb03f482d5fe368d03e1c3809c9154a8e33deb68f6b5243342a823531f746",
+  "sha256": "0bfc71e3877b91d2097bab70db762944d1777f9d2a772a8821118902ea0ea24a",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
