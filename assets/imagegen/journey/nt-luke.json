@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-luke",
+  "source": "assets/imagegen/source/journey/nt-luke.png",
+  "final": "web/art/journey/nt-luke.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-f889bfad-4503-4183-aaa6-6765d02bbeea.png",
+  "prompt": "Use case: historical-scene.\nAsset type: individual Bible Journey illustration of a parable, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural human proportions, tactile ancient materials, and dignified storytelling. Do not reproduce their characters, scenes, or compositions.\nScene/backdrop: A modest first-century roadside inn courtyard at late afternoon, shown as the setting inside Jesus’ parable in Luke 10:33–35. Keep architecture generic; do not imply a documented event, named road, town, or archaeological location.\nSubject/action: In one coherent moment, the Samaritan stands beside the wounded traveler, now bandaged and resting safely near the inn doorway, while placing two small coins into the innkeeper’s open hand. A saddled pack animal waits quietly nearby. Show care and responsibility through natural gestures; no graphic wounds or distress.\nComposition/framing: Wide three-quarter view. Keep the Samaritan, traveler, innkeeper, coins, and animal fully within the left 65%; reserve the right 30% as quiet stone wall and soft courtyard ground for a reading panel. Keep the top and bottom 12% free of essential subjects. One continuous scene, no collage or sequential panels.\nStyle/materials: Warm cinematic realistic historical illustration; worn woven garments, weathered stone, simple oil vessel and cloth, natural faces and hands, soft golden light, muted earth tones.\nConstraints: The Samaritan is the helper in Jesus’ parable; the innkeeper receives two coins and the traveler has visible bandaging. Do not add a named route, signs, text, labels, pins, logos, border, watermark, modern objects, or invented backstory.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "372cb73c5625e3f0e53f34d5ff9dc8b74a96188293fb5853ebade4e94d777c70",
+  "sha256": "0328e8f8259dbbef0c9800c64f2b7ce3e85387991f349f4ca80b2b28debcae46",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
