@@ -1,0 +1,25 @@
+{
+  "id": "passage-micah-what-god-requires",
+  "source": "assets/imagegen/source/journey/micah-what-god-requires.png",
+  "final": "web/art/journey/micah-what-god-requires.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-437349d2-e250-43d7-ad70-0f4d0b96b4d1.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Micah 6:6–8, landscape 3:2, requested 1536x1024.\n\nAn explicitly literary covenant-court tableau, not a literal courtroom or map. At an open-air gathering, the prophet Micah addresses a few ordinary listeners while holding an open but completely blank scroll. In the foreground, one worshipper has brought a small oil vessel and a lamb, then pauses to listen; beside him, another listener offers a steadying hand to an older neighbor carrying a basket. These are restrained visual cues for the questions about offerings in verses 6–7 and the call to justice, mercy, and humble walking in verse 8. Do not present the imagined extreme gifts as requirements or as actual practice. No written words on the scroll.\n\nKeep the people and meaningful objects clearly visible but grouped naturally within x=10–58%: Micah around x=35%, listeners around x=23–48%, scroll and modest offerings around x=42%. Reserve the entire right 38% as quiet open ground and muted sky for reader overlay; no people or objects there. Top and bottom 12% noncritical. One coherent gathering, not a montage, with readable human subjects rather than an empty landscape.\n\nUse a simple ancient Levantine outdoor assembly place under distant mountain ridges. The mountains are poetic witnesses in the passage, not a geographic diagram. Avoid identifiable sites, monumental architecture, or archaeological claims. Warm golden light, restrained ochre, dusty olive, cream and clay; realistic cinematic historical/literary painting matching supplied Bible illustration references, tactile cloth, unmarked parchment, stone, and earth. Thoughtful and compassionate.\n\nThe scene is a literary reconstruction of Micah 6:6–8. The passage asks whether offerings of increasing scale could satisfy God, then states that what is good is to do justly, love mercy, and walk humbly with God. The helping gesture is a visual interpretation of the text's ethical language, not a complete definition. Do not depict God/LORD as a person or add religious iconography.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, sacrificial fire, blood, harm to a child, spectacle of mass animal sacrifice, deity, halo, magical glow, theatrical preaching, extra scenes, clutter or meaningful details in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "07b51534f60cb4eca5fd1b0f2eec25b5f8e43b50c4787b07005bf19505fdf12a",
+  "sha256": "9e2aae385eda49d883593da948fa364f5414ad0f1c71a01a359f342ec42b2b4f",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
