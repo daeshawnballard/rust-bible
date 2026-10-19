@@ -1,0 +1,26 @@
+{
+  "id": "passage-isaiah-branch-and-peace",
+  "source": "assets/imagegen/source/journey/isaiah-branch-and-peace.png",
+  "final": "web/art/journey/isaiah-branch-and-peace.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-e84c1a91-3bf4-4fba-b8a2-3d49f7973f5e.png",
+  "prompt": "Use case: illustration-story\nAsset type: one full-bleed production illustration for a literary Bible passage. Requested canvas 1536x1024 pixels, landscape 3:2.\nPrimary request: Depict the oracle in Isaiah 11:1–9 as a prophetic vision of a righteous ruler and a peaceable creation. Show a green shoot growing from an old cut tree stump in the foreground, a dignified adult ruler in simple ancient Judean clothing standing nearby, and a small child safely among a clearly readable group of animals at rest. Include the text's wolf with lamb, leopard with young goat, calf and young lion, and bear and cow; do not turn it into a crowded animal collage. The child may lead the group along a quiet hillside.\nScene/backdrop: A restrained Levantine hillside with olive and terebinth foliage, dry-stone ground, and softly layered hills. The atmosphere is visionary and literary, not an observed historical landscape.\nStyle/medium: Realistic cinematic historical/literary illustration matching the supplied reference images' warm golden light, tactile earth, cloth, stone, and restrained realism. No fantasy costume or medieval aesthetic.\nComposition/framing: Wide 3:2 landscape. Keep the stump and shoot, ruler, child, and animals entirely within the left 62% of the canvas. Group them legibly in one coherent scene. Leave the entire right 35–38% as low-detail soft hillside, pale sky, and distant foliage with quiet contrast suitable for reader text overlay. Keep the top and bottom 12% noncritical. No montage, collage, panels, or cutaway.\nLighting/mood: Warm late-afternoon gold, gentle, hopeful, contemplative; no dramatic battle or disaster.\nColor palette: Ochre, muted olive, cream linen, sandstone, restrained gold, dusty green.\nMaterials/textures: Natural wool, woven linen, living green shoot, old bark, limestone, dry grasses, animal coats.\nInterpretation: This is a prophetic vision. The peaceful proximity of predator and prey must read as visionary imagery, not an observed historical landscape, archaeological reconstruction, or fixed end-times interpretation. The ruler is a literary representation of the oracle; do not identify him with a named historical portrait. Show only visible visual cues; do not render the spirit of the LORD as a person, face, halo, beam, or humanlike being.\nAvoid: Text, letters, captions, labels, verse numbers, pins, UI, logos, watermark, modern objects, buildings that imply a specific site, ornate religious iconography, deity or God-in-human-form, halos, glowing figures, graphic injury, predator aggression, empty landform diorama, tiny unreadable subject cluster, animal rows, or realistic interaction that makes the scene seem zoologically documented.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "84cb525adcc2f27b1c475e7029e9e3b8fc45ff0ff8c084b95a99c3211b68af0b",
+  "sha256": "25de37df89a299c34382c8fa1c9f4a426c9a1ac4d52c3c7a408301a368cd5ef5",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "provenance_status": "Original output_hint receipt unavailable; output filename reconstructed from session sequence, saved prompt and visual match. Source and final byte hashes are verified."
+}
