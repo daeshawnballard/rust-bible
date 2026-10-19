@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-1-john-walk-in-light",
+  "source": "assets/imagegen/source/journey/nt-1-john-walk-in-light.png",
+  "final": "web/art/journey/nt-1-john-walk-in-light.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-fe6a84e5-cb51-4550-9eaf-48152db4a7ec.png",
+  "prompt": "Create a third, materially reframed 1536x1024 landscape symbolic editorial illustration for 1 John 1:5–7. Use a medium-wide view with two anonymous adults walking side by side in mid-step on a short softly illuminated patch of rough ground, all entirely inside the left 50 percent of the frame. Make each full figure modest in scale, about 55 percent of image height: place both heads below y=20% and both feet above y=80%, leaving the top 12 percent and bottom 12 percent completely free of people or critical detail. Their posture suggests fellowship and walking together. A clear warm field of natural light surrounds them, while a small shaded edge at far left provides contrast; do not draw a road continuing into the distance. This is symbolic illustration, not a literal route or specific historical journey. Keep the entire rightmost 42 percent as a smooth, softly lit warm earth-toned gradient with no rocks, boulders, trees, shrubs, buildings, props, horizon, or focal light shape. Do not add objects around the figures. Use anonymous adults in simple timeless garments and no identifiable setting. Follow only the accepted references' cinematic realism, warm tactile gold and earth materials, natural light, and detailed cloth; do not copy their composition. No visible divine figure, halo, religious icon, readable writing, text, UI, labels, pins, borders, logo, watermark, map, or destination. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "3704a70239e3883151d2ea82ab80d497e5afb9c54a954d900a0e999a904bc7cb",
+  "sha256": "ddc5d9c00a7856f30e759827f415e26c481e2dd65b828b608f715e0469f14924",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
