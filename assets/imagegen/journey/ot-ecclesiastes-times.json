@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-ecclesiastes-times",
+  "source": "assets/imagegen/source/journey/ot-ecclesiastes-times.png",
+  "final": "web/art/journey/ot-ecclesiastes-times.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-0e725e01-5268-4e6d-be51-de45de792095.png",
+  "prompt": "prompts/ecclesiastes-times-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "0e3a82f6965ff20240e49d406a2c37f17e43f966c1960c14b9151fd007da73af",
+  "sha256": "d13dad6d7b90693f0564edaa696a69876e994a55e24527142c81adad8b1b12bf",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
