@@ -1,0 +1,25 @@
+{
+  "id": "passage-malachi-messenger-refiner",
+  "source": "assets/imagegen/source/journey/malachi-messenger-refiner.png",
+  "final": "web/art/journey/malachi-messenger-refiner.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-1d90a731-4c73-4ecc-b8ff-01907fa2a815.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic symbolic literary tableau for Malachi 3:1–4, landscape 3:2, requested 1536x1024.\n\nA single coherent prophetic tableau that makes Malachi's metaphors legible without claiming a documented historical visit to a specific temple workshop or settling later fulfillment identities. In a modest generic stone courtyard, an ordinary adult messenger approaches a simple open doorway, carrying a closed, unreadable scroll. Nearby, a seated adult refiner tends a small controlled furnace and carefully purifies a piece of silver in a crucible. Two adult priests in plain linen wait beside a simple offering bowl. At the refiner's feet, a small basin of water and pale soap supports one folded cloth, a quiet visual cue for the fuller's soap in the oracle. No named portrait or invented identity is claimed. The people and their work are the subjects.\n\nComposition: keep every person, doorway, furnace, crucible, bowl, cloth, basin, and offering within x=5–57%. Messenger and doorway around x=18%, refiner around x=34%, priests around x=48%, soap basin around x=43%. Reserve x=63–100% as completely open, low-detail pale sky and bare courtyard ground for reader overlay; x=57–63% is an empty buffer. No structures, people, tools, or materials beyond x=57%. Top and bottom 12% noncritical. One continuous tableau, no montage, split panels, inset, or repeated figures.\n\nThe messenger is a generic person, not a named later fulfillment; do not depict the Lord as a human figure. The refiner and fuller references are prophetic metaphors, not a claim that this exact workshop or visit occurred. Show restrained natural furnace fire and careful work, not magical or supernatural effects. Generic ancient setting without identifiable temple architecture, recognizable ruins, or archaeological claim. Warm gold, muted limestone, ochre, olive, and cream cloth; realistic cinematic historical painting matching supplied Bible illustration references, tactile silver, stone, wool, and earth. Dignified, purposeful, restrained.\n\nThe passage says the messenger prepares the way, compares the coming to a refiner's fire and fuller's soap, and describes purification so the offering may be righteous. Preserve that as the oracle's language without assigning a settled fulfillment.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, identifiable monuments, elaborate temple, archaeological claims, deity, human divine figure, halo, magical glow, religious iconography, extra episodes, crowds, dramatic violence, large conflagration, detailed background architecture, clutter or meaningful details in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "163dcc28bb05932ae6c77b3d5339e36eca35247af57c73f3463e6d6b698ed87d",
+  "sha256": "41db64e7606f1ee0afabef76b0d89fdcda4098044a27ac8bd0c8d82854227442",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
