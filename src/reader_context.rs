@@ -189,7 +189,13 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
     } else if mode == "journey" {
         if book == 0 && (2..=4).contains(&chapter) {
             genesis(chapter, verse, client)
-        } else if let Some(scene) = super::passage_scenes::render(book, chapter, verse, client) {
+        } else if let Some(scene) = super::passage_scenes::render_selected(
+            book,
+            chapter,
+            verse,
+            q.get("subject").map(String::as_str),
+            client,
+        ) {
             scene
         } else if let Some(scene) = super::journey_scenes::render(book, chapter, verse, client) {
             scene

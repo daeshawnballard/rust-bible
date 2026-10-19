@@ -100,6 +100,22 @@ fn active_hotspot(scene: &Scene, chapter: usize, verse: usize) -> Option<&Hotspo
         .find(|h| in_ranges(&h.active, chapter, verse))
 }
 
+fn selected_hotspot<'a>(
+    scene: &'a Scene,
+    chapter: usize,
+    verse: usize,
+    subject: Option<&str>,
+) -> Option<&'a Hotspot> {
+    subject
+        .and_then(|id| {
+            scene
+                .hotspots
+                .iter()
+                .find(|h| h.id == id && in_ranges(&h.active, chapter, verse))
+        })
+        .or_else(|| active_hotspot(scene, chapter, verse))
+}
+
 fn ref_label(book: usize, range: &VerseRange) -> String {
     let end = if range.first == range.last {
         String::new()
@@ -181,11 +197,12 @@ fn render_html(scene: &Scene, active: Option<&Hotspot>, client: bool) -> String 
         let reference = ref_label(scene.book, &hotspot.anchor);
         let label = format!("Inspect {} · {}", hotspot.title, reference);
         html.push_str(&format!(
-            r#"<a class="story-journey-pin" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" style="left:{}%;top:{}%" aria-label="{}"{}><span aria-hidden="true">●</span><span>{}</span></a>"#,
+            r#"<a class="story-journey-pin" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" data-context-subject="{}" style="left:{}%;top:{}%" aria-label="{}"{}><span aria-hidden="true">●</span><span>{}</span></a>"#,
             esc(&href(scene.book, &hotspot.anchor, client)),
             esc(&book_slug),
             hotspot.anchor.chapter,
             hotspot.anchor.first,
+            esc(&hotspot.id),
             hotspot.x,
             hotspot.y,
             esc(&label),
@@ -241,7 +258,10 @@ fn render_html(scene: &Scene, active: Option<&Hotspot>, client: bool) -> String 
         html.push_str(
             &read_link(scene.book, &hotspot.anchor, client, &label).replacen(
                 "data-context-read",
-                "data-context-read data-context-inspect",
+                &format!(
+                    "data-context-read data-context-inspect data-context-subject=\"{}\"",
+                    esc(&hotspot.id)
+                ),
                 1,
             ),
         );
@@ -252,8 +272,19 @@ fn render_html(scene: &Scene, active: Option<&Hotspot>, client: bool) -> String 
 
 /// Render only when this exact verse belongs to an authored passage scene.
 pub(super) fn render(book: usize, chapter: usize, verse: usize, client: bool) -> Option<Value> {
+    render_selected(book, chapter, verse, None, client)
+}
+
+/// Inspect a named subject without changing the passage or relying on a unique verse anchor.
+pub(super) fn render_selected(
+    book: usize,
+    chapter: usize,
+    verse: usize,
+    subject: Option<&str>,
+    client: bool,
+) -> Option<Value> {
     let scene = scene_for_verse(book, chapter, verse)?;
-    let active = active_hotspot(scene, chapter, verse);
+    let active = selected_hotspot(scene, chapter, verse, subject);
     Some(json!({
         "kind": "story",
         "id": scene.id,
@@ -310,7 +341,6 @@ mod tests {
                     assert!(covered.insert((scene.book, r.chapter, v)));
                 }
             }
-            let mut active_verses = HashSet::new();
             for h in &scene.hotspots {
                 assert!(hotspot_ids.insert(h.id.as_str()));
                 assert!(!h.title.trim().is_empty() && !h.note.trim().is_empty());
@@ -320,7 +350,6 @@ mod tests {
                     valid_range(scene.book, r);
                     for v in r.first..=r.last {
                         assert!(in_ranges(&scene.ranges, r.chapter, v));
-                        assert!(active_verses.insert((r.chapter, v)));
                     }
                 }
                 valid_range(scene.book, &h.anchor);
@@ -329,6 +358,19 @@ mod tests {
                     .iter()
                     .any(|r| contains(r, h.anchor.chapter, h.anchor.first)
                         && contains(r, h.anchor.chapter, h.anchor.last)));
+                let inspected = render_selected(
+                    scene.book,
+                    h.anchor.chapter,
+                    h.anchor.first,
+                    Some(&h.id),
+                    true,
+                )
+                .unwrap();
+                assert_eq!(inspected["active"], h.id);
+                assert!(inspected["html"]
+                    .as_str()
+                    .unwrap()
+                    .contains(&format!("data-context-subject=\"{}\"", esc(&h.id))));
                 for r in &h.sources {
                     valid_range(scene.book, r);
                 }
@@ -397,5 +439,57 @@ mod tests {
             assert!(scene_for_verse(b, chapter, verse).is_none());
             assert!(render(b, chapter, verse, true).is_none());
         }
+    }
+
+    #[test]
+    fn a_shared_verse_keeps_each_subject_independently_inspectable() {
+        let range = VerseRange {
+            chapter: 5,
+            first: 8,
+            last: 8,
+        };
+        let hotspot = |id: &str| Hotspot {
+            id: id.into(),
+            title: id.into(),
+            x: 30.0,
+            y: 40.0,
+            active: vec![range],
+            anchor: range,
+            sources: vec![range],
+            note: "A named image in the verse".into(),
+            detail: None,
+        };
+        let scene = Scene {
+            id: "shared-verse-test".into(),
+            book: 51,
+            title: "Armor imagery".into(),
+            coverage: "1 Thessalonians 5:8".into(),
+            art: Art {
+                path: String::new(),
+                width: 1536,
+                height: 1024,
+                alt: String::new(),
+            },
+            caption: String::new(),
+            ranges: vec![range],
+            intro: Intro {
+                title: String::new(),
+                note: String::new(),
+            },
+            hotspots: vec![hotspot("breastplate"), hotspot("helmet")],
+        };
+        assert_eq!(
+            selected_hotspot(&scene, 5, 8, None).unwrap().id,
+            "breastplate"
+        );
+        assert_eq!(
+            selected_hotspot(&scene, 5, 8, Some("helmet")).unwrap().id,
+            "helmet"
+        );
+        assert_eq!(
+            selected_hotspot(&scene, 5, 8, Some("unknown")).unwrap().id,
+            "breastplate"
+        );
+        assert!(selected_hotspot(&scene, 5, 9, Some("helmet")).is_none());
     }
 }

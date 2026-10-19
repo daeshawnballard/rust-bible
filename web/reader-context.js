@@ -222,6 +222,7 @@ export function initReaderContext(root=document) {
     const kind=mode==='passage'?'availability':mode;
     const params=new URLSearchParams({book:reference.bookIndex,chapter:reference.chapter,verse:reference.verse,mode:kind});
     if(part)params.set('part',part);
+    if(inspected?.subject)params.set('subject',inspected.subject);
     try{
       const result=await request('/api/reader-context?'+params);
       if(!active||run!==generation)return;
@@ -288,7 +289,7 @@ export function initReaderContext(root=document) {
   }
   const inspectLink=target=>{
     const ch=Number(target.dataset.contextChapter),v=Number(target.dataset.contextVerse);
-    inspected={book:target.dataset.contextBook,bookIndex:position.bookIndex,chapter:ch,verse:v,route:'/book/'+target.dataset.contextBook.replaceAll(' ','-')+'/'+ch};
+    inspected={book:target.dataset.contextBook,bookIndex:position.bookIndex,chapter:ch,verse:v,subject:target.dataset.contextSubject||null,route:'/book/'+target.dataset.contextBook.replaceAll(' ','-')+'/'+ch};
     part=null;tab='context';refresh();
   };
   on(reader,'click',event=>{
