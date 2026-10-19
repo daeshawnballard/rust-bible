@@ -1,0 +1,25 @@
+{
+  "id": "passage-ezekiel-dry-bones",
+  "source": "assets/imagegen/source/journey/ezekiel-dry-bones.png",
+  "final": "web/art/journey/ezekiel-dry-bones.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-d4426b5b-9c39-4fc0-9202-158f5976e350.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic literary illustration for Ezekiel 37:9–10, landscape 3:2, requested 1536x1024.\n\nShow one coherent moment from the prophet's vision: Ezekiel, a clearly visible adult prophet in simple ancient linen and mantle, stands at left and speaks toward a group of fully clothed people as a strong gust of wind enters them and they rise to their feet. The group represents the bodies that the vision says live and stand; their faces and upright human forms must be readable. Add only a few clean, dry bones scattered at Ezekiel's feet to indicate the valley described just before this moment. No gore, exposed flesh, skeletal bodies, or battlefield.\n\nKeep Ezekiel and every person and bone within x=10% to x=62%. Place Ezekiel around x=25%, the standing company around x=40–58%, all subjects grouped visibly in the left half. The right 38% of the frame must remain quiet low-detail open valley and pale sky for reader text overlay. Low detail at top and bottom. No collage, diptych, multiple times, or separate vignettes.\n\nThe wind may be suggested only by moving dust, cloth hems, and dry grasses. Do not show breath, spirit, God, or the LORD as any person, face, body, beam, halo, or luminous figure. This is explicitly Ezekiel's prophetic vision; do not treat it as archaeology or resolve disputed historical or resurrection readings beyond the text. The passage itself later identifies the bones as the house of Israel; this focused scene shows only verses 9–10.\n\nVisual style: realistic cinematic historical/literary painting matching the supplied references' warm gold, tactile linen and limestone, restrained natural colors, grounded human scale. Hopeful but solemn.\nAvoid: words, letters, captions, labels, verse numbers, pins, UI, logos, watermark, modern objects, map, recognizable monument, weaponry, armor, active battle, corpses, frightening anatomy, emaciated living people, deity, religious iconography, angels, glowing magic, empty valley diorama, unreadable tiny subjects, or any person/bone in right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "7d83c106477643a9e3faa8e9e3eab8630e97973753a486f0df282caee086752f",
+  "sha256": "d73b694e3145c55f0d03eb72ae33a2ffe428f32ba0193c0b158ea87d5f925929",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
