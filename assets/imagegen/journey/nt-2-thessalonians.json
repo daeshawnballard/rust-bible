@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-2-thessalonians",
+  "source": "assets/imagegen/source/journey/nt-2-thessalonians.png",
+  "final": "web/art/journey/nt-2-thessalonians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-a7ff3daf-82b5-48b1-99c3-0259c2ffe60e.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of 2 Thessalonians 3:10–13, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One ordinary, unlocated household moment used only as an editorial example of quiet work and continuing to do good; not a specific historical event or named occupation.\nSubject/action: Show three fully clothed adults at one simple low worktable. One calmly kneads dough by hand, absorbed in steady useful work. Beside them, the other two share a small loaf across the table with unhurried, kind expressions; they are peers, with no depiction of destitution. Make the handwork and bread exchange distinct and readable within one continuous communal moment. The tasks are illustrative examples of the letter’s general instruction, not an event or occupation named by the text.\nComposition/framing: Medium-wide view from several paces away. Keep all people, kneading hands, dough, and the bread exchange wholly within the left 60%, with both focal hand actions below the upper 12% of the image. Keep heads below the 15% line and feet above the 88% line if visible. Leave open air above and ground below. Reserve the right 30% as quiet, low-detail background for a reading panel. One continuous scene, not a collage or sequence.\nStyle/materials: Warm realistic historical illustration; period-evocative simple woven garments, natural hands and faces, tactile dough, wooden table and plain bread, soft golden natural light, subdued earth pigments.\nConstraints: This scene is illustrative, not a documented event or specific trade. Keep the focus on useful handwork, calm persistence, and a modest act of care. No poverty spectacle, scolding, laziness caricature, text, inscriptions, symbols, map, modern items, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "6862c44f2ffad7d4d9944f53261dd9314644d18a77233bf6a399272935a5ea3d",
+  "sha256": "9622469439c2528de4c1774c7c5fc7d724423315a9613cf93efe0aded9f35615",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
