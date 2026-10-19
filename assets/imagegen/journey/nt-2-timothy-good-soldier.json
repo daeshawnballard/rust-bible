@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-2-timothy-good-soldier",
+  "source": "assets/imagegen/source/journey/nt-2-timothy-good-soldier.png",
+  "final": "web/art/journey/nt-2-timothy-good-soldier.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-143326a2-e91b-437f-bbf1-e93d87a8f8d3.png",
+  "prompt": "Create one finished landscape symbolic editorial illustration for a Bible-reading website, exactly 1536x1024, based on Paul’s good-soldier comparison in 2 Timothy 2:3–4. Show a single adult soldier in understated first-century Roman-style clothing and practical armor, standing steady in a gust of wind. He is not fighting; his weapon is absent or securely sheathed, his posture attentive and composed. Near his feet, a few ordinary household or market objects and loose, unknotted cords lie undisturbed as a restrained visual sign of daily entanglements he avoids; do not bind the soldier or suggest family and care are wrong. Do not show an enlisting commander as a divine or named figure. This is expressly a literary analogy, not a historical combat scene or military journey. Keep every story-critical person and object entirely inside the left 65 percent of frame; reserve the rightmost 30 percent as quiet, low-detail warm stone and open sky for a passage panel; keep top and bottom 12 percent free of critical detail. Match the accepted reference images only in realistic cinematic historical-literary style, warm tactile gold and earth materials, natural light, detailed cloth, leather, and stone, restrained dignity. Do not copy their people or composition. No battle, enemy, blood, banner, map, route, readable writing, text, UI, labels, pins, border, logo, or watermark; no supernatural glow. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "dd6a9060248178491ac0b685197ad23a204fde519cda101711ed7dd3c1b5c04f",
+  "sha256": "a1f03df9f6fe34eb619a267f90cb10a71d44b02c75fdceaf4a2ac67089f99a2c",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
