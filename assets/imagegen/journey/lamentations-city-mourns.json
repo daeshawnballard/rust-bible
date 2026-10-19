@@ -1,0 +1,25 @@
+{
+  "id": "passage-lamentations-city-mourns",
+  "source": "assets/imagegen/source/journey/lamentations-city-mourns.png",
+  "final": "web/art/journey/lamentations-city-mourns.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-ee4dd9f9-9696-4f91-b95d-d018763ae3f1.png",
+  "prompt": "Use case: illustration-story. Create one subject-led cinematic historical/literary illustration of Lamentations 1:1–11, requested 1536x1024, wide landscape 3:2.\n\nMain visible subject: one adult woman, a literary personification of Daughter Zion as a grieving widow, seated on a low stone threshold in the left foreground of a deserted ancient Levantine street. She is fully visible from head to feet, with a readable tearful face, lowered head, and one hand reaching slightly outward as if seeking comfort. Her adult figure must be entirely within x=12% to x=48% of the canvas. Use simple layered dark earth-tone woven garments and a plain veil; dignified, non-sensual, no specific historical identity or portrait claim. The woman is the unmistakable visual focus, not a tiny figure.\n\nSetting: one empty, quiet limestone street, closed simple doorways and a distant gate, suggesting the poem's city sitting alone. Keep the architecture restrained and generic; do not depict a known site, specific destroyed Jerusalem, battle, invaders, or archaeological reconstruction. A single distant passerby at most, small and turned away in the far left half, to suggest abandonment; leave out crowds and any active looting. This is a literary scene, not an eyewitness image.\n\nComposition: keep the woman and all meaningful objects left of x=60%. Reserve the entire right 38% (x=62% to edge) as quiet, low-detail stone wall and subdued dusk sky for reader overlay. Wide horizontal street receding gently behind the woman, but do not make an empty landscape the focus. No panels or montage. Top and bottom 12% noncritical.\nStyle: realistic cinematic historical/literary painting, warm restrained golden light and tactile stone, linen and dust, matching the supplied biblical illustration references. Palette muted ochre, soot-gray, indigo, faded olive, soft cream. Mood mournful, humane, contemplative, no sensationalism.\n\nMetadata interpretation guidance: the poem personifies a city as a widow; the woman represents that literary image and is not a portrait of a documented individual. Do not literalize God or explain theology through extra imagery.\nAvoid: text, letters, captions, labels, verse numbers, pins, UI, logos, watermark, map, scroll, writing tools, modern objects, recognizable monuments, detailed ruins, flames, violence, corpses, active looting, deity or God-in-human-form, halo, magical glow, exaggerated expression, empty landscape diorama, tiny subject, or any person/animal in the right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "3f5e47b63fe4e0c56750d898f4c0ccef5714b6833aae60fe7b7a93a122d899dd",
+  "sha256": "f1b262c7d963b6e0d7c0ede8372fe2f13c519c1c95383b5d3fda25a9cabfc893",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
