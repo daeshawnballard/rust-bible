@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-1samuel-david-goliath",
+  "source": "assets/imagegen/source/journey/ot-1samuel-david-goliath.png",
+  "final": "web/art/journey/ot-1samuel-david-goliath.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-e8a3d716-61b7-412e-84f6-976aa95c3b7b.png",
+  "prompt": "prompts/1samuel-david-goliath-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "34b52329613ef6a714b7def8b2138287dec20fc55c08d0814441cd2da6ad9f05",
+  "sha256": "8e20eccc354082cdd58b6e68640c96bb5f646c8a25eacbefbb3492cf8897f66f",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
