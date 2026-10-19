@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-1corinthians",
+  "source": "assets/imagegen/source/journey/nt-1corinthians.png",
+  "final": "web/art/journey/nt-1corinthians.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-1b3a997c-974c-4ab2-b1a3-51ff23dbc058.png",
+  "prompt": "Use case: illustration-story.\nAsset type: individual Bible Journey illustration of Paul’s literary comparison in 1 Corinthians 12:12–27, landscape 1536×1024, full frame, no interface or text.\nInput images: Image 1 and Image 2 are approved style references only. Match their warm cinematic realism, natural proportions, tactile materials, nuanced light, and respectful storytelling. Do not reproduce their scenes, characters, or compositions.\nScene/backdrop: One unlocated community gathering used to illustrate Paul’s comparison of one body with many members. This is not a documented historical event or a claim about a specific church meeting.\nSubject/action: Show a small group of distinct, fully clothed ordinary people who belong together. Their faces and ages vary naturally; no one is a copy or a stand-in for a named person. One member sits comfortably while companions make room, gently offer a hand, and respond with attentive, caring expressions. Keep them visibly separate human beings with ordinary intact bodies; this illustrates mutual care, not anatomical parts.\nComposition/framing: Use a medium-wide view from several paces away; the group should occupy about 60% of the canvas height, not fill the frame vertically. Show the figures from waist or knee up, with all heads fully visible and their hair beginning below the 18% line; keep the group’s lower edge above the 85% line. Do not crop any head, hand, or caring interaction at a frame edge. Place the whole group within the left 60%; reserve the right 30% as quiet, low-detail wall and open floor for a reading panel. Leave visible space above the heads and below the group. One continuous scene.\nStyle/materials: Warm cinematic realistic illustration; simple period-evocative woven garments without assigning identities, tactile cloth and wood, natural expressive faces and hands, restrained earth pigments, soft natural light.\nConstraints: This is an editorial visual aid for Paul’s body-and-members comparison, not a historical scene. No hybrid bodies, floating body parts, gore, rank insignia, disability stereotypes, text, labels, captions, writing, symbols, banners, maps, modern objects, pins, logos, border, or watermark.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "81e882e581127ab2340ea90e2048d1f32e9b762dbcd7e851cf67a5e53a7c0a7c",
+  "sha256": "09a85aff9d63a8dd44656eda35fec63cd19314eb6ad3fa8ede6fd3654469636b",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
