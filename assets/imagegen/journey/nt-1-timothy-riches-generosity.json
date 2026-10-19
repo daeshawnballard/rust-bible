@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-1-timothy-riches-generosity",
+  "source": "assets/imagegen/source/journey/nt-1-timothy-riches-generosity.png",
+  "final": "web/art/journey/nt-1-timothy-riches-generosity.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-b9dadbdf-8874-40c5-8951-e4be3428c0d4.png",
+  "prompt": "Create one finished landscape editorial illustration for a Bible-reading website, exactly 1536x1024, showing a single coherent teaching scene from 1 Timothy 6:17–19. In the left half, an adult in simple early Roman-era clothing calmly sets a modest leather coin purse aside on a low wooden surface, then turns to share a small basket of bread and useful cloth with another adult whose hands are open to receive it. Keep the coin purse and the act of sharing as the two immediately legible focal details. These are editorial figures illustrating a letter's instruction, not named historical people or a claim about a particular place. Composition: all story-critical people, hands, purse, basket and goods fit entirely inside the left 65 percent of the frame. Reserve the rightmost 30 percent as quiet, low-detail warm stone and softly lit background for an app passage panel. Keep the top and bottom 12 percent free of critical detail. Match only the accepted references' visual language: realistic cinematic historical-literary illustration, tactile gold and earth materials, natural soft light, nuanced cloth and stone texture, restrained dignified human expressions. Do not copy their figures or composition. No readable writing anywhere, no text or symbols, no UI, labels, pins, borders, logo, or watermark. Avoid luxury, shame, or villainy around wealth; avoid any supernatural glow or suggestion that giving guarantees a reward. The image itself contains no biblical wording.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "a139467181f1f3496206b42743b843f5cfc0da728af0ce7f01d7d508be009a60",
+  "sha256": "bd7cc08558e749966e3490e5725b20df0bbf112294b7f82d8b75294eff80286a",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
