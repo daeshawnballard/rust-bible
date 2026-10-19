@@ -1,0 +1,25 @@
+{
+  "id": "passage-ot-esther-second-banquet",
+  "source": "assets/imagegen/source/journey/ot-esther-second-banquet.png",
+  "final": "web/art/journey/ot-esther-second-banquet.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-cb9b0d9f-b93f-4880-a714-8be9558cd4c1.png",
+  "prompt": "prompts/esther-second-banquet-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "e4bdeefc91a9e074146df56d571a6fe7125e9d439fa19188d5b272f4d0354393",
+  "sha256": "2a9ec696e2d4d6c927677f6f2e5932c9227cf90ebbcb2b7172d85a51ae0f613c",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
