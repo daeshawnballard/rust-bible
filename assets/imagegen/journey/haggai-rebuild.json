@@ -1,0 +1,25 @@
+{
+  "id": "passage-haggai-rebuild",
+  "source": "assets/imagegen/source/journey/haggai-rebuild.png",
+  "final": "web/art/journey/haggai-rebuild.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-3ac2e00b-8f15-460d-bbef-46b0edd6782c.png",
+  "prompt": "Use case: illustration-story. Create one realistic cinematic historical illustration for Haggai 1:12–15, landscape 3:2, requested 1536x1024.\n\nA small, coherent worksite moment after Haggai's message. Three clearly readable adult men stand together: Haggai speaking, with Zerubbabel and Joshua listening as the named leaders; nearby, one worker lifts a short timber to begin the work. Use generic adult figures without invented likenesses or extra identities. Show the people turning toward the work together. No ornate priestly costume or royal crown.\n\nComposition is strict: keep all people, the small timber, tools, stones, and unfinished foundation within x=5–55%. Haggai around x=19%, the two leaders around x=32%, worker around x=47%. Reserve all of x=60–100% as completely open, low-detail pale sky and bare courtyard ground for reader overlay; x=55–60% is an empty buffer. No structures, materials, or people beyond x=55%. Top and bottom 12% noncritical. One continuous scene, not a montage or map.\n\nShow only a small schematic unfinished foundation and a few simple stones and timber pieces at the group's feet, all ending by x=52%. No scaffolding, long walls, background work crew, temple facade, columns, ornaments, or invented architectural details. Generic ancient setting without identifiable ruins, modern city boundary, or archaeological claim. Warm afternoon gold, muted limestone, ochre, dusty olive, and cream cloth; realistic cinematic historical painting matching supplied Bible illustration references, tactile stone, timber, and work clothing. Purposeful and hopeful.\n\nThis illustrates the text's account: Zerubbabel, Joshua, and the remnant heed Haggai and begin work in the house of the LORD. The passage dates the renewed work to the twenty-fourth day of the sixth month in Darius's second year. Do not add chronology or architectural claims. Do not depict the LORD as a person or represent divine stirring through supernatural effects.\n\nAvoid: text, letters, captions, labels, names, verse numbers, pins, UI, logos, watermark, maps, modern objects, recognizable monuments, elaborate temple, structures or materials beyond x=55%, background workers, ornate regalia, deity, human divine figure, halo, magical glow, religious iconography, extra episodes, crowded backdrop, clutter or meaningful details in right third.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "ee6d275e38c541e023f0f1a5dbbb96090cf55ff1cbd1cb9462d035cb333fb7a7",
+  "sha256": "c6dcda5e260d32cba63296bf4bc9d2bd3f4bd8d4d095a07a45e63af0c3a3bcf4",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
