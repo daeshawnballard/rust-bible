@@ -1,0 +1,25 @@
+{
+  "id": "passage-song-beloved-spring",
+  "source": "assets/imagegen/source/journey/song-beloved-spring.png",
+  "final": "web/art/journey/song-beloved-spring.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-b6b95078-931f-476b-8b42-ffe3847d5dca.png",
+  "prompt": "Use case: illustration-story\nAsset type: one production-wide illustration for a literary Bible passage; requested canvas 1536x1024 pixels, landscape 3:2.\nPrimary request: Create one intimate springtime moment inspired by Song of Solomon 2:8–14. The beloved stands close beside a wooden lattice window, looking through it; her lover appears just beyond a low stone wall, calling to her. Spring flowers and fresh vine leaves show the season. These are open-ended poetic speakers, not a named historical couple or allegory.\nScene/backdrop: A modest garden dwelling and low courtyard wall in a timeless literary Levantine setting; use only the lattice, wall, flowers, vine, and fig leaves named in the poem.\nSubject: Two clearly readable adult human faces and upper bodies: beloved near the lattice, lover visible just outside. The lover’s face and full visible figure must stay left of x=62% of the canvas. Put the beloved near x=20%, lover near x=50–55%; do not place any person or animal in the right third.\nStyle/medium: Realistic cinematic historical/literary illustration. Match the project references’ natural golden light, tactile woven cloth, wood, and limestone, grounded human scale, and restrained realism. Literary reconstruction, not documentary history.\nComposition/framing: 3:2 wide landscape. Place all critical subjects, faces, and lattice between x=10% and x=62%. Leave the entire right 38% as quiet, low-detail courtyard wall and soft foliage for reader overlay. Keep top and bottom 12% noncritical. One continuous encounter, no montage or split panels.\nLighting/mood: Warm late-morning spring light, gentle shadows, tender and expectant without sensualized framing.\nColor palette: Warm ochre, olive green, soft cream, dusty rose, restrained gold.\nMaterials/textures: Weathered lattice, limestone wall, woven adult clothing, young vine leaves and blossoms.\nConstraints: Respectful adult figures; no nudity. The poem does not specify the couple’s appearance, date, or exact dwelling; do not imply a documented identity or site.\nAvoid: Any text, letters, captions, labels, pins, UI, logos, watermark, modern objects, maps, animals, deity or God-in-human-form, religious iconography, exaggerated fantasy, empty landform diorama, unreadable text-like marks.",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "e37056ba9ef451fa566a7d95271d2775462532ef0bbd6b6bfea9163d5b2c7623",
+  "sha256": "1834d8e51bfd10fc5283ad8e5815afceca04320eebf664581c3e845d4392d9f6",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Root inspected the full final raster and its named subjects. Hotspot coordinates were checked against the accepted image. Appearance and setting are illustrative; literary images are labeled in the reader."
+}
