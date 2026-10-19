@@ -1,0 +1,25 @@
+{
+  "id": "passage-nt-2-john-truth-and-love",
+  "source": "assets/imagegen/source/journey/nt-2-john-truth-and-love.png",
+  "final": "web/art/journey/nt-2-john-truth-and-love.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-1626b630-b4b5-4ea1-9864-0915828f443a.png",
+  "prompt": "Create a third, materially reframed 1536x1024 landscape literary editorial illustration for 2 John 1:4–6. Use a wide, calm composition with one modest blank open papyrus letter in the lower-left foreground and, beside it in the middle distance, two clearly recognizable but small full-body adults walking together along a short symbolic strip of ground. Make each walker no taller than 18 percent of image height; place their heads around y=35% and their feet around y=53%, entirely inside x=18–46%. Keep the short path between y=48–64%, ending before the center. Place the blank letter between x=5–38% and y=66–82%; it has no ink, pseudo-writing, lines, columns, seals, or symbols. Leave the top 15% and bottom 15% entirely free of people and letter. The figures, adjacent path, and letter are one editorial image of walking in truth, love, and the commandment; the path does not continue to a horizon or suggest a real trip. The rightmost 40% is an empty, smooth warm stone-and-earth gradient with no objects. Use anonymous people in simple period-neutral garments and no identifiable place, house, or event. Follow the accepted references only in realistic cinematic rendering, warm tactile gold and earth materials, soft natural light, and detailed papyrus; do not copy their composition. No writing of any kind, readable text, UI, labels, pins, borders, logo, watermark, route, map, destination, halo, or supernatural symbolism. The image itself contains no biblical wording.\n",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "d6745a104e6bc79038ab0bc808daeefe1080da975b6f6c239dba374e3cd86747",
+  "sha256": "ce07bac1a5744c1af14cf17fe7ee3c6c8e206621e07c3f8183f39acf0af62afd",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled."
+}
