@@ -1,0 +1,26 @@
+{
+  "id": "passage-ot-2chronicles-temple-cloud",
+  "source": "assets/imagegen/source/journey/ot-1kings-temple-cloud.png",
+  "final": "web/art/journey/ot-1kings-temple-cloud.webp",
+  "intended_use": "Passage-specific Journey illustration",
+  "generator": "built-in ImageGen",
+  "generation_file": "exec-347e1032-b9d4-456b-884f-ca82f85afcbd.png",
+  "prompt": "prompts/1kings-temple-cloud-v1.txt",
+  "processing": [
+    "webp_quality_90_no_resizing"
+  ],
+  "dimensions": {
+    "width": 1536,
+    "height": 1024
+  },
+  "format": "webp",
+  "alpha": false,
+  "source_sha256": "5c969ac41b3bb7d3b1a8598034d481f07e9b76a11c2e09a30fe76e3cfc371ab6",
+  "sha256": "4a3e5d7b4fcfa40e375f55315893ca836c4b776bc01d38d6dfc220dd47a817b1",
+  "style_references": [
+    "web/art/journey/abraham-sarah-visitors-v2.webp",
+    "web/art/journey/numbers-balaam-donkey.webp"
+  ],
+  "notes": "Final raster reviewed against the named subjects; account-specific references remain in the scene registry. Historical appearances are reconstructed and literary scenes are labeled.",
+  "shared_artwork": "ot-1kings-temple-cloud"
+}
