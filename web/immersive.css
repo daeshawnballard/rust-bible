@@ -73,7 +73,7 @@ body.has-reader:not(.has-scene) .has-floating-journey .reader-modes button { bac
 .reader-context { background:none; position:static; top:auto!important; border:0; border-radius:0; padding:0; }
 .reader-context .reader-context-heading[hidden], [hidden] { display:none!important; }
 .passage-window-footer { display:none; }
-.reader-canvas { position:fixed; inset:0; overflow:hidden; z-index:0; background:#171a18; touch-action:none; user-select:none; cursor:grab; }
+.reader-canvas { position:fixed; inset:0; overflow:clip; z-index:0; background:#171a18; touch-action:none; user-select:none; cursor:grab; }
 .reader-canvas:active { cursor:grabbing; }
 .reader-canvas a,.reader-canvas button { cursor:pointer; }
 .journey-world { position:absolute; transition:left .65s ease; }
