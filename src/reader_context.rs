@@ -187,9 +187,7 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
             json!({"kind":"empty","title":"Illustrations","html":"<div class=\"reader-context-empty\"><h3>No illustrated study in this chapter yet</h3><p>Illustrations appear alongside the passages they explain. Current studies cover Noah’s Ark (Genesis 6–9), the Tabernacle (Exodus 25–31 and 35–40), and the Sower (Matthew 13).</p><p>Keep reading in Passage, or use Journey to see any available setting.</p></div>"})
         }
     } else if mode == "journey" {
-        if book == 0 && (2..=4).contains(&chapter) {
-            genesis(chapter, verse, client)
-        } else if let Some(scene) = super::passage_scenes::render_selected(
+        if let Some(scene) = super::passage_scenes::render_selected(
             book,
             chapter,
             verse,
@@ -197,6 +195,8 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
             client,
         ) {
             scene
+        } else if book == 0 && (2..=4).contains(&chapter) {
+            genesis(chapter, verse, client)
         } else if let Some(scene) = super::journey_scenes::render(book, chapter, verse, client) {
             scene
         } else if super::atlas::focused_state(book, chapter, verse)["available"] == true {
@@ -297,6 +297,29 @@ mod tests {
         let state: Value = serde_json::from_str(&response.body).unwrap();
         assert!(state["relevant_scene"].is_null());
     }
+    #[test]
+    fn precise_genesis_subjects_precede_the_legacy_landscape() {
+        for (chapter, verse, expected) in [
+            (1, 9, "genesis-creation-land"),
+            (3, 23, "genesis-east-of-eden"),
+            (4, 3, "genesis-brothers-offerings"),
+            (5, 22, "genesis-family-line"),
+        ] {
+            let response = super::super::route(
+                &format!("/api/reader-context?book=0&chapter={chapter}&verse={verse}&mode=journey"),
+                true,
+            );
+            let state: Value = serde_json::from_str(&response.body).unwrap();
+            assert_eq!(state["id"], expected);
+        }
+        let response = super::super::route(
+            "/api/reader-context?book=0&chapter=2&verse=8&mode=journey",
+            true,
+        );
+        let state: Value = serde_json::from_str(&response.body).unwrap();
+        assert_eq!(state["active"], "garden");
+    }
+
     #[test]
     fn context_never_duplicates_scripture_or_audio() {
         for uri in [

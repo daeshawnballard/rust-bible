@@ -118,13 +118,8 @@ const FLOOD_STOPS: &[Stop] = &[
                 first: 13,
                 last: 22,
             },
-            Passage {
-                chapter: 9,
-                first: 1,
-                last: 17,
-            },
         ],
-        note: "Noah leaves the ark and builds an altar; the following passage records the covenant. The grouped phases are schematic and do not mark surveyed geography.",
+        note: "Noah leaves the ark and builds an altar. The grouped phases are schematic and do not mark surveyed geography.",
     },
 ];
 
@@ -861,7 +856,7 @@ const SCENES: &[Scene] = &[
         book: 0,
         id: "flood",
         title: "Noah and the flood",
-        coverage: "Genesis 7–9:17",
+        coverage: "Genesis 7–8",
         alt: "Illustrated flood story phases gathered into one symbolic storyboard, not a geographic map",
         path: "M20 56 C29 49 34 44 42 39 S70 26 80 14 S76 32 70 44 S78 58 82 75",
         stops: FLOOD_STOPS,
@@ -1407,12 +1402,13 @@ mod tests {
 
     #[test]
     fn scene_transitions_and_recurring_places_follow_the_authored_ranges() {
+        assert!(render(0, 9, 17, true).is_none(), "the covenant bow has a separate precise scene");
         for (book, chapter, verse, expected) in [
             (0, 7, 7, "flood-entering-ark"),
             (0, 7, 17, "flood-waters-rise"),
             (0, 8, 4, "flood-ark-rests"),
             (0, 8, 8, "flood-birds"),
-            (0, 9, 17, "flood-dry-ground-and-altar"),
+            (0, 8, 20, "flood-dry-ground-and-altar"),
             (1, 13, 20, "wilderness-departure"),
             (1, 14, 21, "wilderness-sea"),
             (1, 15, 23, "wilderness-marah"),

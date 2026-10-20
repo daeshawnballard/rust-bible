@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "chapter": 21,
+      "slug": "hagar-well",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 21:14\u201319 selected moment: Hagar kneels at a desert well and gently gives her adolescent son Ishmael a drink from a leather water bottle. Both are close together near the center, visibly tired but relieved, with the stone-lined water opening immediately beside them. Dry Beer-sheba wilderness, sparse shrubs, distant desert hills. Focus on mother, lad and filled bottle/well. Do not depict an angel or deity. Three-quarter medium-wide view with beautiful golden atmospheric depth.",
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-5e05e907-9808-4038-8aa9-67837c72d5e9.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-5e05e907-9808-4038-8aa9-67837c72d5e9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-hagar-well.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-hagar-well.webp",
+      "source_sha256": "56bb4f78f9510b78dcafb80c1d03eb9d38e96d2c6b376266b98098c68bafddb7",
+      "final_sha256": "9387296c23afc4adb249504e4240dfe1c9770003faf7bc06493d4cdc31bc27e2",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 22,
+      "slug": "ram-thicket",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 22:9\u201314 selected non-graphic moment: an elderly bearded Abraham and his fully clothed son Isaac stand safe together beside a low stone altar stacked with unlit firewood. Immediately next to them a living ram has its curved horns caught in a dense thorny thicket. The safe father and son look toward the ram with relief. Compose ram, father and son close together near center. Rocky ancient highland, warm mountain dawn. No knife, no bindings, no sacrifice act, no fire, blood, injury, angel or divine figure. The ram is clearly alive.",
+      "title": "Abraham sees the ram caught in the thicket",
+      "first": 9,
+      "last": 14,
+      "introTitle": "A ram is provided",
+      "alt": "Abraham and Isaac stand safe beside a wood-covered stone altar and a living ram caught by its horns",
+      "note": "This selected, non-graphic reconstruction gathers the altar, Abraham and Isaac, and the ram of verse 13. It does not show the threatened sacrifice. Ages, faces, altar construction and exact mountain setting are illustrative, not established by this image.",
+      "h": [
+        [
+          "wood-altar",
+          "The altar and wood",
+          27,
+          62,
+          9,
+          9,
+          "Abraham builds an altar and arranges the wood. The visible stone construction is an illustrative choice."
+        ],
+        [
+          "ram-thicket",
+          "The ram in the thicket",
+          80,
+          55,
+          13,
+          14,
+          "Abraham sees a ram caught by its horns and offers it instead of his son. The image selects the living ram before the offering."
+        ],
+        [
+          "father-son",
+          "Abraham and Isaac",
+          42,
+          37,
+          11,
+          13,
+          "The angel calls from heaven to stop Abraham, and Isaac is spared. Their safe stance is an editorial reconstruction; no heavenly speaker is pictured."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-64a9b450-3c1e-43bc-b203-083b96f8c9fb.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-64a9b450-3c1e-43bc-b203-083b96f8c9fb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-ram-thicket.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-ram-thicket.webp",
+      "source_sha256": "9d351c6d4859fa1ae41783b11a48d21ca88d8c4851b2c5c9460ec56805f26a1e",
+      "final_sha256": "516aaa0dea5b158bdcb03c9be03d8e957eed944a04c9193c799e7fd18c71316c",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 23,
+      "slug": "machpelah-silver",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 23:16\u201320 selected purchase scene: elderly Abraham weighs pieces of silver on a small ancient balance scale on a low table, while Ephron watches across the table. Both men and the balance scale close together in the central 50% of image. A dark natural cave mouth in a limestone hillside is clearly visible directly behind them within the central region; a few witnesses at a respectful distance. Four hundred shekels represented by silver pieces without readable marks, not modern coins. Mamre/Hebron field with a few trees and tawny hills, warm afternoon light. Editorial condensation of the purchase and cave; no burial, body, text or deity.",
+      "title": "Abraham weighs silver for the field and cave",
+      "first": 16,
+      "last": 20,
+      "introTitle": "Machpelah becomes a burial place",
+      "alt": "Abraham weighs silver before Ephron and witnesses, with a cave entrance behind them",
+      "note": "The image condenses the public purchase of the field and cave into one selected scene. The balance, people, clothing and cave shape are illustrative; it is not a verified view of ancient Machpelah, and it does not depict Sarah's burial.",
+      "h": [
+        [
+          "weighed-silver",
+          "Four hundred shekels of silver",
+          50,
+          60,
+          16,
+          16,
+          "Abraham weighs the agreed silver to Ephron in the hearing of the sons of Heth. The balance and silver pieces visualize weighing; their number and form are not an archaeological claim."
+        ],
+        [
+          "machpelah-cave",
+          "The cave in the field",
+          49,
+          37,
+          17,
+          20,
+          "The field and its cave become Abraham's possession for a burial place. Verse 19 places Machpelah before Mamre, identified as Hebron; this cave's appearance is imagined."
+        ],
+        [
+          "ephron-sale",
+          "The witnessed purchase",
+          79,
+          42,
+          16,
+          18,
+          "Ephron receives the named price, and the purchase is made secure before the children of Heth. Their placement beside the cave is an editorial condensation."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-2577cbdf-868d-42a8-b91d-b3e181d19f8e.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-2577cbdf-868d-42a8-b91d-b3e181d19f8e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-machpelah-silver.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-machpelah-silver.webp",
+      "source_sha256": "aa9ded15a1aef2e794dc02ae9a43efc0cdac158f8aa843acfb60523b6d77a875",
+      "final_sha256": "1ff8bd772330a8640350d7b428df19639b579f49463a80e1b7bc62f8f09249b4",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 24,
+      "slug": "rebekah-camels",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 24:15\u201320 selected moment: Rebekah modestly dressed in long linen robe and head covering empties an earthenware pitcher into a low stone watering trough. Abraham's elderly travelling servant stands immediately beside her, and a thirsty camel lowers its head to drink on her other side. Keep the woman, servant, camel head and pitcher together between 30% and 70% of the frame width, show more distant camels in background. A stone well and ancient town beyond, evening warm gold sunlight, hospitality and purposeful action. No jewelry gift exchange, no text, no deity.",
+      "title": "Rebekah draws water for the servant's camels",
+      "first": 15,
+      "last": 20,
+      "introTitle": "Hospitality at the well",
+      "alt": "Rebekah pours water from her pitcher into a trough while a camel drinks and Abraham's servant watches",
+      "note": "The selected episode follows Rebekah's offer to water the camels. Clothing, faces, well construction and townscape are illustrative. The passage's earlier setting is outside the city of Nahor; this is not a verified view of that city.",
+      "h": [
+        [
+          "rebekah-pitcher",
+          "Rebekah and her pitcher",
+          40,
+          50,
+          15,
+          20,
+          "Rebekah comes with a pitcher, gives the servant a drink, and then empties water into the trough for his camels."
+        ],
+        [
+          "drinking-camel",
+          "Water for the camels",
+          29,
+          65,
+          19,
+          20,
+          "She offers to draw water until all the camels have finished drinking. The visible camel and trough show that act of hospitality."
+        ],
+        [
+          "abraham-servant",
+          "Abraham's travelling servant",
+          65,
+          38,
+          17,
+          19,
+          "The servant asks for a little water from her pitcher. She serves him before offering water for the animals; the illustration selects the later moment."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-1a484a18-cdd5-4bd7-951c-b824ab9d628f.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-1a484a18-cdd5-4bd7-951c-b824ab9d628f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-rebekah-camels.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-rebekah-camels.webp",
+      "source_sha256": "033adaa7040655b29181800344de6a5a4c6788ba833ce5b996ffb4aece8b4a52",
+      "final_sha256": "20c200a573326127ae8de0a6f45d3e35de3834d08946d201888b2241c9e5ed87",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 25,
+      "slug": "jacob-esau-stew",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 25:29\u201334 selected episode: adult twin brothers Jacob and Esau sit close together at a low camp table. Jacob in a plain woven robe passes a simple clay bowl of red lentil stew and flat bread toward Esau, a rugged tired hunter in modest earth-toned garments. Their heads, hands and bowl all between 32% and 68% of frame. Esau leans eagerly toward the food, Jacob thoughtful. A rustic tent and small cooking pot behind them, golden evening light in ancient Canaan. No writing or contract scroll; no weapons being used, no dramatic invented supernatural element.",
+      "title": "Jacob gives Esau bread and lentil stew",
+      "first": 29,
+      "last": 34,
+      "introTitle": "The birthright and the meal",
+      "alt": "Jacob passes a bowl of red lentil stew toward weary Esau, with bread on a low table",
+      "note": "This selected scene depicts the meal involved in the exchange of Esau's birthright. The brothers' clothing, faces and campsite are imagined. No written contract is implied by the passage or the illustration.",
+      "h": [
+        [
+          "red-pottage",
+          "Red lentil pottage",
+          53,
+          55,
+          29,
+          34,
+          "Esau returns faint from the field and asks for the red pottage. After his oath, Jacob gives him bread and lentil stew."
+        ],
+        [
+          "jacob-bargain",
+          "Jacob asks for the birthright",
+          34,
+          32,
+          31,
+          33,
+          "Jacob asks Esau to sell his birthright that day and to swear to the agreement. The visible handover condenses that exchange."
+        ],
+        [
+          "esau-meal",
+          "Esau chooses the meal",
+          67,
+          33,
+          30,
+          34,
+          "Esau says the birthright will not profit him as he feels near death, then eats, drinks and leaves. Verse 34 says he despised his birthright."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-d53b3115-4ede-4d80-adf5-523c98ec4a1d.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-d53b3115-4ede-4d80-adf5-523c98ec4a1d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-jacob-esau-stew.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-jacob-esau-stew.webp",
+      "source_sha256": "079c40a7ed3fc2912adb27935e04cdf4add2710f2c11b50f6f72439b89a9c34b",
+      "final_sha256": "ea346086df9fb472710a5192ccc7c5e3db3d2497d09251c2532c099f45bf2bbe",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 26,
+      "slug": "isaac-rehoboth",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 26:19\u201322 selected moment at Rehoboth after earlier disputes: Isaac a bearded mature man in a modest robe stands with one of his servants beside a newly dug well containing clear springing water. The servant holds a rough water bucket over the stone rim, and Isaac gestures thankfully toward the open valley. Men, bucket and well cluster centered between 32% and 68% of canvas. A modest flock and few tents in distant open land, no crowded opposing group. Sunlit golden valley, detailed tools and rope. No text, divine figure, modern well machinery, or fighting. Image depicts new room for settlement, not all three wells at once.",
+      "title": "Isaac finds room at Rehoboth",
+      "first": 19,
+      "last": 22,
+      "introTitle": "A well without strife",
+      "alt": "Isaac and a servant stand beside a well of clear water in an open valley",
+      "note": "The chosen scene represents Rehoboth in verse 22 after disputes at the earlier wells. The valley, stone rim, bucket and clothing are illustrative; the exact sites and ancient structures are not established by the image.",
+      "h": [
+        [
+          "rehoboth-water",
+          "The new well",
+          45,
+          76,
+          22,
+          22,
+          "Isaac moves and digs another well, for which they do not strive. The visible water and well stand for Rehoboth, not a composite of all three wells."
+        ],
+        [
+          "isaac-room",
+          "Isaac gives thanks for room",
+          56,
+          35,
+          22,
+          22,
+          "Isaac calls the well Rehoboth and says the Lord has made room for them to be fruitful in the land. His gesture is illustrative; no divine figure is depicted."
+        ],
+        [
+          "servant-work",
+          "Water after the digging",
+          36,
+          53,
+          19,
+          22,
+          "Isaac's servants find springing water, and successive disputes lead to the final uncontested well. The servant's water bucket is a reconstruction of the work, not a tool specified in these verses."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-d2e67844-ad48-4f2f-9e6e-4f08f86ee719.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-d2e67844-ad48-4f2f-9e6e-4f08f86ee719.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-isaac-rehoboth.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-isaac-rehoboth.webp",
+      "source_sha256": "0cc0b001e4e0682a9d5432e7753995ad5b6ebee2fa66eeeb2b0a662169dbe206",
+      "final_sha256": "37f8fe3554874dcf369dc5bd1194f476df6c598a9b0587c120a36400b79fe029",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 27,
+      "slug": "isaac-blesses-jacob",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 27:22\u201329 selected scene: elderly blind Isaac reclines fully clothed on woven bedding inside an ancient tent, gently feeling the covered hands of his adult son Jacob who kneels close beside him. Jacob's forearms and hands are covered with coarse goat hide as a disguise, worn over modest garments; no exposed torso. Main pair and joined hands cluster in the middle 50% width. A low tray with a prepared meal and clay cup of wine nearby. Soft warm light through the tent opening, intimate solemn realistic historical illustration, no deity, halo, inscriptions or modern objects. Focus on Isaac's uncertain touch and Jacob's deception before the blessing.",
+      "title": "Isaac feels Jacob's hands and blesses him",
+      "first": 22,
+      "last": 29,
+      "introTitle": "The voice and the hands",
+      "alt": "Isaac reclines on bedding and feels Jacob's hairy covered hands, with a prepared meal and cup nearby",
+      "note": "This selected reconstruction focuses on Isaac's touch before the blessing, gathering the nearby meal from verse 25 into the scene. Faces, furnishings and clothing are illustrative. The image does not represent God's appearance or certify the campsite.",
+      "h": [
+        [
+          "hands-disguise",
+          "The hands Isaac feels",
+          47,
+          46,
+          22,
+          24,
+          "Isaac says the voice is Jacob's but the hands are Esau's, and he does not discern him because the hands are hairy. Jacob claims to be Esau."
+        ],
+        [
+          "isaac-blessing",
+          "Isaac blesses his son",
+          20,
+          36,
+          26,
+          29,
+          "Isaac asks his son to come near and kiss him, then speaks a blessing of provision and rule. The illustration selects the touch earlier in this sequence."
+        ],
+        [
+          "meal-wine",
+          "The meal and wine",
+          27,
+          71,
+          25,
+          25,
+          "Jacob brings food for Isaac to eat and wine to drink. The tableware and presentation shown here are imagined."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-2ccc8e5c-12c4-44fc-b381-1e7971343183.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-2ccc8e5c-12c4-44fc-b381-1e7971343183.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-isaac-blesses-jacob.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-isaac-blesses-jacob.webp",
+      "source_sha256": "4578809fddb71b396a4adefa0fcdde88f57e381af497a7777b835ca3b103d851",
+      "final_sha256": "d16f1b2713f27b3b5eb68ebc53bec45fa625b2e7bae774cb3733b58745bbb770",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 28,
+      "slug": "jacob-ladder-dream",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 28:10\u201319 selected dream episode: Jacob lies asleep fully wrapped in a modest earth-toned robe, head resting against a simple stone in the lower center. Above him in a clearly dreamlike translucent golden mist, a luminous ladder reaches from earth toward an opening of light high in the sky, with small modest robed angel figures ascending and descending. No human or divine figure at the top, no face in the clouds, no embodied God. Keep sleeper, stone, ladder and 2-3 angel figures within central 50% width. Real rocky night landscape surrounding the ethereal dream, deep blue with warm golden light, detailed cinematic natural illustration, reverent and calm. No text, no modern stairs or buildings.",
+      "title": "Jacob dreams of a ladder reaching to heaven",
+      "first": 10,
+      "last": 19,
+      "introTitle": "A dream at Bethel",
+      "alt": "Jacob sleeps with his head by a stone while a dreamlike golden ladder and angels rise above him",
+      "note": "The scene selects Jacob asleep and dreaming, rather than his later waking and setting up the stone. The ladder's form, angels' appearance and landscape are illustrative. The promise is spoken in the text, but no figure of the Lord is depicted.",
+      "h": [
+        [
+          "sleeping-jacob",
+          "Jacob rests for the night",
+          39,
+          66,
+          10,
+          11,
+          "On his way toward Haran, Jacob stops after sunset, takes stones for pillows and lies down to sleep."
+        ],
+        [
+          "dream-ladder",
+          "The ladder in the dream",
+          53,
+          51,
+          12,
+          12,
+          "Jacob dreams of a ladder set on the earth whose top reaches heaven. Its luminous appearance is an artistic way to distinguish the dream from the surrounding landscape."
+        ],
+        [
+          "dream-angels",
+          "Angels ascend and descend",
+          59,
+          43,
+          12,
+          12,
+          "The dream includes angels of God ascending and descending on the ladder. Wings, robes and faces are illustrative choices, not descriptions supplied by this verse."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-7c8b0688-eb2f-444f-a1b7-354499e8c21a.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-7c8b0688-eb2f-444f-a1b7-354499e8c21a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-jacob-ladder-dream.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-jacob-ladder-dream.webp",
+      "source_sha256": "a47cba9c83d3fe7c4e04787ee340b29752611c97ab7c7eb0b83540595cf0ce9f",
+      "final_sha256": "7e4f611c88f81df9b994aeab89245b16b761d20cc4b52fef6ff8db674952a89e",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 29,
+      "slug": "jacob-rachel-well",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 29:9\u201312 selected moment: Jacob and Rachel meet beside a broad stone-lined well in pastoral country. Rachel wears a fully modest long robe and head covering and holds a shepherd's staff with her flock of sheep gathered close. Jacob, an adult traveler in earth toned robes, draws water for her sheep; a large rounded stone rolled off the well mouth rests visibly beside its rim. Keep both faces, bucket, sheep heads and the rolled stone clustered in the central 50% width. Warm golden natural light, textured wool and limestone, tender surprised recognition. No romantic embrace needed, no invented jewelry exchange, no deity, text or modern structures.",
+      "title": "Jacob meets Rachel and waters her flock",
+      "first": 9,
+      "last": 12,
+      "introTitle": "A meeting at the well",
+      "alt": "Jacob draws a bucket from a well as Rachel stands with her sheep beside the rolled covering stone",
+      "note": "This selected scene follows Jacob rolling the stone from the well and watering Laban's sheep. Faces, clothing, bucket and the stone's form are illustrative. The landscape is not a verified location, and the later kiss and news to Laban are not pictured.",
+      "h": [
+        [
+          "jacob-water",
+          "Jacob waters the flock",
+          40,
+          65,
+          10,
+          10,
+          "Jacob rolls the stone from the well's mouth and waters the flock belonging to Laban, his mother's brother. The bucket is an illustrative detail."
+        ],
+        [
+          "rachel-flock",
+          "Rachel comes with the sheep",
+          60,
+          33,
+          9,
+          10,
+          "Rachel keeps her father's sheep and comes with them to the well. The visible flock explains the purpose of the watering."
+        ],
+        [
+          "rolled-stone",
+          "The stone moved from the mouth",
+          81,
+          72,
+          10,
+          10,
+          "The text specifically says Jacob rolls the stone away. The large stone beside the well represents that action; its size and shape are imagined."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-7331d85e-5829-45c6-9c43-1234bd382b46.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-7331d85e-5829-45c6-9c43-1234bd382b46.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-jacob-rachel-well.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-jacob-rachel-well.webp",
+      "source_sha256": "4d55c7b3ca06aeed4bb3d9ccdb5b059c3007b495fb9f5415d18710cdce0d3e1e",
+      "final_sha256": "ace13c014496cf2a255137e000145de754a4fe8470dde0778dd0768008a60e46",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 30,
+      "slug": "peeled-rods-flocks",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 30:37\u201343 selected pastoral scene: Jacob, adult bearded shepherd in a modest woven robe, kneels beside a wooden watering trough placing peeled wooden rods with clear alternating white exposed wood and dark bark stripes in the watering channel. A small group of healthy speckled and spotted sheep and goats drink immediately beside him. Keep Jacob, visibly striped rods and 2-3 animal heads clustered tightly in central 50% width, leave scenic breathing room on edges. Golden sunlight, green poplar trees and tawny hills in ancient pastoral country, richly detailed natural materials. No mating, no birth, no diagrams, no written explanation, no deity, no supernatural beam. Show the described practice without implying a scientific diagram or proven biological mechanism.",
+      "title": "Jacob sets peeled rods before the watering flocks",
+      "first": 37,
+      "last": 43,
+      "introTitle": "The rods and the flocks",
+      "alt": "Jacob places rods with peeled white stripes beside drinking speckled sheep and goats at a watering trough",
+      "note": "The selected pastoral scene illustrates the practice narrated in verses 37\u201343. It does not establish a biological explanation for the flocks' markings. Faces, rod arrangement, trough and landscape are reconstructed; the setting's exact location is not known from this image.",
+      "h": [
+        [
+          "peeled-rods",
+          "White stripes in the rods",
+          53,
+          77,
+          37,
+          38,
+          "Jacob peels white streaks into rods and places them before the flocks in the watering gutters and troughs. The visible bark and exposed wood make that detail recognizable."
+        ],
+        [
+          "watering-flocks",
+          "The flocks at the trough",
+          63,
+          60,
+          38,
+          40,
+          "The flocks come to drink before the rods; the account describes ringstraked, speckled and spotted offspring and Jacob separating the lambs. The image selects animals drinking, without depicting mating or birth."
+        ],
+        [
+          "jacob-shepherd",
+          "Jacob manages the flocks",
+          37,
+          39,
+          40,
+          43,
+          "Jacob keeps his own flocks apart and distinguishes stronger and feebler animals in the narrated practice. Verse 43 describes his increase in animals and servants."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-d59812fb-38f1-45d4-a874-dacc50b296d9.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-d59812fb-38f1-45d4-a874-dacc50b296d9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-peeled-rods-flocks.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-peeled-rods-flocks.webp",
+      "source_sha256": "86ea3846ae31e50678cdcad782ff7a333daef59a75a6b4fe898536390b9f55dc",
+      "final_sha256": "6a78dfabdf3d628d046c08aa070186d3d9e731403c79579d1ef359073ecde750",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 31,
+      "slug": "covenant-stone-heap",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 31:44\u201352 selected covenant scene: Jacob and his elder father-in-law Laban stand on opposite sides of a low gathered stone heap and a single upright stone pillar. They face one another in solemn agreement, hands open toward the memorial, no fighting. Main two men, heap and pillar tightly grouped between 30% and 70% of image width. A few kin quietly sit further back with a modest meal and distant tents on rugged highland. Detailed stone textures, modest ancient robes, warm late afternoon light, cinematic natural historical illustration. The heap and pillar are meaningful covenant witnesses, not random scenery. No inscription, sign, text, deity, magical effect or modern monument.",
+      "title": "Jacob and Laban make a covenant by the stone heap",
+      "first": 44,
+      "last": 52,
+      "introTitle": "A witness between them",
+      "alt": "Jacob and Laban face one another beside a stone heap and upright pillar, with kin and a meal behind them",
+      "note": "The selected scene brings the covenant, gathered heap, pillar and meal together. The memorial's arrangement, clothing, faces and highland view are illustrative; the image does not identify a surviving monument or exact ancient site.",
+      "h": [
+        [
+          "witness-heap",
+          "The heap is a witness",
+          48,
+          62,
+          46,
+          52,
+          "Jacob's kin gather stones into a heap. Laban calls the heap a witness and says neither party is to pass it toward the other for harm."
+        ],
+        [
+          "upright-pillar",
+          "Jacob sets up a pillar",
+          48,
+          39,
+          45,
+          45,
+          "Jacob takes a stone and sets it up as a pillar. Its upright shape here is illustrative rather than a record of the original memorial."
+        ],
+        [
+          "jacob-laban",
+          "The covenant between Jacob and Laban",
+          69,
+          34,
+          44,
+          52,
+          "Laban proposes a covenant. The agreement includes concern for his daughters and a boundary against harm. The open-handed poses are an imagined way to depict their solemn exchange."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-6b286273-45ea-4fd2-9177-f1948a0feecd.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-6b286273-45ea-4fd2-9177-f1948a0feecd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-covenant-stone-heap.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-covenant-stone-heap.webp",
+      "source_sha256": "a5e4b844c25029ac1fa9e285127305ae6e15916c91bd12152bf908119c2cd495",
+      "final_sha256": "65df87e8cc7634be4eea41c2e8996decaa0d74bec5d4d0096b38a16e40510275",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "chapter": 32,
+      "slug": "jacob-wrestles",
+      "prompt": "Use case: historical-scene. Asset type: selected-episode Bible journey illustration. Create a 1536x1024 landscape, richly detailed cinematic natural historical illustration with warm gold sunlight, realistic cloth, stone and landscape textures, painterly realism, matching the supplied visual direction. Main narrative subjects occupy the central 50 percent width for a phone crop, faces and hands clear. Ancient Near Eastern clothing and setting are illustrative reconstructions, fully modest. No text, letters, captions, labels, UI, pins, watermark, modern objects, nudity, gore, or embodied God. Genesis 32:24\u201330 selected night-to-dawn wrestling episode: Jacob and an unnamed man are alone on a rocky riverbank in a restrained standing wrestling clinch, both fully modest clothed in simple long woven tunics with sashes. No punching, striking, choking, weapons, blood, wound or exposed torso. Jacob holds firmly, exhausted and intent; the other adult man is ordinary in appearance with no halo, wings, glowing skin or divine costume. Do not identify this figure visually as God; no other divine figure. Both figures and their linked forearms compactly centered between 35% and 65% of frame, clear full bodies and natural anatomy. Blue last-night shadows meet a thin warm golden dawn on the horizon, realistic ancient landscape, tense but reverent cinematic historical illustration.",
+      "title": "Jacob wrestles until the breaking of day",
+      "first": 24,
+      "last": 30,
+      "introTitle": "Jacob is named Israel",
+      "alt": "Jacob and an unnamed man wrestle in a restrained standing clinch beside a river at dawn",
+      "note": "The image selects the wrestling of verse 24 and uses ordinary human appearance for the figure the verse calls a man. It does not settle the encounter's theological identity: Jacob later names the place Peniel and says he has seen God face to face. Faces, clothing, stance and riverbank are illustrative; the exact site is not established.",
+      "h": [
+        [
+          "jacob-holds",
+          "Jacob holds on",
+          43,
+          35,
+          24,
+          26,
+          "Jacob is left alone and wrestles until daybreak. When told to let go, he says he will not do so unless he is blessed. The image avoids depicting the injury in verse 25."
+        ],
+        [
+          "unnamed-man",
+          "The man and the blessing",
+          55,
+          29,
+          27,
+          30,
+          "The man asks Jacob's name, names him Israel, and blesses him. He does not supply his own name. Verse 30 records Jacob's words about seeing God; the illustration adds no halo, wings or divine portrait."
+        ]
+      ],
+      "original_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-92184f86-bbd5-42ae-b3d5-d24260bf43ad.png",
+      "tool_output_hint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391 as /Users/daeshawnballard/.codex/generated_images/01a15b66-7f76-76d1-ac5b-faa4d7ff7391/exec-92184f86-bbd5-42ae-b3d5-d24260bf43ad.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/genesis-expansion-b-jacob-wrestles.png",
+      "final_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/genesis-expansion-b-jacob-wrestles.webp",
+      "source_sha256": "0a132464adcf5fd7f23692e56fa2a1a84f7f1caa297b18c8ad9772a14b70dcce",
+      "final_sha256": "efffa73abb85b98e6f72b953f638ef7f78fe057b7f249dd4b020a7409c850415",
+      "source_dimensions": [
+        1536,
+        1024
+      ],
+      "final_dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "webp_quality": 85,
+  "source_text": "data/kjv.json, book index 0",
+  "inspection": {
+    "completed_at_utc": "2026-10-20T22:37:29.980436+00:00",
+    "method": "Each final WebP viewed after conversion; coordinates derived from visible subjects. Source-range bounds, dimensions and SHA256 hashes checked.",
+    "live_integration": "NOT RUN \u2014 parent owns integration",
+    "crop_limitations": "Some supporting focal subjects extend outside central 50 percent in chapters 22, 23, 27 and 29; final phone layout requires review."
+  }
+}

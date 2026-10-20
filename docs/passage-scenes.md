@@ -1,6 +1,6 @@
 # Passage-specific Journey scenes
 
-The Rust-rendered register contains **68 focused scenes, 140 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
+The Rust-rendered register contains **113 focused scenes, 252 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
 
 Hotspots identify visible people, actions, or objects. Scripture stays verbatim in its own view; Context contains the illustrations and editorial notes. Inspecting a subject preserves the saved verse and audio target; its explicit Read link changes the passage. Poetry, letter imagery, prophetic visions, and artistic reconstructions are labeled in the interface. Broader draft beats that are not depicted do not receive landscape pins.
 
@@ -76,3 +76,56 @@ Hotspots identify visible people, actions, or objects. Scripture stays verbatim 
 | Revelation | Revelation 22:1–5 | The River of Life | The river flows from the throne (22:1; 25%, 56%); The tree bears fruit and healing leaves (22:2; 43%, 39%); The servants serve and see his face (22:4; 19%, 76%) |
 
 Original source PNGs, final WebPs, generation filenames, prompts, dimensions, and SHA-256 hashes are retained in `assets/imagegen/` and `web/art/journey/`. Positions are authored against the final raster. Isaiah’s source/final bytes are verified, but its exact original provider output receipt is missing; the reconstructed path attribution is explicitly qualified in its provenance. The 1 Kings and 2 Chronicles illustrations share a raster, with the musicians sourced to the parallel Chronicles account.
+
+
+## Genesis chapter expansion
+
+These additions complement the original register above. Selected verse ranges do not imply whole-chapter illustration. See the [complete chapter ledger](genesis-chapter-coverage.md) for gaps and legacy Eden/flood coverage.
+
+| Coverage | Scene | Visible subject anchors |
+| --- | --- | --- |
+| Genesis 1:9–13 | Dry land, seas, and seed-bearing plants | Waters gathered into seas (1:9; 35%, 77%); Dry land appears (1:9; 54%, 62%); Plants and fruit bearing seed (1:11; 64%, 31%) |
+| Genesis 3:21–24 | Clothed and sent out from the garden | Clothed and sent out (3:23; 31%, 48%); The guarded way (3:24; 73%, 39%) |
+| Genesis 4:3–5 | Cain and Abel bring their offerings | Cain’s fruit of the ground (4:3; 34%, 57%); Abel’s firstlings of the flock (4:4; 72%, 43%) |
+| Genesis 5:1–32 | The family line from Adam to Noah | Adam in the family line (5:1; 14%, 26%); Seth in the family line (5:6; 32%, 26%); Enos in the family line (5:9; 50%, 26%); Cainan in the family line (5:12; 68%, 26%); Mahalaleel in the family line (5:15; 86%, 26%); Jared in the family line (5:18; 86%, 68%); Enoch in the family line (5:21; 68%, 68%); Methuselah in the family line (5:25; 50%, 68%); Lamech in the family line (5:28; 32%, 68%); Noah in the family line (5:32; 14%, 68%) |
+| Genesis 6:14–16, 22 | Noah prepares the ark | Build with wood (6:14; 52%, 22%); Pitch within and without (6:14; 51%, 40%); A door in the side (6:16; 79%, 35%) |
+| Genesis 9:12–17 | The bow in the cloud | The bow in the cloud (9:12; 48%, 8%); Every living creature (9:15; 60%, 75%) |
+| Genesis 11:3–4 | Bricks for a city and tower | Brick and mortar (11:3; 34%, 59%); A city and tower (11:4; 69%, 28%) |
+| Genesis 12:4–5 | Abram departs with his household | Abram, Sarai, and Lot depart (12:4; 32%, 33%); They take their possessions (12:5; 70%, 40%) |
+| Genesis 13:8–12 | Abram and Lot separate | Let there be no strife (13:8; 35%, 37%); Lot takes his household toward the plain (13:10; 72%, 63%) |
+| Genesis 14:18–19 | Melchizedek brings bread and wine | Melchizedek brings bread and wine (14:18; 39%, 48%); Melchizedek blesses Abram (14:19; 49%, 22%) |
+| Genesis 15:5–6 | Abram looks toward the stars | Abram looks toward heaven (15:5; 34%, 36%); Number the stars (15:5; 64%, 20%) |
+| Genesis 16:7–8, 13–14 | Hagar beside the wilderness fountain | Hagar is found in the wilderness (16:7; 38%, 28%); The fountain and the named well (16:13; 66%, 80%) |
+| Genesis 19:22–24 | Lot escapes toward Zoar | Lot enters Zoar at sunrise (19:22; 38%, 41%); Fire upon Sodom and Gomorrah (19:24; 83%, 34%) |
+| Genesis 20:14, 16 | Sarah is restored to Abraham | Sarah is restored to Abraham (20:14; 56%, 29%); Sheep and oxen are given (20:14; 74%, 54%); The gift of silver (20:16; 85%, 69%) |
+| Genesis 21:14–19 | Hagar sees a well and gives Ishmael water | Hagar fills the bottle (21:19; 47%, 39%); The lad drinks (21:19; 63%, 43%) |
+| Genesis 22:9–14 | Abraham sees the ram caught in the thicket | The altar and wood (22:9; 27%, 62%); The ram in the thicket (22:13; 80%, 55%); Abraham and Isaac (22:11; 42%, 37%) |
+| Genesis 23:16–20 | Abraham weighs silver for the field and cave | Four hundred shekels of silver (23:16; 50%, 60%); The cave in the field (23:17; 49%, 37%); The witnessed purchase (23:16; 79%, 42%) |
+| Genesis 24:15–20 | Rebekah draws water for the servant's camels | Rebekah and her pitcher (24:15; 40%, 50%); Water for the camels (24:19; 29%, 65%); Abraham's travelling servant (24:17; 65%, 38%) |
+| Genesis 25:29–34 | Jacob gives Esau bread and lentil stew | Red lentil pottage (25:29; 53%, 55%); Jacob asks for the birthright (25:31; 34%, 32%); Esau chooses the meal (25:30; 67%, 33%) |
+| Genesis 26:19–22 | Isaac finds room at Rehoboth | The new well (26:22; 45%, 76%); Isaac gives thanks for room (26:22; 56%, 35%); Water after the digging (26:19; 36%, 53%) |
+| Genesis 27:22–29 | Isaac feels Jacob's hands and blesses him | The hands Isaac feels (27:22; 47%, 46%); Isaac blesses his son (27:26; 20%, 36%); The meal and wine (27:25; 27%, 71%) |
+| Genesis 28:10–19 | Jacob dreams of a ladder reaching to heaven | Jacob rests for the night (28:10; 39%, 66%); The ladder in the dream (28:12; 53%, 51%); Angels ascend and descend (28:12; 59%, 43%) |
+| Genesis 29:9–12 | Jacob meets Rachel and waters her flock | Jacob waters the flock (29:10; 40%, 65%); Rachel comes with the sheep (29:9; 60%, 33%); The stone moved from the mouth (29:10; 81%, 72%) |
+| Genesis 30:37–43 | Jacob sets peeled rods before the watering flocks | White stripes in the rods (30:37; 53%, 77%); The flocks at the trough (30:38; 63%, 60%); Jacob manages the flocks (30:40; 37%, 39%) |
+| Genesis 31:44–52 | Jacob and Laban make a covenant by the stone heap | The heap is a witness (31:46; 48%, 62%); Jacob sets up a pillar (31:45; 48%, 39%); The covenant between Jacob and Laban (31:44; 69%, 34%) |
+| Genesis 32:24–30 | Jacob wrestles until the breaking of day | Jacob holds on (32:24; 43%, 35%); The man and the blessing (32:27; 55%, 29%) |
+| Genesis 33:1–4 | Jacob and Esau embrace | Esau embraces Jacob (33:4; 51%, 39%) |
+| Genesis 35:6–7 | Jacob builds an altar at Bethel | Jacob at Bethel (35:6; 44%, 42%); The altar (35:7; 62%, 65%) |
+| Genesis 37:3–4 | Joseph receives a distinctive coat | Joseph's coat (37:3; 64%, 63%); The brothers' response (37:4; 20%, 42%) |
+| Genesis 39:12–13 | The garment Joseph leaves behind | The left garment (39:12; 52%, 55%) |
+| Genesis 40:9–11 | The cupbearer's dream | The vine and ripe grapes (40:10; 49%, 42%); Grapes pressed into the cup (40:11; 49%, 64%) |
+| Genesis 41:42 | Pharaoh gives Joseph the ring | Pharaoh's ring (41:42; 50%, 62%); Fine linen and a gold chain (41:42; 75%, 50%) |
+| Genesis 42:6–8 | Joseph's brothers bow before him | The brothers bow (42:6; 42%, 64%); Joseph recognizes them (42:7; 73%, 35%) |
+| Genesis 43:31–34 | Benjamin's larger portion | Benjamin's portion (43:34; 46%, 53%); Joseph eats separately (43:32; 85%, 18%) |
+| Genesis 44:1–2, 12–13 | The silver cup in Benjamin's sack | Joseph's silver cup (44:12; 55%, 47%); Food and money in the sack (44:1; 39%, 59%) |
+| Genesis 45:14–15 | Joseph embraces Benjamin | Joseph and Benjamin weep (45:14; 54%, 39%); His brothers gather near (45:15; 81%, 41%) |
+| Genesis 46:5–7 | Jacob's family travels in wagons | Jacob and the household in wagons (46:5; 48%, 35%); Cattle and goods accompany them (46:6; 71%, 64%) |
+| Genesis 47:15–17 | Joseph supplies food in exchange for livestock | Joseph supplies food (47:16; 39%, 42%); Livestock exchanged for food (47:17; 78%, 77%) |
+| Genesis 48:13–16 | Jacob crosses his hands to bless the boys | Jacob deliberately crosses his hands (48:14; 51%, 38%); The blessing of the lads (48:16; 63%, 55%) |
+| Genesis 49:9 | Judah compared to a lion | A lion as a comparison for Judah (49:9; 48%, 47%) |
+| Genesis 50:26 | Joseph is placed in a coffin in Egypt | The coffin in Egypt (50:26; 52%, 50%) |
+| Genesis 10:1–6, 21–22 · selected family branches only | Families of Noah’s sons | Noah and his sons (10:1; 50%, 16%); Japheth’s family (10:2; 83%, 31%); Ham’s sons (10:6; 50%, 31%); Shem and his named children (10:22; 17%, 31%) |
+| Genesis 17:5, 15, 19–21 · names and future promise only | Names and a promised son | Abram is named Abraham (17:5; 32%, 26%); Sarai is named Sarah (17:15; 32%, 47%); Isaac is promised to Sarah and Abraham (17:19; 77%, 36%) |
+| Genesis 34:1, 25, 30–31 · selected relationship guide | Family relationships and response | Dinah, daughter of Leah and Jacob (34:1; 50%, 35%); Simeon and Levi, Dinah’s brothers (34:25; 50%, 53%); Jacob and his sons’ exchange (34:30; 50%, 76%) |
+| Genesis 36:1–5 · selected family only | Esau and his named family | Esau, who is Edom (36:1; 50%, 17%); Esau’s named wives (36:2; 50%, 34%); Sons through the named mothers (36:4; 50%, 62%) |

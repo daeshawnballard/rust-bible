@@ -1,0 +1,998 @@
+{
+  "schemaVersion": 1,
+  "generator": "builtin image_gen__imagegen",
+  "approvedStyleReference": "web/art/journey/abraham-sarah-visitors-v2.webp",
+  "coordinateSystem": "Normalized0-100, origin top-left, based on inspected raster",
+  "runtimeAcceptance": "NOT RUN - parent owns browser and phone interaction checks",
+  "assets": [
+    {
+      "id": "genesis-a-ark-building",
+      "createdAt": "2026-10-20T22:22:48.118672+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis6:14-16,22. Show Noah, an elderly gray-bearded man in a plain tunic, working beside a huge grounded elongated rectangular wooden ark under construction. THREE clear targets: large wooden planks in the ark's side at center; Noah applying dark pitch with a rough hand tool and a pot of pitch at lower-center-left; a clearly open rectangular side door in the ark at center-right. Upper structure has restrained upper window opening and levels suggested by timber beams, no modern ship ornament. Dry building site, timber chips and restrained hand tools. No flood yet, no rain, no giant animal procession. Ark form is reconstructed rather than a precise engineering assertion.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-020ce0f3-6495-4dd1-8dfa-93ae96211e14.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-020ce0f3-6495-4dd1-8dfa-93ae96211e14.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-ark-building.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-ark-building.webp",
+      "sourceSha256": "0b43dc55b794d74b4aaebd050d549a20c876ee8251ed3e1f439eadbe87b1b967",
+      "finalSha256": "29edc921d4d22a3d90ac74176e6dc8fdff5bb7961021d7b3bf5c466e7b312b83",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 3060908,
+      "finalBytes": 347024,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 6,
+          "first": 14,
+          "last": 16
+        },
+        {
+          "chapter": 6,
+          "first": 22,
+          "last": 22
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-ark-wood",
+          "title": "Build with wood",
+          "x": 52,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "note": "The command specifies gopher wood, rooms, and dimensions. The wood species and exact ark form cannot be established from this reconstruction.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-ark-pitch",
+          "title": "Pitch within and without",
+          "x": 51,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Noah applies dark pitch to the wooden side. Genesis names pitch inside and outside; the tool and pot are reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-ark-side-door",
+          "title": "A door in the side",
+          "x": 79,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "The visible opening illustrates the door placed in the ark's side. Genesis also describes a window and three stories.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Genesis describes the ark's wood, pitch, window, side door, and three stories, then says Noah followed the command. The building scene reconstructs those details without claiming an exact hull design or location.",
+      "compositionExceptions": [
+        {
+          "id": "genesis-a-ark-side-door",
+          "x": 79,
+          "y": 35,
+          "note": "Hotspot is outside preferred central horizontal50 percent; retain full raster or check actual phone crop before acceptance."
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-covenant-bow",
+      "createdAt": "2026-10-20T22:22:48.380021+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis9:12-17. A vivid natural RAINBOW curves through soft clouds across upper-middle sky, clearly visible at x45% y25%. Noah, elderly gray-bearded clothed man, stands at lower-left-center looking upward. A small group of living sheep and cattle stands at lower-right-center on renewed green land, their forms large and clear. Rainbow and living creatures are the two principal targets; Noah is a supporting identifiable witness. Post-flood calm with moist earth and gentle water in distance. No divine figure, no speech text, no diagram, no storm catastrophe, no altar or sacrifice.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-3b3eee2a-db6f-4ce0-958c-707d1887f1c7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-3b3eee2a-db6f-4ce0-958c-707d1887f1c7.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-covenant-bow.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-covenant-bow.webp",
+      "sourceSha256": "7be4be83ea65dda9e406c5326d2e750e29ebf8f6fe393acde36a975312514c44",
+      "finalSha256": "4136ea11c29aa4b55b22c34f62ba8d5be0bec93ffbdf9798466101d5c0858f3b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 2838593,
+      "finalBytes": 321704,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 9,
+          "first": 12,
+          "last": 17
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-bow-cloud",
+          "title": "The bow in the cloud",
+          "x": 48,
+          "y": 8,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "note": "God names the bow in the cloud as the token of the covenant between himself and the earth. The rainbow is the visible subject.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-living-creatures",
+          "title": "Every living creature",
+          "x": 60,
+          "y": 75,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "note": "The covenant includes every living creature. The sheep and cattle represent living creatures; this animal grouping is illustrative.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "The bow in the cloud is named as the covenant token for Noah and every living creature. The landscape and animal grouping are reconstructed; the image does not depict God speaking.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-babel-bricks",
+      "createdAt": "2026-10-20T22:22:48.645478+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis11:3-4. Foreground center-left show a worker holding clear reddish fired BRICKS beside a small dark bitumen MORTAR pot and stacked bricks. Center-right show an unfinished enormous stepped brick TOWER rising above a small ancient settlement, large and readable, with simple timber scaffolding. Other restrained builders carry bricks. Two principal target groups: bricks/mortar in foreground and tower structure behind. Make scale legible with human workers. No embodied deity, no lightning, no destruction, no magical language glyphs, no inscriptions. Tower shape is an artistic reconstruction.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-e5467652-3999-4190-a3c7-d2a6e550d5f1.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-e5467652-3999-4190-a3c7-d2a6e550d5f1.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-babel-bricks.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-babel-bricks.webp",
+      "sourceSha256": "d302707f8ff9a83063369d644f2cbe00a6f3375afbc9d0a3f65e0fead5a11240",
+      "finalSha256": "5dd0959f9c27ffbc94bee64ad3e01852fec74914104c64a67b9989fa6a6611a7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 2967254,
+      "finalBytes": 335576,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 11,
+          "first": 3,
+          "last": 4
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-babel-brick",
+          "title": "Brick and mortar",
+          "x": 34,
+          "y": 59,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "The builders make fired bricks and use slime for mortar. The visible reddish brick and dark mortar illustrate those materials.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-babel-tower",
+          "title": "A city and tower",
+          "x": 69,
+          "y": 28,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "The people propose a city and a tower to make themselves a name. Its stepped shape and scaffolding are reconstructed.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Genesis names fired bricks and slime for mortar before the people propose their city and tower. This illustration represents the building project; it does not establish the tower's actual shape or height.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-abram-departs",
+      "createdAt": "2026-10-20T22:25:15.439023+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis12:4-5. Show75-year-old Abram with gray beard walking beside his fully modest wife Sarai, both large at center-left; younger adult Lot walks near them. A loaded donkey with bundled household possessions and two modestly dressed attendants follows at center-right. Main targets are Abram/Sarai and clearly visible loaded pack animal/household possessions. A settlement recedes in atmospheric distance but no map route. Warm morning travel scene through ancient hilly land. No embodied God, no supernatural beams, no military caravan or royal luxury. Personal faces, baggage, clothing and route are reconstructed.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-241a6fd2-41e8-4098-bc00-ccc47788c884.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-241a6fd2-41e8-4098-bc00-ccc47788c884.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-abram-departs.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-abram-departs.webp",
+      "sourceSha256": "b687fbcdad13ec3ad1de504b3e0fbf680f4a5fb6d43403a6aee90eaab6f73b3f",
+      "finalSha256": "144c99b1ad9c3257090a45040aab9cfb9c1c86fb9445e286eb171485983b8170",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 3129286,
+      "finalBytes": 365526,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 12,
+          "first": 4,
+          "last": 5
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-departure-household",
+          "title": "Abram, Sarai, and Lot depart",
+          "x": 32,
+          "y": 33,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "note": "Abram leaves Haran with Sarai his wife and Lot his brother's son. The visible travelers illustrate the departure; their appearance is reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-departure-possessions",
+          "title": "They take their possessions",
+          "x": 70,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "The household takes its gathered substance and people. The loaded pack animal represents those possessions without establishing an exact inventory or route.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Abram departs with Sarai, Lot, their possessions, and the people with them. The procession and landscape illustrate departure without fixing a surveyed route or the appearance of Haran.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-abram-lot-separate",
+      "createdAt": "2026-10-20T22:25:15.723220+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis13:8-12. Elderly gray-bearded Abram and younger adult Lot calmly face one another at center-left in reconciliation, Abram's open hand inviting a peaceful choice. At center-right a clearly visible household tent and a few sheep, with people beginning to gather possessions. Behind them a broad greener well-watered plain beyond dry higher ground. TWO clear target groups: Abram and Lot speaking; Lot's tent and flock/household. Do not draw arrows or definitive route markers. No city destruction. No fighting, weapons, blood or embodied God. Geographic arrangement is editorial, not surveyed.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-645889ee-641b-43b4-8f33-2c51dc4fb68c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-645889ee-641b-43b4-8f33-2c51dc4fb68c.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-abram-lot-separate.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-abram-lot-separate.webp",
+      "sourceSha256": "f4e8e8646d856c5893e72585d4c6339025f3415cd20a4730ac6c72bab5d96698",
+      "finalSha256": "3a3320edac6bc1bf7c8db65ea1c39be51ecc1128dacacf31e4ba29dce2d43f6a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 3118888,
+      "finalBytes": 380704,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 13,
+          "first": 8,
+          "last": 12
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-peaceful-separation",
+          "title": "Let there be no strife",
+          "x": 35,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "note": "Abram urges Lot to avoid strife and offers him the choice of land. The open-hand conversation illustrates this peaceful separation.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-lot-tent-flocks",
+          "title": "Lot takes his household toward the plain",
+          "x": 72,
+          "y": 63,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "note": "Lot chooses the well-watered plain, journeys east, and pitches his tent toward Sodom. The tent and flock identify a moving household; their screen position is not a geographic bearing.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Abram asks that there be no strife. Lot chooses the well-watered plain and they separate. The figures, tents, and land are a narrative reconstruction, not proof of precise directions or campsite locations.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-melchizedek-bread-wine",
+      "createdAt": "2026-10-20T22:25:15.980853+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis14:18-20. Melchizedek, dignified adult ancient Near Eastern king-priest in a restrained plain cream robe, offers a woven tray of round flat BREAD and a small ceramic WINE jug with cup at center-left foreground. Elderly gray-bearded Abram at center-right receives him respectfully. Melchizedek's other hand raised in a simple blessing gesture, no supernatural effects. Principal targets: unmistakable bread/wine group and the blessing encounter between the two men. Humble outdoor setting, no medieval crown, no later church vestments, no chalice with cross, no Christian iconography, no text.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-f739af5b-34db-4460-88b9-3ee3ee1ba1fc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-f739af5b-34db-4460-88b9-3ee3ee1ba1fc.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-melchizedek-bread-wine.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-melchizedek-bread-wine.webp",
+      "sourceSha256": "ed839a60e62e237b3d9504d025b49d902a6c85e231101c3655f857e83d8477f7",
+      "finalSha256": "959a181843a139b245a3b66fba48e249a7664e6bfd821705099426747f724497",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 2927963,
+      "finalBytes": 309178,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 14,
+          "first": 18,
+          "last": 19
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-bread-wine",
+          "title": "Melchizedek brings bread and wine",
+          "x": 39,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "note": "The bread and wine vessel illustrate what Melchizedek brings forth as king of Salem and priest of the most high God.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-melchizedek-blessing",
+          "title": "Melchizedek blesses Abram",
+          "x": 49,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "Melchizedek blesses Abram in the name of the most high God, possessor of heaven and earth. The raised hand represents his spoken blessing.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Melchizedek, king of Salem and priest of the most high God, brings bread and wine and blesses Abram. The exchange, clothing, and vessels are reconstructed. The later tithe is not depicted in this selected scene.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-abram-stars",
+      "createdAt": "2026-10-20T22:26:55.683706+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis15:5-6. Night scene with elderly gray-bearded Abram in a modest wool cloak standing outside a low simple tent at center-left looking up, one hand slightly lifted. A richly visible star-filled clear SKY occupies upper central half, points of starlight sharp and plentiful with gentle Milky Way haze. Two unmistakable targets: Abram's face/raised hand at x35% y55% and a dense natural star cluster at x65% y25%. Balanced deep blue night and soft warm lamplight near tent only. No visible God, angel, pointing heavenly hand, text or supernatural beam. No modern telescope. No altar, divided animals or firepot because this selected scene is only15:5-6.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-0cf7909c-e29f-4580-a7a8-b91857f7d0dd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-0cf7909c-e29f-4580-a7a8-b91857f7d0dd.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-abram-stars.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-abram-stars.webp",
+      "sourceSha256": "36978d8de4136f72642244617a6b083bad9fa555bb1fe277e7a257d78ffad8c1",
+      "finalSha256": "4d1e5c33684c4829b6456dca30ede6d50f5bb361c3f2f7c917e85774e1fa2372",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 2793494,
+      "finalBytes": 307344,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 15,
+          "first": 5,
+          "last": 6
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-abram-looks",
+          "title": "Abram looks toward heaven",
+          "x": 34,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "Abram is brought outside and told to look toward heaven. He believes the LORD; the visible man illustrates Abram's attention, while the text conveys his faith.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-number-stars",
+          "title": "Number the stars",
+          "x": 64,
+          "y": 20,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "The stars illustrate the comparison given for Abram's seed. Their pattern is artistic and does not identify an exact ancient sky.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Abram is told to look toward heaven and number the stars, then believes the LORD. This image shows Abram and the visible stars; faith and the spoken promise are conveyed by the passage, not by a visible divine figure.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-hagar-fountain",
+      "createdAt": "2026-10-20T22:26:55.980830+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis16:7-8,13-14. Hagar, a fully modest adult ancient Near Eastern woman in simple earth-colored robe and head covering, rests at center-left beside a FOUNTAIN of clear water emerging from a low rock pool in wilderness at center-right. She turns her thoughtful weary face toward an unseen speaker outside frame; show no angel and no divine figure. Two main targets: Hagar herself and unmistakable water spring/rock basin with a simple ceramic water vessel. Arid wilderness with sparse greenery only around water. The spring is not modern masonry or a monumental well. No baby, because Ishmael has not yet been born. No text or supernatural beam.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-a11d30a4-314e-40e6-9865-179f868fb961.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-a11d30a4-314e-40e6-9865-179f868fb961.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-hagar-fountain.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-hagar-fountain.webp",
+      "sourceSha256": "4391ba0e524044f834c90e6395470f3c80da910d7868d0a1c7e1536c5da1a93b",
+      "finalSha256": "a32fba7d3e6a6cb6306776e4553114818408a5a5db021e95167c891494e4306b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 3161330,
+      "finalBytes": 373468,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 16,
+          "first": 7,
+          "last": 8
+        },
+        {
+          "chapter": 16,
+          "first": 13,
+          "last": 14
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-hagar-seen",
+          "title": "Hagar is found in the wilderness",
+          "x": 38,
+          "y": 28,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "note": "The angel of the LORD finds Hagar by a fountain and asks where she has come from and where she is going. The illustration shows Hagar; the speaker remains unseen.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-hagar-water",
+          "title": "The fountain and the named well",
+          "x": 66,
+          "y": 80,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "note": "Hagar speaks of the God who sees her, and the well is named Beer-lahai-roi. The visible water identifies this setting without claiming its exact geography or construction.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "The angel of the LORD finds Hagar by a fountain in the wilderness. Hagar speaks of the God who sees her, and the well is named Beer-lahai-roi. The messenger remains unseen in this illustration; the woman's appearance and the water source are reconstructed.",
+      "compositionExceptions": []
+    },
+    {
+      "id": "genesis-a-lot-zoar",
+      "createdAt": "2026-10-20T22:34:06.049981+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis19:22-24 ONLY. Lot, adult bearded man in a modest dusty tunic and cloak, hurries toward the entrance of a small ancient town at center-left. Two modestly clothed younger adult women walk with him, identifiable as household companions; no other departing woman. A low simple mudbrick town gate at center provides a safe destination. Far behind at center-right horizon, distant cities are lit by falling fire and a restrained smoke plume; non-graphic, no visible people or casualties there. Two principal targets: Lot entering town; distant city fire. Sunrise. No pillar of salt because selected passage ends at verse24. No embodied deity, gore, bodies, nudity or sensational horror.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-80ddfb75-110f-4a24-a19f-05791fc224b6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-80ddfb75-110f-4a24-a19f-05791fc224b6.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-lot-zoar.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-lot-zoar.webp",
+      "sourceSha256": "9a076177172b736c2918386c06304f1f5c8d7b1fe2804c8c8ecadfea2da581a1",
+      "finalSha256": "ce30b502e32bad28973b73418ebc98e6d21b0ae3d80ee8497ec819c9bf0da90b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 2952511,
+      "finalBytes": 336744,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 19,
+          "first": 22,
+          "last": 24
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-lot-escape",
+          "title": "Lot enters Zoar at sunrise",
+          "x": 38,
+          "y": 41,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 22,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 22,
+              "last": 23
+            }
+          ],
+          "note": "Lot is urged to escape to Zoar and enters when the sun has risen. The visible man entering the gate represents Lot; the gate and companions' appearance are reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-distant-fire",
+          "title": "Fire upon Sodom and Gomorrah",
+          "x": 83,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "note": "Genesis describes brimstone and fire upon Sodom and Gomorrah. The distant burning cities illustrate this non-graphically; their location relative to Zoar is an editorial composition.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Lot is urged to escape to Zoar and enters as the sun rises; the destruction of Sodom and Gomorrah follows. This reconstruction joins adjacent moments into one view. It shows no casualties and does not establish the cities' actual locations.",
+      "compositionExceptions": [
+        {
+          "id": "genesis-a-distant-fire",
+          "x": 83,
+          "y": 34,
+          "note": "Hotspot is outside preferred central horizontal50 percent; retain full raster or check actual phone crop before acceptance."
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-sarah-restored",
+      "createdAt": "2026-10-20T22:34:07.061199+00:00",
+      "prompt": "Use case: illustration-story. Production narrative illustration for a phone-friendly Bible journey. Landscape 3:2, 1536x1024. Cinematic highly detailed luminous historical illustration with tactile natural textures and realistic human anatomy, warm earth tones and atmospheric depth, matching the approved Abraham-and-Sarah visitors art. Main subjects large, clearly separated and grouped within horizontal25\u201375% for phone readability; each target must accommodate a44px hotspot. Ancient Near Eastern setting and modest clothing. One coherent scene. No UI, baked text, letters, labels, pins, borders or watermarks. No embodied God, face in clouds, nudity or gore. Reconstruction, not archaeological certainty. Genesis20:14-16. Outdoors near a restrained ancient household courtyard, fully modest mature Sarah stands at center beside elderly Abraham, his gray beard visible; her expression dignified. At center-left Abimelech, a restrained ancient ruler with plain robe and no elaborate crown, gestures respectfully toward them. At center-right foreground a shallow bowl of SILVER PIECES rests on a low wooden table, each piece irregular ancient silver without lettering; behind it stand one sheep and one ox and modestly clothed household attendants. Two principal targets: Sarah reunited with Abraham; silver and livestock gifts. People dignified, no chains or market scene. No intimacy, bed, nudity, coercion, divine figure, text or modern coins.",
+      "outputReceipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-a6e96deb-b5fe-43a6-8326-2dd7a1410cfa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-a6e96deb-b5fe-43a6-8326-2dd7a1410cfa.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-a-sarah-restored.png",
+      "finalPath": "web/art/journey/genesis-expansion-a-sarah-restored.webp",
+      "sourceSha256": "2c061366e2658949451a361f5e2ea573dd896b28749815e0f939b2cd93424dd8",
+      "finalSha256": "eefcc2e0beebe1802b9f05542dcd9aa283648897518f3dce2c48e722da84825d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sourceBytes": 2968757,
+      "finalBytes": 335088,
+      "conversion": {
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6
+      },
+      "attempts": 1,
+      "visualReview": "PASS - actual generated PNG and final quality85 WebP inspected for source-bound subjects, anatomy, no banned content or baked text, and hotspot placement on visible objects. Runtime interaction and phone44px fit NOT RUN.",
+      "selectedRanges": [
+        {
+          "chapter": 20,
+          "first": 14,
+          "last": 14
+        },
+        {
+          "chapter": 20,
+          "first": 16,
+          "last": 16
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "genesis-a-sarah-return",
+          "title": "Sarah is restored to Abraham",
+          "x": 56,
+          "y": 29,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Abimelech restores Sarah to Abraham. The visible couple illustrates her return; faces, clothing, and the setting are reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-livestock-gifts",
+          "title": "Sheep and oxen are given",
+          "x": 74,
+          "y": 54,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Sheep and oxen are among the gifts Abimelech gives Abraham. The visible animals represent those gifts; the attendants are shown with dignity.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-silver-gift",
+          "title": "The gift of silver",
+          "x": 85,
+          "y": 69,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "Abimelech tells Sarah of the silver he has given. The bowl represents silver pieces without claiming an exact ancient form or counting the thousand named in the verse.",
+          "detail": null
+        }
+      ],
+      "editorialNote": "Abimelech restores Sarah and gives Abraham sheep, oxen, servants, and silver. The image depicts the restoration and gifts without portraying people as saleable objects or adding a sexual encounter.",
+      "compositionExceptions": [
+        {
+          "id": "genesis-a-silver-gift",
+          "x": 85,
+          "y": 69,
+          "note": "Hotspot is outside preferred central horizontal50 percent; retain full raster or check actual phone crop before acceptance."
+        }
+      ]
+    }
+  ],
+  "integrityReview": {
+    "sceneCount": 10,
+    "allFilesPresent": true,
+    "allDimensions1536x1024": true,
+    "sourceAndFinalHashesMatch": true,
+    "allVerseBoundsValid": true,
+    "globallyUniqueWithinLane": true,
+    "allHotspotsHaveNullDetail": true
+  }
+}

@@ -1,0 +1,1235 @@
+{
+  "schema_version": 1,
+  "scenes": [
+    {
+      "id": "genesis-b-hagar-well",
+      "book": 0,
+      "title": "Hagar sees a well and gives Ishmael water",
+      "coverage": "Genesis 21:14\u201319",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-hagar-well.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Hagar gives Ishmael water beside a desert well; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 21:14\u201319",
+      "ranges": [
+        {
+          "chapter": 21,
+          "first": 14,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "Water in the wilderness",
+        "note": "The selected scene shows the relief in verse 19 after Hagar's distress. Clothing, ages, well construction, and the wilderness view are illustrative; the text does not identify this exact well."
+      },
+      "hotspots": [
+        {
+          "id": "hagar-water",
+          "title": "Hagar fills the bottle",
+          "x": 47,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "After God opens her eyes to a well, Hagar fills the water bottle and gives the lad a drink. The visible vessel represents the bottle named in the passage.",
+          "detail": null
+        },
+        {
+          "id": "ishmael-drinks",
+          "title": "The lad drinks",
+          "x": 63,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "note": "God hears the lad where he is and promises Hagar that he will become a great nation. His drinking here depicts the rescue in verse 19; his appearance is imagined.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-ram-thicket",
+      "book": 0,
+      "title": "Abraham sees the ram caught in the thicket",
+      "coverage": "Genesis 22:9\u201314",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-ram-thicket.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abraham and Isaac stand safe beside a wood-covered stone altar and a living ram caught by its horns; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 22:9\u201314",
+      "ranges": [
+        {
+          "chapter": 22,
+          "first": 9,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "A ram is provided",
+        "note": "This selected, non-graphic reconstruction gathers the altar, Abraham and Isaac, and the ram of verse 13. It does not show the threatened sacrifice. Ages, faces, altar construction and exact mountain setting are illustrative, not established by this image."
+      },
+      "hotspots": [
+        {
+          "id": "wood-altar",
+          "title": "The altar and wood",
+          "x": 27,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "Abraham builds an altar and arranges the wood. The visible stone construction is an illustrative choice.",
+          "detail": null
+        },
+        {
+          "id": "ram-thicket",
+          "title": "The ram in the thicket",
+          "x": 80,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "note": "Abraham sees a ram caught by its horns and offers it instead of his son. The image selects the living ram before the offering.",
+          "detail": null
+        },
+        {
+          "id": "father-son",
+          "title": "Abraham and Isaac",
+          "x": 42,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "note": "The angel calls from heaven to stop Abraham, and Isaac is spared. Their safe stance is an editorial reconstruction; no heavenly speaker is pictured.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-machpelah-silver",
+      "book": 0,
+      "title": "Abraham weighs silver for the field and cave",
+      "coverage": "Genesis 23:16\u201320",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-machpelah-silver.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abraham weighs silver before Ephron and witnesses, with a cave entrance behind them; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 23:16\u201320",
+      "ranges": [
+        {
+          "chapter": 23,
+          "first": 16,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "Machpelah becomes a burial place",
+        "note": "The image condenses the public purchase of the field and cave into one selected scene. The balance, people, clothing and cave shape are illustrative; it is not a verified view of ancient Machpelah, and it does not depict Sarah's burial."
+      },
+      "hotspots": [
+        {
+          "id": "weighed-silver",
+          "title": "Four hundred shekels of silver",
+          "x": 50,
+          "y": 60,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "Abraham weighs the agreed silver to Ephron in the hearing of the sons of Heth. The balance and silver pieces visualize weighing; their number and form are not an archaeological claim.",
+          "detail": null
+        },
+        {
+          "id": "machpelah-cave",
+          "title": "The cave in the field",
+          "x": 49,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 17,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 17,
+              "last": 20
+            }
+          ],
+          "note": "The field and its cave become Abraham's possession for a burial place. Verse 19 places Machpelah before Mamre, identified as Hebron; this cave's appearance is imagined.",
+          "detail": null
+        },
+        {
+          "id": "ephron-sale",
+          "title": "The witnessed purchase",
+          "x": 79,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "note": "Ephron receives the named price, and the purchase is made secure before the children of Heth. Their placement beside the cave is an editorial condensation.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-rebekah-camels",
+      "book": 0,
+      "title": "Rebekah draws water for the servant's camels",
+      "coverage": "Genesis 24:15\u201320",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-rebekah-camels.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Rebekah pours water from her pitcher into a trough while a camel drinks and Abraham's servant watches; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 24:15\u201320",
+      "ranges": [
+        {
+          "chapter": 24,
+          "first": 15,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "Hospitality at the well",
+        "note": "The selected episode follows Rebekah's offer to water the camels. Clothing, faces, well construction and townscape are illustrative. The passage's earlier setting is outside the city of Nahor; this is not a verified view of that city."
+      },
+      "hotspots": [
+        {
+          "id": "rebekah-pitcher",
+          "title": "Rebekah and her pitcher",
+          "x": 40,
+          "y": 50,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 15,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 15,
+              "last": 20
+            }
+          ],
+          "note": "Rebekah comes with a pitcher, gives the servant a drink, and then empties water into the trough for his camels.",
+          "detail": null
+        },
+        {
+          "id": "drinking-camel",
+          "title": "Water for the camels",
+          "x": 29,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "note": "She offers to draw water until all the camels have finished drinking. The visible camel and trough show that act of hospitality.",
+          "detail": null
+        },
+        {
+          "id": "abraham-servant",
+          "title": "Abraham's travelling servant",
+          "x": 65,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "note": "The servant asks for a little water from her pitcher. She serves him before offering water for the animals; the illustration selects the later moment.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-esau-stew",
+      "book": 0,
+      "title": "Jacob gives Esau bread and lentil stew",
+      "coverage": "Genesis 25:29\u201334",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-esau-stew.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob passes a bowl of red lentil stew toward weary Esau, with bread on a low table; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 25:29\u201334",
+      "ranges": [
+        {
+          "chapter": 25,
+          "first": 29,
+          "last": 34
+        }
+      ],
+      "intro": {
+        "title": "The birthright and the meal",
+        "note": "This selected scene depicts the meal involved in the exchange of Esau's birthright. The brothers' clothing, faces and campsite are imagined. No written contract is implied by the passage or the illustration."
+      },
+      "hotspots": [
+        {
+          "id": "red-pottage",
+          "title": "Red lentil pottage",
+          "x": 53,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "note": "Esau returns faint from the field and asks for the red pottage. After his oath, Jacob gives him bread and lentil stew.",
+          "detail": null
+        },
+        {
+          "id": "jacob-bargain",
+          "title": "Jacob asks for the birthright",
+          "x": 34,
+          "y": 32,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 31,
+            "last": 31
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "note": "Jacob asks Esau to sell his birthright that day and to swear to the agreement. The visible handover condenses that exchange.",
+          "detail": null
+        },
+        {
+          "id": "esau-meal",
+          "title": "Esau chooses the meal",
+          "x": 67,
+          "y": 33,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 30,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 30,
+            "last": 30
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 30,
+              "last": 34
+            }
+          ],
+          "note": "Esau says the birthright will not profit him as he feels near death, then eats, drinks and leaves. Verse 34 says he despised his birthright.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-isaac-rehoboth",
+      "book": 0,
+      "title": "Isaac finds room at Rehoboth",
+      "coverage": "Genesis 26:19\u201322",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-isaac-rehoboth.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Isaac and a servant stand beside a well of clear water in an open valley; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 26:19\u201322",
+      "ranges": [
+        {
+          "chapter": 26,
+          "first": 19,
+          "last": 22
+        }
+      ],
+      "intro": {
+        "title": "A well without strife",
+        "note": "The chosen scene represents Rehoboth in verse 22 after disputes at the earlier wells. The valley, stone rim, bucket and clothing are illustrative; the exact sites and ancient structures are not established by the image."
+      },
+      "hotspots": [
+        {
+          "id": "rehoboth-water",
+          "title": "The new well",
+          "x": 45,
+          "y": 76,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "note": "Isaac moves and digs another well, for which they do not strive. The visible water and well stand for Rehoboth, not a composite of all three wells.",
+          "detail": null
+        },
+        {
+          "id": "isaac-room",
+          "title": "Isaac gives thanks for room",
+          "x": 56,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "note": "Isaac calls the well Rehoboth and says the Lord has made room for them to be fruitful in the land. His gesture is illustrative; no divine figure is depicted.",
+          "detail": null
+        },
+        {
+          "id": "servant-work",
+          "title": "Water after the digging",
+          "x": 36,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 19,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 19,
+              "last": 22
+            }
+          ],
+          "note": "Isaac's servants find springing water, and successive disputes lead to the final uncontested well. The servant's water bucket is a reconstruction of the work, not a tool specified in these verses.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-isaac-blesses-jacob",
+      "book": 0,
+      "title": "Isaac feels Jacob's hands and blesses him",
+      "coverage": "Genesis 27:22\u201329",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-isaac-blesses-jacob.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Isaac reclines on bedding and feels Jacob's hairy covered hands, with a prepared meal and cup nearby; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 27:22\u201329",
+      "ranges": [
+        {
+          "chapter": 27,
+          "first": 22,
+          "last": 29
+        }
+      ],
+      "intro": {
+        "title": "The voice and the hands",
+        "note": "This selected reconstruction focuses on Isaac's touch before the blessing, gathering the nearby meal from verse 25 into the scene. Faces, furnishings and clothing are illustrative. The image does not represent God's appearance or certify the campsite."
+      },
+      "hotspots": [
+        {
+          "id": "hands-disguise",
+          "title": "The hands Isaac feels",
+          "x": 47,
+          "y": 46,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 22,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 22,
+              "last": 24
+            }
+          ],
+          "note": "Isaac says the voice is Jacob's but the hands are Esau's, and he does not discern him because the hands are hairy. Jacob claims to be Esau.",
+          "detail": null
+        },
+        {
+          "id": "isaac-blessing",
+          "title": "Isaac blesses his son",
+          "x": 20,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 26,
+              "last": 29
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 26,
+              "last": 29
+            }
+          ],
+          "note": "Isaac asks his son to come near and kiss him, then speaks a blessing of provision and rule. The illustration selects the touch earlier in this sequence.",
+          "detail": null
+        },
+        {
+          "id": "meal-wine",
+          "title": "The meal and wine",
+          "x": 27,
+          "y": 71,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "note": "Jacob brings food for Isaac to eat and wine to drink. The tableware and presentation shown here are imagined.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-ladder-dream",
+      "book": 0,
+      "title": "Jacob dreams of a ladder reaching to heaven",
+      "coverage": "Genesis 28:10\u201319",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-ladder-dream.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob sleeps with his head by a stone while a dreamlike golden ladder and angels rise above him; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 28:10\u201319",
+      "ranges": [
+        {
+          "chapter": 28,
+          "first": 10,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "A dream at Bethel",
+        "note": "The scene selects Jacob asleep and dreaming, rather than his later waking and setting up the stone. The ladder's form, angels' appearance and landscape are illustrative. The promise is spoken in the text, but no figure of the Lord is depicted."
+      },
+      "hotspots": [
+        {
+          "id": "sleeping-jacob",
+          "title": "Jacob rests for the night",
+          "x": 39,
+          "y": 66,
+          "active": [
+            {
+              "chapter": 28,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 28,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 28,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "note": "On his way toward Haran, Jacob stops after sunset, takes stones for pillows and lies down to sleep.",
+          "detail": null
+        },
+        {
+          "id": "dream-ladder",
+          "title": "The ladder in the dream",
+          "x": 53,
+          "y": 51,
+          "active": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 28,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "Jacob dreams of a ladder set on the earth whose top reaches heaven. Its luminous appearance is an artistic way to distinguish the dream from the surrounding landscape.",
+          "detail": null
+        },
+        {
+          "id": "dream-angels",
+          "title": "Angels ascend and descend",
+          "x": 59,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 28,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "The dream includes angels of God ascending and descending on the ladder. Wings, robes and faces are illustrative choices, not descriptions supplied by this verse.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-rachel-well",
+      "book": 0,
+      "title": "Jacob meets Rachel and waters her flock",
+      "coverage": "Genesis 29:9\u201312",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-rachel-well.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob draws a bucket from a well as Rachel stands with her sheep beside the rolled covering stone; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 29:9\u201312",
+      "ranges": [
+        {
+          "chapter": 29,
+          "first": 9,
+          "last": 12
+        }
+      ],
+      "intro": {
+        "title": "A meeting at the well",
+        "note": "This selected scene follows Jacob rolling the stone from the well and watering Laban's sheep. Faces, clothing, bucket and the stone's form are illustrative. The landscape is not a verified location, and the later kiss and news to Laban are not pictured."
+      },
+      "hotspots": [
+        {
+          "id": "jacob-water",
+          "title": "Jacob waters the flock",
+          "x": 40,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 29,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "note": "Jacob rolls the stone from the well's mouth and waters the flock belonging to Laban, his mother's brother. The bucket is an illustrative detail.",
+          "detail": null
+        },
+        {
+          "id": "rachel-flock",
+          "title": "Rachel comes with the sheep",
+          "x": 60,
+          "y": 33,
+          "active": [
+            {
+              "chapter": 29,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 29,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 29,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "Rachel keeps her father's sheep and comes with them to the well. The visible flock explains the purpose of the watering.",
+          "detail": null
+        },
+        {
+          "id": "rolled-stone",
+          "title": "The stone moved from the mouth",
+          "x": 81,
+          "y": 72,
+          "active": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 29,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "note": "The text specifically says Jacob rolls the stone away. The large stone beside the well represents that action; its size and shape are imagined.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-peeled-rods-flocks",
+      "book": 0,
+      "title": "Jacob sets peeled rods before the watering flocks",
+      "coverage": "Genesis 30:37\u201343",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-peeled-rods-flocks.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob places rods with peeled white stripes beside drinking speckled sheep and goats at a watering trough; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 30:37\u201343",
+      "ranges": [
+        {
+          "chapter": 30,
+          "first": 37,
+          "last": 43
+        }
+      ],
+      "intro": {
+        "title": "The rods and the flocks",
+        "note": "The selected pastoral scene illustrates the practice narrated in verses 37\u201343. It does not establish a biological explanation for the flocks' markings. Faces, rod arrangement, trough and landscape are reconstructed; the setting's exact location is not known from this image."
+      },
+      "hotspots": [
+        {
+          "id": "peeled-rods",
+          "title": "White stripes in the rods",
+          "x": 53,
+          "y": 77,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 37,
+            "last": 37
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "note": "Jacob peels white streaks into rods and places them before the flocks in the watering gutters and troughs. The visible bark and exposed wood make that detail recognizable.",
+          "detail": null
+        },
+        {
+          "id": "watering-flocks",
+          "title": "The flocks at the trough",
+          "x": 63,
+          "y": 60,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 38,
+              "last": 40
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 38,
+            "last": 38
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 38,
+              "last": 40
+            }
+          ],
+          "note": "The flocks come to drink before the rods; the account describes ringstraked, speckled and spotted offspring and Jacob separating the lambs. The image selects animals drinking, without depicting mating or birth.",
+          "detail": null
+        },
+        {
+          "id": "jacob-shepherd",
+          "title": "Jacob manages the flocks",
+          "x": 37,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 40,
+              "last": 43
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 40,
+            "last": 40
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 40,
+              "last": 43
+            }
+          ],
+          "note": "Jacob keeps his own flocks apart and distinguishes stronger and feebler animals in the narrated practice. Verse 43 describes his increase in animals and servants.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-covenant-stone-heap",
+      "book": 0,
+      "title": "Jacob and Laban make a covenant by the stone heap",
+      "coverage": "Genesis 31:44\u201352",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-covenant-stone-heap.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob and Laban face one another beside a stone heap and upright pillar, with kin and a meal behind them; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 31:44\u201352",
+      "ranges": [
+        {
+          "chapter": 31,
+          "first": 44,
+          "last": 52
+        }
+      ],
+      "intro": {
+        "title": "A witness between them",
+        "note": "The selected scene brings the covenant, gathered heap, pillar and meal together. The memorial's arrangement, clothing, faces and highland view are illustrative; the image does not identify a surviving monument or exact ancient site."
+      },
+      "hotspots": [
+        {
+          "id": "witness-heap",
+          "title": "The heap is a witness",
+          "x": 48,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 31,
+              "first": 46,
+              "last": 52
+            }
+          ],
+          "anchor": {
+            "chapter": 31,
+            "first": 46,
+            "last": 46
+          },
+          "sources": [
+            {
+              "chapter": 31,
+              "first": 46,
+              "last": 52
+            }
+          ],
+          "note": "Jacob's kin gather stones into a heap. Laban calls the heap a witness and says neither party is to pass it toward the other for harm.",
+          "detail": null
+        },
+        {
+          "id": "upright-pillar",
+          "title": "Jacob sets up a pillar",
+          "x": 48,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 31,
+              "first": 45,
+              "last": 45
+            }
+          ],
+          "anchor": {
+            "chapter": 31,
+            "first": 45,
+            "last": 45
+          },
+          "sources": [
+            {
+              "chapter": 31,
+              "first": 45,
+              "last": 45
+            }
+          ],
+          "note": "Jacob takes a stone and sets it up as a pillar. Its upright shape here is illustrative rather than a record of the original memorial.",
+          "detail": null
+        },
+        {
+          "id": "jacob-laban",
+          "title": "The covenant between Jacob and Laban",
+          "x": 69,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 31,
+              "first": 44,
+              "last": 52
+            }
+          ],
+          "anchor": {
+            "chapter": 31,
+            "first": 44,
+            "last": 44
+          },
+          "sources": [
+            {
+              "chapter": 31,
+              "first": 44,
+              "last": 52
+            }
+          ],
+          "note": "Laban proposes a covenant. The agreement includes concern for his daughters and a boundary against harm. The open-handed poses are an imagined way to depict their solemn exchange.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-wrestles",
+      "book": 0,
+      "title": "Jacob wrestles until the breaking of day",
+      "coverage": "Genesis 32:24\u201330",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-wrestles.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob and an unnamed man wrestle in a restrained standing clinch beside a river at dawn; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction \u00b7 Genesis 32:24\u201330",
+      "ranges": [
+        {
+          "chapter": 32,
+          "first": 24,
+          "last": 30
+        }
+      ],
+      "intro": {
+        "title": "Jacob is named Israel",
+        "note": "The image selects the wrestling of verse 24 and uses ordinary human appearance for the figure the verse calls a man. It does not settle the encounter's theological identity: Jacob later names the place Peniel and says he has seen God face to face. Faces, clothing, stance and riverbank are illustrative; the exact site is not established."
+      },
+      "hotspots": [
+        {
+          "id": "jacob-holds",
+          "title": "Jacob holds on",
+          "x": 43,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 32,
+              "first": 24,
+              "last": 26
+            }
+          ],
+          "anchor": {
+            "chapter": 32,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 32,
+              "first": 24,
+              "last": 26
+            }
+          ],
+          "note": "Jacob is left alone and wrestles until daybreak. When told to let go, he says he will not do so unless he is blessed. The image avoids depicting the injury in verse 25.",
+          "detail": null
+        },
+        {
+          "id": "unnamed-man",
+          "title": "The man and the blessing",
+          "x": 55,
+          "y": 29,
+          "active": [
+            {
+              "chapter": 32,
+              "first": 27,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 32,
+            "first": 27,
+            "last": 27
+          },
+          "sources": [
+            {
+              "chapter": 32,
+              "first": 27,
+              "last": 30
+            }
+          ],
+          "note": "The man asks Jacob's name, names him Israel, and blesses him. He does not supply his own name. Verse 30 records Jacob's words about seeing God; the illustration adds no halo, wings or divine portrait.",
+          "detail": null
+        }
+      ]
+    }
+  ]
+}

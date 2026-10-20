@@ -21,7 +21,7 @@ The landscape is an artistic storyboard. Places and successive moments are compr
 | Scene | Passages | Reading stages |
 | --- | --- | --- |
 | Eden | Genesis 2–4 | Garden, outside the garden, guarded way, Cain in Nod |
-| Noah and the flood | Genesis 7–9:17 | Entering the ark, flood waters, mountains of Ararat, birds, dry ground and altar |
+| Noah and the flood | Genesis 7–8 | Entering the ark, flood waters, mountains of Ararat, birds, dry ground and altar |
 | Exodus wilderness | Exodus 13:17–17:16 | Departure, sea crossing, Marah, Elim, wilderness of Sin, Rephidim |
 | Ruth’s return | Ruth 1–2 | Moab, the road, Bethlehem, Boaz’s field |
 | Luke’s birth narrative | Luke 2 | Road to Bethlehem, manger, shepherds’ fields, temple, Nazareth |

@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-20T22:14:25.308Z",
+  "generator": "builtin image_gen__imagegen",
+  "useCase": "illustration-story",
+  "approvedStyleReference": "web/art/journey/abraham-sarah-visitors-v2.webp",
+  "coordinateSystem": "Normalized 0-100, origin top-left of final raster. Hotspot centers were visually chosen from the actual final raster.",
+  "status": "Generated and raster-reviewed; browser, phone crop and runtime interaction acceptance are owned by the parent and NOT RUN in this asset lane.",
+  "assets": [
+    {
+      "id": "creation-land",
+      "key": "creation",
+      "file": "exec-484b52a8-62f4-4eb1-b7da-44cfefbed32d.png",
+      "verses": "Genesis 1:9-13",
+      "hotspots": [
+        {
+          "id": "gathered-waters",
+          "title": "The gathered waters",
+          "range": "Genesis 1:9-10",
+          "x": 35,
+          "y": 77
+        },
+        {
+          "id": "dry-land",
+          "title": "Dry land appears",
+          "range": "Genesis 1:9-10",
+          "x": 54,
+          "y": 62
+        },
+        {
+          "id": "seed-and-fruit",
+          "title": "Plants and fruit-bearing trees",
+          "range": "Genesis 1:11-13",
+          "x": 64,
+          "y": 31
+        }
+      ],
+      "review": "Clear gathered water, dry shoreline, seed-bearing grasses, fruit tree. No visible sun, moon, stars, figures or animals. Fruit-tree canopy and trunk extend right of the central 50 percent, but the selected fruit hotspot remains inside it.",
+      "exceptions": [
+        "Landscape, species, terrain and atmospheric light are artistic reconstruction; not a claim of exact creation geography or chronology."
+      ],
+      "prompt": "Use case: illustration-story\nAsset type: production narrative scene for a phone-friendly illustrated Bible journey, landscape 3:2, 1536x1024.\nPrimary request: Genesis 1:9-13 ONLY: waters gathered together, dry land appearing, visible seed-bearing vegetation and a fruit-bearing tree. This is an artistic reconstruction of this passage alone.\nScene: a newly revealed shore with clear blue-green water at center-left meeting richly textured dry earth and low rocky land at center. One substantial fruit-bearing tree at center-right has clearly visible ripe fruit among its leaves. A patch of seed-bearing grasses and plants is visible on the dry land near the tree. Arrange the water, dry land and fruit tree as three unmistakable large subject targets, all within the central 50 percent of the landscape so they remain clear in a small phone crop. No tiny peripheral main subject.\nStyle: cinematic, richly detailed luminous historical narrative illustration, natural organic texture, realistic clear water and rock and foliage, warm ochre earth and deep green vegetation, tactile painterly realism, beautiful atmospheric depth. Match the visual quality and warm luminous narrative realism of the approved Abraham-and-Sarah visitors illustration. Gentle diffuse golden illumination without any visible light source in the sky. Strong readable silhouette for the tree, calm majestic scene.\nConstraints: no sun, no moon, no stars, no people, no animals, no birds, no fish, no divine figure, no face in clouds, no celestial bodies, no buildings. Do not depict or imply a montage of the whole creation chronology. No UI, no labels, no letters, no text, no numbers, no pins, no borders, no watermark. Entire scene is one coherent landscape.",
+      "toolOutputHint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-484b52a8-62f4-4eb1-b7da-44cfefbed32d.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-484b52a8-62f4-4eb1-b7da-44cfefbed32d.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-creation-land.png",
+      "finalPath": "web/art/journey/genesis-expansion-creation-land.webp",
+      "attempts": 1,
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "b57676ee233e7248d07601b7bfe62de2872180b05a02a24f089da0d2a0d4c11a",
+      "finalSha256": "e81ba2630b10b2f1b2af4214909a13a98b9e449c6ac23a247b4e30635cb3b4ea",
+      "sourceBytes": 3487407,
+      "finalBytes": 507080,
+      "conversion": {
+        "format": "webp",
+        "quality": 85,
+        "method": 6,
+        "resized": false
+      },
+      "visualReview": "PASS - actual generated PNG and final quality-85 WebP inspected for content, subject clarity, forbidden elements and composition; no runtime or phone-crop claim"
+    },
+    {
+      "id": "east-of-eden",
+      "key": "eden",
+      "file": "exec-54d0f37e-afc3-4ca2-966a-98fd92c68540.png",
+      "verses": "Genesis 3:21-24",
+      "hotspots": [
+        {
+          "id": "clothed-departure",
+          "title": "Clothed and sent out",
+          "range": "Genesis 3:21-23",
+          "x": 31,
+          "y": 48
+        },
+        {
+          "id": "guarded-way",
+          "title": "The guarded way",
+          "range": "Genesis 3:24",
+          "x": 73,
+          "y": 39
+        }
+      ],
+      "review": "Two adults wear modest full-torso skin garments and walk away from lush garden. Two winged guardians and flaming sword visibly guard the path. No embodied God, nudity, snake or gore. Main couple and sword hotspots fit central 50 percent; outer cherubim wings extend beyond.",
+      "exceptions": [
+        "Cherubim form, winged human appearance, garments, sword orientation, terrain and garden appearance are artistic conventions, not details specified by the passage.",
+        "Simple sandals and ties are reconstruction details."
+      ],
+      "prompt": "Use case: illustration-story\nAsset type: production narrative scene for a phone-friendly illustrated Bible journey, landscape 3:2, 1536x1024.\nPrimary request: Genesis 3:21-24, Adam and Eve after being clothed in garments of skins, departing from the lush garden of Eden, with the way back guarded by cherubim and a flaming sword. Respectful artistic historical reconstruction.\nScene: a rocky path at the garden boundary. Two adults, Adam and Eve, walking together away from the lush garden toward the foreground, seen in three-quarter rear/profile, their postures quietly sorrowful and dignified. Both wear fully modest knee-below-length ancient simple animal-skin garments with covered torso and hips, thick natural hide texture. No nudity. The couple are together around center-left, heads and entire bodies clearly readable. Behind them at center-right, the way into rich garden greenery is guarded by two dignified winged cherubim with restrained luminous appearance; a clearly visible flaming sword, upright and unmistakably a blade edged in flame, guards the entrance. Do not show God or an embodied divine figure. Make the departing couple and guarded way the two large clear subject groups, within the central 50 percent of the image, suitable for a small phone display. The garden is a beautiful wooded living landscape, no architectural gate or temple, no invented ceremonial props.\nStyle: cinematic richly detailed luminous historical narrative illustration, warm golden light, natural ochre earth and deep green garden foliage, tactile painterly realism, human faces and anatomy natural, subtle atmospheric depth. Match the quality and warm luminous narrative realism of the approved Abraham-and-Sarah visitors illustration. Serious, restrained, emotionally respectful.\nConstraints: show only the departure and guarded way of this passage; no temptation scene, no snake, no forbidden fruit as extra focal point, no murder, no gore, no nudity, no embodied God, no faces in clouds. No UI, no labels, no letters, no text, no numbers, no pins, no borders, no watermark.",
+      "toolOutputHint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-54d0f37e-afc3-4ca2-966a-98fd92c68540.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-54d0f37e-afc3-4ca2-966a-98fd92c68540.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-east-of-eden.png",
+      "finalPath": "web/art/journey/genesis-expansion-east-of-eden.webp",
+      "attempts": 1,
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "51055b531496a1480cafa0f8dfe48ec111dec249950f502c39922b15a8d656d2",
+      "finalSha256": "ef733ec7133bde66e0329e6498569cd941c53c752fc8fc9107c150dc68d51ef4",
+      "sourceBytes": 3211023,
+      "finalBytes": 414278,
+      "conversion": {
+        "format": "webp",
+        "quality": 85,
+        "method": 6,
+        "resized": false
+      },
+      "visualReview": "PASS - actual generated PNG and final quality-85 WebP inspected for content, subject clarity, forbidden elements and composition; no runtime or phone-crop claim"
+    },
+    {
+      "id": "brothers-offerings",
+      "key": "brothers",
+      "file": "exec-283f4093-d39b-4b2b-81c5-fc44d0eaf580.png",
+      "verses": "Genesis 4:3-5",
+      "hotspots": [
+        {
+          "id": "produce-offering",
+          "title": "Cain brings produce",
+          "range": "Genesis 4:3",
+          "x": 34,
+          "y": 57
+        },
+        {
+          "id": "flock-offering",
+          "title": "Abel brings from his flock",
+          "range": "Genesis 4:4",
+          "x": 72,
+          "y": 43
+        }
+      ],
+      "review": "Two adult brothers hold clear separate offerings: large produce basket and living lamb. No blood, killing, weapon, visible divine approval or heaven-sent fire. Both offering hotspots lie within the central 50 percent.",
+      "exceptions": [
+        "Depicts bringing offerings before any sacrificial act; a living lamb is a non-graphic illustration of the firstlings offering, not a depiction of the fat portions specified in Genesis 4:4.",
+        "Specific crop varieties, fabrics, faces, terrain and time of day are artistic reconstruction."
+      ],
+      "prompt": "Use case: illustration-story\nAsset type: production narrative scene for a phone-friendly illustrated Bible journey, landscape 3:2, 1536x1024.\nPrimary request: Genesis 4:3-5, the brothers Cain and Abel bring their respective offerings: produce of the soil, and a firstling lamb from the flock. Respectful non-graphic artistic historical reconstruction.\nScene: two adult ancient Near Eastern brothers in a simple natural setting beside low grassy earth and weathered rocks, no buildings. Center-left Cain, a mature dark-haired man with natural beard in a plain earth-colored woven tunic, holds a large shallow woven basket with clearly visible harvest produce, grain, vegetables and fruit. Center-right Abel, another adult dark-haired naturally bearded man in a plain cream woven tunic, gently holds a small living firstling lamb securely in his arms, its head, fleece and legs clearly recognizable. Their faces are quiet and serious, each attending to his offering, no exaggerated anger. Both brothers' upper bodies and the two offerings are large enough to read on a small phone. The produce basket and living lamb are the two unmistakable main subject targets, spread around x35 percent and x65 percent, both inside the central 50 percent of the image. Keep their forms clearly separated and not hidden by hands or props. Full natural scene with landscape breathing room around the figures.\nStyle: cinematic richly detailed luminous historical narrative illustration, warm diffuse golden natural light illuminating both men equally, tactile painterly realism, natural human anatomy and humble early pastoral fabrics, detailed produce and soft lamb fleece, muted ochre and warm green palette with atmospheric distant hills. Match the quality and warm luminous narrative realism of the approved Abraham-and-Sarah visitors illustration.\nConstraints: no visible divine figure, no visible approval or rejection from heaven, no beam of light favoring one man, no fire from heaven, no lightning, no smoke, no flames, no sacrifice or killing in progress, no blood, no gore, no dead animal, no murder, no weapon, no fancy ceremonial props or anachronistic objects. No UI, no labels, no letters, no text, no numbers, no pins, no borders, no watermark. This image depicts bringing the offerings only; divine response is conveyed separately by the Bible text.",
+      "toolOutputHint": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203 as /Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-283f4093-d39b-4b2b-81c5-fc44d0eaf580.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a15b5f-0bfb-7072-aed4-dfb5a08bc203/exec-283f4093-d39b-4b2b-81c5-fc44d0eaf580.png",
+      "sourcePath": "assets/imagegen/source/genesis-expansion-brothers-offerings.png",
+      "finalPath": "web/art/journey/genesis-expansion-brothers-offerings.webp",
+      "attempts": 1,
+      "sourceDimensions": [
+        1536,
+        1024
+      ],
+      "finalDimensions": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "2fd7db4a5fd4a39baa9e03a38cec85e2d526f81d07092f0e10ce8a1e717bf86e",
+      "finalSha256": "7a8b7a1366ea50bc6a3bf104d7bf47cbab2013b56938004262a9174f70c22e45",
+      "sourceBytes": 2983190,
+      "finalBytes": 329716,
+      "conversion": {
+        "format": "webp",
+        "quality": 85,
+        "method": 6,
+        "resized": false
+      },
+      "visualReview": "PASS - actual generated PNG and final quality-85 WebP inspected for content, subject clarity, forbidden elements and composition; no runtime or phone-crop claim"
+    }
+  ]
+}

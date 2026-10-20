@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "generator": "built-in image_gen.imagegen",
+  "assets": [
+    {
+      "id": "genesis-c-jacob-esau-reunion",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 landscape illustration for a Bible reading journey, Genesis 33:1-4: Jacob and Esau embrace and weep at their reunion. Two mature bearded ancient Levantine brothers, fully clothed in earth-colored woven robes, tightly embracing at the CENTER, their faces tender and emotional. Quiet open Canaan hillside, small distant family group behind, warm late-afternoon sun. Cinematic detailed naturalistic historical illustration, richly textured warm stone, cloth and skin, painterly realism matching a lavish illustrated biblical historical scene. Main two figures and embrace fit inside central 50 percent width for phone crop. No UI, no text, labels, pins, watermark, modern clothing, halo, embodied God, nudity, gore. Human likenesses and landscape are interpretive, not archaeological assertions.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-f1e9a637-178f-4341-accd-47d543e4ccbd.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-f1e9a637-178f-4341-accd-47d543e4ccbd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-33-reunion.png",
+      "final_path": "web/art/journey/genesis-expansion-c-33-reunion.webp",
+      "source_sha256": "c523218e815870584bbd9d889c7d0c03eb433c53b4bf7b83cc2e04677a2208a9",
+      "final_sha256": "b8d361afa9001442cf016351f0e0653968e56c25ef5dca8d7c7cbf474fa6d24f",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:22:56.072000+00:00",
+      "inspection": "Inspected full raster. Subject, cloth, warm naturalistic style and visible pin targets match selected verses. No text, UI, embodied God, nudity or gore. Phone crop behavior is not runtime verified.",
+      "sources": [
+        {
+          "chapter": 33,
+          "first": 1,
+          "last": 4
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-bethel-altar",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 landscape cinematic detailed warm naturalistic historical illustration, Genesis 35:6-7. Jacob, a mature bearded ancient Levantine man in earth-colored woven robes, kneels beside a newly built simple rough-stone altar at Bethel in Canaan. Main man and low altar centered inside middle 50 percent of frame, close readable forms; small family encampment unobtrusive in soft background. Warm amber afternoon sun across rocky scrub hills, rich textured stone and fabric, lavish painterly realism. This illustrates ONLY the altar episode, no other episodes. No embodied God, glowing figure, angel, UI, text, symbols, inscriptions, labels, pins, watermark, modern objects, nudity or gore. Faces, altar design and landscape are artistic reconstructions.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-963e73ff-c93a-4bb8-bb82-d01864b2d19a.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-963e73ff-c93a-4bb8-bb82-d01864b2d19a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-35-bethel-altar.png",
+      "final_path": "web/art/journey/genesis-expansion-c-35-bethel-altar.webp",
+      "source_sha256": "45394e6d43557750e28b3a934bf7191e77c11ed8e17aef8178851034b7485fd7",
+      "final_sha256": "cbd2f1ad4f67fbde8946df81e40dd4a39089b9eb9c9d09dc5d07f9656e6a2e70",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:22:56.421999+00:00",
+      "inspection": "Inspected full raster. Subject, cloth, warm naturalistic style and visible pin targets match selected verses. No text, UI, embodied God, nudity or gore. Phone crop behavior is not runtime verified.",
+      "sources": [
+        {
+          "chapter": 35,
+          "first": 6,
+          "last": 7
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-joseph-coat",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic detailed warm naturalistic historical illustration for Genesis 37:3-4. Elderly bearded Jacob in plain earth robes gently presents a distinctive richly woven coat with muted red, ochre, blue and cream bands to his young adult son Joseph, both fully clothed, father and son together at center. Two brothers watch with restrained unhappy expressions farther behind at tent edge. Ancient Canaan pastoral camp, sheep and rocky hills softly distant. Main father, son and coat clearly readable inside central 50 percent width for mobile crop. Warm natural golden light, textured cloth, realistic anatomy, lavish painterly realism. The coat is an artistic interpretation of KJV 'coat of many colours'; no claimed exact historical pattern. No UI, lettering, labels, pins, watermark, modern fashion, embodied God, halos, nudity or violence.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-1430cd24-862e-4517-a9aa-7dceeda4fd66.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-1430cd24-862e-4517-a9aa-7dceeda4fd66.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-37-joseph-coat.png",
+      "final_path": "web/art/journey/genesis-expansion-c-37-joseph-coat.webp",
+      "source_sha256": "a2f4eb8fc28400cb99c6043f46185ab4e66ccfb9ae20559b7532faa6eaa85be3",
+      "final_sha256": "d175ecf4d8641c047ea8e270db81f7ff22269f0e59dafeccfb3ae56186dfee2c",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:22:56.725353+00:00",
+      "inspection": "Inspected full raster. Subject, cloth, warm naturalistic style and visible pin targets match selected verses. No text, UI, embodied God, nudity or gore. Phone crop behavior is not runtime verified.",
+      "sources": [
+        {
+          "chapter": 37,
+          "first": 3,
+          "last": 4
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-left-garment",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 landscape illustration, a respectful OBJECT STUDY for Genesis 39:12–13. A simple ancient woven linen outer garment has been left behind, folded loosely and draped across a low stone bench inside a warm Egyptian domestic courtyard. The fabric is the sole dominant subject in the central 50 percent of the image, with readable cloth folds, a plain doorway softly beyond, a little dust and worn sandstone. Cinematic richly detailed warm naturalistic historical illustration, painterly realism, raking afternoon light. This is an interpretive study of the garment Joseph left behind, NOT a literal full episode reconstruction. NO PEOPLE, no body or hands, no sexual content or implied intimacy, no modern clothing, no writing, text, UI, labels, pins, watermark, embodied God or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-7e24e8e6-5b7a-4482-81a0-c07449f13d39.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-7e24e8e6-5b7a-4482-81a0-c07449f13d39.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-39-left-garment.png",
+      "final_path": "web/art/journey/genesis-expansion-c-39-left-garment.webp",
+      "source_sha256": "77dd0c71d35d2721884db1c6c0b32f20f8f726c3ed6fdef29dc3a4c50379a236",
+      "final_sha256": "77d36831bb67315c205d2f50216ff6f54b55a43f8a20e334eda11c4312621945",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:23:37.766796+00:00",
+      "inspection": "Inspected full raster: garment is clearly visible; no people or sexual act, no UI or written labels. Decorative architectural marks are pictorial motifs. Bench placement and garment design are interpretive.",
+      "sources": [
+        {
+          "chapter": 39,
+          "first": 12,
+          "last": 13
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-cupbearer-dream",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic detailed warm naturalistic historical illustration of ONLY the chief cupbearer's DREAM in Genesis 40:9-11. A mature ancient Egyptian cupbearer in modest linen stands centrally before a grapevine; three visible main branches bearing ripe grapes grow from one trunk. He holds a modest metal royal cup at chest height and squeezes a cluster of grapes above its opening. Clearly readable grapes and cup together near center, hands anatomically plausible. Another fully clothed royal figure softly distant is optional, but focus stays cupbearer and vine, all main details central 50 percent for phone crop. Sunlit warm dream garden, rich grape skins, leaf veins, linen and golden metal, lavish painterly realism. NO baker, no bread baskets, no birds, no prison, no unrelated dream symbols. No glowing or divine figures, UI, lettering, labels, pins, watermark, nudity or gore. This is a visual interpretation of a narrated dream, not a literal historical meeting.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-630c7a1a-90a9-4bd8-90b0-d8d4fc8215bb.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-630c7a1a-90a9-4bd8-90b0-d8d4fc8215bb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-40-cupbearer-dream.png",
+      "final_path": "web/art/journey/genesis-expansion-c-40-cupbearer-dream.webp",
+      "source_sha256": "b5d2e3e26ec8e3d5980b59e1ac6aa9f1e86410f93752ed1fefbc264492edd7fd",
+      "final_sha256": "6a6b2510910cc805933f3f3a5e646c2d5244d142f0d945f9652e73792287b5de",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:24:21.480514+00:00",
+      "inspection": "Inspected full raster. Grapes, vine, cupbearer and cup visible; no baker/baskets composite. Branch number is not treated as a visually verified count. Three days interpretation remains textual. No UI labels or embodied God.",
+      "sources": [
+        {
+          "chapter": 40,
+          "first": 9,
+          "last": 11
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-joseph-investiture",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic historical illustration for Genesis 41:42. Pharaoh places a gold signet ring onto Joseph's extended hand. Joseph is a thirty-year-old ancient Levantine man wearing modest full fine linen robes and a gold chain around his neck, calm and solemn; Pharaoh is a mature ancient Egyptian ruler, fully clothed. Two main figures close together at CENTER, their joined hands and ring clearly visible center foreground, linen and chain readable. Warm sandstone royal interior softly recedes, no literal inscriptions. Main forms fit central 50 percent for mobile crop. Warm natural amber light, rich textured fabrics, realistic expressive faces, lavish painterly realism. Focus only investiture, do not add grain storage or other later events into the same moment. No UI, text, labels, pins, watermark, modern objects, embodied God, halo, nudity, gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-f49178df-996b-4f24-a783-60100533aa65.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-f49178df-996b-4f24-a783-60100533aa65.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-41-joseph-investiture.png",
+      "final_path": "web/art/journey/genesis-expansion-c-41-joseph-investiture.webp",
+      "source_sha256": "575b09f47e1f99b1792a05ed680631ca519d095875ece1ef5f5a0115189b77b4",
+      "final_sha256": "4b11ede8c8c6cf3cdbf2754397b06f8bbb5ae735ae59c99afc37f8667b88ba43",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:25:10.521913+00:00",
+      "inspection": "Inspected full raster: ring at hands, Joseph's fine linen and neck chain visible. Two figures flank central ring. Architectural decoration, clothing and faces are interpretive. No UI or text overlays.",
+      "sources": [
+        {
+          "chapter": 41,
+          "first": 42,
+          "last": 42
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-brothers-bow",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic detailed warm naturalistic historical illustration for Genesis 42:6-8. Joseph, ancient Levantine governor wearing modest fine Egyptian linen and gold chain, sits upright on a low chair at center-right in a grain distribution court. His adult brothers in dusty plain woven Canaanite robes bow with faces near the earth before him, two bowing men prominent center-left and remaining brothers softly receding. Joseph recognizes them but they do not recognize him. Open grain sacks and baskets at lower central foreground, restrained sandstone granary architecture, warm daylight. Main Joseph, bowed figures and grain within central 50 percent width for mobile cropping; no sprawling empty panorama. Natural realistic anatomy and cloth, lavish painterly realism. No UI, baked text, labels, inscriptions, pins, watermark, embodied God, halo, nudity, violence or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-dd53dab6-6d11-409d-8485-fc740e33ebd5.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-dd53dab6-6d11-409d-8485-fc740e33ebd5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-42-brothers-bow.png",
+      "final_path": "web/art/journey/genesis-expansion-c-42-brothers-bow.webp",
+      "source_sha256": "2051619f5c8d97b6a06f0d568fe9cb55282c9096abf2cab68a43606e5d07754c",
+      "final_sha256": "ef4049cc3348d5a8990c77fc06eadca944aaf9fc765998d6a8c71dd84a18aa7b",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:26:02.611977+00:00",
+      "inspection": "Inspected full raster: visible Joseph seated right, bowed men and grain sacks. Pin targets are on visible figures. Regalia/architecture interpretive. No UI or baked labels. Crop behavior is not runtime verified.",
+      "sources": [
+        {
+          "chapter": 42,
+          "first": 6,
+          "last": 8
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-benjamin-meal",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic historical illustration for Genesis 43:31-34. Benjamin, youngest adult brother in a simple woven robe, sits at the central low dining table surrounded by his adult bearded brothers. A server sets a visibly generous large portion of bread and prepared food before Benjamin, while neighboring brothers have much smaller portions and look surprised. Joseph, governor in modest fine linen, sits clearly at his OWN SEPARATE small table a little behind them, with space between his table and the brothers' table. Do not seat Joseph at the same table. Focus Benjamin, generous plate and two neighboring brothers within central 50 percent of image; remainder softly recedes. Ancient Egyptian sandstone dining room, warm natural daylight, textured bread and pottery, realistic anatomy, lavish painterly realism. Avoid asserting exact numeric food quantity visually. No UI, lettering, labels, pins, watermark, modern cutlery, embodied God, halos, nudity, gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-3841a359-8725-43e1-8080-5e667b2dab0f.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-3841a359-8725-43e1-8080-5e667b2dab0f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-43-benjamin-meal.png",
+      "final_path": "web/art/journey/genesis-expansion-c-43-benjamin-meal.webp",
+      "source_sha256": "44560759b5027990ccdc66ab33dd6b10fac01c0f801c515567a963b15805d6b4",
+      "final_sha256": "351280926a691eaae98256d158d4ae0e22150ba965aed1afcdd50823506ae10c",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:26:54.947455+00:00",
+      "inspection": "Inspected full raster: Benjamin and large plate central, smaller portions beside him, Joseph at separate background table. Exact fivefold ratio not visually measurable. No UI or overlay text.",
+      "sources": [
+        {
+          "chapter": 43,
+          "first": 31,
+          "last": 34
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-silver-cup",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 landscape cinematic detailed warm naturalistic historical illustration, respectful close OBJECT STUDY for Genesis 44:1-2,12. A clearly silver metal drinking cup discovered inside the OPEN MOUTH OF A COARSE WOVEN GRAIN SACK, silver cup resting visibly against pale wheat grains, a few plain ancient silver-weight pieces nearby. Main open sack and cup at CENTER occupying central 50 percent width, cup luminous but natural, enough opening to see exactly what it is. Softly blurred other sacks, dusty ground and ancient travelers' donkey packs far behind. No people or hands required. Warm dawn sunlight, richly textured cloth, wheat and brushed silver, lavish painterly realism. This is an interpretive object study, no claimed exact cup design or location. No gold cup, no modern money or plastic, no UI, text, labels, pins, watermark, embodied God, nudity, violence or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-e7a21060-c7da-4983-ae6e-27fcda03383c.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-e7a21060-c7da-4983-ae6e-27fcda03383c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-44-silver-cup.png",
+      "final_path": "web/art/journey/genesis-expansion-c-44-silver-cup.webp",
+      "source_sha256": "b0e0d9557a9212ec5006c829cf90d567410f3c0ef0ebdd461955180c09a26aad",
+      "final_sha256": "2405eeb42d3444d0cf1547b4ed85de408aeac2fc20f94ecf4a0b71914b9a14e0",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:34:19.887664+00:00",
+      "inspection": "Inspected full raster: silver cup, grain, sack and unmarked metal pieces visible. Object forms and road staging interpretive; no UI or text labels.",
+      "sources": [
+        {
+          "chapter": 44,
+          "first": 1,
+          "last": 2
+        },
+        {
+          "chapter": 44,
+          "first": 12,
+          "last": 13
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-joseph-benjamin-embrace",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic historical illustration of Genesis 45:14-15. Joseph, ancient Levantine governor in fine cream linen and restrained gold chain, embraces his youngest adult brother Benjamin and weeps upon his neck; Benjamin weeps too. Two central brothers closely embracing, expressive tearful faces, fully clothed, with other adult brothers in simple Canaanite woven robes quietly gathered a little behind. No courtiers, soldiers or Egyptian servants in this private reunion. Warm plain sandstone interior softly recedes, gentle afternoon natural light, richly textured cloth and realistic skin, lavish painterly realism. Main two faces and embrace inside central 50 percent width for phone crop. No UI, lettering, labels, pins, watermark, modern objects, embodied God, halo, nudity, violence or gore. Human forms and room are artistic interpretations.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-da841eb0-51a2-4e27-9a78-025d7d2aa198.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-da841eb0-51a2-4e27-9a78-025d7d2aa198.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-45-joseph-benjamin-embrace.png",
+      "final_path": "web/art/journey/genesis-expansion-c-45-joseph-benjamin-embrace.webp",
+      "source_sha256": "928bafcefaf86b7eb8f58616ee8daad292e3326a284917ccadc3e6590313900d",
+      "final_sha256": "29771a634b5ee9e29fca37b5e39f4de518bbe1962aa13a34fd9347faaf5a2167",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:35:57.114335+00:00",
+      "inspection": "Inspected full raster: two central fully clothed men embrace, other brothers behind, no Egyptian entourage. Faces/room reconstructed. No UI, text, embodied God, nudity or gore.",
+      "sources": [
+        {
+          "chapter": 45,
+          "first": 14,
+          "last": 15
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-family-wagons",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic detailed warm naturalistic historical illustration for Genesis 46:5-7. Jacob, an elderly fully clothed bearded Levantine patriarch, rides seated safely in a simple ancient wooden ox-drawn wagon with a fully clothed daughter-in-law and a small child beside him. One adult son in earth-colored woven robe walks close beside the wagon. The wagon occupants and wooden wheel are CENTERED, main 2-3 readable subjects in central 50 percent for phone crop. Other family wagons, cattle and goods softly recede behind them. Warm natural afternoon light on dusty open country with gentle distant vegetation, no famous landmarks, no invented exact route or border marker. Rich wood, cloth and dust texture, realistic human forms, lavish painterly realism. No modern cart hardware, UI, text, labels, pins, maps, watermark, embodied God, halos, nudity, violence or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-44649e8f-a4b5-43ab-a4ff-ec585b0bd480.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-44649e8f-a4b5-43ab-a4ff-ec585b0bd480.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-46-family-wagons.png",
+      "final_path": "web/art/journey/genesis-expansion-c-46-family-wagons.webp",
+      "source_sha256": "b3b19b2221e2ebfce34ea21af53f513a9906f72331fa32bea0cf70e7ffdc4f5e",
+      "final_sha256": "871f44cc284a8c37477484fd53206bff4361cab9e3e9f98494b367f7a7bc740a",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:36:46.250047+00:00",
+      "inspection": "Inspected full raster: elderly Jacob, woman and child in central wooden wagon, walking man and cattle visible. No route markers or famous landmarks. Wagon engineering, faces and landscape interpretive.",
+      "sources": [
+        {
+          "chapter": 46,
+          "first": 5,
+          "last": 7
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-joseph-grain-exchange",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic historical illustration for Genesis 47:15-17. Joseph, a mature ancient Levantine governor wearing full fine cream Egyptian linen and a restrained gold neck chain, STANDS clearly visible at CENTER and gives a filled grain sack to a weary fully clothed Egyptian man in plain linen. The recipient leads a small goat close beside him as an offered livestock exchange. Joseph himself is prominent and recognizably overseeing the transaction, not a generic anonymous barn worker. Main two men, grain sack and goat within central 50 percent width for phone crop. Ancient Egyptian sandstone grain-distribution courtyard with stored grain softly behind, subdued dry famine surroundings, warm natural sunlight. Detailed textured sack, kernels, linen and stone, realistic anatomy, lavish painterly realism. No baked text, UI, labels, pins, watermark, modern objects, embodied God, halos, nudity, violence or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-81bedb09-73b9-40f0-9a7a-57a3be7e3c59.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-81bedb09-73b9-40f0-9a7a-57a3be7e3c59.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-47-joseph-grain-exchange.png",
+      "final_path": "web/art/journey/genesis-expansion-c-47-joseph-grain-exchange.webp",
+      "source_sha256": "2bcc02ee0db023e91ad966fb5dca9e9ac7ac886cade9bf84bebc3974e41f5368",
+      "final_sha256": "54d34f922655b0b692511724b76fac9ee3cfab3ce4c01b580695f6891b47d303",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:37:45.658620+00:00",
+      "inspection": "Inspected full raster: central Joseph in linen, recipient, grain sack and goat clearly visible. Background relief motifs are decorative, not educational labels. No UI overlay, embodied God, nudity or gore.",
+      "sources": [
+        {
+          "chapter": 47,
+          "first": 15,
+          "last": 17
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-crossed-hands",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic historical illustration for Genesis 48:13-16. Elderly white-bearded Jacob sits upright on a low bed facing the viewer, fully clothed in plain woven robes. Two fully clothed boys kneel before him at center, Manasseh the older boy on VIEWER LEFT and Ephraim the younger on VIEWER RIGHT. Jacob deliberately CROSSES HIS FOREARMS in an X while blessing their heads: his anatomical RIGHT ARM starts at his shoulder on viewer left and crosses to rest his RIGHT HAND on Ephraim's head at viewer right; his LEFT ARM starts at viewer right shoulder and crosses to rest his LEFT HAND on Manasseh's head at viewer left. Clear two separate arms, two hands, one hand on each boy's head, anatomically coherent. All three figures, their heads and crossed forearms inside central 50 percent width for phone crop. Joseph may stand quietly soft background with arms lowered, no extra hands touching the boys. Warm Egyptian domestic room, natural amber window light, richly textured linen and wool, lavish painterly realism. No divine being/angel, UI, text, labels, pins, watermark, modern objects, nudity, violence or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-5d2d75be-01f3-406f-aad3-cd576bde85b4.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-5d2d75be-01f3-406f-aad3-cd576bde85b4.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-48-crossed-hands.png",
+      "final_path": "web/art/journey/genesis-expansion-c-48-crossed-hands.webp",
+      "source_sha256": "f778f401d7f50f0708434a6339b419e655df05fb2d940f42b9c219ba6280a695",
+      "final_sha256": "b71c249a9fdcb087adee1a9f2f42741735ff13e2d056e96736c9ccedb789cca0",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:39:01.822193+00:00",
+      "inspection": "Inspected full raster: Jacob's anatomical right arm from viewer left crosses to younger boy at viewer right; left arm crosses to older boy at viewer left. Two hands rest on two heads. No angel or divine figure. People and chamber reconstructed.",
+      "sources": [
+        {
+          "chapter": 48,
+          "first": 13,
+          "last": 16
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-judah-lion-comparison",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic illustration as a LITERARY SYMBOL STUDY for Genesis 49:9, Jacob comparing Judah to a lion. A magnificent tawny adult male lion lies couched calmly on a low warm rock, head alert, in an evocative rocky ancient Near Eastern landscape. Lion centered, entire face, powerful shoulders and folded forepaws inside central 50 percent width for phone crop; background softly distant amber hills and sparse grasses. Warm natural late-afternoon light, detailed fur, weathered rock and dust, lavish painterly realism. ONLY the lion; no humans, no literal Judah, no meeting, no travel scene, no battle, no prey remains, no crown or heraldry. This depicts the poetic lion comparison, NOT a claim that Judah met an animal or changed into one. No UI, text, labels, pins, watermark, embodied God, halos, blood or gore.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-dc5a28b8-fdb2-4e19-a978-52d08dc6c3b2.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-dc5a28b8-fdb2-4e19-a978-52d08dc6c3b2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-49-judah-lion-comparison.png",
+      "final_path": "web/art/journey/genesis-expansion-c-49-judah-lion-comparison.webp",
+      "source_sha256": "36673c7e8f195078ba54b1542899c74fabff5f3d8346ce33f6292da717f01c5b",
+      "final_sha256": "bb35c744efbc022f962364d30b598e2eb5654f27893ec20d9a5d48330d82e24d",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:40:05.198819+00:00",
+      "inspection": "Inspected full raster: lion couched calmly, no humans, meeting, journey, crown or gore. Scene explicitly labeled literary symbol in metadata; landscape and animal appearance interpretive.",
+      "sources": [
+        {
+          "chapter": 49,
+          "first": 9,
+          "last": 9
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-joseph-coffin",
+      "prompt": "Use case: historical-scene. Create ONE 1536x1024 cinematic richly detailed warm naturalistic historical illustration, respectful OBJECT STUDY for Genesis 50:26. A CLOSED simple rectangular ancient wooden coffin rests on a low stone platform in a quiet restrained Egyptian chamber. No human remains visible, no people, no open lid, no mummy, no masks, no anthropomorphic sarcophagus or elaborate royal imagery. Main closed wooden coffin occupies central 50 percent width, horizontal shape clearly readable and fully within frame. A plain folded linen cloth rests beside its base, a gentle shaft of late-afternoon natural light illuminates warm wood grain and worn sandstone, mood solemn and peaceful. Lavish painterly realism consistent with warm biblical historical illustrations. The exact coffin design and room are artistic reconstruction; do not add signs or inscriptions. No UI, text, labels, pins, watermark, embodied God, halos, nudity, blood, gore or horror.",
+      "generated_output_path": "/Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-2e974a99-342f-4e3e-b7c3-9de0c508c01e.png",
+      "receipt": "Generated images are saved to /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967 as /Users/daeshawnballard/.codex/generated_images/01a15b66-d5b1-73c3-999b-ef189f32a967/exec-2e974a99-342f-4e3e-b7c3-9de0c508c01e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_path": "assets/imagegen/source/genesis-expansion-c-50-joseph-coffin.png",
+      "final_path": "web/art/journey/genesis-expansion-c-50-joseph-coffin.webp",
+      "source_sha256": "32327b59a129c9fbdbb8ba90d215d2483a7d84b720529678cc68274972ae56a3",
+      "final_sha256": "fe89d457f8a3a65af5346d6c37cc93d8b493813e27787004744a5d99e8824ad6",
+      "width": 1536,
+      "height": 1024,
+      "webp_quality": 85,
+      "inspected_at_utc": "2026-10-20T22:41:16.914811+00:00",
+      "inspection": "Inspected full raster: closed rectangular wooden coffin, no people or visible remains, quiet warm setting. Coffin design/room/cloth are reconstructed. No UI, labels, embodied God, gore or horror.",
+      "sources": [
+        {
+          "chapter": 50,
+          "first": 26,
+          "last": 26
+        }
+      ]
+    }
+  ]
+}

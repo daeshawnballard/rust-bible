@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-20",
+  "method": "Original native SVG text diagrams authored from the repository’s local KJV JSON; vector labels and connectors only, no raster image generation.",
+  "visual_policy": "Dark charcoal background, warm gold connectors, serif text; minimum visible text size 30px; no portraits, maps, scaled timelines, or unselected descendants.",
+  "scripture_source": {
+    "path": "data/kjv.json",
+    "sha256": "fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b",
+    "translation": "KJV as stored in the local corpus"
+  },
+  "assets": [
+    {
+      "path": "web/art/journey/genesis-expansion-family-line.svg",
+      "sha256": "32725d1dc76b5c90964dfde5d2134d3757b722830c3a8554e980f325904a2188",
+      "scene_id": "genesis-family-line",
+      "references": "Genesis5:1–32",
+      "range_semantics": "Native named line only; each node has its exact selected source range. Not a chronology or full family tree.",
+      "authored_content": "Native SVG labels, cards and connectors; no raster generation."
+    },
+    {
+      "path": "web/art/journey/genesis-expansion-diagram-10.svg",
+      "sha256": "8716a7be9e2a62f1906ab1a36ee4dba3175b2ea07f6d6a5b61fecf766d0f4114",
+      "scene_id": "genesis-diagram-10",
+      "references": "Genesis 10:1–6, 21–22 · selected family branches only",
+      "range_semantics": "Only the ranges listed in the scene fragment and hotspot actives are selected; this is not full-chapter coverage.",
+      "authored_content": "Text, names, connectors, and cards are native SVG vectors."
+    },
+    {
+      "path": "web/art/journey/genesis-expansion-diagram-17.svg",
+      "sha256": "18f4ae2140b091522ffda7c62b7274b643bfdd4f9f6caa20512a500744f347e7",
+      "scene_id": "genesis-diagram-17",
+      "references": "Genesis 17:5, 15, 19–21 · names and future promise only",
+      "range_semantics": "Only the ranges listed in the scene fragment and hotspot actives are selected; this is not full-chapter coverage.",
+      "authored_content": "Text, names, connectors, and cards are native SVG vectors."
+    },
+    {
+      "path": "web/art/journey/genesis-expansion-diagram-34.svg",
+      "sha256": "a9c345da969eb11104448e77a91f081d720f90bbdfb107d5cc7e91a601727bff",
+      "scene_id": "genesis-diagram-34",
+      "references": "Genesis 34:1, 25, 30–31 · selected relationship guide",
+      "range_semantics": "Only the ranges listed in the scene fragment and hotspot actives are selected; this is not full-chapter coverage.",
+      "authored_content": "Text, names, connectors, and cards are native SVG vectors."
+    },
+    {
+      "path": "web/art/journey/genesis-expansion-diagram-36.svg",
+      "sha256": "f6808edc4707dd7d325aa9b3821226c817e9ed8997889e4c21fdfef20220a3c1",
+      "scene_id": "genesis-diagram-36",
+      "references": "Genesis 36:1–5 · selected family only",
+      "range_semantics": "Only the ranges listed in the scene fragment and hotspot actives are selected; this is not full-chapter coverage.",
+      "authored_content": "Text, names, connectors, and cards are native SVG vectors."
+    }
+  ]
+}

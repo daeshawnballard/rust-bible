@@ -178,11 +178,17 @@ fn render_html(scene: &Scene, active: Option<&Hotspot>, client: bool) -> String 
     let book_slug = slug(scene.book);
     let active_id = active.map(|hotspot| hotspot.id.as_str());
     let stage = active_id.unwrap_or("intro");
+    let diagram = if scene.art.path.ends_with(".svg") {
+        " data-passage-diagram"
+    } else {
+        ""
+    };
     let mut html = format!(
-        r#"<section class="story-journey" data-story-scene="{}" data-story-stage="{}"><p class="reader-context-kind">Illustrated passage · {}</p><figure class="story-journey-art" data-passage-scene><img src="{}" width="{}" height="{}" alt="{}">"#,
+        r#"<section class="story-journey" data-story-scene="{}" data-story-stage="{}"><p class="reader-context-kind">Illustrated passage · {}</p><figure class="story-journey-art" data-passage-scene{}><img src="{}" width="{}" height="{}" alt="{}">"#,
         esc(&scene.id),
         esc(stage),
         esc(&scene.coverage),
+        diagram,
         esc(&scene.art.path),
         scene.art.width,
         scene.art.height,
@@ -313,7 +319,10 @@ mod tests {
     }
 
     fn valid_art(a: &Art) {
-        assert!(a.path.starts_with("/art/journey/") && a.path.ends_with(".webp"));
+        assert!(
+            a.path.starts_with("/art/journey/")
+                && (a.path.ends_with(".webp") || a.path.ends_with(".svg"))
+        );
         assert!(a.width > 0 && a.height > 0 && !a.alt.trim().is_empty());
         assert!(Path::new("web")
             .join(a.path.trim_start_matches('/'))

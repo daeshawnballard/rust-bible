@@ -5573,6 +5573,4255 @@
           "detail": null
         }
       ]
+    },
+    {
+      "id": "genesis-creation-land",
+      "book": 0,
+      "title": "Dry land, seas, and seed-bearing plants",
+      "coverage": "Genesis 1:9–13",
+      "art": {
+        "path": "/art/journey/genesis-expansion-creation-land.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Water beside dry land, seed-bearing grasses, and a fruit-bearing tree; artistic illustration of Genesis 1:9–13"
+      },
+      "caption": "Illustrated reconstruction · Genesis 1:9–13",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 9,
+          "last": 13
+        }
+      ],
+      "intro": {
+        "title": "Dry land, seas, and seed-bearing plants",
+        "note": "This selected creation passage names the gathering of waters, dry land, and vegetation bearing seed. The landscape illustrates those subjects; its species and physical appearance are artistic choices."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-gathered-waters",
+          "title": "Waters gathered into seas",
+          "x": 35,
+          "y": 77,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 9,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "Genesis names the gathered waters Seas. The water is a visible subject for that verse; this coastline is an illustration, not a proposed location.",
+          "detail": null
+        },
+        {
+          "id": "genesis-dry-land",
+          "title": "Dry land appears",
+          "x": 54,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 9,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "The passage distinguishes dry land from the gathered waters and calls the dry land Earth. The marker identifies the visible shore rather than an invented travel stop.",
+          "detail": null
+        },
+        {
+          "id": "genesis-seed-bearing-plants",
+          "title": "Plants and fruit bearing seed",
+          "x": 64,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 11,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "note": "The text names grass, herbs yielding seed, and fruit trees whose seed is in their fruit. The species pictured are illustrative and are not identified in Genesis.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-east-of-eden",
+      "book": 0,
+      "title": "Clothed and sent out from the garden",
+      "coverage": "Genesis 3:21–24",
+      "art": {
+        "path": "/art/journey/genesis-expansion-east-of-eden.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Two clothed adults leave a garden while winged guardians and a flaming sword guard the way; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 3:21–24",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 21,
+          "last": 24
+        }
+      ],
+      "intro": {
+        "title": "Clothed and sent out from the garden",
+        "note": "The closing verses describe garments of skins, departure to till the ground, and the guarded way to the tree of life. The people, terrain, and winged form of the cherubim are artistic interpretations."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-clothed-departure",
+          "title": "Clothed and sent out",
+          "x": 31,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 21,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 21,
+              "last": 23
+            }
+          ],
+          "note": "After the garments of skins are made, the man is sent out of the garden to till the ground. The illustration includes the clothed couple departing; their appearance and clothing construction are not specified in the text.",
+          "detail": null
+        },
+        {
+          "id": "genesis-guarded-way",
+          "title": "The guarded way",
+          "x": 73,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "note": "Cherubim and a flaming sword guard the way to the tree of life. Genesis does not describe the cherubim as the winged human figures shown here; that form is an artistic convention.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-brothers-offerings",
+      "book": 0,
+      "title": "Cain and Abel bring their offerings",
+      "coverage": "Genesis 4:3–5",
+      "art": {
+        "path": "/art/journey/genesis-expansion-brothers-offerings.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "One brother carries produce and the other holds a lamb, illustrating the offerings brought by Cain and Abel"
+      },
+      "caption": "Illustrated reconstruction · Genesis 4:3–5",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 3,
+          "last": 5
+        }
+      ],
+      "intro": {
+        "title": "Cain and Abel bring their offerings",
+        "note": "Cain brings an offering from the fruit of the ground; Abel brings firstlings of his flock and their fat. This image illustrates bringing the gifts. It does not depict the sacrificial act or make divine acceptance visibly observable."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-cain-offering",
+          "title": "Cain’s fruit of the ground",
+          "x": 34,
+          "y": 57,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "Cain brings an offering from the fruit of the ground. The basket makes that offering visible; its particular crops and container are artistic choices.",
+          "detail": null
+        },
+        {
+          "id": "genesis-abel-offering",
+          "title": "Abel’s firstlings of the flock",
+          "x": 72,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "note": "Abel brings firstlings of his flock and their fat. The living lamb illustrates bringing an offering, not the full sacrificial act. The passage describes the Lord’s regard; no visible supernatural signal is invented here.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-family-line",
+      "book": 0,
+      "title": "The family line from Adam to Noah",
+      "coverage": "Genesis 5:1–32",
+      "art": {
+        "path": "/art/journey/genesis-expansion-family-line.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Genealogy diagram showing Adam, Seth, Enos, Cainan, Mahalaleel, Jared, Enoch, Methuselah, Lamech, and Noah, in that family line"
+      },
+      "caption": "Genealogy diagram · Genesis 5 · Family relationships, not geography",
+      "ranges": [
+        {
+          "chapter": 5,
+          "first": 1,
+          "last": 32
+        }
+      ],
+      "intro": {
+        "title": "The family line from Adam to Noah",
+        "note": "This diagram follows the named family line in Genesis 5. Other sons and daughters are mentioned but not listed here. It does not invent portraits or locations, and the spacing is not a chronological scale."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-lineage-adam",
+          "title": "Adam in the family line",
+          "x": 14,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 1,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "This part of Genesis 5 names Adam in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-seth",
+          "title": "Seth in the family line",
+          "x": 32,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 6,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "This part of Genesis 5 names Seth in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-enos",
+          "title": "Enos in the family line",
+          "x": 50,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 9,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 9,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 9,
+              "last": 11
+            }
+          ],
+          "note": "This part of Genesis 5 names Enos in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-cainan",
+          "title": "Cainan in the family line",
+          "x": 68,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 12,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "note": "This part of Genesis 5 names Cainan in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-mahalaleel",
+          "title": "Mahalaleel in the family line",
+          "x": 86,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 15,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "note": "This part of Genesis 5 names Mahalaleel in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-jared",
+          "title": "Jared in the family line",
+          "x": 86,
+          "y": 68,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 18,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 18,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 18,
+              "last": 20
+            }
+          ],
+          "note": "This part of Genesis 5 names Jared in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-enoch",
+          "title": "Enoch in the family line",
+          "x": 68,
+          "y": 68,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 21,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 21,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 21,
+              "last": 24
+            }
+          ],
+          "note": "Genesis says that Enoch walked with God and that God took him. His entry has wording distinct from the repeated deaths in this genealogy. The diagram preserves his place in the family line without inventing a scene of his departure.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-methuselah",
+          "title": "Methuselah in the family line",
+          "x": 50,
+          "y": 68,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 25,
+              "last": 27
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 25,
+            "last": 27
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 25,
+              "last": 27
+            }
+          ],
+          "note": "This part of Genesis 5 names Methuselah in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-lamech",
+          "title": "Lamech in the family line",
+          "x": 32,
+          "y": 68,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 28,
+              "last": 31
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 28,
+            "last": 31
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 28,
+              "last": 31
+            }
+          ],
+          "note": "This part of Genesis 5 names Lamech in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        },
+        {
+          "id": "genesis-lineage-noah",
+          "title": "Noah in the family line",
+          "x": 14,
+          "y": 68,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 32,
+              "last": 32
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 32,
+            "last": 32
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 32,
+              "last": 32
+            }
+          ],
+          "note": "This part of Genesis 5 names Noah in the family line leading to Noah. Read the source for the ages and relationships stated in the text. The diagram does not assign dates, distances, portraits, or a complete family tree.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-ark-building",
+      "book": 0,
+      "title": "Noah prepares the ark",
+      "coverage": "Genesis 6:14–16, 22",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-ark-building.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Noah applies dark pitch to a large wooden ark beside its visible side door; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 6:14–16, 22 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 14,
+          "last": 16
+        },
+        {
+          "chapter": 6,
+          "first": 22,
+          "last": 22
+        }
+      ],
+      "intro": {
+        "title": "Wood, pitch, and the side door",
+        "note": "Genesis describes the ark's wood, pitch, window, side door, and three stories, then says Noah followed the command. The building scene reconstructs those details without claiming an exact hull design or location."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-ark-wood",
+          "title": "Build with wood",
+          "x": 52,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "note": "The command specifies gopher wood, rooms, and dimensions. The wood species and exact ark form cannot be established from this reconstruction.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-ark-pitch",
+          "title": "Pitch within and without",
+          "x": 51,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Noah applies dark pitch to the wooden side. Genesis names pitch inside and outside; the tool and pot are reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-ark-side-door",
+          "title": "A door in the side",
+          "x": 79,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "The visible opening illustrates the door placed in the ark's side. Genesis also describes a window and three stories.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-covenant-bow",
+      "book": 0,
+      "title": "The bow in the cloud",
+      "coverage": "Genesis 9:12–17",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-covenant-bow.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A rainbow arches through clouds above Noah and a small group of living animals on renewed ground; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 9:12–17 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 9,
+          "first": 12,
+          "last": 17
+        }
+      ],
+      "intro": {
+        "title": "A covenant sign after the flood",
+        "note": "The bow in the cloud is named as the covenant token for Noah and every living creature. The landscape and animal grouping are reconstructed; the image does not depict God speaking."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-bow-cloud",
+          "title": "The bow in the cloud",
+          "x": 48,
+          "y": 8,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "note": "God names the bow in the cloud as the token of the covenant between himself and the earth. The rainbow is the visible subject.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-living-creatures",
+          "title": "Every living creature",
+          "x": 60,
+          "y": 75,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "note": "The covenant includes every living creature. The sheep and cattle represent living creatures; this animal grouping is illustrative.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-babel-bricks",
+      "book": 0,
+      "title": "Bricks for a city and tower",
+      "coverage": "Genesis 11:3–4",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-babel-bricks.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Builders handle fired bricks and dark mortar beside an unfinished tall brick tower; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 11:3–4 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 11,
+          "first": 3,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "Building Babel",
+        "note": "Genesis names fired bricks and slime for mortar before the people propose their city and tower. This illustration represents the building project; it does not establish the tower's actual shape or height."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-babel-brick",
+          "title": "Brick and mortar",
+          "x": 34,
+          "y": 59,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "The builders make fired bricks and use slime for mortar. The visible reddish brick and dark mortar illustrate those materials.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-babel-tower",
+          "title": "A city and tower",
+          "x": 69,
+          "y": 28,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "The people propose a city and a tower to make themselves a name. Its stepped shape and scaffolding are reconstructed.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-abram-departs",
+      "book": 0,
+      "title": "Abram departs with his household",
+      "coverage": "Genesis 12:4–5",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-abram-departs.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abram and Sarai lead a modest household procession carrying possessions on pack animals; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 12:4–5 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 12,
+          "first": 4,
+          "last": 5
+        }
+      ],
+      "intro": {
+        "title": "Leaving Haran",
+        "note": "Abram departs with Sarai, Lot, their possessions, and the people with them. The procession and landscape illustrate departure without fixing a surveyed route or the appearance of Haran."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-departure-household",
+          "title": "Abram, Sarai, and Lot depart",
+          "x": 32,
+          "y": 33,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "note": "Abram leaves Haran with Sarai his wife and Lot his brother's son. The visible travelers illustrate the departure; their appearance is reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-departure-possessions",
+          "title": "They take their possessions",
+          "x": 70,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "The household takes its gathered substance and people. The loaded pack animal represents those possessions without establishing an exact inventory or route.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-abram-lot-separate",
+      "book": 0,
+      "title": "Abram and Lot separate",
+      "coverage": "Genesis 13:8–12",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-abram-lot-separate.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abram and Lot speak beside a tent while a household and flocks prepare to depart toward a greener plain; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 13:8–12 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 13,
+          "first": 8,
+          "last": 12
+        }
+      ],
+      "intro": {
+        "title": "Room for two households",
+        "note": "Abram asks that there be no strife. Lot chooses the well-watered plain and they separate. The figures, tents, and land are a narrative reconstruction, not proof of precise directions or campsite locations."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-peaceful-separation",
+          "title": "Let there be no strife",
+          "x": 35,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "note": "Abram urges Lot to avoid strife and offers him the choice of land. The open-hand conversation illustrates this peaceful separation.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-lot-tent-flocks",
+          "title": "Lot takes his household toward the plain",
+          "x": 72,
+          "y": 63,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "note": "Lot chooses the well-watered plain, journeys east, and pitches his tent toward Sodom. The tent and flock identify a moving household; their screen position is not a geographic bearing.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-melchizedek-bread-wine",
+      "book": 0,
+      "title": "Melchizedek brings bread and wine",
+      "coverage": "Genesis 14:18–19",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-melchizedek-bread-wine.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Melchizedek offers bread and a wine vessel to Abram, with a respectful blessing gesture; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 14:18–19 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 14,
+          "first": 18,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "A blessing for Abram",
+        "note": "Melchizedek, king of Salem and priest of the most high God, brings bread and wine and blesses Abram. The exchange, clothing, and vessels are reconstructed. The later tithe is not depicted in this selected scene."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-bread-wine",
+          "title": "Melchizedek brings bread and wine",
+          "x": 39,
+          "y": 48,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "note": "The bread and wine vessel illustrate what Melchizedek brings forth as king of Salem and priest of the most high God.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-melchizedek-blessing",
+          "title": "Melchizedek blesses Abram",
+          "x": 49,
+          "y": 22,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "Melchizedek blesses Abram in the name of the most high God, possessor of heaven and earth. The raised hand represents his spoken blessing.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-abram-stars",
+      "book": 0,
+      "title": "Abram looks toward the stars",
+      "coverage": "Genesis 15:5–6",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-abram-stars.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abram stands outside a tent looking upward at a star-filled night sky; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 15:5–6 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 15,
+          "first": 5,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "So shall thy seed be",
+        "note": "Abram is told to look toward heaven and number the stars, then believes the LORD. This image shows Abram and the visible stars; faith and the spoken promise are conveyed by the passage, not by a visible divine figure."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-abram-looks",
+          "title": "Abram looks toward heaven",
+          "x": 34,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "Abram is brought outside and told to look toward heaven. He believes the LORD; the visible man illustrates Abram's attention, while the text conveys his faith.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-number-stars",
+          "title": "Number the stars",
+          "x": 64,
+          "y": 20,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "The stars illustrate the comparison given for Abram's seed. Their pattern is artistic and does not identify an exact ancient sky.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-hagar-fountain",
+      "book": 0,
+      "title": "Hagar beside the wilderness fountain",
+      "coverage": "Genesis 16:7–8, 13–14",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-hagar-fountain.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Hagar sits beside a clear wilderness spring with a water vessel, looking toward an unseen speaker; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 16:7–8, 13–14 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 16,
+          "first": 7,
+          "last": 8
+        },
+        {
+          "chapter": 16,
+          "first": 13,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "Seen in affliction",
+        "note": "The angel of the LORD finds Hagar by a fountain in the wilderness. Hagar speaks of the God who sees her, and the well is named Beer-lahai-roi. The messenger remains unseen in this illustration; the woman's appearance and the water source are reconstructed."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-hagar-seen",
+          "title": "Hagar is found in the wilderness",
+          "x": 38,
+          "y": 28,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "note": "The angel of the LORD finds Hagar by a fountain and asks where she has come from and where she is going. The illustration shows Hagar; the speaker remains unseen.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-hagar-water",
+          "title": "The fountain and the named well",
+          "x": 66,
+          "y": 80,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "note": "Hagar speaks of the God who sees her, and the well is named Beer-lahai-roi. The visible water identifies this setting without claiming its exact geography or construction.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-lot-zoar",
+      "book": 0,
+      "title": "Lot escapes toward Zoar",
+      "coverage": "Genesis 19:22–24",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-lot-zoar.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Lot approaches a small town entrance at sunrise while fire and smoke rise over distant cities; non-graphic artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 19:22–24 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 19,
+          "first": 22,
+          "last": 24
+        }
+      ],
+      "intro": {
+        "title": "Haste thee, escape thither",
+        "note": "Lot is urged to escape to Zoar and enters as the sun rises; the destruction of Sodom and Gomorrah follows. This reconstruction joins adjacent moments into one view. It shows no casualties and does not establish the cities' actual locations."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-lot-escape",
+          "title": "Lot enters Zoar at sunrise",
+          "x": 38,
+          "y": 41,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 22,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 22,
+              "last": 23
+            }
+          ],
+          "note": "Lot is urged to escape to Zoar and enters when the sun has risen. The visible man entering the gate represents Lot; the gate and companions' appearance are reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-distant-fire",
+          "title": "Fire upon Sodom and Gomorrah",
+          "x": 83,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "note": "Genesis describes brimstone and fire upon Sodom and Gomorrah. The distant burning cities illustrate this non-graphically; their location relative to Zoar is an editorial composition.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-a-sarah-restored",
+      "book": 0,
+      "title": "Sarah is restored to Abraham",
+      "coverage": "Genesis 20:14, 16",
+      "art": {
+        "path": "/art/journey/genesis-expansion-a-sarah-restored.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Sarah rejoins Abraham as Abimelech presents a bowl of silver with sheep and oxen nearby; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 20:14, 16 · Appearance and setting are illustrative",
+      "ranges": [
+        {
+          "chapter": 20,
+          "first": 14,
+          "last": 14
+        },
+        {
+          "chapter": 20,
+          "first": 16,
+          "last": 16
+        }
+      ],
+      "intro": {
+        "title": "Restoration and gifts",
+        "note": "Abimelech restores Sarah and gives Abraham sheep, oxen, servants, and silver. The image depicts the restoration and gifts without portraying people as saleable objects or adding a sexual encounter."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-a-sarah-return",
+          "title": "Sarah is restored to Abraham",
+          "x": 56,
+          "y": 29,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Abimelech restores Sarah to Abraham. The visible couple illustrates her return; faces, clothing, and the setting are reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-livestock-gifts",
+          "title": "Sheep and oxen are given",
+          "x": 74,
+          "y": 54,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Sheep and oxen are among the gifts Abimelech gives Abraham. The visible animals represent those gifts; the attendants are shown with dignity.",
+          "detail": null
+        },
+        {
+          "id": "genesis-a-silver-gift",
+          "title": "The gift of silver",
+          "x": 85,
+          "y": 69,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "Abimelech tells Sarah of the silver he has given. The bowl represents silver pieces without claiming an exact ancient form or counting the thousand named in the verse.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-hagar-well",
+      "book": 0,
+      "title": "Hagar sees a well and gives Ishmael water",
+      "coverage": "Genesis 21:14–19",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-hagar-well.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Hagar gives Ishmael water beside a desert well; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 21:14–19",
+      "ranges": [
+        {
+          "chapter": 21,
+          "first": 14,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "Water in the wilderness",
+        "note": "The selected scene shows the relief in verse 19 after Hagar's distress. Clothing, ages, well construction, and the wilderness view are illustrative; the text does not identify this exact well."
+      },
+      "hotspots": [
+        {
+          "id": "hagar-water",
+          "title": "Hagar fills the bottle",
+          "x": 47,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "After God opens her eyes to a well, Hagar fills the water bottle and gives the lad a drink. The visible vessel represents the bottle named in the passage.",
+          "detail": null
+        },
+        {
+          "id": "ishmael-drinks",
+          "title": "The lad drinks",
+          "x": 63,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "note": "God hears the lad where he is and promises Hagar that he will become a great nation. His drinking here depicts the rescue in verse 19; his appearance is imagined.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-ram-thicket",
+      "book": 0,
+      "title": "Abraham sees the ram caught in the thicket",
+      "coverage": "Genesis 22:9–14",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-ram-thicket.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abraham and Isaac stand safe beside a wood-covered stone altar and a living ram caught by its horns; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 22:9–14",
+      "ranges": [
+        {
+          "chapter": 22,
+          "first": 9,
+          "last": 14
+        }
+      ],
+      "intro": {
+        "title": "A ram is provided",
+        "note": "This selected, non-graphic reconstruction gathers the altar, Abraham and Isaac, and the ram of verse 13. It does not show the threatened sacrifice. Ages, faces, altar construction and exact mountain setting are illustrative, not established by this image."
+      },
+      "hotspots": [
+        {
+          "id": "wood-altar",
+          "title": "The altar and wood",
+          "x": 27,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "Abraham builds an altar and arranges the wood. The visible stone construction is an illustrative choice.",
+          "detail": null
+        },
+        {
+          "id": "ram-thicket",
+          "title": "The ram in the thicket",
+          "x": 80,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "note": "Abraham sees a ram caught by its horns and offers it instead of his son. The image selects the living ram before the offering.",
+          "detail": null
+        },
+        {
+          "id": "father-son",
+          "title": "Abraham and Isaac",
+          "x": 42,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "note": "The angel calls from heaven to stop Abraham, and Isaac is spared. Their safe stance is an editorial reconstruction; no heavenly speaker is pictured.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-machpelah-silver",
+      "book": 0,
+      "title": "Abraham weighs silver for the field and cave",
+      "coverage": "Genesis 23:16–20",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-machpelah-silver.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Abraham weighs silver before Ephron and witnesses, with a cave entrance behind them; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 23:16–20",
+      "ranges": [
+        {
+          "chapter": 23,
+          "first": 16,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "Machpelah becomes a burial place",
+        "note": "The image condenses the public purchase of the field and cave into one selected scene. The balance, people, clothing and cave shape are illustrative; it is not a verified view of ancient Machpelah, and it does not depict Sarah's burial."
+      },
+      "hotspots": [
+        {
+          "id": "weighed-silver",
+          "title": "Four hundred shekels of silver",
+          "x": 50,
+          "y": 60,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "Abraham weighs the agreed silver to Ephron in the hearing of the sons of Heth. The balance and silver pieces visualize weighing; their number and form are not an archaeological claim.",
+          "detail": null
+        },
+        {
+          "id": "machpelah-cave",
+          "title": "The cave in the field",
+          "x": 49,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 17,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 17,
+              "last": 20
+            }
+          ],
+          "note": "The field and its cave become Abraham's possession for a burial place. Verse 19 places Machpelah before Mamre, identified as Hebron; this cave's appearance is imagined.",
+          "detail": null
+        },
+        {
+          "id": "ephron-sale",
+          "title": "The witnessed purchase",
+          "x": 79,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "note": "Ephron receives the named price, and the purchase is made secure before the children of Heth. Their placement beside the cave is an editorial condensation.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-rebekah-camels",
+      "book": 0,
+      "title": "Rebekah draws water for the servant's camels",
+      "coverage": "Genesis 24:15–20",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-rebekah-camels.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Rebekah pours water from her pitcher into a trough while a camel drinks and Abraham's servant watches; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 24:15–20",
+      "ranges": [
+        {
+          "chapter": 24,
+          "first": 15,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "Hospitality at the well",
+        "note": "The selected episode follows Rebekah's offer to water the camels. Clothing, faces, well construction and townscape are illustrative. The passage's earlier setting is outside the city of Nahor; this is not a verified view of that city."
+      },
+      "hotspots": [
+        {
+          "id": "rebekah-pitcher",
+          "title": "Rebekah and her pitcher",
+          "x": 40,
+          "y": 50,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 15,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 15,
+              "last": 20
+            }
+          ],
+          "note": "Rebekah comes with a pitcher, gives the servant a drink, and then empties water into the trough for his camels.",
+          "detail": null
+        },
+        {
+          "id": "drinking-camel",
+          "title": "Water for the camels",
+          "x": 29,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "note": "She offers to draw water until all the camels have finished drinking. The visible camel and trough show that act of hospitality.",
+          "detail": null
+        },
+        {
+          "id": "abraham-servant",
+          "title": "Abraham's travelling servant",
+          "x": 65,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "note": "The servant asks for a little water from her pitcher. She serves him before offering water for the animals; the illustration selects the later moment.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-esau-stew",
+      "book": 0,
+      "title": "Jacob gives Esau bread and lentil stew",
+      "coverage": "Genesis 25:29–34",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-esau-stew.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob passes a bowl of red lentil stew toward weary Esau, with bread on a low table; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 25:29–34",
+      "ranges": [
+        {
+          "chapter": 25,
+          "first": 29,
+          "last": 34
+        }
+      ],
+      "intro": {
+        "title": "The birthright and the meal",
+        "note": "This selected scene depicts the meal involved in the exchange of Esau's birthright. The brothers' clothing, faces and campsite are imagined. No written contract is implied by the passage or the illustration."
+      },
+      "hotspots": [
+        {
+          "id": "red-pottage",
+          "title": "Red lentil pottage",
+          "x": 53,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "note": "Esau returns faint from the field and asks for the red pottage. After his oath, Jacob gives him bread and lentil stew.",
+          "detail": null
+        },
+        {
+          "id": "jacob-bargain",
+          "title": "Jacob asks for the birthright",
+          "x": 34,
+          "y": 32,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 31,
+            "last": 31
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "note": "Jacob asks Esau to sell his birthright that day and to swear to the agreement. The visible handover condenses that exchange.",
+          "detail": null
+        },
+        {
+          "id": "esau-meal",
+          "title": "Esau chooses the meal",
+          "x": 67,
+          "y": 33,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 30,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 30,
+            "last": 30
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 30,
+              "last": 34
+            }
+          ],
+          "note": "Esau says the birthright will not profit him as he feels near death, then eats, drinks and leaves. Verse 34 says he despised his birthright.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-isaac-rehoboth",
+      "book": 0,
+      "title": "Isaac finds room at Rehoboth",
+      "coverage": "Genesis 26:19–22",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-isaac-rehoboth.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Isaac and a servant stand beside a well of clear water in an open valley; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 26:19–22",
+      "ranges": [
+        {
+          "chapter": 26,
+          "first": 19,
+          "last": 22
+        }
+      ],
+      "intro": {
+        "title": "A well without strife",
+        "note": "The chosen scene represents Rehoboth in verse 22 after disputes at the earlier wells. The valley, stone rim, bucket and clothing are illustrative; the exact sites and ancient structures are not established by the image."
+      },
+      "hotspots": [
+        {
+          "id": "rehoboth-water",
+          "title": "The new well",
+          "x": 45,
+          "y": 76,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "note": "Isaac moves and digs another well, for which they do not strive. The visible water and well stand for Rehoboth, not a composite of all three wells.",
+          "detail": null
+        },
+        {
+          "id": "isaac-room",
+          "title": "Isaac gives thanks for room",
+          "x": 56,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 22,
+              "last": 22
+            }
+          ],
+          "note": "Isaac calls the well Rehoboth and says the Lord has made room for them to be fruitful in the land. His gesture is illustrative; no divine figure is depicted.",
+          "detail": null
+        },
+        {
+          "id": "servant-work",
+          "title": "Water after the digging",
+          "x": 36,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 19,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 19,
+              "last": 22
+            }
+          ],
+          "note": "Isaac's servants find springing water, and successive disputes lead to the final uncontested well. The servant's water bucket is a reconstruction of the work, not a tool specified in these verses.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-isaac-blesses-jacob",
+      "book": 0,
+      "title": "Isaac feels Jacob's hands and blesses him",
+      "coverage": "Genesis 27:22–29",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-isaac-blesses-jacob.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Isaac reclines on bedding and feels Jacob's hairy covered hands, with a prepared meal and cup nearby; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 27:22–29",
+      "ranges": [
+        {
+          "chapter": 27,
+          "first": 22,
+          "last": 29
+        }
+      ],
+      "intro": {
+        "title": "The voice and the hands",
+        "note": "This selected reconstruction focuses on Isaac's touch before the blessing, gathering the nearby meal from verse 25 into the scene. Faces, furnishings and clothing are illustrative. The image does not represent God's appearance or certify the campsite."
+      },
+      "hotspots": [
+        {
+          "id": "hands-disguise",
+          "title": "The hands Isaac feels",
+          "x": 47,
+          "y": 46,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 22,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 22,
+              "last": 24
+            }
+          ],
+          "note": "Isaac says the voice is Jacob's but the hands are Esau's, and he does not discern him because the hands are hairy. Jacob claims to be Esau.",
+          "detail": null
+        },
+        {
+          "id": "isaac-blessing",
+          "title": "Isaac blesses his son",
+          "x": 20,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 26,
+              "last": 29
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 26,
+              "last": 29
+            }
+          ],
+          "note": "Isaac asks his son to come near and kiss him, then speaks a blessing of provision and rule. The illustration selects the touch earlier in this sequence.",
+          "detail": null
+        },
+        {
+          "id": "meal-wine",
+          "title": "The meal and wine",
+          "x": 27,
+          "y": 71,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "note": "Jacob brings food for Isaac to eat and wine to drink. The tableware and presentation shown here are imagined.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-ladder-dream",
+      "book": 0,
+      "title": "Jacob dreams of a ladder reaching to heaven",
+      "coverage": "Genesis 28:10–19",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-ladder-dream.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob sleeps with his head by a stone while a dreamlike golden ladder and angels rise above him; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 28:10–19",
+      "ranges": [
+        {
+          "chapter": 28,
+          "first": 10,
+          "last": 19
+        }
+      ],
+      "intro": {
+        "title": "A dream at Bethel",
+        "note": "The scene selects Jacob asleep and dreaming, rather than his later waking and setting up the stone. The ladder's form, angels' appearance and landscape are illustrative. The promise is spoken in the text, but no figure of the Lord is depicted."
+      },
+      "hotspots": [
+        {
+          "id": "sleeping-jacob",
+          "title": "Jacob rests for the night",
+          "x": 39,
+          "y": 66,
+          "active": [
+            {
+              "chapter": 28,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 28,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 28,
+              "first": 10,
+              "last": 11
+            }
+          ],
+          "note": "On his way toward Haran, Jacob stops after sunset, takes stones for pillows and lies down to sleep.",
+          "detail": null
+        },
+        {
+          "id": "dream-ladder",
+          "title": "The ladder in the dream",
+          "x": 53,
+          "y": 51,
+          "active": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 28,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "Jacob dreams of a ladder set on the earth whose top reaches heaven. Its luminous appearance is an artistic way to distinguish the dream from the surrounding landscape.",
+          "detail": null
+        },
+        {
+          "id": "dream-angels",
+          "title": "Angels ascend and descend",
+          "x": 59,
+          "y": 43,
+          "active": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 28,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 28,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "The dream includes angels of God ascending and descending on the ladder. Wings, robes and faces are illustrative choices, not descriptions supplied by this verse.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-rachel-well",
+      "book": 0,
+      "title": "Jacob meets Rachel and waters her flock",
+      "coverage": "Genesis 29:9–12",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-rachel-well.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob draws a bucket from a well as Rachel stands with her sheep beside the rolled covering stone; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 29:9–12",
+      "ranges": [
+        {
+          "chapter": 29,
+          "first": 9,
+          "last": 12
+        }
+      ],
+      "intro": {
+        "title": "A meeting at the well",
+        "note": "This selected scene follows Jacob rolling the stone from the well and watering Laban's sheep. Faces, clothing, bucket and the stone's form are illustrative. The landscape is not a verified location, and the later kiss and news to Laban are not pictured."
+      },
+      "hotspots": [
+        {
+          "id": "jacob-water",
+          "title": "Jacob waters the flock",
+          "x": 40,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 29,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "note": "Jacob rolls the stone from the well's mouth and waters the flock belonging to Laban, his mother's brother. The bucket is an illustrative detail.",
+          "detail": null
+        },
+        {
+          "id": "rachel-flock",
+          "title": "Rachel comes with the sheep",
+          "x": 60,
+          "y": 33,
+          "active": [
+            {
+              "chapter": 29,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 29,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 29,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "Rachel keeps her father's sheep and comes with them to the well. The visible flock explains the purpose of the watering.",
+          "detail": null
+        },
+        {
+          "id": "rolled-stone",
+          "title": "The stone moved from the mouth",
+          "x": 81,
+          "y": 72,
+          "active": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 29,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 29,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "note": "The text specifically says Jacob rolls the stone away. The large stone beside the well represents that action; its size and shape are imagined.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-peeled-rods-flocks",
+      "book": 0,
+      "title": "Jacob sets peeled rods before the watering flocks",
+      "coverage": "Genesis 30:37–43",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-peeled-rods-flocks.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob places rods with peeled white stripes beside drinking speckled sheep and goats at a watering trough; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 30:37–43",
+      "ranges": [
+        {
+          "chapter": 30,
+          "first": 37,
+          "last": 43
+        }
+      ],
+      "intro": {
+        "title": "The rods and the flocks",
+        "note": "The selected pastoral scene illustrates the practice narrated in verses 37–43. It does not establish a biological explanation for the flocks' markings. Faces, rod arrangement, trough and landscape are reconstructed; the setting's exact location is not known from this image."
+      },
+      "hotspots": [
+        {
+          "id": "peeled-rods",
+          "title": "White stripes in the rods",
+          "x": 53,
+          "y": 77,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 37,
+            "last": 37
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "note": "Jacob peels white streaks into rods and places them before the flocks in the watering gutters and troughs. The visible bark and exposed wood make that detail recognizable.",
+          "detail": null
+        },
+        {
+          "id": "watering-flocks",
+          "title": "The flocks at the trough",
+          "x": 63,
+          "y": 60,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 38,
+              "last": 40
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 38,
+            "last": 38
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 38,
+              "last": 40
+            }
+          ],
+          "note": "The flocks come to drink before the rods; the account describes ringstraked, speckled and spotted offspring and Jacob separating the lambs. The image selects animals drinking, without depicting mating or birth.",
+          "detail": null
+        },
+        {
+          "id": "jacob-shepherd",
+          "title": "Jacob manages the flocks",
+          "x": 37,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 30,
+              "first": 40,
+              "last": 43
+            }
+          ],
+          "anchor": {
+            "chapter": 30,
+            "first": 40,
+            "last": 40
+          },
+          "sources": [
+            {
+              "chapter": 30,
+              "first": 40,
+              "last": 43
+            }
+          ],
+          "note": "Jacob keeps his own flocks apart and distinguishes stronger and feebler animals in the narrated practice. Verse 43 describes his increase in animals and servants.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-covenant-stone-heap",
+      "book": 0,
+      "title": "Jacob and Laban make a covenant by the stone heap",
+      "coverage": "Genesis 31:44–52",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-covenant-stone-heap.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob and Laban face one another beside a stone heap and upright pillar, with kin and a meal behind them; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 31:44–52",
+      "ranges": [
+        {
+          "chapter": 31,
+          "first": 44,
+          "last": 52
+        }
+      ],
+      "intro": {
+        "title": "A witness between them",
+        "note": "The selected scene brings the covenant, gathered heap, pillar and meal together. The memorial's arrangement, clothing, faces and highland view are illustrative; the image does not identify a surviving monument or exact ancient site."
+      },
+      "hotspots": [
+        {
+          "id": "witness-heap",
+          "title": "The heap is a witness",
+          "x": 48,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 31,
+              "first": 46,
+              "last": 52
+            }
+          ],
+          "anchor": {
+            "chapter": 31,
+            "first": 46,
+            "last": 46
+          },
+          "sources": [
+            {
+              "chapter": 31,
+              "first": 46,
+              "last": 52
+            }
+          ],
+          "note": "Jacob's kin gather stones into a heap. Laban calls the heap a witness and says neither party is to pass it toward the other for harm.",
+          "detail": null
+        },
+        {
+          "id": "upright-pillar",
+          "title": "Jacob sets up a pillar",
+          "x": 48,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 31,
+              "first": 45,
+              "last": 45
+            }
+          ],
+          "anchor": {
+            "chapter": 31,
+            "first": 45,
+            "last": 45
+          },
+          "sources": [
+            {
+              "chapter": 31,
+              "first": 45,
+              "last": 45
+            }
+          ],
+          "note": "Jacob takes a stone and sets it up as a pillar. Its upright shape here is illustrative rather than a record of the original memorial.",
+          "detail": null
+        },
+        {
+          "id": "jacob-laban",
+          "title": "The covenant between Jacob and Laban",
+          "x": 69,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 31,
+              "first": 44,
+              "last": 52
+            }
+          ],
+          "anchor": {
+            "chapter": 31,
+            "first": 44,
+            "last": 44
+          },
+          "sources": [
+            {
+              "chapter": 31,
+              "first": 44,
+              "last": 52
+            }
+          ],
+          "note": "Laban proposes a covenant. The agreement includes concern for his daughters and a boundary against harm. The open-handed poses are an imagined way to depict their solemn exchange.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-b-jacob-wrestles",
+      "book": 0,
+      "title": "Jacob wrestles until the breaking of day",
+      "coverage": "Genesis 32:24–30",
+      "art": {
+        "path": "/art/journey/genesis-expansion-b-jacob-wrestles.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob and an unnamed man wrestle in a restrained standing clinch beside a river at dawn; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Genesis 32:24–30",
+      "ranges": [
+        {
+          "chapter": 32,
+          "first": 24,
+          "last": 30
+        }
+      ],
+      "intro": {
+        "title": "Jacob is named Israel",
+        "note": "The image selects the wrestling of verse 24 and uses ordinary human appearance for the figure the verse calls a man. It does not settle the encounter's theological identity: Jacob later names the place Peniel and says he has seen God face to face. Faces, clothing, stance and riverbank are illustrative; the exact site is not established."
+      },
+      "hotspots": [
+        {
+          "id": "jacob-holds",
+          "title": "Jacob holds on",
+          "x": 43,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 32,
+              "first": 24,
+              "last": 26
+            }
+          ],
+          "anchor": {
+            "chapter": 32,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 32,
+              "first": 24,
+              "last": 26
+            }
+          ],
+          "note": "Jacob is left alone and wrestles until daybreak. When told to let go, he says he will not do so unless he is blessed. The image avoids depicting the injury in verse 25.",
+          "detail": null
+        },
+        {
+          "id": "unnamed-man",
+          "title": "The man and the blessing",
+          "x": 55,
+          "y": 29,
+          "active": [
+            {
+              "chapter": 32,
+              "first": 27,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 32,
+            "first": 27,
+            "last": 27
+          },
+          "sources": [
+            {
+              "chapter": 32,
+              "first": 27,
+              "last": 30
+            }
+          ],
+          "note": "The man asks Jacob's name, names him Israel, and blesses him. He does not supply his own name. Verse 30 records Jacob's words about seeing God; the illustration adds no halo, wings or divine portrait.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-c-jacob-esau-reunion",
+      "book": 0,
+      "title": "Jacob and Esau embrace",
+      "coverage": "Genesis 33:1–4",
+      "caption": "Illustrated reconstruction · Genesis 33:1–4",
+      "ranges": [
+        {
+          "chapter": 33,
+          "first": 1,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "Reunion after separation",
+        "note": "The scene selects the brothers' embrace from Genesis 33:1–4. Human likenesses, clothing and the landscape are artistic interpretations."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-esau-embraces",
+          "title": "Esau embraces Jacob",
+          "x": 51,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 33,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 33,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 33,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "Esau runs to meet Jacob, embraces him, falls on his neck, kisses him, and they weep.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-33-reunion.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob and Esau weep in an embrace at the center of a warm rocky landscape; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-bethel-altar",
+      "book": 0,
+      "title": "Jacob builds an altar at Bethel",
+      "coverage": "Genesis 35:6–7",
+      "caption": "Illustrated reconstruction · Genesis 35:6–7",
+      "ranges": [
+        {
+          "chapter": 35,
+          "first": 6,
+          "last": 7
+        }
+      ],
+      "intro": {
+        "title": "An altar at Bethel",
+        "note": "This selected scene shows Jacob and the altar in Genesis 35:6–7. The altar form, kneeling pose, people and landscape are reconstructed; God is not pictured."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-jacob-bethel",
+          "title": "Jacob at Bethel",
+          "x": 44,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 35,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 35,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 35,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "note": "Jacob comes to Luz, also called Bethel, with the people accompanying him.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-bethel-stones",
+          "title": "The altar",
+          "x": 62,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 35,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 35,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 35,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "note": "Jacob builds an altar and calls the place El-beth-el, remembering where God appeared to him when he fled from his brother.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-35-bethel-altar.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob kneels beside a rough stone altar with a small encampment behind him; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-joseph-coat",
+      "book": 0,
+      "title": "Joseph receives a distinctive coat",
+      "coverage": "Genesis 37:3–4",
+      "caption": "Illustrated reconstruction · Genesis 37:3–4",
+      "ranges": [
+        {
+          "chapter": 37,
+          "first": 3,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "A coat and a father's favor",
+        "note": "The illustration selects Genesis 37:3–4. The KJV calls the garment a coat of many colours; its exact cut, weave and pattern are reconstructed. Faces, camp and poses are artistic interpretations."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-colored-coat",
+          "title": "Joseph's coat",
+          "x": 64,
+          "y": 63,
+          "active": [
+            {
+              "chapter": 37,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 37,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 37,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "Israel loves Joseph more than his other children and makes him a coat of many colours.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-watching-brothers",
+          "title": "The brothers' response",
+          "x": 20,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 37,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 37,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 37,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "The brothers see their father's special love for Joseph and hate him; they cannot speak peaceably to him. Their visible expressions are interpretive.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-37-joseph-coat.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob presents Joseph with a richly colored woven coat while two brothers watch from the tent; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-left-garment",
+      "book": 0,
+      "title": "The garment Joseph leaves behind",
+      "coverage": "Genesis 39:12–13",
+      "caption": "Illustrated object study · Genesis 39:12–13 · Garment and setting reconstructed",
+      "ranges": [
+        {
+          "chapter": 39,
+          "first": 12,
+          "last": 13
+        }
+      ],
+      "intro": {
+        "title": "A garment left behind",
+        "note": "This object study refers to the garment Joseph leaves when he flees. Genesis does not describe its design or place it on a bench; the fabric, bench and courtyard are artistic staging. The encounter itself is not illustrated."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-garment",
+          "title": "The left garment",
+          "x": 52,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 39,
+              "first": 12,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 39,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 39,
+              "first": 12,
+              "last": 13
+            }
+          ],
+          "note": "Joseph leaves his garment in her hand and flees outside. The next verse again notes that he has left the garment and gone.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-39-left-garment.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A woven outer garment draped over a stone bench; interpretive object study of the garment Joseph left behind."
+      }
+    },
+    {
+      "id": "genesis-c-cupbearer-dream",
+      "book": 0,
+      "title": "The cupbearer's dream",
+      "coverage": "Genesis 40:9–11",
+      "caption": "Dream visualization · Genesis 40:9–11 · Artistic interpretation",
+      "ranges": [
+        {
+          "chapter": 40,
+          "first": 9,
+          "last": 11
+        }
+      ],
+      "intro": {
+        "title": "Grapes and Pharaoh's cup",
+        "note": "The chief butler tells Joseph a dream involving a vine, ripe grapes and Pharaoh's cup. This illustration visualizes that narrated dream alone; it does not depict a waking event or combine it with the baker's dream. Faces, objects and garden are interpretive."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-dream-grapes",
+          "title": "The vine and ripe grapes",
+          "x": 49,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 40,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 40,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 40,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "In the dream a vine stands before the cupbearer. Its three branches bud, blossom and bring forth ripe grapes. The image concentrates on the ripe grapes rather than proving a precise branch count.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-dream-cup",
+          "title": "Grapes pressed into the cup",
+          "x": 49,
+          "y": 64,
+          "active": [
+            {
+              "chapter": 40,
+              "first": 11,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 40,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 40,
+              "first": 11,
+              "last": 11
+            }
+          ],
+          "note": "The cupbearer takes the grapes, presses them into Pharaoh's cup and gives the cup to Pharaoh. The cup's form is reconstructed.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-40-cupbearer-dream.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "The cupbearer squeezes grapes into a royal cup before a vine; artistic visualization of the narrated dream."
+      }
+    },
+    {
+      "id": "genesis-c-joseph-investiture",
+      "book": 0,
+      "title": "Pharaoh gives Joseph the ring",
+      "coverage": "Genesis 41:42",
+      "caption": "Illustrated reconstruction · Genesis 41:42",
+      "ranges": [
+        {
+          "chapter": 41,
+          "first": 42,
+          "last": 42
+        }
+      ],
+      "intro": {
+        "title": "Joseph is clothed with authority",
+        "note": "Genesis 41:42 names Pharaoh's ring, fine linen and a gold neck chain. This scene selects the investiture; it does not combine the later gathering of grain into the same moment. Faces, regalia and palace details are artistic reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-pharaoh-ring",
+          "title": "Pharaoh's ring",
+          "x": 50,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 41,
+              "first": 42,
+              "last": 42
+            }
+          ],
+          "anchor": {
+            "chapter": 41,
+            "first": 42,
+            "last": 42
+          },
+          "sources": [
+            {
+              "chapter": 41,
+              "first": 42,
+              "last": 42
+            }
+          ],
+          "note": "Pharaoh takes his ring from his hand and puts it on Joseph's hand. Its exact design is reconstructed.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-linen-chain",
+          "title": "Fine linen and a gold chain",
+          "x": 75,
+          "y": 50,
+          "active": [
+            {
+              "chapter": 41,
+              "first": 42,
+              "last": 42
+            }
+          ],
+          "anchor": {
+            "chapter": 41,
+            "first": 42,
+            "last": 42
+          },
+          "sources": [
+            {
+              "chapter": 41,
+              "first": 42,
+              "last": 42
+            }
+          ],
+          "note": "Joseph is arrayed in fine linen and given a gold chain about his neck. These visible objects are named in the verse; their styling is interpretive.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-41-joseph-investiture.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Pharaoh places a ring on Joseph's hand; Joseph wears fine linen and a gold chain; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-brothers-bow",
+      "book": 0,
+      "title": "Joseph's brothers bow before him",
+      "coverage": "Genesis 42:6–8",
+      "caption": "Illustrated reconstruction · Genesis 42:6–8",
+      "ranges": [
+        {
+          "chapter": 42,
+          "first": 6,
+          "last": 8
+        }
+      ],
+      "intro": {
+        "title": "Recognized by Joseph",
+        "note": "Joseph sells food as governor. His brothers arrive from Canaan and bow before him; he recognizes them, but they do not recognize him. Faces, regalia, granary and staging are artistic reconstructions."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-bowed-brothers",
+          "title": "The brothers bow",
+          "x": 42,
+          "y": 64,
+          "active": [
+            {
+              "chapter": 42,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 42,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 42,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "note": "Joseph's brothers come and bow before him with their faces to the earth.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-governor-joseph",
+          "title": "Joseph recognizes them",
+          "x": 73,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 42,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 42,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 42,
+              "first": 7,
+              "last": 8
+            }
+          ],
+          "note": "Joseph recognizes his brothers and conceals his identity. Their failure to recognize him is part of the narrative, not something a still image can prove.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-42-brothers-bow.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph sits as governor while his brothers bow with faces to the ground beside sacks of grain; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-benjamin-meal",
+      "book": 0,
+      "title": "Benjamin's larger portion",
+      "coverage": "Genesis 43:31–34",
+      "caption": "Illustrated reconstruction · Genesis 43:31–34",
+      "ranges": [
+        {
+          "chapter": 43,
+          "first": 31,
+          "last": 34
+        }
+      ],
+      "intro": {
+        "title": "A meal with the brothers",
+        "note": "The selected meal episode includes separate dining arrangements and Benjamin's larger portion. Genesis says his portion was five times as much; the illustration signals abundance without serving as an exact measurement. People, food and dining furniture are reconstructed."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-benjamin-portion",
+          "title": "Benjamin's portion",
+          "x": 46,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 43,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 43,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 43,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "note": "Joseph sends portions from before him. Benjamin's portion is five times as much as any of the others, and they drink and are merry with him.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-joseph-separate-table",
+          "title": "Joseph eats separately",
+          "x": 85,
+          "y": 18,
+          "active": [
+            {
+              "chapter": 43,
+              "first": 32,
+              "last": 32
+            }
+          ],
+          "anchor": {
+            "chapter": 43,
+            "first": 32,
+            "last": 32
+          },
+          "sources": [
+            {
+              "chapter": 43,
+              "first": 32,
+              "last": 32
+            }
+          ],
+          "note": "The food is set for Joseph by himself, for the brothers by themselves, and for the Egyptians separately. The background table makes Joseph's separation visible.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-43-benjamin-meal.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A large portion is served to Benjamin among his brothers; Joseph sits separately in the background; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-silver-cup",
+      "book": 0,
+      "title": "The silver cup in Benjamin's sack",
+      "coverage": "Genesis 44:1–2, 12–13",
+      "caption": "Illustrated object study · Genesis 44:1–2, 12–13",
+      "ranges": [
+        {
+          "chapter": 44,
+          "first": 1,
+          "last": 2
+        },
+        {
+          "chapter": 44,
+          "first": 12,
+          "last": 13
+        }
+      ],
+      "intro": {
+        "title": "A cup hidden and found",
+        "note": "Joseph orders the silver cup put in the youngest brother's sack. During the search it is found in Benjamin's sack. This object study links the placement and discovery rather than depicting every intervening action. Cup, money pieces, sack and roadside setting are reconstructed."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-hidden-cup",
+          "title": "Joseph's silver cup",
+          "x": 55,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 44,
+              "first": 1,
+              "last": 2
+            },
+            {
+              "chapter": 44,
+              "first": 12,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 44,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 44,
+              "first": 1,
+              "last": 2
+            },
+            {
+              "chapter": 44,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "Joseph commands the steward to put his silver cup in the youngest brother's sack. The search later finds the cup in Benjamin's sack.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-sack-money",
+          "title": "Food and money in the sack",
+          "x": 39,
+          "y": 59,
+          "active": [
+            {
+              "chapter": 44,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 44,
+            "first": 1,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 44,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "note": "The steward is told to fill the sacks with food and put every man's money in the sack's mouth. The plain metal pieces are interpretive; Genesis does not specify their shape.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-44-silver-cup.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A silver cup sits visibly inside the open mouth of a grain sack beside plain money pieces; interpretive object study."
+      }
+    },
+    {
+      "id": "genesis-c-joseph-benjamin-embrace",
+      "book": 0,
+      "title": "Joseph embraces Benjamin",
+      "coverage": "Genesis 45:14–15",
+      "caption": "Illustrated reconstruction · Genesis 45:14–15",
+      "ranges": [
+        {
+          "chapter": 45,
+          "first": 14,
+          "last": 15
+        }
+      ],
+      "intro": {
+        "title": "Brothers reunited",
+        "note": "The scene selects the embrace after Joseph makes himself known. Joseph and Benjamin weep together; Joseph also kisses and weeps over his brothers before they speak with him. Human likenesses and room are artistic reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-benjamin-embrace",
+          "title": "Joseph and Benjamin weep",
+          "x": 54,
+          "y": 39,
+          "active": [
+            {
+              "chapter": 45,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 45,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 45,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Joseph falls upon Benjamin's neck and weeps, and Benjamin weeps upon his neck.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-reunited-brothers",
+          "title": "His brothers gather near",
+          "x": 81,
+          "y": 41,
+          "active": [
+            {
+              "chapter": 45,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 45,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 45,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "note": "Joseph kisses all his brothers and weeps upon them. Afterward they talk with him. The still image gathers them around the central embrace.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-45-joseph-benjamin-embrace.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph embraces Benjamin and weeps, with his brothers gathered privately around them; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-family-wagons",
+      "book": 0,
+      "title": "Jacob's family travels in wagons",
+      "coverage": "Genesis 46:5–7",
+      "caption": "Illustrated reconstruction · Genesis 46:5–7",
+      "ranges": [
+        {
+          "chapter": 46,
+          "first": 5,
+          "last": 7
+        }
+      ],
+      "intro": {
+        "title": "The household goes to Egypt",
+        "note": "Jacob's sons carry their father, wives and little ones in the wagons Pharaoh sent. They bring cattle, goods and the family into Egypt. This illustration does not identify an exact road or location; people, wagon forms and landscape are reconstructed."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-jacob-wagon",
+          "title": "Jacob and the household in wagons",
+          "x": 48,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 46,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 46,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 46,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "The sons of Israel carry Jacob their father, their little ones and their wives in the wagons Pharaoh sent.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-cattle-goods",
+          "title": "Cattle and goods accompany them",
+          "x": 71,
+          "y": 64,
+          "active": [
+            {
+              "chapter": 46,
+              "first": 6,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 46,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 46,
+              "first": 6,
+              "last": 7
+            }
+          ],
+          "note": "They take the cattle and goods acquired in Canaan and come into Egypt, with Jacob's descendants accompanying him.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-46-family-wagons.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Elderly Jacob and family members ride in a wooden wagon among cattle and goods; artistic reconstruction of the family journey to Egypt."
+      }
+    },
+    {
+      "id": "genesis-c-joseph-grain-exchange",
+      "book": 0,
+      "title": "Joseph supplies food in exchange for livestock",
+      "coverage": "Genesis 47:15–17",
+      "caption": "Illustrated reconstruction · Genesis 47:15–17",
+      "ranges": [
+        {
+          "chapter": 47,
+          "first": 15,
+          "last": 17
+        }
+      ],
+      "intro": {
+        "title": "Food during the famine",
+        "note": "When money fails, the Egyptians ask Joseph for food. Joseph offers food in exchange for livestock. The selected scene makes Joseph visible in the transaction; his appearance, the people, grain sack and courtyard are reconstructed rather than a record of a specific exchange."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-joseph-food",
+          "title": "Joseph supplies food",
+          "x": 39,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 47,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 47,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 47,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "note": "The Egyptians come to Joseph when money fails. He tells them to bring their cattle, and he will give them food in exchange.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-livestock-exchange",
+          "title": "Livestock exchanged for food",
+          "x": 78,
+          "y": 77,
+          "active": [
+            {
+              "chapter": 47,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 47,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 47,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "note": "Joseph gives food in exchange for horses, flocks, cattle and asses. The visible goat represents the flocks; one animal does not stand for an exact price or quantity.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-47-joseph-grain-exchange.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph visibly gives a grain sack to an Egyptian man with a goat during the famine; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-crossed-hands",
+      "book": 0,
+      "title": "Jacob crosses his hands to bless the boys",
+      "coverage": "Genesis 48:13–16",
+      "caption": "Illustrated reconstruction · Genesis 48:13–16",
+      "ranges": [
+        {
+          "chapter": 48,
+          "first": 13,
+          "last": 16
+        }
+      ],
+      "intro": {
+        "title": "Ephraim and Manasseh are blessed",
+        "note": "Joseph brings his sons before Israel. Jacob places his right hand on younger Ephraim and his left on firstborn Manasseh, deliberately crossing his hands. The selected scene shows the blessing, with people, ages, clothing and room artistically reconstructed."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-crossed-blessing",
+          "title": "Jacob deliberately crosses his hands",
+          "x": 51,
+          "y": 38,
+          "active": [
+            {
+              "chapter": 48,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 48,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 48,
+              "first": 13,
+              "last": 14
+            }
+          ],
+          "note": "Israel places his right hand upon Ephraim's head and his left upon Manasseh's, guiding his hands deliberately even though Manasseh is firstborn. Ephraim is shown at the viewer's right.",
+          "detail": null
+        },
+        {
+          "id": "genesis-c-blessed-boys",
+          "title": "The blessing of the lads",
+          "x": 63,
+          "y": 55,
+          "active": [
+            {
+              "chapter": 48,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 48,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 48,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "note": "Jacob calls on the God who fed him throughout his life and asks that the lads be blessed, bear the family name, and grow into a multitude. The invoked Angel is not pictured.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-48-crossed-hands.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Jacob crosses his arms to bless Ephraim and Manasseh, one hand on each boy's head; artistic reconstruction."
+      }
+    },
+    {
+      "id": "genesis-c-judah-lion-comparison",
+      "book": 0,
+      "title": "Judah compared to a lion",
+      "coverage": "Genesis 49:9",
+      "caption": "Literary comparison · Genesis 49:9 · Symbolic illustration",
+      "ranges": [
+        {
+          "chapter": 49,
+          "first": 9,
+          "last": 9
+        }
+      ],
+      "intro": {
+        "title": "The lion in Jacob's words",
+        "note": "Jacob's blessing uses the lion as a poetic comparison for Judah. This symbol study visualizes the animal image in verse 9. It does not show a literal encounter, transformation, meeting or travel event, and it does not cover all the chapter's blessings. The landscape is interpretive."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-judah-lion",
+          "title": "A lion as a comparison for Judah",
+          "x": 48,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 49,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 49,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 49,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "Jacob calls Judah a lion's whelp and describes him stooping and couching as a lion. The visible animal represents this literary comparison; Judah is not literally an animal in the narrative.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-49-judah-lion-comparison.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A lion lies couched on warm rock; a symbolic illustration of Jacob's poetic comparison of Judah to a lion."
+      }
+    },
+    {
+      "id": "genesis-c-joseph-coffin",
+      "book": 0,
+      "title": "Joseph is placed in a coffin in Egypt",
+      "coverage": "Genesis 50:26",
+      "caption": "Illustrated object study · Genesis 50:26 · Coffin form reconstructed",
+      "ranges": [
+        {
+          "chapter": 50,
+          "first": 26,
+          "last": 26
+        }
+      ],
+      "intro": {
+        "title": "Genesis closes in Egypt",
+        "note": "Genesis 50:26 says Joseph dies at 110, is embalmed, and is put in a coffin in Egypt. This respectful object study shows a closed coffin only. Its wooden rectangular form, room, platform and cloth are artistic reconstruction; no human remains are visible."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-c-closed-coffin",
+          "title": "The coffin in Egypt",
+          "x": 52,
+          "y": 50,
+          "active": [
+            {
+              "chapter": 50,
+              "first": 26,
+              "last": 26
+            }
+          ],
+          "anchor": {
+            "chapter": 50,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 50,
+              "first": 26,
+              "last": 26
+            }
+          ],
+          "note": "Joseph dies at the age of 110. He is embalmed and placed in a coffin in Egypt. The verse does not specify the coffin's exact design.",
+          "detail": null
+        }
+      ],
+      "art": {
+        "path": "/art/journey/genesis-expansion-c-50-joseph-coffin.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A closed wooden coffin rests quietly in an Egyptian chamber, with no human remains visible; interpretive object study."
+      }
+    },
+    {
+      "id": "genesis-diagram-10",
+      "book": 0,
+      "title": "Families of Noah’s sons",
+      "coverage": "Genesis 10:1–6, 21–22 · selected family branches only",
+      "art": {
+        "path": "/art/journey/genesis-expansion-diagram-10.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Native text diagram of Noah’s sons and selected named descendants; not a map, timeline, or full genealogy."
+      },
+      "caption": "Diagram · Genesis 10:1–6, 21–22 · not geography, chronology, or a complete genealogy",
+      "ranges": [
+        {
+          "chapter": 10,
+          "first": 1,
+          "last": 6
+        },
+        {
+          "chapter": 10,
+          "first": 21,
+          "last": 22
+        }
+      ],
+      "intro": {
+        "title": "Selected families",
+        "note": "The branches show only names and relationships in the selected verses. They do not assign modern identities, boundaries, or dates."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-diagram-10-noah",
+          "title": "Noah and his sons",
+          "x": 50,
+          "y": 16,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The root and three son branches are visible in the diagram; the anchor is the passage that names the family.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-10-japheth",
+          "title": "Japheth’s family",
+          "x": 83,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 2,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 2,
+              "last": 5
+            }
+          ],
+          "note": "The named sons of Japheth and selected Gomer/Javan descendants appear as text. The note for verse 5 avoids drawing borders or assigning modern peoples.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-10-ham",
+          "title": "Ham’s sons",
+          "x": 50,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "note": "The four sons named in verse 6 are listed beneath Ham.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-10-shem",
+          "title": "Shem and his named children",
+          "x": 17,
+          "y": 31,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 21,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 21,
+              "last": 22
+            }
+          ],
+          "note": "The diagram states the Eber-descendant relation in verse 21 separately and lists the children named in verse 22; it does not add intervening branches.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-diagram-17",
+      "book": 0,
+      "title": "Names and a promised son",
+      "coverage": "Genesis 17:5, 15, 19–21 · names and future promise only",
+      "art": {
+        "path": "/art/journey/genesis-expansion-diagram-17.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Text-only diagram linking Abram with Abraham, Sarai with Sarah, and identifying Isaac as promised for the future. No event or portrait."
+      },
+      "caption": "Diagram · Genesis 17:5, 15, 19–21 · not a map, timeline, birth scene, or full chapter",
+      "ranges": [
+        {
+          "chapter": 17,
+          "first": 5,
+          "last": 5
+        },
+        {
+          "chapter": 17,
+          "first": 15,
+          "last": 15
+        },
+        {
+          "chapter": 17,
+          "first": 19,
+          "last": 21
+        }
+      ],
+      "intro": {
+        "title": "Name changes and promise",
+        "note": "The passage gives new names and speaks of a future son; this diagram shows those textual links without picturing an event or implying the child is already born."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-diagram-17-abram-abraham",
+          "title": "Abram is named Abraham",
+          "x": 32,
+          "y": 26,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "Both names and the name-giving reference are visible in the diagram.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-17-sarai-sarah",
+          "title": "Sarai is named Sarah",
+          "x": 32,
+          "y": 47,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "note": "Both names and the name-giving reference are visible in the diagram.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-17-isaac-promise",
+          "title": "Isaac is promised to Sarah and Abraham",
+          "x": 77,
+          "y": 36,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 19,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 19,
+              "last": 21
+            }
+          ],
+          "note": "Isaac is labeled as promised for the future, with the selected promise range. No birth scene is shown.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-diagram-34",
+      "book": 0,
+      "title": "Family relationships and response",
+      "coverage": "Genesis 34:1, 25, 30–31 · selected relationship guide",
+      "art": {
+        "path": "/art/journey/genesis-expansion-diagram-34.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Native text relationship guide showing Dinah as daughter of Jacob and Leah, Simeon and Levi as named brothers, and the closing exchange. No assault or retaliation is pictured."
+      },
+      "caption": "Relationship diagram · Genesis 34:1, 25, 30–31 · not a map, timeline, or full chapter; no assault or retaliation illustration",
+      "ranges": [
+        {
+          "chapter": 34,
+          "first": 1,
+          "last": 1
+        },
+        {
+          "chapter": 34,
+          "first": 25,
+          "last": 25
+        },
+        {
+          "chapter": 34,
+          "first": 30,
+          "last": 31
+        }
+      ],
+      "intro": {
+        "title": "Selected relationships",
+        "note": "The lines show only the family links named in the selected verses. The diagram addresses the chapter’s closing exchange without depicting or replacing its assault and retaliation."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-diagram-34-dinah",
+          "title": "Dinah, daughter of Leah and Jacob",
+          "x": 50,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 34,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 34,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 34,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The two parent links and Dinah’s name are visible; the relationship follows the selected verse.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-34-brothers",
+          "title": "Simeon and Levi, Dinah’s brothers",
+          "x": 50,
+          "y": 53,
+          "active": [
+            {
+              "chapter": 34,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 34,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 34,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "note": "The text names the brothers and identifies them as Jacob’s sons; the diagram shows the sibling relationship without the violent act.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-34-response",
+          "title": "Jacob and his sons’ exchange",
+          "x": 50,
+          "y": 76,
+          "active": [
+            {
+              "chapter": 34,
+              "first": 30,
+              "last": 31
+            }
+          ],
+          "anchor": {
+            "chapter": 34,
+            "first": 30,
+            "last": 30
+          },
+          "sources": [
+            {
+              "chapter": 34,
+              "first": 30,
+              "last": 31
+            }
+          ],
+          "note": "The diagram marks the response and reply as a text relationship; it does not illustrate the retaliation.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "genesis-diagram-36",
+      "book": 0,
+      "title": "Esau and his named family",
+      "coverage": "Genesis 36:1–5 · selected family only",
+      "art": {
+        "path": "/art/journey/genesis-expansion-diagram-36.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Native text diagram identifying Esau as Edom and showing named wives and sons with explicitly stated maternal links; not geography, chronology, or the full chapter."
+      },
+      "caption": "Diagram · Genesis 36:1–5 · selected family, not a map, timeline, or full chapter",
+      "ranges": [
+        {
+          "chapter": 36,
+          "first": 1,
+          "last": 5
+        }
+      ],
+      "intro": {
+        "title": "A selected family profile",
+        "note": "The diagram stops at the names in verses 1–5 and shows mother-child links only where stated. It does not extend the genealogy into later verses."
+      },
+      "hotspots": [
+        {
+          "id": "genesis-diagram-36-esau",
+          "title": "Esau, who is Edom",
+          "x": 50,
+          "y": 17,
+          "active": [
+            {
+              "chapter": 36,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 36,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 36,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "The name Edom is associated with Esau in the selected verse.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-36-wives",
+          "title": "Esau’s named wives",
+          "x": 50,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 36,
+              "first": 2,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 36,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 36,
+              "first": 2,
+              "last": 3
+            }
+          ],
+          "note": "The three named wives are shown with their references; the diagram does not invent additional family details.",
+          "detail": null
+        },
+        {
+          "id": "genesis-diagram-36-sons",
+          "title": "Sons through the named mothers",
+          "x": 50,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 36,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 36,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 36,
+              "first": 4,
+              "last": 5
+            }
+          ],
+          "note": "The diagram connects Eliphaz, Reuel, and the sons of Aholibamah to the mothers named in the selected verses.",
+          "detail": null
+        }
+      ]
     }
   ]
 }

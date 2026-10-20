@@ -27,6 +27,7 @@ cp web/art/learn/ark/*.webp dist/art/learn/ark/
 cp web/art/learn/sower/*.webp dist/art/learn/sower/
 cp web/social-preview.jpg dist/
 cp web/art/journey/*.webp dist/art/journey/
+cp web/art/journey/*.svg dist/art/journey/
 cp web/art/tabernacle.webp dist/art/
 cp web/art/book-binding.webp web/art/gold-foil.webp dist/art/
 cp web/art/objects/*.webp dist/art/objects/
