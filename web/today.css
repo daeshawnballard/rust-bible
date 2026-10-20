@@ -35,3 +35,10 @@ main.wrap:has(.today-page){padding-bottom:20px}.today-page h1{margin-bottom:8px}
   .continuation-row [data-continue-link]{grid-column:2;margin-left:0;font-size:1.1rem}
   .continuation-row [data-continue-clear]{grid-column:3;margin-left:0;min-height:44px}
 }
+
+@media(max-width:600px){
+  main.wrap:has(.search-page),main.wrap:has(.recovery-page){box-sizing:border-box;width:100%;padding:24px 16px 48px}
+  .search-page h1,.recovery-page h1{overflow-wrap:anywhere}
+  .search-page .res,.recovery-page p{overflow-wrap:anywhere}
+  .recovery-page a{max-width:100%;margin-right:12px}
+}

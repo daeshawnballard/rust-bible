@@ -44,3 +44,12 @@ body:has(.about-page) .site-footer{max-width:980px;margin-top:0;padding:16px cla
 body:has(.about-page) .site-footer a{color:#e2cfaa}
 @media(max-width:700px){main.wrap:has(.about-page){padding:28px 18px 40px}.about-page{font-size:1rem}.about-intro h1{font-size:clamp(2.65rem,12vw,4rem)}.about-cards{grid-template-columns:minmax(0,1fr)}.about-card{padding:16px}.about-reading-grid{grid-template-columns:minmax(0,1fr);gap:12px}.about-section{padding:27px 0}.about-source-links{display:block}.about-source-links span{padding:0 5px}}
 @media(prefers-reduced-motion:reduce){.about-page *{scroll-behavior:auto}}
+
+@media(max-width:420px){
+  main.wrap:has(.about-page){box-sizing:border-box;padding:24px 16px 36px}
+  .about-page,.about-page *{min-width:0}
+  .about-quick-links{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:20px}
+  .about-quick-links a{box-sizing:border-box;width:100%;min-height:48px;justify-content:flex-start;padding-inline:14px}
+  .about-card{overflow-wrap:anywhere}
+  .about-faq summary{min-height:54px}
+}

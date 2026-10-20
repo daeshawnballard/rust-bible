@@ -168,7 +168,9 @@ export function initReaderContext(root=document) {
     const headerBottom=reader.ownerDocument.querySelector('.library-header')?.getBoundingClientRect().bottom||0;
     canvas.style.top=figure.hasAttribute('data-passage-scene')?Math.max(0,headerBottom)+'px':'';
     const w=canvas.clientWidth,h=canvas.clientHeight;
-    const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024));
+    // Keep genealogy labels readable. The same verse-follow and pan controls
+    // move between native diagram nodes instead of shrinking an entire tree.
+    const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024),figure.hasAttribute('data-passage-diagram') ? 0.65 : 0);
     worldWidth=(img.naturalWidth||1536)*scale;worldHeight=(img.naturalHeight||1024)*scale;
     world.style.width=worldWidth+'px';world.style.height=worldHeight+'px';
     const selected=figure.querySelector('[aria-current],[aria-pressed="true"]');
@@ -179,7 +181,7 @@ export function initReaderContext(root=document) {
       const initial=(w-worldWidth)/2;
       const scenePoint=initial+x*worldWidth;
       pan=scenePoint>w*(desktop ? 0.65 : 0.78)||scenePoint<44?target-x*worldWidth:initial;
-      pan=Math.max(w-worldWidth-(desktop?w*.28:0),Math.min(0,pan));
+      pan=Math.max(w-worldWidth-(desktop?w*.28:0)-22,Math.min(22,pan));
       panY=(h-worldHeight)/2;
       if(selected){
         const y=parseFloat(selected.style.top)/100;
@@ -192,7 +194,8 @@ export function initReaderContext(root=document) {
         if(bottom>=top&&(sceneY<top||sceneY>bottom))panY=(top+bottom)/2-y*worldHeight;
       }
     }
-    panY=Math.max(h-worldHeight,Math.min(0,panY));
+    // A marker at an authored edge still needs its complete 44px hit area.
+    panY=Math.max(h-worldHeight-22,Math.min(22,panY));
     world.style.left=pan+'px';
     world.style.top=panY+'px';
   };
