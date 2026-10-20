@@ -310,7 +310,8 @@ export class LocalNarrator extends EventTarget {
     this.objectURL = null;
     this.hostedSession = null;
     this.hostedStorePromise = import('./hosted-voice.js').then(({HostedNarrationStore}) => {
-      this.hostedStore = new HostedNarrationStore({baseURL:window.location.origin});
+      // Use the module directory so mounted readers keep their URL prefix.
+      this.hostedStore = new HostedNarrationStore();
       return this.hostedStore;
     });
     this.hostedStorePromise.catch(() => {});

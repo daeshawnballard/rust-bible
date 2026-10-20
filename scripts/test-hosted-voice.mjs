@@ -7,7 +7,7 @@ import {
   resolveVerseCues,
   validateHostedCues,
 } from '../web/hosted-voice.js';
-import {NATURAL_VOICES} from '../web/local-voice.js';
+import {LocalNarrator, NATURAL_VOICES} from '../web/local-voice.js';
 
 const digest = value => createHash('sha256').update(value).digest('hex');
 const voice = 'af_heart';
@@ -32,6 +32,30 @@ assert.equal(hostedAudioUrl('https://example.test',voice,1,2,'mp3'),
   'https://example.test/audio/v1/af_heart/1/2.mp3');
 assert.equal(hostedAudioUrl('https://example.test/projects/bibleinrust/',voice,1,2,'mp3'),
   'https://example.test/projects/bibleinrust/audio/v1/af_heart/1/2.mp3');
+// Exercise the caller too: a correct URL helper is insufficient if the narrator
+// overrides its module-relative directory with the bare page origin.
+const priorWindow = globalThis.window;
+const priorDocument = globalThis.document;
+const priorLocation = globalThis.location;
+globalThis.location = new URL('https://example.test/projects/bibleinrust/');
+globalThis.window = {location:{origin:'https://example.test'}};
+globalThis.document = {
+  createElement:() => Object.assign(new EventTarget(), {dataset:{}}),
+  body:{append() {}},
+};
+try {
+  const narrator = new LocalNarrator();
+  const callerStore = await narrator.hostedStorePromise;
+  assert.equal(callerStore.baseURL,new URL('../web/',import.meta.url).href);
+  callerStore.clear();
+} finally {
+  if (priorWindow === undefined) delete globalThis.window;
+  else globalThis.window = priorWindow;
+  if (priorDocument === undefined) delete globalThis.document;
+  else globalThis.document = priorDocument;
+  if (priorLocation === undefined) delete globalThis.location;
+  else globalThis.location = priorLocation;
+}
 assert.throws(() => hostedAudioUrl('https://example.test','bm_george',1,1,'mp3'), TypeError);
 assert.deepEqual(cropPeakBins([0,1,2,3],4,1,3), [1,2]);
 assert.equal(validateHostedCues(chapter(),{voice,book:1,chapter:1}), null);
