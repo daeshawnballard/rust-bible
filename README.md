@@ -1,8 +1,10 @@
 # The Bible
 
-Hosted reader: <https://bible-in-rust.daeshawnballard.chatgpt.site> · Source: <https://github.com/daeshawnballard/rust-bible>
+Hosted reader: <https://daeshawnballard.com/projects/bibleinrust/> · ChatGPT Site: <https://bible-in-rust.daeshawnballard.chatgpt.site> · Source: <https://github.com/daeshawnballard/rust-bible>
 
 A daily King James Version reading, an illustrated Library of all 66 books, a shared Passage and Journey reader, and a book-organized Bible Codex. Rust powers both the Axum + Tokio server and the browser WebAssembly build; small JavaScript modules connect browser navigation, local reading progress, and speech playback.
+
+The portfolio serves the reader beneath `/projects/bibleinrust/` through a read-only proxy to the public ChatGPT Site. The same Rust/WASM build resolves artwork, fonts, modules, and hosted Heart/Michael recordings relative to its deployment directory. Saved progress remains local to the browser origin; the custom domain and ChatGPT Site have separate browser storage.
 
 ## Connected reader
 

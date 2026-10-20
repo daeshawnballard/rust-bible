@@ -30,6 +30,8 @@ const expectedRecord = {bookIndex:0,chapter:1,verse:1,text:verseText};
 assert.deepEqual(NATURAL_VOICES.map(item => item.voiceURI), ['kokoro:af_heart','kokoro:am_michael']);
 assert.equal(hostedAudioUrl('https://example.test',voice,1,2,'mp3'),
   'https://example.test/audio/v1/af_heart/1/2.mp3');
+assert.equal(hostedAudioUrl('https://example.test/projects/bibleinrust/',voice,1,2,'mp3'),
+  'https://example.test/projects/bibleinrust/audio/v1/af_heart/1/2.mp3');
 assert.throws(() => hostedAudioUrl('https://example.test','bm_george',1,1,'mp3'), TypeError);
 assert.deepEqual(cropPeakBins([0,1,2,3],4,1,3), [1,2]);
 assert.equal(validateHostedCues(chapter(),{voice,book:1,chapter:1}), null);

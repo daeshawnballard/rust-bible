@@ -7,7 +7,8 @@ export function hostedAudioUrl(baseURL, voice, book, chapter, extension) {
   if (!VOICES.has(voice) || !Number.isInteger(book) || book < 1 || book > 66
     || !Number.isInteger(chapter) || chapter < 1
     || !['mp3', 'json'].includes(extension)) throw new TypeError('Invalid hosted narration reference.');
-  return new URL(`/audio/v1/${voice}/${book}/${chapter}.${extension}`, baseURL).href;
+  const directory = String(baseURL).endsWith('/') ? String(baseURL) : `${baseURL}/`;
+  return new URL(`audio/v1/${voice}/${book}/${chapter}.${extension}`, directory).href;
 }
 
 export function validateHostedCues(document, expected) {
@@ -118,7 +119,7 @@ async function limitedBytes(response, maxBytes, description) {
 }
 
 export class HostedNarrationStore {
-  constructor({baseURL = globalThis.location?.origin || 'http://localhost', fetchImpl = globalThis.fetch,
+  constructor({baseURL = globalThis.location ? new URL('./', import.meta.url).href : 'http://localhost/', fetchImpl = globalThis.fetch,
     cryptoImpl = globalThis.crypto, maxBytes = MAX_MEDIA_BYTES, maxEntries = MAX_ENTRIES} = {}) {
     if (typeof fetchImpl !== 'function') throw new TypeError('Fetch is required for hosted narration.');
     this.baseURL = baseURL;

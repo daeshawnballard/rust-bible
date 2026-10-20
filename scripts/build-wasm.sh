@@ -14,6 +14,7 @@ mkdir -p dist/art/objects dist/art/covers dist/art/today dist/art/learn/ark dist
 cp web/fonts/eb-garamond.ttf dist/fonts/
 cp web/fonts/cormorant-garamond.ttf dist/fonts/
 cp web/index.html web/app.js web/experience.js web/local-voice.js web/local-voice-worker.js web/hosted-voice.js web/library.js web/journey.js web/progress.js web/atlas.js web/terrain.js web/reader-context.js web/codex.js web/logo.png dist/
+cp web/site-paths.js dist/
 mkdir -p dist/icons
 cp web/icons/* dist/icons/
 mkdir -p dist/vendor/kokoro

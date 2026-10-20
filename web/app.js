@@ -4,6 +4,7 @@ import { initJourney, resolveTodayDate, routeFromHash } from './journey.js';
 import { resumeRoute, saveListeningPosition, matchingVerse } from './progress.js';
 import { initCodex, disposeCodex } from './codex.js';
 import { initReaderContext, disposeReaderContext, resolveLegacyReaderRoute } from './reader-context.js';
+import { mountHtml, mountApiHtml } from './site-paths.js';
 const app = document.getElementById("app");
 const encoder = new TextEncoder();
 const decoder = new TextDecoder();
@@ -37,7 +38,9 @@ function createRustBridge(exports) {
     const outputPtr = response_ptr() >>> 0;
     const outputLen = response_len() >>> 0;
     const output = new Uint8Array(memory.buffer, outputPtr, outputLen).slice();
-    return JSON.parse(decoder.decode(output));
+    const response = JSON.parse(decoder.decode(output));
+    if (response.content_type.startsWith('text/html')) response.body = mountHtml(response.body);
+    return response;
   }
 
   return invoke;
@@ -108,7 +111,7 @@ async function start() {
     if (!response.content_type.startsWith("application/json")) {
       throw new Error("rustBibleApi expects a Rust JSON API URI.");
     }
-    const value = JSON.parse(response.body);
+    const value = mountApiHtml(JSON.parse(response.body));
     if (response.status >= 400) throw Object.assign(new Error(value.error || "Bible API request failed."), { response: value, status: response.status });
     return value;
   };
