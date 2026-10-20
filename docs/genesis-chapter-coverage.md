@@ -587,4 +587,3 @@ These ranges still select their scene, but no hotspot has an active interval for
 - Source catalog: `data/journey/passage-scenes.json`; scene selection behavior: `src/passage_scenes.rs`; Eden routing: `src/reader_context.rs`; flood stages: `src/journey_scenes.rs`; Ark study: `src/learning.rs`; verse counts: `data/kjv.json`.
 - Every catalog and legacy range was checked to fit the local Genesis chapter verse count. For all 50 ledger rows, selected ranges and unillustrated intervals are disjoint and partition the chapter verses exactly.
 - This is a source inventory only. Live browser behavior and release acceptance were not run here.
-
