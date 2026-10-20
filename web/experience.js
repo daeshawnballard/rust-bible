@@ -20,11 +20,12 @@ const writePreference = (key, value) => {
 
 function currentRoute() {
   if (window.location.hash.startsWith('#/')) return window.location.hash.slice(1);
+  if (typeof window.rustBibleApi === 'function') return '/';
   return `${window.location.pathname}${window.location.search}${window.location.hash}`;
 }
 
 function appHref(route) {
-  return window.location.hash.startsWith('#/') ? `#${route}` : route;
+  return typeof window.rustBibleApi === 'function' || window.location.hash.startsWith('#/') ? `#${route}` : route;
 }
 
 function routeURL(route = currentRoute()) {
