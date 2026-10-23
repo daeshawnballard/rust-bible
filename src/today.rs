@@ -114,8 +114,8 @@ const EDITION_2_READINGS: [(&str, &str, &str); 42] = [
     ),
     (
         "1 Kings 19:11-13",
-        "covers/1-kings",
-        "Illustration inspired by 1 Kings",
+        "today/elijah-cave",
+        "Illustrated reconstruction · Elijah at the cave entrance, 1 Kings 19:13",
     ),
     ("Job 19:23-27", "covers/job", "Illustration inspired by Job"),
     (
@@ -453,15 +453,22 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> RouteRespo
     );
     let library = route_path("/library", client);
     let learning_slot = if NAMES[passage.book] == "Genesis" && (6..=8).contains(&chapter) {
-        0
+        Some(0)
     } else if NAMES[passage.book] == "Matthew" && chapter == 13 {
-        1
+        Some(1)
     } else if NAMES[passage.book] == "Exodus" && (25..=27).contains(&chapter) {
-        2
+        Some(2)
     } else {
-        date.ordinal().rem_euclid(3) as usize
+        None
     };
-    let learning_card = super::learning::today_card(learning_slot, client);
+    let learning_card = learning_slot
+        .map(|slot| {
+            format!(
+                "<div class=\"today-support\">{}</div>",
+                super::learning::today_card(slot, client)
+            )
+        })
+        .unwrap_or_default();
     let icon =
         include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
     let mut text = String::new();
@@ -475,7 +482,7 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> RouteRespo
         _ => unreachable!("edition was validated above"),
     };
     let body = format!(
-        r#"<section class="today-page" data-today data-today-date="{date_key}"><div class="today-hero"><div class="today-reading"><div class="today-heading"><p class="today-date"><time datetime="{date_key}">{date_label}</time></p><h1>Today</h1><section class="continuation-row continuation-row--today" data-continuation>{icon}<div data-continue-empty><p>Begin with a book</p><a href="{library}">Browse the Library →</a></div><div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href="{library}" aria-label="Continue reading">→</a><details class="continue-options"><summary aria-label="Saved reading options" title="Saved reading options"><span aria-hidden="true">•••</span></summary><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear saved location</button></details></section></div><p class="today-kicker">Today’s passage <span aria-hidden="true">·</span> King James Version</p><h2 class="today-reference">{title}</h2><div class="scripture today-scripture">{text}</div><div class="today-actions"><a class="today-read" href="{full_chapter}">{icon}<span>Read {book} {chapter}</span><span aria-hidden="true">→</span></a>{controls}</div></div><figure class="today-art"><img src="/art/{image}.webp" width="{image_width}" height="{image_height}" alt="{caption}" fetchpriority="high"><figcaption>{caption}</figcaption></figure></div><div class="today-support">{learning_card}</div><p class="today-rotation">{rotation} <span aria-hidden="true">·</span> <a href="{archive}">Link to this day</a></p></section>"#,
+        r#"<section class="today-page" data-today data-today-date="{date_key}"><div class="today-hero"><div class="today-reading"><div class="today-heading"><p class="today-date"><time datetime="{date_key}">{date_label}</time></p><h1>Today</h1><section class="continuation-row continuation-row--today" data-continuation>{icon}<div data-continue-empty><p>Begin with a book</p><a href="{library}">Browse the Library →</a></div><div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href="{library}" aria-label="Continue reading">→</a><details class="continue-options"><summary aria-label="Saved reading options" title="Saved reading options"><span aria-hidden="true">•••</span></summary><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear saved location</button></details></section></div><p class="today-kicker">Today’s passage <span aria-hidden="true">·</span> King James Version</p><h2 class="today-reference">{title}</h2><div class="scripture today-scripture">{text}</div><div class="today-actions"><a class="today-read" href="{full_chapter}">{icon}<span>Read {book} {chapter}</span><span aria-hidden="true">→</span></a>{controls}</div></div><figure class="today-art"><img src="/art/{image}.webp" width="{image_width}" height="{image_height}" alt="{caption}" fetchpriority="high"><figcaption>{caption}</figcaption></figure></div>{learning_card}<p class="today-rotation">{rotation} <span aria-hidden="true">·</span> <a href="{archive}">Link to this day</a></p></section>"#,
         date_key = date.key(),
         date_label = date.label(),
         title = esc(&title),
@@ -641,6 +648,26 @@ mod tests {
         assert!(heading < continuation);
         assert!(continuation < reference && continuation < art && continuation < scripture);
         assert_eq!(markup.matches("data-continuation").count(), 1);
+    }
+
+    #[test]
+    fn elijah_daily_art_and_study_links_match_the_passage() {
+        let response = page(
+            &HashMap::from([
+                ("date".into(), "2026-10-23".into()),
+                ("edition".into(), "2".into()),
+            ]),
+            true,
+        );
+        assert!(response.body.contains("/art/today/elijah-cave.webp"));
+        assert!(!response.body.contains("/art/covers/1-kings.webp"));
+        assert!(response
+            .body
+            .contains("Elijah at the cave entrance, 1 Kings 19:13"));
+        assert!(!response.body.contains("The Sower’s Field"));
+        assert!(!response.body.contains("class=\"today-support\""));
+        let related = page(&HashMap::from([("date".into(), "2026-10-17".into())]), true);
+        assert!(related.body.contains("Inside the Tabernacle"));
     }
 
     #[test]

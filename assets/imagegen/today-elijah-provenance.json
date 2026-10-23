@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "generator": "built-in image_gen.imagegen",
+  "asset": {
+    "id": "today-elijah-cave",
+    "prompt": "Use case: historical-scene. Production artwork for a reverent illustrated King James Bible reader. Create a single detailed landscape painting, 1536x1024 composition, of Elijah at the entrance of a rocky mountain cave, specifically 1 Kings 19:13: Elijah wraps his face in his mantle and stands in the entering in of the cave, listening after the wind, earthquake and fire. Show one ancient Levantine adult man in a simple earth-colored woven robe and mantle, his face covered by the mantle, at a clearly recognizable natural cave entrance on a rugged mountain. The cave occupies the left third, Elijah is near the center-left, and a quiet rocky valley extends to the right. Warm restrained dawn light, charcoal rock shadows, muted gold and earthy colors, rich painterly realism consistent with a premium illustrated Bible. No temple, city, palace, gold vessels, readable text, labels, graphic overlays, speech bubbles, angels, visible deity, magical light beams, modern items, or simultaneous montage of wind/fire/earthquake. This is a quiet aftermath, not a supernatural spectacle. Leave a soft dark vignette at all outer edges for integration into a charcoal website. All important narrative subjects within the central 80 percent. No frame or watermark.",
+    "provider_output_filename": "exec-a38c139f-82fd-4d14-9153-876d1f1f28c2.png",
+    "source_path": "assets/imagegen/source/today-elijah-cave.png",
+    "final_path": "web/art/today/elijah-cave.webp",
+    "source_sha256": "133ee110a4a827ca1b9ee1fc808ce5afb60bbdfd2fe33277a2b32b885d7dcbc3",
+    "final_sha256": "2f2593ab0ecd24e562d6d4093bb5e3a3a2ee67f0a7cbde8d9653fa0f83e4b7f5",
+    "width": 1536,
+    "height": 1024,
+    "webp_quality": 85,
+    "source": "1 Kings 19:13",
+    "inspection": "Full raster inspected: one man covers his face with his mantle at a recognizable natural cave entrance. No temple, city, visible deity, UI or writing. Human appearance, cave, landscape and dawn lighting are artistic reconstruction, not claims established by the text."
+  }
+}

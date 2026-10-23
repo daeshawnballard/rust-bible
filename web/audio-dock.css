@@ -10,6 +10,24 @@ body.has-global-audio #app {
   padding-bottom: var(--global-audio-dock-clearance);
 }
 
+/* The player has a quiet, opaque rail; scrolling text must not show through
+   the gaps around its floating outline. The measured document padding keeps
+   the final content and footer reachable above this rail. */
+body.has-global-audio:not(.has-scene)::after {
+  content: "";
+  position: fixed;
+  z-index: 1199;
+  inset: auto 0 0;
+  height: var(--global-audio-dock-clearance);
+  border-top: 1px solid rgb(202 172 104 / 20%);
+  background: #121413;
+  pointer-events: none;
+}
+
+body.has-global-audio :is(.today-actions, .today-support, .today-rotation, .site-footer) {
+  scroll-margin-bottom: var(--global-audio-dock-clearance);
+}
+
 .audio-dock[hidden] {
   display: none;
 }

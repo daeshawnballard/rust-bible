@@ -14,7 +14,7 @@ main.wrap:has(.today-page) {
 .today-hero {
   display: grid;
   grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr);
-  align-items: center;
+  align-items: start;
   gap: clamp(26px, 4vw, 60px);
 }
 
@@ -212,15 +212,16 @@ main.wrap:has(.today-page) {
   margin: 0;
   background:transparent;
   border:0;
+  overflow: hidden;
 }
 
 .today-art img {
   display: block;
-  width: 120%;
-  max-width:none;
-  margin-left:-10%;
+  width: 100%;
+  max-width:100%;
+  margin:0;
   height: auto;
-  max-height: none;
+  max-height: min(620px, 72svh);
   aspect-ratio: auto;
   border: 0;
   border-radius: 0;
@@ -228,8 +229,16 @@ main.wrap:has(.today-page) {
   mix-blend-mode: screen;
   filter:brightness(1.22) saturate(1.1);
   box-shadow:none;
-  -webkit-mask-image: radial-gradient(ellipse at center,#000 57%,transparent 75%);
-  mask-image: radial-gradient(ellipse at center,#000 57%,transparent 75%);
+  -webkit-mask-image: linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);
+  mask-image: linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* Covers are portrait library artwork, not full-height daily scenes. */
+.today-art img[src*="/covers/"] {
+  height: clamp(340px, 42vw, 580px);
+  object-fit: cover;
 }
 
 .today-art figcaption {
