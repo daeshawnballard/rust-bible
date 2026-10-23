@@ -86,13 +86,35 @@ export function initLibrary(root = document) {
   if (mounted) return mounted.dispose;
 
   const form = library.querySelector("#library-tools-form");
+  const lookup = library.querySelector("#library-lookup");
+  const testament = library.querySelector("#library-testament");
   const tools = library.querySelector("details.library-tools[data-library-tools]");
   const grid = library.querySelector(".library-grid");
   const slider = form?.querySelector('input[type="range"][name="size"]');
+  const savedTestament = form?.querySelector('input[type="hidden"][name="testament"]');
   const controller = new AbortController();
   const { signal } = controller;
 
   updateCoverWidth(grid, slider);
+
+  lookup?.addEventListener("submit", (event) => {
+    if (!hashRoutingIsActive()) return;
+    event.preventDefault();
+    const query = new FormData(lookup).get("q")?.toString().trim() || "";
+    if (!query) {
+      window.location.hash = "#/library";
+      return;
+    }
+    // Keep book prefixes and reference parsing on the existing Rust /go route.
+    window.location.hash = `#/go?q=${encodeURIComponent(query)}`;
+  }, { signal });
+
+  testament?.addEventListener("change", () => {
+    if (!form || !savedTestament) return;
+    savedTestament.value = testament.value;
+    if (tools) rememberToolsOpen(tools.open);
+    submitOrRoute(form);
+  }, { signal });
 
   if (tools) {
     let wasMobile = window.matchMedia(MOBILE_QUERY).matches;

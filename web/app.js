@@ -140,8 +140,14 @@ async function start() {
         }
       }
       journey.beforeRender(route);
+      const codexScroll = route.startsWith('/codex')
+        ? app.querySelector('.codex-index')?.scrollTop : undefined;
       const response = invoke(route);
       installPage(response, route, { initial });
+      if (codexScroll !== undefined) {
+        const index = app.querySelector('.codex-index');
+        if (index) index.scrollTop = codexScroll;
+      }
       if (!response.location) initial = false;
     } catch (error) {
       showError(error instanceof Error ? error.message : "An unexpected reader error occurred.");

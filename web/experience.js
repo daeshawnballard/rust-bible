@@ -74,7 +74,6 @@ function makeDock(runtime) {
     <div class="audio-dock-info">
       <a class="audio-dock-return" data-dock-return href="#" aria-label="Return to the passage"></a>
       <div class="audio-dock-options">
-        <label class="audio-dock-voice"><span>Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
         <button class="audio-dock-switch" data-dock-switch type="button" hidden>Listen here</button>
       </div>
       <span class="audio-dock-status" data-dock-status role="status" aria-live="polite">Preparing the free natural voice…</span>
@@ -87,6 +86,7 @@ function makeDock(runtime) {
       </div>
       <span class="audio-dock-time" data-dock-duration aria-hidden="true">—:—</span>
     </div>
+    <label class="audio-dock-voice"><span>Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
     <label class="audio-dock-rate" aria-label="Playback speed">
       <select data-dock-rate aria-label="Playback speed">
         <option value="0.75">0.75×</option><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option>
@@ -314,8 +314,11 @@ function drawWaveform(runtime, samples = runtime.samples) {
   const context = canvas.getContext('2d');
   if (!context) return;
   context.clearRect(0, 0, width, height);
+  const palette = getComputedStyle(canvas);
+  const unplayed = palette.getPropertyValue('--wave-muted').trim() || '#b7c8bf';
+  const played = palette.getPropertyValue('--wave-active').trim() || '#29664d';
   if (!runtime.source || !ACTIVE_STATES.has(runtime.state)) {
-    context.fillStyle = '#6d6b64';
+    context.fillStyle = unplayed;
     context.fillRect(0, Math.floor(height / 2), width, Math.max(1, Math.round(scale)));
     return;
   }
@@ -335,7 +338,7 @@ function drawWaveform(runtime, samples = runtime.samples) {
     for (let sample = start; sample < end; sample++) peak = Math.max(peak, Array.isArray(bins) ? bins[sample] : Math.abs(bins[sample]));
     const barHeight = Math.max(Math.round(2 * scale), Math.round(peak * height * 0.86));
     const x = Math.floor(index * width / bars);
-    context.fillStyle = index / bars <= progress ? '#e4bd65' : '#6d6b64';
+    context.fillStyle = index / bars <= progress ? played : unplayed;
     context.fillRect(x, middle - barHeight / 2, barWidth, barHeight);
   }
 }

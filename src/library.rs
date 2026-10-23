@@ -503,7 +503,7 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
         .expect("serializable KJV verses")
         .replace('<', "\\u003c");
     let mut html = format!(
-        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}" data-library-return>Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><img class="cover-binding" src="/art/book-binding.webp" alt="" aria-hidden="true" width="1080" height="1440"><span class="cover-title{title_class}" style="--cover-word-em:{word_em}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><section class="continuation-row continuation-row--book" data-continuation data-continue-hide-empty data-continue-other-book hidden>{read_icon}<div data-continue-saved hidden><p>Last opened on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{first}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section><div class="book-audio" data-read-aloud data-book-audio data-book-index="{index}" data-book-route="{reader_book_route}" data-reference="{name}"><div class="book-actions"><a class="book-begin" data-book-read-link data-book-first-route="{first_route}" href="{first}" aria-label="Begin reading {name} chapter 1">{read_icon}<span data-book-read-label>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-start-first" data-book-start-first hidden><a data-book-start-link href="{first}">Start at chapter 1 →</a></p><p class="book-version">King James Version · Free natural voice<br><small>First listen downloads about 100 MB.</small></p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="kokoro:af_heart">Heart · Natural American</option></select></label></div><small>Synthetic Kokoro voice, generated on this device. Device voices are also available. Reads Scripture only. Resumes your saved verse in this book, or starts at chapter 1.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
+        r#"<section class="book-page" data-book-page data-book="{name}"><nav class="book-breadcrumb" aria-label="Breadcrumb"><a href="{home}" data-library-return>Library</a><span aria-hidden="true">/</span><span aria-current="page">{name}</span></nav><div class="book-layout"><div class="book-artwork"><div class="book-cover book-volume" role="img" aria-label="Illustrated {name} book cover"><img class="cover-art" src="/art/covers/{slug}.webp" alt="" width="768" height="1152" fetchpriority="high"><span class="cover-title{title_class}" style="--cover-word-em:{word_em}">{name}</span><span class="cover-tagline">{tagline}</span></div></div><div class="book-overview"><h1 class="book-title{title_class}">{name}</h1><p class="book-metadata">{testament} <span>·</span> {category} <span>·</span> {count} {chapter_word}</p><p class="book-introduction">{description}</p><section class="continuation-row continuation-row--book" data-continuation data-continue-hide-empty data-continue-other-book hidden>{read_icon}<div data-continue-saved hidden><p>Last opened on this device</p><span data-continue-label></span></div><a data-continue-link hidden href="{first}">Continue reading →</a><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear</button></section><div class="book-audio" data-read-aloud data-book-audio data-book-index="{index}" data-book-route="{reader_book_route}" data-reference="{name}"><div class="book-actions"><a class="book-begin" data-book-read-link data-book-first-route="{first_route}" href="{first}" aria-label="Begin reading {name} chapter 1">{read_icon}<span data-book-read-label>Begin reading</span><span aria-hidden="true">→</span></a><button type="button" class="book-listen" data-audio-action="play">{listen_icon}<span data-audio-label>Listen to {name}</span></button></div><p class="book-start-first" data-book-start-first hidden><a data-book-start-link href="{first}">Start at chapter 1 →</a></p><p class="book-version">King James Version · Free natural voice<br><small>First listen downloads about 100 MB.</small></p><div class="book-playback-settings" hidden><p data-audio-status role="status" aria-live="polite">Ready. Reads the KJV text only.</p><div class="book-playback-actions"><button type="button" data-audio-action="pause">Pause</button><button type="button" data-audio-action="stop">Stop</button><label>Speed<select data-audio-rate aria-label="Speech speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><label>Voice<select data-audio-voice aria-label="Voice"><option value="kokoro:af_heart">Heart · Natural American</option></select></label></div><small>Synthetic Kokoro voice, generated on this device. Device voices are also available. Reads Scripture only. Resumes your saved verse in this book, or starts at chapter 1.</small></div><script type="application/json" data-book-scripture>{speech}</script></div><section class="book-chapters" aria-labelledby="chapter-heading"><h2 id="chapter-heading">Choose a chapter</h2><nav class="chs book-chapter-grid" aria-label="{name} chapters">"#,
         word_em = COVER_WORD_EM[index],
         tagline = esc(detail.tagline),
         description = esc(detail.description),
@@ -525,20 +525,15 @@ pub(super) fn render_book(index: usize, client: bool) -> String {
 }
 
 fn render_controls(testament: &str, category: &str, sort: &str, size: usize) -> String {
-    let mut html = String::from(
-        "<details class=\"library-tools\" data-library-tools><summary>Library tools</summary><form id=\"library-tools-form\" action=\"/library\" method=\"get\"><div class=\"tools-fields\"><label>Testament<select name=\"testament\" aria-label=\"Testament\">",
+    let tools_icon = include_str!("../web/icons/sliders-horizontal.svg")
+        .replace("<svg ", "<svg aria-hidden=\"true\" ");
+    let mut html = format!(
+        "<details class=\"library-tools\" data-library-tools><summary>{tools_icon}<span>Library tools</span></summary><form id=\"library-tools-form\" action=\"/library\" method=\"get\"><input type=\"hidden\" name=\"testament\" value=\"",
     );
-    for (value, label) in [
-        ("all", "All testaments"),
-        ("old", "Old Testament"),
-        ("new", "New Testament"),
-    ] {
-        html.push_str(&format!(
-            "<option value=\"{value}\"{}>{label}</option>",
-            selected(testament, value)
-        ));
-    }
-    html.push_str(&format!("</select></label><label>Category<select name=\"category\" aria-label=\"Category\"><option value=\"all\"{}>All categories</option>", selected(category, "all")));
+    html.push_str(testament);
+    html.push_str("\"><div class=\"tools-fields\"><label>Category<select name=\"category\" aria-label=\"Category\"><option value=\"all\"");
+    html.push_str(selected(category, "all"));
+    html.push_str(">All categories</option>");
     for (value, label) in CATEGORIES {
         html.push_str(&format!(
             "<option value=\"{value}\"{}>{label}</option>",
@@ -560,6 +555,32 @@ fn render_controls(testament: &str, category: &str, sort: &str, size: usize) -> 
     html.push_str(&format!(
         "</select></label><label>Cover size<input id=\"library-size\" type=\"range\" name=\"size\" min=\"160\" max=\"340\" step=\"20\" value=\"{size}\" aria-label=\"Cover size\"><output for=\"library-size\">{size}px</output></label></div><div class=\"tools-actions\"><button type=\"button\" data-library-reset>Reset</button><button type=\"submit\">Apply</button></div></form></details>"
     ));
+    html
+}
+
+fn render_library_toolbar(testament: &str, client: bool, read_icon: &str) -> String {
+    let search_icon = include_str!("../web/icons/magnifying-glass-thin.svg")
+        .replace("<svg ", "<svg aria-hidden=\"true\" ");
+    let mut html = format!(
+        "<div class=\"library-toolbar\"><form class=\"library-lookup\" id=\"library-lookup\" action=\"{}\" method=\"get\" role=\"search\"><label class=\"visually-hidden\" for=\"library-query\">Look up a book, passage, or phrase</label>{search_icon}<input id=\"library-query\" name=\"q\" type=\"search\" placeholder=\"Find a book, passage, or phrase…\" autocomplete=\"off\"><button type=\"submit\" aria-label=\"Search the Bible\">Search</button></form><label class=\"library-testament\"><span class=\"visually-hidden\">Testament</span><select id=\"library-testament\" aria-label=\"Testament\">",
+        esc(&route_path("/go", client))
+    );
+    for (value, label) in [
+        ("all", "All books"),
+        ("old", "Old Testament"),
+        ("new", "New Testament"),
+    ] {
+        html.push_str(&format!(
+            "<option value=\"{value}\"{}>{label}</option>",
+            selected(testament, value)
+        ));
+    }
+    html.push_str("</select></label>");
+    html.push_str("<section class=\"continuation-row continuation-row--library\" data-continuation data-continue-hide-empty hidden>");
+    html.push_str(read_icon);
+    html.push_str("<div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href=\"");
+    html.push_str(&esc(&route_path("/library", client)));
+    html.push_str("\" aria-label=\"Continue reading\">→</a><details class=\"continue-options\"><summary aria-label=\"Saved reading options\" title=\"Saved reading options\"><span aria-hidden=\"true\">•••</span></summary><button data-continue-clear type=\"button\" hidden aria-label=\"Clear saved reading location\">Clear saved location</button></details></section></div>");
     html
 }
 
@@ -590,13 +611,9 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
     };
     let read_icon =
         include_str!("../web/icons/book-open.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
-    let continuation = format!(
-        r#"<section class="continuation-row continuation-row--library" data-continuation data-continue-hide-empty hidden>{read_icon}<div data-continue-saved hidden><p>Continue reading</p><span data-continue-label></span></div><a data-continue-link hidden href="{}" aria-label="Continue reading">→</a><details class="continue-options"><summary aria-label="Saved reading options" title="Saved reading options"><span aria-hidden="true">•••</span></summary><button data-continue-clear type="button" hidden aria-label="Clear saved reading location">Clear saved location</button></details></section>"#,
-        esc(&route_path("/library", client))
-    );
     let mut html = format!(
-        "<section class=\"library-page\" data-library><div class=\"library-topline\"><div class=\"library-heading\"><p class=\"library-meta\">66 books <span aria-hidden=\"true\">·</span> King James Version</p><h1>Library</h1><a class=\"library-codex-link\" href=\"{}\">Codex reference →</a></div>{continuation}</div>{}<p class=\"library-count\" role=\"status\">{count}</p>",
-        esc(&route_path("/codex", client)),
+        "<section class=\"library-page ivory-library\" data-library><h1 class=\"visually-hidden\">Bible Library</h1>{}<p class=\"library-count\" role=\"status\">{count}</p>{}",
+        render_library_toolbar(testament, client, &read_icon),
         render_controls(testament, category, sort, size),
     );
 
@@ -629,7 +646,7 @@ pub(super) fn render(params: &HashMap<String, String>, client: bool) -> String {
             };
             let cover = format!("/art/covers/{}.webp", book_slug(name));
             html.push_str(&format!(
-                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" data-book-entry href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><img class=\"cover-binding\" src=\"/art/book-binding.webp\" alt=\"\" aria-hidden=\"true\" width=\"1080\" height=\"1440\"><h2 class=\"{}\" style=\"--cover-word-em:{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" data-book-entry href=\"{}\">Read {} →</a></article>",
+                "<article class=\"library-card\" data-book=\"{}\" data-index=\"{index}\" data-testament=\"{testament}\" data-category=\"{}\"><a class=\"book-cover\" data-book-entry href=\"{}\" aria-label=\"Read {}\"><img class=\"cover-art\" src=\"{}\" alt=\"\" loading=\"lazy\" width=\"768\" height=\"1152\"><h2 class=\"{}\" style=\"--cover-word-em:{}\">{}</h2><p class=\"cover-tagline\">{}</p></a><p class=\"book-description\">{}</p><p class=\"book-category\">{} · {category_label}</p><a class=\"book-read-link\" data-book-entry href=\"{}\">Read {} →</a></article>",
                 esc(name), detail.category, esc(&route_path(&chapter_path, client)), esc(name),
                 cover, title_class, COVER_WORD_EM[index], esc(name), esc(detail.tagline), esc(detail.description),
                 if testament == "old" { "Old Testament" } else { "New Testament" },
@@ -753,15 +770,28 @@ mod tests {
     #[test]
     fn continue_rows_precede_the_library_gallery_and_preserve_chapter_one() {
         let library = super::render(&HashMap::new(), false);
-        let heading = library.find("<h1>Library</h1>").unwrap();
+        let toolbar = library.find("class=\"library-toolbar\"").unwrap();
         let continuation = library
             .find("data-continuation data-continue-hide-empty hidden")
             .unwrap();
         let gallery = library.find("class=\"library-grid\"").unwrap();
-        assert!(library.contains("66 books <span aria-hidden=\"true\">·</span> King James Version"));
-        assert!(heading < continuation && continuation < gallery);
+        assert!(library.contains("class=\"visually-hidden\">Bible Library</h1>"));
+        assert!(library.contains("id=\"library-lookup\" action=\"/go\""));
+        assert!(library.contains("id=\"library-testament\""));
+        assert!(library.contains("type=\"hidden\" name=\"testament\" value=\"all\""));
+        assert_eq!(library.matches("class=\"library-card\"").count(), 66);
+        assert!(!library.contains("<h1>Library</h1>"));
+        assert!(toolbar < continuation && continuation < gallery);
+        assert!(!library.contains("/art/book-binding.webp"));
+
+        let old_testament =
+            super::render(&HashMap::from([("testament".into(), "old".into())]), false);
+        assert!(old_testament.contains("<option value=\"old\" selected>Old Testament</option>"));
+        assert!(old_testament.contains("name=\"testament\" value=\"old\""));
 
         let book = render_book(0, false);
+        assert!(book.contains("/art/covers/genesis.webp"));
+        assert!(!book.contains("/art/book-binding.webp"));
         assert!(book.contains(
             "data-book-read-link data-book-first-route=\"/book/genesis/1\" href=\"/book/genesis/1\""
         ));

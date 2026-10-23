@@ -456,6 +456,142 @@ fn reference(entry: &Entry, client: bool) -> (String, String) {
     (name, href)
 }
 
+#[derive(Clone, Copy)]
+struct Artwork {
+    path: &'static str,
+    caption: &'static str,
+    contextual: bool,
+}
+
+fn artwork(entry: &Entry) -> Option<Artwork> {
+    let (path, caption, contextual) = match entry.id {
+        // This cover depicts an Eden-like landscape. It is book-level context,
+        // rather than a claim that the image reconstructs the named verse.
+        "genesis-eden" => ("covers/genesis", "Contextual art inspired by Genesis", true),
+        "genesis-abraham" => (
+            "journey/genesis-expansion-a-abram-departs",
+            "Illustration inspired by Abram's journey",
+            false,
+        ),
+        "genesis-joseph" => (
+            "journey/genesis-expansion-c-45-joseph-benjamin-embrace",
+            "Illustration inspired by Joseph and Benjamin's reunion",
+            false,
+        ),
+        "exodus-sinai" => (
+            "journey/sinai-wilderness",
+            "Illustration inspired by the Sinai wilderness",
+            false,
+        ),
+        "exodus-sea" => (
+            "journey/ot-exodus-red-sea-crossing",
+            "Illustration inspired by Israel's sea crossing",
+            false,
+        ),
+        "judges-deborah" => (
+            "journey/ot-judges-deborah-and-barak",
+            "Illustration inspired by Deborah and Barak",
+            false,
+        ),
+        "1-samuel-david" => (
+            "journey/ot-1samuel-david-goliath",
+            "Illustration inspired by David and Goliath",
+            false,
+        ),
+        "2-kings-naaman" => (
+            "journey/ot-2kings-naaman-jordan",
+            "Illustration inspired by Naaman's healing",
+            false,
+        ),
+        "psalms-shepherd" => (
+            "journey/ot-psalms-shepherd",
+            "Illustration inspired by the shepherd psalm",
+            false,
+        ),
+        "matthew-feeding" => (
+            "journey/loaves-and-sea",
+            "Illustration inspired by the feeding of the multitude",
+            false,
+        ),
+        _ => return None,
+    };
+    Some(Artwork {
+        path,
+        caption,
+        contextual,
+    })
+}
+
+fn artwork_html(entry: &Entry, compact: bool) -> String {
+    let Some(art) = artwork(entry) else {
+        return String::new();
+    };
+    let size = if art.path.starts_with("covers/") {
+        (768, 1152)
+    } else {
+        (1536, 1024)
+    };
+    let contextual_class = if art.contextual {
+        " codex-art-contextual"
+    } else {
+        ""
+    };
+    let loading = if compact { "lazy" } else { "eager" };
+    format!(
+        r#"<figure class="codex-art{}"><img src="/art/{}.webp" width="{}" height="{}" alt="{}" loading="{}" decoding="async"><figcaption>{}</figcaption></figure>"#,
+        contextual_class,
+        esc(art.path),
+        size.0,
+        size.1,
+        esc(art.caption),
+        loading,
+        esc(art.caption)
+    )
+}
+
+fn index_entry(entry: &Entry, client: bool, selected: Option<&str>, hidden: bool) -> String {
+    let (reference, _) = reference(entry, client);
+    let href = route_path(&format!("/codex?entry={}", entry.id), client);
+    let current = if selected == Some(entry.id) {
+        " aria-current=\"page\""
+    } else {
+        ""
+    };
+    let hidden_attr = if hidden { " hidden" } else { "" };
+    let art = artwork(entry)
+        .map(|_| {
+            format!(
+                r#"<span class="codex-row-art">{}</span>"#,
+                artwork_html(entry, true)
+            )
+        })
+        .unwrap_or_default();
+    format!(
+        r#"<article class="codex-index-entry" data-codex-card data-codex-entry-id="{}" data-codex-book="{}" data-codex-category="{}" data-codex-search="{}" id="codex-{}"{}><a class="codex-entry-row{}" href="{}" data-codex-entry="{}"{}>{}<span class="codex-row-copy"><span class="codex-kicker">{}</span><span class="codex-row-title">{}</span><span class="codex-row-reference">{}</span></span></a></article>"#,
+        entry.id,
+        slug(entry.book).to_ascii_lowercase(),
+        entry.category.key(),
+        esc(&format!(
+            "{} {} {} {}",
+            entry.title, entry.summary, reference, NAMES[entry.book]
+        )),
+        entry.id,
+        hidden_attr,
+        if art.is_empty() {
+            " codex-entry-row-text-only"
+        } else {
+            ""
+        },
+        esc(&href),
+        entry.id,
+        current,
+        art,
+        entry.category.label(),
+        esc(entry.title),
+        esc(&reference)
+    )
+}
+
 fn entry_card(
     entry: &Entry,
     client: bool,
@@ -509,15 +645,11 @@ fn entry_card(
 
 fn entry_detail(entry: &Entry, client: bool) -> String {
     let (reference, href) = reference(entry, client);
-    let back = route_path(
-        &format!("/codex?book={}", slug(entry.book).to_ascii_lowercase()),
-        client,
-    );
     format!(
-        r#"<article class="codex-detail" data-codex-detail data-codex-entry-id="{}"><nav class="codex-breadcrumb" aria-label="Breadcrumb"><a href="{}">Codex</a><span aria-hidden="true">/</span><span>{}</span></nav><p class="codex-kicker">{} · {}</p><h1>{}</h1><p class="codex-summary">{}</p><p class="codex-editorial-note">A concise study note linked to the King James Version source. This explanation is not Scripture.</p><a class="codex-reference" href="{}" data-codex-read data-codex-book="{}" data-codex-chapter="{}" data-codex-verse="{}">Read {}</a><a class="codex-back" href="{}">Browse this book's Codex entries</a></article>"#,
+        r#"<article class="codex-detail" data-codex-detail data-codex-entry-id="{}"><a class="codex-back" data-codex-back-to-index href="{}"><span aria-hidden="true">←</span> Back to entries</a>{}<p class="codex-kicker">{} · {}</p><h2>{}</h2><p class="codex-summary">{}</p><p class="codex-editorial-note"><strong>Study note</strong><span aria-hidden="true"> · </span>Editorial commentary. Scripture remains in the reader.</p><p class="codex-source-label">Source passage</p><a class="codex-reference" href="{}" data-codex-read data-codex-book="{}" data-codex-chapter="{}" data-codex-verse="{}">Read {}</a></article>"#,
         entry.id,
-        esc(&back),
-        esc(NAMES[entry.book]),
+        esc(&route_path("/codex", client)),
+        artwork_html(entry, false),
         entry.category.label(),
         esc(NAMES[entry.book]),
         esc(entry.title),
@@ -526,8 +658,7 @@ fn entry_detail(entry: &Entry, client: bool) -> String {
         esc(&slug(entry.book)),
         entry.chapter,
         entry.verse,
-        esc(&reference),
-        esc(&back)
+        esc(&reference)
     )
 }
 
@@ -548,46 +679,73 @@ fn options(selected: Option<usize>) -> String {
     html
 }
 
-/// Render the searchable book-by-book Codex page or an individual entry.
+fn category_tabs(selected: Option<Category>) -> String {
+    let categories = [
+        ("all", "All", None),
+        ("people", "People", Some(Category::People)),
+        ("places", "Places", Some(Category::Places)),
+        ("miracles", "Miracles", Some(Category::Miracles)),
+        ("lessons", "Study notes", Some(Category::Lessons)),
+    ];
+    categories
+        .iter()
+        .map(|(value, label, category)| {
+            let state = if selected == *category {
+                " aria-pressed=\"true\" class=\"is-active\""
+            } else {
+                " aria-pressed=\"false\""
+            };
+            format!(
+                r#"<button type="button" value="{}" data-codex-category-filter{}>{}</button>"#,
+                value, state, label
+            )
+        })
+        .collect::<String>()
+}
+
+/// Render the searchable book-by-book Codex index and its selected note preview.
 pub(super) fn page(params: &HashMap<String, String>, client: bool) -> String {
-    let selected_book = book_param(params.get("book"));
-    if let Some(entry) = params
+    let requested_entry = params
         .get("entry")
-        .and_then(|id| ENTRIES.iter().find(|entry| entry.id == id))
-    {
-        return format!(
-            r#"<section class="codex-page" data-codex-page><header class="codex-heading"><p class="codex-eyebrow">A companion to the King James Version</p><h1>Codex</h1></header>{}</section>"#,
-            entry_detail(entry, client)
-        );
-    }
+        .and_then(|id| ENTRIES.iter().find(|entry| entry.id == id));
+    let selected_book =
+        book_param(params.get("book")).or_else(|| requested_entry.map(|entry| entry.book));
     let selected_category = category(params.get("category").map(String::as_str));
     let query = params.get("q").map(String::as_str).unwrap_or_default();
     let query_folded = query.to_lowercase();
+    let matches_filters = |entry: &Entry| {
+        let source = reference(entry, client).0;
+        let searchable = format!(
+            "{} {} {} {}",
+            entry.title, entry.summary, source, NAMES[entry.book]
+        )
+        .to_lowercase();
+        selected_book.map_or(true, |filter| filter == entry.book)
+            && selected_category.map_or(true, |filter| filter == entry.category)
+            && (query_folded.is_empty() || searchable.contains(&query_folded))
+    };
+    let selected_entry = requested_entry
+        .filter(|entry| matches_filters(entry))
+        .or_else(|| {
+            ENTRIES
+                .iter()
+                .find(|entry| matches_filters(entry) && artwork(entry).is_some())
+        })
+        .or_else(|| ENTRIES.iter().find(|entry| matches_filters(entry)));
+    let selected_id = selected_entry.map(|entry| entry.id);
+    let mobile_open = params.contains_key("entry");
     let mut html = format!(
-        r#"<section class="codex-page" data-codex-page data-codex-client="{}"><header class="codex-heading"><p class="codex-eyebrow">A companion to the King James Version</p><h1>Codex</h1><p>Explore people, places, miracles, and concise study notes alongside the books of the Bible.</p><p class="codex-editorial-note">A selected guide to the text, not an exhaustive index. Study notes are editorial explanations; Scripture remains in the reader.</p></header><form class="codex-filters" data-codex-filters role="search"><label>Find in the Codex<input type="search" data-codex-query value="{}" placeholder="Name, place, or theme"></label><label>Book<select data-codex-book-filter>{}</select></label><label>Category<select data-codex-category-filter><option value="all">All categories</option><option value="people"{}>People</option><option value="places"{}>Places</option><option value="miracles"{}>Miracles</option><option value="lessons"{}>Study notes</option></select></label></form><p class="codex-count" data-codex-count aria-live="polite"></p><div class="codex-results" data-codex-results>"#,
+        r#"<section class="codex-page" data-codex-page data-codex-client="{}" data-codex-selected="{}" data-codex-selection-open="{}"><form class="codex-filters" data-codex-filters role="search"><div class="codex-filter-row"><label class="codex-search-label"><span class="codex-sr-only">Search the Codex</span><input type="search" data-codex-query value="{}" placeholder="Search people, places, miracles, or study notes" aria-label="Search people, places, miracles, or study notes"></label><label class="codex-book-label"><span>Book</span><select data-codex-book-filter>{}</select></label></div><nav class="codex-category-tabs" aria-label="Filter by category">{}</nav></form><div class="codex-index-layout"><section class="codex-index" aria-label="Codex entries"><p class="codex-count" data-codex-count aria-live="polite">{} entries</p><div class="codex-results" data-codex-results>"#,
         client,
+        selected_id.unwrap_or_default(),
+        mobile_open,
         esc(query),
         options(selected_book),
-        if selected_category == Some(Category::People) {
-            " selected"
-        } else {
-            ""
-        },
-        if selected_category == Some(Category::Places) {
-            " selected"
-        } else {
-            ""
-        },
-        if selected_category == Some(Category::Miracles) {
-            " selected"
-        } else {
-            ""
-        },
-        if selected_category == Some(Category::Lessons) {
-            " selected"
-        } else {
-            ""
-        },
+        category_tabs(selected_category),
+        ENTRIES
+            .iter()
+            .filter(|entry| matches_filters(entry))
+            .count(),
     );
     let mut visible_count = 0;
     for book in 0..NAMES.len() {
@@ -598,13 +756,7 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> String {
         }
         let visible_in_book = book_entries
             .iter()
-            .filter(|entry| {
-                let searchable = format!("{} {} {}", entry.title, entry.summary, NAMES[entry.book])
-                    .to_lowercase();
-                selected_book.map_or(true, |filter| filter == entry.book)
-                    && selected_category.map_or(true, |filter| filter == entry.category)
-                    && (query_folded.is_empty() || searchable.contains(&query_folded))
-            })
+            .filter(|entry| matches_filters(entry))
             .count();
         visible_count += visible_in_book;
         html.push_str(&format!(
@@ -615,12 +767,8 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> String {
             esc(NAMES[book])
         ));
         for entry in book_entries {
-            let searchable =
-                format!("{} {} {}", entry.title, entry.summary, NAMES[entry.book]).to_lowercase();
-            let visible = selected_book.map_or(true, |filter| filter == entry.book)
-                && selected_category.map_or(true, |filter| filter == entry.category)
-                && (query_folded.is_empty() || searchable.contains(&query_folded));
-            html.push_str(&entry_card(entry, client, None, None, !visible));
+            let visible = matches_filters(entry);
+            html.push_str(&index_entry(entry, client, selected_id, !visible));
         }
         html.push_str("</section>");
     }
@@ -629,6 +777,14 @@ pub(super) fn page(params: &HashMap<String, String>, client: bool) -> String {
         r#"</div><p class="codex-empty" data-codex-empty{}>No entries match these filters.</p></section>"#,
         empty
     ));
+    html.push_str(&format!(
+        r#"<section class="codex-preview" data-codex-preview aria-label="Selected Codex note" aria-live="polite"{}>"#,
+        if selected_entry.is_some() { "" } else { " hidden" }
+    ));
+    if let Some(entry) = selected_entry {
+        html.push_str(&entry_detail(entry, client));
+    }
+    html.push_str("</section></div></section>");
     html
 }
 
@@ -764,6 +920,7 @@ pub(super) fn api(params: &HashMap<String, String>, client: bool) -> RouteRespon
     });
     json_response(200, json!({
         "html": html,
+        "detail_html": selected.map(|entry| entry_detail(entry, client)),
         "title": title,
         "book": book,
         "book_name": book.map(|index| NAMES[index]),
@@ -851,13 +1008,33 @@ mod tests {
         for name in NAMES {
             assert!(html.contains(&format!("aria-label=\"{}\"", name)));
         }
-        assert_eq!(
-            html.matches("data-codex-entry-id=\"").count(),
-            ENTRIES.len()
-        );
+        assert_eq!(html.matches("data-codex-card").count(), ENTRIES.len());
+        assert_eq!(html.matches("data-codex-book-group=").count(), 66);
+        assert!(html.contains("data-codex-selected=\"genesis-eden\""));
         assert!(html.contains("Study note"));
+        assert!(!html.contains("class=\"codex-heading\""));
+        assert!(!html.contains("<h1>Codex</h1>"));
         assert!(!html.contains("class=\"scripture\""));
         assert!(!html.contains("class=\"v\""));
+    }
+
+    #[test]
+    fn direct_entry_keeps_the_filtered_index_and_renders_its_note_preview() {
+        let params = HashMap::from([
+            ("entry".to_string(), "genesis-abraham".to_string()),
+            ("category".to_string(), "people".to_string()),
+            ("q".to_string(), "abram".to_string()),
+        ]);
+        let html = page(&params, true);
+        assert!(html.contains("data-codex-selected=\"genesis-abraham\""));
+        assert!(html.contains("data-codex-selection-open=\"true\""));
+        assert!(html.contains("value=\"abram\""));
+        assert!(html.contains("value=\"people\" data-codex-category-filter aria-pressed=\"true\""));
+        assert!(html.contains("/art/journey/genesis-expansion-a-abram-departs.webp"));
+        assert!(html.contains("Study note"));
+        assert!(html.contains("href=\"#/book/Genesis/12?resume=1#v1\" data-codex-read"));
+        assert!(html.contains("href=\"#/codex\""));
+        assert!(!html.contains("<h1>Codex</h1>"));
     }
 
     #[test]
@@ -891,6 +1068,10 @@ mod tests {
         let body: serde_json::Value = serde_json::from_str(&response.body).unwrap();
         assert_eq!(body["entry"], "john-water-wine");
         assert!(body["html"].as_str().unwrap().contains("data-codex-read"));
+        assert!(body["detail_html"]
+            .as_str()
+            .unwrap()
+            .contains("data-codex-back-to-index"));
         assert!(!body["html"]
             .as_str()
             .unwrap()

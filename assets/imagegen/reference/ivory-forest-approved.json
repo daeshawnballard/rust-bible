@@ -1,0 +1,23 @@
+{
+  "reference": "ivory-forest-approved.png",
+  "selected": "2026-10-23",
+  "authority": "User selected ivory and forest, search-first layout without repeated page mastheads. Yellow-paper alternative rejected by selection.",
+  "palette": {
+    "background": "#F7F5EE",
+    "ink": "#172D27",
+    "muted": "#59685F",
+    "accent": "#29664D",
+    "surface": "#ECEEE4",
+    "selection": "#E2EDE4",
+    "border": "#D9DED4"
+  },
+  "preserve": [
+    "Rust/WASM",
+    "all66books",
+    "360Codexentries",
+    "Scripture separated from editorial explanations",
+    "Heart/Michael hosted narration",
+    "reading place",
+    "Journey and dedicated object artwork"
+  ]
+}

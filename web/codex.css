@@ -1,366 +1,277 @@
-.codex-page,
+.codex-page {
+  --codex-bg: var(--bg, #F7F5EE);
+  --codex-fg: var(--fg, #172D27);
+  --codex-muted: var(--muted, #59685F);
+  --codex-accent: var(--accent, #29664D);
+  --codex-card: var(--card, #F7F5EE);
+  --codex-border: var(--border, #D9DED4);
+  color: var(--codex-fg);
+  font-family: var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.codex-page [hidden] { display: none !important; }
+
+.codex-page .codex-filters {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0 0 1.1rem;
+}
+
+.codex-page .codex-filter-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.28fr);
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.codex-page .codex-search-label,
+.codex-page .codex-book-label {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+  color: var(--codex-muted);
+  font: 600 0.76rem/1.35 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+}
+
+.codex-page .codex-search-label input,
+.codex-page .codex-book-label select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--codex-border);
+  border-radius: 0.65rem;
+  background: var(--codex-card);
+  color: var(--codex-fg);
+  font: 400 0.95rem/1.35 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+}
+
+.codex-page .codex-search-label input::placeholder { color: var(--codex-muted); opacity: 0.9; }
+.codex-page .codex-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.codex-page .codex-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.8rem, 2vw, 1.65rem);
+  align-items: stretch;
+  min-height: 44px;
+  border-bottom: 1px solid var(--codex-border);
+}
+
+.codex-page .codex-category-tabs button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0.05rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--codex-muted);
+  font: 550 0.88rem/1.3 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+  cursor: pointer;
+}
+
+.codex-page .codex-category-tabs button:hover,
+.codex-page .codex-category-tabs button.is-active { color: var(--codex-fg); }
+
+.codex-page .codex-category-tabs button.is-active::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--codex-accent);
+  content: "";
+}
+
+.codex-page .codex-index-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.96fr) minmax(19rem, 1.04fr);
+  gap: clamp(1.35rem, 3.2vw, 3.3rem);
+  align-items: start;
+}
+
+.codex-page .codex-index {
+  min-width: 0;
+  max-height: min(76vh, 940px);
+  overflow: auto;
+  padding-right: clamp(0.9rem, 2vw, 1.65rem);
+  border-right: 1px solid var(--codex-border);
+  scrollbar-gutter: stable;
+}
+
+.codex-page .codex-count {
+  margin: 0 0 0.75rem;
+  color: var(--codex-muted);
+  font: 500 0.76rem/1.45 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+}
+
+.codex-page .codex-results { display: block; }
+
+.codex-page .codex-book-group {
+  display: block;
+  min-width: 0;
+  margin: 0 0 1.2rem;
+}
+
+.codex-page .codex-book-group > h2 {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  margin: 0;
+  padding: 0.65rem 0 0.55rem;
+  border-bottom: 1px solid var(--codex-border);
+  background: var(--codex-bg);
+  color: var(--codex-fg);
+  font: 650 0.76rem/1.35 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.codex-page .codex-index-entry { min-width: 0; border-bottom: 1px solid var(--codex-border); }
+
+.codex-page .codex-entry-row {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  min-height: 88px;
+  padding: 0.55rem 0.45rem;
+  color: var(--codex-fg);
+  text-decoration: none;
+  transition: background-color 140ms ease;
+}
+
+.codex-page .codex-entry-row-text-only { grid-template-columns: minmax(0, 1fr); }
+.codex-page .codex-entry-row:hover { background: color-mix(in srgb, var(--codex-accent) 7%, var(--codex-bg)); }
+.codex-page .codex-entry-row[aria-current="page"] { background: color-mix(in srgb, var(--codex-accent) 10%, var(--codex-bg)); }
+.codex-page .codex-row-art { display: block; width: 76px; height: 68px; overflow: hidden; border-radius: 0.48rem; background: var(--codex-border); }
+.codex-page .codex-row-art .codex-art { height: 100%; margin: 0; aspect-ratio: auto; border: 0; border-radius: 0; }
+.codex-page .codex-row-art .codex-art img { height: 100%; border-radius: 0; }
+.codex-page .codex-row-art .codex-art figcaption { display: none; }
+.codex-page .codex-row-copy { display: grid; gap: 0.22rem; min-width: 0; }
+.codex-page .codex-kicker { margin: 0; color: var(--codex-muted); font: 650 0.63rem/1.35 var(--ui-font, ui-sans-serif, system-ui, sans-serif); letter-spacing: 0.075em; text-transform: uppercase; }
+.codex-page .codex-row-title { font: 400 1.03rem/1.25 Georgia, "Times New Roman", serif; }
+.codex-page .codex-row-reference { color: var(--codex-muted); font: 400 0.77rem/1.35 var(--ui-font, ui-sans-serif, system-ui, sans-serif); }
+
+.codex-page .codex-preview { min-width: 0; }
+.codex-page .codex-detail { min-width: 0; padding: 0.25rem 0 1.5rem; }
+.codex-page .codex-art {
+  position: relative;
+  margin: 0 0 1.15rem;
+  overflow: hidden;
+  aspect-ratio: 1.68 / 1;
+  border: 1px solid var(--codex-border);
+  border-radius: 0.8rem;
+  background: var(--codex-card);
+}
+
+.codex-page .codex-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.codex-page .codex-art figcaption {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.55rem;
+  left: 0.65rem;
+  width: fit-content;
+  max-width: calc(100% - 1.3rem);
+  padding: 0.28rem 0.5rem;
+  border-radius: 0.25rem;
+  background: #172D27dd;
+  color: #F7F5EE;
+  font: 500 0.66rem/1.35 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+}
+
+.codex-page .codex-detail > .codex-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 44px;
+  margin: 0 0 0.75rem;
+  color: var(--codex-accent);
+  font: 600 0.84rem/1.4 var(--ui-font, ui-sans-serif, system-ui, sans-serif);
+  text-decoration: none;
+}
+
+.codex-page .codex-detail > .codex-kicker { margin: 0 0 0.45rem; }
+.codex-page .codex-detail h2 { margin: 0; color: var(--codex-fg); font: 400 clamp(1.7rem, 3vw, 2.5rem)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -0.025em; }
+.codex-page .codex-summary { margin: 0.8rem 0 1rem; color: var(--codex-fg); font: 400 1rem/1.6 var(--ui-font, ui-sans-serif, system-ui, sans-serif); }
+.codex-page .codex-editorial-note { margin: 1.15rem 0; padding: 0.85rem 1rem; border-left: 2px solid var(--codex-accent); background: color-mix(in srgb, var(--codex-accent) 5%, var(--codex-bg)); color: var(--codex-muted); font: 400 0.86rem/1.55 var(--ui-font, ui-sans-serif, system-ui, sans-serif); }
+.codex-page .codex-editorial-note strong { color: var(--codex-fg); font-weight: 650; }
+.codex-page .codex-source-label { margin: 1.2rem 0 0.15rem; color: var(--codex-muted); font: 650 0.68rem/1.4 var(--ui-font, ui-sans-serif, system-ui, sans-serif); letter-spacing: 0.08em; text-transform: uppercase; }
+.codex-page .codex-reference { display: inline-flex; align-items: center; min-height: 44px; color: var(--codex-accent); font: 650 0.92rem/1.4 var(--ui-font, ui-sans-serif, system-ui, sans-serif); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.codex-page .codex-empty { margin: 1.3rem 0; color: var(--codex-muted); font: 400 0.9rem/1.5 var(--ui-font, ui-sans-serif, system-ui, sans-serif); }
+
+.codex-page a:focus-visible,
+.codex-page button:focus-visible,
+.codex-page input:focus-visible,
+.codex-page select:focus-visible {
+  outline: 2px solid var(--codex-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .codex-page .codex-index-layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .codex-page .codex-index { max-height: none; overflow: visible; padding: 0; border-right: 0; }
+  .codex-page .codex-book-group > h2 { top: 0; }
+  .codex-page[data-codex-selection-open="false"] .codex-preview { display: none; }
+  .codex-page[data-codex-selection-open="true"] .codex-index { display: none; }
+  .codex-page .codex-detail { padding: 0; }
+  .codex-page .codex-detail > .codex-back { margin-bottom: 0.8rem; }
+  .codex-page .codex-art { aspect-ratio: 1.4 / 1; }
+}
+
+@media (max-width: 500px) {
+  .codex-page .codex-filter-row { grid-template-columns: minmax(0, 1fr); gap: 0.55rem; }
+  .codex-page .codex-book-label { grid-template-columns: auto minmax(0, 1fr); gap: 0.7rem; align-items: center; }
+  .codex-page .codex-book-label select { min-height: 46px; }
+  .codex-page .codex-category-tabs { gap: 1rem; overflow-x: auto; flex-wrap: nowrap; }
+  .codex-page .codex-category-tabs button { flex: 0 0 auto; }
+  .codex-page .codex-entry-row { grid-template-columns: 68px minmax(0, 1fr); gap: 0.7rem; min-height: 78px; }
+  .codex-page .codex-entry-row-text-only { grid-template-columns: minmax(0, 1fr); }
+  .codex-page .codex-row-art { width: 68px; height: 62px; }
+  .codex-page .codex-row-title { font-size: 0.98rem; }
+}
+
+/* Reader companion: retain its existing layout while using the shared theme colors. */
 .codex-context {
-  --codex-ink: #eee5d6;
-  --codex-muted: #c2b9a7;
-  --codex-paper: #181d1a;
-  --codex-paper-deep: #202720;
-  --codex-gold: #dec38c;
+  --codex-ink: var(--fg, #172D27);
+  --codex-muted: var(--muted, #59685F);
+  --codex-paper: var(--card, #F7F5EE);
+  --codex-paper-deep: var(--bg, #F7F5EE);
+  --codex-gold: var(--accent, #29664D);
   color: var(--codex-ink);
   font-family: Georgia, "Times New Roman", serif;
 }
 
-.codex-page [hidden] {
-  display: none !important;
-}
-
-/* The index is a browsing surface, not the narrow Scripture reading column. */
-main.wrap:has(.codex-page) {
-  width: 100%;
-  max-width: 1536px;
-  padding: 30px clamp(18px, 4.7vw, 72px) 24px;
-}
-
-.codex-page {
-  width: 100%;
-  max-width: none;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Bible Display', Georgia, serif;
-}
-
-.codex-heading {
-  max-width: 900px;
-  margin: 0 0 1.5rem;
-  text-align: left;
-}
-
-.codex-heading h1,
-.codex-detail h1 {
-  margin: 0.15em 0;
-  font-size: clamp(2.4rem, 6vw, 4.8rem);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 1.02;
-}
-
-.codex-heading > p:not(.codex-eyebrow),
-.codex-summary,
-.codex-editorial-note {
-  color: var(--codex-muted);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.65;
-}
-
-.codex-eyebrow,
-.codex-kicker {
-  color: var(--codex-gold);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1.4;
-  text-transform: uppercase;
-}
-
-.codex-filters {
-  display: grid;
-  grid-template-columns: minmax(12rem, 2fr) repeat(2, minmax(9rem, 1fr));
-  gap: 0.8rem;
-  max-width: none;
-  margin: 0 0 1rem;
-  padding: 1rem;
-  border: 1px solid #b59a6255;
-  border-radius: 0.75rem;
-  background: var(--codex-paper);
-}
-
-.codex-filters label {
-  display: grid;
-  gap: 0.4rem;
-  color: var(--codex-muted);
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.75rem;
-  font-weight: 650;
-}
-
-.codex-filters input,
-.codex-filters select {
-  min-width: 0;
-  min-height: 2.75rem;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid #b59a6266;
-  border-radius: 0.4rem;
-  background: #111614;
-  color: var(--codex-ink);
-  font: 400 0.9rem/1.3 ui-sans-serif, system-ui, sans-serif;
-}
-
-.codex-filters input:focus-visible,
-.codex-filters select:focus-visible,
-.codex-page a:focus-visible,
-.codex-context a:focus-visible {
-  outline: 2px solid var(--codex-gold);
-  outline-offset: 3px;
-}
-
-.codex-count {
-  margin: 0 0 0.8rem;
-  color: var(--codex-muted);
-  font: 0.8rem/1.4 ui-sans-serif, system-ui, sans-serif;
-}
-
-.codex-results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
-  gap: 1.15rem;
-  align-items: start;
-}
-
-.codex-book-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
-  gap: 0.75rem;
-  min-width: 0;
-  padding: 1rem;
-  border: 1px solid #b59a6255;
-  border-radius: 0.8rem;
-  background: var(--codex-paper);
-}
-
-.codex-book-group > h2 {
-  grid-column: 1 / -1;
-  margin: 0;
-  padding-bottom: 0.45rem;
-  border-bottom: 1px solid #b59a6255;
-  font-size: 1.6rem;
-  font-weight: 400;
-}
-
-.codex-card {
-  min-width: 0;
-  padding: 0.9rem;
-  border-left: 2px solid #c4a05d;
-  background: #111614;
-}
-
-.codex-card[aria-current="true"],
-.codex-card-selected {
-  border-left-color: #e4c17e;
-  background: #2a2b20;
-}
-
-.codex-card .codex-kicker {
-  margin: 0 0 0.35rem;
-  font-size: 0.62rem;
-}
-
-.codex-card h3,
-.codex-context .codex-card h4 {
-  margin: 0;
-  font-size: 1.13rem;
-  font-weight: 400;
-  line-height: 1.25;
-}
-
-.codex-page a,
-.codex-context a {
-  color: #e4c17e;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-}
-
-.codex-page a:hover,
-.codex-context a:hover {
-  color: #fff0ca;
-}
-
-.codex-card .codex-summary {
-  margin: 0.45rem 0 0.65rem;
-  font-size: 0.84rem;
-}
-
-.codex-page .codex-card h3 {
-  font-size: 1.3rem;
-}
-
-.codex-page .codex-card h3 a {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-}
-
-.codex-page .codex-card .codex-kicker {
-  font-size: 0.68rem;
-}
-
-.codex-page .codex-card .codex-summary {
-  font: 400 1.05rem/1.5 'Bible Display', Georgia, serif;
-}
-
-.codex-page .codex-reference,
-.codex-page .codex-back {
-  display: inline-flex;
-}
-
-.codex-reference,
-.codex-back {
-  display: inline-block;
-  font: 650 0.76rem/1.4 ui-sans-serif, system-ui, sans-serif;
-}
-
-.codex-empty {
-  margin: 1.5rem 0;
-  padding: 1.2rem;
-  border: 1px dashed #b59a6266;
-  border-radius: 0.6rem;
-  color: var(--codex-muted);
-  font: 0.9rem/1.5 ui-sans-serif, system-ui, sans-serif;
-}
-
-.codex-detail {
-  max-width: 740px;
-  margin: 0 auto;
-  padding: clamp(1.4rem, 4vw, 2.5rem);
-  border: 1px solid #b59a6255;
-  border-radius: 0.8rem;
-  background: var(--codex-paper);
-}
-
-.codex-page:has(.codex-detail) { max-width: 900px; }
-.codex-page .codex-detail { max-width: none; }
-
-.codex-breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 2rem;
-  color: var(--codex-muted);
-  font: 0.78rem/1.5 ui-sans-serif, system-ui, sans-serif;
-}
-
-.codex-breadcrumb a {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-}
-
-.codex-detail .codex-kicker {
-  margin: 0;
-}
-
-.codex-detail .codex-summary {
-  margin: 1rem 0;
-  font-size: 1rem;
-}
-
-.codex-detail .codex-editorial-note {
-  padding: 0.75rem 0.9rem;
-  border-left: 2px solid var(--codex-gold);
-  background: #252a21;
-  font-size: 0.84rem;
-}
-
-.codex-detail .codex-reference,
-.codex-detail .codex-back {
-  display: block;
-  width: fit-content;
-  margin-top: 1rem;
-}
+.codex-context a { color: var(--codex-gold); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.codex-context a:hover { color: var(--codex-ink); }
+.codex-context a:focus-visible { outline: 2px solid var(--codex-gold); outline-offset: 3px; }
+.codex-context .codex-card { border-left-color: var(--codex-gold); background: var(--codex-paper-deep); }
+.codex-context .codex-card-selected { background: color-mix(in srgb, var(--codex-gold) 9%, var(--codex-paper)); }
+.codex-context .codex-selected-label { color: var(--codex-gold); }
+.codex-context .codex-card h3 { color: var(--codex-ink); }
+.codex-context .codex-card h4 { margin: 0; color: var(--codex-ink); font-size: 1.13rem; font-weight: 400; line-height: 1.25; }
 
 .codex-context {
   display: grid;
   gap: 0.7rem;
   padding: 0.95rem;
-  border: 1px solid #b59a6255;
+  border: 1px solid var(--border, #D9DED4);
   border-radius: 0.7rem;
   background: var(--codex-paper);
 }
 
 .codex-context > .codex-eyebrow,
 .codex-context > h3,
-.codex-context > p {
-  margin: 0;
-}
-
-.codex-context > h3 {
-  font-size: 1.3rem;
-  font-weight: 400;
-}
-
-.codex-context .codex-selected-label {
-  color: var(--codex-gold);
-  font: 700 0.68rem/1.4 ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.codex-context-list {
-  display: grid;
-  gap: 0.55rem;
-}
-
-.codex-context .codex-card {
-  padding: 0.7rem;
-}
-
-.codex-context .codex-card h3 {
-  font-size: 1rem;
-}
-
-.codex-context .codex-card .codex-summary {
-  margin: 0.35rem 0 0.5rem;
-  font-size: 0.8rem;
-}
-
-.codex-reference,
-.codex-back {
-  min-height: 44px;
-  align-items: center;
-}
-
-@media (max-width: 760px) {
-  main.wrap:has(.codex-page) { padding: 24px 16px; }
-
-  .codex-page {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0;
-  }
-
-  .codex-results {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .codex-filters {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    box-sizing: border-box;
-    width: 100%;
-    margin-top: 0;
-    padding: 0.9rem;
-  }
-
-  .codex-filters label:first-child { grid-column: 1 / -1; }
-
-  .codex-filters input,
-  .codex-filters select {
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    min-height: 44px;
-  }
-}
-
-@media (max-width: 380px) {
-  .codex-filters { grid-template-columns: minmax(0, 1fr); }
-  .codex-book-group { grid-template-columns: minmax(0, 1fr); }
-}
-
-@media (max-width: 360px) {
-  main.wrap:has(.codex-page) { padding-inline: 12px; }
-  .codex-book-group { padding: 0.875rem; }
-  .codex-card { padding: 0.8rem; }
-}
-
-/* The shared header rule also matches this section heading. */
-.codex-heading { background:transparent; border:0; }
+.codex-context > p { margin: 0; }
+.codex-context > h3 { font-size: 1.3rem; font-weight: 400; }
+.codex-context .codex-selected-label { font: 700 0.68rem/1.4 var(--ui-font, ui-sans-serif, system-ui, sans-serif); letter-spacing: 0.08em; text-transform: uppercase; }
+.codex-context-list { display: grid; gap: 0.55rem; }
+.codex-context .codex-card { padding: 0.7rem; }
+.codex-context .codex-card h3 { font-size: 1rem; }
+.codex-context .codex-card .codex-summary { margin: 0.35rem 0 0.5rem; font-size: 0.8rem; }
+.codex-context .codex-reference { display: inline-flex; min-height: 44px; align-items: center; }

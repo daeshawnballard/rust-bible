@@ -1,0 +1,17 @@
+{
+  "provider": "Phosphor Icons",
+  "license": "MIT",
+  "date": "2026-10-23",
+  "assets": [
+    {
+      "file": "sliders-horizontal.svg",
+      "source": "https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/sliders-horizontal.svg",
+      "sha256": "1d937baa3bc51ec4052364edf30cf8991d550920534f5d413eb9f60535cc1916"
+    },
+    {
+      "file": "dots-three.svg",
+      "source": "https://raw.githubusercontent.com/phosphor-icons/core/main/assets/regular/dots-three.svg",
+      "sha256": "ca4e748007101155641ec3041cd129bb03a8030d0eed16e313b9dd75e6beac77"
+    }
+  ]
+}

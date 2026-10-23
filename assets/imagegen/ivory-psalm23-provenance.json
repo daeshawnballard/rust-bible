@@ -1,0 +1,41 @@
+{
+  "asset": "Psalm 23 shepherd valley illustration",
+  "created_date": "2026-10-23",
+  "generator": "Built-in Codex ImageGen",
+  "tool_reference": {
+    "tool": "image_gen.imagegen",
+    "generated_output": "/Users/daeshawnballard/.codex/generated_images/01a167c8-b945-79c1-949d-62b7edbb5df1/exec-7e537346-f87a-49a8-a5c3-a3757243bce6.png",
+    "generation_reference": "exec-7e537346-f87a-49a8-a5c3-a3757243bce6"
+  },
+  "input_reference": {
+    "role": "Style and composition reference only; generated artwork is independent and does not reproduce the UI or exact scene.",
+    "path": "/Users/daeshawnballard/.codex/generated_images/01a12da6-01f4-7b92-98b6-5e07b7e2c1ee/exec-966499bb-58f6-485c-80db-1937271443e8.png"
+  },
+  "prompt": "Use case: illustration-story\nAsset type: independent landscape hero artwork for the Today screen of a Bible reading app\nInput image: Image 1 is a visual reference for painterly realism, warm luminous late-afternoon lighting, detailed natural landscape, and the balance of a quiet left side with a shepherd scene at right. Create a new independent painting; do not reproduce the UI or copy the composition exactly.\nPrimary request: Create one polished, wide landscape painting illustrating the shepherd imagery of Psalm 23.\nScene/backdrop: A broad Levantine valley in late afternoon, a small winding river catching warm light, rocky hills in the distance, natural grasses and a few olive branches framing the upper edge.\nSubject: An adult historically appropriate Levantine shepherd seen mostly from behind, standing in the right third with a simple wooden staff, calmly watching a small natural flock of sheep grazing. Human figure and flock are secondary to the landscape.\nStyle/medium: Restrained painterly realism with luminous atmosphere, rich but natural detail, refined and serene rather than theatrical; match the reference's visual finish, not its exact content.\nComposition/framing: Full independent landscape, approximately 3:2 horizontal. Keep the leftmost 30% quieter, with open softly lit terrain and low-detail valley forms suitable beneath a normal left-side gradient mask for adjacent text. Place shepherd at the right third, flock nearby, horizon in the upper half, layered river valley leading into the distance. Design for use as the right half of a desktop hero and a cropped mobile hero.\nLighting/mood: Warm late-afternoon light, gentle sun glow, calm and reassuring.\nColor palette: Muted olive green, sage, warm gold, limestone, soft blue-gray distance.\nConstraints: No words, lettering, UI, frame, watermark, or logo. No modern Jerusalem temple, palace, city wall, or unrelated foreground architecture. Do not depict God. Do not identify the shepherd as Jesus or claim a historical portrait of David. Keep anatomy, staff, sheep, landscape, and perspective natural and coherent.",
+  "outputs": {
+    "source_png": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/ivory-psalm23-source.png",
+      "width": 1536,
+      "height": 1024,
+      "format": "PNG",
+      "sha256": "490776cef58974b60d6bf5f22d339685c71777d2b4a2308769c28534e1b4ae34",
+      "bytes": 3104160
+    },
+    "webp": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/today/psalm23-shepherd.webp",
+      "width": 1536,
+      "height": 1024,
+      "format": "WebP",
+      "sha256": "d59f1e3d14b12b265db8fec7dec3e5cd5fb49a29fc6b28b36f0bdba2245bb838",
+      "bytes": 476458
+    }
+  },
+  "processing": {
+    "operation": "Lossy WebP conversion from the unmodified generated PNG; dimensions preserved.",
+    "command": "cwebp -quiet -q 88 -m 6 ivory-psalm23-source.png -o psalm23-shepherd.webp"
+  },
+  "visual_review": {
+    "status": "Reviewed PNG and converted WebP at full size.",
+    "notes": "The shepherd is at the right third with a small flock, river valley, rocky hills, and olive branches. The left side remains landscape-rich rather than empty; the requested normal left-side gradient mask should provide the text area. Painterly symbolic illustration, not documentary historical evidence or an identifiable biblical figure."
+  }
+}

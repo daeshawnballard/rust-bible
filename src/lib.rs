@@ -20,7 +20,9 @@ const CSS: &str = concat!(
     include_str!("../web/gallery-polish.css"),
     include_str!("../web/codex.css"),
     include_str!("../web/audio-dock.css"),
-    include_str!("../web/immersive.css")
+    include_str!("../web/immersive.css"),
+    include_str!("../web/ivory-library.css"),
+    include_str!("../web/ivory.css")
 );
 
 mod about;
@@ -28,9 +30,9 @@ mod atlas;
 mod codex;
 mod journey_books;
 mod journey_scenes;
-mod passage_scenes;
 mod learning;
 mod library;
+mod passage_scenes;
 mod reader;
 mod reader_context;
 mod tabernacle;
@@ -485,9 +487,18 @@ fn page_body(q: &str, body: &str, client: bool) -> String {
     };
     let about = esc(&route_path("/about", client));
     let codex = esc(&route_path("/codex", client));
+    let codex_current = if body.contains("data-codex-page") {
+        " aria-current=\"page\""
+    } else {
+        ""
+    };
+    let brand_icon = include_str!("../web/icons/book-open.svg")
+        .replace("<svg ", "<svg class=\"brand-mark\" aria-hidden=\"true\" ");
+    let menu_icon =
+        include_str!("../web/icons/dots-three.svg").replace("<svg ", "<svg aria-hidden=\"true\" ");
     let q = esc(q);
     let header = format!(
-        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 8.5c5.7-2.2 10.7-1.5 15 1.5v23c-4.3-3-9.3-3.7-15-1.5zM35 8.5c-5.7-2.2-10.7-1.5-15 1.5v23c4.3-3 9.3-3.7 15-1.5z"/><path d="M20 10v23"/></svg><span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a></nav><a class="header-back" href="{library}" data-library-return>← Library</a><div class="site-tools"><details class="site-search"><summary aria-label="Search"><img src="/icons/magnifying-glass-thin.svg" alt=""></summary><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></details><details class="site-menu"><summary aria-label="Site menu">•••</summary><nav aria-label="Site tools"><a href="{home}" data-today-link>Today</a><a href="{library}" data-library-return>Library</a><a href="{codex}">Bible Codex</a><a href="{about}">About &amp; help</a><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></nav></details></div></div></header>"##
+        r##"<a class="skip-link" href="#main-content">Skip to content</a><header class="library-header"><div class="wrap"><a class="brand" href="{home}" aria-label="The Bible — Today">{brand_icon}<span>The Bible</span></a><nav class="site-navigation" aria-label="Main navigation"><a href="{home}" data-today-link{today_current}>Today</a><a href="{library}" data-library-return{library_current}>Library</a><a href="{codex}"{codex_current}>Codex</a></nav><a class="header-back" href="{library}" data-library-return>← Library</a><div class="site-tools"><details class="site-search"><summary aria-label="Search"><img src="/icons/magnifying-glass-thin.svg" alt=""></summary><form id="lookup" action="/go" method="get"><input name="q" value="{q}" placeholder="Find a book or passage…" aria-label="Lookup or search"><button>Go</button></form></details><details class="site-menu"><summary aria-label="Site menu">{menu_icon}</summary><nav aria-label="Site tools"><a href="{home}" data-today-link>Today</a><a href="{library}" data-library-return>Library</a><a href="{codex}">Bible Codex</a><a href="{about}">About &amp; help</a><a href="https://github.com/daeshawnballard/rust-bible" target="_blank" rel="noopener noreferrer">Open source on GitHub ↗</a></nav></details></div></div></header>"##
     );
     format!("{header}<main class=\"wrap\" id=\"main-content\" tabindex=\"-1\">{body}</main><footer class=\"wrap muted site-footer\"><span>King James Version · Public domain</span><span class=\"footer-links\"><a href=\"{about}\">About &amp; help</a><a href=\"https://github.com/daeshawnballard/rust-bible\" target=\"_blank\" rel=\"noopener noreferrer\">Open source on GitHub ↗</a></span></footer>")
 }

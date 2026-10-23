@@ -67,6 +67,22 @@ async fn serve(uri: Uri) -> Response {
             .body(Body::from(bytes))
             .expect("book material response is valid");
     }
+    if uri.path() == "/fonts/inter-variable.ttf" {
+        return Response::builder()
+            .header("content-type", "font/ttf")
+            .body(Body::from(
+                include_bytes!("../web/fonts/inter-variable.ttf").as_slice(),
+            ))
+            .unwrap();
+    }
+    if uri.path() == "/art/today/psalm23-shepherd.webp" {
+        return Response::builder()
+            .header("content-type", "image/webp")
+            .body(Body::from(
+                include_bytes!("../web/art/today/psalm23-shepherd.webp").as_slice(),
+            ))
+            .unwrap();
+    }
     if uri.path() == "/fonts/cormorant-garamond.ttf" {
         return Response::builder()
             .header(header::CONTENT_TYPE, "font/ttf")

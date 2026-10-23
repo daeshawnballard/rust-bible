@@ -1,0 +1,20 @@
+{
+  "family": "Inter",
+  "license": "OFL-1.1",
+  "source": "https://github.com/google/fonts/tree/main/ofl/inter",
+  "retrieved": "2026-10-23",
+  "files": [
+    {
+      "file": "web/fonts/inter-variable.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "bytes": 876576
+    },
+    {
+      "file": "web/fonts/Inter-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt",
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57",
+      "bytes": 4377
+    }
+  ]
+}
