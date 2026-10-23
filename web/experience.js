@@ -73,7 +73,10 @@ function makeDock(runtime) {
     </button>
     <div class="audio-dock-info">
       <a class="audio-dock-return" data-dock-return href="#" aria-label="Return to the passage"></a>
-      <label class="audio-dock-voice"><span>Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
+      <div class="audio-dock-options">
+        <label class="audio-dock-voice"><span>Voice</span><select data-dock-voice aria-label="Narrator voice"></select></label>
+        <button class="audio-dock-switch" data-dock-switch type="button" hidden>Listen here</button>
+      </div>
       <span class="audio-dock-status" data-dock-status role="status" aria-live="polite">Preparing the free natural voice…</span>
     </div>
     <div class="audio-dock-timeline" data-dock-timeline>
@@ -104,12 +107,18 @@ function makeDock(runtime) {
     duration: dock.querySelector('[data-dock-duration]'),
     rate: dock.querySelector('[data-dock-rate]'),
     voice: dock.querySelector('[data-dock-voice]'),
+    switchSource: dock.querySelector('[data-dock-switch]'),
   };
 
   runtime.ui.rate.value = String(runtime.rate);
   populateVoices(runtime);
 
   runtime.ui.toggle.addEventListener('click', () => togglePlayback(runtime));
+  runtime.ui.switchSource.addEventListener('click', () => {
+    const root = runtime.currentRoot;
+    const controls = root?.querySelector?.('[data-audio-source-button]')?.closest('[data-read-aloud]');
+    if (controls) void startSource(runtime, sourceConfig(controls, root));
+  });
   runtime.ui.rate.addEventListener('change', () => {
     runtime.rate = Number(runtime.ui.rate.value) || 1;
     writePreference(RATE_KEY, runtime.rate);
@@ -421,6 +430,8 @@ function updateSourceButton(runtime) {
   const root = runtime.currentRoot;
   const controls = root?.querySelector?.('[data-audio-source-button]')?.closest('[data-read-aloud]');
   const button = controls?.querySelector?.('[data-audio-source-button]');
+  if (runtime.ui?.switchSource) runtime.ui.switchSource.hidden = true;
+  if (runtime.dock) runtime.dock.dataset.switchAvailable = 'false';
   if (!button) return;
   const sameReaderChapter = runtime.source?.readerMode && button.dataset.audioSourceKind === 'reader'
     && runtime.position && Number(button.dataset.audioSourceBookIndex) === runtime.position.bookIndex
@@ -434,7 +445,14 @@ function updateSourceButton(runtime) {
   const text = activeElsewhere ? button.dataset.audioSourceSwitchLabel
     : sameSource && ACTIVE_STATES.has(runtime.state) ? 'Listening to this passage'
       : button.dataset.audioSourceIdleLabel;
-  controls.hidden = (defaultInDock && !activeElsewhere) || sameSource;
+  controls.hidden = defaultInDock || sameSource;
+  if (defaultInDock && activeElsewhere && runtime.ui?.switchSource) {
+    const reference = controls.dataset.reference || 'this passage';
+    runtime.ui.switchSource.hidden = false;
+    runtime.ui.switchSource.setAttribute('aria-label', `Listen to ${reference} instead`);
+    runtime.ui.switchSource.title = `Switch narration to ${reference}`;
+    runtime.dock.dataset.switchAvailable = 'true';
+  }
   (button.querySelector('span') || button).textContent = text;
   button.disabled = sameSource && ACTIVE_STATES.has(runtime.state);
   button.setAttribute('aria-label', text);

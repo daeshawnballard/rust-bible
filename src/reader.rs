@@ -178,7 +178,7 @@ fn pagination(book: usize, chapter: usize, client: bool) -> String {
     if let Some((book, chapter)) = next {
         let href = route_path(&format!("/book/{}/{chapter}", slug(book)), client);
         html.push_str(&format!(
-            "<a rel=\"next\" href=\"{}\">{} →</a>",
+            "<a rel=\"next\" href=\"{}\" data-reader-next=\"/api/reader-next?book={book}&amp;chapter={chapter}&amp;verse=1\">{} →</a>",
             esc(&href),
             esc(&chapter_title(book, chapter))
         ));
@@ -246,6 +246,11 @@ fn continuation(
         cursor = following_chapter(b, ch).map(|(b, ch)| (b, ch, 1));
     }
     if let Some((b, ch, start)) = cursor {
+        // A full chapter already has the same destination in pagination.
+        // Keep the extra link only for remaining verses or appended chapters.
+        if added == 0 && (b != book || ch != chapter) {
+            return html;
+        }
         let href = route_path(&format!("/book/{}/{ch}", slug(b)), client);
         html.push_str(&format!(
                 "<p class=\"reader-continue-next\" data-reader-next=\"/api/reader-next?book={b}&amp;chapter={ch}&amp;verse={start}\"><a href=\"{}\">Continue with {} →</a></p>",
@@ -356,6 +361,14 @@ pub(super) fn passage_content(reference: &Ref, url: &str, client: bool) -> Strin
 mod tests {
     use super::*;
     use std::collections::HashSet;
+
+    #[test]
+    fn full_chapter_has_one_next_destination_without_a_duplicate_continuation() {
+        let html = chapter_content(0, 1, None, true);
+        assert_eq!(html.matches("rel=\"next\"").count(), 1);
+        assert!(html.contains("<a rel=\"next\" href=\"#/book/Genesis/2\""));
+        assert!(!html.contains("Continue with Genesis 2"));
+    }
 
     #[test]
     fn short_psalm_continues_in_canonical_order_without_changing_primary_scripture() {
