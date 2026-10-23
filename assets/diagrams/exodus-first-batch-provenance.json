@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-23",
+  "method": "Native text diagrams authored from the embedded KJV; explanatory paraphrases, not Scripture blocks.",
+  "scripture_source": {
+    "path": "data/kjv.json",
+    "sha256": "fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b"
+  },
+  "scope": "Selected source verses only. Genealogy shows only the named Levi/Kohath/Amram line; not the whole chapter or family.",
+  "assets": [
+    {
+      "path": "web/art/journey/exodus-expansion-midwives.svg",
+      "sha256": "7a270d09cc93179be8c926add9571037aee36a8ef623e89506a44f9bdaee7166",
+      "references": "Exodus 1:15\u201321",
+      "method": "Original native SVG text, cards and sequence/relationship connectors. No raster generation.",
+      "width": 1536,
+      "height": 1024,
+      "node_centers": [
+        {
+          "label": "Shiphrah and Puah",
+          "x": 21.81,
+          "y": 28.32
+        },
+        {
+          "label": "The children are kept alive",
+          "x": 21.81,
+          "y": 47.85
+        },
+        {
+          "label": "Pharaoh questions them",
+          "x": 21.81,
+          "y": 67.38
+        },
+        {
+          "label": "God deals well with them",
+          "x": 21.81,
+          "y": 86.91
+        }
+      ]
+    },
+    {
+      "path": "web/art/journey/exodus-expansion-rod-sequence.svg",
+      "sha256": "5c2e2292e4dde412c15109fdf6dbe45d13a0bb387ae585cc774424261f13d651",
+      "references": "Exodus 4:2\u20134",
+      "method": "Original native SVG text, cards and sequence/relationship connectors. No raster generation.",
+      "width": 1536,
+      "height": 1024,
+      "node_centers": [
+        {
+          "label": "A rod in the hand",
+          "x": 21.81,
+          "y": 32.23
+        },
+        {
+          "label": "A serpent on the ground",
+          "x": 21.81,
+          "y": 55.66
+        },
+        {
+          "label": "A rod in the hand again",
+          "x": 21.81,
+          "y": 79.1
+        }
+      ]
+    },
+    {
+      "path": "web/art/journey/exodus-expansion-family-line.svg",
+      "sha256": "87d2648153d5c0183c00b566381d3bd9f715043314d4a8c9a24f948fb1ea81fe",
+      "references": "Exodus 6:16, 18, 20",
+      "method": "Original native SVG text, cards and sequence/relationship connectors. No raster generation.",
+      "width": 1536,
+      "height": 1024,
+      "node_centers": [
+        {
+          "label": "Levi",
+          "x": 21.81,
+          "y": 31.25
+        },
+        {
+          "label": "Kohath",
+          "x": 21.81,
+          "y": 54.69
+        },
+        {
+          "label": "Amram and Jochebed",
+          "x": 21.81,
+          "y": 78.12
+        }
+      ]
+    }
+  ]
+}

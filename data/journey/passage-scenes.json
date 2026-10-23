@@ -9822,6 +9822,663 @@
           "detail": null
         }
       ]
+    },
+    {
+      "id": "exodus-first-midwives",
+      "book": 1,
+      "title": "The Hebrew midwives refuse the king",
+      "coverage": "Exodus 1:15–21",
+      "art": {
+        "path": "/art/journey/exodus-expansion-midwives.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Text sequence naming Shiphrah and Puah, their refusal to kill the children, Pharaoh’s questions, and the passage’s account of their households"
+      },
+      "caption": "Editorial text diagram · Exodus 1:15–21",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 15,
+          "last": 21
+        }
+      ],
+      "intro": {
+        "title": "The Hebrew midwives refuse the king",
+        "note": "This editorial diagram follows the named midwives and their response to the king. It shows text relationships rather than invented portraits or a reconstructed birth."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-midwives-named",
+          "title": "Shiphrah and Puah",
+          "x": 21.81,
+          "y": 35.94,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "note": "Exodus 1:15 names the Hebrew midwives Shiphrah and Puah. The following verse gives the king’s command; this diagram does not depict harm to a child.",
+          "detail": null
+        },
+        {
+          "id": "exodus-midwives-refusal",
+          "title": "The midwives keep the children alive",
+          "x": 21.81,
+          "y": 55.47,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "note": "The midwives fear God and do not carry out the king’s command. Exodus 1:17 explicitly says that they save the male children alive.",
+          "detail": null
+        },
+        {
+          "id": "exodus-midwives-answer",
+          "title": "Pharaoh questions the midwives",
+          "x": 21.81,
+          "y": 75.0,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "The king asks why the male children have been kept alive, and the midwives answer him. The diagram identifies this exchange without inventing its setting.",
+          "detail": null
+        },
+        {
+          "id": "exodus-midwives-households",
+          "title": "God deals well with the midwives",
+          "x": 21.81,
+          "y": 94.53,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 20,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 20,
+              "last": 21
+            }
+          ],
+          "note": "The passage says that God deals well with the midwives and makes them houses because they fear God. “Houses” is retained as the text’s household language, not assigned to an invented building.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-first-basket",
+      "book": 1,
+      "title": "Moses is found among the reeds",
+      "coverage": "Exodus 2:3–6",
+      "art": {
+        "path": "/art/journey/exodus-expansion-basket.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A clothed infant in an open woven basket among river reeds, Pharaoh’s daughter leaning toward him, an attendant, and his sister watching from nearby reeds"
+      },
+      "caption": "Artistic reconstruction · Exodus 2:3–6",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 3,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "Moses is found among the reeds",
+        "note": "The illustration gathers the basket, the watching sister, and the discovery described in Exodus 2:3–6 into one editorial composition. Their appearances, exact positions, and the riverbank are reconstructed, not known portraits or a mapped location."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-basket-reeds",
+          "title": "The basket among the reeds",
+          "x": 51,
+          "y": 64,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "The child’s mother prepares an ark of bulrushes with slime and pitch and places it among the flags by the river’s brink. The hotspot identifies that basket; its open appearance belongs to the later discovery.",
+          "detail": null
+        },
+        {
+          "id": "exodus-sister-watches",
+          "title": "His sister keeps watch",
+          "x": 18,
+          "y": 35,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "Exodus 2:4 says that his sister stands afar off to learn what will happen. The girl is placed behind the reeds in this reconstructed scene; the illustration does not establish a precise distance.",
+          "detail": null
+        },
+        {
+          "id": "exodus-daughter-compassion",
+          "title": "Pharaoh’s daughter has compassion",
+          "x": 42,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "Pharaoh’s daughter sees the basket, has it fetched, and opens it. When she sees the weeping child, she has compassion on him. The adult beside the open basket represents this response.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-first-bush",
+      "book": 1,
+      "title": "Moses at the burning bush",
+      "coverage": "Exodus 3:2–6",
+      "art": {
+        "path": "/art/journey/exodus-expansion-bush.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A leafy bush surrounded by flame, barefoot Moses covering his face, and his removed sandals on a foreground rock in an imagined wilderness setting"
+      },
+      "caption": "Artistic reconstruction · Exodus 3:2–6",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 2,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "Moses at the burning bush",
+        "note": "The scene brings together the burning bush, the instruction about shoes, and Moses hiding his face. The bush is drawn with intact leaves. The landscape and Moses’s appearance are artistic reconstructions; God is not depicted as a human figure."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-bush-unconsumed",
+          "title": "The bush is not consumed",
+          "x": 23,
+          "y": 42,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "note": "Moses sees a bush burning with fire without being consumed and turns aside. God calls to him from the midst of the bush. The visible leafy branches identify the subject described in Exodus 3:2–4.",
+          "detail": null
+        },
+        {
+          "id": "exodus-shoes-holy-ground",
+          "title": "Remove your shoes",
+          "x": 43,
+          "y": 74,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 5,
+              "last": 5
+            }
+          ],
+          "note": "Exodus 3:5 commands Moses to remove his shoes because the ground on which he stands is holy. The sandals on the rock are an illustrative reconstruction of the shoes, not a recovered object.",
+          "detail": null
+        },
+        {
+          "id": "exodus-moses-hides-face",
+          "title": "Moses hides his face",
+          "x": 50,
+          "y": 45,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "note": "After God identifies himself as the God of Abraham, Isaac, and Jacob, Moses hides his face because he is afraid to look upon God. His covered face depicts the response stated in Exodus 3:6.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-first-rod-sequence",
+      "book": 1,
+      "title": "The rod becomes a serpent and a rod again",
+      "coverage": "Exodus 4:2–4",
+      "art": {
+        "path": "/art/journey/exodus-expansion-rod-sequence.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Text diagram with three ordered states: a rod in Moses’s hand, a serpent on the ground, and a rod in his hand again"
+      },
+      "caption": "Editorial text diagram · Exodus 4:2–4",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 2,
+          "last": 4
+        }
+      ],
+      "intro": {
+        "title": "The rod becomes a serpent and a rod again",
+        "note": "This editorial sequence keeps three successive moments separate. It does not place a rod and serpent in one reconstructed instant, and it does not depict God."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-rod-in-hand",
+          "title": "A rod in the hand",
+          "x": 21.81,
+          "y": 39.84,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 2,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 2,
+              "last": 2
+            }
+          ],
+          "note": "When asked what is in his hand, Moses answers that it is a rod. This is the initial state of the sequence in Exodus 4:2.",
+          "detail": null
+        },
+        {
+          "id": "exodus-rod-serpent",
+          "title": "The rod becomes a serpent",
+          "x": 21.81,
+          "y": 63.28,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "note": "Moses casts the rod onto the ground. It becomes a serpent, and he flees from it, as stated in Exodus 4:3.",
+          "detail": null
+        },
+        {
+          "id": "exodus-rod-restored",
+          "title": "A rod in the hand again",
+          "x": 21.81,
+          "y": 86.72,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "Moses is told to take the serpent by the tail. When he takes it, it becomes a rod in his hand again. The diagram separates this outcome from the preceding moment.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-first-stubble",
+      "book": 1,
+      "title": "Stubble is gathered while the brick quota remains",
+      "coverage": "Exodus 5:10–13",
+      "art": {
+        "path": "/art/journey/exodus-expansion-stubble.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Workers gather dry stubble beside a mudbrick yard with a wooden brick mould, rows of unfired bricks, and an overseer"
+      },
+      "caption": "Artistic reconstruction · Exodus 5:10–13",
+      "ranges": [
+        {
+          "chapter": 5,
+          "first": 10,
+          "last": 13
+        }
+      ],
+      "intro": {
+        "title": "Stubble is gathered while the brick quota remains",
+        "note": "The painting combines nearby stubble gathering and brickmaking to explain the hardship in Exodus 5:10–13. The worksite, clothing, and appearances are reconstructed; it is not an identified archaeological site."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-stubble-gathered",
+          "title": "Gather stubble for straw",
+          "x": 24,
+          "y": 79.5,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "note": "After the supply of straw is withheld, the people scatter to gather stubble instead of straw. The foreground gathering identifies the work described in Exodus 5:12.",
+          "detail": null
+        },
+        {
+          "id": "exodus-brick-quota",
+          "title": "The daily brick quota remains",
+          "x": 51,
+          "y": 56,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 10,
+              "last": 11
+            },
+            {
+              "chapter": 5,
+              "first": 13,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 10,
+              "last": 13
+            }
+          ],
+          "note": "The taskmasters tell the people to obtain their own straw while their work requirement is not reduced. They continue demanding the daily task. The mould and brick rows represent that unchanged burden.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-first-family-line",
+      "book": 1,
+      "title": "The family line of Moses and Aaron",
+      "coverage": "Exodus 6:16, 18, 20",
+      "art": {
+        "path": "/art/journey/exodus-expansion-family-line.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Selected text genealogy linking Levi, his son Kohath, Kohath’s son Amram, and Amram and Jochebed’s sons Aaron and Moses"
+      },
+      "caption": "Editorial text diagram · Exodus 6:16, 18, 20",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 16,
+          "last": 16
+        },
+        {
+          "chapter": 6,
+          "first": 18,
+          "last": 18
+        },
+        {
+          "chapter": 6,
+          "first": 20,
+          "last": 20
+        }
+      ],
+      "intro": {
+        "title": "The family line of Moses and Aaron",
+        "note": "This selected genealogy uses only relationships named in Exodus 6:16, 18, and 20. It follows the line leading to Moses and Aaron; other descendants and the rest of the chapter remain in Scripture rather than being silently filled in."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-family-levi",
+          "title": "Levi and his named sons",
+          "x": 21.81,
+          "y": 38.87,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 16,
+              "last": 16
+            }
+          ],
+          "note": "Exodus 6:16 names Gershon, Kohath, and Merari as Levi’s sons. The diagram follows the Kohath branch while retaining the other names in its label.",
+          "detail": null
+        },
+        {
+          "id": "exodus-family-kohath",
+          "title": "Kohath and Amram",
+          "x": 21.81,
+          "y": 62.3,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "note": "Exodus 6:18 names Amram among Kohath’s sons. This relationship connects the selected generations without implying that the diagram shows every family branch.",
+          "detail": null
+        },
+        {
+          "id": "exodus-family-aaron-moses",
+          "title": "Aaron and Moses’s parents",
+          "x": 21.81,
+          "y": 85.74,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 20,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 20,
+              "last": 20
+            }
+          ],
+          "note": "Exodus 6:20 names Amram and Jochebed and says that she bears Aaron and Moses. These names and their parental relationship are the subject of this node.",
+          "detail": null
+        }
+      ]
     }
   ]
 }

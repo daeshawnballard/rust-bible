@@ -1,6 +1,30 @@
 // Production illustrations are embedded in the native server as well as shipped to Sites.
 pub fn asset(path: &str) -> Option<(&'static str, &'static [u8])> {
     match path {
+        "/art/journey/exodus-expansion-basket.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/exodus-expansion-basket.webp").as_slice(),
+        )),
+        "/art/journey/exodus-expansion-bush.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/exodus-expansion-bush.webp").as_slice(),
+        )),
+        "/art/journey/exodus-expansion-stubble.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/exodus-expansion-stubble.webp").as_slice(),
+        )),
+        "/art/journey/exodus-expansion-midwives.svg" => Some((
+            "image/svg+xml",
+            include_bytes!("../web/art/journey/exodus-expansion-midwives.svg").as_slice(),
+        )),
+        "/art/journey/exodus-expansion-rod-sequence.svg" => Some((
+            "image/svg+xml",
+            include_bytes!("../web/art/journey/exodus-expansion-rod-sequence.svg").as_slice(),
+        )),
+        "/art/journey/exodus-expansion-family-line.svg" => Some((
+            "image/svg+xml",
+            include_bytes!("../web/art/journey/exodus-expansion-family-line.svg").as_slice(),
+        )),
         "/art/journey/abraham-sarah-visitors-v2.webp" => Some((
             "image/webp",
             include_bytes!("../web/art/journey/abraham-sarah-visitors-v2.webp").as_slice(),

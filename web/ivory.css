@@ -326,3 +326,7 @@ body.has-scene .reader-scripture { font: 400 var(--reader-size,24px)/1.5 'Bible 
   .ivory-library .continuation-row--library [data-continue-label] { max-width: none; }
   .ivory-library .continuation-row--library [data-continue-link], .ivory-library .continue-options > summary { min-width: 44px; min-height: 44px; }
 }
+/* Focused scene notes must not inherit the former dark-theme paragraph colors. */
+.reader-context .reader-context-copy > p:not(.reader-context-kind) { color: var(--fg); }
+.reader-context .reader-context-sources > summary { color: var(--accent); }
+.journey-world [data-passage-diagram] .story-journey-pin > span:last-child { display: none; }

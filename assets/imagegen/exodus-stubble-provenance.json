@@ -1,0 +1,62 @@
+{
+  "asset": "Exodus 5:10–13 historical Journey scene; focus on 5:12",
+  "generation": {
+    "provider": "built-in ImageGen",
+    "mode": "generate",
+    "output_path": "/Users/daeshawnballard/.codex/generated_images/01a16825-949b-7103-bfdb-7d3eefb3aec9/exec-b68a68d5-c2cc-413e-8ab7-229b473800de.png",
+    "prompt": "Use case: historical-scene\nAsset type: production historical-scene painting for the Bible reader Journey\nPrimary request: Exodus 5:10–13, especially verse 12: Hebrew brick workers face an increased quota and must gather crop stubble for brick-making. Depict both the stubble gathering and brickmaking together at one coherent worksite edge.\nScene/backdrop: A modest ancient Egyptian brick-making yard beside a dry harvested field. Left foreground/left-center: several Hebrew workers bend and gather short dry crop stubble from the soil. Immediately adjacent toward center-left: other workers mix mud and form bricks. Clearly show a plain wooden rectangular brick mould in active use, with wet unfired mud bricks resting in orderly rows nearby. One standing taskmaster watches the quota, stern but not violent.\nStyle/medium: Warm natural historical painterly realism matching the supplied Genesis Journey brick-scene reference: grounded human scale, believable expressive anatomy, rich tactile materials, clear sunlight and dusty air; finished narrative painting, not toy, cartoon, miniature, or UI.\nComposition/framing: Landscape 3:2, target 1536x1024. One continuous scene, no montage. Make stubble collection, the wooden mould, wet bricks and worker figures clear in the left 60%. Concentrate visual anchors at x=15–55%, y=35–72%, clearly separating people and props. Keep the rightmost 30% quiet: low-detail open harvested land and distant pale landscape for a reader pane.\nLighting/mood: Warm natural Egyptian daylight, sunlit dust, subdued hardship and urgency without melodrama.\nPalette/materials: Earthy ochre, muted clay reds and browns, dry straw gold, natural linen and skin tones, soft pale sky; dry cut stalks, damp dark mud, rough ground, simple rough wood, plain woven garments.\nConstraints: Modest plausible period garments; multiple distinct workers visibly performing both requested tasks at this same site; gathered crop stubble plainly visible on the ground, distinct from any bundled straw; mould visibly rectangular and wooden; wet unfired bricks recognizable in rows. One standing overseeing taskmaster. No physical violence.\nAvoid: Any words, letters, labels, symbols, hotspot dots, borders, collage, montage, modern structures or tools, fantasy details, pyramids dominating, watermark, toy-like appearance, exaggerated or malformed anatomy."
+  },
+  "source": {
+    "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-expansion-stubble-source.png",
+    "format": "PNG",
+    "dimensions_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "sha256": "685dd5a756854179be65b92a77b6d3715547ce5b2341a3f500dd6930cf08ce5f"
+  },
+  "webp": {
+    "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-expansion-stubble.webp",
+    "format": "WebP",
+    "dimensions_px": [
+      1536,
+      1024
+    ],
+    "quality": 88,
+    "method": 6,
+    "bytes": 444906,
+    "sha256": "77d70a662f823e1bfa963617347b5fa9af2f887802bd8a163f7412d993d40e86",
+    "cropped": false
+  },
+  "visual_review": {
+    "status": "Reviewed source and converted WebP visually",
+    "observations": [
+      "One coherent field-edge and brickmaking worksite, no montage.",
+      "Left foreground worker gathers dry cut stalks from the ground.",
+      "Adjacent workers form wet mud bricks; rectangular wooden mould and rows of wet unfired bricks are visible.",
+      "One standing taskmaster watches; no beating or graphic violence.",
+      "Anatomy and period garments appear plausible at scene scale.",
+      "Right side is mostly quiet harvested landscape, though a brick row reaches toward approximately x=75%."
+    ],
+    "proposed_hotspot_anchors_percent": {
+      "stubble_gathering": [
+        26,
+        56
+      ],
+      "mould_and_brickmaking": [
+        51,
+        56
+      ],
+      "taskmaster": [
+        31,
+        43
+      ]
+    },
+    "layout_caveats": [
+      "Stubble worker and nearby stalks begin at the extreme left edge, while the proposed anchor remains inside the requested 15–55% x band.",
+      "The wet-brick rows extend slightly beyond x=70%, reducing the quiet pane area at its left edge."
+    ]
+  },
+  "conversion": "Copied the raw generated PNG unchanged; converted to WebP with bundled Pillow, quality=88, method=6, preserving full 1536x1024 frame."
+}

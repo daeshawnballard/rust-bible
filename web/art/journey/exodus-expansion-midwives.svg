@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+<title id="title">The Hebrew midwives refuse the king</title>
+<desc id="desc">Editorial text diagram of Exodus 1:15–21. Names, sequence, and relationships only; no portraits, map, or reconstructed event.</desc>
+<rect width="1536" height="1024" fill="#f7f5ee"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+<text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">The Hebrew midwives refuse the king</text>
+<text x="120" y="145" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 1:15–21 · selected text relationships</text>
+<rect x="120" y="205" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="247" fill="#172d27" font-family="Georgia,serif" font-size="30">Shiphrah and Puah</text>
+<text x="150" y="309" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The named Hebrew midwives</text>
+<text x="526" y="360" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">1:15</text>
+<path d="M335 383V387" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="120" y="405" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="447" fill="#172d27" font-family="Georgia,serif" font-size="30">The children are kept</text>
+<text x="150" y="481" fill="#172d27" font-family="Georgia,serif" font-size="30">alive</text>
+<text x="150" y="509" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The midwives refuse the</text>
+<text x="150" y="536" fill="#59685f" font-family="Arial,sans-serif" font-size="24">command</text>
+<text x="526" y="560" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">1:17</text>
+<path d="M335 583V587" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="120" y="605" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="647" fill="#172d27" font-family="Georgia,serif" font-size="30">Pharaoh questions them</text>
+<text x="150" y="709" fill="#59685f" font-family="Arial,sans-serif" font-size="24">They answer the king</text>
+<text x="526" y="760" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">1:18–19</text>
+<path d="M335 783V787" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="120" y="805" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="847" fill="#172d27" font-family="Georgia,serif" font-size="30">God deals well with them</text>
+<text x="150" y="909" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The passage records their</text>
+<text x="150" y="936" fill="#59685f" font-family="Arial,sans-serif" font-size="24">households</text>
+<text x="526" y="960" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">1:20–21</text>
+</svg>

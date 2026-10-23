@@ -1,6 +1,6 @@
 # Passage-specific Journey scenes
 
-The Rust-rendered register contains **113 focused scenes, 252 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
+The Rust-rendered register contains **119 focused scenes, 270 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
 
 Hotspots identify visible people, actions, or objects. Scripture stays verbatim in its own view; Context contains the illustrations and editorial notes. Inspecting a subject preserves the saved verse and audio target; its explicit Read link changes the passage. Poetry, letter imagery, prophetic visions, and artistic reconstructions are labeled in the interface. Broader draft beats that are not depicted do not receive landscape pins.
 
@@ -129,3 +129,17 @@ These additions complement the original register above. Selected verse ranges do
 | Genesis 17:5, 15, 19–21 · names and future promise only | Names and a promised son | Abram is named Abraham (17:5; 32%, 26%); Sarai is named Sarah (17:15; 32%, 47%); Isaac is promised to Sarah and Abraham (17:19; 77%, 36%) |
 | Genesis 34:1, 25, 30–31 · selected relationship guide | Family relationships and response | Dinah, daughter of Leah and Jacob (34:1; 50%, 35%); Simeon and Levi, Dinah’s brothers (34:25; 50%, 53%); Jacob and his sons’ exchange (34:30; 50%, 76%) |
 | Genesis 36:1–5 · selected family only | Esau and his named family | Esau, who is Edom (36:1; 50%, 17%); Esau’s named wives (36:2; 50%, 34%); Sons through the named mothers (36:4; 50%, 62%) |
+
+
+## Exodus first expansion
+
+Three individual ImageGen paintings and three editorial text diagrams add 18 meaningful hotspots in selected passages of Exodus 1–6. They do not cover all verses in these chapters. The rod sequence keeps successive states separate; the selected genealogy shows only explicitly named relationships. Their exact gaps are recorded in the generated [focused catalog coverage](journey-coverage.md).
+
+| Passage | Scene | Hotspots |
+| --- | --- | --- |
+| Exodus 1:15–21 | The Hebrew midwives refuse the king | Shiphrah and Puah (21.81%, 35.94%); The midwives keep the children alive (21.81%, 55.47%); Pharaoh questions the midwives (21.81%, 75.0%); God deals well with the midwives (21.81%, 94.53%) |
+| Exodus 2:3–6 | Moses is found among the reeds | The basket among the reeds (51%, 64%); His sister keeps watch (18%, 35%); Pharaoh’s daughter has compassion (42%, 40%) |
+| Exodus 3:2–6 | Moses at the burning bush | The bush is not consumed (23%, 42%); Remove your shoes (43%, 74%); Moses hides his face (50%, 45%) |
+| Exodus 4:2–4 | The rod becomes a serpent and a rod again | A rod in the hand (21.81%, 39.84%); The rod becomes a serpent (21.81%, 63.28%); A rod in the hand again (21.81%, 86.72%) |
+| Exodus 5:10–13 | Stubble is gathered while the brick quota remains | Gather stubble for straw (24%, 79.5%); The daily brick quota remains (51%, 56%) |
+| Exodus 6:16, 18, 20 | The family line of Moses and Aaron | Levi and his named sons (21.81%, 38.87%); Kohath and Amram (21.81%, 62.3%); Aaron and Moses’s parents (21.81%, 85.74%) |

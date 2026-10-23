@@ -1,0 +1,49 @@
+{
+  "asset": "web/art/journey/exodus-expansion-basket.webp",
+  "source": "assets/imagegen/source/exodus-expansion-basket-source.png",
+  "createdAtUtc": "2026-10-23T09:44:28Z",
+  "provider": {
+    "tool": "built-in image_gen",
+    "mode": "generate",
+    "receipt": "The tool returned one inline PNG image payload (1536x1024). It exposed no provider job ID or filesystem output path. The inline image was inspected and saved byte-for-byte as the source PNG."
+  },
+  "prompt": "Use case: historical-scene\nAsset type: production historical-scene illustration for a Bible passage journey panel.\nInput images: Image 1 is a style reference only, from the existing Genesis journey illustrations; match its warm natural light, painterly realism, fine material detail, and human scale without copying its subjects or setting.\nScene/backdrop: A quiet bank of the Nile among tall papyrus and bulrush reeds, with gentle water and a subtle distant riverbank. No pyramids.\nSubject: The single discovery moment in Exodus 2:3–6: an open, small woven bulrush basket rests safely among the reeds at the water's edge, containing a safe, clothed infant. Pharaoh's adult daughter has just found the basket and bends toward the child with clear compassion. A female attendant stands near her. The child's young sister watches from a little distance, alert and hopeful.\nStyle/medium: Lavish, detailed, painterly realistic historical illustration with believable human anatomy, natural expressions, richly observed linen, woven reed, skin, water, and vegetation; cohesive with the warm realistic Genesis scene reference. Editorial biblical scene, not a poster and not cartoon art.\nComposition/framing: Landscape 3:2, approximately 1536x1024 feel. Make one continuous moment, no duplicate people and no time panels. Keep all people and the focal basket within the left 60% of the image and above the bottom 15%. The child and open basket are around x=30–40%, y=55–65%; the compassionate adult daughter is left of center; the watching young sister is around x=15–25%, y=35–50%. Leave the right 30% as quiet river water and reeds with lower visual detail for a floating passage pane.\nLighting/mood: Soft golden morning light, reflective water, tenderness and quiet tension.\nColor palette: Muted Nile greens, warm reeds, soft sand, natural linen, subdued gold and blue-green water.\nMaterials/textures: Clearly woven bulrush basket, delicate reed blades, realistic cloth folds, painterly natural water.\nText (verbatim): No text.\nConstraints: Everyone fully clothed in modest historically inspired ancient Egyptian attire; infant is safely clothed and covered. One coherent scene. Historically inspired rather than claiming exact physical portraits or precise geography. No unsupported physical portrait or geographic specificity.\nAvoid: Nudity, exposed infant, sexualized content, violence, extra people, duplicate figures, pyramids, crowns as fantasy caricature, text, lettering, labels, interface, hotspot dots, branding, watermark, cartoon style, poster composition.",
+  "styleReference": "web/art/journey/abraham-sarah-visitors.webp (visual style reference only)",
+  "sourceImage": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 2973278,
+    "sha256": "8fac9f7ee354a5a5a8857fa9514c881b82c545b205ffdfa860741837e464fcf6"
+  },
+  "conversion": {
+    "tool": "Pillow from bundled primary runtime",
+    "commandIntent": "Open source PNG, convert to RGB, save WebP at quality 88 and method 6; no crop or resize.",
+    "output": {
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "bytes": 398694,
+      "sha256": "770d2d7f742e156177a0bba3740b73925c6bb0455e1d8e9c19d79943d84ad597"
+    }
+  },
+  "visualReview": {
+    "review": "Inspected source PNG and final WebP. One continuous scene shows a fully clothed infant in an open woven basket among Nile reeds; the compassionate adult daughter reaches toward the child; an attendant stands nearby; the young sister watches from the reeds. No text, hotspot marks, branding, or watermark. The right side remains quiet river and reeds. The scene is an artistic reconstruction, not evidence for exact portrait or geography.",
+    "recommendedHotspotAnchorsPercent": {
+      "basketAndInfant": {
+        "x": 51,
+        "y": 66
+      },
+      "youngSister": {
+        "x": 18,
+        "y": 35
+      },
+      "pharaohsAdultDaughter": {
+        "x": 45,
+        "y": 32
+      }
+    }
+  }
+}

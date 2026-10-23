@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+<title id="title">The family line of Moses and Aaron</title>
+<desc id="desc">Editorial text diagram of Exodus 6:16, 18, 20. Names, sequence, and relationships only; no portraits, map, or reconstructed event.</desc>
+<rect width="1536" height="1024" fill="#f7f5ee"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+<text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">The family line of Moses and Aaron</text>
+<text x="120" y="145" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 6:16, 18, 20 · selected text relationships</text>
+<rect x="120" y="235" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="277" fill="#172d27" font-family="Georgia,serif" font-size="30">Levi</text>
+<text x="150" y="339" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Father of Gershon, Kohath,</text>
+<text x="150" y="366" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and Merari</text>
+<text x="526" y="390" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">6:16</text>
+<path d="M335 413V457" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="120" y="475" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="517" fill="#172d27" font-family="Georgia,serif" font-size="30">Kohath</text>
+<text x="150" y="579" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Amram is among his named sons</text>
+<text x="526" y="630" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">6:18</text>
+<path d="M335 653V697" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="120" y="715" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+<text x="150" y="757" fill="#172d27" font-family="Georgia,serif" font-size="30">Amram and Jochebed</text>
+<text x="150" y="819" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Parents of Aaron and Moses</text>
+<text x="526" y="870" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">6:20</text>
+</svg>

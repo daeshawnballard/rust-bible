@@ -1,0 +1,101 @@
+{
+  "asset": "exodus-expansion-bush",
+  "createdAtUtc": "2026-10-23T09:45:53Z",
+  "useCase": "historical-scene",
+  "scripturalReference": "Exodus 3:2–6",
+  "tool": "built-in ImageGen",
+  "styleReferenceInspected": "assets/imagegen/source/genesis-expansion-b-ram-thicket.png",
+  "selectedGeneratedOutput": {
+    "providerReceipt": "Built-in ImageGen output saved at the generated_images path below; output filename/receipt ID: exec-75b6910d-d8de-4157-b1c7-2469deaa1662.png",
+    "generatedSourcePath": "/Users/daeshawnballard/.codex/generated_images/01a16824-83ab-7b31-8e96-415ea4f4603c/exec-75b6910d-d8de-4157-b1c7-2469deaa1662.png",
+    "projectSourcePath": "assets/imagegen/source/exodus-expansion-bush-source.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 3059923,
+    "sha256": "3244d86d2cd83edcab5ca676ac59b3c9d29272f153c13a59fe618488b56cb1e3"
+  },
+  "finalAsset": {
+    "path": "web/art/journey/exodus-expansion-bush.webp",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 467080,
+    "sha256": "a2d64063fd78a0144ddfc41dc6c2d8481bdedfcebf0bc21f5549b5151d8bc8be",
+    "conversion": {
+      "format": "WEBP",
+      "quality": 88,
+      "method": 6,
+      "resized": false,
+      "cropped": false
+    }
+  },
+  "attempts": [
+    {
+      "id": "exec-07b102c8-1bcb-4ca8-9de4-25d2cbdda40b",
+      "type": "generate",
+      "generatedPath": "/Users/daeshawnballard/.codex/generated_images/01a16824-83ab-7b31-8e96-415ea4f4603c/exec-07b102c8-1bcb-4ca8-9de4-25d2cbdda40b.png",
+      "prompt": "Use case: historical-scene\nAsset type: production historical scene illustration for RustBible's illustrated Bible journey, landscape 3:2, target 1536x1024.\nPrimary request: Exodus 3:2–6, Moses encounters the burning bush: a whole leafy thorn bush burns with fire yet is not consumed; Moses removes his sandals because the place is holy ground and hides his face because he is afraid to look toward God. Respectful historically grounded reconstruction.\nScene/backdrop: a dramatic but natural rocky wilderness mountain landscape at warm late-afternoon light, richly detailed low scrub, scattered stone and distant mountain ridges; do not identify or imply a precise modern location. Match the existing Genesis scenes' cinematic painterly realism, tactile historical materials, natural anatomy, warm golden light and deep landscape detail.\nSubject: At x25–35%, y35–50%, one whole clearly leafy thornbush, visibly alive and not consumed, surrounded by vivid but controlled natural flame. At x45–55%, y40–60%, mature Moses stands at modest distance from the bush, barefoot, dressed in simple ancient Near Eastern woven wilderness garments and mantle, bending slightly and hiding his face with his hands or cloak in reverent fear. His removed sandals are clearly visible together on a foreground rock around x40–50%, y70–75%. Give each anchor enough visual contrast to read distinctly at phone size.\nComposition/framing: wide landscape 3:2 view. Keep bush, Moses, and sandals fully within the left 60% and inside their specified approximate positions. Leave the rightmost 30% as quiet, low-detail open terrain suitable for a floating passage pane; do not place important figures, objects, or dramatic highlights there. Maintain depth and readable silhouettes; no cropping of the bush or sandals.\nStyle/medium: cinematic, detailed painterly realistic historical illustration matching the warm, luminous, naturalistic Genesis reference art; restrained and serious, not a cartoon, toy diorama, or glossy fantasy render.\nLighting/mood: believable warm firelight reflected softly on leaves, stones, and Moses' garments, balanced with natural daylight and atmospheric distance; reverent awe.\nConstraints: depict only the Exodus 3:2–6 scene. The entire bush must remain leafy and visibly unconsumed. Moses is a mature man at a modest distance, face hidden. Both removed sandals are clearly visible together on a foreground rock. No human figure representing God or an angel; no speaking text; no beams with faces. No UI, text, labels, numbers, hotspot dots, borders, or watermark. Avoid anachronistic items, modern landscape cues, exaggerated fantasy magic, smoke obscuring the bush, extra people, extra focal objects, or placing the right-side terrain pane area in visual competition."
+    },
+    {
+      "id": "exec-6de3eee7-bc2a-4973-8c5a-6b560b67dfd9",
+      "type": "edit",
+      "generatedPath": "/Users/daeshawnballard/.codex/generated_images/01a16824-83ab-7b31-8e96-415ea4f4603c/exec-6de3eee7-bc2a-4973-8c5a-6b560b67dfd9.png",
+      "inputReference": "/Users/daeshawnballard/.codex/generated_images/01a16824-83ab-7b31-8e96-415ea4f4603c/exec-07b102c8-1bcb-4ca8-9de4-25d2cbdda40b.png",
+      "prompt": "Use case: historical-scene\nAsset type: production historical scene illustration for RustBible's illustrated Bible journey, landscape 3:2.\nEdit the reference image with a targeted composition adjustment. Preserve the same Exodus 3:2–6 content, warm cinematic painterly historical realism, lighting, natural colors, terrain detail, mature Moses, and quiet open terrain on the right. Recompose the three required anchors so the full, leafy, actively burning-but-unconsumed thornbush is centered around x30%, y43% (approximately x25–35%, y35–50%); mature Moses is centered around x50%, y50% (approximately x45–55%, y40–60%), standing at modest distance barefoot, hiding his face with hands or cloak; and both removed sandals are clearly together on a foreground rock centered around x45%, y73% (approximately x40–50%, y70–75%). Keep all three anchors fully within the left 60% and make them distinct and readable. Keep the whole bush and flame, and keep the rightmost 30% visually quiet for a floating passage pane. No human figure of God or angel, no face in light, no speaking text, no UI, no labels, no watermark. Preserve all other qualities of the reference image."
+    },
+    {
+      "id": "exec-75b6910d-d8de-4157-b1c7-2469deaa1662",
+      "type": "edit",
+      "generatedPath": "/Users/daeshawnballard/.codex/generated_images/01a16824-83ab-7b31-8e96-415ea4f4603c/exec-75b6910d-d8de-4157-b1c7-2469deaa1662.png",
+      "inputReference": "/Users/daeshawnballard/.codex/generated_images/01a16824-83ab-7b31-8e96-415ea4f4603c/exec-6de3eee7-bc2a-4973-8c5a-6b560b67dfd9.png",
+      "prompt": "Use case: historical-scene\nAsset type: production historical scene illustration for RustBible.\nPrecise layout edit of this same Exodus 3:2–6 scene. Redesign the horizontal composition around these object centers, measured from full canvas width/height: place the whole thornbush center at x=30%, y=43%, its full leafy silhouette and fire contained approximately within x=20–40%, y=27–60%; place the whole mature Moses figure center at x=50%, y=49%, contained approximately within x=43–57%, y=38–62%, barefoot and hiding his face with hands or cloak; place the pair of removed sandals together on the foreground rock centered at x=45%, y=73%, contained approximately within x=40–50%, y=69–77%. These three positions are essential. To achieve this, deliberately place the bush farther inward from the left edge and place the sandals slightly rightward from their current position. Keep all three fully visible, separated, and readable. Preserve rightmost 30% as quiet terrain. Keep the entire leafy bush alive and unconsumed with realistic natural fire; keep the same warm cinematic painterly realism, historically modest ancient garments, wilderness mountain, landscape lighting and terrain detail. No God or angel figure, no face in beams, no text, UI, labels, marks, or watermark."
+    }
+  ],
+  "visualReview": {
+    "status": "PASS_WITH_COMPOSITION_CAVEAT",
+    "sourceAndFinalInspected": true,
+    "observations": "Whole leafy thornbush is brightly burning and visibly unconsumed. Mature Moses stands at modest distance, barefoot, hiding his face. Both removed sandals are clearly visible together on a foreground rock. No God or angel figure, face in light, text, UI, labels, hotspots, or watermark. Landscape retains quiet open terrain across the rightmost area and matches the warm realistic Genesis reference style.",
+    "anchorEstimatesPercent": {
+      "bush": {
+        "center": [
+          19,
+          42
+        ],
+        "visibleBoundsApprox": [
+          0,
+          32,
+          13,
+          66
+        ]
+      },
+      "moses": {
+        "center": [
+          50,
+          50
+        ],
+        "visibleBoundsApprox": [
+          42,
+          57,
+          28,
+          71
+        ]
+      },
+      "sandals": {
+        "center": [
+          43,
+          75
+        ],
+        "visibleBoundsApprox": [
+          37,
+          49,
+          71,
+          79
+        ]
+      }
+    },
+    "caveat": "Moses and sandals meet the requested approximate placement. The bush remains too far left relative to the preferred x25–35% center despite two targeted ImageGen layout edits; its center is visually estimated near x19%. It is fully visible and remains inside the left 60%. Anchor estimates are visual approximations, not image segmentation measurements. No runtime, pane-overlay, or small-screen crop review was performed."
+  }
+}
