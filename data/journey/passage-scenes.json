@@ -10479,6 +10479,465 @@
           "detail": null
         }
       ]
+    },
+    {
+      "id": "exodus-signs-rods",
+      "book": 1,
+      "title": "Rod sign before Pharaoh",
+      "coverage": "Exodus 7:8–13",
+      "caption": "Editorial sequence diagram · Exodus 7:8–13 · selected events in order",
+      "ranges": [
+        {
+          "chapter": 7,
+          "first": 8,
+          "last": 13
+        }
+      ],
+      "art": {
+        "path": "/art/journey/exodus-signs-rods.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Three cards show Exodus 7:10–12 in order: Aaron casts down his rod, the Egyptian magicians cast down theirs, and Aaron’s rod swallows theirs. Green arrows mark the sequence; the events are not shown as one instant."
+      },
+      "intro": {
+        "title": "The rod signs",
+        "note": "The diagram isolates Aaron’s action, the magicians’ imitation, and the swallowing in 7:10–12. The cards follow their narrated order; the forecast and Pharaoh’s response are not pictured."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-signs-rods-aaron-down",
+          "title": "Aaron casts down the rod",
+          "x": 21.81,
+          "y": 38.57,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 10,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "The sign is announced in 7:9 and carried out in 7:10.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-rods-magicians-cast",
+          "title": "The magicians imitate the sign",
+          "x": 21.81,
+          "y": 62.01,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 11,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 11,
+              "last": 12
+            }
+          ],
+          "note": "Exodus 7:11 describes the magicians doing in like manner with their enchantments. The following verse describes their rods becoming serpents and then Aaron’s rod swallowing theirs. The next diagram node follows that later event.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-rods-swallow",
+          "title": "Aaron’s rod swallows theirs",
+          "x": 21.81,
+          "y": 85.45,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 12,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 11,
+              "last": 12
+            }
+          ],
+          "note": "The swallowing follows the magicians’ imitation; the two events are not simultaneous.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-river",
+      "book": 1,
+      "title": "The river is struck and its water cannot be drunk",
+      "coverage": "Exodus 7:19–21",
+      "art": {
+        "path": "/art/journey/exodus-signs-river.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Two men stand beside a crimson river, one holding a rod at the water, while an Egyptian ruler and attendants watch from the bank; artistic reconstruction"
+      },
+      "caption": "Artistic reconstruction · Exodus 7:19–21",
+      "ranges": [
+        {
+          "chapter": 7,
+          "first": 19,
+          "last": 21
+        }
+      ],
+      "intro": {
+        "title": "The river is struck",
+        "note": "Exodus 7:19 gives the instruction about Egypt’s waters; verses 20–21 describe the river being struck, its water changing, and the consequences. This reconstructed riverbank combines those nearby moments. The figures, buildings, and location are illustrative."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-signs-river-struck",
+          "title": "The river is struck with the rod",
+          "x": 58,
+          "y": 68,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 20,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 19,
+              "last": 20
+            }
+          ],
+          "note": "Moses and Aaron carry out the instruction, and the river is struck with the rod before Pharaoh and his servants. The hotspot marks the rod meeting the changed water, as described in Exodus 7:20.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-river-undrinkable",
+          "title": "Water that cannot be drunk",
+          "x": 48,
+          "y": 80,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 21,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 21,
+            "last": 21
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 21,
+              "last": 21
+            }
+          ],
+          "note": "Exodus 7:21 says that the fish die, the river stinks, and the Egyptians cannot drink its water. The foreground river identifies the affected water; its appearance and the riverbank are an artistic reconstruction.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-frogs",
+      "book": 1,
+      "title": "Frogs are announced in the houses and cover the land",
+      "coverage": "Exodus 8:1–6",
+      "art": {
+        "path": "/art/journey/exodus-signs-frogs.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Frogs gather in a kneading trough and across a mudbrick household floor and courtyard; an editorial illustration connecting the announced household detail and the sign covering the land"
+      },
+      "caption": "Editorial composition · announcement and fulfillment · Exodus 8:1–6",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 1,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "The frog sign",
+        "note": "This editorial composition connects the domestic locations announced in Exodus 8:3 with the frogs covering the land in Exodus 8:6. It is not one recorded instant. The household, trough, and frogs’ appearances are reconstructed; Aaron’s action over the waters is kept in Scripture rather than placed inside this house."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-signs-frogs-trough",
+          "title": "Frogs in the kneading troughs",
+          "x": 29,
+          "y": 46,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 3,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 2,
+              "last": 4
+            }
+          ],
+          "note": "Verse 8:3 announces that frogs will enter the houses, beds, ovens, and kneading troughs. The visible trough illustrates that announced domestic detail. It is distinct from the later statement that frogs cover the land.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-frogs-land",
+          "title": "Frogs cover the land of Egypt",
+          "x": 59,
+          "y": 65,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "After Aaron stretches his hand over the waters, Exodus 8:6 says that frogs come up and cover the land of Egypt. The frogs across the visible ground illustrate that outcome; this household setting is reconstructed.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-lice",
+      "book": 1,
+      "title": "Dust becomes lice; the magicians cannot reproduce the sign",
+      "coverage": "Exodus 8:16–19",
+      "caption": "Editorial sequence diagram · Exodus 8:16–19 · action, failure, and speech in order",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 16,
+          "last": 19
+        }
+      ],
+      "art": {
+        "path": "/art/journey/exodus-signs-lice.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Three cards follow Exodus 8:17–19: dust becomes lice after Aaron strikes it, the magicians cannot reproduce the sign, then they attribute it to God’s power. Green arrows mark the sequence. Their speech is shown as text; no hand is depicted."
+      },
+      "intro": {
+        "title": "A sign they cannot reproduce",
+        "note": "The cards place the outcome at 8:17, the magicians’ failure at 8:18, and their words at 8:19. The final card reports speech; it does not depict a physical hand or Pharaoh’s response."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-signs-lice-dust",
+          "title": "Dust becomes lice",
+          "x": 21.81,
+          "y": 38.57,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 16,
+              "last": 17
+            }
+          ],
+          "note": "Verse 8:16 gives the command; verse 8:17 describes the dust becoming lice.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-lice-magicians-cannot",
+          "title": "The magicians cannot do so",
+          "x": 21.81,
+          "y": 62.01,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "The failed attempt is in 8:18; 8:19 records the magicians’ following speech.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-lice-gods-finger",
+          "title": "The finger of God",
+          "x": 21.81,
+          "y": 85.45,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "This phrase is the magicians’ recorded speech. No hand or Pharaoh response is shown.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-flies",
+      "book": 1,
+      "title": "Swarms and Goshen’s announced distinction",
+      "coverage": "Exodus 8:20–24",
+      "caption": "Editorial comparison · Exodus 8:20–24 · a reported outcome beside an announcement",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 20,
+          "last": 24
+        }
+      ],
+      "art": {
+        "path": "/art/journey/exodus-signs-flies.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Two text panels compare Exodus 8:20–24: verse 24 reports swarms in Pharaoh’s and his servants’ houses and in Egypt; verses 22–23 announce a distinction for Goshen. The panels show neither a map nor a separately observed Goshen outcome."
+      },
+      "intro": {
+        "title": "A reported swarm and a Goshen announcement",
+        "note": "Verses 8:22–23 announce that no swarms will be in Goshen. Verse 8:24 reports the swarms in Pharaoh’s and his servants’ houses and across Egypt. This comparison does not state that 8:24 separately observes Goshen without flies and does not add a map boundary."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-signs-flies-houses",
+          "title": "Swarms enter the houses",
+          "x": 21.81,
+          "y": 44.92,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 21,
+              "last": 21
+            },
+            {
+              "chapter": 8,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "note": "Verse 8:21 announces the swarms; verse 8:24 reports them in Pharaoh’s and his servants’ houses and across Egypt.",
+          "detail": null
+        },
+        {
+          "id": "exodus-signs-flies-goshen",
+          "title": "Goshen is set apart",
+          "x": 21.81,
+          "y": 75.2,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 22,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 22,
+              "last": 23
+            }
+          ],
+          "note": "The distinction is announced in 8:22–23, before the swarm outcome is reported at 8:24. No later observation for Goshen is claimed.",
+          "detail": null
+        }
+      ]
     }
   ]
 }

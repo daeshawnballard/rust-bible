@@ -1,6 +1,26 @@
 // Production illustrations are embedded in the native server as well as shipped to Sites.
 pub fn asset(path: &str) -> Option<(&'static str, &'static [u8])> {
     match path {
+        "/art/journey/exodus-signs-rods.svg" => Some((
+            "image/svg+xml",
+            include_bytes!("../web/art/journey/exodus-signs-rods.svg").as_slice(),
+        )),
+        "/art/journey/exodus-signs-river.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/exodus-signs-river.webp").as_slice(),
+        )),
+        "/art/journey/exodus-signs-frogs.webp" => Some((
+            "image/webp",
+            include_bytes!("../web/art/journey/exodus-signs-frogs.webp").as_slice(),
+        )),
+        "/art/journey/exodus-signs-lice.svg" => Some((
+            "image/svg+xml",
+            include_bytes!("../web/art/journey/exodus-signs-lice.svg").as_slice(),
+        )),
+        "/art/journey/exodus-signs-flies.svg" => Some((
+            "image/svg+xml",
+            include_bytes!("../web/art/journey/exodus-signs-flies.svg").as_slice(),
+        )),
         "/art/journey/exodus-expansion-basket.webp" => Some((
             "image/webp",
             include_bytes!("../web/art/journey/exodus-expansion-basket.webp").as_slice(),

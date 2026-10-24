@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-23",
+  "method": "Original native SVG editorial diagrams authored from the local KJV JSON; native text, cards, connectors, and labels only. No ImageGen or raster placeholders.",
+  "scripture_source": {
+    "path": "data/kjv.json",
+    "sha256": "fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b",
+    "translation": "KJV as stored in the local corpus"
+  },
+  "scope": "Three selected editorial diagrams for Exodus 7:8–13 and 8:16–24. The cards show only their sourced nodes and do not establish full chapter coverage.",
+  "assets": [
+    {
+      "path": "web/art/journey/exodus-signs-rods.svg",
+      "scene_id": "exodus-signs-rods",
+      "references": "Exodus 7:8–13 · selected actions at 7:10–12",
+      "sourcefilehash": "sha256:fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b",
+      "SVGhash": "sha256:11bd73ee1629bf39a15d14c153c25bad28e7bec7051b831409e42409259f7ff9",
+      "authoringmethod": "Native SVG text, cards, labels, and green sequence arrows; no ImageGen or raster imagery.",
+      "width": 1536,
+      "height": 1024,
+      "node_centers": [
+        {"label": "Aaron casts down the rod", "x": 21.81, "y": 38.57, "pixel_x": 335, "pixel_y": 395},
+        {"label": "The magicians cast theirs down", "x": 21.81, "y": 62.01, "pixel_x": 335, "pixel_y": 635},
+        {"label": "Aaron’s rod swallows theirs", "x": 21.81, "y": 85.45, "pixel_x": 335, "pixel_y": 875}
+      ],
+      "exact_alt_text": "Three cards show Exodus 7:10–12 in order: Aaron casts down his rod, the Egyptian magicians cast down theirs, and Aaron’s rod swallows theirs. Green arrows mark the sequence; the events are not shown as one instant."
+    },
+    {
+      "path": "web/art/journey/exodus-signs-lice.svg",
+      "scene_id": "exodus-signs-lice",
+      "references": "Exodus 8:16–19",
+      "sourcefilehash": "sha256:fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b",
+      "SVGhash": "sha256:46049651ed3a6d883962485161d7d84943a04613908c582b49f11f3f1d959feb",
+      "authoringmethod": "Native SVG text, cards, labels, and green sequence arrows; no ImageGen or raster imagery.",
+      "width": 1536,
+      "height": 1024,
+      "node_centers": [
+        {"label": "Dust becomes lice", "x": 21.81, "y": 38.57, "pixel_x": 335, "pixel_y": 395},
+        {"label": "The magicians cannot do so", "x": 21.81, "y": 62.01, "pixel_x": 335, "pixel_y": 635},
+        {"label": "The finger of God", "x": 21.81, "y": 85.45, "pixel_x": 335, "pixel_y": 875}
+      ],
+      "exact_alt_text": "Three cards follow Exodus 8:17–19: dust becomes lice after Aaron strikes it, the magicians cannot reproduce the sign, then they attribute it to God’s power. Green arrows mark the sequence. Their speech is shown as text; no hand is depicted."
+    },
+    {
+      "path": "web/art/journey/exodus-signs-flies.svg",
+      "scene_id": "exodus-signs-flies",
+      "references": "Exodus 8:20–24 · narrated outcome and announced distinction",
+      "sourcefilehash": "sha256:fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b",
+      "SVGhash": "sha256:6d043a1a3eb0ae38812bae4702f21d91453be73e0479436d62ea30b5c410515c",
+      "authoringmethod": "Native SVG text panels, cards, category labels, and emphasis bars; no ImageGen or raster imagery.",
+      "width": 1536,
+      "height": 1024,
+      "node_centers": [
+        {"label": "Swarms enter the houses", "x": 21.81, "y": 44.92, "pixel_x": 335, "pixel_y": 460},
+        {"label": "Goshen is set apart", "x": 21.81, "y": 75.20, "pixel_x": 335, "pixel_y": 770}
+      ],
+      "exact_alt_text": "Two text panels compare Exodus 8:20–24: verse 24 reports swarms in Pharaoh’s and his servants’ houses and in Egypt; verses 22–23 announce a distinction for Goshen. The panels show neither a map nor a separately observed Goshen outcome."
+    }
+  ]
+}

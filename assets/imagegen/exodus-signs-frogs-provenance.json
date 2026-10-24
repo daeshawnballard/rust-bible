@@ -1,0 +1,69 @@
+{
+  "asset": "Exodus 8:1-6 frogs sign",
+  "created_at_utc": "2026-10-24T00:34:34Z",
+  "generator": "Built-in Codex ImageGen",
+  "workflow": "Generated one landscape image, then made one targeted ImageGen edit to clear the bottom audio strip. The final PNG is the edited ImageGen output; the first-generation PNG remains in the generated_images folder listed below.",
+  "chapter_brief": "/Users/daeshawnballard/Documents/Codex/2026-10-23/rust-bible-exodus-7-12/frogs-source-brief.md",
+  "scripture": {
+    "version": "KJV",
+    "chapter_read_in_full": "Exodus 8",
+    "active_hotspots": [
+      {
+        "label": "Frogs at the kneading trough",
+        "anchor": "Exodus 8:3",
+        "sources": ["Exodus 8:2-4"],
+        "timing": "Announced domestic location; an editorial depiction of the announced sign."
+      },
+      {
+        "label": "Frogs covering the land",
+        "anchor": "Exodus 8:6",
+        "sources": ["Exodus 8:5-6"],
+        "timing": "Fulfillment of the sign."
+      }
+    ],
+    "editorial_caption_required": "The scene visually connects the announcement in Exodus 8:3 with fulfillment in Exodus 8:6; it is not a single documentary instant.",
+    "character_constraint": "No Aaron is shown in the household; the text places his outstretched hand over the waters."
+  },
+  "style_reference": {
+    "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-expansion-basket.webp",
+    "role": "Inspected visually for warm historical realism, natural sunlight, nuanced earth colors, tactile materials, and painterly cinematic detail; not supplied as an image input to the first generation."
+  },
+  "generation": {
+    "first_output": "/Users/daeshawnballard/.codex/generated_images/01a16b4e-f0d4-7c92-a5a4-b82cc09004c8/exec-ed8e6b1f-feb1-46e8-b4e7-3c34c42ab72e.png",
+    "first_output_sha256": "ce792ed310865b1903dd80819fad6b097193c0c3c3b8b386af60c224b73e530d",
+    "prompt": "Use case: historical-scene\nAsset type: one production illustration for Rust Bible Journey, Exodus 8:1–6\nPrimary request: depict the Egyptian frog sign by editorially connecting the announced domestic invasion in Exodus 8:3 with the fulfillment in Exodus 8:5–6. This is a thematic composition across the passage, not one documentary instant.\nScene/backdrop: an ancient Egyptian mud-brick household/workspace opening onto a sunlit packed-earth courtyard; low clay oven and simple period pottery, with the scene opening toward the outdoor ground.\nSubject: a clearly recognizable shallow kneading trough near the left-center, with numerous frogs gathering in and around the trough and many more frogs covering the visible household floor and extending outdoors over the ground. No people.\nStyle/medium: detailed, gently painterly historical illustration with warm natural sunlight, nuanced earth tones, tactile surfaces, realistic frogs, and cinematic depth; match the warm historical character of the inspected Exodus basket reference.\nComposition/framing: wide landscape 1536×1024; important trough and frogs occupy the left/center x=10–60%, y=20–72%; frogs can extend toward the middle; keep the rightmost 32% mostly calm contextual background for a floating scripture window and the bottom 12% free of key subjects.\nLighting/mood: warm, reverent daylight; vivid and consequential without horror.\nMaterials/textures: worn mud-brick plaster, packed earth, clay oven and pottery, natural dough and trough, softly painterly surface detail.\nText (verbatim): none.\nConstraints: the trough detail represents the announcement in Exodus 8:3; the ground covered with frogs represents fulfillment in 8:6. Do not add Aaron inside/by the house; his gesture belongs over the waters in the text. No text, UI, map labels, rings, border, watermark, or logo.\nAvoid: gratuitously terrified people, modern objects, gore, dead frogs, lice, Pharaoh, Moses, magicians, fantasy elements, and later plague or deliverance scenes.",
+    "edit_input": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-signs-frogs-source.png (the first-generation PNG)",
+    "edit_output": "/Users/daeshawnballard/.codex/generated_images/01a16b4e-f0d4-7c92-a5a4-b82cc09004c8/exec-df6674c7-0137-4d32-8c8b-f68159377d32.png",
+    "edit_output_sha256": "2fefa547173508fb1e358e7a118d47a449d53aaedd90b4856af715012ffd0d11",
+    "edit_prompt": "Edit the supplied illustration conservatively. Keep the entire image unchanged except the bottom 12% of the canvas (approximately y=88–100%). Remove frogs and all other visually important subjects from only that bottom strip, continuing the same warm textured packed-earth ground naturally through it. Preserve the kneading trough and its frogs, the wider ground-covered-with-frogs scene, all architecture, lighting, colors, perspective, style, and framing above that strip exactly. Do not add text, UI, border, watermark, or new objects.",
+    "receipt": "The built-in tool returned the saved output paths above but no separate generation/request receipt identifier."
+  },
+  "final_files": {
+    "source_png": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-signs-frogs-source.png",
+      "sha256": "2fefa547173508fb1e358e7a118d47a449d53aaedd90b4856af715012ffd0d11",
+      "dimensions": "1536x1024",
+      "bytes": 2901009,
+      "format": "PNG, RGB"
+    },
+    "webp": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-frogs.webp",
+      "sha256": "92caf9b97da49e285a59a3c9bdb70c2f2a39e2eb3454de0f7daa18db91335438",
+      "dimensions": "1536x1024",
+      "bytes": 435862,
+      "format": "WebP VP8 lossy",
+      "conversion": "cwebp 1.6.0, -q 90 -m 6",
+      "conversion_report": "2.22 bpp; Y-U-V-All PSNR 44.55 dB"
+    }
+  },
+  "visual_review": {
+    "observed": [
+      "Shallow kneading trough occupies the left foreground/midground with visible frogs among dough-like material; the strongest trough cluster is approximately x=10-58%, y=36-69%.",
+      "Frogs visibly cover the earthen floor and continue into the courtyard, with the densest outdoor spread around x=43-72%, y=55-88%.",
+      "The far-right courtyard/architecture provides comparatively calm background around x=72-100%, y=18-54%, though small distant frogs remain visible lower in that region.",
+      "No people, Aaron, modern objects, gore, text, UI, labels, rings, or watermark are visible."
+    ],
+    "composition_limitation": "The bottom 12% was not fully cleared: after one targeted ImageGen edit, a few frogs remain around x=15-58%, y=88-96%. The trough is strong, the right-side background is comparatively calm, but the reserved audio band is not completely free of subjects. This predicate failed in both the original and targeted edit; no further generation was attempted.",
+    "evidence_class": "Visual inspection of the final WebP; no app integration or runtime acceptance was performed by this asset-only task."
+  }
+}

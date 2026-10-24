@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "scope": "Five selected Exodus7–8 episodes; source plans for chapters7–12 remain separate. Not whole-chapter illustration or live acceptance.",
+  "scene_ids": [
+    "exodus-signs-rods",
+    "exodus-signs-river",
+    "exodus-signs-frogs",
+    "exodus-signs-lice",
+    "exodus-signs-flies"
+  ],
+  "hotspot_count": 12,
+  "source_plan": "data/journey/exodus-signs-chapter-plan.json",
+  "next_candidate_ids": [
+    "9A",
+    "9B",
+    "9C",
+    "10A",
+    "10B",
+    "11A",
+    "12A",
+    "12B"
+  ]
+}

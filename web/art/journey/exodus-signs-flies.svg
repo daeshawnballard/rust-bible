@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">A swarm in Egypt and a Goshen distinction</title>
+  <desc id="desc">Two text panels compare Exodus 8:20–24: verse 24 reports swarms in Pharaoh’s and his servants’ houses and in Egypt; verses 22–23 announce a distinction for Goshen. The panels show neither a map nor a separately observed Goshen outcome.</desc>
+  <rect width="1536" height="1024" fill="#f7f5ee"/>
+
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Swarms and a Goshen distinction</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 8:20–24 · a reported outcome beside an announcement</text>
+
+  <rect x="120" y="300" width="430" height="180" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <rect x="120" y="300" width="8" height="180" rx="4" fill="#29664d"/>
+  <text x="150" y="332" fill="#29664d" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="1">NARRATED OUTCOME</text>
+  <text x="150" y="373" fill="#172d27" font-family="Georgia,serif" font-size="30">Swarms enter the houses</text>
+  <text x="150" y="416" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Pharaoh’s and servants’ homes</text>
+  <text x="150" y="443" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and all Egypt are named</text>
+  <text x="526" y="465" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">8:24</text>
+
+  <rect x="120" y="610" width="430" height="180" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <rect x="120" y="610" width="8" height="180" rx="4" fill="#9b8751"/>
+  <text x="150" y="642" fill="#806b39" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="1">DISTINCTION ANNOUNCED</text>
+  <text x="150" y="683" fill="#172d27" font-family="Georgia,serif" font-size="30">Goshen is set apart</text>
+  <text x="150" y="726" fill="#59685f" font-family="Arial,sans-serif" font-size="24">A distinction is announced</text>
+  <text x="150" y="753" fill="#59685f" font-family="Arial,sans-serif" font-size="24">before the swarm is reported</text>
+  <text x="526" y="775" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">8:22–23</text>
+
+  <text x="120" y="890" fill="#59685f" font-family="Arial,sans-serif" font-size="22">No map or separately observed Goshen result is shown.</text>
+</svg>

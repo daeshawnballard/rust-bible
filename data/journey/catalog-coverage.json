@@ -8,8 +8,8 @@
   "summary": {
     "books": 66,
     "chapters": 1189,
-    "scenes": 119,
-    "hotspots": 270
+    "scenes": 124,
+    "hotspots": 282
   },
   "books": [
     {
@@ -1209,9 +1209,9 @@
       "book": 1,
       "name": "Exodus",
       "chapter_count": 40,
-      "catalog_scenes": 7,
-      "catalog_hotspots": 19,
-      "chapters_with_catalog_scene": 7,
+      "catalog_scenes": 12,
+      "catalog_hotspots": 31,
+      "chapters_with_catalog_scene": 9,
       "chapters": [
         {
           "chapter": 1,
@@ -1376,12 +1376,32 @@
         {
           "chapter": 7,
           "verse_count": 25,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-signs-rods",
+            "exodus-signs-river"
+          ],
+          "selected_verse_count": 9,
+          "selected_ranges": [
+            {
+              "first": 8,
+              "last": 13
+            },
+            {
+              "first": 19,
+              "last": 21
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 7
+            },
+            {
+              "first": 14,
+              "last": 18
+            },
+            {
+              "first": 22,
               "last": 25
             }
           ]
@@ -1389,12 +1409,29 @@
         {
           "chapter": 8,
           "verse_count": 32,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
-          "verses_without_catalog_scene": [
+          "scene_ids": [
+            "exodus-signs-frogs",
+            "exodus-signs-lice",
+            "exodus-signs-flies"
+          ],
+          "selected_verse_count": 15,
+          "selected_ranges": [
             {
               "first": 1,
+              "last": 6
+            },
+            {
+              "first": 16,
+              "last": 24
+            }
+          ],
+          "verses_without_catalog_scene": [
+            {
+              "first": 7,
+              "last": 15
+            },
+            {
+              "first": 25,
               "last": 32
             }
           ]

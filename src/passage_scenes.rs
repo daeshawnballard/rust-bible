@@ -408,6 +408,45 @@ mod tests {
     }
 
     #[test]
+    fn exodus_signs_follow_announcements_and_reported_outcomes_separately() {
+        let book = NAMES.iter().position(|n| *n == "Exodus").unwrap();
+        for (chapter, verse, expected) in [
+            (7, 9, None),
+            (7, 10, Some("exodus-signs-rods-aaron-down")),
+            (7, 11, Some("exodus-signs-rods-magicians-cast")),
+            (7, 12, Some("exodus-signs-rods-swallow")),
+            (7, 13, None),
+            (7, 19, None),
+            (7, 20, Some("exodus-signs-river-struck")),
+            (7, 21, Some("exodus-signs-river-undrinkable")),
+            (8, 2, None),
+            (8, 3, Some("exodus-signs-frogs-trough")),
+            (8, 4, None),
+            (8, 5, None),
+            (8, 6, Some("exodus-signs-frogs-land")),
+            (8, 16, None),
+            (8, 17, Some("exodus-signs-lice-dust")),
+            (8, 18, Some("exodus-signs-lice-magicians-cannot")),
+            (8, 19, Some("exodus-signs-lice-gods-finger")),
+            (8, 20, None),
+            (8, 21, None),
+            (8, 22, Some("exodus-signs-flies-goshen")),
+            (8, 23, Some("exodus-signs-flies-goshen")),
+            (8, 24, Some("exodus-signs-flies-houses")),
+        ] {
+            let scene = scene_for_verse(book, chapter, verse).unwrap();
+            assert_eq!(
+                active_hotspot(scene, chapter, verse).map(|h| h.id.as_str()),
+                expected,
+                "wrong subject at Exodus {chapter}:{verse}"
+            );
+        }
+        for (chapter, verse) in [(7, 7), (7, 14), (7, 18), (7, 22), (8, 7), (8, 15), (8, 25)] {
+            assert!(scene_for_verse(book, chapter, verse).is_none());
+        }
+    }
+
+    #[test]
     fn genesis_subjects_and_intros_match_the_authored_ranges() {
         let b = NAMES.iter().position(|n| *n == "Genesis").unwrap();
         for (ch, v, scene_id, expected) in [

@@ -1,0 +1,904 @@
+{
+  "title": "Exodus 7–12 source-reviewed chapter briefs",
+  "prepared": "2026-10-23",
+  "source_basis": {
+    "scripture": "KJV text in data/kjv.json, Exodus chapters 7–12, read in full",
+    "scene_catalog": "data/journey/passage-scenes.json at da191cfdbac0f5e2104bb36f9044de90381933e6",
+    "planning_snapshot": "Chapter-by-chapter Journey production plan, 23 October 2026; source briefs retained for this batch",
+    "kjv_sha256": "fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b"
+  },
+  "scope": "Source review only. These are chapter briefs and proposed scene candidates, not approved artwork, implemented hotspots, or complete chapter coverage.",
+  "range_semantics": {
+    "candidate_scene_range": "The plan's proposed source window for a scene; it does not mean every verse or detail in the window is visibly illustrated.",
+    "active": "The exact verse range during which a hotspot should be active.",
+    "anchor": "A pinpoint verse for the hotspot's visible subject or stated relationship.",
+    "sources": "The verse range or ranges that support the explanation; these may include announcement and fulfillment passages when the distinction is stated explicitly.",
+    "reading_only_intervals": "Maximal exact chapter intervals outside the 13 proposed candidate scene ranges. They remain Scripture-only in this proposal. Details inside a candidate window can also remain unpictured."
+  },
+  "catalog_audit": {
+    "existing_exodus_scene_count": 7,
+    "existing_scenes_in_exodus_7_12": [],
+    "finding": "The current consolidated catalog has no scene range in Exodus 7–12. The 13 packets in the plan are candidates, not existing coverage."
+  },
+  "chapters": [
+    {
+      "chapter": 7,
+      "verse_count": 25,
+      "major_units": [
+        {
+          "range": "7:1–7",
+          "unit": "Moses and Aaron's commission, Pharaoh's refusal foretold, and their ages",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "7:8–13",
+          "unit": "The rod sign before Pharaoh, the magicians' rods, and Pharaoh's refusal",
+          "treatment": "candidate_scene",
+          "candidate_id": "7A"
+        },
+        {
+          "range": "7:14–18",
+          "unit": "The river plague is announced to Pharaoh",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "7:19–21",
+          "unit": "The waters are struck and turned to blood; fish die and the river cannot be drunk",
+          "treatment": "candidate_scene",
+          "candidate_id": "7B"
+        },
+        {
+          "range": "7:22–25",
+          "unit": "The magicians imitate the sign, Pharaoh turns away, Egyptians dig for water, and seven days pass",
+          "treatment": "reading_only"
+        }
+      ],
+      "candidate_scene_ids": [
+        "7A",
+        "7B"
+      ],
+      "reading_only_intervals": [
+        "7:1–7",
+        "7:14–18",
+        "7:22–25"
+      ]
+    },
+    {
+      "chapter": 8,
+      "verse_count": 32,
+      "major_units": [
+        {
+          "range": "8:1–6",
+          "unit": "Frogs announced, Aaron instructed, and frogs cover Egypt",
+          "treatment": "candidate_scene",
+          "candidate_id": "8A"
+        },
+        {
+          "range": "8:7–15",
+          "unit": "The magicians repeat the sign; Pharaoh asks for relief; frogs die in heaps and Pharaoh hardens his heart",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "8:16–19",
+          "unit": "Dust becomes lice; the magicians cannot reproduce the sign and speak of God's finger",
+          "treatment": "candidate_scene",
+          "candidate_id": "8B"
+        },
+        {
+          "range": "8:20–24",
+          "unit": "Swarms announced, a distinction promised for Goshen, and swarms enter Egyptian houses",
+          "treatment": "candidate_scene",
+          "candidate_id": "8C"
+        },
+        {
+          "range": "8:25–32",
+          "unit": "Pharaoh bargains over sacrifice; Moses prays, the flies depart, and Pharaoh refuses again",
+          "treatment": "reading_only"
+        }
+      ],
+      "candidate_scene_ids": [
+        "8A",
+        "8B",
+        "8C"
+      ],
+      "reading_only_intervals": [
+        "8:7–15",
+        "8:25–32"
+      ]
+    },
+    {
+      "chapter": 9,
+      "verse_count": 35,
+      "major_units": [
+        {
+          "range": "9:1–7",
+          "unit": "Livestock plague announced and fulfilled; Pharaoh verifies Israel's cattle are spared",
+          "treatment": "candidate_scene",
+          "candidate_id": "9A"
+        },
+        {
+          "range": "9:8–12",
+          "unit": "Furnace ashes are scattered; boils affect people and beasts; magicians cannot stand before Moses",
+          "treatment": "candidate_scene",
+          "candidate_id": "9B"
+        },
+        {
+          "range": "9:13–21",
+          "unit": "Hail announced, with warning and differing responses among Pharaoh's servants",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "9:22–26",
+          "unit": "Hail, thunder, and fire strike Egypt; Goshen has no hail",
+          "treatment": "candidate_scene",
+          "candidate_id": "9C"
+        },
+        {
+          "range": "9:27–35",
+          "unit": "Pharaoh confesses and asks for relief; hail ceases; crops and Pharaoh's renewed refusal are reported",
+          "treatment": "reading_only"
+        }
+      ],
+      "candidate_scene_ids": [
+        "9A",
+        "9B",
+        "9C"
+      ],
+      "reading_only_intervals": [
+        "9:13–21",
+        "9:27–35"
+      ]
+    },
+    {
+      "chapter": 10,
+      "verse_count": 29,
+      "major_units": [
+        {
+          "range": "10:1–11",
+          "unit": "Purpose stated; locusts announced; Pharaoh negotiates over who may go",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "10:12–15",
+          "unit": "An east wind brings locusts that cover the land and consume what the hail left",
+          "treatment": "candidate_scene",
+          "candidate_id": "10A"
+        },
+        {
+          "range": "10:16–20",
+          "unit": "Pharaoh asks forgiveness; a west wind removes the locusts; Pharaoh is hardened",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "10:21–23",
+          "unit": "Three days of darkness in Egypt; Israel's dwellings have light",
+          "treatment": "candidate_scene",
+          "candidate_id": "10B"
+        },
+        {
+          "range": "10:24–29",
+          "unit": "Pharaoh bargains over livestock; Moses refuses; Pharaoh forbids another meeting",
+          "treatment": "reading_only"
+        }
+      ],
+      "candidate_scene_ids": [
+        "10A",
+        "10B"
+      ],
+      "reading_only_intervals": [
+        "10:1–11",
+        "10:16–20",
+        "10:24–29"
+      ]
+    },
+    {
+      "chapter": 11,
+      "verse_count": 10,
+      "major_units": [
+        {
+          "range": "11:1–3",
+          "unit": "One more plague foretold; the people are told to ask for silver and gold; Moses is described as great",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "11:4–7",
+          "unit": "Moses announces the midnight death of the firstborn and the distinction for Israel",
+          "treatment": "candidate_scene",
+          "candidate_id": "11A"
+        },
+        {
+          "range": "11:8–10",
+          "unit": "Moses predicts Pharaoh's servants will ask Israel to leave; the chapter summarizes Pharaoh's refusal",
+          "treatment": "reading_only"
+        }
+      ],
+      "candidate_scene_ids": [
+        "11A"
+      ],
+      "reading_only_intervals": [
+        "11:1–3",
+        "11:8–10"
+      ]
+    },
+    {
+      "chapter": 12,
+      "verse_count": 51,
+      "major_units": [
+        {
+          "range": "12:1–2",
+          "unit": "The month is established as the beginning of months",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:3–13",
+          "unit": "Passover lamb, blood sign, meal, readiness, and the announced judgment",
+          "treatment": "candidate_scene",
+          "candidate_id": "12A"
+        },
+        {
+          "range": "12:14–20",
+          "unit": "Memorial feast and unleavened bread instructions",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:21–23",
+          "unit": "Moses instructs the elders to select the lamb, apply blood with hyssop, and remain inside",
+          "treatment": "reading_only",
+          "source_timing": "These are instructions; verse 23 states what the LORD will do, not an independently narrated blood application."
+        },
+        {
+          "range": "12:24–27",
+          "unit": "The ordinance and future explanation to children; the people bow and worship",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:28",
+          "unit": "Obedience summary: Israel does as the LORD commanded Moses and Aaron",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:29–33",
+          "unit": "The firstborn die at midnight; Pharaoh and Egyptians urge Israel to leave",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:34–39",
+          "unit": "Unleavened dough is carried; Egyptians provide goods; Israel journeys from Rameses to Succoth",
+          "treatment": "candidate_scene",
+          "candidate_id": "12B"
+        },
+        {
+          "range": "12:40–42",
+          "unit": "The sojourning is stated as 430 years and the night is remembered",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:43–49",
+          "unit": "Passover participation and household rules",
+          "treatment": "reading_only"
+        },
+        {
+          "range": "12:50–51",
+          "unit": "Israel obeys; the LORD brings the children of Israel out of Egypt",
+          "treatment": "reading_only"
+        }
+      ],
+      "candidate_scene_ids": [
+        "12A",
+        "12B"
+      ],
+      "reading_only_intervals": [
+        "12:1–2",
+        "12:14–33",
+        "12:40–51"
+      ]
+    }
+  ],
+  "candidate_audit": [
+    {
+      "id": "7A",
+      "proposed_scene_range": "7:8–13",
+      "proposed_medium": "Sequence diagram",
+      "recommended_title": "The rod sign before Pharaoh",
+      "recommended_label": "Editorial sequence diagram · Exodus 7:8–13",
+      "timing_and_composition": "Keep the forecast in 7:9, Aaron's action in 7:10, the magicians' imitation in 7:11, the swallowing in 7:12, and Pharaoh's refusal in 7:13 as ordered states. Do not compose the rods, serpents, and swallowed rods as one instant.",
+      "hotspots": [
+        {
+          "title": "Aaron casts down his rod",
+          "anchor": "7:10",
+          "active": [
+            "7:10"
+          ],
+          "sources": [
+            "7:9–10"
+          ],
+          "note": "Verse 9 announces the sign; verse 10 narrates Aaron carrying it out."
+        },
+        {
+          "title": "Aaron's rod swallows the magicians' rods",
+          "anchor": "7:12",
+          "active": [
+            "7:12"
+          ],
+          "sources": [
+            "7:11–12"
+          ],
+          "note": "Verse 11 is the magicians' imitation; the swallowing is specifically in verse 12."
+        }
+      ],
+      "risks": [
+        "If the diagram shows all stages at once, mark it unmistakably as an ordered sequence.",
+        "The candidate does not cover the earlier commission or later river warning; those remain reading-only intervals."
+      ]
+    },
+    {
+      "id": "7B",
+      "proposed_scene_range": "7:19–21",
+      "proposed_medium": "Painting",
+      "recommended_title": "The river is struck with the rod",
+      "recommended_label": "Artistic reconstruction · Exodus 7:19–21 · reconstructed figures and river setting",
+      "timing_and_composition": "Verse 19 instructs Aaron; verse 20 narrates the waters being struck and turned; verse 21 states the fish die, the river stinks, and Egyptians cannot drink. The singular 'he' in verse 20 follows 'Moses and Aaron' and does not unambiguously name the actor; use actor-neutral wording or avoid a gesture that identifies one man as the striker.",
+      "hotspots": [
+        {
+          "title": "The river is struck with the rod",
+          "anchor": "7:20",
+          "active": [
+            "7:20"
+          ],
+          "sources": [
+            "7:19–20"
+          ],
+          "note": "Verse 19 directs Aaron; verse 20's singular 'he' does not name the striker. Keep the label actor-neutral."
+        },
+        {
+          "title": "Water that cannot be drunk",
+          "anchor": "7:21",
+          "active": [
+            "7:21"
+          ],
+          "sources": [
+            "7:21"
+          ],
+          "note": "Verse 21 is the narrated consequence, distinct from the preceding instruction and action."
+        }
+      ],
+      "risks": [
+        "A river painting cannot show every stream, pond, pool, and vessel named in 7:19 and 7:21; do not imply that it does.",
+        "Do not add a dedicated hotspot for a water carrier: any such attendant is unnamed and reconstructed.",
+        "Pharaoh and his servants witness the act (7:20); other reactions, crowds, architecture, and archaeological setting are reconstructed."
+      ]
+    },
+    {
+      "id": "8A",
+      "proposed_scene_range": "8:1–6",
+      "proposed_medium": "Painting",
+      "recommended_title": "The announced frog sign and its onset",
+      "recommended_label": "Editorial reconstruction · Exodus 8:1–6 · combines the domestic locations announced in 8:3 with the broad fulfillment stated in 8:6",
+      "timing_and_composition": "The existing frog brief correctly labels 8:3 as an announcement and 8:5–6 as instruction and fulfillment, not one documentary instant. Keep the trough hotspot active only for 8:3 and the ground-covering-frogs hotspot active only for 8:6. The proposed 'Aaron stretches his hand over the waters' hotspot is not visible in the existing household-only composition; change it to a visible frog subject or add a separate, clearly ordered panel for Aaron.",
+      "hotspots": [
+        {
+          "title": "Frogs are announced in houses, beds, ovens, and kneading troughs",
+          "anchor": "8:3",
+          "active": [
+            "8:3"
+          ],
+          "sources": [
+            "8:2–4"
+          ],
+          "note": "These interior locations are named in the threat, not separately reported as observed outcomes."
+        },
+        {
+          "title": "Frogs cover the land of Egypt",
+          "anchor": "8:6",
+          "active": [
+            "8:6"
+          ],
+          "sources": [
+            "8:5–6"
+          ],
+          "note": "Verse 5 is the instruction; verse 6 says Aaron stretches out his hand and the frogs cover Egypt."
+        }
+      ],
+      "risks": [
+        "A trough filled with frogs can read as fulfilled observation; the caption and separate active ranges must retain the announcement/fulfillment distinction.",
+        "Do not claim that verse 6 independently confirms each indoor location named in verse 3.",
+        "Mud-brick house, oven, pottery, and period details are artistic reconstruction, not a source-identified household."
+      ]
+    },
+    {
+      "id": "8B",
+      "proposed_scene_range": "8:16–19",
+      "proposed_medium": "Sequence/detail diagram",
+      "recommended_title": "Dust becomes lice; the magicians cannot reproduce the sign",
+      "recommended_label": "Editorial sequence diagram · Exodus 8:16–19",
+      "timing_and_composition": "Verse 16 commands the sign; verse 17 narrates the dust becoming lice; verse 18 states that the magicians cannot bring forth lice; verse 19 records their statement to Pharaoh. Keep action, failure, and speech sequential.",
+      "hotspots": [
+        {
+          "title": "The dust becomes lice",
+          "anchor": "8:17",
+          "active": [
+            "8:17"
+          ],
+          "sources": [
+            "8:16–17"
+          ],
+          "note": "Verse 16 announces the act; verse 17 gives the narrated outcome."
+        },
+        {
+          "title": "The magicians cannot bring forth lice",
+          "anchor": "8:18",
+          "active": [
+            "8:18"
+          ],
+          "sources": [
+            "8:18–19"
+          ],
+          "note": "Verse 19 is their spoken recognition, not the failed attempt itself."
+        },
+        {
+          "title": "The magicians say, 'This is the finger of God'",
+          "anchor": "8:19",
+          "active": [
+            "8:19"
+          ],
+          "sources": [
+            "8:19"
+          ],
+          "note": "Use as a distinct speech node only if it is made visible through a sourced text-diagram element."
+        }
+      ],
+      "risks": [
+        "Lice morphology is not described; use a schematic mark or modest reconstruction rather than presenting an exact species as sourced.",
+        "Verse 8:19 also reports Pharaoh's hardened response; unless a separate visible node is added, do not imply that this part of the verse is pictured."
+      ]
+    },
+    {
+      "id": "8C",
+      "proposed_scene_range": "8:20–24",
+      "proposed_medium": "Two-panel comparison",
+      "recommended_title": "The swarms announced and the promised distinction for Goshen",
+      "recommended_label": "Editorial comparison · Exodus 8:20–24 · textual panels, not a map",
+      "timing_and_composition": "Separate the announcement in 8:21–23 from the fulfillment in 8:24. Verse 24 explicitly describes swarms in Pharaoh's and his servants' houses and in Egypt; the absence of swarms in Goshen is stated as the announced sign in 8:22, not separately narrated as an observed outcome in verse 24.",
+      "hotspots": [
+        {
+          "title": "Swarms enter Pharaoh's and his servants' houses",
+          "anchor": "8:24",
+          "active": [
+            "8:24"
+          ],
+          "sources": [
+            "8:21",
+            "8:24"
+          ],
+          "note": "Verse 21 announces; verse 24 narrates the swarm arriving."
+        },
+        {
+          "title": "No swarms are announced for Goshen",
+          "anchor": "8:22",
+          "active": [
+            "8:22–23"
+          ],
+          "sources": [
+            "8:22–23"
+          ],
+          "note": "Keep the title prospective. Use a textual panel rather than asserting a surveyed boundary or an independently narrated fulfillment."
+        }
+      ],
+      "risks": [
+        "Do not label the Goshen panel 'Goshen was spared' as an observed outcome at 8:24.",
+        "Do not draw an invented map border or position Goshen relative to named sites.",
+        "The passage uses 'swarms of flies'; do not specify an unsupported species."
+      ]
+    },
+    {
+      "id": "9A",
+      "proposed_scene_range": "9:1–7",
+      "proposed_medium": "Comparison diagram",
+      "recommended_title": "Egypt's cattle die; none of Israel's cattle die",
+      "recommended_label": "Editorial comparison diagram · Exodus 9:1–7 · schematic, not a livestock census",
+      "timing_and_composition": "Separate the announced threat and set time (9:2–5) from the next-day outcome (9:6–7). Verse 3 specifies cattle in the field in the threat; verse 6 says all Egypt's cattle died; verse 7 reports Pharaoh's check that no Israelite cattle were dead.",
+      "hotspots": [
+        {
+          "title": "The plague is announced for Egypt's field cattle",
+          "anchor": "9:3",
+          "active": [
+            "9:3–5"
+          ],
+          "sources": [
+            "9:1–5"
+          ],
+          "note": "This is the warning and its appointed time, not the next-day outcome."
+        },
+        {
+          "title": "All Egypt's cattle die",
+          "anchor": "9:6",
+          "active": [
+            "9:6"
+          ],
+          "sources": [
+            "9:6"
+          ],
+          "note": "Use a non-graphic diagram or empty-field symbols; do not depict a graphic mass death."
+        },
+        {
+          "title": "No Israelite cattle are found dead",
+          "anchor": "9:7",
+          "active": [
+            "9:7"
+          ],
+          "sources": [
+            "9:4",
+            "9:6–7"
+          ],
+          "note": "Verse 4 announces the distinction; verses 6–7 report its outcome."
+        }
+      ],
+      "risks": [
+        "Do not merge the announced 'cattle in the field' (9:3) with the narrated outcome 'all the cattle of Egypt died' (9:6).",
+        "Do not turn the comparison into a geographic map or add named locations."
+      ]
+    },
+    {
+      "id": "9B",
+      "proposed_scene_range": "9:8–12",
+      "proposed_medium": "Sequence diagram",
+      "recommended_title": "Ashes become boils; the magicians cannot stand before Moses",
+      "recommended_label": "Editorial sequence diagram · Exodus 9:8–12",
+      "timing_and_composition": "Verses 8–9 give the command and forecast; verse 10 is the action and result; verse 11 describes the magicians' condition; verse 12 describes Pharaoh's hardened heart. Keep each state ordered.",
+      "hotspots": [
+        {
+          "title": "Moses sprinkles furnace ashes toward heaven",
+          "anchor": "9:10",
+          "active": [
+            "9:10"
+          ],
+          "sources": [
+            "9:8–10"
+          ],
+          "note": "Verse 8 commands; verse 10 narrates Moses doing it."
+        },
+        {
+          "title": "The magicians cannot stand before Moses",
+          "anchor": "9:11",
+          "active": [
+            "9:11"
+          ],
+          "sources": [
+            "9:11"
+          ],
+          "note": "The verse says boils are upon them and all Egyptians; do not add clinical detail."
+        }
+      ],
+      "risks": [
+        "The exact appearance of the boils is not described; avoid graphic or diagnostic imagery.",
+        "Do not move the scene to a named location not present in this range."
+      ]
+    },
+    {
+      "id": "9C",
+      "proposed_scene_range": "9:22–26",
+      "proposed_medium": "Painting or separated comparison",
+      "recommended_title": "Hail in Egypt; no hail in Goshen",
+      "recommended_label": "Separated comparison · Exodus 9:22–26 · artistic reconstruction, not a geographic map",
+      "timing_and_composition": "Verse 22 is the command, 9:23–25 narrate hail, thunder, and fire with human, animal, plant, and tree losses, and 9:26 explicitly states that Goshen had no hail. Prefer separated comparison panels rather than one place-blending landscape.",
+      "hotspots": [
+        {
+          "title": "Moses stretches the rod toward heaven",
+          "anchor": "9:23",
+          "active": [
+            "9:23"
+          ],
+          "sources": [
+            "9:22–23"
+          ],
+          "note": "Verse 22 is the command; verse 23 is the narrated action."
+        },
+        {
+          "title": "Hail and fire strike the land and break the trees",
+          "anchor": "9:25",
+          "active": [
+            "9:24–25"
+          ],
+          "sources": [
+            "9:23–25"
+          ],
+          "note": "Verse 24 describes the hail and fire; verse 25 reports what was struck."
+        },
+        {
+          "title": "Goshen has no hail",
+          "anchor": "9:26",
+          "active": [
+            "9:26"
+          ],
+          "sources": [
+            "9:26"
+          ],
+          "note": "This absence is explicitly reported, unlike the Goshen fly exemption in 8:22–24."
+        }
+      ],
+      "risks": [
+        "Do not put Goshen and the hail-struck setting into one undifferentiated location.",
+        "Do not draw a map boundary or identify modern geography.",
+        "If depicting loss of life, keep it non-graphic; the text also names crops and trees as visible effects."
+      ]
+    },
+    {
+      "id": "10A",
+      "proposed_scene_range": "10:12–15",
+      "proposed_medium": "Painting",
+      "recommended_title": "The locusts cover Egypt and consume what the hail left",
+      "recommended_label": "Artistic reconstruction · Exodus 10:12–15 · natural forms and landscape reconstructed",
+      "timing_and_composition": "Verse 12 commands Moses to stretch out his hand; 10:13 narrates the east wind and arrival; 10:14–15 describe the locusts resting over Egypt, darkening the land, and consuming the remaining plants and fruit. Avoid duplicate hotspots that repeat the same verse without distinguishing a subject.",
+      "hotspots": [
+        {
+          "title": "The east wind brings the locusts",
+          "anchor": "10:13",
+          "active": [
+            "10:13"
+          ],
+          "sources": [
+            "10:12–13"
+          ],
+          "note": "Verse 12 is command; verse 13 narrates the wind and arrival."
+        },
+        {
+          "title": "Locusts cover the land",
+          "anchor": "10:14",
+          "active": [
+            "10:14–15"
+          ],
+          "sources": [
+            "10:14–15"
+          ],
+          "note": "The text describes the locusts resting across Egypt and darkening the land."
+        },
+        {
+          "title": "The locusts eat what the hail left",
+          "anchor": "10:15",
+          "active": [
+            "10:15"
+          ],
+          "sources": [
+            "10:5",
+            "10:15"
+          ],
+          "note": "Verse 5 forecasts this; verse 15 reports the consumption."
+        }
+      ],
+      "risks": [
+        "Do not add a specific locust species, modern geography, or precise crop varieties not stated in the passage.",
+        "The plague announcement and Pharaoh's negotiation are in 10:1–11, outside the candidate scene and reading-only here."
+      ]
+    },
+    {
+      "id": "10B",
+      "proposed_scene_range": "10:21–23",
+      "proposed_medium": "Two-panel comparison",
+      "recommended_title": "Darkness in Egypt; light in Israel's dwellings",
+      "recommended_label": "Editorial comparison · Exodus 10:21–23 · reconstructed dwellings, not a map",
+      "timing_and_composition": "Verse 21 announces the darkness; verses 22–23 narrate three days of thick darkness in Egypt, people unable to see or rise, and light in the dwellings of the children of Israel. Make the two conditions distinct without inventing named places or routes.",
+      "hotspots": [
+        {
+          "title": "Three days of thick darkness in Egypt",
+          "anchor": "10:22",
+          "active": [
+            "10:22–23"
+          ],
+          "sources": [
+            "10:21–23"
+          ],
+          "note": "Verse 21 is the command; verses 22–23 describe the occurrence and duration."
+        },
+        {
+          "title": "The children of Israel have light in their dwellings",
+          "anchor": "10:23",
+          "active": [
+            "10:23"
+          ],
+          "sources": [
+            "10:23"
+          ],
+          "note": "Keep the source wording; do not infer the dwellings' location or construction."
+        }
+      ],
+      "risks": [
+        "Do not show the announced darkness in 10:21 as though it is already the event in progress.",
+        "The precise appearance of 'darkness which may be felt' is not specified; avoid implying a scientific explanation."
+      ]
+    },
+    {
+      "id": "11A",
+      "proposed_scene_range": "11:4–7",
+      "proposed_medium": "Announcement diagram",
+      "recommended_title": "Moses announces the midnight judgment and Israel's distinction",
+      "recommended_label": "Announcement diagram · Exodus 11:4–7 · prediction, not depiction of the later event",
+      "timing_and_composition": "All four verses are Moses' warning and prediction. Verse 5 says the firstborn shall die; verse 6 predicts a great cry; verse 7 promises a distinction for Israel. Do not depict these events as already occurring.",
+      "hotspots": [
+        {
+          "title": "Moses announces the firstborn will die at midnight",
+          "anchor": "11:5",
+          "active": [
+            "11:4–6"
+          ],
+          "sources": [
+            "11:4–6"
+          ],
+          "note": "The midnight death and cry are forecast, not fulfilled in this passage."
+        },
+        {
+          "title": "Moses announces a distinction for Israel",
+          "anchor": "11:7",
+          "active": [
+            "11:7"
+          ],
+          "sources": [
+            "11:7"
+          ],
+          "note": "The verse states the promised distinction; fulfillment is not narrated here."
+        }
+      ],
+      "risks": [
+        "Use a text-first diagram or restrained symbolic layout; avoid graphic death imagery.",
+        "Do not collapse this warning into Exodus 12:29–30, whose fulfillment is outside the candidate range and remains reading-only."
+      ]
+    },
+    {
+      "id": "12A",
+      "proposed_scene_range": "12:3–13",
+      "proposed_medium": "Household scene plus object details",
+      "recommended_title": "Passover instructions for each household",
+      "recommended_label": "Instructional household sequence · Exodus 12:3–13 · reconstructed objects and house details; instructions and announced outcome, not one observed instant",
+      "timing_and_composition": "Verses 3–11 are instructions for what households shall do; verses 12–13 announce the coming judgment and explain the blood sign. In 12:21–23 Moses repeats instructions to the elders and states what the LORD will do; 12:24–27 gives the ordinance and future explanation; 12:28 summarizes Israel's obedience. The blood application is not independently narrated in 12:21–23. Use a labeled sequence/object study, not a single painting implying that all acts and the judgment are observed together.",
+      "hotspots": [
+        {
+          "title": "A lamb is selected for each household",
+          "anchor": "12:3",
+          "active": [
+            "12:3–5"
+          ],
+          "sources": [
+            "12:3–5"
+          ],
+          "note": "The passage gives household sharing guidance, age, and source among sheep or goats."
+        },
+        {
+          "title": "The lamb is kept until the fourteenth day and killed in the evening",
+          "anchor": "12:6",
+          "active": [
+            "12:6"
+          ],
+          "sources": [
+            "12:6"
+          ],
+          "note": "This is an instruction in the candidate passage, not a narrated act at this point."
+        },
+        {
+          "title": "Blood placement on the side posts and upper post is commanded",
+          "anchor": "12:7",
+          "active": [
+            "12:7"
+          ],
+          "sources": [
+            "12:7"
+          ],
+          "note": "Verse 13 explains the sign's promised meaning; 12:22 repeats the instruction, and 12:21–23 does not independently narrate its application."
+        },
+        {
+          "title": "Roasted lamb, unleavened bread, and bitter herbs",
+          "anchor": "12:8",
+          "active": [
+            "12:8–10"
+          ],
+          "sources": [
+            "12:8–10"
+          ],
+          "note": "Include roasting and the instruction not to leave remains until morning."
+        },
+        {
+          "title": "Eat in haste, ready to depart",
+          "anchor": "12:11",
+          "active": [
+            "12:11"
+          ],
+          "sources": [
+            "12:11"
+          ],
+          "note": "This is the commanded posture, not the departure scene."
+        },
+        {
+          "title": "The judgment and blood sign are announced",
+          "anchor": "12:13",
+          "active": [
+            "12:12–13"
+          ],
+          "sources": [
+            "12:12–13"
+          ],
+          "note": "This is a prediction and explanation, not the midnight fulfillment."
+        }
+      ],
+      "risks": [
+        "The planned 'blood on the door posts' title can be mistaken for the later action; explicitly label it as an instruction from 12:7, with 12:13 as its promised meaning.",
+        "Do not claim this candidate depicts the enacted Passover; 12:21–27 remains reading-only, and 12:28 is an obedience summary rather than a detailed narration of the blood application.",
+        "Do not add chronology, house layout, lamb appearance, or ritual detail beyond the cited verses."
+      ]
+    },
+    {
+      "id": "12B",
+      "proposed_scene_range": "12:34–39",
+      "proposed_medium": "Departure painting",
+      "recommended_title": "Israel journeys from Rameses to Succoth",
+      "recommended_label": "Artistic reconstruction · Exodus 12:34–39 · condensed sequence; route geography not established",
+      "timing_and_composition": "The range moves from unleavened dough carried in kneadingtroughs (12:34), to goods from Egyptians (12:35–36), the journey from Rameses to Succoth (12:37), the mixed multitude and flocks (12:38), and unleavened cakes baked from the dough (12:39). Use an ordered panel or an explicitly labeled composite; do not show all these moments as one documentary instant.",
+      "hotspots": [
+        {
+          "title": "Unleavened dough is carried in kneadingtroughs",
+          "anchor": "12:34",
+          "active": [
+            "12:34"
+          ],
+          "sources": [
+            "12:34"
+          ],
+          "note": "This is the carried dough before it is leavened."
+        },
+        {
+          "title": "The children of Israel receive silver, gold, and raiment",
+          "anchor": "12:36",
+          "active": [
+            "12:35–36"
+          ],
+          "sources": [
+            "12:35–36"
+          ],
+          "note": "Retain the source's wording and avoid adding an interpretation of the transaction."
+        },
+        {
+          "title": "Israel journeys from Rameses to Succoth",
+          "anchor": "12:37",
+          "active": [
+            "12:37"
+          ],
+          "sources": [
+            "12:37"
+          ],
+          "note": "These are the named places; no route or modern identification is supplied."
+        },
+        {
+          "title": "A mixed multitude and flocks go up with Israel",
+          "anchor": "12:38",
+          "active": [
+            "12:38"
+          ],
+          "sources": [
+            "12:38"
+          ],
+          "note": "Do not turn the crowd into a precise visual count."
+        },
+        {
+          "title": "Unleavened cakes are baked from the dough",
+          "anchor": "12:39",
+          "active": [
+            "12:39"
+          ],
+          "sources": [
+            "12:39"
+          ],
+          "note": "Keep this later narrated result distinct from the dough being carried in verse 34."
+        }
+      ],
+      "risks": [
+        "Do not invent a route map, coordinates, modern site identifications, or travel duration.",
+        "Verse 37 says about six hundred thousand men on foot beside children; any crowd image is illustrative and not to scale.",
+        "The candidate ends at 12:39; 12:50–51's departure summary remains reading-only."
+      ]
+    }
+  ],
+  "whole_window_limits": [
+    "The 13 candidate ranges are not full coverage for Exodus 7–12; use the listed reading-only intervals as unresolved coverage.",
+    "A candidate scene may contain announced, commanded, and fulfilled material. Keep each hotspot's active range tied to what its visible subject represents.",
+    "No locations, maps, timelines, chronology, or harmonizations beyond this KJV text have been added.",
+    "No artwork, integration, runtime behavior, publication, or acceptance has been produced or verified by these briefs."
+  ],
+  "schema_version": 1
+}

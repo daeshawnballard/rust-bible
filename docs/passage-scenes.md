@@ -1,6 +1,6 @@
 # Passage-specific Journey scenes
 
-The Rust-rendered register contains **119 focused scenes, 270 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
+The Rust-rendered register contains **124 focused scenes, 282 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
 
 Hotspots identify visible people, actions, or objects. Scripture stays verbatim in its own view; Context contains the illustrations and editorial notes. Inspecting a subject preserves the saved verse and audio target; its explicit Read link changes the passage. Poetry, letter imagery, prophetic visions, and artistic reconstructions are labeled in the interface. Broader draft beats that are not depicted do not receive landscape pins.
 
@@ -143,3 +143,15 @@ Three individual ImageGen paintings and three editorial text diagrams add 18 mea
 | Exodus 4:2–4 | The rod becomes a serpent and a rod again | A rod in the hand (21.81%, 39.84%); The rod becomes a serpent (21.81%, 63.28%); A rod in the hand again (21.81%, 86.72%) |
 | Exodus 5:10–13 | Stubble is gathered while the brick quota remains | Gather stubble for straw (24%, 79.5%); The daily brick quota remains (51%, 56%) |
 | Exodus 6:16, 18, 20 | The family line of Moses and Aaron | Levi and his named sons (21.81%, 38.87%); Kohath and Amram (21.81%, 62.3%); Aaron and Moses’s parents (21.81%, 85.74%) |
+
+## Exodus signs expansion
+
+| Source window | Scene | Hotspots |
+| --- | --- | --- |
+| Exodus 7:8–13 | Rod sign before Pharaoh | Aaron casts down the rod (7:10); The magicians imitate the sign (7:11); Aaron’s rod swallows theirs (7:12) |
+| Exodus 7:19–21 | The river is struck and its water cannot be drunk | The river is struck with the rod (7:20); Water that cannot be drunk (7:21) |
+| Exodus 8:1–6 | Frogs are announced in the houses and cover the land | Frogs in the kneading troughs (8:3); Frogs cover the land of Egypt (8:6) |
+| Exodus 8:16–19 | Dust becomes lice; the magicians cannot reproduce the sign | Dust becomes lice (8:17); The magicians cannot do so (8:18); The finger of God (8:19) |
+| Exodus 8:20–24 | Swarms and Goshen’s announced distinction | Swarms enter the houses (8:24); Goshen is set apart (8:22) |
+
+Two new paintings and three ordered/comparison diagrams add 12 hotspots. See [source timing, artwork provenance, and chapter gaps](exodus-signs-batch.md).

@@ -2,12 +2,12 @@
 
 Generated with `node scripts/journey-coverage.mjs` from the embedded KJV and consolidated scene catalog. This counts authored source ranges, not live acceptance or complete chapters. Legacy worlds, object studies and broad context are separate; a chapter absent here can still have those companions. Genesis’s complete selected-episode ledger includes its legacy scenes in [Genesis chapter coverage](genesis-chapter-coverage.md).
 
-The current catalog contains **119 scenes and 270 hotspots across all 66 books**. The underlying KJV has 1189 chapters.
+The current catalog contains **124 scenes and 282 hotspots across all 66 books**. The underlying KJV has 1189 chapters.
 
 | Book | Chapters | Chapters with catalog episodes | Scenes | Hotspots |
 | --- | ---: | ---: | ---: | ---: |
 | Genesis | 50 | 47 | 48 | 118 |
-| Exodus | 40 | 7 | 7 | 19 |
+| Exodus | 40 | 9 | 12 | 31 |
 | Leviticus | 27 | 1 | 1 | 1 |
 | Numbers | 36 | 1 | 1 | 3 |
 | Deuteronomy | 34 | 1 | 1 | 3 |
@@ -77,4 +77,4 @@ The exact selected intervals and their complements are in `data/journey/catalog-
 
 ## Next production batch
 
-Exodus 1–6 now has selected episodes: the midwives (1:15–21), Moses’s discovery (2:3–6), burning bush (3:2–6), rod sequence (4:2–4), stubble and brick quota (5:10–13), and selected family relationships (6:16, 18, 20). The next canonical batch is Exodus 7–12. Later planning must reconcile the existing Exodus 13–17 worlds and Tabernacle objects before commissioning duplicate artwork. Other books retain their existing primary scenes while deeper chapter/episode planning remains open.
+Exodus 1–6 now has selected episodes: the midwives (1:15–21), Moses’s discovery (2:3–6), burning bush (3:2–6), rod sequence (4:2–4), stubble and brick quota (5:10–13), and selected family relationships (6:16, 18, 20). Five selected signs episodes now extend Exodus 7–8 (rods, river, frogs, lice, and flies/Goshen), with exact announcement and outcome anchors. The next eight planned candidates are in Exodus 9–12; the chapter source plans retain all remaining reading-only intervals. Later planning must reconcile the existing Exodus 13–17 worlds and Tabernacle objects before commissioning duplicate artwork. Other books retain their existing primary scenes while deeper chapter/episode planning remains open.

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Dust, a failed sign, and the magicians’ words</title>
+  <desc id="desc">Three cards follow Exodus 8:17–19: dust becomes lice after Aaron strikes it, the magicians cannot reproduce the sign, then they attribute it to God’s power. Green arrows mark the sequence. Their speech is shown as text; no hand is depicted.</desc>
+  <rect width="1536" height="1024" fill="#f7f5ee"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#29664d"/>
+    </marker>
+  </defs>
+
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">A sign they cannot reproduce</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 8:16–19 · outcome, failed attempt, then speech</text>
+
+  <rect x="120" y="245" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <text x="150" y="293" fill="#172d27" font-family="Georgia,serif" font-size="30">Dust becomes lice</text>
+  <text x="150" y="349" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Aaron strikes the dust;</text>
+  <text x="150" y="376" fill="#59685f" font-family="Arial,sans-serif" font-size="24">lice spread through Egypt</text>
+  <text x="526" y="400" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">8:17</text>
+
+  <path d="M335 423V467" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="485" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <text x="150" y="522" fill="#172d27" font-family="Georgia,serif" font-size="30">The magicians cannot</text>
+  <text x="150" y="550" fill="#172d27" font-family="Georgia,serif" font-size="30">do so</text>
+  <text x="150" y="585" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The attempt fails; lice stay</text>
+  <text x="150" y="612" fill="#59685f" font-family="Arial,sans-serif" font-size="24">on people and beasts</text>
+  <text x="526" y="640" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">8:18</text>
+
+  <path d="M335 663V707" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="725" width="430" height="170" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <text x="150" y="762" fill="#172d27" font-family="Georgia,serif" font-size="30">“The finger of God”</text>
+  <text x="150" y="825" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The magicians attribute</text>
+  <text x="150" y="852" fill="#59685f" font-family="Arial,sans-serif" font-size="24">the outcome to God’s power</text>
+  <text x="526" y="880" text-anchor="end" fill="#29664d" font-family="Arial,sans-serif" font-size="22">8:19</text>
+
+  <text x="120" y="952" fill="#59685f" font-family="Arial,sans-serif" font-size="22">The final card reports speech; no physical hand is shown.</text>
+</svg>

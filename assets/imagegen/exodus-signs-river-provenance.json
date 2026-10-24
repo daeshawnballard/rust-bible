@@ -1,0 +1,85 @@
+{
+  "asset_id": "exodus-signs-river",
+  "generated_at_local": "2026-10-23T20:34:45-04:00",
+  "generation": {
+    "tool": "built-in image_gen",
+    "provider_receipt": "Unknown; no receipt identifier was exposed in the captured response.",
+    "returned_output_hint": "Unknown; the generated image file was located in the task's default CODEX_HOME generated_images directory.",
+    "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16b4e-add5-7921-b9b3-431a541282aa/exec-8cebc5c8-8a98-403b-81e7-17a4d08339b1.png",
+    "reference_images": [
+      {
+        "role": "style reference only",
+        "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-expansion-bush.webp",
+        "sha256": "a2d64063fd78a0144ddfc41dc6c2d8481bdedfcebf0bc21f5549b5151d8bc8be"
+      }
+    ],
+    "exact_prompt": "Create one landscape 3:2 production illustration (target 1536×1024) for a Bible Journey chapter scene: Exodus 7:19–21, the river is struck with the rod and its water becomes undrinkable. Image 1 is a style reference only: match its detailed, painterly-realistic historical editorial reconstruction, warm cinematic natural light, grounded human scale, earthy palette, finely rendered worn textiles and riverbank environment. Do not copy its subject or composition.\n\nScene and composition: a broad ancient Egyptian riverbank at the instant of the rod striking the water, with Moses and Aaron present and Pharaoh with several servants witnessing from the bank. Show two biblical figures in the foreground left/center; one figure visibly holds a long wooden rod in direct contact with the river surface. This is a respectful visual reconstruction of the action in Exodus 7:19–20; do not add labels or claim definitive portrait attribution for the singular actor in verse 20. The river water is unmistakably changed to deep natural crimson-red across the visible river, while retaining convincing water reflections and ripples. Include only a few small dead fish near the surface if visually natural, minimal and nongraphic. Quietly suggest inability to drink with simple water vessels set aside at the bank, without a singled-out water-carrier or invented dramatic reaction. The changed water and rod-to-water contact are the main readable subjects.\n\nPlace main meaningful subjects within x=15–60%, y=20–72%. Keep the rightmost 32% calm and comparatively uncluttered with distant river, sky, and land for a scripture window overlay. Keep the bottom 12% visually quiet for audio controls. Landscape 3:2 composition.\n\nAvoid all text, letters, captions, scripture, map labels, interface elements, circles, rings, hotspot markers, borders, and collage/mockup treatment. No gore, no human divinity, no supernatural figure, no additional narrative elements, no exaggerated violence or panic."
+  },
+  "source": {
+    "version": "King James Version",
+    "verses": "Exodus 7:19–21",
+    "data_path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/data/kjv.json",
+    "data_sha256": "fc99486e7d3b86e4ad1f0f424b36ab41b4ec4db858a776bd13aee1b7910f136b",
+    "brief_path": "/Users/daeshawnballard/Documents/Codex/2026-10-23/rust-bible-exodus-7-12/river-source-brief.md",
+    "brief_sha256": "7374cf5b1ccd486153e95385b621186d428c8f6c904c95891fd7098f3a8a0418",
+    "active_title": "The river is struck with the rod",
+    "active_anchor": "Exodus 7:20",
+    "active_sources": [
+      "Exodus 7:19",
+      "Exodus 7:20"
+    ],
+    "companion_title": "Water that cannot be drunk",
+    "companion_anchor": "Exodus 7:21",
+    "companion_sources": [
+      "Exodus 7:21"
+    ],
+    "actor_attribution": "The image depicts a reconstruction of the commanded action. Exodus 7:20 names Moses and Aaron but does not unambiguously identify the singular actor who lifts and strikes the rod."
+  },
+  "output": {
+    "original_png": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-signs-river-source.png",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "1bf8d08e892322f7bb569623ac395ebbe379db9e791bde699d985bc6931b3e6a",
+      "bytes": 2860969
+    },
+    "optimized_webp": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp",
+      "dimensions_px": [
+        1536,
+        1024
+      ],
+      "sha256": "b0354859710a7285326d768b67b24193b72a899ecc8dc39df673ec2f558f4410",
+      "bytes": 463042
+    },
+    "conversion_command": "cwebp -quiet -q 90 -m 6 assets/imagegen/source/exodus-signs-river-source.png -o web/art/journey/exodus-signs-river.webp"
+  },
+  "visual_inspection": {
+    "checked": [
+      "generated PNG at original resolution",
+      "converted WebP at original resolution"
+    ],
+    "observations": [
+      "The rod visibly contacts the river at the transition point.",
+      "The changed water reads as deep red and occupies the lower/right river surface.",
+      "Moses, Aaron, Pharaoh, and servants are visible; no named actor attribution is encoded.",
+      "The rightmost 32% is calm sky, distant bank, and river, suitable as overlay space.",
+      "Dead fish are minimal and nongraphic; no dedicated water-carrier figure, text, UI, rings, or hotspot markers."
+    ],
+    "proposed_hotspot_coordinates_percent": {
+      "active_7_20_rod_strike": {
+        "x": 57,
+        "y": 77.8,
+        "target": "rod contact with red water"
+      },
+      "companion_7_21_undrinkable_water": {
+        "x": 76,
+        "y": 73.5,
+        "target": "clear changed river surface"
+      }
+    },
+    "coordinate_note": "Coordinates were chosen after inspecting both final rasters; they identify visible scene points, not verified app pins."
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "reviewed": "2026-10-23",
+  "method": "Root inspected final production paintings before choosing marker coordinates; live geometry checks are separate.",
+  "scenes": [
+    {
+      "id": "exodus-signs-rods",
+      "art_path": "/art/journey/exodus-signs-rods.svg",
+      "sha256": "11bd73ee1629bf39a15d14c153c25bad28e7bec7051b831409e42409259f7ff9",
+      "subjects": [
+        {
+          "id": "exodus-signs-rods-aaron-down",
+          "title": "Aaron casts down the rod",
+          "x": 21.81,
+          "y": 38.57,
+          "anchor": {
+            "chapter": 7,
+            "first": 10,
+            "last": 10
+          },
+          "active": [
+            {
+              "chapter": 7,
+              "first": 10,
+              "last": 10
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-rods-magicians-cast",
+          "title": "The magicians imitate the sign",
+          "x": 21.81,
+          "y": 62.01,
+          "anchor": {
+            "chapter": 7,
+            "first": 11,
+            "last": 11
+          },
+          "active": [
+            {
+              "chapter": 7,
+              "first": 11,
+              "last": 11
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-rods-swallow",
+          "title": "Aaron’s rod swallows theirs",
+          "x": 21.81,
+          "y": 85.45,
+          "anchor": {
+            "chapter": 7,
+            "first": 12,
+            "last": 12
+          },
+          "active": [
+            {
+              "chapter": 7,
+              "first": 12,
+              "last": 12
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-river",
+      "art_path": "/art/journey/exodus-signs-river.webp",
+      "sha256": "b0354859710a7285326d768b67b24193b72a899ecc8dc39df673ec2f558f4410",
+      "subjects": [
+        {
+          "id": "exodus-signs-river-struck",
+          "title": "The river is struck with the rod",
+          "x": 58,
+          "y": 68,
+          "anchor": {
+            "chapter": 7,
+            "first": 20,
+            "last": 20
+          },
+          "active": [
+            {
+              "chapter": 7,
+              "first": 20,
+              "last": 20
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-river-undrinkable",
+          "title": "Water that cannot be drunk",
+          "x": 48,
+          "y": 80,
+          "anchor": {
+            "chapter": 7,
+            "first": 21,
+            "last": 21
+          },
+          "active": [
+            {
+              "chapter": 7,
+              "first": 21,
+              "last": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-frogs",
+      "art_path": "/art/journey/exodus-signs-frogs.webp",
+      "sha256": "92caf9b97da49e285a59a3c9bdb70c2f2a39e2eb3454de0f7daa18db91335438",
+      "subjects": [
+        {
+          "id": "exodus-signs-frogs-trough",
+          "title": "Frogs in the kneading troughs",
+          "x": 29,
+          "y": 46,
+          "anchor": {
+            "chapter": 8,
+            "first": 3,
+            "last": 3
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 3,
+              "last": 3
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-frogs-land",
+          "title": "Frogs cover the land of Egypt",
+          "x": 59,
+          "y": 65,
+          "anchor": {
+            "chapter": 8,
+            "first": 6,
+            "last": 6
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 6,
+              "last": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-lice",
+      "art_path": "/art/journey/exodus-signs-lice.svg",
+      "sha256": "46049651ed3a6d883962485161d7d84943a04613908c582b49f11f3f1d959feb",
+      "subjects": [
+        {
+          "id": "exodus-signs-lice-dust",
+          "title": "Dust becomes lice",
+          "x": 21.81,
+          "y": 38.57,
+          "anchor": {
+            "chapter": 8,
+            "first": 17,
+            "last": 17
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 17,
+              "last": 17
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-lice-magicians-cannot",
+          "title": "The magicians cannot do so",
+          "x": 21.81,
+          "y": 62.01,
+          "anchor": {
+            "chapter": 8,
+            "first": 18,
+            "last": 18
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 18,
+              "last": 18
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-lice-gods-finger",
+          "title": "The finger of God",
+          "x": 21.81,
+          "y": 85.45,
+          "anchor": {
+            "chapter": 8,
+            "first": 19,
+            "last": 19
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 19,
+              "last": 19
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exodus-signs-flies",
+      "art_path": "/art/journey/exodus-signs-flies.svg",
+      "sha256": "6d043a1a3eb0ae38812bae4702f21d91453be73e0479436d62ea30b5c410515c",
+      "subjects": [
+        {
+          "id": "exodus-signs-flies-houses",
+          "title": "Swarms enter the houses",
+          "x": 21.81,
+          "y": 44.92,
+          "anchor": {
+            "chapter": 8,
+            "first": 24,
+            "last": 24
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 24,
+              "last": 24
+            }
+          ]
+        },
+        {
+          "id": "exodus-signs-flies-goshen",
+          "title": "Goshen is set apart",
+          "x": 21.81,
+          "y": 75.2,
+          "anchor": {
+            "chapter": 8,
+            "first": 22,
+            "last": 22
+          },
+          "active": [
+            {
+              "chapter": 8,
+              "first": 22,
+              "last": 23
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "River provider receipt/output hint not captured; worker source/output hashes retained.",
+    "The frogs final image contains incidental frogs in the bottom audio band after two attempts. The selected trough/ground subjects are above that area; no further generation was attempted.",
+    "River rod-contact coordinates were corrected after root visual inspection; worker-proposed y77.8 percent was not adopted.",
+    "Rod imitation auto-follow is limited to7:11 so it cannot shadow the swallowing at7:12. Source explanation includes7:11–12."
+  ]
+}
