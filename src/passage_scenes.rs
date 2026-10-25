@@ -51,6 +51,7 @@ struct Hotspot {
     title: String,
     x: f64,
     y: f64,
+    focus_x: Option<f64>,
     active: Vec<VerseRange>,
     anchor: VerseRange,
     sources: Vec<VerseRange>,
@@ -71,6 +72,25 @@ fn catalog() -> &'static Catalog {
 
 fn scenes() -> &'static [Scene] {
     &catalog().scenes
+}
+
+// Chapter outlines are a separate editorial layer. Keeping them out of the
+// focused catalog preserves its non-overlapping, depicted-passage contract.
+fn companions() -> &'static [Scene] {
+    static SCENES: OnceLock<Vec<Scene>> = OnceLock::new();
+    SCENES.get_or_init(|| {
+        [
+            include_str!("../data/journey/exodus-chapter-companions.json"),
+            include_str!("../data/journey/leviticus-chapter-companions.json"),
+        ]
+        .into_iter()
+        .flat_map(|source| {
+            let catalog: Catalog = serde_json::from_str(source).expect("valid chapter companions");
+            assert_eq!(catalog.schema_version, 1);
+            catalog.scenes
+        })
+        .collect()
+    })
 }
 
 fn contains(range: &VerseRange, chapter: usize, verse: usize) -> bool {
@@ -202,8 +222,12 @@ fn render_html(scene: &Scene, active: Option<&Hotspot>, client: bool) -> String 
         };
         let reference = ref_label(scene.book, &hotspot.anchor);
         let label = format!("Inspect {} · {}", hotspot.title, reference);
+        let focus = hotspot
+            .focus_x
+            .map(|x| format!(" data-context-focus-x=\"{x}\""))
+            .unwrap_or_default();
         html.push_str(&format!(
-            r#"<a class="story-journey-pin" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" data-context-subject="{}" style="left:{}%;top:{}%" aria-label="{}"{}><span aria-hidden="true">●</span><span>{}</span></a>"#,
+            r#"<a class="story-journey-pin" href="{}" data-context-read data-context-book="{}" data-context-chapter="{}" data-context-verse="{}" data-context-subject="{}" style="left:{}%;top:{}%" aria-label="{}"{}{focus}><span aria-hidden="true">●</span><span>{}</span></a>"#,
             esc(&href(scene.book, &hotspot.anchor, client)),
             esc(&book_slug),
             hotspot.anchor.chapter,
@@ -304,6 +328,50 @@ pub(super) fn render_selected(
 /// Whether any authored scene range touches this chapter.
 pub(super) fn available(book: usize, chapter: usize) -> bool {
     scene_for_chapter(book, chapter).is_some()
+        || companions()
+            .iter()
+            .any(|s| s.book == book && s.ranges.iter().any(|r| r.chapter == chapter))
+}
+
+/// A source-linked chapter diagram fills reading intervals without a painting.
+/// It never enlarges a focused scene's source bounds.
+pub(super) fn inspect_companion(
+    book: usize,
+    chapter: usize,
+    verse: usize,
+    subject: &str,
+    client: bool,
+) -> Option<Value> {
+    companions().iter().find(|s| {
+        s.book == book
+            && in_ranges(&s.ranges, chapter, verse)
+            && s.hotspots
+                .iter()
+                .any(|h| h.id == subject && in_ranges(&h.active, chapter, verse))
+    })?;
+    render_companion(book, chapter, verse, Some(subject), client)
+}
+
+pub(super) fn render_companion(
+    book: usize,
+    chapter: usize,
+    verse: usize,
+    subject: Option<&str>,
+    client: bool,
+) -> Option<Value> {
+    let scene = companions()
+        .iter()
+        .find(|s| s.book == book && in_ranges(&s.ranges, chapter, verse))?;
+    let active = selected_hotspot(scene, chapter, verse, subject);
+    Some(json!({
+        "kind": "story",
+        "medium": "chapter-diagram",
+        "id": scene.id,
+        "scene": scene.id,
+        "title": scene.title,
+        "active": active.map(|hotspot| hotspot.id.as_str()),
+        "html": render_html(scene, active, client)
+    }))
 }
 
 #[cfg(test)]
@@ -397,6 +465,9 @@ mod tests {
                 assert_eq!(
                     available(book, chapter),
                     covered.iter().any(|(b, c, _)| *b == book && *c == chapter)
+                        || companions().iter().any(
+                            |s| s.book == book && s.ranges.iter().any(|r| r.chapter == chapter)
+                        )
                 );
                 for verse in 1..=verses.len() {
                     if !covered.contains(&(book, chapter, verse)) {
@@ -405,6 +476,98 @@ mod tests {
                 }
             }
         }
+    }
+
+    #[test]
+    fn new_exodus_paintings_follow_each_subject_without_masking_the_next() {
+        for scene in scenes()
+            .iter()
+            .filter(|s| s.id.starts_with("exodus-completion-"))
+        {
+            for range in &scene.ranges {
+                for verse in range.first..=range.last {
+                    let subjects: Vec<_> = scene
+                        .hotspots
+                        .iter()
+                        .filter(|h| in_ranges(&h.active, range.chapter, verse))
+                        .collect();
+                    assert_eq!(subjects.len(), 1, "{} verse {verse}", scene.id);
+                    assert_eq!(
+                        render(1, range.chapter, verse, true).unwrap()["active"],
+                        subjects[0].id
+                    );
+                }
+            }
+        }
+        assert_eq!(
+            render(1, 40, 35, true).unwrap()["active"],
+            "exodus-completion-moses-outside"
+        );
+        assert!(render(1, 17, 5, true).is_none());
+    }
+
+    #[test]
+    fn chapter_companions_partition_every_verse_without_expanding_paintings() {
+        for book in [1, 2] {
+            let mut ids = HashSet::new();
+            assert_eq!(
+                companions().iter().filter(|s| s.book == book).count(),
+                bible().books[book].len()
+            );
+            for (index, verses) in bible().books[book].iter().enumerate() {
+                let chapter = index + 1;
+                let matching: Vec<_> = companions()
+                    .iter()
+                    .filter(|s| s.book == book && in_ranges(&s.ranges, chapter, 1))
+                    .collect();
+                assert_eq!(matching.len(), 1);
+                let scene = matching[0];
+                assert_eq!(scene.book, book);
+                assert!(ids.insert(&scene.id));
+                valid_art(&scene.art);
+                for hotspot in &scene.hotspots {
+                    assert!(ids.insert(&hotspot.id));
+                    valid_range(book, &hotspot.anchor);
+                    assert!(in_ranges(&hotspot.active, chapter, hotspot.anchor.first));
+                    assert!(!hotspot.title.is_empty() && !hotspot.note.is_empty());
+                    assert!((0.0..=100.0).contains(&hotspot.x));
+                    assert!((0.0..=100.0).contains(&hotspot.y));
+                    for range in hotspot.active.iter().chain(&hotspot.sources) {
+                        valid_range(book, range);
+                        assert_eq!(range.chapter, chapter);
+                    }
+                    if let Some(art) = &hotspot.detail {
+                        assert!(Path::new("web")
+                            .join(art.path.trim_start_matches('/'))
+                            .is_file());
+                    }
+                }
+                for verse in 1..=verses.len() {
+                    let active: Vec<_> = scene
+                        .hotspots
+                        .iter()
+                        .filter(|h| in_ranges(&h.active, chapter, verse))
+                        .collect();
+                    assert_eq!(active.len(), 1, "Exodus {chapter}:{verse}");
+                    assert!(in_ranges(&active[0].sources, chapter, verse));
+                    let companion = render_companion(book, chapter, verse, None, true).unwrap();
+                    assert_eq!(companion["active"], active[0].id);
+                    // Exercise the actual route and its precedence for every verse.
+                    let response = crate::route(
+                    &format!(
+                        "/api/reader-context?book={book}&chapter={chapter}&verse={verse}&mode=journey"
+                    ),
+                    true,
+                );
+                    assert_eq!(response.status, 200);
+                    let returned: Value = serde_json::from_str(&response.body).unwrap();
+                    let expected = scene_for_verse(book, chapter, verse).unwrap_or(scene);
+                    assert_eq!(returned["scene"], expected.id, "Exodus {chapter}:{verse}");
+                }
+            }
+        }
+        assert!(render_companion(0, 1, 1, None, true).is_none());
+        assert!(render_companion(1, 41, 1, None, true).is_none());
     }
 
     #[test]
@@ -501,6 +664,7 @@ mod tests {
         };
         let hotspot = |id: &str| Hotspot {
             id: id.into(),
+            focus_x: None,
             title: id.into(),
             x: 30.0,
             y: 40.0,

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1660" viewBox="0 0 1536 1660" role="img" aria-labelledby="title desc">
+  <title id="title">Exodus 35 · Chapter outline</title>
+  <desc id="desc">A vertical column of 4 text cards partitions all 35 verses in Exodus 35. The diagram separates reading stages and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="1660" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Exodus 35 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 35:1–35 · 4 source-based reading stages</text>
+  <line x1="88" y1="389" x2="120" y2="389" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="288" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="389" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">Sabbath rest repeated</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">before the work</text>
+  <text x="150" y="360" fill="#172d27" font-family="Georgia,serif" font-size="30">instructions</text>
+  <text x="150" y="399" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 35:1–3</text>
+  <text x="150" y="433" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses commands Sabbath rest</text>
+  <text x="150" y="463" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and forbids kindling fire</text>
+  <text x="150" y="493" fill="#59685f" font-family="Arial,sans-serif" font-size="24">on that day.</text>
+  <path d="M335 543V593" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="729" x2="120" y2="729" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="603" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="729" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="646" fill="#172d27" font-family="Georgia,serif" font-size="30">Materials and work to</text>
+  <text x="150" y="682" fill="#172d27" font-family="Georgia,serif" font-size="30">be made</text>
+  <text x="150" y="721" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 35:4–19</text>
+  <text x="150" y="755" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses lists willing gifts</text>
+  <text x="150" y="785" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and the sanctuary</text>
+  <text x="150" y="815" fill="#59685f" font-family="Arial,sans-serif" font-size="24">furnishings to be made.</text>
+  <path d="M335 865V915" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1084" x2="120" y2="1084" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="925" width="430" height="318" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1084" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="968" fill="#172d27" font-family="Georgia,serif" font-size="30">Willing gifts,</text>
+  <text x="150" y="1004" fill="#172d27" font-family="Georgia,serif" font-size="30">spinning, stones, and</text>
+  <text x="150" y="1040" fill="#172d27" font-family="Georgia,serif" font-size="30">spices</text>
+  <text x="150" y="1079" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 35:20–29</text>
+  <text x="150" y="1113" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The people bring offerings;</text>
+  <text x="150" y="1143" fill="#59685f" font-family="Arial,sans-serif" font-size="24">women spin thread, and</text>
+  <text x="150" y="1173" fill="#59685f" font-family="Arial,sans-serif" font-size="24">rulers bring stones and</text>
+  <text x="150" y="1203" fill="#59685f" font-family="Arial,sans-serif" font-size="24">spices.</text>
+  <path d="M335 1253V1303" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1439" x2="120" y2="1439" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1313" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1439" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1356" fill="#172d27" font-family="Georgia,serif" font-size="30">Bezalel and Aholiab</text>
+  <text x="150" y="1392" fill="#172d27" font-family="Georgia,serif" font-size="30">lead skilled work</text>
+  <text x="150" y="1431" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 35:30–35</text>
+  <text x="150" y="1465" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Bezalel and Aholiab are</text>
+  <text x="150" y="1495" fill="#59685f" font-family="Arial,sans-serif" font-size="24">appointed to lead and teach</text>
+  <text x="150" y="1525" fill="#59685f" font-family="Arial,sans-serif" font-size="24">skilled work.</text>
+  <text x="120" y="1625" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; the diagram is a reading outline, not a scene or map.</text>
+</svg>

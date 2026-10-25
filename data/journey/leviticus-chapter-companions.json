@@ -1,0 +1,5782 @@
+{
+  "schema_version": 1,
+  "scenes": [
+    {
+      "id": "leviticus-chapter-01",
+      "book": 2,
+      "title": "Leviticus 1 · Burnt Offerings",
+      "coverage": "Chapter outline · Leviticus 1:1–17",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 1,
+          "first": 1,
+          "last": 17
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-01.svg",
+        "width": 1536,
+        "height": 1678,
+        "alt": "Editorial chapter diagram for Leviticus 1: 4 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 1 · Burnt Offerings",
+        "note": "This native text diagram separates Leviticus 1 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-01-unit-01",
+          "title": "Offerings brought to the LORD",
+          "x": 5.73,
+          "y": 23.0036,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "note": "Verse 1 locates the speech at the tabernacle; verse 2 begins general instructions. These verses introduce rules, not a narrated offering.",
+          "summary": "The LORD speaks to Moses from the tabernacle and begins instructions for offerings from herd and flock.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-01-unit-02",
+          "title": "A burnt offering from the herd",
+          "x": 5.73,
+          "y": 43.9809,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 3,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 3,
+              "last": 9
+            }
+          ],
+          "note": "This is a procedure prescribed for a voluntary burnt offering from the herd. The text does not say that a particular offerer performs it.",
+          "summary": "The offerer brings an unblemished male and follows the prescribed altar, blood, and portion instructions.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-01-unit-03",
+          "title": "A burnt offering from the flock",
+          "x": 5.73,
+          "y": 64.9583,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 10,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 10,
+              "last": 13
+            }
+          ],
+          "note": "These verses prescribe the flock option for a burnt offering; they are not a narrated event.",
+          "summary": "A male sheep or goat without blemish is offered under a procedure adapted to the flock.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-01-unit-04",
+          "title": "A burnt offering of birds",
+          "x": 5.73,
+          "y": 85.9356,
+          "active": [
+            {
+              "chapter": 1,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 1,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 1,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "note": "This is the prescribed bird offering procedure. The text describes ritual handling; a scene should not add a particular household or occasion.",
+          "summary": "Turtledoves or young pigeons are permitted, with the priest carrying out the altar instructions.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-02",
+      "book": 2,
+      "title": "Leviticus 2 · Grain Offerings",
+      "coverage": "Chapter outline · Leviticus 2:1–16",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 1,
+          "last": 16
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-02.svg",
+        "width": 1536,
+        "height": 1738,
+        "alt": "Editorial chapter diagram for Leviticus 2: 4 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 2 · Grain Offerings",
+        "note": "This native text diagram separates Leviticus 2 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-02-unit-01",
+          "title": "Fine flour, oil, and frankincense",
+          "x": 5.73,
+          "y": 22.2094,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "The KJV calls this a “meat offering”; here that term means a grain offering. These verses prescribe the offering and priestly share.",
+          "summary": "A portion of fine flour, oil, and frankincense is burned; the remainder is assigned to Aaron and his sons.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-02-unit-02",
+          "title": "Grain offerings prepared with oil",
+          "x": 5.73,
+          "y": 43.3257,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 4,
+              "last": 10
+            }
+          ],
+          "note": "The KJV “meat offering” is a grain offering. Verses 4–7 list preparation forms; verses 8–10 direct presentation and priestly portions.",
+          "summary": "Oven-baked, griddled, or pan-cooked unleavened offerings are presented, with a portion burned and the rest kept by priests.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-02-unit-03",
+          "title": "Leaven, honey, and covenant salt",
+          "x": 5.73,
+          "y": 64.4419,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 11,
+              "last": 13
+            }
+          ],
+          "note": "The firstfruits exception is specific: they may be offered, but verse 12 says they are not burned on the altar for a sweet savour. The salt rule applies to every offering.",
+          "summary": "The offering must not include leaven or honey; salt is required, and firstfruits are not burned as a sweet savour.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-02-unit-04",
+          "title": "An offering of firstfruits",
+          "x": 5.73,
+          "y": 85.5581,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 14,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 14,
+              "last": 16
+            }
+          ],
+          "note": "These are instructions for a firstfruits grain offering. “Corn” in this KJV passage refers to grain, not modern maize.",
+          "summary": "Dried, beaten ears of firstfruits are offered with oil and frankincense; the priest burns a memorial portion.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-03",
+      "book": 2,
+      "title": "Leviticus 3 · Peace Offerings",
+      "coverage": "Chapter outline · Leviticus 3:1–17",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 3,
+          "first": 1,
+          "last": 17
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-03.svg",
+        "width": 1536,
+        "height": 1648,
+        "alt": "Editorial chapter diagram for Leviticus 3: 4 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 3 · Peace Offerings",
+        "note": "This native text diagram separates Leviticus 3 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-03-unit-01",
+          "title": "A peace offering from the herd",
+          "x": 5.73,
+          "y": 23.4223,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "These verses prescribe a herd peace offering and the portion burned on the altar. They do not narrate a particular sacrifice.",
+          "summary": "A male or female from the herd may be offered without blemish; the priest burns the specified fat portions.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-03-unit-02",
+          "title": "A peace offering from the flock",
+          "x": 5.73,
+          "y": 44.7816,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 6,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 6,
+              "last": 11
+            }
+          ],
+          "note": "These are instructions for a sheep peace offering. The rite and portions are prescribed, not narrated as taking place.",
+          "summary": "An unblemished sheep may be offered, with the priest burning the specified portions on the altar.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-03-unit-03",
+          "title": "A peace offering of a goat",
+          "x": 5.73,
+          "y": 65.2306,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 12,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 12,
+              "last": 16
+            }
+          ],
+          "note": "These verses prescribe the goat option and its altar portion; they are not a report of an event.",
+          "summary": "For a goat, the priest removes and burns the listed fat portions on the altar.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-03-unit-04",
+          "title": "Fat and blood are forbidden as food",
+          "x": 5.73,
+          "y": 85.6796,
+          "active": [
+            {
+              "chapter": 3,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 3,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 3,
+              "first": 17,
+              "last": 17
+            }
+          ],
+          "note": "Verse 17 states a rule for Israel across generations and dwellings, following the offering instructions.",
+          "summary": "Israel must not eat the fat or blood of these animals; the restriction is given as a lasting statute.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-04",
+      "book": 2,
+      "title": "Leviticus 4 · Sin Offerings",
+      "coverage": "Chapter outline · Leviticus 4:1–35",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 4,
+          "first": 1,
+          "last": 35
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-04.svg",
+        "width": 1536,
+        "height": 2024,
+        "alt": "Editorial chapter diagram for Leviticus 4: 5 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 4 · Sin Offerings",
+        "note": "This native text diagram separates Leviticus 4 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-04-unit-01",
+          "title": "Cases of inadvertent sin",
+          "x": 5.73,
+          "y": 18.33,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "note": "Verse 1 reports the start of the LORD’s speech; verse 2 sets the conditional scope of the law. No individual sin is narrated.",
+          "summary": "The chapter introduces cases of inadvertent sin against the LORD’s commandments.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-04-unit-02",
+          "title": "The anointed priest’s offering",
+          "x": 5.73,
+          "y": 35.7213,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 3,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 3,
+              "last": 12
+            }
+          ],
+          "note": "This is the prescribed response if the anointed priest sins. The conditional law is not an account of a particular priest’s act.",
+          "summary": "A bullock is prescribed for the anointed priest, with blood brought into the sanctuary and the remains burned outside the camp.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-04-unit-03",
+          "title": "The congregation’s offering",
+          "x": 5.73,
+          "y": 54.5949,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 13,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 13,
+              "last": 21
+            }
+          ],
+          "note": "This section legislates for an unintentional congregational offense once it becomes known; it does not narrate such an offense.",
+          "summary": "If the congregation sins unknowingly, its elders present a bullock and the priest follows the prescribed rites.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-04-unit-04",
+          "title": "A ruler’s offering",
+          "x": 5.73,
+          "y": 71.8379,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 22,
+              "last": 26
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 22,
+              "last": 26
+            }
+          ],
+          "note": "These verses prescribe the ruler’s offering and priestly actions. The passage describes a case, not an event that has happened.",
+          "summary": "A ruler who sins unknowingly brings an unblemished male goat, and the priest makes atonement.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-04-unit-05",
+          "title": "An offering for a common person",
+          "x": 5.73,
+          "y": 88.3399,
+          "active": [
+            {
+              "chapter": 4,
+              "first": 27,
+              "last": 35
+            }
+          ],
+          "anchor": {
+            "chapter": 4,
+            "first": 27,
+            "last": 27
+          },
+          "sources": [
+            {
+              "chapter": 4,
+              "first": 27,
+              "last": 35
+            }
+          ],
+          "note": "These verses give the common person’s options and procedure. They are conditional instructions, not a report of a particular person sinning.",
+          "summary": "A common person brings an unblemished female goat or lamb; the priest makes atonement as prescribed.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-05",
+      "book": 2,
+      "title": "Leviticus 5 · Confession and Guilt Offerings",
+      "coverage": "Chapter outline · Leviticus 5:1–19",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 5,
+          "first": 1,
+          "last": 19
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-05.svg",
+        "width": 1536,
+        "height": 1708,
+        "alt": "Editorial chapter diagram for Leviticus 5: 4 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 5 · Confession and Guilt Offerings",
+        "note": "This native text diagram separates Leviticus 5 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-05-unit-01",
+          "title": "Confession and a flock offering",
+          "x": 5.73,
+          "y": 23.4778,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 1,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 1,
+              "last": 6
+            }
+          ],
+          "note": "Verses 1–4 describe cases that incur guilt; verses 5–6 prescribe confession and an offering. These are legal instructions, not narrated incidents.",
+          "summary": "The law names failures involving testimony, uncleanness, and rash oaths, then requires confession and a female lamb or goat.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-05-unit-02",
+          "title": "Offerings for those with less means",
+          "x": 5.73,
+          "y": 44.9649,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 7,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 7,
+              "last": 13
+            }
+          ],
+          "note": "This is a graduated provision for inability to afford a lamb. The flour is treated as a sin offering and has no oil or frankincense.",
+          "summary": "A person unable to bring a lamb may bring two birds; if unable to bring those, the offering may be fine flour.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-05-unit-03",
+          "title": "Restitution for holy things",
+          "x": 5.73,
+          "y": 65.5738,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 14,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 14,
+              "last": 16
+            }
+          ],
+          "note": "These verses require restitution of the harmed holy property plus one fifth, alongside the ram offering; no specific trespass is narrated.",
+          "summary": "For an inadvertent trespass involving holy things, a ram and repayment with an added fifth are prescribed.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-05-unit-04",
+          "title": "A ram for an unknown offense",
+          "x": 5.73,
+          "y": 86.1827,
+          "active": [
+            {
+              "chapter": 5,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 5,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 5,
+              "first": 17,
+              "last": 19
+            }
+          ],
+          "note": "This section prescribes an offering for an offense committed unknowingly. It does not identify a particular offender or incident.",
+          "summary": "A person who unknowingly violates a command brings a ram; the text calls it a trespass offering.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-06",
+      "book": 2,
+      "title": "Leviticus 6 · Restitution and Priestly Offering Laws",
+      "coverage": "Chapter outline · Leviticus 6:1–30",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 6,
+          "first": 1,
+          "last": 30
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-06.svg",
+        "width": 1536,
+        "height": 2120,
+        "alt": "Editorial chapter diagram for Leviticus 6: 5 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 6 · Restitution and Priestly Offering Laws",
+        "note": "This native text diagram separates Leviticus 6 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-06-unit-01",
+          "title": "Fraud, repayment, and a guilt offering",
+          "x": 5.73,
+          "y": 18.9151,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "note": "These verses state a legal case and remedy, not a narrated theft. Repayment is made to the harmed neighbor; the offering accompanies restitution.",
+          "summary": "A person who defrauds a neighbor restores the property, adds a fifth, and brings a ram for a guilt offering.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-06-unit-02",
+          "title": "The burnt offering and altar fire",
+          "x": 5.73,
+          "y": 36.934,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 8,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 8,
+              "last": 13
+            }
+          ],
+          "note": "These are ongoing priestly instructions, not a single narrated offering. The pictured object is an artistic reconstruction of the bronze Tabernacle altar, not every altar or every sacrifice; it depicts no sacrifice.",
+          "summary": "The priest tends the burnt offering overnight, removes ashes safely, and keeps the altar fire burning continually.",
+          "kind": "instruction",
+          "detail": {
+            "path": "/art/objects/altar.webp",
+            "width": 1536,
+            "height": 1024,
+            "alt": "Artist reconstruction of the bronze Tabernacle altar of burnt offering; not a depiction of a particular sacrifice."
+          },
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-06-unit-03",
+          "title": "The priests’ grain offering",
+          "x": 5.73,
+          "y": 54.2453,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 14,
+              "last": 18
+            }
+          ],
+          "note": "The KJV “meat offering” here is a grain offering. This is a rule for priestly handling and portions.",
+          "summary": "A memorial portion is burned; Aaron and his sons eat the remainder unleavened in the holy place.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-06-unit-04",
+          "title": "The daily offering of the anointed priest",
+          "x": 5.73,
+          "y": 70.8491,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 19,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 19,
+              "last": 23
+            }
+          ],
+          "note": "The KJV “meat offering” means grain offering. These verses prescribe the anointed priest’s recurring offering and the successor’s duty.",
+          "summary": "The anointed priest presents a grain offering morning and evening; the whole offering is burned and not eaten.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-06-unit-05",
+          "title": "The law of the sin offering",
+          "x": 5.73,
+          "y": 88.1604,
+          "active": [
+            {
+              "chapter": 6,
+              "first": 24,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 6,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 6,
+              "first": 24,
+              "last": 30
+            }
+          ],
+          "note": "This section prescribes how the offering and vessels are handled. The exception in verse 30 requires that offering to be burned, not eaten.",
+          "summary": "The priest eats the sin offering in the holy court, except an offering whose blood is brought into the sanctuary.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-07",
+      "book": 2,
+      "title": "Leviticus 7 · Priestly Shares and Peace Offerings",
+      "coverage": "Chapter outline · Leviticus 7:1–38",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 7,
+          "first": 1,
+          "last": 38
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-07.svg",
+        "width": 1536,
+        "height": 2824,
+        "alt": "Editorial chapter diagram for Leviticus 7: 7 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 7 · Priestly Shares and Peace Offerings",
+        "note": "This native text diagram separates Leviticus 7 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-07-unit-01",
+          "title": "The guilt offering and priestly portions",
+          "x": 5.73,
+          "y": 13.6686,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "note": "These verses give the guilt offering’s priestly law and say its atonement rule matches the sin offering. They do not narrate a particular rite.",
+          "summary": "The priest burns specified portions; males among the priests eat the remaining offering in a holy place.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-07-unit-02",
+          "title": "Shares from other offerings",
+          "x": 5.73,
+          "y": 26.6643,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 8,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 8,
+              "last": 10
+            }
+          ],
+          "note": "The KJV “meat offering” refers to grain offerings. These verses enumerate priestly shares, not a new narrated event.",
+          "summary": "The priest receives the burnt offering’s skin and certain grain offerings; other grain offerings are shared among Aaron’s sons.",
+          "kind": "list",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-07-unit-03",
+          "title": "A thanksgiving peace offering",
+          "x": 5.73,
+          "y": 39.6601,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 11,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 11,
+              "last": 15
+            }
+          ],
+          "note": "These verses prescribe a thanksgiving type of peace offering, including leavened bread in this case and same-day consumption.",
+          "summary": "Thanksgiving offerings include breads and a priestly portion; the meat is eaten on the day it is offered.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-07-unit-04",
+          "title": "Vow offerings and clean eating",
+          "x": 5.73,
+          "y": 52.6558,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 16,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 16,
+              "last": 21
+            }
+          ],
+          "note": "These are consumption and purity rules for vow or voluntary peace offerings. Verse 19 distinguishes flesh that touches an unclean thing from what clean people may eat.",
+          "summary": "A vow or voluntary offering may be eaten through the next day; third-day remains are burned, and uncleanness bars eating.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-07-unit-05",
+          "title": "Do not eat the fat or blood",
+          "x": 5.73,
+          "y": 65.6516,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 22,
+              "last": 27
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 22,
+              "last": 27
+            }
+          ],
+          "note": "The rule forbids eating fat of ox, sheep, or goat and all blood. Verses 24–25 distinguish other uses of fat from eating it.",
+          "summary": "Israel is forbidden to eat sacrificial fat or blood; fat from animals found dead or torn may be used otherwise.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-07-unit-06",
+          "title": "The breast and right shoulder",
+          "x": 5.73,
+          "y": 78.6473,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 28,
+              "last": 36
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 28,
+              "last": 36
+            }
+          ],
+          "note": "These verses prescribe the presentation and permanent priestly share from peace offerings.",
+          "summary": "The worshipper presents the breast and fat; the wave breast and right shoulder are assigned to Aaron and his sons.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-07-unit-07",
+          "title": "Summary of offering laws",
+          "x": 5.73,
+          "y": 91.6431,
+          "active": [
+            {
+              "chapter": 7,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 7,
+            "first": 37,
+            "last": 37
+          },
+          "sources": [
+            {
+              "chapter": 7,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "note": "This is a summary and setting notice, not a new sacrifice or a narrated ritual.",
+          "summary": "The closing list names the offering laws and locates their command at Sinai in the wilderness.",
+          "kind": "list",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-08",
+      "book": 2,
+      "title": "Leviticus 8 · Aaron and His Sons Consecrated",
+      "coverage": "Chapter outline · Leviticus 8:1–36",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 1,
+          "last": 36
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-08.svg",
+        "width": 1536,
+        "height": 3050,
+        "alt": "Editorial chapter diagram for Leviticus 8: 8 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 8 · Aaron and His Sons Consecrated",
+        "note": "This native text diagram separates Leviticus 8 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-08-unit-01",
+          "title": "The congregation gathers",
+          "x": 5.73,
+          "y": 12.6557,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "Verses 1–3 give instructions; verses 4–5 narrate Moses carrying them out and explaining the LORD’s command to the congregation.",
+          "summary": "Moses gathers Aaron, his sons, the garments, oil, offerings, and the assembly as commanded.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-02",
+          "title": "Aaron is washed and dressed",
+          "x": 5.73,
+          "y": 24.1967,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 6,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 6,
+              "last": 9
+            }
+          ],
+          "note": "These verses narrate the ordination as it takes place. The text names the garments and objects but does not specify every visual detail.",
+          "summary": "Moses washes Aaron and puts on the priestly garments, breastplate, Urim and Thummim, and holy crown.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-03",
+          "title": "The tabernacle and priests are anointed",
+          "x": 5.73,
+          "y": 35.7377,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 10,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 10,
+              "last": 13
+            }
+          ],
+          "note": "The text narrates Moses consecrating the sanctuary and priests with oil and dress. It supplies no portrait likenesses.",
+          "summary": "Moses anoints the tabernacle furnishings and Aaron, then clothes Aaron’s sons in priestly garments.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-04",
+          "title": "The sin offering purifies the altar",
+          "x": 5.73,
+          "y": 47.2787,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "note": "This passage narrates the ordination rite. The note summarizes the steps without graphic detail; it is an event, not a general rule.",
+          "summary": "Moses performs the prescribed sin offering and purifies the altar; the remaining bullock is burned outside the camp.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-05",
+          "title": "The burnt offering is presented",
+          "x": 5.73,
+          "y": 58.3279,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 18,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 18,
+              "last": 21
+            }
+          ],
+          "note": "These verses narrate the ram offering carried out during ordination, following the instructions given earlier.",
+          "summary": "Moses presents the ram as a burnt offering and burns it whole upon the altar.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-06",
+          "title": "The ram of consecration",
+          "x": 5.73,
+          "y": 69.377,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 22,
+              "last": 29
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 22,
+              "last": 29
+            }
+          ],
+          "note": "The text narrates a specific ordination rite. The blood placement and offerings are textual details; this is not a general instruction for all Israel.",
+          "summary": "Moses applies blood to the priests’ right ears, thumbs, and toes, then waves portions and bread before the LORD.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-07",
+          "title": "The consecration meal",
+          "x": 5.73,
+          "y": 80.3279,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 30,
+              "last": 32
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 30,
+            "last": 30
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 30,
+              "last": 32
+            }
+          ],
+          "note": "Moses gives a meal instruction in verse 31, then the narrative says what remains must be burned. These are ordination-specific actions.",
+          "summary": "Moses sprinkles oil and altar blood on the priests and garments; Aaron and his sons eat the consecration meal.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-08-unit-08",
+          "title": "Seven days at the tabernacle",
+          "x": 5.73,
+          "y": 91.7705,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 33,
+              "last": 36
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 33,
+            "last": 33
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 33,
+              "last": 36
+            }
+          ],
+          "note": "Verses 33–35 prescribe a seven-day stay; verse 36 reports obedience to Moses’ instructions. The text does not narrate the passage of all seven days.",
+          "summary": "Aaron and his sons must remain at the tabernacle entrance for seven days; the text says they did as commanded.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-09",
+      "book": 2,
+      "title": "Leviticus 9 · The Priests Begin Their Service",
+      "coverage": "Chapter outline · Leviticus 9:1–24",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 9,
+          "first": 1,
+          "last": 24
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-09.svg",
+        "width": 1536,
+        "height": 2214,
+        "alt": "Editorial chapter diagram for Leviticus 9: 6 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 9 · The Priests Begin Their Service",
+        "note": "This native text diagram separates Leviticus 9 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-09-unit-01",
+          "title": "The eighth-day offerings are prepared",
+          "x": 5.73,
+          "y": 17.4345,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "note": "Verses 1–4 are instructions; verse 5 reports the people bringing the offerings. Verse 6 announces a promised appearance, which the narrative reports later in verse 23.",
+          "summary": "Moses directs Aaron and Israel to bring the prescribed offerings and says the LORD’s glory will appear.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-09-unit-02",
+          "title": "Aaron’s sin offering",
+          "x": 5.73,
+          "y": 31.8428,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "note": "This is narrated as Aaron’s action on the eighth day, not a general prescription. The text identifies the offering and its handling without requiring a graphic depiction.",
+          "summary": "Aaron performs his sin offering, and the remains are burned outside the camp.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-09-unit-03",
+          "title": "Aaron’s burnt offering",
+          "x": 5.73,
+          "y": 45.4381,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 12,
+              "last": 14
+            }
+          ],
+          "note": "This is the event’s narrated fulfillment of the burnt-offering instruction, not a new general rule.",
+          "summary": "Aaron presents the burnt offering, with its parts arranged and burned on the altar.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-09-unit-04",
+          "title": "The people’s offerings",
+          "x": 5.73,
+          "y": 59.0334,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 15,
+              "last": 17
+            }
+          ],
+          "note": "The narrative records Aaron carrying out the people’s offerings. The KJV “meat offering” in verse 17 means grain offering.",
+          "summary": "Aaron presents the people’s sin, burnt, and grain offerings as Moses commanded.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-09-unit-05",
+          "title": "The people’s peace offerings",
+          "x": 5.73,
+          "y": 73.4417,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 18,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 18,
+              "last": 21
+            }
+          ],
+          "note": "These verses narrate the peace offerings and priestly portions for the people on this occasion.",
+          "summary": "Aaron presents the people’s peace offerings and waves the breast and right shoulder before the LORD.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-09-unit-06",
+          "title": "The glory appears and fire falls",
+          "x": 5.73,
+          "y": 89.3406,
+          "active": [
+            {
+              "chapter": 9,
+              "first": 22,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 9,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 22,
+              "last": 24
+            }
+          ],
+          "note": "This is a narrated event. The KJV says fire came “from before the LORD”; an image may show fire at the altar and the people’s response, but must not portray the LORD as a human figure or add graphic sacrifice.",
+          "summary": "Moses and Aaron bless the people; the LORD’s glory appears, and fire consumes the altar offering.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-10",
+      "book": 2,
+      "title": "Leviticus 10 · Priestly service, loss, and discernment",
+      "coverage": "Chapter outline · Leviticus 10:1–20",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 10,
+          "first": 1,
+          "last": 20
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-10.svg",
+        "width": 1536,
+        "height": 2150,
+        "alt": "Editorial chapter diagram for Leviticus 10: 5 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 10 · Priestly service, loss, and discernment",
+        "note": "This native text diagram separates Leviticus 10 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-10-unit-01",
+          "title": "Nadab and Abihu's offering",
+          "x": 5.73,
+          "y": 18.6512,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "Verses 1–2 report the offering and its outcome; verse 3 gives Moses' words and Aaron's silence. Keep the deaths non-graphic and do not invent motive.",
+          "summary": "Nadab and Abihu bring uncommanded fire; they die before the LORD, Moses speaks to Aaron, and Aaron is silent.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-10-unit-02",
+          "title": "Removal and mourning instructions",
+          "x": 5.73,
+          "y": 36.4186,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 4,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 4,
+              "last": 7
+            }
+          ],
+          "note": "Verses 4–5 narrate removal; verses 6–7 give Moses' instructions and reported compliance. The text assigns communal mourning to the wider house of Israel.",
+          "summary": "Mishael and Elzaphan carry the dead out. Moses restricts Aaron's household mourning and departure from the tent; they comply.",
+          "kind": "sequence",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-10-unit-03",
+          "title": "Priestly service and teaching",
+          "x": 5.73,
+          "y": 54.186,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "note": "This is priestly service guidance; clean/unclean are ritual distinctions here, not a moral diagnosis or modern health standard.",
+          "summary": "The LORD restricts wine and strong drink during service so priests distinguish holy/common and clean/unclean and teach statutes.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-10-unit-04",
+          "title": "Offerings due to the priests",
+          "x": 5.73,
+          "y": 71.9535,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 12,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 12,
+              "last": 15
+            }
+          ],
+          "note": "The instruction distinguishes the most holy offering eaten beside the altar from the breast and shoulder eaten in a clean place.",
+          "summary": "Moses directs Aaron's household to eat the remaining grain offering and the peace-offering portions in the prescribed places.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-10-unit-05",
+          "title": "Goat offering and Aaron's reply",
+          "x": 5.73,
+          "y": 89.0233,
+          "active": [
+            {
+              "chapter": 10,
+              "first": 16,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 10,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 16,
+              "last": 20
+            }
+          ],
+          "note": "Moses states the expected handling in verses 16–18. Aaron gives his reason in verse 19; Moses is content in verse 20. Do not add a rationale beyond the exchange.",
+          "summary": "Moses finds the goat offering burned and questions Eleazar and Ithamar; Aaron explains, and Moses accepts his answer.",
+          "kind": "dialogue",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-11",
+      "book": 2,
+      "title": "Leviticus 11 · Food categories and ritual cleanness",
+      "coverage": "Chapter outline · Leviticus 11:1–47",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 11,
+          "first": 1,
+          "last": 47
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-11.svg",
+        "width": 1536,
+        "height": 3260,
+        "alt": "Editorial chapter diagram for Leviticus 11: 8 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 11 · Food categories and ritual cleanness",
+        "note": "This native text diagram separates Leviticus 11 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-11-unit-01",
+          "title": "Land-animal classification",
+          "x": 5.73,
+          "y": 12.3006,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "note": "This is Israel's ritual food classification as stated in Leviticus, not modern diet or health advice. KJV animal names need not be mapped to current species.",
+          "summary": "The text permits land animals meeting both hoof and cud criteria and names examples excluded when one feature is absent.",
+          "kind": "classification",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-02",
+          "title": "Water-creature classification",
+          "x": 5.73,
+          "y": 24.0184,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 9,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 9,
+              "last": 12
+            }
+          ],
+          "note": "The passage states a ritual distinction for Israel. Do not recast it as present-day nutrition or safety guidance.",
+          "summary": "The text distinguishes water creatures with fins and scales from those without and assigns eating categories to each.",
+          "kind": "classification",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-03",
+          "title": "Birds and winged creatures",
+          "x": 5.73,
+          "y": 35.7362,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 13,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 13,
+              "last": 23
+            }
+          ],
+          "note": "Keep the KJV labels visible where species are uncertain. This unit is a textual list and exception, not a modern zoological key.",
+          "summary": "Named birds are listed; a subset of winged creeping things with jumping legs is permitted, while other listed kinds are excluded.",
+          "kind": "list",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-04",
+          "title": "Carcass-contact rules",
+          "x": 5.73,
+          "y": 46.9018,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 24,
+              "last": 28
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 24,
+              "last": 28
+            }
+          ],
+          "note": "These are ritual status and washing instructions in the chapter, not a modern contamination protocol.",
+          "summary": "Touching or carrying specified carcasses brings ritual status until evening; washing clothes is directed in carrying cases.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-05",
+          "title": "Creeping things and affected objects",
+          "x": 5.73,
+          "y": 58.0675,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 29,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 29,
+              "last": 38
+            }
+          ],
+          "note": "The clean/unclean distinctions are ritual categories. Keep the seed and water exceptions in verses 37–38; do not turn this into modern sanitation advice.",
+          "summary": "The text names small creatures and sets rules for carcasses touching vessels, food, drink, tools, water, or seed.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-06",
+          "title": "Carcass of an edible beast",
+          "x": 5.73,
+          "y": 69.3252,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 39,
+              "last": 40
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 39,
+            "last": 39
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 39,
+              "last": 40
+            }
+          ],
+          "note": "The text gives separate directions for touching, eating, or carrying the carcass; it is not food-safety advice.",
+          "summary": "Contact with or handling of a permitted animal that dies calls for washing and evening ritual status.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-07",
+          "title": "Prohibition and holiness rationale",
+          "x": 5.73,
+          "y": 80.5828,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 41,
+              "last": 45
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 41,
+            "last": 41
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 41,
+              "last": 45
+            }
+          ],
+          "note": "Keep the rationale in the passage's own words and distinguish ritual status from moral diagnosis.",
+          "summary": "The passage prohibits eating creeping things and connects keeping its distinctions with Israel's call to be holy as the LORD is holy.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-11-unit-08",
+          "title": "Purpose of the food rules",
+          "x": 5.73,
+          "y": 92.3006,
+          "active": [
+            {
+              "chapter": 11,
+              "first": 46,
+              "last": 47
+            }
+          ],
+          "anchor": {
+            "chapter": 11,
+            "first": 46,
+            "last": 46
+          },
+          "sources": [
+            {
+              "chapter": 11,
+              "first": 46,
+              "last": 47
+            }
+          ],
+          "note": "This is the text's summary of its classifications; it does not supply a modern dietary prescription.",
+          "summary": "Closing verses summarize the creatures covered and state the aim: distinguish clean from unclean and edible from inedible.",
+          "kind": "summary",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-12",
+      "book": 2,
+      "title": "Leviticus 12 · Childbirth and purification",
+      "coverage": "Chapter outline · Leviticus 12:1–8",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 12,
+          "first": 1,
+          "last": 8
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-12.svg",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Editorial chapter diagram for Leviticus 12: 2 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 12 · Childbirth and purification",
+        "note": "This native text diagram separates Leviticus 12 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-12-unit-01",
+          "title": "Birth and postpartum ritual periods",
+          "x": 5.73,
+          "y": 39.1602,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "These are ancient ritual statuses and time rules, not moral blame or modern postpartum medical advice. Keep the two stated periods distinct.",
+          "summary": "The text sets different ritual periods after childbirth, an eighth-day circumcision for a son, and limits on sanctuary contact.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-12-unit-02",
+          "title": "Offerings after the period",
+          "x": 5.73,
+          "y": 75.0,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "The offerings mark completion in the text's ritual system; the passage does not describe childbirth as moral fault.",
+          "summary": "After the stated period, the mother brings offerings; verse 8 gives an option when a lamb is unaffordable.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-13",
+      "book": 2,
+      "title": "Leviticus 13 · Priestly classifications of signs",
+      "coverage": "Chapter outline · Leviticus 13:1–59",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 13,
+          "first": 1,
+          "last": 59
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-13.svg",
+        "width": 1536,
+        "height": 3248,
+        "alt": "Editorial chapter diagram for Leviticus 13: 8 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 13 · Priestly classifications of signs",
+        "note": "This native text diagram separates Leviticus 13 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-13-unit-01",
+          "title": "Initial skin signs and observation",
+          "x": 5.73,
+          "y": 12.3461,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "note": "KJV terms such as “leprosy” and “plague” belong to this ancient priestly classification and do not establish a modern diagnosis or treatment. Separate observation, waiting, and ruling.",
+          "summary": "A priest examines a visible sign; the text gives criteria for immediate status or two seven-day observation periods when it does not spread.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-02",
+          "title": "Changing skin signs and rulings",
+          "x": 5.73,
+          "y": 24.569,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 9,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 9,
+              "last": 17
+            }
+          ],
+          "note": "Use only the chapter's stated signs and ritual rulings; do not classify modern skin conditions. The text's criteria can change as signs change.",
+          "summary": "The priest examines longer-standing signs, widespread whiteness, raw flesh, and changes over time, pronouncing status as described.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-03",
+          "title": "Signs after a boil",
+          "x": 5.73,
+          "y": 36.2377,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 18,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 18,
+              "last": 23
+            }
+          ],
+          "note": "The KJV category is not a modern clinical diagnosis. Keep the seven-day observation in verses 21–22 separate from the stable-sign ruling in verse 23.",
+          "summary": "When a boil heals and a spot remains, the priest observes spread, depth, and hair changes before ruling on status.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-04",
+          "title": "Signs after a burn",
+          "x": 5.73,
+          "y": 46.4286,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 24,
+              "last": 28
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 24,
+              "last": 28
+            }
+          ],
+          "note": "The priestly classification is a ritual rule, not medical advice or a modern diagnosis of a burn or skin condition.",
+          "summary": "The text sets observation for a sign arising at a burn and distinguishes spreading from stable changes.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-05",
+          "title": "Head or beard signs",
+          "x": 5.73,
+          "y": 56.6195,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 29,
+              "last": 37
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 29,
+              "last": 37
+            }
+          ],
+          "note": "This is the passage's priestly process. Do not map its terms to a modern illness; retain the sequence of inspection, waiting, shaving, and ruling.",
+          "summary": "Examination of a scalp or beard sign includes a waiting period, shaving around but not over the sign, and later rulings.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-06",
+          "title": "Spots, baldness, and signs",
+          "x": 5.73,
+          "y": 67.8264,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 38,
+              "last": 44
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 38,
+            "last": 38
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 38,
+              "last": 44
+            }
+          ],
+          "note": "The chapter assigns ritual status by its own criteria; baldness alone is explicitly not classified the same way. No modern diagnosis is implied.",
+          "summary": "The priest distinguishes darkish white spots and ordinary baldness from a reddish-white sign that receives a different ruling.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-07",
+          "title": "Public and camp instructions",
+          "x": 5.73,
+          "y": 79.5874,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 45,
+              "last": 46
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 45,
+            "last": 45
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 45,
+              "last": 46
+            }
+          ],
+          "note": "Describe the ancient communal ritual rule respectfully. This status is not a modern diagnosis or a claim about a person's moral character.",
+          "summary": "For a person assigned the text's unclean status, the passage specifies clothing, public notice, and residence outside the camp.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-13-unit-08",
+          "title": "Signs in cloth and leather",
+          "x": 5.73,
+          "y": 91.8103,
+          "active": [
+            {
+              "chapter": 13,
+              "first": 47,
+              "last": 59
+            }
+          ],
+          "anchor": {
+            "chapter": 13,
+            "first": 47,
+            "last": 47
+          },
+          "sources": [
+            {
+              "chapter": 13,
+              "first": 47,
+              "last": 59
+            }
+          ],
+          "note": "This is an ancient ritual/object-status process. KJV “leprosy” for garments does not establish modern mold or textile identification; preserve the stated decision steps.",
+          "summary": "Priests inspect colored marks in fabric or leather, wait and wash when instructed, then remove, rewash, pronounce clean, or burn the item.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-14",
+      "book": 2,
+      "title": "Leviticus 14 · Ritual restoration and house signs",
+      "coverage": "Chapter outline · Leviticus 14:1–57",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 14,
+          "first": 1,
+          "last": 57
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-14.svg",
+        "width": 1536,
+        "height": 2992,
+        "alt": "Editorial chapter diagram for Leviticus 14: 7 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 14 · Ritual restoration and house signs",
+        "note": "This native text diagram separates Leviticus 14 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-14-unit-01",
+          "title": "Initial cleansing rite for a person",
+          "x": 5.73,
+          "y": 13.9037,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 1,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 1,
+              "last": 9
+            }
+          ],
+          "note": "Priestly observation precedes the prescribed rite. This is an ancient purification sequence, not a medical cure; do not identify the KJV category with a modern condition.",
+          "summary": "After the priest sees the sign healed, the text outlines birds, water, washing, shaving, and staged return to camp over seven days.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-14-unit-02",
+          "title": "Eighth-day offerings and rite",
+          "x": 5.73,
+          "y": 27.1725,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 10,
+              "last": 20
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 10,
+              "last": 20
+            }
+          ],
+          "note": "These are ritual instructions and actions after the first period. Keep the gestures and offerings in the order the text gives; no clinical meaning is claimed.",
+          "summary": "On day eight, the priest presents offerings and applies blood and oil at the ear, thumb, and toe before making the offerings.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-14-unit-03",
+          "title": "Offering for limited means",
+          "x": 5.73,
+          "y": 39.9398,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 21,
+              "last": 32
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 21,
+            "last": 21
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 21,
+              "last": 32
+            }
+          ],
+          "note": "The text expressly adjusts the offering to what the person can afford. Keep this provision distinct from the standard set in verses 10–20.",
+          "summary": "A person unable to provide the full offering brings one lamb, measured flour and oil, and two birds; the priest follows the stated rite.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-14-unit-04",
+          "title": "First house inspection and repair",
+          "x": 5.73,
+          "y": 53.2086,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 33,
+              "last": 42
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 33,
+              "last": 42
+            }
+          ],
+          "note": "This passage treats the sign as a ritual classification and gives a repair sequence; it is not a modern mold diagnosis or building code.",
+          "summary": "For a suspected house sign, contents are removed, the house is shut for seven days, then affected stones and plaster are removed and replaced if it has spread.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-14-unit-05",
+          "title": "Recurrence and house ruling",
+          "x": 5.73,
+          "y": 66.9786,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 43,
+              "last": 48
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 43,
+            "last": 43
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 43,
+              "last": 48
+            }
+          ],
+          "note": "Verses 43–45 state the recurrence branch; verses 46–47 give contact-related washing; verse 48 states the no-spread ruling. Do not collapse these alternatives.",
+          "summary": "If the sign returns, the house is declared unclean and dismantled; if it has not spread after replastering, the priest pronounces it clean.",
+          "kind": "process",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-14-unit-06",
+          "title": "House-cleansing rite",
+          "x": 5.73,
+          "y": 79.6457,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 49,
+              "last": 53
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 49,
+            "last": 49
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 49,
+              "last": 53
+            }
+          ],
+          "note": "This rite follows the house assessment. Keep it distinct from inspection and repair; it is ritual language, not a claim about modern sanitation.",
+          "summary": "The priest uses two birds, running water, cedar, scarlet, and hyssop, releases the living bird, and pronounces the house clean.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-14-unit-07",
+          "title": "Summary of these laws",
+          "x": 5.73,
+          "y": 91.7112,
+          "active": [
+            {
+              "chapter": 14,
+              "first": 54,
+              "last": 57
+            }
+          ],
+          "anchor": {
+            "chapter": 14,
+            "first": 54,
+            "last": 54
+          },
+          "sources": [
+            {
+              "chapter": 14,
+              "first": 54,
+              "last": 57
+            }
+          ],
+          "note": "KJV terms in this chapter describe ancient ritual classifications; they are not a modern disease or building-material taxonomy.",
+          "summary": "The closing verses recap signs on skin, hair, garments, and houses and state the purpose: teach when the text calls clean or unclean.",
+          "kind": "summary",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-15",
+      "book": 2,
+      "title": "Leviticus 15 · Bodily flows and ritual status",
+      "coverage": "Chapter outline · Leviticus 15:1–33",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 15,
+          "first": 1,
+          "last": 33
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-15.svg",
+        "width": 1536,
+        "height": 2466,
+        "alt": "Editorial chapter diagram for Leviticus 15: 6 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 15 · Bodily flows and ritual status",
+        "note": "This native text diagram separates Leviticus 15 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-15-unit-01",
+          "title": "Issue and contact rules",
+          "x": 5.73,
+          "y": 15.6529,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 1,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 1,
+              "last": 12
+            }
+          ],
+          "note": "Ritual status in this chapter is distinct from moral diagnosis. The KJV language is not a modern clinical description or health instruction.",
+          "summary": "The text sets ritual status and washing rules for a man's bodily issue and for people or objects that contact him.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-15-unit-02",
+          "title": "After the issue ceases",
+          "x": 5.73,
+          "y": 29.1971,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 13,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 13,
+              "last": 15
+            }
+          ],
+          "note": "The timing and offerings are ritual instructions; they are not a treatment regimen. Keep cessation, waiting, and offerings in order.",
+          "summary": "After the issue is cleansed, the text gives seven-day washing rules and eighth-day offerings.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-15-unit-03",
+          "title": "Seminal emission and contact",
+          "x": 5.73,
+          "y": 43.3496,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "note": "Use neutral, non-graphic wording. These statuses are textual ritual categories, not moral diagnosis or modern health guidance.",
+          "summary": "The text sets washing and evening ritual status for seminal emission, affected garments, and both partners after sex.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-15-unit-04",
+          "title": "Monthly blood and contact rules",
+          "x": 5.73,
+          "y": 58.8402,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 19,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 19,
+              "last": 24
+            }
+          ],
+          "note": "The text's ritual status does not imply moral blame or illness. Describe the rules without graphic detail or medical advice.",
+          "summary": "The passage sets a seven-day separation and contact rules for beds and seats, then addresses sexual contact during that period.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-15-unit-05",
+          "title": "Extended blood-flow rules",
+          "x": 5.73,
+          "y": 74.3309,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 25,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 25,
+            "last": 25
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 25,
+              "last": 30
+            }
+          ],
+          "note": "This is a ritual timeline in the passage, not medical guidance. Distinguish the continuing status from the post-cessation count and offerings.",
+          "summary": "If bleeding continues beyond the stated separation period, ritual rules remain; after it ceases, seven days and offerings are prescribed.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-15-unit-06",
+          "title": "Summary and stated purpose",
+          "x": 5.73,
+          "y": 89.8216,
+          "active": [
+            {
+              "chapter": 15,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 15,
+            "first": 31,
+            "last": 31
+          },
+          "sources": [
+            {
+              "chapter": 15,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "note": "Keep the purpose attributed to the text's tabernacle context; these ritual categories are not a diagnosis or a moral judgment on illness.",
+          "summary": "The closing lines summarize rules for bodily flows and sexual contact, stating that Israel is to be separated from uncleanness.",
+          "kind": "summary",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-16",
+      "book": 2,
+      "title": "Leviticus 16 · Annual atonement service",
+      "coverage": "Chapter outline · Leviticus 16:1–34",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 16,
+          "first": 1,
+          "last": 34
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-16.svg",
+        "width": 1536,
+        "height": 3630,
+        "alt": "Editorial chapter diagram for Leviticus 16: 9 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 16 · Annual atonement service",
+        "note": "This native text diagram separates Leviticus 16 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-16-unit-01",
+          "title": "Restricted entry to the holy place",
+          "x": 5.73,
+          "y": 11.0468,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "note": "Verse 1 recalls the earlier deaths; verse 2 announces the entry restriction and its stated reason. The chapter then gives the prescribed annual service.",
+          "summary": "After Aaron's sons die, the LORD limits when Aaron may enter behind the veil and describes the cloud over the mercy seat.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-02",
+          "title": "Garments and offerings",
+          "x": 5.73,
+          "y": 21.0744,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 3,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 3,
+              "last": 5
+            }
+          ],
+          "note": "The listed animals support the following rites; this unit is preparation, not a report that the rites have already happened.",
+          "summary": "Aaron is instructed to wash and wear linen garments and to bring a bull, ram, two goats, and another ram from the congregation.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-03",
+          "title": "Aaron and the two goats",
+          "x": 5.73,
+          "y": 31.1019,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 6,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 6,
+              "last": 10
+            }
+          ],
+          "note": "These verses prescribe the sequence and assignments. The live goat is not yet sent away in this unit.",
+          "summary": "Aaron offers for himself and his household, presents two goats, casts lots, and assigns one for the LORD and one for release.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-04",
+          "title": "Incense and blood rites",
+          "x": 5.73,
+          "y": 41.6253,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 11,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 11,
+              "last": 17
+            }
+          ],
+          "note": "This unit describes the ritual actions and the restriction that no one else be in the tent during this service. Avoid adding doctrinal explanation beyond the text.",
+          "summary": "Aaron makes atonement for himself and his house, brings incense beyond the veil, applies blood, and serves alone inside the tent.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-05",
+          "title": "Atonement at the altar",
+          "x": 5.73,
+          "y": 51.6529,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "This is the altar phase after the holy-place rites; retain the action and stated purpose without embellishing the blood imagery.",
+          "summary": "Aaron puts blood on the altar's horns and sprinkles it seven times, cleansing and hallowing it as the text directs.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-06",
+          "title": "Live goat released",
+          "x": 5.73,
+          "y": 61.1846,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 20,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 21,
+            "last": 21
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 20,
+              "last": 22
+            }
+          ],
+          "note": "Retain existing scene `ot-leviticus-live-goat` at `/art/journey/ot-leviticus-live-goat.webp` (1536×1024). It is labeled an artistic reconstruction; the text's sequence and no precise modern setting are claimed.",
+          "summary": "After the place, tent, and altar are addressed, Aaron confesses Israel's sins over the live goat, and a fit man sends it into the wilderness.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-07",
+          "title": "Return and burnt offerings",
+          "x": 5.73,
+          "y": 71.2121,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 23,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 23,
+              "last": 25
+            }
+          ],
+          "note": "This follows the live goat's dispatch; keep Aaron's return and the later offerings in sequence.",
+          "summary": "Aaron changes garments, washes, offers burnt offerings for himself and the people, and burns the fat as instructed.",
+          "kind": "ritual",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-08",
+          "title": "Washing after handling offerings",
+          "x": 5.73,
+          "y": 81.7355,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 26,
+              "last": 28
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 26,
+              "last": 28
+            }
+          ],
+          "note": "The text gives separate instructions for the goat attendant and the offering handlers; this is ritual washing, not modern hygiene guidance.",
+          "summary": "The person who releases the goat and those who burn the offerings wash clothes and bodies before reentering the camp.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-16-unit-09",
+          "title": "Annual Day of Atonement",
+          "x": 5.73,
+          "y": 92.6722,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "note": "Verses 29–31 set the annual observance; verses 32–34 describe the priestly duties and close the statute. Keep the scope as the text states it.",
+          "summary": "The seventh-month observance includes rest and self-denial; the priest makes atonement yearly for sanctuary, tent, altar, priests, and people.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-17",
+      "book": 2,
+      "title": "Leviticus 17 · Sacrifice and blood",
+      "coverage": "Chapter outline · Leviticus 17:1–16",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 17,
+          "first": 1,
+          "last": 16
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-17.svg",
+        "width": 1536,
+        "height": 1858,
+        "alt": "Editorial chapter diagram for Leviticus 17: 4 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 17 · Sacrifice and blood",
+        "note": "This native text diagram separates Leviticus 17 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-17-unit-01",
+          "title": "Sacrifice brought to the tent",
+          "x": 5.73,
+          "y": 21.5823,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "note": "Verses 1–6 regulate where offerings are brought and what the priest does; verse 7 adds a prohibition. The KJV term “devils” is the text's wording; do not speculate beyond it.",
+          "summary": "The text directs slaughtered oxen, lambs, and goats to the tent entrance for peace offerings and forbids other sacrifices.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-17-unit-02",
+          "title": "Rule includes resident strangers",
+          "x": 5.73,
+          "y": 42.1421,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 8,
+              "last": 9
+            }
+          ],
+          "note": "These verses explicitly include both the house of Israel and strangers living among them; retain the stated scope.",
+          "summary": "Israelites and resident strangers must bring burnt offerings or sacrifices to the tent entrance; the text states a penalty for refusal.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-17-unit-03",
+          "title": "Blood and the life of flesh",
+          "x": 5.73,
+          "y": 63.5091,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 10,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 10,
+              "last": 14
+            }
+          ],
+          "note": "Explain this as the passage's ritual reasoning, not modern medical, nutritional, or scientific advice.",
+          "summary": "The text forbids eating blood, gives it on the altar for atonement, and directs hunters to pour and cover blood, citing life as its reason.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-17-unit-04",
+          "title": "Animal found dead or torn",
+          "x": 5.73,
+          "y": 85.6835,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 15,
+              "last": 16
+            }
+          ],
+          "note": "This is a ritual rule about the text's stated cases, not modern food-safety advice. Preserve the condition in verse 16.",
+          "summary": "A person eating an animal that died or was torn washes clothes and bathes; status lasts until evening, with a further condition in verse 16.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-18",
+      "book": 2,
+      "title": "Leviticus 18 · Boundaries for Israel's conduct",
+      "coverage": "Chapter outline · Leviticus 18:1–30",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 18,
+          "first": 1,
+          "last": 30
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-18.svg",
+        "width": 1536,
+        "height": 2646,
+        "alt": "Editorial chapter diagram for Leviticus 18: 6 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 18 · Boundaries for Israel's conduct",
+        "note": "This native text diagram separates Leviticus 18 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-18-unit-01",
+          "title": "General covenant instruction",
+          "x": 5.73,
+          "y": 15.155,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "The command and promise are stated in verses 3–5; do not extend the chapter's claim into an independent historical account.",
+          "summary": "The LORD contrasts Egypt and Canaan's practices with his statutes, which Israel is told to keep; the passage links keeping them with life.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-18-unit-02",
+          "title": "Close-kin prohibitions",
+          "x": 5.73,
+          "y": 29.4785,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 6,
+              "last": 11
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 6,
+              "last": 11
+            }
+          ],
+          "note": "Use non-graphic wording and keep the kinship categories close to the KJV text; do not add modern legal categories.",
+          "summary": "The passage prohibits sexual relations with specified immediate family members and distinguishes relationships by parentage and household ties.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-18-unit-03",
+          "title": "Further kin and in-law prohibitions",
+          "x": 5.73,
+          "y": 44.3689,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 12,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 12,
+            "last": 12
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 12,
+              "last": 18
+            }
+          ],
+          "note": "These are separate specified prohibitions. Summarize them neutrally without adding doctrinal or legal claims.",
+          "summary": "Rules address aunts, an uncle's wife, a daughter-in-law, a brother's wife, related generations, and taking sisters as wives together.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-18-unit-04",
+          "title": "Other sexual and worship prohibitions",
+          "x": 5.73,
+          "y": 59.9395,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 19,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 19,
+              "last": 23
+            }
+          ],
+          "note": "Use neutral, non-graphic wording and attribute the prohibitions to the passage; do not turn them into diagnoses or modern identity categories.",
+          "summary": "Further prohibitions cover contact during the stated separation, adultery, offering offspring to Molech, male-male intercourse as worded, and sex with animals.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-18-unit-05",
+          "title": "Defilement and land response",
+          "x": 5.73,
+          "y": 74.9433,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 24,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 24,
+              "last": 25
+            }
+          ],
+          "note": "This is the chapter's stated covenant warning and imagery, not a separate geographic or historical proof claim.",
+          "summary": "The text warns Israel not to follow these practices and says the land was defiled and vomited out prior inhabitants.",
+          "kind": "warning",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-18-unit-06",
+          "title": "Command, penalty, and warning",
+          "x": 5.73,
+          "y": 89.9471,
+          "active": [
+            {
+              "chapter": 18,
+              "first": 26,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 18,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 18,
+              "first": 26,
+              "last": 30
+            }
+          ],
+          "note": "Verse 26 and verse 30 give the instruction; verses 27–29 state the warning and penalty. Keep these distinct in any chart.",
+          "summary": "Israelites and resident strangers are told to keep these statutes; the text warns of exclusion for transgression and repeats the command.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-19",
+      "book": 2,
+      "title": "Leviticus 19 · Holiness in worship and neighbor life",
+      "coverage": "Chapter outline · Leviticus 19:1–37",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 19,
+          "first": 1,
+          "last": 37
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-19.svg",
+        "width": 1536,
+        "height": 4386,
+        "alt": "Editorial chapter diagram for Leviticus 19: 12 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 19 · Holiness in worship and neighbor life",
+        "note": "This native text diagram separates Leviticus 19 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-19-unit-01",
+          "title": "A holy people",
+          "x": 5.73,
+          "y": 8.0483,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 2,
+            "last": 2
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "note": "Instruction: the LORD addresses all Israel, grounding holiness in divine holiness. The commands concern family reverence, Sabbath observance, and rejection of idols.",
+          "summary": "Israel is called to holiness, honoring parents and Sabbaths and refusing idols.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-02",
+          "title": "Peace offering and its time limit",
+          "x": 5.73,
+          "y": 15.3215,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 5,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 5,
+              "last": 8
+            }
+          ],
+          "note": "Instruction: the offering may be eaten on the day presented and the following day. Anything remaining is burned; eating it on day three makes it unacceptable and brings guilt.",
+          "summary": "A peace offering is eaten on its first two days; leftovers are burned, and third-day eating profanes it.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-03",
+          "title": "Leave harvest for the poor",
+          "x": 5.73,
+          "y": 23.347,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 9,
+              "last": 10
+            }
+          ],
+          "note": "Instruction: do not harvest the field corners or collect every grape. The remainder is for the poor and the stranger living in the land.",
+          "summary": "Harvesters must leave field edges and vineyard gleanings for the poor and resident stranger.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-04",
+          "title": "Justice and love of neighbor",
+          "x": 5.73,
+          "y": 31.7145,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 11,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 11,
+            "last": 11
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 11,
+              "last": 18
+            }
+          ],
+          "note": "Instruction: the block combines honest dealing, prompt wages, care for deaf and blind people, impartial judgment, truthful speech, correction of wrongdoing, and the command to love one's neighbor as oneself.",
+          "summary": "Reject theft, fraud, false oaths, withheld wages, contempt, slander, partial judgment, hatred, vengeance, and grudges.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-05",
+          "title": "Keep distinct kinds",
+          "x": 5.73,
+          "y": 39.6717,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 19,
+            "last": 19
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 19,
+              "last": 19
+            }
+          ],
+          "note": "Instruction: one verse groups three prohibitions: crossbreeding different kinds of cattle, sowing mixed seed, and wearing a fabric of linen and wool. Do not generalize this into a modern textile or agricultural system.",
+          "summary": "The text forbids mixing kinds in livestock, seed, and a garment made of linen and wool.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-06",
+          "title": "A case involving an enslaved woman",
+          "x": 5.73,
+          "y": 47.6288,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 20,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 20,
+            "last": 20
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 20,
+              "last": 22
+            }
+          ],
+          "note": "Instruction: this law distinguishes a woman who has not been redeemed or freed from a free woman, and prescribes a trespass offering and priestly atonement. Preserve the text's stated status and remedy without turning the passage into a visual scene.",
+          "summary": "A specific sexual case involving an enslaved, betrothed woman receives a trespass offering and priestly atonement.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-07",
+          "title": "Fruit trees and waiting years",
+          "x": 5.73,
+          "y": 55.9964,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 23,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 23,
+              "last": 25
+            }
+          ],
+          "note": "Instruction: after entry into the land and planting, the fruit is treated as unavailable for three years; fourth-year fruit is holy in praise to the LORD, and eating begins in the fifth year.",
+          "summary": "Fruit from new trees is withheld for three years, dedicated in year four, and eaten from year five.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-08",
+          "title": "Blood, divination, and mourning marks",
+          "x": 5.73,
+          "y": 64.0219,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 26,
+              "last": 28
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 26,
+              "last": 28
+            }
+          ],
+          "note": "Instruction: these verses group dietary and ritual prohibitions. The wording of the KJV describes practices without explaining each custom; avoid adding modern assumptions about hairstyle, tattoo, or divination.",
+          "summary": "The text prohibits eating blood, divination, certain grooming practices, and bodily marks for the dead.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-09",
+          "title": "Family, Sabbath, and sanctuary",
+          "x": 5.73,
+          "y": 72.3894,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 29,
+              "last": 31
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 29,
+              "last": 31
+            }
+          ],
+          "note": "Instruction: the commands address sexual exploitation, Sabbath and sanctuary reverence, and consulting familiar spirits or wizards. Do not depict exploitation or supernatural figures.",
+          "summary": "The text warns against prostituting a daughter and commands Sabbath reverence for the sanctuary and rejection of spirit mediums.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-10",
+          "title": "Honor elders and love the stranger",
+          "x": 5.73,
+          "y": 80.757,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 32,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 32,
+            "last": 32
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 32,
+              "last": 34
+            }
+          ],
+          "note": "Instruction: rising before the aged and honoring them is joined to fair treatment and love for the stranger living in the land. The rationale recalls Israel's former residence in Egypt.",
+          "summary": "Show respect to elders; treat a resident stranger as native-born and love that person as oneself.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-11",
+          "title": "Honest weights and measures",
+          "x": 5.73,
+          "y": 88.4405,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 35,
+              "last": 36
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 35,
+            "last": 35
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 35,
+              "last": 36
+            }
+          ],
+          "note": "Instruction: measurements, weights, and stated measures of dry and liquid capacity must be just. The passage grounds the rule in the LORD's identity and deliverance from Egypt.",
+          "summary": "Use just measures and weights in trade, recalling the exodus from Egypt.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-19-unit-12",
+          "title": "Closing charge",
+          "x": 5.73,
+          "y": 95.3716,
+          "active": [
+            {
+              "chapter": 19,
+              "first": 37,
+              "last": 37
+            }
+          ],
+          "anchor": {
+            "chapter": 19,
+            "first": 37,
+            "last": 37
+          },
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 37,
+              "last": 37
+            }
+          ],
+          "note": "Instruction: a concluding charge gathers the chapter's statutes and judgments under the repeated declaration that the LORD is Israel's God.",
+          "summary": "Observe and do the statutes and judgments given in the chapter.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-20",
+      "book": 2,
+      "title": "Leviticus 20 · Sanctions and covenant separation",
+      "coverage": "Chapter outline · Leviticus 20:1–27",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 20,
+          "first": 1,
+          "last": 27
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-20.svg",
+        "width": 1536,
+        "height": 2114,
+        "alt": "Editorial chapter diagram for Leviticus 20: 5 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 20 · Sanctions and covenant separation",
+        "note": "This native text diagram separates Leviticus 20 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-20-unit-01",
+          "title": "Molech worship and public complicity",
+          "x": 5.73,
+          "y": 18.2592,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 1,
+              "last": 5
+            }
+          ],
+          "note": "Instruction: the text prescribes death by stoning and divine opposition for the offender; it also condemns communal concealment and those who follow the practice. Treat these as sanctions in legal speech, not as a scene to illustrate.",
+          "summary": "The law condemns giving children to Molech and the community's refusal to act against it.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-20-unit-02",
+          "title": "Reject spirit mediums",
+          "x": 5.73,
+          "y": 34.0587,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 6,
+              "last": 8
+            }
+          ],
+          "note": "Instruction: turning to familiar spirits or wizards incurs being cut off; Israel is told to sanctify itself and keep the LORD's statutes, with the LORD named as the one who sanctifies.",
+          "summary": "The text warns against seeking mediums or wizards and calls Israel to consecration and obedience.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-20-unit-03",
+          "title": "Household and sexual laws",
+          "x": 5.73,
+          "y": 50.5676,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 9,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 9,
+              "last": 16
+            }
+          ],
+          "note": "Instruction: this legal list names cursing parents, adultery, prohibited relations, and intercourse with animals. Penalties vary by case; do not collapse them into one sanction or visualize the sexual content.",
+          "summary": "Several prohibited acts receive distinct penalties, including death; the verses address family relations and animal intercourse.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-20-unit-04",
+          "title": "Further prohibited relations",
+          "x": 5.73,
+          "y": 68.6377,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 17,
+              "last": 21
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 17,
+              "last": 21
+            }
+          ],
+          "note": "Instruction: these cases include a sibling, a woman during menstruation, an aunt, an uncle's wife, and a brother's wife. The stated consequences differ; summarize without graphic detail.",
+          "summary": "The text distinguishes several prohibited unions and assigns consequences including removal, guilt, or childlessness.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-20-unit-05",
+          "title": "Keep the covenant distinction",
+          "x": 5.73,
+          "y": 87.4172,
+          "active": [
+            {
+              "chapter": 20,
+              "first": 22,
+              "last": 27
+            }
+          ],
+          "anchor": {
+            "chapter": 20,
+            "first": 22,
+            "last": 22
+          },
+          "sources": [
+            {
+              "chapter": 20,
+              "first": 22,
+              "last": 27
+            }
+          ],
+          "note": "Instruction: the text links obedience with dwelling safely in the land and being set apart. The final verse repeats the sanction for a person who has a familiar spirit or is a wizard; do not depict punishment.",
+          "summary": "Israel must keep the statutes, avoid the displaced nations' practices, distinguish clean from unclean animals, and remain holy.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-21",
+      "book": 2,
+      "title": "Leviticus 21 · Priests and sacred service",
+      "coverage": "Chapter outline · Leviticus 21:1–24",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 21,
+          "first": 1,
+          "last": 24
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-21.svg",
+        "width": 1536,
+        "height": 2346,
+        "alt": "Editorial chapter diagram for Leviticus 21: 6 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 21 · Priests and sacred service",
+        "note": "This native text diagram separates Leviticus 21 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-21-unit-01",
+          "title": "Priests and mourning for kin",
+          "x": 5.73,
+          "y": 16.4535,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "note": "Instruction: the text names mother, father, son, daughter, brother, and an unmarried sister as kin exceptions, then adds a restriction for a chief among the people. Preserve the stated scope rather than supplying modern mourning rules.",
+          "summary": "Priests face limits on defilement for the dead, with named close-family exceptions.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-21-unit-02",
+          "title": "Priestly conduct and marriage",
+          "x": 5.73,
+          "y": 31.4578,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 5,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 5,
+              "last": 8
+            }
+          ],
+          "note": "Instruction: the passage prohibits certain hair, beard, and body-cutting practices and restricts a priest's marriage choices. The reason given is the holiness of the offerings and the priest's God.",
+          "summary": "Priests must avoid specified mourning marks and marriage situations and remain holy for their service.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-21-unit-03",
+          "title": "A priest's daughter",
+          "x": 5.73,
+          "y": 45.6948,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "Instruction: the verse prescribes burning by fire. This is legal language; omit graphic depiction and do not imply this is an event reported as having occurred.",
+          "summary": "The law addresses a priest's daughter who profanes herself through prostitution and gives a severe sanction.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-21-unit-04",
+          "title": "The high priest's stricter limits",
+          "x": 5.73,
+          "y": 60.5712,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 10,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 10,
+              "last": 15
+            }
+          ],
+          "note": "Instruction: the block sets the high priest apart through anointing and garments, limits mourning and sanctuary departure, and restricts marriage to a virgin from his people. These are prescriptions, not narrative actions.",
+          "summary": "The high priest must not uncover his head, rend clothes, approach a dead body, or leave the sanctuary for mourning.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-21-unit-05",
+          "title": "Who may approach the altar",
+          "x": 5.73,
+          "y": 76.2148,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 16,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 16,
+              "last": 23
+            }
+          ],
+          "note": "Instruction: the text distinguishes altar service from eating the holy food. A priest with a listed blemish may eat the holy bread but may not approach the veil or altar. State this historical rule without endorsing exclusion or treating disability as moral failure.",
+          "summary": "A list of physical conditions bars a descendant of Aaron from offering, while allowing him to eat holy bread.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-21-unit-06",
+          "title": "Moses communicates the rules",
+          "x": 5.73,
+          "y": 90.5797,
+          "active": [
+            {
+              "chapter": 21,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "anchor": {
+            "chapter": 21,
+            "first": 24,
+            "last": 24
+          },
+          "sources": [
+            {
+              "chapter": 21,
+              "first": 24,
+              "last": 24
+            }
+          ],
+          "note": "Narrative report: this closing sentence says Moses communicated the preceding rules to their named recipients. It does not add a new law.",
+          "summary": "Moses tells Aaron, his sons, and all Israel what was prescribed.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-22",
+      "book": 2,
+      "title": "Leviticus 22 · Care for holy things and offerings",
+      "coverage": "Chapter outline · Leviticus 22:1–33",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 22,
+          "first": 1,
+          "last": 33
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-22.svg",
+        "width": 1536,
+        "height": 2090,
+        "alt": "Editorial chapter diagram for Leviticus 22: 5 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 22 · Care for holy things and offerings",
+        "note": "This native text diagram separates Leviticus 22 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-22-unit-01",
+          "title": "Eligibility and temporary uncleanness",
+          "x": 5.73,
+          "y": 19.1866,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 1,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 1,
+              "last": 9
+            }
+          ],
+          "note": "Instruction: the passage lists conditions that make a priest unclean until evening; washing with water and sunset mark the stated return to cleanness. It also forbids eating an animal that died by itself or was torn, and warns priests to keep the ordinance.",
+          "summary": "Priests must protect holy things; specified uncleanness temporarily bars eating them, and self-dead or torn animals are excluded.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-22-unit-02",
+          "title": "Who may eat holy food",
+          "x": 5.73,
+          "y": 35.8852,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 10,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 10,
+              "last": 16
+            }
+          ],
+          "note": "Instruction: household membership and a priest's daughter's marital and return status affect access. One who eats a holy thing unknowingly adds a fifth and gives it to the priest; priests must not profane the holy things.",
+          "summary": "The text limits who may eat priestly holy food and requires restitution for an unwitting eater.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-22-unit-03",
+          "title": "Offerings without disqualifying blemishes",
+          "x": 5.73,
+          "y": 52.7273,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 17,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 17,
+              "last": 25
+            }
+          ],
+          "note": "Instruction: a male without blemish is prescribed for vows and freewill burnt offerings; blemished animals are rejected, except that an animal with something extra or missing may be a freewill gift but not a vow offering. Bruised, crushed, broken, or cut animals are excluded.",
+          "summary": "Voluntary and vowed animal offerings must meet stated standards, with a narrow exception for freewill gifts.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-22-unit-04",
+          "title": "Age, pairing, and thanksgiving rules",
+          "x": 5.73,
+          "y": 71.1483,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 26,
+              "last": 30
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 26,
+              "last": 30
+            }
+          ],
+          "note": "Instruction: a bullock, sheep, or goat is accepted from the eighth day. The text separately prohibits killing cow or ewe with its young on one day and requires a thanksgiving offering to be eaten without leftovers overnight.",
+          "summary": "Newborn animals remain with the dam seven days; parent and young are not killed the same day, and thanksgiving food is eaten that day.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-22-unit-05",
+          "title": "Keep and honor the commands",
+          "x": 5.73,
+          "y": 88.7081,
+          "active": [
+            {
+              "chapter": 22,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 22,
+            "first": 31,
+            "last": 31
+          },
+          "sources": [
+            {
+              "chapter": 22,
+              "first": 31,
+              "last": 33
+            }
+          ],
+          "note": "Instruction: the closing charge connects obedience and reverence for the holy name to the exodus and the LORD's relationship with Israel.",
+          "summary": "Israel must keep the commandments and hallow the LORD, who brought them from Egypt.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-23",
+      "book": 2,
+      "title": "Leviticus 23 · Sabbaths and appointed feasts",
+      "coverage": "Chapter outline · Leviticus 23:1–44",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 23,
+          "first": 1,
+          "last": 44
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-23.svg",
+        "width": 1536,
+        "height": 3008,
+        "alt": "Editorial chapter diagram for Leviticus 23: 8 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 23 · Sabbaths and appointed feasts",
+        "note": "This native text diagram separates Leviticus 23 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-23-unit-01",
+          "title": "Weekly Sabbath",
+          "x": 5.73,
+          "y": 11.7354,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 1,
+              "last": 3
+            }
+          ],
+          "note": "Instruction: the seventh day is distinguished as a Sabbath of rest in every dwelling. The chapter then turns from the weekly cycle to appointed annual seasons.",
+          "summary": "The weekly Sabbath is a day of rest and holy assembly with no work.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-02",
+          "title": "Passover and unleavened bread",
+          "x": 5.73,
+          "y": 22.8391,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 4,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 4,
+              "last": 8
+            }
+          ],
+          "note": "Instruction: the first day and seventh day are convocations with no servile work, and offerings are made for seven days. Keep the day numbers and month as stated; do not convert to modern dates.",
+          "summary": "Passover falls on the first month's fourteenth day; unleavened bread begins on the fifteenth and lasts seven days.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-03",
+          "title": "The first sheaf",
+          "x": 5.73,
+          "y": 34.4415,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 9,
+              "last": 14
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 9,
+              "last": 14
+            }
+          ],
+          "note": "Instruction: the priest waves the sheaf on the morrow after the Sabbath, with a first-year lamb and grain and drink offerings. The text gives no modern calendar date; the harvest condition and relative timing are the anchors.",
+          "summary": "At harvest, a sheaf is presented and waved; new grain is not eaten until that offering is made.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-04",
+          "title": "Counting to the feast of weeks",
+          "x": 5.73,
+          "y": 45.5452,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 15,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 15,
+            "last": 15
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 15,
+              "last": 22
+            }
+          ],
+          "note": "Instruction: the count begins from the day of the wave sheaf; the fiftieth day has a new grain offering, loaves, and animal offerings. The chapter also repeats the rule to leave harvest gleanings for the poor and stranger.",
+          "summary": "Count seven complete Sabbaths and then fifty days; bring two leavened loaves and prescribed offerings.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-05",
+          "title": "Trumpets in the seventh month",
+          "x": 5.73,
+          "y": 57.2473,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 23,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 23,
+              "last": 25
+            }
+          ],
+          "note": "Instruction: the day is a holy convocation with no servile work and an offering. The passage names the month and day, not a Gregorian date or a specific trumpet design.",
+          "summary": "The seventh month's first day is a Sabbath-like memorial of trumpet blowing and holy assembly.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-06",
+          "title": "The Day of Atonement",
+          "x": 5.73,
+          "y": 68.3511,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 26,
+              "last": 32
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 26,
+              "last": 32
+            }
+          ],
+          "note": "Instruction: the people must assemble, afflict themselves, and do no work from evening to evening. The text states consequences for refusing the observance; avoid turning them into a graphic scene.",
+          "summary": "The seventh month's tenth day is a solemn day of self-affliction, offering, and complete rest from work.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-07",
+          "title": "The feast of booths announced",
+          "x": 5.73,
+          "y": 79.4548,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 33,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 33,
+            "last": 33
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 33,
+              "last": 38
+            }
+          ],
+          "note": "Instruction: the first and eighth days are convocations without servile work; offerings are specified. Verses 37–38 summarize the appointed feasts and say these are beside regular Sabbaths, gifts, vows, and freewill offerings.",
+          "summary": "The seventh month's fifteenth day begins seven days of the feast of booths, followed by an eighth-day assembly.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-23-unit-08",
+          "title": "Booths and branches at harvest",
+          "x": 5.73,
+          "y": 91.6556,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 39,
+              "last": 44
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 39,
+            "last": 39
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 39,
+              "last": 44
+            }
+          ],
+          "note": "Instruction: the text gives the fifteenth and eighth days as Sabbaths, names palm, thick-tree, and brook branches, and commands native-born Israelites to dwell in booths for seven days. Verse 44 reports that Moses declared the feasts to Israel; this closes the festival calendar.",
+          "summary": "At ingathering, Israel celebrates seven days, carries tree branches, dwells in booths, and remembers the wilderness.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-24",
+      "book": 2,
+      "title": "Leviticus 24 · The lamp, bread, and equal law",
+      "coverage": "Chapter outline · Leviticus 24:1–23",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 24,
+          "first": 1,
+          "last": 23
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-24.svg",
+        "width": 1536,
+        "height": 2364,
+        "alt": "Editorial chapter diagram for Leviticus 24: 6 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 24 · The lamp, bread, and equal law",
+        "note": "This native text diagram separates Leviticus 24 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-24-unit-01",
+          "title": "Keep the lamps burning",
+          "x": 5.73,
+          "y": 15.5668,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 1,
+              "last": 4
+            }
+          ],
+          "note": "Instruction: the lamp is kept continually before the LORD, outside the veil of the testimony. The passage says Aaron orders the lamps on the pure candlestick but gives no detailed design or measurements.",
+          "summary": "Israel supplies pure beaten olive oil so Aaron can tend the lamps from evening to morning.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-24-unit-02",
+          "title": "Twelve loaves each Sabbath",
+          "x": 5.73,
+          "y": 29.6954,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 5,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 5,
+              "last": 9
+            }
+          ],
+          "note": "Instruction: the bread rests on the pure table before the LORD; Aaron and his sons eat it in a holy place. The text specifies count and arrangement but not the table's dimensions or exact location beyond these terms.",
+          "summary": "Twelve cakes are placed in two rows of six with frankincense and renewed each Sabbath.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-24-unit-03",
+          "title": "A dispute in the camp",
+          "x": 5.73,
+          "y": 44.4585,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 10,
+            "last": 10
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 10,
+              "last": 12
+            }
+          ],
+          "note": "Narrative: this is the chapter's incident, naming Shelomith and her tribal connection. It reports a quarrel, blasphemy, and custody; it does not describe a prior legal ruling or the later execution.",
+          "summary": "A man born to an Israelite woman and Egyptian father fights with an Israelite and blasphemes; he is held while judgment is sought.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-24-unit-04",
+          "title": "Rule for blasphemy",
+          "x": 5.73,
+          "y": 59.0948,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 13,
+              "last": 16
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 13,
+            "last": 13
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 13,
+              "last": 16
+            }
+          ],
+          "note": "Instruction: Moses receives the ruling after the man is held. The law specifies community action and a death penalty; it is not an image instruction and should not be shown graphically.",
+          "summary": "The response prescribes a public sentence for blasphemy and states that the same rule applies to stranger and native.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-24-unit-05",
+          "title": "Proportionate injury and equal law",
+          "x": 5.73,
+          "y": 75.1269,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 17,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 17,
+            "last": 17
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 17,
+              "last": 22
+            }
+          ],
+          "note": "Instruction: human death and animal loss receive different consequences. Injury is answered in proportion to the harm as stated in the text, and the same manner of law applies to resident stranger and native-born Israelite.",
+          "summary": "The text distinguishes homicide from harm to an animal, sets an equivalence principle for injury, and requires one rule for stranger and native.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-24-unit-06",
+          "title": "The ruling is carried out",
+          "x": 5.73,
+          "y": 90.6514,
+          "active": [
+            {
+              "chapter": 24,
+              "first": 23,
+              "last": 23
+            }
+          ],
+          "anchor": {
+            "chapter": 24,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 24,
+              "first": 23,
+              "last": 23
+            }
+          ],
+          "note": "Narrative report: the closing verse says the man is taken outside the camp and stoned. Keep this as a report of the prescribed sentence; do not create a violent illustration.",
+          "summary": "Moses tells Israel what to do, and the congregation acts as commanded.",
+          "kind": "narrative",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-25",
+      "book": 2,
+      "title": "Leviticus 25 · Land rest, Jubilee, and redemption",
+      "coverage": "Chapter outline · Leviticus 25:1–55",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 25,
+          "first": 1,
+          "last": 55
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-25.svg",
+        "width": 1536,
+        "height": 3516,
+        "alt": "Editorial chapter diagram for Leviticus 25: 9 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 25 · Land rest, Jubilee, and redemption",
+        "note": "This native text diagram separates Leviticus 25 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-25-unit-01",
+          "title": "A Sabbath for the land",
+          "x": 5.73,
+          "y": 10.4664,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 1,
+              "last": 7
+            }
+          ],
+          "note": "Instruction: the seventh year forbids sowing and pruning; naturally growing produce is food for the household, servants, hired workers, resident strangers, livestock, and wild animals. Do not reduce this to a private farm holiday.",
+          "summary": "After six years of sowing and pruning, the seventh year is rest for the land and its unharvested growth is shared.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-02",
+          "title": "The fiftieth year of Jubilee",
+          "x": 5.73,
+          "y": 20.3925,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 8,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 8,
+              "last": 13
+            }
+          ],
+          "note": "Instruction: the text counts forty-nine years, sounds the Jubilee trumpet on the tenth day of the seventh month, and hallows the fiftieth year. Land and family return are stated alongside land rest and eating its natural increase.",
+          "summary": "After seven cycles of seven years, a trumpet sounds on the Day of Atonement and year fifty proclaims liberty and return.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-03",
+          "title": "Price land by years remaining",
+          "x": 5.73,
+          "y": 30.8305,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "note": "Instruction: the seller transfers the number of crops remaining, not an unconditional permanent land title. More years mean a higher price and fewer years a lower price; fear of God grounds the fairness rule.",
+          "summary": "Land sale prices must reflect the number of harvest years until Jubilee; neighbors must not oppress one another.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-04",
+          "title": "Provision through the land rest",
+          "x": 5.73,
+          "y": 41.2685,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 18,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 18,
+              "last": 22
+            }
+          ],
+          "note": "Instruction: the text anticipates concern about food in year seven and promises a sixth-year crop sufficient for three years. Sowing resumes in year eight, while stored produce lasts until the new crop arrives in year nine.",
+          "summary": "Keeping the statutes is linked to safety; a sixth-year yield is promised to cover the seventh-year rest and later harvest gap.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-05",
+          "title": "Redeem family land",
+          "x": 5.73,
+          "y": 51.1945,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 23,
+              "last": 28
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 23,
+              "last": 28
+            }
+          ],
+          "note": "Instruction: land cannot be sold permanently. The passage names a near relative as redeemer, allows self-redemption, and calculates restoration by years and value; if no redemption occurs, the holding returns in Jubilee.",
+          "summary": "The land belongs to God; a kinsman or owner may redeem a sold holding, otherwise it returns at Jubilee.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-06",
+          "title": "City houses and Levitical land",
+          "x": 5.73,
+          "y": 60.694,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 29,
+            "last": 29
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 29,
+              "last": 34
+            }
+          ],
+          "note": "Instruction: a walled-city house has a one-year redemption window and does not leave at Jubilee; village houses follow field rules, while Levites may redeem their houses at any time and their suburb fields are not saleable.",
+          "summary": "Rules differ for houses in walled cities, unwalled villages, and Levitical holdings and fields.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-07",
+          "title": "Support a poor neighbor",
+          "x": 5.73,
+          "y": 71.132,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 35,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 35,
+            "last": 35
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 35,
+              "last": 38
+            }
+          ],
+          "note": "Instruction: the duty applies even when the person is a stranger or sojourner. Money and food must not be lent for increase; the stated rationale is the LORD's deliverance and relationship with Israel.",
+          "summary": "Relieve an impoverished neighbor and lend without usury or increase, remembering the exodus and land grant.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-08",
+          "title": "Israelite servants and foreign bondspeople",
+          "x": 5.73,
+          "y": 81.9966,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 39,
+              "last": 46
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 39,
+            "last": 39
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 39,
+              "last": 46
+            }
+          ],
+          "note": "Instruction: Israelites are not to be forced into bondservice or ruled harshly and are released with their children at Jubilee. Verses 44–46 describe foreign bondspeople as inheritable property; preserve this distinction in the source summary rather than flattening both policies.",
+          "summary": "An impoverished Israelite serves as a hired worker until Jubilee, while the text separately regulates foreign bondspeople.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-25-unit-09",
+          "title": "Redeem an Israelite sold abroad",
+          "x": 5.73,
+          "y": 92.8612,
+          "active": [
+            {
+              "chapter": 25,
+              "first": 47,
+              "last": 55
+            }
+          ],
+          "anchor": {
+            "chapter": 25,
+            "first": 47,
+            "last": 47
+          },
+          "sources": [
+            {
+              "chapter": 25,
+              "first": 47,
+              "last": 55
+            }
+          ],
+          "note": "Instruction: the chapter sets a calculation by remaining years and release at Jubilee if redemption has not occurred. The closing rationale says Israel belongs to God as servants brought from Egypt.",
+          "summary": "An Israelite sold to a resident stranger may be redeemed by kin or self, with the price based on years until Jubilee.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-26",
+      "book": 2,
+      "title": "Leviticus 26 · Covenant blessings and warnings",
+      "coverage": "Chapter outline · Leviticus 26:1–46",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 26,
+          "first": 1,
+          "last": 46
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-26.svg",
+        "width": 1536,
+        "height": 3492,
+        "alt": "Editorial chapter diagram for Leviticus 26: 9 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 26 · Covenant blessings and warnings",
+        "note": "This native text diagram separates Leviticus 26 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-26-unit-01",
+          "title": "Reject idols; keep Sabbaths",
+          "x": 5.73,
+          "y": 10.6243,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 1,
+              "last": 2
+            }
+          ],
+          "note": "Instruction: the opening laws prohibit idols, graven or standing images, and stone images for worship. They pair Sabbath observance with sanctuary reverence.",
+          "summary": "Do not make or worship images; keep the Sabbaths and revere the sanctuary.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-02",
+          "title": "Blessings for obedience",
+          "x": 5.73,
+          "y": 20.7045,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 3,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 3,
+            "last": 3
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 3,
+              "last": 13
+            }
+          ],
+          "note": "Argument: this conditional blessing speech names material and communal outcomes, culminating in the LORD dwelling among Israel and recalling release from bondage. Military imagery in verses 7–8 is speech, not a required illustration.",
+          "summary": "Keeping the statutes is followed by rain, harvest, peace, safety, covenant presence, and remembrance of deliverance.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-03",
+          "title": "First warnings for refusal",
+          "x": 5.73,
+          "y": 31.2142,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 14,
+              "last": 17
+            }
+          ],
+          "note": "Argument: this is the first conditional warning after the blessings. It lists terror, sickness, sorrow, failed crops, and enemy rule; summarize without depicting disease or battle.",
+          "summary": "Refusing the commandments brings illness, failed sowing, and defeat before enemies.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-04",
+          "title": "Drought and crop failure",
+          "x": 5.73,
+          "y": 41.7239,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 18,
+              "last": 22
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 18,
+            "last": 18
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 18,
+              "last": 22
+            }
+          ],
+          "note": "Argument: the repeated sevenfold escalation connects disobedience to drought, failed harvest, and loss through beasts. Do not treat the number as a modern measured severity scale.",
+          "summary": "If refusal continues, the warning intensifies: rain fails, land and trees yield little, and wild beasts threaten the population.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-05",
+          "title": "Sword, plague, and rationed bread",
+          "x": 5.73,
+          "y": 52.2337,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 23,
+              "last": 26
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 23,
+            "last": 23
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 23,
+              "last": 26
+            }
+          ],
+          "note": "Argument: the warning describes siege, disease, and shortage; ten women bake in one oven and bread is rationed. Keep the imagery non-graphic and do not present it as a reported historical event.",
+          "summary": "Further refusal is answered with sword and pestilence, followed by scarce food measured out by weight.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-06",
+          "title": "Severe famine and desolation",
+          "x": 5.73,
+          "y": 62.7434,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 27,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 27,
+            "last": 27
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 27,
+              "last": 33
+            }
+          ],
+          "note": "Argument: the passage intensifies the covenant warnings through famine, destruction, and exile. It includes graphic famine language; do not reproduce or visualize that detail.",
+          "summary": "The final warning describes extreme famine, destroyed sanctuaries and cities, and scattering among other nations.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-07",
+          "title": "The land rests in desolation",
+          "x": 5.73,
+          "y": 73.6827,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 34,
+              "last": 39
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 34,
+              "last": 39
+            }
+          ],
+          "note": "Argument: the land's rest is linked to its desolation while Israel is absent. The text also describes survivors' fear, scattering, and decline; avoid a fabricated historical map or specific exile route.",
+          "summary": "During exile, the land enjoys the Sabbaths it missed; survivors live in fear and waste away among their enemies.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-08",
+          "title": "Confession and covenant remembrance",
+          "x": 5.73,
+          "y": 84.1924,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 40,
+              "last": 45
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 40,
+            "last": 40
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 40,
+              "last": 45
+            }
+          ],
+          "note": "Argument: the closing condition turns from judgment to confession, humbled hearts, remembrance of Abraham, Isaac, and Jacob, and continued covenant commitment. It does not promise that consequences vanish immediately.",
+          "summary": "If Israel confesses and humbles itself, God remembers the covenants and will not destroy the people utterly.",
+          "kind": "argument",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-26-unit-09",
+          "title": "Closing summary",
+          "x": 5.73,
+          "y": 93.7572,
+          "active": [
+            {
+              "chapter": 26,
+              "first": 46,
+              "last": 46
+            }
+          ],
+          "anchor": {
+            "chapter": 26,
+            "first": 46,
+            "last": 46
+          },
+          "sources": [
+            {
+              "chapter": 26,
+              "first": 46,
+              "last": 46
+            }
+          ],
+          "note": "Narrative summary: this final line frames the preceding material as covenant laws given at Mount Sinai through Moses.",
+          "summary": "The chapter closes by identifying these statutes, judgments, and laws as made through Moses at Sinai.",
+          "kind": "summary",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    },
+    {
+      "id": "leviticus-chapter-27",
+      "book": 2,
+      "title": "Leviticus 27 · Vows, valuations, and tithes",
+      "coverage": "Chapter outline · Leviticus 27:1–34",
+      "caption": "Editorial chapter diagram · the cards follow the source text; they are not a single scene",
+      "ranges": [
+        {
+          "chapter": 27,
+          "first": 1,
+          "last": 34
+        }
+      ],
+      "art": {
+        "path": "/art/journey/leviticus-chapter-27.svg",
+        "width": 1536,
+        "height": 2620,
+        "alt": "Editorial chapter diagram for Leviticus 27: 7 source-based cards partition the chapter into reading units. This is not a geographical map or a single scene."
+      },
+      "intro": {
+        "title": "Leviticus 27 · Vows, valuations, and tithes",
+        "note": "This native text diagram separates Leviticus 27 into source-based reading units. Ritual, law, and narrative follow their cited ranges; the cards do not claim to depict one place or moment."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-chapter-27-unit-01",
+          "title": "Valuing a person vowed",
+          "x": 5.73,
+          "y": 14.0458,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 1,
+              "last": 8
+            }
+          ],
+          "note": "Instruction: the chapter gives shekel estimates for age bands and distinguishes male and female values. If the person is poorer than the estimate, the priest assesses according to ability; the text presents a valuation schedule, not a person's worth.",
+          "summary": "Priestly estimates for a person vowed to the LORD vary by age and sex, with an adjustment for poverty.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-27-unit-02",
+          "title": "Vowed animals",
+          "x": 5.73,
+          "y": 26.1069,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 9,
+              "last": 13
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 9,
+              "last": 13
+            }
+          ],
+          "note": "Instruction: a dedicated offering animal cannot be swapped without both animals becoming holy. An unclean animal is assessed by the priest and may be redeemed by adding one fifth.",
+          "summary": "Animals suitable for offerings become holy; other animals are assessed, and redemption adds a fifth.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-27-unit-03",
+          "title": "A dedicated house",
+          "x": 5.73,
+          "y": 38.1679,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "note": "Instruction: the priest determines the house valuation; its owner may redeem it by paying the estimate plus a fifth.",
+          "summary": "A house dedicated to the LORD is appraised by a priest and costs one fifth more to redeem.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-27-unit-04",
+          "title": "Fields and the Jubilee year",
+          "x": 5.73,
+          "y": 51.4885,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 16,
+              "last": 25
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 16,
+              "last": 25
+            }
+          ],
+          "note": "Instruction: a field of possession is valued by its seed and proximity to Jubilee; redemption adds a fifth. A purchased field is valued until Jubilee and returns to its original landholder then. The sanctuary shekel is defined as twenty gerahs.",
+          "summary": "Field valuations depend on seed and years remaining to Jubilee; inherited and purchased fields follow different rules.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-27-unit-05",
+          "title": "Firstlings and devoted things",
+          "x": 5.73,
+          "y": 66.0687,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 26,
+              "last": 29
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 26,
+            "last": 26
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 26,
+              "last": 29
+            }
+          ],
+          "note": "Instruction: the text distinguishes firstlings from voluntary dedication, distinguishes an unclean firstling's redemption from a devoted thing, and prohibits sale or redemption of what is devoted. Verse 29 states a severe rule; do not turn it into a scene.",
+          "summary": "Firstborn animals are already the LORD's; devoted property cannot be redeemed, and a separate sanction is stated for devoted persons.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-27-unit-06",
+          "title": "Tithes from land and herds",
+          "x": 5.73,
+          "y": 80.0763,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 30,
+              "last": 33
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 30,
+            "last": 30
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 30,
+              "last": 33
+            }
+          ],
+          "note": "Instruction: the chapter distinguishes crop and fruit tithes from the tenth animal passing under the rod. Selection is forbidden; any attempted exchange makes both animals holy.",
+          "summary": "A fifth is added when land tithe is redeemed; every tenth herd or flock animal is holy and cannot be exchanged.",
+          "kind": "instruction",
+          "detail": null,
+          "focus_x": 21.81
+        },
+        {
+          "id": "leviticus-chapter-27-unit-07",
+          "title": "Closing statement",
+          "x": 5.73,
+          "y": 92.2519,
+          "active": [
+            {
+              "chapter": 27,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 27,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 27,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "note": "Narrative summary: this is the book's closing statement for the laws in this chapter.",
+          "summary": "The final verse says these commands were given to Moses for Israel at Mount Sinai.",
+          "kind": "summary",
+          "detail": null,
+          "focus_x": 21.81
+        }
+      ]
+    }
+  ]
+}

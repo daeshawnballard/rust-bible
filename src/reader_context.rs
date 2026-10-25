@@ -187,7 +187,11 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
             json!({"kind":"empty","title":"Illustrations","html":"<div class=\"reader-context-empty\"><h3>No illustrated study in this chapter yet</h3><p>Illustrations appear alongside the passages they explain. Current studies cover Noah’s Ark (Genesis 6–9), the Tabernacle (Exodus 25–31 and 35–40), and the Sower (Matthew 13).</p><p>Keep reading in Passage, or use Journey to see any available setting.</p></div>"})
         }
     } else if mode == "journey" {
-        if let Some(scene) = super::passage_scenes::render_selected(
+        if let Some(companion) = q.get("subject").and_then(|subject| {
+            super::passage_scenes::inspect_companion(book, chapter, verse, subject, client)
+        }) {
+            companion
+        } else if let Some(scene) = super::passage_scenes::render_selected(
             book,
             chapter,
             verse,
@@ -195,6 +199,14 @@ pub(super) fn api(q: &HashMap<String, String>, client: bool) -> RouteResponse {
             client,
         ) {
             scene
+        } else if let Some(companion) = super::passage_scenes::render_companion(
+            book,
+            chapter,
+            verse,
+            q.get("subject").map(String::as_str),
+            client,
+        ) {
+            companion
         } else if book == 0 && (2..=4).contains(&chapter) {
             genesis(chapter, verse, client)
         } else if let Some(scene) = super::journey_scenes::render(book, chapter, verse, client) {
@@ -253,6 +265,26 @@ pub(super) fn legacy(q: &HashMap<String, String>, client: bool) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+    #[test]
+    fn inspecting_a_chapter_node_survives_a_shared_painting_anchor() {
+        let inspect = super::super::route(
+            "/api/reader-context?book=1&chapter=14&verse=26&mode=journey&subject=exodus-chapter-14-node-12", true);
+        let value: Value = serde_json::from_str(&inspect.body).unwrap();
+        assert_eq!(value["scene"], "exodus-chapter-14");
+        assert_eq!(value["active"], "exodus-chapter-14-node-12");
+        let follow = super::super::route(
+            "/api/reader-context?book=1&chapter=14&verse=26&mode=journey",
+            true,
+        );
+        let value: Value = serde_json::from_str(&follow.body).unwrap();
+        assert_ne!(value["scene"], "exodus-chapter-14");
+        let unknown = super::super::route(
+            "/api/reader-context?book=2&chapter=25&verse=1&mode=journey&subject=unknown",
+            true,
+        );
+        let value: Value = serde_json::from_str(&unknown.body).unwrap();
+        assert_eq!(value["scene"], "leviticus-chapter-25");
+    }
     #[test]
     fn narrative_stages_follow_the_text_without_assigning_coordinates() {
         for (ch, v, active) in [
@@ -336,6 +368,75 @@ mod tests {
             assert!(!html.contains("data-reader "));
         }
     }
+
+    #[test]
+    fn unmatched_tabernacle_verses_show_an_unselected_overview() {
+        for chapter in [28, 29, 31] {
+            let response = super::super::route(
+                &format!("/api/reader-context?book=1&chapter={chapter}&verse=1&mode=illustration"),
+                true,
+            );
+            assert_eq!(response.status, 200, "Exodus {chapter}:1");
+            let state: Value = serde_json::from_str(&response.body).unwrap();
+            assert_eq!(state["kind"], "illustration");
+            assert_eq!(state["scene"], "tabernacle");
+            assert!(state["part"].is_null(), "Exodus {chapter}:1");
+            assert_eq!(state["source_match"], false);
+            assert_eq!(state["following"], true);
+
+            let html = state["html"].as_str().unwrap();
+            assert!(html.contains("data-context-selected-part=\"\""));
+            assert!(html.contains("Inside the Tabernacle"));
+            assert!(html.contains("Illustrated overview · 8 details"));
+            assert_eq!(
+                html.matches("class=\"reader-illustration-hotspot\"")
+                    .count(),
+                8
+            );
+            assert_eq!(html.matches("aria-pressed=\"true\"").count(), 0);
+            assert!(!html.contains("aria-current="));
+            assert!(!html.contains("/art/objects/lamp.webp"));
+            assert!(!html.contains("Exodus 25:31"));
+            assert!(!html.contains("data-context-read"));
+            assert!(!html.contains("class=\"scripture"));
+            assert!(!html.contains("data-read-aloud"));
+        }
+    }
+
+    #[test]
+    fn exact_and_explicit_tabernacle_details_still_select_the_requested_object() {
+        let matched = super::super::route(
+            "/api/reader-context?book=1&chapter=25&verse=31&mode=illustration",
+            true,
+        );
+        assert_eq!(matched.status, 200);
+        let matched: Value = serde_json::from_str(&matched.body).unwrap();
+        assert_eq!(matched["part"], "lamp");
+        assert_eq!(matched["source_match"], true);
+        assert!(matched["html"]
+            .as_str()
+            .unwrap()
+            .contains("data-context-part=\"lamp\""));
+        assert!(matched["html"]
+            .as_str()
+            .unwrap()
+            .contains("src=\"/art/objects/lamp.webp\""));
+
+        let explicit = super::super::route(
+            "/api/reader-context?book=1&chapter=28&verse=1&mode=illustration&part=lamp",
+            true,
+        );
+        assert_eq!(explicit.status, 200);
+        let explicit: Value = serde_json::from_str(&explicit.body).unwrap();
+        assert_eq!(explicit["part"], "lamp");
+        assert_eq!(explicit["source_match"], false);
+        assert_eq!(explicit["following"], false);
+        let html = explicit["html"].as_str().unwrap();
+        assert!(html.contains("data-context-selected-part=\"lamp\""));
+        assert!(html.contains("aria-pressed=\"true\""));
+        assert!(html.contains("src=\"/art/objects/lamp.webp\""));
+    }
+
     #[test]
     fn all_chapters_offer_context_and_exact_scenes_keep_priority() {
         for (book, chapters) in bible().books.iter().enumerate() {

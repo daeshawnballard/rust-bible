@@ -1,6 +1,6 @@
 # Passage-specific Journey scenes
 
-The Rust-rendered register contains **124 focused scenes, 282 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
+The Rust-rendered register contains **136 focused scenes, 307 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges Exodus and Leviticus use their authored chapter diagrams; other books retain existing story worlds, object studies, or clearly labeled broad context.
 
 Hotspots identify visible people, actions, or objects. Scripture stays verbatim in its own view; Context contains the illustrations and editorial notes. Inspecting a subject preserves the saved verse and audio target; its explicit Read link changes the passage. Poetry, letter imagery, prophetic visions, and artistic reconstructions are labeled in the interface. Broader draft beats that are not depicted do not receive landscape pins.
 
@@ -155,3 +155,23 @@ Three individual ImageGen paintings and three editorial text diagrams add 18 mea
 | Exodus 8:20–24 | Swarms and Goshen’s announced distinction | Swarms enter the houses (8:24); Goshen is set apart (8:22) |
 
 Two new paintings and three ordered/comparison diagrams add 12 hotspots. See [source timing, artwork provenance, and chapter gaps](exodus-signs-batch.md).
+
+
+## Exodus and Leviticus chapter-completion paintings
+
+Chapter diagrams are separate from these source-bounded paintings; see the [Exodus](exodus-chapter-companions.md) and [Leviticus](leviticus-chapter-companions.md) registers.
+
+| Book | Source ranges | Scene | Hotspots |
+| --- | --- | --- | ---: |
+| Exodus | Exodus 9:23–25 | Hail and fire strike the land of Egypt | 2 |
+| Exodus | Exodus 10:14–15 | Locusts cover the land and consume what the hail left | 2 |
+| Exodus | Exodus 16:14–18 | The people gather manna after the dew lifts | 2 |
+| Exodus | Exodus 17:6 | Moses strikes the rock and water comes out | 1 |
+| Exodus | Exodus 32:4–6 | The golden calf and the gathering | 2 |
+| Exodus | Exodus 40:34–35 | The cloud covers the Tabernacle | 2 |
+| Exodus | Exodus 12:34,37–38 | Israel departs from Egypt | 2 |
+| Exodus | Exodus 12:7–11 | Passover instructions for each household | 2 |
+| Exodus | Exodus 19:16–18 | The people meet at Mount Sinai amid cloud, smoke, fire, and lightning | 2 |
+| Leviticus | Leviticus 2:1 | Materials for the Grain Offering | 3 |
+| Leviticus | Leviticus 8:7–9 | Aaron’s Priestly Garments | 3 |
+| Leviticus | Leviticus 23:40, 42–43 | Branches and booths at harvest | 2 |

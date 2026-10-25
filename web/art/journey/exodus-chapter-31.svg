@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1242" viewBox="0 0 1536 1242" role="img" aria-labelledby="title desc">
+  <title id="title">Exodus 31 · Chapter outline</title>
+  <desc id="desc">A vertical column of 3 text cards partitions all 18 verses in Exodus 31. The diagram separates reading stages and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="1242" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Exodus 31 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 31:1–18 · 3 source-based reading stages</text>
+  <line x1="88" y1="371" x2="120" y2="371" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="371" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">Bezalel, Aholiab, and</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">the commissioned work</text>
+  <text x="150" y="363" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 31:1–11</text>
+  <text x="150" y="397" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The LORD appoints Bezalel</text>
+  <text x="150" y="427" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and Aholiab to make the</text>
+  <text x="150" y="457" fill="#59685f" font-family="Arial,sans-serif" font-size="24">sanctuary furnishings.</text>
+  <path d="M335 507V557" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="693" x2="120" y2="693" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="567" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="693" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="610" fill="#172d27" font-family="Georgia,serif" font-size="30">Sabbath as a covenant</text>
+  <text x="150" y="646" fill="#172d27" font-family="Georgia,serif" font-size="30">sign and work boundary</text>
+  <text x="150" y="685" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 31:12–17</text>
+  <text x="150" y="719" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Israel must keep Sabbath as</text>
+  <text x="150" y="749" fill="#59685f" font-family="Arial,sans-serif" font-size="24">a covenant sign and cease</text>
+  <text x="150" y="779" fill="#59685f" font-family="Arial,sans-serif" font-size="24">work on the seventh day.</text>
+  <path d="M335 829V879" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1018" x2="120" y2="1018" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="889" width="430" height="258" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1018" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="932" fill="#172d27" font-family="Georgia,serif" font-size="30">Two tablets of</text>
+  <text x="150" y="968" fill="#172d27" font-family="Georgia,serif" font-size="30">testimony given to</text>
+  <text x="150" y="1004" fill="#172d27" font-family="Georgia,serif" font-size="30">Moses</text>
+  <text x="150" y="1043" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 31:18</text>
+  <text x="150" y="1077" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The LORD gives Moses two</text>
+  <text x="150" y="1107" fill="#59685f" font-family="Arial,sans-serif" font-size="24">stone tablets of testimony.</text>
+  <text x="120" y="1207" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; the diagram is a reading outline, not a scene or map.</text>
+</svg>

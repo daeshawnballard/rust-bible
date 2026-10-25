@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="2352" viewBox="0 0 1536 2352" role="img" aria-labelledby="title desc">
+  <title id="title">Exodus 20 · Chapter outline</title>
+  <desc id="desc">A vertical column of 6 text cards partitions all 26 verses in Exodus 20. The diagram separates reading stages and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="2352" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Exodus 20 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 20:1–26 · 6 source-based reading stages</text>
+  <line x1="88" y1="386" x2="120" y2="386" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="386" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">Deliverance before the</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">commands</text>
+  <text x="150" y="363" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 20:1–2</text>
+  <text x="150" y="397" fill="#59685f" font-family="Arial,sans-serif" font-size="24">God identifies himself as</text>
+  <text x="150" y="427" fill="#59685f" font-family="Arial,sans-serif" font-size="24">the LORD who brought Israel</text>
+  <text x="150" y="457" fill="#59685f" font-family="Arial,sans-serif" font-size="24">out of Egypt and the house</text>
+  <text x="150" y="487" fill="#59685f" font-family="Arial,sans-serif" font-size="24">of bondage.</text>
+  <path d="M335 537V587" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="738" x2="120" y2="738" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="597" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="738" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="640" fill="#172d27" font-family="Georgia,serif" font-size="30">Worship, name, and</text>
+  <text x="150" y="676" fill="#172d27" font-family="Georgia,serif" font-size="30">Sabbath commands</text>
+  <text x="150" y="715" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 20:3–11</text>
+  <text x="150" y="749" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Israel must reject other</text>
+  <text x="150" y="779" fill="#59685f" font-family="Arial,sans-serif" font-size="24">gods and images, honor the</text>
+  <text x="150" y="809" fill="#59685f" font-family="Arial,sans-serif" font-size="24">LORD’s name, and keep</text>
+  <text x="150" y="839" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Sabbath.</text>
+  <path d="M335 889V939" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1090" x2="120" y2="1090" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="949" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1090" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="992" fill="#172d27" font-family="Georgia,serif" font-size="30">Commands toward family</text>
+  <text x="150" y="1028" fill="#172d27" font-family="Georgia,serif" font-size="30">and neighbor</text>
+  <text x="150" y="1067" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 20:12–17</text>
+  <text x="150" y="1101" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Commands honor parents;</text>
+  <text x="150" y="1131" fill="#59685f" font-family="Arial,sans-serif" font-size="24">they forbid killing,</text>
+  <text x="150" y="1161" fill="#59685f" font-family="Arial,sans-serif" font-size="24">adultery, theft, false</text>
+  <text x="150" y="1191" fill="#59685f" font-family="Arial,sans-serif" font-size="24">witness, and coveting.</text>
+  <path d="M335 1241V1291" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1427" x2="120" y2="1427" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1301" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1427" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1344" fill="#172d27" font-family="Georgia,serif" font-size="30">The people ask Moses</text>
+  <text x="150" y="1380" fill="#172d27" font-family="Georgia,serif" font-size="30">to mediate</text>
+  <text x="150" y="1419" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 20:18–21</text>
+  <text x="150" y="1453" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The people ask Moses to</text>
+  <text x="150" y="1483" fill="#59685f" font-family="Arial,sans-serif" font-size="24">speak instead; he says not</text>
+  <text x="150" y="1513" fill="#59685f" font-family="Arial,sans-serif" font-size="24">to fear but not to sin.</text>
+  <path d="M335 1563V1613" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1764" x2="120" y2="1764" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1623" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1764" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1666" fill="#172d27" font-family="Georgia,serif" font-size="30">No gods of silver or</text>
+  <text x="150" y="1702" fill="#172d27" font-family="Georgia,serif" font-size="30">gold</text>
+  <text x="150" y="1741" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 20:22–23</text>
+  <text x="150" y="1775" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The LORD says Israel has</text>
+  <text x="150" y="1805" fill="#59685f" font-family="Arial,sans-serif" font-size="24">heard him from heaven and</text>
+  <text x="150" y="1835" fill="#59685f" font-family="Arial,sans-serif" font-size="24">must make no silver or gold</text>
+  <text x="150" y="1865" fill="#59685f" font-family="Arial,sans-serif" font-size="24">gods alongside him.</text>
+  <path d="M335 1915V1965" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="2116" x2="120" y2="2116" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1975" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="2116" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="2018" fill="#172d27" font-family="Georgia,serif" font-size="30">Instructions for the</text>
+  <text x="150" y="2054" fill="#172d27" font-family="Georgia,serif" font-size="30">altar</text>
+  <text x="150" y="2093" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 20:24–26</text>
+  <text x="150" y="2127" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The LORD commands an earth</text>
+  <text x="150" y="2157" fill="#59685f" font-family="Arial,sans-serif" font-size="24">or unhewn-stone altar with</text>
+  <text x="150" y="2187" fill="#59685f" font-family="Arial,sans-serif" font-size="24">no steps and promises to</text>
+  <text x="150" y="2217" fill="#59685f" font-family="Arial,sans-serif" font-size="24">meet Israel.</text>
+  <text x="120" y="2317" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; the diagram is a reading outline, not a scene or map.</text>
+</svg>
