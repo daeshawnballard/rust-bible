@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Leviticus 12 · Chapter outline</title>
+  <desc id="desc">A vertical column of 2 text cards partitions all 8 verses in Leviticus 12. The diagram follows source ranges and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="1024" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Leviticus 12 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="26">Childbirth and purification · Leviticus 12:1–8 · 2 source-based units</text>
+  <line x1="88" y1="401" x2="120" y2="401" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="312" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="401" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">Birth and postpartum</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">ritual periods</text>
+  <text x="150" y="363" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Leviticus 12:1–5</text>
+  <text x="150" y="397" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The text sets different</text>
+  <text x="150" y="427" fill="#59685f" font-family="Arial,sans-serif" font-size="24">ritual periods after</text>
+  <text x="150" y="457" fill="#59685f" font-family="Arial,sans-serif" font-size="24">childbirth, an eighth-day</text>
+  <text x="150" y="487" fill="#59685f" font-family="Arial,sans-serif" font-size="24">circumcision for a son, and</text>
+  <text x="150" y="517" fill="#59685f" font-family="Arial,sans-serif" font-size="24">limits on sanctuary contact.</text>
+  <path d="M335 567V617" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="768" x2="120" y2="768" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="627" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="768" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="670" fill="#172d27" font-family="Georgia,serif" font-size="30">Offerings after the</text>
+  <text x="150" y="706" fill="#172d27" font-family="Georgia,serif" font-size="30">period</text>
+  <text x="150" y="745" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Leviticus 12:6–8</text>
+  <text x="150" y="779" fill="#59685f" font-family="Arial,sans-serif" font-size="24">After the stated period, the</text>
+  <text x="150" y="809" fill="#59685f" font-family="Arial,sans-serif" font-size="24">mother brings offerings;</text>
+  <text x="150" y="839" fill="#59685f" font-family="Arial,sans-serif" font-size="24">verse 8 gives an option when</text>
+  <text x="150" y="869" fill="#59685f" font-family="Arial,sans-serif" font-size="24">a lamb is unaffordable.</text>
+  <text x="120" y="989" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; this diagram is a reading outline, not a scene or map.</text>
+</svg>

@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "title": "Exodus 16 manna and Exodus 17 rock-water artwork provenance",
+  "status": "Candidate assets and private scene records prepared; not integrated into the shared catalog and not accepted as product artwork.",
+  "generation": {
+    "tool": "Built-in ImageGen",
+    "mode": "generate",
+    "calls": "One asset per call; no CLI or API fallback.",
+    "style_reference": {
+      "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp",
+      "role": "Style reference only; cinematic painterly historical realism, warm natural light, and detailed fabric/earth textures. Its Egyptian river, architecture, figures, and actions were not copied."
+    }
+  },
+  "source": {
+    "bible_data": "data/kjv.json",
+    "book_index": 1,
+    "book": "Exodus",
+    "manna_range": "Exodus 16:14–18",
+    "water_range": "Exodus 17:5–6"
+  },
+  "attempt_history": [
+    {
+      "asset": "manna",
+      "attempt": 1,
+      "status": "Rejected",
+      "generated": {
+        "path": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-a99acb6a-78a8-41d0-82cd-7f776c745301.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 3540182,
+        "sha256": "d9a11125f0b5571824281ea5aedb4580cbeb55fb440544de87963f0589ed101e",
+        "format": "PNG"
+      },
+      "prompt": "Use case: historical-scene\nAsset type: individual illustrated Bible Journey scene painting for Exodus 16:14–18\nInput image: Image 1 is a style reference only. Match its cinematic painterly historical realism, warm natural light, detailed cloth and earth textures, rich but restrained color, and landscape polish. Do not copy its Egyptian river, architecture, figures, or action.\nScene/backdrop: A broad ancient wilderness camp at first light, just after the dew has lifted; low tents sit softly out of focus in the distance, open dry ground fills the foreground.\nSubject: A few ancient Israelite gatherers stoop and carefully gather many tiny, pale, round flakes from the ground into simple baskets. The small flakes should be plainly visible at ground level, fine and scattered like hoarfrost; this is manna being discovered and measured, not bread already baked.\nComposition/framing: Wide 3:2 landscape, 1536x1024. Place the gatherers, baskets, and clearly visible small flakes in the left and center. Preserve a calm, relatively open stretch of softly detailed wilderness on the right for a reader overlay. Show the flakes as small round grains, never as giant loaves or falling from the sky.\nLighting/mood: Quiet early morning after dew, warm golden light beginning to touch the camp, attentive and reverent but natural.\nMaterials/textures: Worn woven linen and wool garments, simple baskets, dry soil, small frost-like grains, detailed painterly surfaces consistent with Image 1.\nConstraints: One coherent moment at Exodus 16:14–18: dew has lifted; the people see the small round substance, identify it as manna, and gather it. No Egyptians, modern objects, text, lettering, UI, pins, maps, labels, or watermark.\nAvoid: Huge loaves or bread stacks; rain, falling food, food suspended in air, granaries, later Sabbath or storage scenes; depicting the announcement in Exodus 16:4 as though it is the visible event; copying the riverbank scene from Image 1.",
+      "visual_review": "The output became a storm scene with hail-sized round pieces and no human gatherers. It missed the clear-morning, tiny-ground-grain, and visible-gathering requirements; it was not copied into the project."
+    },
+    {
+      "asset": "manna",
+      "attempt": 2,
+      "status": "Selected candidate",
+      "generated": {
+        "path": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-bbb1-7aa0-891d-33965a0d7418/exec-61718161-f101-4bc1-b43e-73ba13e1db64.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 2982004,
+        "sha256": "0c6c9de9bc6835765f98bda4a082ca290d29842546572ae41120b0d1e68a5ac2",
+        "format": "PNG"
+      },
+      "prompt": "Use case: historical-scene\nAsset type: individual Bible Journey painting, Exodus 16:14–18.\nImage 1 is a style reference only: match its cinematic painterly historical realism, natural golden light, detailed cloth and earth, and restrained warm color. Do not copy its Egyptian river, architecture, or action.\nScene: Clear, calm early morning in an ancient wilderness camp, just after dew has lifted. Sandy ground is visible in the foreground; simple tents sit in the distance.\nMain subject: Three adult Israelites in simple ancient linen and wool garments are clearly visible across the left and center foreground. Two kneel and gather many tiny white round flakes from the ground into woven baskets; the third watches. Their faces, hands, baskets, and gathering action are easy to see.\nManna appearance: fine, small round grains like hoarfrost, no larger than a fingernail, scattered across the ground and between the gatherers. The flakes are not airborne and do not look like hailstones, eggs, rocks, or balls. No bread loaves.\nComposition: wide 3:2 landscape at 1536x1024. Put the people, baskets, and ground-level flakes on the left/center. Keep the right third calmer and less detailed for reader UI, while keeping the action large enough to read.\nLighting: warm dawn sun after the dew is gone, clear sky, quiet and attentive mood.\nConstraints: show only the narrated discovery and gathering of manna in Exodus 16:14–18. No rain, storm clouds, lightning, hail, falling food, giant round objects, baked bread, Egyptians, modern objects, text, lettering, UI, map, pins, or watermark.",
+      "project_png": {
+        "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-completion-manna.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 2982004,
+        "sha256": "0c6c9de9bc6835765f98bda4a082ca290d29842546572ae41120b0d1e68a5ac2",
+        "format": "PNG"
+      },
+      "webp": {
+        "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-manna.webp",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 361558,
+        "sha256": "962ad9835608eac182b8f9a8331c698e19479b92ad392b7b532039875a3f0df4",
+        "format": "WEBP"
+      },
+      "conversion": {
+        "library": "Pillow",
+        "format": "WebP",
+        "quality": 85,
+        "method": 6,
+        "optimize": true
+      },
+      "visual_review": "Reviewed the final WebP: clear dawn, three gatherers, small pale flakes visible on ground, two baskets, and no storm, airborne food, baked loaves, text, or UI. Subjects and action sit left/center with calmer open ground on the right.",
+      "pin_candidates_percent": [
+        {
+          "hotspot_id": "exodus-completion-manna-flakes",
+          "x": 54,
+          "y": 63,
+          "visible_target": "Ground-level flakes beside the central kneeling gatherer's reaching hand.",
+          "pixel_equivalent_approx": {
+            "x": 829,
+            "y": 645
+          }
+        },
+        {
+          "hotspot_id": "exodus-completion-manna-gathering",
+          "x": 31,
+          "y": 37,
+          "visible_target": "Basket of gathered flakes held by the standing adult gatherer.",
+          "pixel_equivalent_approx": {
+            "x": 476,
+            "y": 379
+          }
+        }
+      ]
+    },
+    {
+      "asset": "water_from_rock",
+      "attempt": 1,
+      "status": "Selected candidate",
+      "generated": {
+        "path": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-bbb1-7aa0-891d-33965a0d7418/exec-6eb39166-1b1a-4b75-85bc-787a4059c3b4.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 3198131,
+        "sha256": "f6fb46922b7c250d63278f6b1eafaa80a5d468b13fd28ba25b282ed9044eb075",
+        "format": "PNG"
+      },
+      "prompt": "Use case: historical-scene\nAsset type: individual Bible Journey painting, Exodus 17:5–6.\nImage 1 is a style reference only: match its cinematic painterly historical realism, warm natural light, detailed ancient cloth, rock, and earth, and restrained rich color. Do not copy its Egyptian riverbank, architecture, figures, or action.\nScene: A rocky wilderness setting at Horeb, with dry stony ground and a few simple tents far behind. This is a story illustration, not a claimed modern location.\nMain subject and action: Moses stands beside a large natural rock. In one clear, readable moment, he swings and strikes the rock with the rod in his hand, and fresh water flows visibly out from the struck rock onto the ground. Several Israelite elders stand close enough to witness the action, watching the rock and water. Keep Moses, the rod-rock contact, the flowing water, and the elders distinct and visible.\nComposition: wide 3:2 landscape at 1536x1024. Place Moses, the struck rock, and the beginning of the stream in the left and center so the action is readable. Keep the right third calmer and less detailed for reader UI without shrinking the main action.\nLighting: warm late-afternoon natural light; solemn, grounded historical mood, no supernatural figure.\nMaterials: worn linen and wool garments, weathered stone, clear water, dry wilderness ground, textured painterly surfaces consistent with Image 1.\nConstraints: depict only the instruction's immediate fulfillment in Exodus 17:5–6: Moses takes the rod, strikes the rock, and water comes out in the elders' sight. No later Massah/Meribah naming or complaint, no Amalek battle, no lightning, no visible God or angel, no halo, no modern objects, no text, lettering, UI, map, pins, or watermark.",
+      "project_png": {
+        "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-completion-water-rock.png",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 3198131,
+        "sha256": "f6fb46922b7c250d63278f6b1eafaa80a5d468b13fd28ba25b282ed9044eb075",
+        "format": "PNG"
+      },
+      "webp": {
+        "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-water-rock.webp",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 415266,
+        "sha256": "9d290c572e03c94d60c92c80c92ca8803279ebeb941542d064473418ee31a3cc",
+        "format": "WEBP"
+      },
+      "conversion": {
+        "library": "Pillow",
+        "format": "WebP",
+        "quality": 85,
+        "method": 6,
+        "optimize": true
+      },
+      "visual_review": "Reviewed the final WebP: Moses holds and strikes with the rod at a visible rock face, water flows directly from the struck area, and elders watch nearby. No God or angel is shown; no complaint, naming event, or Amalek scene appears. The main action is left/center; the right side has no foreground figures.",
+      "pin_candidates_percent": [
+        {
+          "hotspot_id": "exodus-completion-rock-strike",
+          "x": 19,
+          "y": 49,
+          "visible_target": "Rod-rock contact and water's visible emergence at the outcrop.",
+          "pixel_equivalent_approx": {
+            "x": 292,
+            "y": 502
+          }
+        }
+      ]
+    }
+  ],
+  "scene_record_file": "/Users/daeshawnballard/Documents/Codex/2026-10-23/rust-bible-exodus-completion/middle-art-scenes.json",
+  "limitations": [
+    "The images are artistic reconstructions; clothing, people, objects, terrain, water and manna appearance are illustrative choices.",
+    "The manna gathering baskets do not depict a measured omer; the scene does not provide an exact modern identification or location.",
+    "The water scene combines the instruction and narrated fulfillment in Exodus 17:5–6 as one editorial moment; it does not depict verse 7's later place naming or the Amalek battle.",
+    "Visual asset review and source linking do not establish application integration, browser rendering, user acceptance, or release readiness."
+  ]
+}

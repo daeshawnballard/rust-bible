@@ -170,17 +170,22 @@ export function initReaderContext(root=document) {
     const w=canvas.clientWidth,h=canvas.clientHeight;
     // Keep genealogy labels readable. The same verse-follow and pan controls
     // move between native diagram nodes instead of shrinking an entire tree.
-    const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024),figure.hasAttribute('data-passage-diagram') ? 0.65 : 0);
+    const chapterCards=figure.querySelector('[data-context-focus-x]');
+    const diagramScale=chapterCards&&w<360?0.62:0.65;
+    const scale=Math.max(w/(img.naturalWidth||1536),h/(img.naturalHeight||1024),figure.hasAttribute('data-passage-diagram') ? diagramScale : 0);
     worldWidth=(img.naturalWidth||1536)*scale;worldHeight=(img.naturalHeight||1024)*scale;
     world.style.width=worldWidth+'px';world.style.height=worldHeight+'px';
     const selected=figure.querySelector('[aria-current],[aria-pressed="true"]');
     if(!manualPan){
-      const x=selected?parseFloat(selected.style.left)/100:.3;
+      // Diagram controls sit beside their cards; center the readable card,
+      // while keeping the actual hit target away from its text.
+      const x=selected?parseFloat(selected.dataset.contextFocusX||selected.style.left)/100:.3;
       const desktop=innerWidth>=900;
-      const target=w*(desktop ? 0.4 : 0.45);
+      const target=w*(desktop ? 0.4 : chapterCards ? 0.55 : 0.45);
       const initial=(w-worldWidth)/2;
       const scenePoint=initial+x*worldWidth;
       pan=scenePoint>w*(desktop ? 0.65 : 0.78)||scenePoint<44?target-x*worldWidth:initial;
+      if(chapterCards)pan=desktop?22:target-x*worldWidth;
       pan=Math.max(w-worldWidth-(desktop?w*.28:0)-22,Math.min(22,pan));
       panY=(h-worldHeight)/2;
       if(selected){

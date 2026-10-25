@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "provenance_recorded_at_utc": "2026-10-24T03:09:46Z",
+  "generation_mode": "Built-in ImageGen tool; no paid API or CLI fallback.",
+  "model": "Unknown; the built-in ImageGen result did not expose a model identifier.",
+  "reference": {
+    "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp",
+    "role": "style reference only",
+    "inspection": "The current Exodus river painting was inspected; its cinematic, richly painted historical realism, warm amber palette, layered light, textured surfaces, and detailed brushwork informed both final assets. Its river, figures, and composition were not copied."
+  },
+  "catalog_overlap_check": {
+    "source": "data/journey/passage-scenes.json",
+    "result": "No current Exodus scene range overlaps 12:7–11 or 19:16–19. The current catalog records were inspected before generation; no shared catalog changes were made."
+  },
+  "assets": [
+    {
+      "id": "exodus-completion-passover",
+      "source_range": "Exodus 12:7–11",
+      "generation_history": [
+        {
+          "step": "initial generation",
+          "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-6e886dbf-daaa-4162-9625-362a6b2593a9.png",
+          "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey instructional illustration, Exodus 12:7–11 only\nInput images: Image 1: style reference only; match its cinematic, richly painted historical realism, warm amber natural palette, layered light, textured earth and cloth, and detailed brushwork. Do not copy its river, figures, or composition.\nPrimary request: Illustrate the household instructions in Exodus 12:7–11. This is an illustrative view of the prescribed household arrangement, not a claim to depict a documented or enacted Passover event.\nScene/backdrop: A modest ancient household interior in Egypt, seen through a clear doorway so both the marked doorframe and meal are visible. Keep all setting details generic because the passage does not specify a house design or site.\nSubject: Show the two side posts and upper door post with a modest, restrained red marking, not gore. Within the house, an unnamed household eats roasted lamb with unleavened bread and bitter herbs. The people are dressed and ready as instructed: garments gathered at the waist, simple sandals on their feet, staffs held in hand. Their mood is alert and purposeful, with the meal still the central action.\nStyle/medium: Painterly cinematic historical realism matching the supplied Bible-scene reference; believable human proportions, natural cloth and wood textures, painterly but realistic, not photorealistic and not fantasy.\nComposition/framing: Wide 1536x1024 landscape. Keep the doorway and marked lintel on the left, and the meal and ready household in the left/center 65 percent so a reader overlay on the right does not obscure the source subjects. Make both the red doorpost marks and the meal clearly visible for separate source-linked hotspots.\nLighting/mood: Quiet evening lamplight with warm amber tones and soft shadows; sober, domestic, and purposeful rather than theatrical.\nConstraints: Treat all visible figures as unnamed illustrative household members; no asserted likenesses. Do not show a death angel, any divine person, a plague, a death, a slaughter, a future departure, a caravan, or people leaving the house. No map, no text, no interface, no pins, no watermark. No blood except the modest red doorframe marking. Do not add ritual objects, architecture, or exact historical claims not stated in the source.",
+          "reference_paths": [
+            "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp"
+          ],
+          "disposition": "Refined because the first red door-frame marks were broader and more saturated than requested."
+        },
+        {
+          "step": "targeted door-mark refinement",
+          "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-45f080ff-6106-435a-9a7d-3ecb08c37e1d.png",
+          "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey instructional illustration, Exodus 12:7–11 only\nInput images: Image 1: edit target. Preserve the exact composition, household, meal, clothing, sandals, staffs, warm light, doorway, and painterly style.\nPrimary request: Make only the red markings on the door frame modest and restrained.\nSubject: Keep a visible red mark on each of the two side posts and the upper door post, as the instruction describes. Reduce the existing marks to narrow, short, controlled brush strokes in muted dark red pigment; they should be plainly visible but occupy only a small portion of each post. No splatter, drips, splashes, pools, or gore.\nConstraints: Change only the size and saturation of the three door-frame marks. Preserve all people, meal items, staffs, sandals, pose, framing, lighting, and background unchanged. Do not add blood anywhere else, any death angel, divine person, plague, slaughter, future departure, caravan, text, interface, pins, or watermark.",
+          "reference_paths": [
+            "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-6e886dbf-daaa-4162-9625-362a6b2593a9.png"
+          ],
+          "disposition": "Selected final; marks reduced to smaller muted red strokes while preserving the scene."
+        }
+      ],
+      "project_png": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-completion-passover.png",
+      "webp": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-passover.webp",
+      "imagegen_result": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 2411395,
+        "sha256": "b1325d1519c851b9281c31feef159d9c82e509677054559549311b85bb62bc8b"
+      },
+      "webp_result": {
+        "format": "WEBP",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 240728,
+        "sha256": "9f93ceeca2fd61b0a3b8f6ca824d2e3afae81c951c2b04784c1ef39d846cf93d"
+      },
+      "webp_encoding": {
+        "library": "Pillow",
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6,
+        "source_png_preserved": true
+      },
+      "visual_inspection": "Viewed the final PNG and WebP at native size. The marked lintel and two posts, roasted lamb, unleavened bread, bitter herbs, sandals, gathered garments, and staffs are visible in the left/center. The red marking is modest and non-graphic. No death angel, divine person, slaughter, plague, caravan, or actual departure is shown. House, clothing, people, and food presentation are illustrative; the image illustrates instructions rather than claiming enactment.",
+      "hotspots": [
+        {
+          "id": "exodus-completion-passover-door",
+          "title": "Mark the two side posts and the upper post",
+          "x": 7.0,
+          "y": 23.0,
+          "anchor": {
+            "chapter": 12,
+            "first": 7,
+            "last": 7
+          },
+          "active": [
+            {
+              "chapter": 12,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "note": "Exodus 12:7 instructs that blood be placed on the two side posts and upper door post. These restrained marks illustrate the instruction; they are not evidence of a particular household’s enactment."
+        },
+        {
+          "id": "exodus-completion-passover-meal",
+          "title": "Eat the meal dressed and ready",
+          "x": 41.0,
+          "y": 57.0,
+          "anchor": {
+            "chapter": 12,
+            "first": 11,
+            "last": 11
+          },
+          "active": [
+            {
+              "chapter": 12,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "note": "Verses 8–10 instruct the roasted lamb, unleavened bread, bitter herbs, and handling of what remains; verse 11 describes loins girded, shoes on, and staff in hand. This is an instructional arrangement, not a claim that the moment was historically observed as pictured."
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-sinai",
+      "source_range": "Exodus 19:16–19",
+      "generation_history": [
+        {
+          "step": "initial generation",
+          "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-bc4a059f-a3e0-4be1-8a4c-845cc3be5dd8.png",
+          "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey narrative painting, Exodus 19:16–19 only\nInput images: Image 1: style reference only; match its cinematic, richly painted historical realism, warm natural palette, layered sky, textured terrain, and detailed brushwork. Do not copy its river, buildings, figures, or composition.\nPrimary request: Create a wide landscape illustration of the events on Mount Sinai in Exodus 19:16–19.\nScene/backdrop: Morning at a generic rugged mountain in the wilderness. The passage names Mount Sinai but does not describe its exact shape, geology, or modern location; keep the mountain and terrain illustrative.\nSubject: A thick cloud covers the mountain summit; smoke rises from the mount like a furnace, fire is visible upon it, and lightning cuts through the cloud. At a distance near the mountain’s lower part, a gathered people stand trembling. Moses is a small, modestly dressed figure near them at the base, facing the mountain. Show the mountain as trembling only through subtle atmospheric motion or falling dust, not through invented destruction.\nStyle/medium: Painterly, cinematic historical realism matching the supplied Bible-scene reference; natural forms, finely rendered smoke, cloud and stone, visible brush texture, rich but restrained atmosphere, not fantasy spectacle.\nComposition/framing: Wide 1536x1024 landscape. Keep the mountain, smoke/fire, lightning, and gathered people in the left and center 65 percent so a reader overlay on the right does not cover the subjects. The mountain should fill the left-center; the people and Moses should be readable as a separate small group near its lower base.\nLighting/mood: Early morning under storm-dark cloud, muted stone and warm firelight, dramatic thunderous atmosphere without apocalyptic exaggeration.\nConstraints: Do not show any humanoid divinity, face, body, silhouette in the cloud, tablets, golden calf, altar, or other later event. No visible voice or speech text; no invented trumpet player or instrument. No people climbing the mountain; keep them at a distance near its lower part. No map, labels, text, interface, pins, watermark, modern objects, or specific geographic landmarks. Moses’s appearance is illustrative, not a claimed portrait.",
+          "reference_paths": [
+            "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp"
+          ],
+          "disposition": "Refined to remove a staff from the small figure at the mountain base because it is not stated in this passage."
+        },
+        {
+          "step": "targeted figure-detail refinement",
+          "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-384aeb8f-f9e5-4239-bcfc-9f8b61cdeea2.png",
+          "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey narrative painting, Exodus 19:16–19 only\nInput images: Image 1: edit target. Preserve the exact composition, mountain, cloud, fire, lightning, smoke, gathered people, color, lighting, and painterly style.\nPrimary request: Remove the slender staff or pole from the small solitary figure near the mountain’s base, slightly left of center. Leave the figure standing naturally with empty hands.\nConstraints: Change only that staff or pole and the figure’s hand. Keep Moses’s position, all other people, mountain, terrain, framing, weather, and light unchanged. Do not add tablets, a calf, an altar, a trumpet player, any divine person, text, map, interface, pins, or watermark.",
+          "reference_paths": [
+            "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-bc4a059f-a3e0-4be1-8a4c-845cc3be5dd8.png"
+          ],
+          "disposition": "Selected final; staff removed while scene composition was preserved."
+        }
+      ],
+      "project_png": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-completion-sinai.png",
+      "webp": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-sinai.webp",
+      "imagegen_result": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 2608508,
+        "sha256": "cf8c0d3cd33b426808d8b3dc36d2b3853c1126669c8103ec84a6fd3ffdca48ca"
+      },
+      "webp_result": {
+        "format": "WEBP",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 271914,
+        "sha256": "fd3f74ad1f5c8587ab5f2e5deaa5d63ca9e5cbf49bca3d0e2bf170fba127007b"
+      },
+      "webp_encoding": {
+        "library": "Pillow",
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6,
+        "source_png_preserved": true
+      },
+      "visual_inspection": "Viewed the final PNG and WebP at native size. Thick cloud, smoke, fire, and lightning dominate the mountain; the gathered people are at its lower part and a small figure of Moses stands near them. No humanoid divinity, tablets, golden calf, altar, or trumpet instrument is visible. Terrain, mountain form, crowd, and appearance are illustrative, not a documentary reconstruction.",
+      "hotspots": [
+        {
+          "id": "exodus-completion-sinai-mountain",
+          "title": "Fire and smoke cover Mount Sinai",
+          "x": 43.0,
+          "y": 39.0,
+          "anchor": {
+            "chapter": 19,
+            "first": 18,
+            "last": 18
+          },
+          "active": [
+            {
+              "chapter": 19,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "Verse 18 reports the mountain covered with smoke because the LORD descended upon it in fire and says it quaked greatly. Verse 19 reports the increasing trumpet sound and an answer by voice; no voice or divine form is depicted. Mountain shape, fire, and smoke appearance are illustrative."
+        },
+        {
+          "id": "exodus-completion-sinai-people",
+          "title": "The people stand at the lower part of the mountain",
+          "x": 34.0,
+          "y": 75.0,
+          "anchor": {
+            "chapter": 19,
+            "first": 17,
+            "last": 17
+          },
+          "active": [
+            {
+              "chapter": 19,
+              "first": 16,
+              "last": 17
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 16,
+              "last": 17
+            }
+          ],
+          "note": "Verse 16 says the people trembled in the camp; verse 17 says Moses brought them out and they stood at the lower part of the mount. Their appearance and the composition of the crowd are illustrative, not portraits or an exact census."
+        }
+      ]
+    }
+  ],
+  "private_scene_manifest": "/Users/daeshawnballard/Documents/Codex/2026-10-23/rust-bible-exodus-completion/covenant-art-scenes.json",
+  "scene_manifest_schema": "Same schema_version/scenes shape and scene/hotspot range fields as data/journey/passage-scenes.json; private draft only, not integrated.",
+  "integration_status": "No shared catalog was changed; no browser, build, Git, or publication action was performed. Suggested pin coordinates are based on visual inspection and were not exercised in the application."
+}

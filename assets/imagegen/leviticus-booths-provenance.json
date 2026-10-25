@@ -1,0 +1,106 @@
+{
+  "title": "Leviticus 23:40, 42–43 branches and booths illustration provenance",
+  "status": "One production image asset and source-linked scene proposal. Artistic reconstruction only; not a claim of a documented event at a surveyed site, archaeology, implementation, or release acceptance.",
+  "source_reference": {
+    "book": "Leviticus",
+    "translation": "KJV from data/kjv.json",
+    "ranges": [
+      "23:40",
+      "23:42-43"
+    ],
+    "verse_notes": [
+      "23:40 names tree boughs, palm branches, thick-tree boughs, and willows, and calls for rejoicing for seven days.",
+      "23:42-43 command Israelites born to dwell in booths for seven days so later generations remember Israel's wilderness dwelling after the exodus."
+    ]
+  },
+  "style_reference": {
+    "path": "web/art/journey/exodus-signs-river.webp",
+    "role": "Inspected locally as the Bible Journey style authority: painterly historical realism, warm amber light, textured surfaces, and atmospheric depth. The reference was described in the prompt but was not supplied as a model image input."
+  },
+  "generator": {
+    "tool": "built-in image_gen",
+    "paid_api_used": false,
+    "cli_fallback_used": false
+  },
+  "conversion": {
+    "runtime": "bundled Python with Pillow 12.3.0",
+    "format": "WebP",
+    "quality": 85,
+    "method": 6,
+    "resize": false,
+    "source_mode": "RGB",
+    "alpha": "not present"
+  },
+  "prompts": {
+    "initial_generation": "Use case: historical-scene\nAsset type: production illustration for the Bible Journey reader, landscape 1536 × 1024.\nPrimary request: A source-bounded artistic reconstruction illustrating Leviticus 23:40–43: Israelite households dwelling in temporary booths for seven days, taking the named branches, and rejoicing.\nInput images: None supplied to the generator. The inspected local Bible Journey Exodus illustration is a style reference only and is not an image input.\nScene/backdrop: A modest ancient Israelite encampment in a dry harvest-season landscape, without a surveyed or identifiable town. Show several simple temporary shelters made from gathered branches, with visible palm fronds, willow boughs, and leafy branches; also show the named branches being carried or gathered by the households. Make these clear, human-scale booths rather than generic trees, permanent houses, or a modern festival set.\nSubject: A few Israelite households—adults and children in modest, tasteful ancient linen and wool garments—dwelling at and around the booths and quietly rejoicing together. Keep the human activity calm, communal, and natural, not a posed portrait or large spectacle. The image illustrates the instruction and remembrance in the verses; it does not claim a documented historical event at a specific place.\nStyle/medium: Cinematic painterly historical realism in the established Bible Journey visual family: detailed natural surfaces, richly textured woven clothing and branches, natural human proportions, warm amber/ochre light and atmospheric depth; not a photograph and not glossy 3D.\nComposition/framing: Wide 3:2 establishing view at human eye level. Place the branch booths, named branches, and households in the left and middle of the image, readable at thumbnail size. Leave the right third quiet and lower-detail with open ground and soft distant landscape for a reader overlay.\nLighting/mood: Gentle warm late-afternoon light, restrained highlights, soft shadows, peaceful rejoicing and remembrance.\nMaterials/textures: Fresh palm fronds, willow boughs, leafy branches, simple temporary woven or tied branch shelter surfaces, earth, and modest woven garments. Avoid architectural precision beyond what the text supplies.\nText (verbatim): None.\nConstraints: Keep the booths visibly temporary and made of gathered branches; make palm, willow, and leafy branches legible as distinct forms; show households dwelling there for seven days through a representative moment. Preserve the source's uncertainty: the verses do not describe the booth's exact construction, clothing, camp plan, or a specific historical location. No Temple or sanctuary, no altar or sacrifice, no modern festival objects or styling, no surveyed town, no divine or humanoid God figure. No text, labels, UI, hotspot pins, or watermark.\nAvoid: Modern religious-festival portraiture, contemporary clothing or objects, staged tourist reenactment, permanent buildings or Egyptian architecture, grand urban settlement, exact archaeological claims, random trees substituting for the named branches, oversized fantasy foliage, violence, blood, sacrifice, text, UI, or watermark.",
+    "targeted_edit": "Use case: precise-object-edit\nAsset type: final production illustration for the Bible Journey reader.\nInput images: Image 1: edit target, the generated Leviticus 23:40–43 booth illustration.\nPrimary request: Make one composition correction for reader-overlay space. Keep the whole scene, painterly style, branches, booths, households, and warm light. Edit only the right third.\nChange: Move the small secondary booth and the figures immediately beside it from the right side into the existing left/center camp, where they can remain behind the main booths. Replace their former right-side area with quiet, continuous open harvest ground and soft distant landscape.\nPreserve: Keep the large leafy branch booth and foreground household at left exactly as shown; keep the central branch shelter and seated family; keep the named palm fronds, willow-like boughs, and leafy branches clearly visible. Maintain the natural land texture and horizon. Do not crop or scale the canvas.\nStyle/medium: Preserve Image 1's cinematic painterly historical realism, textured linen, branches, warm amber/ochre light, natural proportions, and atmospheric depth.\nComposition/framing: Keep the important branches, booths, and people within the left and middle two-thirds. Leave the right third clearly calmer and lower-detail for a reader overlay, with no foreground person or shelter there.\nConstraints: This remains an artistic reconstruction illustrating the instructions, not a claim about an event at a documented site. No temple, modern festival portrait, surveyed town, God figure, text, labels, UI, pins, or watermark. Do not add new objects; change only the secondary right-side booth/figures and the space they occupied."
+  },
+  "attempts": [
+    {
+      "kind": "initial_generation",
+      "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-71764e1a-ea3c-4cc5-a77e-2d1918405144.png",
+      "selected": false,
+      "review": "Strong subject, style, and branch detail; a secondary booth and figures extended into the reader-overlay side, so one targeted composition edit was made."
+    },
+    {
+      "kind": "targeted_edit",
+      "input_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-71764e1a-ea3c-4cc5-a77e-2d1918405144.png",
+      "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-dfc8c941-8563-4d07-94ba-713af2acab37.png",
+      "selected": true,
+      "review": "Moved the secondary booth and figures into the left/center camp, preserving the main booth, families, branches, light, and open right side."
+    }
+  ],
+  "final": {
+    "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-dfc8c941-8563-4d07-94ba-713af2acab37.png",
+    "preserved_png_path": "assets/imagegen/source/leviticus-booths.png",
+    "project_webp_path": "web/art/journey/leviticus-booths.webp",
+    "dimensions_px": [
+      1536,
+      1024
+    ],
+    "png_sha256": "fecffc9156150a811de0797a3879c20ead620d674321e351ad0cf65e3bd21374",
+    "webp_sha256": "5cfebdb56de447a7214d8d729f9e8e55ffdf5ce4a5c21bcc593f751ba990cf4a",
+    "png_bytes": 3268242,
+    "webp_bytes": 427908,
+    "webp_quality": 85
+  },
+  "visual_review": [
+    "Temporary leafy branch shelters are readable at left and center; households include adults and children in modest garments, with a calm communal mood.",
+    "Palm-like fronds and broad/fine leafy boughs are visible; fine drooping foliage suggests willow, but species identification is illustrative rather than botanical evidence.",
+    "The right side is materially quieter after the edit, with open ground and soft distant land for reader overlay.",
+    "No temple, deity figure, modern festival styling, text, labels, pins, or watermark is visible."
+  ],
+  "limitations": [
+    "Leviticus 23:40 names branches and verses 42–43 require dwelling in booths; the verses do not specify that named branches formed the booth walls or roof. Their use in shelter construction here is an illustration choice.",
+    "Exact booth design, shelter materials, household identities, garments, camp layout, and event location are not supplied by the text.",
+    "Verse 41's yearly continuity is not pinned to a visual object; it remains with the chapter's seasonal calendar diagram."
+  ],
+  "suggested_pins": [
+    {
+      "id": "leviticus-booths-branches",
+      "title": "Branches for rejoicing",
+      "x_percent": 43,
+      "y_percent": 73,
+      "active": "Leviticus 23:40",
+      "anchor": "Leviticus 23:40",
+      "sources": [
+        "Leviticus 23:40"
+      ],
+      "target": "Gathered leafy branch bundle in the foreground."
+    },
+    {
+      "id": "leviticus-booths-dwell",
+      "title": "Dwell in booths",
+      "x_percent": 37,
+      "y_percent": 40,
+      "active": "Leviticus 23:42-43",
+      "anchor": "Leviticus 23:42",
+      "sources": [
+        "Leviticus 23:42-43"
+      ],
+      "target": "Main leafy temporary shelter and household."
+    }
+  ],
+  "scene_schema_file": "/Users/daeshawnballard/Documents/Codex/2026-10-25/rust-bible-leviticus/art-late-scenes.json",
+  "integration_status": "Not merged into the shared passage-scenes catalog; no code, browser, Page, build, deployment, or Git changes."
+}

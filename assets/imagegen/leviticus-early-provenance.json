@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-25 11:43:35 UTC",
+  "book": 2,
+  "generator": {
+    "tool": "built-in image_gen",
+    "model": "Unknown; the tool output did not report a model",
+    "mode": "generate; the garments asset received one targeted edit"
+  },
+  "source": {
+    "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/data/kjv.json",
+    "book_abbrev": "lv",
+    "verses": {
+      "leviticus_2_1": "And when any will offer a meat offering unto the LORD , his offering shall be of fine flour; and he shall pour oil upon it, and put frankincense thereon:",
+      "leviticus_8_7_9": [
+        "And he put upon him the coat, and girded him with the girdle, and clothed him with the robe, and put the ephod upon him, and he girded him with the curious girdle of the ephod, and bound it unto him therewith.",
+        "And he put the breastplate upon him: also he put in the breastplate the Urim and the Thummim.",
+        "And he put the mitre upon his head; also upon the mitre, even upon his forefront, did he put the golden plate, the holy crown; as the LORD commanded Moses."
+      ]
+    }
+  },
+  "style_references_inspected_only": [
+    "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp",
+    "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-sinai.webp",
+    "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/ot-leviticus-live-goat.webp"
+  ],
+  "style_reference_note": "The existing images were visually reviewed for cinematic painterly historical realism, warm amber natural lighting, textured materials, and restrained earthy color. They were not supplied as image inputs to generation.",
+  "assets": [
+    {
+      "id": "leviticus-grain-offering",
+      "source_range": "Leviticus 2:1",
+      "source_text": [
+        "And when any will offer a meat offering unto the LORD , his offering shall be of fine flour; and he shall pour oil upon it, and put frankincense thereon:"
+      ],
+      "generated_image": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-058553c5-56a9-4d47-8fba-b5eba1d68850.png",
+      "project_png": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/leviticus-grain-offering.png",
+      "final_webp": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/leviticus-grain-offering.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sha256": {
+        "project_png": "d904beb21be84c20c9c8ab7e75609d1be6b0a0f022e90f98056b520d5f04f249",
+        "final_webp": "4a75b7446faa477dca902afd04521e1fa38b9cd62795b71bd1a7b23464abe6c6"
+      },
+      "processing": "Copied the generated PNG unchanged to project source; converted a separate RGB WebP at quality 85, method 6.",
+      "prompt_history": [
+        {
+          "type": "initial",
+          "text": "Use case: historical-scene\nAsset type: premium source illustration for a Bible Journey scene, landscape 3:2 composition, Leviticus 2:1 only.\nPrimary request: An illustrative study of the materials named in Leviticus 2:1: fine flour, oil poured over it, and frankincense placed upon it. Treat this as an illustration of the instruction, not a claim to depict a documented offering or specific event.\nScene/backdrop: A simple work surface beside the portable Tabernacle bronze altar. Keep the altar a quiet contextual element in the background; no other ritual action is shown.\nSubject: In the left-center foreground, one modest shallow bowl holds fine flour with a restrained trace of oil over it; a plain oil vessel and a small dish containing frankincense resin sit beside it. Keep all vessel shapes and materials generic and unornamented because the verse does not specify them. No people are necessary.\nComposition/framing: Landscape 1536x1024. Keep the three ingredients and vessels distinct, large enough to inspect, clustered in the left and center. Leave the right side visually quieter for a future overlay, without making it empty or adding interface elements.\nStyle/medium: Match the project's existing cinematic, premium painterly historical realism: warm amber natural light, detailed brushwork, textured linen, wood and bronze, rich but restrained earthy color, grounded materials. Do not copy any existing scene's layout.\nLighting/mood: Soft late-day natural light, calm and reverent, with readable detail and gentle depth.\nConstraints: Show only the material instruction from Leviticus 2:1. Do not depict the memorial portion burned by the priest in verse 2, the remainder kept by the priests in verse 3, or any other verse's grain cakes, leaven, salt, firstfruits, priest, or ceremony. The bronze altar is contextual, not a claim that verse 1 describes an actual altar-side preparation event. No animal, blood, gore, smoke, flame, divine figure, lettering, labels, pins, UI, border, or watermark."
+        }
+      ],
+      "visual_review": "Inspected the full generated image. Fine flour is clear in the foreground bowl, oil vessel and frankincense dish are distinct, and the bronze altar sits quietly behind them. No labels, pins, text, smoke, flame, animal, or gore.",
+      "limits": [
+        "Leviticus 2:1 alone is the scene range; verses 2–3 are not depicted or included in coverage.",
+        "The altar is requested contextual tabernacle scenery, not described in this verse and not a claim of a specific offering event.",
+        "Bowl, oil vessel, dish, work surface, materials, shapes, and exact arrangement are interpretive because the verse does not specify them."
+      ],
+      "generator_input_images": []
+    },
+    {
+      "id": "leviticus-priest-garments",
+      "source_range": "Leviticus 8:7–9",
+      "source_text": [
+        "And he put upon him the coat, and girded him with the girdle, and clothed him with the robe, and put the ephod upon him, and he girded him with the curious girdle of the ephod, and bound it unto him therewith.",
+        "And he put the breastplate upon him: also he put in the breastplate the Urim and the Thummim.",
+        "And he put the mitre upon his head; also upon the mitre, even upon his forefront, did he put the golden plate, the holy crown; as the LORD commanded Moses."
+      ],
+      "generated_image_initial": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-b54e637b-c765-46a1-b5f2-93f721189b23.png",
+      "generated_image_final": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-c68b91c4-85d2-4fbe-9f58-4fe322a1d315.png",
+      "project_png": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/leviticus-priest-garments.png",
+      "final_webp": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/leviticus-priest-garments.webp",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sha256": {
+        "project_png": "a087a03946852b887df48851f9d5f6084e986db66e52b6fcc6f146bcac1c63b4",
+        "final_webp": "8259d438588ee1b14a70f7937bfe31c74d9e1b099922d492f176da7c1a79c3b6"
+      },
+      "processing": "Copied the targeted-refinement PNG unchanged to project source; converted a separate RGB WebP at quality 85, method 6.",
+      "prompt_history": [
+        {
+          "type": "initial",
+          "text": "Use case: historical-scene\nAsset type: premium source illustration for a Bible Journey scene, landscape 3:2 composition, Leviticus 8:7–9 only.\nPrimary request: Illustrate the narrated moment when Moses dresses Aaron in the priestly garments named in Leviticus 8:7–9. This is an artistic reconstruction of the text's clothing sequence, not a verified portrait or exact historical costume.\nScene/backdrop: Near the portable Tabernacle at Israel's desert encampment, shown quietly and without architectural embellishment. This setting is context from the surrounding chapter; the selected source range is only 8:7–9.\nSubject: Aaron is fully dressed and modestly covered in a plain layered coat, robe, girdle, ephod, breastplate, and turban with a small simple gold plate at the forehead. Moses stands beside him, arranging the garment as described. Both figures are adult men in restrained ancient Near Eastern styling. Keep the garments unadorned and general because these verses do not describe their exact colors, weave, shape, or ornament.\nComposition/framing: Landscape 1536x1024. Keep Aaron and Moses clear and detailed in the left and center. Leave the right side visually quieter for a future overlay, without making it blank or adding interface elements. Ensure no garment or figure is cropped awkwardly.\nStyle/medium: Match the project's existing cinematic, premium painterly historical realism: warm amber natural light, detailed brushwork, textured linen and muted earth colors, grounded materials, calm human presence. Do not copy any existing scene's composition.\nLighting/mood: Warm, soft natural daylight with readable facial expression and garment layers; reverent and restrained.\nConstraints: Show only the clothing sequence in Leviticus 8:7–9. Do not depict nudity or exposed chest, any sacrifice, blood, oil, altar action, divine figure, or extra attendants. Do not show separate crystals, tokens, or invented objects representing the Urim and Thummim; the opaque breastplate may be present, but the text does not describe those objects' appearance. The small gold plate must have no writing or symbol. No lettering, labels, pins, UI, border, or watermark."
+        },
+        {
+          "type": "targeted_refinement",
+          "text": "Use case: precise-object-edit\nAsset type: final Bible Journey source illustration, Leviticus 8:7–9.\nPrimary request: Change only the breastplate on Aaron's chest. Replace its grid of raised squares with one plain, opaque, unadorned woven-fabric panel in the same restrained dark blue and muted gold palette. It must show no squares, gems, compartments, tokens, letters, symbols, or visible items.\nConstraints: Keep Moses, Aaron, both poses, faces, other garment layers, turban and blank gold forehead plate, Tabernacle backdrop, lighting, framing, proportions, and painterly style unchanged. Aaron remains fully clothed and modestly covered. Do not add any other object or text."
+        }
+      ],
+      "visual_review": "Inspected both initial and refined full images. The initial breastplate had a grid of raised squares, so it was edited once. The final panel is plain and opaque with no visible stones, compartments, tokens, letters, or symbols; Aaron is fully clothed; Moses arranges the garment; no divine figure or sacrifice is shown.",
+      "limits": [
+        "Coverage is only 8:7–9. The portable Tabernacle backdrop is contextual from the surrounding chapter, not described in these three verses.",
+        "The named garment layers are shown as a restrained artistic reconstruction; the range does not specify their color, fabric, exact construction, or ornament.",
+        "The Urim and Thummim are named in verse 8 but their appearance is not described; no separate items are depicted.",
+        "The gold forehead plate has no writing or symbol; no identity likeness is claimed."
+      ],
+      "generator_input_images": [
+        "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-b54e637b-c765-46a1-b5f2-93f721189b23.png"
+      ],
+      "generator_input_images_note": "The initial generated image was the target of the single breastplate-only edit."
+    }
+  ]
+}

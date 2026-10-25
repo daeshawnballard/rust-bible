@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1678" viewBox="0 0 1536 1678" role="img" aria-labelledby="title desc">
+  <title id="title">Exodus 21 · Chapter outline</title>
+  <desc id="desc">A vertical column of 4 text cards partitions all 36 verses in Exodus 21. The diagram separates reading stages and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="1678" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Exodus 21 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 21:1–36 · 4 source-based reading stages</text>
+  <line x1="88" y1="386" x2="120" y2="386" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="386" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">Household service and</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">release rules</text>
+  <text x="150" y="363" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 21:1–11</text>
+  <text x="150" y="397" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Rules cover Hebrew</text>
+  <text x="150" y="427" fill="#59685f" font-family="Arial,sans-serif" font-size="24">servants, release, chosen</text>
+  <text x="150" y="457" fill="#59685f" font-family="Arial,sans-serif" font-size="24">service, and daughters sold</text>
+  <text x="150" y="487" fill="#59685f" font-family="Arial,sans-serif" font-size="24">as maidservants.</text>
+  <path d="M335 537V587" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="738" x2="120" y2="738" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="597" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="738" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="640" fill="#172d27" font-family="Georgia,serif" font-size="30">Life and family</text>
+  <text x="150" y="676" fill="#172d27" font-family="Georgia,serif" font-size="30">offenses</text>
+  <text x="150" y="715" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 21:12–17</text>
+  <text x="150" y="749" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Judgments address killing,</text>
+  <text x="150" y="779" fill="#59685f" font-family="Arial,sans-serif" font-size="24">striking or cursing</text>
+  <text x="150" y="809" fill="#59685f" font-family="Arial,sans-serif" font-size="24">parents, and kidnapping for</text>
+  <text x="150" y="839" fill="#59685f" font-family="Arial,sans-serif" font-size="24">sale.</text>
+  <path d="M335 889V939" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1090" x2="120" y2="1090" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="949" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1090" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="992" fill="#172d27" font-family="Georgia,serif" font-size="30">Injury and</text>
+  <text x="150" y="1028" fill="#172d27" font-family="Georgia,serif" font-size="30">compensation</text>
+  <text x="150" y="1067" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 21:18–27</text>
+  <text x="150" y="1101" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Cases cover fighting</text>
+  <text x="150" y="1131" fill="#59685f" font-family="Arial,sans-serif" font-size="24">injuries, harm to a</text>
+  <text x="150" y="1161" fill="#59685f" font-family="Arial,sans-serif" font-size="24">pregnant woman, penalties,</text>
+  <text x="150" y="1191" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and servant release.</text>
+  <path d="M335 1241V1291" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1442" x2="120" y2="1442" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1301" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1442" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1344" fill="#172d27" font-family="Georgia,serif" font-size="30">Animals and pit</text>
+  <text x="150" y="1380" fill="#172d27" font-family="Georgia,serif" font-size="30">liability</text>
+  <text x="150" y="1419" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 21:28–36</text>
+  <text x="150" y="1453" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The law addresses goring</text>
+  <text x="150" y="1483" fill="#59685f" font-family="Arial,sans-serif" font-size="24">oxen, known danger, pits,</text>
+  <text x="150" y="1513" fill="#59685f" font-family="Arial,sans-serif" font-size="24">ransom, and ox-on-ox</text>
+  <text x="150" y="1543" fill="#59685f" font-family="Arial,sans-serif" font-size="24">injury.</text>
+  <text x="120" y="1643" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; the diagram is a reading outline, not a scene or map.</text>
+</svg>

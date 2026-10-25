@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="2012" viewBox="0 0 1536 2012" role="img" aria-labelledby="title desc">
+  <title id="title">Exodus 34 · Chapter outline</title>
+  <desc id="desc">A vertical column of 5 text cards partitions all 35 verses in Exodus 34. The diagram separates reading stages and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="2012" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Exodus 34 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 34:1–35 · 5 source-based reading stages</text>
+  <line x1="88" y1="386" x2="120" y2="386" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="386" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">New tablets and the</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">LORD’s proclamation</text>
+  <text x="150" y="363" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 34:1–9</text>
+  <text x="150" y="397" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses brings new tablets;</text>
+  <text x="150" y="427" fill="#59685f" font-family="Arial,sans-serif" font-size="24">the LORD proclaims his name</text>
+  <text x="150" y="457" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and Moses pleads for</text>
+  <text x="150" y="487" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Israel.</text>
+  <path d="M335 537V587" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="741" x2="120" y2="741" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="597" width="430" height="288" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="741" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="640" fill="#172d27" font-family="Georgia,serif" font-size="30">Covenant promises and</text>
+  <text x="150" y="676" fill="#172d27" font-family="Georgia,serif" font-size="30">warnings against other</text>
+  <text x="150" y="712" fill="#172d27" font-family="Georgia,serif" font-size="30">gods</text>
+  <text x="150" y="751" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 34:10–17</text>
+  <text x="150" y="785" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The LORD renews the</text>
+  <text x="150" y="815" fill="#59685f" font-family="Arial,sans-serif" font-size="24">covenant and warns Israel</text>
+  <text x="150" y="845" fill="#59685f" font-family="Arial,sans-serif" font-size="24">against other gods.</text>
+  <path d="M335 895V945" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1081" x2="120" y2="1081" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="955" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1081" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="998" fill="#172d27" font-family="Georgia,serif" font-size="30">Feasts, firstborn,</text>
+  <text x="150" y="1034" fill="#172d27" font-family="Georgia,serif" font-size="30">Sabbath, and offerings</text>
+  <text x="150" y="1073" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 34:18–26</text>
+  <text x="150" y="1107" fill="#59685f" font-family="Arial,sans-serif" font-size="24">The LORD gives feast,</text>
+  <text x="150" y="1137" fill="#59685f" font-family="Arial,sans-serif" font-size="24">firstborn, Sabbath, and</text>
+  <text x="150" y="1167" fill="#59685f" font-family="Arial,sans-serif" font-size="24">offering instructions.</text>
+  <path d="M335 1217V1267" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1403" x2="120" y2="1403" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1277" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1403" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1320" fill="#172d27" font-family="Georgia,serif" font-size="30">Covenant words and</text>
+  <text x="150" y="1356" fill="#172d27" font-family="Georgia,serif" font-size="30">forty days and nights</text>
+  <text x="150" y="1395" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 34:27–28</text>
+  <text x="150" y="1429" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses writes the covenant</text>
+  <text x="150" y="1459" fill="#59685f" font-family="Arial,sans-serif" font-size="24">words after forty days and</text>
+  <text x="150" y="1489" fill="#59685f" font-family="Arial,sans-serif" font-size="24">nights on Sinai.</text>
+  <path d="M335 1539V1589" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1758" x2="120" y2="1758" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1599" width="430" height="318" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1758" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1642" fill="#172d27" font-family="Georgia,serif" font-size="30">Moses returns with a</text>
+  <text x="150" y="1678" fill="#172d27" font-family="Georgia,serif" font-size="30">shining face and uses</text>
+  <text x="150" y="1714" fill="#172d27" font-family="Georgia,serif" font-size="30">a veil</text>
+  <text x="150" y="1753" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 34:29–35</text>
+  <text x="150" y="1787" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses returns with a</text>
+  <text x="150" y="1817" fill="#59685f" font-family="Arial,sans-serif" font-size="24">shining face and uses a</text>
+  <text x="150" y="1847" fill="#59685f" font-family="Arial,sans-serif" font-size="24">veil when not before the</text>
+  <text x="150" y="1877" fill="#59685f" font-family="Arial,sans-serif" font-size="24">LORD.</text>
+  <text x="120" y="1977" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; the diagram is a reading outline, not a scene or map.</text>
+</svg>

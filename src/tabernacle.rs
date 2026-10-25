@@ -143,9 +143,11 @@ pub(super) fn legacy_target(part: Option<&str>, client: bool) -> Option<String> 
 }
 
 pub(super) fn embedded(selected: Option<&str>, client: bool) -> Option<String> {
-    let selected = selected.unwrap_or("lamp");
-    let part = part_for(selected)?;
-    let source = parse_ref(part.references[0])?;
+    let part = match selected {
+        Some(id) => Some(part_for(id)?),
+        None => None,
+    };
+    let selected_id = part.map(|part| part.id).unwrap_or("");
     let positions = [
         ("courtyard", 16.0, 60.5),
         ("altar", 31.6, 52.7),
@@ -158,11 +160,11 @@ pub(super) fn embedded(selected: Option<&str>, client: bool) -> Option<String> {
     ];
     let mut html = format!(
         r#"<section class="reader-illustration" data-context-scene="tabernacle" data-context-selected-part="{}" aria-label="Inside the Tabernacle illustration"><figure class="reader-illustration-scene"><img src="/art/tabernacle.webp" width="1536" height="1024" alt="Illustrated reconstruction of the Tabernacle courtyard, tent, and furnishings">"#,
-        part.id,
+        selected_id,
     );
     for (id, x, y) in positions {
         let item = part_for(id)?;
-        let pressed = if id == selected {
+        let pressed = if id == selected_id {
             " aria-pressed=\"true\""
         } else {
             " aria-pressed=\"false\""
@@ -176,23 +178,28 @@ pub(super) fn embedded(selected: Option<&str>, client: bool) -> Option<String> {
     html.push_str(
         "<figcaption>Artist’s reconstruction · Scene details are illustrative.</figcaption></figure>",
     );
-    let index = PARTS
-        .iter()
-        .position(|candidate| candidate.id == selected)?;
-    let (question, answer) = review_question(selected);
-    html.push_str(&format!(
-        r#"<div class="reader-illustration-detail" data-context-detail><img class="reader-illustration-object" src="/art/objects/{}.webp" width="1536" height="1024" alt="{}" loading="lazy" decoding="async"><div class="reader-illustration-copy"><p class="reader-illustration-eyebrow">Illustrated detail · {} of {}</p><h3>{}</h3><p class="reader-illustration-reference">{}</p><section class="reader-illustration-explanation"><h4>Explanation</h4><p>{}</p></section><details class="reader-illustration-question"><summary>{}</summary><p>{}</p></details>{}<small class="reader-illustration-reconstruction-note">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></div></section>"#,
-        part.id,
-        esc(part.image_alt),
-        index + 1,
-        PARTS.len(),
-        esc(part.name),
-        esc(&part.references.join(" · ")),
-        esc(part.note),
-        esc(question),
-        esc(answer),
-        context_read_link(&source, part.id, client),
-    ));
+    if let Some(part) = part {
+        let source = parse_ref(part.references[0])?;
+        let index = PARTS.iter().position(|candidate| candidate.id == part.id)?;
+        let (question, answer) = review_question(part.id);
+        html.push_str(&format!(
+            r#"<div class="reader-illustration-detail" data-context-detail><img class="reader-illustration-object" src="/art/objects/{}.webp" width="1536" height="1024" alt="{}" loading="lazy" decoding="async"><div class="reader-illustration-copy"><p class="reader-illustration-eyebrow">Illustrated detail · {} of {}</p><h3>{}</h3><p class="reader-illustration-reference">{}</p><section class="reader-illustration-explanation"><h4>Explanation</h4><p>{}</p></section><details class="reader-illustration-question"><summary>{}</summary><p>{}</p></details>{}<small class="reader-illustration-reconstruction-note">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></div></section>"#,
+            part.id,
+            esc(part.image_alt),
+            index + 1,
+            PARTS.len(),
+            esc(part.name),
+            esc(&part.references.join(" · ")),
+            esc(part.note),
+            esc(question),
+            esc(answer),
+            context_read_link(&source, part.id, client),
+        ));
+    } else {
+        html.push_str(
+            r#"<div class="reader-illustration-detail" data-context-detail><div class="reader-illustration-copy" style="grid-column:1/-1"><p class="reader-illustration-eyebrow">Illustrated overview · 8 details</p><h3>Inside the Tabernacle</h3><p class="reader-illustration-reference">Exodus 25–31 and 35–40</p><section class="reader-illustration-explanation"><h4>Overview</h4><p>This reconstruction brings the Tabernacle and its furnishings together. Choose an object in the scene to see its explanation and the Scripture passages connected to it.</p></section><small class="reader-illustration-reconstruction-note">Artist’s reconstruction. Appearance and placement are illustrative.</small></div></div></section>"#,
+        );
+    }
     Some(html)
 }
 

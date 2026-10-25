@@ -10938,6 +10938,1073 @@
           "detail": null
         }
       ]
+    },
+    {
+      "id": "exodus-completion-hail",
+      "book": 1,
+      "title": "Hail and fire strike the land of Egypt",
+      "coverage": "Exodus 9:23–25",
+      "caption": "Illustrative painting · Exodus 9:23–25 · storm, fire, tree, and field appearances are not documentary reconstruction",
+      "ranges": [
+        {
+          "chapter": 9,
+          "first": 23,
+          "last": 25
+        }
+      ],
+      "art": {
+        "alt": "Hail and ground-level fire strike an ancient cultivated field; hailstones cover plants and a large tree is split and broken. No people or animals are shown. The setting is illustrative, not a documented site.",
+        "path": "/art/journey/exodus-completion-hail.webp",
+        "width": 1536,
+        "height": 1024
+      },
+      "intro": {
+        "title": "Hail and fire across Egypt",
+        "note": "Exodus 9:23–25 names thunder, hail, fire running along the ground, broken trees, and damaged plants. The weather, tree and plant forms, and generic landscape are illustrative; no people, animals, Goshen panel, or mapped location is depicted."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-hail-field",
+          "title": "Hail and fire strike the field",
+          "x": 52.0,
+          "y": 49.0,
+          "anchor": {
+            "chapter": 9,
+            "first": 24,
+            "last": 24
+          },
+          "active": [
+            {
+              "chapter": 9,
+              "first": 23,
+              "last": 24
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 23,
+              "last": 24
+            }
+          ],
+          "note": "Exodus 9:23 reports thunder, hail, and fire running along the ground; verse 24 describes hail and fire mingled. Storm, hail size, and fire appearance are illustrative because the text does not specify them.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-hail-tree",
+          "title": "The hail breaks a tree",
+          "x": 35.0,
+          "y": 35.0,
+          "anchor": {
+            "chapter": 9,
+            "first": 25,
+            "last": 25
+          },
+          "active": [
+            {
+              "chapter": 9,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "note": "Verse 25 says the hail smote every tree of the field and broke every tree. This one broken tree is illustrative; the passage does not name its species or exact form.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-locusts",
+      "book": 1,
+      "title": "Locusts cover the land and consume what the hail left",
+      "coverage": "Exodus 10:14–15",
+      "caption": "Illustrative painting · Exodus 10:14–15 · insect, vegetation, and landscape appearances are not documentary reconstruction",
+      "ranges": [
+        {
+          "chapter": 10,
+          "first": 14,
+          "last": 15
+        }
+      ],
+      "art": {
+        "alt": "A dense mass of locusts covers a darkened field and stripped branches; a few remaining leaves are being eaten. The insect and plant appearances are illustrative, not a species identification.",
+        "path": "/art/journey/exodus-completion-locusts.webp",
+        "width": 1536,
+        "height": 1024
+      },
+      "intro": {
+        "title": "The locusts cover the land",
+        "note": "Exodus 10:14–15 says the locusts rested across Egypt, darkened the land, and ate what the hail left. The insect form, landscape, and plant forms are illustrative, not a documentary reconstruction or modern species claim."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-locusts-cover",
+          "title": "Locusts cover the land",
+          "x": 53.0,
+          "y": 61.0,
+          "anchor": {
+            "chapter": 10,
+            "first": 14,
+            "last": 14
+          },
+          "active": [
+            {
+              "chapter": 10,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Verse 14 says the locusts went up over all the land of Egypt and rested across it. Their appearance, size, and species are unspecified; this is an illustration, not a documentary or entomological reconstruction.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-locusts-eat",
+          "title": "The locusts eat what the hail left",
+          "x": 28.0,
+          "y": 31.0,
+          "anchor": {
+            "chapter": 10,
+            "first": 15,
+            "last": 15
+          },
+          "active": [
+            {
+              "chapter": 10,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 5,
+              "last": 5
+            },
+            {
+              "chapter": 10,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "note": "Verse 5 forecasts what the locusts will eat; verse 15 reports that they consume the remaining herbs and fruit. Plant forms and crop varieties are unspecified; the stripped branches are illustrative.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-manna",
+      "book": 1,
+      "title": "The people gather manna after the dew lifts",
+      "coverage": "Exodus 16:14–18",
+      "art": {
+        "path": "/art/journey/exodus-completion-manna.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Israelite gatherers collect tiny pale round flakes from wilderness ground into baskets after the dew has lifted; artistic reconstruction"
+      },
+      "caption": "Illustrated reconstruction · Exodus 16:14–18 · figures, flakes, and baskets are interpretive",
+      "ranges": [
+        {
+          "chapter": 16,
+          "first": 14,
+          "last": 18
+        }
+      ],
+      "intro": {
+        "title": "Manna on the ground",
+        "note": "Exodus 16:14 describes a small round substance on the wilderness ground after the dew lifts. Verse 15 says the people see and identify it as manna; verses 16–18 give the gathering measure and report how the people gather. The flakes, people, containers, and camp are artistic reconstructions; no exact omer or modern location is depicted."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-manna-flakes",
+          "title": "Small round flakes on the ground",
+          "x": 54,
+          "y": 63,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 14,
+            "last": 14
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 14,
+              "last": 15
+            }
+          ],
+          "note": "Exodus 16:14 describes the small round substance left on the ground after the dew has gone; verse 15 records the people seeing and identifying it as manna. The painted size and appearance are interpretive."
+        },
+        {
+          "id": "exodus-completion-manna-gathering",
+          "title": "Gathering by the stated measure",
+          "x": 31,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 16,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "anchor": {
+            "chapter": 16,
+            "first": 16,
+            "last": 16
+          },
+          "sources": [
+            {
+              "chapter": 16,
+              "first": 16,
+              "last": 18
+            }
+          ],
+          "note": "Verse 16 instructs each person to gather according to eating, with an omer for each person. Verses 17–18 report the gathering and measured result: those gathering much had nothing over and those gathering little had no lack. The basket shown is illustrative, not a measured omer."
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-water-rock",
+      "book": 1,
+      "title": "Moses strikes the rock and water comes out",
+      "coverage": "Exodus 17:6",
+      "art": {
+        "path": "/art/journey/exodus-completion-water-rock.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Moses strikes a wilderness rock with a rod as water flows and Israelite elders watch; artistic reconstruction of Exodus 17:5–6"
+      },
+      "caption": "Illustration of the water from the rock · Exodus 17:6 · the preceding command is a separate reading stage",
+      "ranges": [
+        {
+          "chapter": 17,
+          "first": 6,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "Water from the rock",
+        "note": "Exodus 17:5–6 instructs Moses to take the rod and elders, go before the people, and strike the rock at Horeb. Verse 6 reports water coming out and Moses doing so in the elders' sight. This painting compresses the strike and immediate water flow into one editorial moment; the people, garments, rock, and terrain are reconstructions, not a mapped site. It does not depict verse 7's later naming of Massah and Meribah or the Amalek conflict beginning in verse 8; God is not depicted."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-rock-strike",
+          "title": "Moses strikes the rock",
+          "x": 19,
+          "y": 49,
+          "active": [
+            {
+              "chapter": 17,
+              "first": 6,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 17,
+            "first": 6,
+            "last": 6
+          },
+          "sources": [
+            {
+              "chapter": 17,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "Verse 5 gives the instruction to take the rod and elders; verse 6 reports Moses striking the rock and water coming out in the elders' sight. The visible water and contact point illustrate verse 6, while verse 5 remains the prior instruction."
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-calf",
+      "book": 1,
+      "title": "The golden calf and the gathering",
+      "coverage": "Exodus 32:4–6",
+      "art": {
+        "path": "/art/journey/exodus-completion-calf.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A cast-gold calf stands beside a low stone altar while Israelites gather, dance, and eat in a desert camp; artistic reconstruction."
+      },
+      "caption": "Artistic reconstruction · Exodus 32:4–6",
+      "ranges": [
+        {
+          "chapter": 32,
+          "first": 4,
+          "last": 6
+        }
+      ],
+      "intro": {
+        "title": "The calf and the feast",
+        "note": "Exodus 32:4 describes the molten calf. Verse 5 says Aaron built an altar before it and announced a feast; verse 6 describes offerings, eating, drinking, and play the next morning. This illustration compresses those adjacent moments into one camp scene. The calf’s scale, camp arrangement, clothing, and depicted materials are illustrative, not specified by the passage."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-calf-object",
+          "title": "The golden calf",
+          "x": 30,
+          "y": 49,
+          "active": [
+            {
+              "chapter": 32,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "anchor": {
+            "chapter": 32,
+            "first": 4,
+            "last": 4
+          },
+          "sources": [
+            {
+              "chapter": 32,
+              "first": 4,
+              "last": 4
+            }
+          ],
+          "note": "Exodus 32:4 says Aaron made a molten calf. The pin marks the cast-gold figure in this reconstruction; the passage does not specify its size or exact appearance.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-calf-altar",
+          "title": "An altar before the calf",
+          "x": 46,
+          "y": 60,
+          "active": [
+            {
+              "chapter": 32,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "anchor": {
+            "chapter": 32,
+            "first": 5,
+            "last": 5
+          },
+          "sources": [
+            {
+              "chapter": 32,
+              "first": 5,
+              "last": 6
+            }
+          ],
+          "note": "Exodus 32:5 says Aaron built an altar before the calf and proclaimed a feast; verse 6 describes offerings and the gathering eating, drinking, and playing. The image combines these neighboring moments, and the altar’s construction is illustrative.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-glory-cloud",
+      "book": 1,
+      "title": "The cloud covers the Tabernacle",
+      "coverage": "Exodus 40:34–35",
+      "art": {
+        "path": "/art/journey/exodus-completion-glory-cloud.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A luminous cloud covers a fully enclosed portable Tabernacle inside a linen court; Moses stands outside; artistic reconstruction."
+      },
+      "caption": "Artistic reconstruction · Exodus 40:34–35",
+      "ranges": [
+        {
+          "chapter": 40,
+          "first": 34,
+          "last": 35
+        }
+      ],
+      "intro": {
+        "title": "The cloud fills the Tabernacle",
+        "note": "Exodus 40:34–35 says a cloud covered the tent, the LORD’s glory filled the Tabernacle, and Moses could not enter while the cloud rested there. This is an exterior artistic reconstruction: the cloud and light suggest the passage without showing a divine figure or a cutaway interior. The tent, court, figure, clothing, and exact arrangement are illustrative."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-cloud-over-tent",
+          "title": "The cloud covers the tent",
+          "x": 47,
+          "y": 32,
+          "active": [
+            {
+              "chapter": 40,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 40,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 40,
+              "first": 34,
+              "last": 35
+            }
+          ],
+          "note": "Exodus 40:34–35 describes the cloud covering the tent and the LORD’s glory filling the Tabernacle. The cloud’s appearance and light are a visual interpretation; no humanoid form or view inside is shown.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-moses-outside",
+          "title": "Moses cannot enter",
+          "x": 27,
+          "y": 77,
+          "active": [
+            {
+              "chapter": 40,
+              "first": 35,
+              "last": 35
+            }
+          ],
+          "anchor": {
+            "chapter": 40,
+            "first": 35,
+            "last": 35
+          },
+          "sources": [
+            {
+              "chapter": 40,
+              "first": 35,
+              "last": 35
+            }
+          ],
+          "note": "Exodus 40:35 says Moses was not able to enter because the cloud abode on the tent and the LORD’s glory filled the Tabernacle. The figure is shown outside as an illustrative rendering of that statement; the passage does not specify his gesture or clothing.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-departure",
+      "book": 1,
+      "title": "Israel departs from Egypt",
+      "coverage": "Exodus 12:34,37–38",
+      "art": {
+        "path": "/art/journey/exodus-completion-departure.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Illustration of walking households, a cloth-wrapped wooden trough on a shoulder, and a traveling company with livestock"
+      },
+      "caption": "Illustrated departure · Exodus 12:34,37–38 · appearance and scale are interpretive",
+      "ranges": [
+        {
+          "chapter": 12,
+          "first": 34,
+          "last": 34
+        },
+        {
+          "chapter": 12,
+          "first": 37,
+          "last": 38
+        }
+      ],
+      "intro": {
+        "title": "A departure, not the later crossing",
+        "note": "These selected verses describe carried dough and a departing company. Verse 39 separately describes baking the unleavened cakes; it is not depicted here."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-departure-dough",
+          "title": "Dough carried on their shoulders",
+          "x": 46,
+          "y": 20,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 34,
+            "last": 34
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 34,
+              "last": 34
+            }
+          ],
+          "note": "Exodus 12:34 describes dough before it was leavened, with kneading troughs bound in clothes upon their shoulders. The pin marks the visible wrapped wooden trough; its exact shape and the people’s appearance are illustrative.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-departure-company",
+          "title": "The traveling company and livestock",
+          "x": 61,
+          "y": 52,
+          "active": [
+            {
+              "chapter": 12,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "anchor": {
+            "chapter": 12,
+            "first": 37,
+            "last": 37
+          },
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 37,
+              "last": 38
+            }
+          ],
+          "note": "Exodus 12:37–38 describes departure from Rameses to Succoth, children, a mixed multitude, flocks, and herds. The pin marks travelers and livestock. This image does not establish the route, exact headcount, or portraits of named people.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-passover",
+      "book": 1,
+      "title": "Passover instructions for each household",
+      "coverage": "Exodus 12:7–11",
+      "caption": "Illustration of instructions · Exodus 12:7–11 · not a claim of enactment",
+      "ranges": [
+        {
+          "chapter": 12,
+          "first": 7,
+          "last": 11
+        }
+      ],
+      "art": {
+        "alt": "An unnamed household meal with roasted lamb, unleavened bread, and bitter herbs inside a doorway with modest red marks on its lintel and posts. The people wear sandals, hold staffs, and have their garments gathered. Illustrates instructions, not a documented enactment.",
+        "path": "/art/journey/exodus-completion-passover.webp",
+        "width": 1536,
+        "height": 1024
+      },
+      "intro": {
+        "title": "A household prepared according to the instructions",
+        "note": "This scene illustrates Exodus 12:7–11 instructions: marks on the door posts, the meal, and readiness to eat in haste. It does not depict a specific household, claim that these instructions were enacted as pictured, or show the later departure or judgment. All people, clothing, house details, and food presentation are illustrative."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-passover-door",
+          "title": "Mark the two side posts and the upper post",
+          "x": 7.0,
+          "y": 23.0,
+          "anchor": {
+            "chapter": 12,
+            "first": 7,
+            "last": 7
+          },
+          "active": [
+            {
+              "chapter": 12,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "note": "Exodus 12:7 instructs that blood be placed on the two side posts and upper door post. These restrained marks illustrate the instruction; they are not evidence of a particular household’s enactment.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-passover-meal",
+          "title": "Eat the meal dressed and ready",
+          "x": 41.0,
+          "y": 57.0,
+          "anchor": {
+            "chapter": 12,
+            "first": 11,
+            "last": 11
+          },
+          "active": [
+            {
+              "chapter": 12,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 12,
+              "first": 8,
+              "last": 11
+            }
+          ],
+          "note": "Verses 8–10 instruct the roasted lamb, unleavened bread, bitter herbs, and handling of what remains; verse 11 describes loins girded, shoes on, and staff in hand. This is an instructional arrangement, not a claim that the moment was historically observed as pictured.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-sinai",
+      "book": 1,
+      "title": "The people meet at Mount Sinai amid cloud, smoke, fire, and lightning",
+      "coverage": "Exodus 19:16–18",
+      "caption": "Illustration of the people and mountain · Exodus 19:16–18 · the audible exchange at verse 19 is a separate reading stage",
+      "ranges": [
+        {
+          "chapter": 19,
+          "first": 16,
+          "last": 18
+        }
+      ],
+      "art": {
+        "alt": "A rugged mountain under thick cloud, smoke, fire, and lightning; a gathered people stand at its lower part and a small figure of Moses is near them. No divine person or later covenant object is shown. The appearance is illustrative.",
+        "path": "/art/journey/exodus-completion-sinai.webp",
+        "width": 1536,
+        "height": 1024
+      },
+      "intro": {
+        "title": "Cloud, smoke, fire, and lightning on the mount",
+        "note": "Exodus 19:16–19 describes thunder, lightning, a thick cloud, the people trembling, Moses bringing them to the lower part of the mount, smoke and fire upon the mountain, and a voice. The illustration shows no humanoid divinity, voice, trumpet instrument, tablets, or golden calf. The mountain, crowd, figure, smoke, and fire are illustrative, not a documented reconstruction."
+      },
+      "hotspots": [
+        {
+          "id": "exodus-completion-sinai-mountain",
+          "title": "Fire and smoke cover Mount Sinai",
+          "x": 43.0,
+          "y": 39.0,
+          "anchor": {
+            "chapter": 19,
+            "first": 18,
+            "last": 18
+          },
+          "active": [
+            {
+              "chapter": 19,
+              "first": 18,
+              "last": 18
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 18,
+              "last": 19
+            }
+          ],
+          "note": "Verse 18 reports the mountain covered with smoke because the LORD descended upon it in fire and says it quaked greatly. Verse 19 reports the increasing trumpet sound and an answer by voice; no voice or divine form is depicted. Mountain shape, fire, and smoke appearance are illustrative.",
+          "detail": null
+        },
+        {
+          "id": "exodus-completion-sinai-people",
+          "title": "The people stand at the lower part of the mountain",
+          "x": 34.0,
+          "y": 75.0,
+          "anchor": {
+            "chapter": 19,
+            "first": 17,
+            "last": 17
+          },
+          "active": [
+            {
+              "chapter": 19,
+              "first": 16,
+              "last": 17
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 19,
+              "first": 16,
+              "last": 17
+            }
+          ],
+          "note": "Verse 16 says the people trembled in the camp; verse 17 says Moses brought them out and they stood at the lower part of the mount. Their appearance and the composition of the crowd are illustrative, not portraits or an exact census.",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "id": "leviticus-grain-offering",
+      "book": 2,
+      "title": "Materials for the Grain Offering",
+      "coverage": "Leviticus 2:1",
+      "art": {
+        "path": "/art/journey/leviticus-grain-offering.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Fine flour, an oil vessel, and frankincense resin on a work surface near a contextual bronze Tabernacle altar; artistic illustration of Leviticus 2:1 instructions."
+      },
+      "caption": "Illustration of instructions · Leviticus 2:1",
+      "ranges": [
+        {
+          "chapter": 2,
+          "first": 1,
+          "last": 1
+        }
+      ],
+      "intro": {
+        "title": "Flour, oil, and frankincense",
+        "note": "Leviticus 2:1 instructs that fine flour be offered with oil and frankincense. This scene illustrates the ingredients, not a documented offering or event. The altar is contextual, while the work surface, vessel forms and materials are interpretive. It covers verse 1 only; the priestly memorial portion in verse 2 and the remainder in verse 3 are not depicted."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-grain-flour",
+          "title": "Fine flour",
+          "x": 25,
+          "y": 52,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "Verse 1 names fine flour. Its shallow bowl and material are visual interpretation; the text does not specify the container.",
+          "detail": null,
+          "visual_bounds_pct": [
+            {
+              "target": "flour mound in bowl",
+              "x": 10,
+              "y": 42,
+              "width": 28,
+              "height": 23
+            }
+          ]
+        },
+        {
+          "id": "leviticus-grain-oil-frankincense",
+          "title": "Frankincense",
+          "x": 64,
+          "y": 62,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "Leviticus 2:1 names frankincense with fine flour and oil. The pin identifies the visible resin dish. Its vessel and the granules’ appearance are illustrative; the altar is background context, not a depiction of the later ritual in verse 2.",
+          "detail": null,
+          "visual_bounds_pct": [
+            {
+              "target": "oil vessel",
+              "x": 41,
+              "y": 22,
+              "width": 18,
+              "height": 32
+            },
+            {
+              "target": "frankincense dish",
+              "x": 49,
+              "y": 52,
+              "width": 30,
+              "height": 20
+            }
+          ]
+        },
+        {
+          "id": "leviticus-grain-oil",
+          "title": "Oil for the offering",
+          "x": 49,
+          "y": 37,
+          "active": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "anchor": {
+            "chapter": 2,
+            "first": 1,
+            "last": 1
+          },
+          "sources": [
+            {
+              "chapter": 2,
+              "first": 1,
+              "last": 1
+            }
+          ],
+          "note": "Leviticus 2:1 instructs the offerer to pour oil upon the fine flour. The pin identifies the visible oil vessel. The vessel’s material and shape are artistic choices, not specified by this verse.",
+          "detail": null,
+          "visual_bounds_pct": [
+            {
+              "target": "oil vessel",
+              "x": 41,
+              "y": 22,
+              "width": 18,
+              "height": 32
+            },
+            {
+              "target": "frankincense dish",
+              "x": 49,
+              "y": 52,
+              "width": 30,
+              "height": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leviticus-priest-garments",
+      "book": 2,
+      "title": "Aaron’s Priestly Garments",
+      "coverage": "Leviticus 8:7–9",
+      "art": {
+        "path": "/art/journey/leviticus-priest-garments.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Moses arranges the priestly garments on fully clothed Aaron near a portable tent; artistic reconstruction of Leviticus 8:7–9."
+      },
+      "caption": "Illustrative reconstruction · Leviticus 8:7–9",
+      "ranges": [
+        {
+          "chapter": 8,
+          "first": 7,
+          "last": 9
+        }
+      ],
+      "intro": {
+        "title": "Aaron is clothed for service",
+        "note": "Leviticus 8:7–9 narrates Moses placing the coat, girdle, robe, ephod, breastplate, Urim and Thummim, turban, and gold plate on Aaron. The picture shows Moses arranging named garments. Exact colors, materials, construction, and ornament are not given here. The tent is context from the surrounding chapter. The breastplate is plain and opaque; no form is invented for the Urim and Thummim."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-priest-robe",
+          "title": "Robe and girdle",
+          "x": 50,
+          "y": 69,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 7,
+            "last": 7
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 7,
+              "last": 7
+            }
+          ],
+          "note": "Verse 7 names the coat, girdle, robe, ephod, and ephod girdle. Their materials and exact tailoring are artistic interpretation.",
+          "detail": null,
+          "visual_bounds_pct": [
+            {
+              "target": "visible robe and lower garment layers",
+              "x": 38,
+              "y": 43,
+              "width": 24,
+              "height": 49
+            }
+          ]
+        },
+        {
+          "id": "leviticus-priest-breastplate",
+          "title": "Breastplate",
+          "x": 48,
+          "y": 34,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 8,
+            "last": 8
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 8,
+              "last": 8
+            }
+          ],
+          "note": "Verse 8 names the breastplate and says the Urim and Thummim were put in it. Their appearance is not described; none are shown separately. The plain opaque panel is an illustrative treatment.",
+          "detail": null,
+          "visual_bounds_pct": [
+            {
+              "target": "plain opaque breastplate on chest",
+              "x": 39,
+              "y": 22,
+              "width": 18,
+              "height": 23
+            }
+          ]
+        },
+        {
+          "id": "leviticus-priest-turban",
+          "title": "Turban and gold plate",
+          "x": 45,
+          "y": 9,
+          "active": [
+            {
+              "chapter": 8,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "anchor": {
+            "chapter": 8,
+            "first": 9,
+            "last": 9
+          },
+          "sources": [
+            {
+              "chapter": 8,
+              "first": 9,
+              "last": 9
+            }
+          ],
+          "note": "Verse 9 names the mitre and golden plate at its front. The plate is blank because no inscription is specified in these verses.",
+          "detail": null,
+          "visual_bounds_pct": [
+            {
+              "target": "turban and blank forehead plate",
+              "x": 39,
+              "y": 2,
+              "width": 15,
+              "height": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leviticus-booths",
+      "book": 2,
+      "title": "Branches and booths at harvest",
+      "coverage": "Leviticus 23:40, 42–43",
+      "art": {
+        "path": "/art/journey/leviticus-booths.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Israelite households gather around temporary leafy booths with palm and other branches; artistic reconstruction of Leviticus 23:40, 42–43."
+      },
+      "caption": "Artistic reconstruction · Leviticus 23:40, 42–43",
+      "ranges": [
+        {
+          "chapter": 23,
+          "first": 40,
+          "last": 40
+        },
+        {
+          "chapter": 23,
+          "first": 42,
+          "last": 43
+        }
+      ],
+      "intro": {
+        "title": "Branches and booths",
+        "note": "Leviticus 23:40 names tree boughs, palm branches, thick-tree boughs, and willows and calls for rejoicing; verses 42–43 command Israelite households to dwell in booths for seven days and remember the wilderness after Egypt. Verse 41's annual calendar continuity remains in the chapter diagram rather than a visible hotspot. The pictured shelter construction, household, garments, and camp layout are illustrative; the text does not specify exact design or a documented site."
+      },
+      "hotspots": [
+        {
+          "id": "leviticus-booths-branches",
+          "title": "Branches for rejoicing",
+          "x": 43,
+          "y": 73,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 40,
+              "last": 40
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 40,
+            "last": 40
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 40,
+              "last": 40
+            }
+          ],
+          "note": "Leviticus 23:40 names boughs of goodly trees, palm branches, thick-tree boughs, and willows from the brook. This pin marks gathered branches in the reconstruction; exact botanical identification and their arrangement are illustrative.",
+          "detail": null
+        },
+        {
+          "id": "leviticus-booths-dwell",
+          "title": "Dwell in booths",
+          "x": 37,
+          "y": 40,
+          "active": [
+            {
+              "chapter": 23,
+              "first": 42,
+              "last": 43
+            }
+          ],
+          "anchor": {
+            "chapter": 23,
+            "first": 42,
+            "last": 42
+          },
+          "sources": [
+            {
+              "chapter": 23,
+              "first": 42,
+              "last": 43
+            }
+          ],
+          "note": "Verses 42–43 command Israelite households to dwell in booths for seven days so future generations remember the wilderness dwelling after the exodus. The family's appearance, booth materials, and camp setting are illustrative; this is not a claim about a documented event at a known place.",
+          "detail": null
+        }
+      ]
     }
   ]
 }

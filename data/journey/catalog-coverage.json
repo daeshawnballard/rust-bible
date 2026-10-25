@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "scope": "Consolidated focused-scene catalog only. Legacy story worlds, Eden anchors, object studies and broad book context are excluded. An unassigned catalog verse may have one of those existing companions. Source inventory is not live verification.",
+  "scope": "Consolidated focused-scene catalog only. Chapter diagrams, legacy story worlds, Eden anchors, object studies and broad book context are excluded. An unassigned catalog verse may have one of those existing companions. Source inventory is not live verification.",
   "source_files": [
     "data/journey/passage-scenes.json",
     "data/kjv.json"
@@ -8,8 +8,8 @@
   "summary": {
     "books": 66,
     "chapters": 1189,
-    "scenes": 124,
-    "hotspots": 282
+    "scenes": 136,
+    "hotspots": 307
   },
   "books": [
     {
@@ -1209,9 +1209,9 @@
       "book": 1,
       "name": "Exodus",
       "chapter_count": 40,
-      "catalog_scenes": 12,
-      "catalog_hotspots": 31,
-      "chapters_with_catalog_scene": 9,
+      "catalog_scenes": 21,
+      "catalog_hotspots": 48,
+      "chapters_with_catalog_scene": 17,
       "chapters": [
         {
           "chapter": 1,
@@ -1439,12 +1439,23 @@
         {
           "chapter": 9,
           "verse_count": 35,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-hail"
+          ],
+          "selected_verse_count": 3,
+          "selected_ranges": [
+            {
+              "first": 23,
+              "last": 25
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 22
+            },
+            {
+              "first": 26,
               "last": 35
             }
           ]
@@ -1452,12 +1463,23 @@
         {
           "chapter": 10,
           "verse_count": 29,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-locusts"
+          ],
+          "selected_verse_count": 2,
+          "selected_ranges": [
+            {
+              "first": 14,
+              "last": 15
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 13
+            },
+            {
+              "first": 16,
               "last": 29
             }
           ]
@@ -1478,12 +1500,40 @@
         {
           "chapter": 12,
           "verse_count": 51,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-departure",
+            "exodus-completion-passover"
+          ],
+          "selected_verse_count": 8,
+          "selected_ranges": [
+            {
+              "first": 7,
+              "last": 11
+            },
+            {
+              "first": 34,
+              "last": 34
+            },
+            {
+              "first": 37,
+              "last": 38
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 6
+            },
+            {
+              "first": 12,
+              "last": 33
+            },
+            {
+              "first": 35,
+              "last": 36
+            },
+            {
+              "first": 39,
               "last": 51
             }
           ]
@@ -1541,12 +1591,23 @@
         {
           "chapter": 16,
           "verse_count": 36,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-manna"
+          ],
+          "selected_verse_count": 5,
+          "selected_ranges": [
+            {
+              "first": 14,
+              "last": 18
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 13
+            },
+            {
+              "first": 19,
               "last": 36
             }
           ]
@@ -1554,12 +1615,23 @@
         {
           "chapter": 17,
           "verse_count": 16,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-water-rock"
+          ],
+          "selected_verse_count": 1,
+          "selected_ranges": [
+            {
+              "first": 6,
+              "last": 6
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 5
+            },
+            {
+              "first": 7,
               "last": 16
             }
           ]
@@ -1580,12 +1652,23 @@
         {
           "chapter": 19,
           "verse_count": 25,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-sinai"
+          ],
+          "selected_verse_count": 3,
+          "selected_ranges": [
+            {
+              "first": 16,
+              "last": 18
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 15
+            },
+            {
+              "first": 19,
               "last": 25
             }
           ]
@@ -1749,12 +1832,23 @@
         {
           "chapter": 32,
           "verse_count": 35,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-calf"
+          ],
+          "selected_verse_count": 3,
+          "selected_ranges": [
+            {
+              "first": 4,
+              "last": 6
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 3
+            },
+            {
+              "first": 7,
               "last": 35
             }
           ]
@@ -1853,12 +1947,23 @@
         {
           "chapter": 40,
           "verse_count": 38,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "exodus-completion-glory-cloud"
+          ],
+          "selected_verse_count": 2,
+          "selected_ranges": [
+            {
+              "first": 34,
+              "last": 35
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 33
+            },
+            {
+              "first": 36,
               "last": 38
             }
           ]
@@ -1869,9 +1974,9 @@
       "book": 2,
       "name": "Leviticus",
       "chapter_count": 27,
-      "catalog_scenes": 1,
-      "catalog_hotspots": 1,
-      "chapters_with_catalog_scene": 1,
+      "catalog_scenes": 4,
+      "catalog_hotspots": 9,
+      "chapters_with_catalog_scene": 4,
       "chapters": [
         {
           "chapter": 1,
@@ -1889,12 +1994,19 @@
         {
           "chapter": 2,
           "verse_count": 16,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
-          "verses_without_catalog_scene": [
+          "scene_ids": [
+            "leviticus-grain-offering"
+          ],
+          "selected_verse_count": 1,
+          "selected_ranges": [
             {
               "first": 1,
+              "last": 1
+            }
+          ],
+          "verses_without_catalog_scene": [
+            {
+              "first": 2,
               "last": 16
             }
           ]
@@ -1967,12 +2079,23 @@
         {
           "chapter": 8,
           "verse_count": 36,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "leviticus-priest-garments"
+          ],
+          "selected_verse_count": 3,
+          "selected_ranges": [
+            {
+              "first": 7,
+              "last": 9
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 6
+            },
+            {
+              "first": 10,
               "last": 36
             }
           ]
@@ -2173,12 +2296,31 @@
         {
           "chapter": 23,
           "verse_count": 44,
-          "scene_ids": [],
-          "selected_verse_count": 0,
-          "selected_ranges": [],
+          "scene_ids": [
+            "leviticus-booths"
+          ],
+          "selected_verse_count": 3,
+          "selected_ranges": [
+            {
+              "first": 40,
+              "last": 40
+            },
+            {
+              "first": 42,
+              "last": 43
+            }
+          ],
           "verses_without_catalog_scene": [
             {
               "first": 1,
+              "last": 39
+            },
+            {
+              "first": 41,
+              "last": 41
+            },
+            {
+              "first": 44,
               "last": 44
             }
           ]

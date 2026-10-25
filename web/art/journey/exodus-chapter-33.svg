@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1654" viewBox="0 0 1536 1654" role="img" aria-labelledby="title desc">
+  <title id="title">Exodus 33 · Chapter outline</title>
+  <desc id="desc">A vertical column of 4 text cards partitions all 23 verses in Exodus 33. The diagram separates reading stages and does not depict one scene or a geographic route.</desc>
+  <rect width="1536" height="1654" fill="#f7f5ee"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#29664d"/></marker></defs>
+  <text x="120" y="90" fill="#172d27" font-family="Georgia,serif" font-size="40">Exodus 33 · Chapter outline</text>
+  <text x="120" y="142" fill="#59685f" font-family="Arial,sans-serif" font-size="28">Exodus 33:1–23 · 4 source-based reading stages</text>
+  <line x1="88" y1="404" x2="120" y2="404" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="245" width="430" height="318" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="404" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="288" fill="#172d27" font-family="Georgia,serif" font-size="30">Angel promised;</text>
+  <text x="150" y="324" fill="#172d27" font-family="Georgia,serif" font-size="30">warning of absence and</text>
+  <text x="150" y="360" fill="#172d27" font-family="Georgia,serif" font-size="30">mourning</text>
+  <text x="150" y="399" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 33:1–6</text>
+  <text x="150" y="433" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Israel mourns after the</text>
+  <text x="150" y="463" fill="#59685f" font-family="Arial,sans-serif" font-size="24">LORD warns he will not go</text>
+  <text x="150" y="493" fill="#59685f" font-family="Arial,sans-serif" font-size="24">among them; an angel is</text>
+  <text x="150" y="523" fill="#59685f" font-family="Arial,sans-serif" font-size="24">promised.</text>
+  <path d="M335 573V623" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="774" x2="120" y2="774" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="633" width="430" height="282" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="774" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="676" fill="#172d27" font-family="Georgia,serif" font-size="30">Tent outside camp;</text>
+  <text x="150" y="712" fill="#172d27" font-family="Georgia,serif" font-size="30">cloud at its door</text>
+  <text x="150" y="751" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 33:7–11</text>
+  <text x="150" y="785" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses pitches the</text>
+  <text x="150" y="815" fill="#59685f" font-family="Arial,sans-serif" font-size="24">congregation’s tent outside</text>
+  <text x="150" y="845" fill="#59685f" font-family="Arial,sans-serif" font-size="24">camp; a cloud marks its</text>
+  <text x="150" y="875" fill="#59685f" font-family="Arial,sans-serif" font-size="24">door.</text>
+  <path d="M335 925V975" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1111" x2="120" y2="1111" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="985" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1111" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1028" fill="#172d27" font-family="Georgia,serif" font-size="30">Moses asks for the</text>
+  <text x="150" y="1064" fill="#172d27" font-family="Georgia,serif" font-size="30">LORD’s presence</text>
+  <text x="150" y="1103" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 33:12–17</text>
+  <text x="150" y="1137" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses asks the LORD’s</text>
+  <text x="150" y="1167" fill="#59685f" font-family="Arial,sans-serif" font-size="24">presence to go with Israel,</text>
+  <text x="150" y="1197" fill="#59685f" font-family="Arial,sans-serif" font-size="24">and the LORD agrees.</text>
+  <path d="M335 1247V1297" fill="none" stroke="#29664d" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="88" y1="1433" x2="120" y2="1433" stroke="#29664d" stroke-width="3"/>
+  <rect x="120" y="1307" width="430" height="252" rx="18" fill="#eceee4" stroke="#b8cbbb" stroke-width="2"/>
+  <circle cx="88" cy="1433" r="10" fill="#29664d" stroke="#f7f5ee" stroke-width="3"/>
+  <text x="150" y="1350" fill="#172d27" font-family="Georgia,serif" font-size="30">Moses asks for glory;</text>
+  <text x="150" y="1386" fill="#172d27" font-family="Georgia,serif" font-size="30">passing is guarded</text>
+  <text x="150" y="1425" fill="#29664d" font-family="Arial,sans-serif" font-size="22">Exodus 33:18–23</text>
+  <text x="150" y="1459" fill="#59685f" font-family="Arial,sans-serif" font-size="24">Moses asks to see glory;</text>
+  <text x="150" y="1489" fill="#59685f" font-family="Arial,sans-serif" font-size="24">the LORD shields him in a</text>
+  <text x="150" y="1519" fill="#59685f" font-family="Arial,sans-serif" font-size="24">cleft of rock.</text>
+  <text x="120" y="1619" fill="#59685f" font-family="Arial,sans-serif" font-size="22">Each card follows its cited range; the diagram is a reading outline, not a scene or map.</text>
+</svg>

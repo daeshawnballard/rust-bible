@@ -1,0 +1,174 @@
+{
+  "title": "Exodus 32 and 40 narrative art provenance",
+  "status": "Private asset/provenance record only. Images are source-linked artistic reconstructions, not implementation, release acceptance, archaeological evidence, or recovered objects.",
+  "source_repository": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016",
+  "style_reference": {
+    "path": "web/art/journey/exodus-signs-river.webp",
+    "role": "Inspected locally as a style reference; it was not passed to the image generator as an input image."
+  },
+  "generator": {
+    "tool": "built-in image_gen",
+    "paid_api_used": false,
+    "cli_fallback_used": false
+  },
+  "conversion": {
+    "runtime": "bundled Python with Pillow 12.3.0",
+    "format": "WebP",
+    "quality": 85,
+    "resize": false,
+    "alpha": "not present; outputs converted to RGB"
+  },
+  "assets": [
+    {
+      "id": "exodus-completion-calf",
+      "source_reference": {
+        "translation": "KJV",
+        "ranges": [
+          "Exodus 32:4-6"
+        ],
+        "verse_notes": [
+          "32:4 — Aaron fashions a molten calf and the people identify it as the one that brought them from Egypt.",
+          "32:5 — Aaron builds an altar before the calf and announces a feast.",
+          "32:6 — the people offer burnt and peace offerings, eat and drink, and rise to play."
+        ]
+      },
+      "prompts": {
+        "initial_generation": "Use case: historical-scene\nAsset type: wide reader illustration for a source-linked Bible scene; landscape canvas requested at 1536 × 1024.\nPrimary request: A historically grounded, painterly narrative illustration of Exodus 32:4–6, showing the making of the golden calf, the altar before it, and the gathering that follows.\nInput images: None supplied to the generator. Match the visual character described from the inspected repository reference: cinematic painterly realism, detailed natural surfaces, warm amber light, atmospheric depth.\nScene/backdrop: An ancient Israelite encampment in the stony Sinai wilderness at early morning, with simple low tents and open desert ground. Do not show an Egyptian temple or monumental city.\nSubject: A clearly recognizable cast-gold calf figure is the main focal object, placed on the ground at center-left. A small stone-and-earth altar stands directly in front of the calf, between it and the viewer. In the middle and distant background, an ancient Israelite crowd gathers, with some dancing and others eating and drinking; a modest offering fire may produce a little smoke. Keep the moment focused on verses 4–6.\nStyle/medium: Rich, realistic painterly digital illustration consistent with the existing Exodus river scene: natural human proportions, carefully textured cloth, metal, stone, and earth; cinematic but restrained, not glossy 3D and not a photograph.\nComposition/framing: Wide 3:2 establishing view at a human eye-level three-quarter angle. Keep the calf and altar large enough to read at thumbnail size, grouped in the left-center. Place the gathering behind and around them. Leave the right third calmer and lower-detail for a reader overlay, while retaining subtle desert atmosphere.\nLighting/mood: Warm desert dawn light on gold and ochre earth, with soft dust haze; solemn, unsettling, non-sensational tone.\nMaterials/textures: Cast gold with believable handmade irregularity; simple ancient woven linen and wool garments in earth tones; rough stone altar, clay vessels, packed ground.\nText (verbatim): None.\nConstraints: Keep the calf visually central-left; keep the altar immediately before it; include the gathering feasting/dancing in the background. Treat this as an artistic reconstruction, not documentary evidence.\nAvoid: Moses, broken tablets, Joshua, the calf being destroyed or ground up, drinking powdered gold, violence, blood, gore, modern objects, anachronistic armor, Egyptian crowns or temples, extra idols, divine humanoid figures, text, labels, UI, pins, watermarks. Do not combine later events from Exodus 32 with verses 4–6.",
+        "targeted_edit": "Use case: historical-scene\nAsset type: reader illustration; revise the supplied generated image for source clarity and overlay-safe composition.\nInput images: Image 1: edit target, the first generated Exodus 32:4–6 scene.\nPrimary request: Keep this scene, painterly historical style, warm dawn light, Sinai camp, and the gathered Israelites. Make only the scale and composition corrections below.\nSubject: The golden calf is a modest cast-metal statuette, around knee height, standing directly on the ground and remaining a clear focal point at left-center. Remove the tall stepped stone platform beneath it. Keep one low, rough-stone altar immediately in front of the calf, between calf and viewer. The altar is visibly separate from the calf and is not a second raised platform.\nComposition/framing: Keep the calf and its single altar in the left-center. Confine the dancing and feasting crowd to the left and middle background. Leave the right third mostly open, low-detail desert ground and distant mountain/sky so the reader can place an overlay there; do not place people in the right foreground.\nStyle/medium: Preserve Image 1’s cinematic painterly realism, natural human proportions, fabric and stone texture, and amber/ochre sunrise palette.\nConstraints: Retain ancient Israelite clothing and camp. No Moses, no broken tablets, no Joshua, no later destruction or powdered calf, no violence, blood, gore, modern objects, Egyptian temple or crowns, extra idols, divine humanoid, text, UI, labels, pins, or watermark. Do not add objects beyond what supports Exodus 32:4–6."
+      },
+      "attempts": [
+        {
+          "kind": "initial_generation",
+          "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-062ae94d-c8f9-4ae4-845b-072c9ba26275.png",
+          "selected": false,
+          "review": "Superseded after inspection: the calf sat on a prominent stepped platform and people crowded the right-side overlay area."
+        },
+        {
+          "kind": "targeted_edit",
+          "input_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-062ae94d-c8f9-4ae4-845b-072c9ba26275.png",
+          "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-666c2b7b-0e00-42f9-8e48-e24a265acd36.png",
+          "selected": true,
+          "review": "Reduced the platform emphasis and opened more space on the right while retaining the calf, altar, and gathering."
+        }
+      ],
+      "final": {
+        "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-666c2b7b-0e00-42f9-8e48-e24a265acd36.png",
+        "preserved_png_path": "assets/imagegen/source/exodus-completion-calf.png",
+        "project_webp_path": "web/art/journey/exodus-completion-calf.webp",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "png_sha256": "edc307c518b21b45416679f9f1acd64490e97def379756e24c139371223a4ded",
+        "webp_sha256": "b0ee3b41f3f793fa663a90a980d9966206eabfb4973ae1103b1ad43235f6dd75",
+        "png_bytes": 2761075,
+        "webp_bytes": 302546,
+        "webp_quality": 85
+      },
+      "visual_review": [
+        "The calf is prominent at left-center; one rough-stone altar with fire is in front; the background group includes dancing and seated eating/drinking.",
+        "No Moses, broken tablets, calf destruction, or graphic violence is visible.",
+        "The final calf remains larger than a small statuette; Exodus does not state scale, so do not present the depicted size as source fact.",
+        "The right third is comparatively open at foreground and sky, with distant tents/figures still visible."
+      ],
+      "suggested_pins": [
+        {
+          "id": "exodus-completion-calf-object",
+          "title": "The golden calf",
+          "x_percent": 30,
+          "y_percent": 49,
+          "active": "Exodus 32:4",
+          "anchor": "Exodus 32:4",
+          "sources": [
+            "Exodus 32:4"
+          ],
+          "target": "Calf torso at left-center."
+        },
+        {
+          "id": "exodus-completion-calf-altar",
+          "title": "An altar before the calf",
+          "x_percent": 46,
+          "y_percent": 60,
+          "active": "Exodus 32:5-6",
+          "anchor": "Exodus 32:5",
+          "sources": [
+            "Exodus 32:5-6"
+          ],
+          "target": "Visible altar and fire in the foreground."
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-glory-cloud",
+      "source_reference": {
+        "translation": "KJV",
+        "ranges": [
+          "Exodus 40:34-35"
+        ],
+        "verse_notes": [
+          "40:34 — a cloud covers the tent and the LORD’s glory fills the Tabernacle.",
+          "40:35 — Moses is unable to enter because the cloud abides there and the glory fills the Tabernacle."
+        ]
+      },
+      "prompts": {
+        "generation": "Use case: historical-scene\nAsset type: wide reader illustration for a source-linked Bible scene; landscape canvas requested at 1536 × 1024.\nPrimary request: A historically grounded, painterly narrative landscape for Exodus 40:34–35: a luminous cloud covers and envelops the finished portable Tabernacle, and Moses remains outside because he cannot enter.\nInput images: None supplied to the generator. Match the inspected repository reference’s cinematic painterly realism, textured natural surfaces, warm amber light, and atmospheric depth; keep the same visual family as the newly generated Golden Calf scene.\nScene/backdrop: A remote ancient Israelite camp in the desert. Show the Tabernacle as a fully enclosed portable tent inside a linen courtyard boundary, with a simple gate hanging and posts. The outer tent coverings are closed and visible; no interior is shown.\nSubject: A dense, luminous cloud descends over and surrounds the tent, obscuring much of its roof and entrance while clearly covering the structure. The cloud suggests the glory described in the passage through light and atmosphere only, with no person-like form. Moses is visible outside the entrance, unable to enter, standing still a few paces away and facing the cloud-covered tent.\nStyle/medium: Rich, realistic painterly digital illustration consistent with the existing Exodus river scene: cinematic naturalism, accurate human scale, detailed cloth, wood, linen, and desert terrain; not a photograph and not glossy 3D.\nComposition/framing: Wide 3:2 establishing view at a human eye-level three-quarter angle. Place the tent and cloud across the left and center; keep Moses clearly outside the tent entrance in the left-center foreground. Leave the right third calmer, with open desert and distant hills under soft sky for a reader overlay.\nLighting/mood: Warm desert light with restrained luminous whites and golds in the cloud, soft shadows across the courtyard, quiet awe rather than spectacle.\nMaterials/textures: Fully closed layered tent coverings, simple linen boundary panels and posts, woven entrance hanging, weathered wood, rocky sand, soft cloud with believable light scattering.\nText (verbatim): None.\nConstraints: Depict Exodus 40:34–35 only: cloud covers the tent; the LORD’s glory fills the Tabernacle; Moses cannot enter while the cloud rests there. Keep the scene exterior-only and the Tabernacle visibly portable and enclosed.\nAvoid: Temple or permanent stone sanctuary, cutaway, open wall, visible interior, furniture displayed inside, cracks or impossible view through walls, a human or humanoid deity, halo around Moses, an open door revealing the interior, modern tents or objects, monumental Egyptian architecture, extra supernatural beings, fire descending, text, labels, UI, pins, watermark."
+      },
+      "attempts": [
+        {
+          "kind": "initial_generation",
+          "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-712be2f5-4875-4ac0-a0fe-f879aa171cff.png",
+          "selected": true,
+          "review": "Selected after visual inspection; no repair pass required."
+        }
+      ],
+      "final": {
+        "generated_original_path": "/Users/daeshawnballard/.codex/generated_images/01a16bd0-1c82-7183-86f0-09a9e3023fee/exec-712be2f5-4875-4ac0-a0fe-f879aa171cff.png",
+        "preserved_png_path": "assets/imagegen/source/exodus-completion-glory-cloud.png",
+        "project_webp_path": "web/art/journey/exodus-completion-glory-cloud.webp",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "png_sha256": "e2610d2b9026a75ef7c2aca316e92dbeb875653850540adaa79825b7b6f7072a",
+        "webp_sha256": "2f8a490a2e40e9ee1a8aa3cfb88e3590ac40d9ef9c96bc1455f2315cf66983aa",
+        "png_bytes": 2878566,
+        "webp_bytes": 297840,
+        "webp_quality": 85
+      },
+      "visual_review": [
+        "The linen courtyard and closed portable tent are visible; no cutaway, temple, or permanent stone sanctuary is shown.",
+        "A luminous cloud envelops and obscures the tent; Moses is outside and no humanoid divine form is visible.",
+        "The cloud is stylized; the figure’s exact pose, identity cues, tent details, and camp placement are illustrative.",
+        "The right third is lower-detail than the focal cloud and figure, though distant tents and boundary remain visible."
+      ],
+      "suggested_pins": [
+        {
+          "id": "exodus-completion-cloud-over-tent",
+          "title": "The cloud covers the tent",
+          "x_percent": 47,
+          "y_percent": 32,
+          "active": "Exodus 40:34-35",
+          "anchor": "Exodus 40:34",
+          "sources": [
+            "Exodus 40:34-35"
+          ],
+          "target": "Luminous cloud over the tent roof."
+        },
+        {
+          "id": "exodus-completion-moses-outside",
+          "title": "Moses cannot enter",
+          "x_percent": 27,
+          "y_percent": 77,
+          "active": "Exodus 40:35",
+          "anchor": "Exodus 40:35",
+          "sources": [
+            "Exodus 40:35"
+          ],
+          "target": "Moses outside the tent entrance."
+        }
+      ]
+    }
+  ],
+  "scene_schema_file": "/Users/daeshawnballard/Documents/Codex/2026-10-23/rust-bible-exodus-completion/late-art-scenes.json",
+  "integration_status": "Not merged into data/journey/passage-scenes.json; no shared catalog, code, browser, Page, build, deployment, or Git changes."
+}
