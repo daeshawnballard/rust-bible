@@ -1,0 +1,41 @@
+{
+  "id": "exodus-completion-departure",
+  "generation_tool": "built-in image_gen",
+  "prompt": "Use case: historical-scene. Asset type: individual production Bible Journey landscape, not a UI mockup. Depict ONLY Exodus 12:34 and 12:37\u201338: ancient Israelite households depart Egypt on foot, carrying unleavened dough in kneading troughs wrapped in cloth upon their shoulders. Detailed tangible close foreground family on left-center, a man bearing a shallow wooden kneading trough bundled in coarse cloth over his shoulder, woman with modest tied bundle, children walking with them; a long mixed traveling company and sheep and cattle behind. Ancient Egyptian mudbrick town recedes in distance, desert path toward open wilderness. Rich cinematic painterly historical realism, warm early light, natural brown skin tones, linen and wool texture, careful hands/anatomy, matching a premium illustrated Bible. Wide 1536x1024 composition. Key pin subjects left and middle; quieter landscape at right to permit floating reader window. Do not show baked bread cakes, a sea crossing, a cloud pillar or fire pillar, Pharaoh, armed battle, graphic death, modern objects, divine figure, writing, text, labels, UI, borders, watermark. This is one departure moment; appearance is an illustration, not archaeological evidence.",
+  "source": "assets/imagegen/source/exodus-completion-departure.png",
+  "final": "web/art/journey/exodus-completion-departure.webp",
+  "processing": [
+    "unchanged original PNG",
+    "Pillow WebP quality85 method6"
+  ],
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "format": "webp",
+  "alpha": false,
+  "sha256": {
+    "source": "8f609ce2c4601be64b731d5ac793205d2f172a6e79db94ef494a57ad9356c73d",
+    "final": "4e768e43f98c5d34ba922433f9af14fbab324aec27c802ba6554fc78f5eb3960"
+  },
+  "sources": [
+    "Exodus 12:34",
+    "Exodus 12:37\u201338"
+  ],
+  "visual_review": {
+    "observed": "Shoulder-borne wooden trough wrapped in cloth, walking households, a mixed company and livestock. No baked bread, sea crossing, cloud pillar, later narrative event, text or pins.",
+    "limits": "Architecture, clothing, faces, company scale and light are illustrative choices; not verified historical reconstruction.",
+    "pins": [
+      {
+        "title": "Dough carried on their shoulders",
+        "x": 46,
+        "y": 20
+      },
+      {
+        "title": "A traveling company and livestock",
+        "x": 61,
+        "y": 52
+      }
+    ]
+  }
+}

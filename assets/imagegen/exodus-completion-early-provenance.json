@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-24T03:03:46Z",
+  "generation_mode": "Built-in ImageGen tool; no paid API or CLI fallback.",
+  "model": "Unknown; the built-in ImageGen result did not expose a model identifier.",
+  "reference": {
+    "path": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp",
+    "role": "style reference only",
+    "inspection": "Viewed the current Exodus 7:19–21 river scene at 1536×1024 before generation. Its cinematic, richly painted historical realism, warm amber palette, layered natural light, textured earth, and detailed rendering informed both prompts. Its figures, river, and composition were not copied."
+  },
+  "assets": [
+    {
+      "id": "exodus-completion-hail",
+      "source_range": "Exodus 9:23–25",
+      "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-a99acb6a-78a8-41d0-82cd-7f776c745301.png",
+      "project_png": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-completion-hail.png",
+      "webp": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-hail.webp",
+      "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey narrative painting\nInput images: Image 1: style reference only; match its cinematic, richly painted historical realism, warm natural palette, textured fabrics/earth/water, and detailed brushwork. Do not copy its river, figures, or composition.\nPrimary request: Create a detailed landscape illustration of the hail plague described in Exodus 9:23–25.\nScene/backdrop: An ancient cultivated field in Egypt under a severe storm. The text identifies the land of Egypt but no particular site; keep the setting generic.\nSubject: Dense hail and thunderstorm over field plants; a clearly broken tree with a heavy branch split and fallen; visible damage to plants and trees. Suggest the fire running along the ground with restrained, naturalistic streaks among hail and wet soil.\nStyle/medium: Painterly, cinematic historical realism matching the supplied Bible-scene reference: realistic forms with visible fine brush texture, rich atmosphere, believable period materials, not a photograph and not fantasy art.\nComposition/framing: Wide 1536x1024 landscape. Keep the primary hail and broken-tree subjects in the left and center 65 percent so a reader overlay on the right does not obscure them. The broken tree should be a clear, touchable focal point near the center-left; the hail field should remain legible across the foreground.\nLighting/mood: Dramatic storm daylight, slate clouds and soft amber-brown earth tones, cool rain light, restrained flashes of light near the ground.\nConstraints: no people, no animals, no deaths or injury, no blood, no Goshen comparison, no map, no borders, no geographic labels, no depiction of God, no invented divine figure, no in-image text, no interface, no pins, no watermark. Do not show locusts or any other plague. Keep the tree species and crop varieties unspecified.",
+      "reference_paths": [
+        "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp"
+      ],
+      "imagegen_result": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 3540182,
+        "sha256": "d9a11125f0b5571824281ea5aedb4580cbeb55fb440544de87963f0589ed101e"
+      },
+      "webp_result": {
+        "format": "WEBP",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 475918,
+        "sha256": "6e51c3b6548621e02a7b39cccadd86c015a7b91f961b41f65a3cb4edb0151e44"
+      },
+      "webp_encoding": {
+        "library": "Pillow",
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6,
+        "source_png_preserved": true
+      },
+      "visual_inspection": "Viewed the generated output at native size. Hail is visibly spread across the field; a large tree is split with a broken limb; plants are damaged and ground-level fire is visible. Main visual subjects are left/center. No people, animals, deaths, map, Goshen split, text, or depiction of God. The storm, specific tree/plant forms, and site are illustrative.",
+      "hotspots": [
+        {
+          "id": "exodus-completion-hail-field",
+          "title": "Hail and fire strike the field",
+          "x": 52.0,
+          "y": 49.0,
+          "anchor": {
+            "chapter": 9,
+            "first": 24,
+            "last": 24
+          },
+          "active": [
+            {
+              "chapter": 9,
+              "first": 23,
+              "last": 24
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 23,
+              "last": 24
+            }
+          ],
+          "note": "Exodus 9:23 reports thunder, hail, and fire running along the ground; verse 24 describes hail and fire mingled. Storm, hail size, and fire appearance are illustrative because the text does not specify them."
+        },
+        {
+          "id": "exodus-completion-hail-tree",
+          "title": "The hail breaks a tree",
+          "x": 35.0,
+          "y": 35.0,
+          "anchor": {
+            "chapter": 9,
+            "first": 25,
+            "last": 25
+          },
+          "active": [
+            {
+              "chapter": 9,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 9,
+              "first": 25,
+              "last": 25
+            }
+          ],
+          "note": "Verse 25 says the hail smote every tree of the field and broke every tree. This one broken tree is illustrative; the passage does not name its species or exact form."
+        }
+      ]
+    },
+    {
+      "id": "exodus-completion-locusts",
+      "source_range": "Exodus 10:14–15",
+      "generation_history": [
+        {
+          "step": "initial generation",
+          "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-891ae7f0-3997-4afe-aaee-1a2ce694ed4e.png",
+          "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey narrative painting\nInput images: Image 1: style reference only; match its cinematic, richly painted historical realism, warm natural palette, layered atmosphere, and finely textured materials. Do not copy its river, figures, or composition.\nPrimary request: Create a detailed landscape illustration of the locust plague described in Exodus 10:14–15, showing locusts resting across the land and consuming the remaining plants and fruit.\nScene/backdrop: A generic ancient cultivated landscape in Egypt, with low fields and scattered trees beneath a dim, dust-darkened sky. No specific site or route is named by the passage.\nSubject: A dense, unmistakable mass of locusts blankets the field and vegetation; clusters cover the ground and branches, with leaves and remaining fruit visibly being eaten. The land is darkened by their numbers, while the main swarm and eaten plants remain legible in the foreground.\nStyle/medium: Painterly, cinematic historical realism matching the supplied Bible-scene reference: natural forms, believable earth and plant textures, fine brushwork, rich atmosphere, realistic scale rather than fantasy-insect exaggeration.\nComposition/framing: Wide 1536x1024 landscape. Keep the main locust-covered field and damaged plants in the left and center 65 percent for a reader overlay on the right. The nearest locust-covered ground and eaten vegetation should form a clear hotspot area.\nLighting/mood: Muted amber earth and green-brown plants under a heavily darkened sky; dramatic but natural, with enough light to distinguish locusts from foliage.\nConstraints: no hail, no rainstorm, no lightning, no simultaneous plague, no people or animals, no deaths or injury, no map, no route, no borders, no geographic labels, no depiction of God, no text, no interface, no pins, no watermark. Do not specify a modern locust species, precise crop varieties, or a specific location.",
+          "reference_paths": [
+            "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-signs-river.webp"
+          ],
+          "disposition": "Superseded after visual inspection because the field retained too much intact greenery for verse 15."
+        },
+        {
+          "step": "targeted vegetation refinement",
+          "generated_png": "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-c51edfe4-672f-4196-8875-5dc389faf216.png",
+          "prompt": "Use case: historical-scene\nAsset type: source-bounded Bible Journey narrative painting\nInput images: Image 1: edit target, the current locust-plague painting. Preserve its landscape framing, cinematic painterly realism, warm earth palette, broad locust swarm, and left/center focal placement.\nPrimary request: Refine only the vegetation and foreground so the scene reads as Exodus 10:14–15: locusts cover Egypt and eat what the hail left, leaving no green thing in the trees or field.\nScene/backdrop: Keep the same generic ancient cultivated landscape and dim, dust-darkened sky. Do not add new buildings, people, animals, or a different location.\nSubject: Preserve the dense, unmistakable locusts across sky, ground, and plants. Make most field plants visibly stripped or eaten down, with sparse bare stalks and branches; show only a few remaining leaves or fruit being consumed by locusts. Remove the large intact leafy fruit clusters so no precise crop or fruit type is implied.\nStyle/medium: Preserve the existing painterly, cinematic historical realism and natural scale. Match the visual texture and palette of the image and the supplied Bible-scene style reference already reflected in it.\nComposition/framing: Keep the wide 1536x1024 view and same left/center hotspot areas. Keep the nearest locust-covered, eaten ground legible.\nConstraints: Change only the vegetation and its eaten/stripped appearance; preserve swarm distribution, camera framing, distant landscape, light, and overall style. No hail, rain, lightning, people, animals, deaths, injuries, map, route, borders, geographic labels, God figure, text, interface, pins, or watermark.",
+          "reference_paths": [
+            "/Users/daeshawnballard/.codex/generated_images/01a16bcf-2be2-7353-8c4c-5c251e5e9c20/exec-891ae7f0-3997-4afe-aaee-1a2ce694ed4e.png"
+          ],
+          "disposition": "Selected final output; swarm and framing preserved while most vegetation is visibly stripped."
+        }
+      ],
+      "project_png": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/assets/imagegen/source/exodus-completion-locusts.png",
+      "webp": "/Users/daeshawnballard/.codex/recoveries/rust-bible-map-20261016/web/art/journey/exodus-completion-locusts.webp",
+      "imagegen_result": {
+        "format": "PNG",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 3369539,
+        "sha256": "12ef246bf14e86b490d096cc7a45ff0edd05678d25fc2bf3de1028bc8db62452"
+      },
+      "webp_result": {
+        "format": "WEBP",
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "bytes": 450486,
+        "sha256": "1c1a20bc044f21f2b2c24ba28543d14179dd79f8e208f5c4545ff2262f4a16f6"
+      },
+      "webp_encoding": {
+        "library": "Pillow",
+        "format": "WEBP",
+        "quality": 85,
+        "method": 6,
+        "source_png_preserved": true
+      },
+      "visual_inspection": "Viewed the final refined output at native size. Dense locusts visibly cover the sky and land; most vegetation is stripped to bare stalks and branches with only a few remaining leaves. The main field and eaten vegetation are left/center. No hail, rainstorm, lightning, people, animals, deaths, map, text, or depiction of God. Insect, plant, and landscape forms are illustrative, not a species or documentary reconstruction.",
+      "hotspots": [
+        {
+          "id": "exodus-completion-locusts-cover",
+          "title": "Locusts cover the land",
+          "x": 53.0,
+          "y": 61.0,
+          "anchor": {
+            "chapter": 10,
+            "first": 14,
+            "last": 14
+          },
+          "active": [
+            {
+              "chapter": 10,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 14,
+              "last": 14
+            }
+          ],
+          "note": "Verse 14 says the locusts went up over all the land of Egypt and rested across it. Their appearance, size, and species are unspecified; this is an illustration, not a documentary or entomological reconstruction."
+        },
+        {
+          "id": "exodus-completion-locusts-eat",
+          "title": "The locusts eat what the hail left",
+          "x": 28.0,
+          "y": 31.0,
+          "anchor": {
+            "chapter": 10,
+            "first": 15,
+            "last": 15
+          },
+          "active": [
+            {
+              "chapter": 10,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "sources": [
+            {
+              "chapter": 10,
+              "first": 5,
+              "last": 5
+            },
+            {
+              "chapter": 10,
+              "first": 15,
+              "last": 15
+            }
+          ],
+          "note": "Verse 5 forecasts what the locusts will eat; verse 15 reports that they consume the remaining herbs and fruit. Plant forms and crop varieties are unspecified; the stripped branches are illustrative."
+        }
+      ]
+    }
+  ],
+  "private_scene_manifest": "/Users/daeshawnballard/Documents/Codex/2026-10-23/rust-bible-exodus-completion/early-art-scenes.json",
+  "scene_manifest_schema": "Same schema_version/scenes shape and scene/hotspot range fields as data/journey/passage-scenes.json; private companion draft only, not integrated.",
+  "integration_status": "Not added to or published through a shared scene catalog. No hotspot coordinates were tested in the application; coordinates are suggested from native-size image inspection."
+}
