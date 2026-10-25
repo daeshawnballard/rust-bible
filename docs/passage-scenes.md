@@ -1,6 +1,6 @@
 # Passage-specific Journey scenes
 
-The Rust-rendered register contains **136 focused scenes, 282 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges the reader uses its existing story world, object study, or clearly labeled broad book context.
+The Rust-rendered register contains **136 focused scenes, 307 subject hotspots, and at least one scene in each of the 66 books**. It describes authored verse coverage, not browser acceptance or illustration of every chapter. Outside these ranges Exodus and Leviticus use their authored chapter diagrams; other books retain existing story worlds, object studies, or clearly labeled broad context.
 
 Hotspots identify visible people, actions, or objects. Scripture stays verbatim in its own view; Context contains the illustrations and editorial notes. Inspecting a subject preserves the saved verse and audio target; its explicit Read link changes the passage. Poetry, letter imagery, prophetic visions, and artistic reconstructions are labeled in the interface. Broader draft beats that are not depicted do not receive landscape pins.
 
