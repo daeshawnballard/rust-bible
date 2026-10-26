@@ -38,11 +38,27 @@ await Promise.all(Array.from({ length: 4 }, async () => {
       const headNonce = randomUUID();
       url.searchParams.set("verify", headNonce);
       const head = await fetch(url, { method: "HEAD", cache: "no-store", headers });
-      result.stored_head = head.status === 200 && head.headers.get("X-Asset-Storage") === "r2"
+      const headLength = head.headers.get("Content-Length");
+      result.head = { status: head.status, storage: head.headers.get("X-Asset-Storage"),
+        content_length: headLength, encoding: head.headers.get("Content-Encoding") };
+      result.stored_readback = head.status === 200 && head.headers.get("X-Asset-Storage") === "r2"
         && head.headers.get("X-Asset-Verification") === headNonce
         && head.headers.get("X-Content-SHA256") === expected.sha256
-        && Number(head.headers.get("Content-Length")) === expected.bytes;
-      if (!result.stored_head) throw new Error("Asset was not read back from Site storage.");
+        && (headLength === null || Number(headLength) === expected.bytes);
+      if (!result.stored_readback) throw new Error("Asset was not read back from Site storage.");
+      // The edge removes Content-Length when compressing text (including SVG).
+      // Strengthen that case to a complete second R2 GET instead of inferring size.
+      if (headLength === null) {
+        const readNonce = randomUUID();
+        url.searchParams.set("verify", readNonce);
+        const read = await fetch(url, { cache: "no-store", headers });
+        const storedBytes = new Uint8Array(await read.arrayBuffer());
+        result.stored_readback = read.status === 200 && read.headers.get("X-Asset-Storage") === "r2"
+          && read.headers.get("X-Asset-Verification") === readNonce
+          && storedBytes.byteLength === expected.bytes
+          && createHash("sha256").update(storedBytes).digest("hex") === expected.sha256;
+        if (!result.stored_readback) throw new Error("Complete compressed asset readback mismatch.");
+      }
       result.status = "PASS";
     } catch (error) { result.error = error.message; }
     receipt.assets.push(result);
