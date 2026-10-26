@@ -43,13 +43,19 @@ export async function servePublicAsset(request, bucket, catalog, fetchAsset = fe
   }
   if (object?.body) await object.body.cancel();
 
+  let stage = "upstream_fetch";
   try {
     const source = asset.source.split("/").map(encodeURIComponent).join("/");
     const upstream = await fetchAsset(`${UPSTREAM}${catalog.source_commit}/${source}`, {
-      redirect: "error", signal: AbortSignal.timeout(20000),
+      // Workers supports manual/follow, not the browser's "error" mode.
+      // Reject non-2xx below so an upstream redirect cannot change the origin.
+      redirect: "manual", signal: AbortSignal.timeout(20000),
     });
+    stage = "upstream_status";
     if (!upstream.ok) throw new Error("asset_source_unavailable");
+    stage = "upstream_body";
     const bytes = await boundedBytes(upstream, asset.bytes);
+    stage = "digest";
     const hash = [...new Uint8Array(await crypto.subtle.digest("SHA-256", bytes))]
       .map((value) => value.toString(16).padStart(2, "0")).join("");
     if (hash !== asset.sha256) throw new Error("asset_integrity_mismatch");
@@ -65,10 +71,14 @@ export async function servePublicAsset(request, bucket, catalog, fetchAsset = fe
     }
     headers.set("X-Asset-Storage", stored ? "source-stored" : "verified-source");
     return new Response(request.method === "HEAD" ? null : bytes, { headers });
-  } catch {
+  } catch (error) {
+    console.error("public_asset_failure", JSON.stringify({ path: pathname, stage, name: error.name }));
     return new Response(request.method === "HEAD" ? null : "Artwork or supporting asset is temporarily unavailable. Please retry.", {
       status: 502,
-      headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" },
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store",
+        ...(headers.has("X-Asset-Verification") ? { "X-Asset-Error": stage } : {}),
+      },
     });
   }
 }

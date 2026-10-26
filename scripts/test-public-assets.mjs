@@ -20,7 +20,7 @@ let heads = 0;
 const fetchAsset = async (url, options) => {
   fetches++;
   assert.equal(url, `https://raw.githubusercontent.com/daeshawnballard/rust-bible/${commit}/web/art/journey/scene.webp`);
-  assert.equal(options.redirect, "error");
+  assert.equal(options.redirect, "manual");
   return new Response(bytes);
 };
 const bucket = {
@@ -77,6 +77,10 @@ for (const wrong of [new Uint8Array(bytes.length), new Uint8Array(bytes.length +
 }
 response = await servePublicAsset(request(), bucket, catalog, async () => new Response("missing", { status: 404 }));
 assert.equal(response.status, 502);
+response = await servePublicAsset(request(`?verify=${nonce}`), bucket, catalog, async () => new Response(null, { status: 302, headers: { Location: "https://unexpected.test/" } }));
+assert.equal(response.status, 502);
+assert.equal(response.headers.get("X-Asset-Error"), "upstream_status");
+assert.equal(puts, 1);
 response = await servePublicAsset(request("", { method: "HEAD" }), bucket, catalog, async () => new Response("missing", { status: 404 }));
 assert.equal(response.status, 502);
 assert.equal(response.body, null);
