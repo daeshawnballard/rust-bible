@@ -7,6 +7,11 @@ import {
   r2Key,
   validateCueDocument,
 } from "./audio-contract.mjs";
+import { servePublicAsset } from "./public-assets.mjs";
+
+const publicAssets = typeof __SITE_ASSETS__ === "undefined"
+  ? { source_commit: null, files: {} }
+  : __SITE_ASSETS__;
 
 const AUDIO_CACHE_CONTROL = "public, max-age=3600, must-revalidate";
 const CUES_CACHE_CONTROL = "no-store";
@@ -32,6 +37,7 @@ export default {
           service: "narration-storage",
           r2_binding_available: bucketAvailable,
           revision,
+          source_commit: publicAssets.source_commit,
         },
         200,
         { "Cache-Control": "no-store" },
@@ -70,6 +76,9 @@ export default {
       }
       return importNarration(request, env, parsed);
     }
+
+    const publicAsset = await servePublicAsset(request, env.BUCKET, publicAssets);
+    if (publicAsset) return publicAsset;
 
     if (!env.ASSETS || typeof env.ASSETS.fetch !== "function") {
       return jsonError("static_assets_unavailable", 503, request.method === "HEAD");

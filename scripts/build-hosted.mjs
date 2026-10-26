@@ -3,10 +3,11 @@
 import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { constants } from "node:fs";
-import { access, copyFile, lstat, mkdir, mkdtemp, readFile, readdir, writeFile } from "node:fs/promises";
+import { access, copyFile, lstat, mkdir, mkdtemp, readFile, readdir, rename, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildAssetCatalog, isStoredAsset } from "./hosted-asset-catalog.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const distRoot = path.join(repoRoot, "dist");
@@ -18,9 +19,13 @@ await assertStaticInput(distRoot);
 const stageRoot = await mkdtemp(path.join(os.tmpdir(), "rust-bible-sites-build-"));
 const publicDir = path.join(stageRoot, "public");
 const outputDir = path.join(stageRoot, "output");
+const assetCatalog = await buildAssetCatalog(repoRoot, distRoot);
+const catalogPath = path.join(stageRoot, "public-assets.json");
+await writeFile(catalogPath, `${JSON.stringify(assetCatalog)}\n`);
 await mkdir(publicDir, { recursive: true });
 await mkdir(outputDir, { recursive: true });
-await copyPublicTree(distRoot, publicDir, true);
+await copyPublicTree(distRoot, publicDir, true, true);
+await copyFile(catalogPath, path.join(publicDir, "public-assets.json"));
 const staticInventory = await inventory(publicDir);
 
 const viteBin = path.join(repoRoot, "node_modules", "vite", "bin", "vite.js");
@@ -28,6 +33,7 @@ await access(viteBin, constants.R_OK);
 run(process.execPath, [viteBin, "build", "--config", "hosting/vite.config.mjs"], {
   HOSTED_PUBLIC_DIR: publicDir,
   HOSTED_BUILD_STAGE: outputDir,
+  HOSTED_ASSET_CATALOG: catalogPath,
   CLOUDFLARE_VITE_WRANGLER_CONFIG_PATH: path.join(repoRoot, "hosting", "wrangler.jsonc"),
   CLOUDFLARE_CF_FETCH_ENABLED: "false",
   WRANGLER_SEND_METRICS: "false",
@@ -48,8 +54,13 @@ const workerConfig = JSON.parse(await readFile(workerConfigFile, "utf8"));
 const configuredMain = path.resolve(path.dirname(workerConfigFile), workerConfig.main);
 await access(configuredMain, constants.R_OK);
 
-const finalServer = path.join(distRoot, "server");
-const finalClient = path.join(distRoot, "client");
+// Keep a separate, complete deploy root. The regular static preview retains all
+// artwork; the hosted Worker supplies the exact same asset URLs from storage.
+const previewRoot = path.join(stageRoot, "static-preview");
+await rename(distRoot, previewRoot);
+const deployRoot = distRoot;
+const finalServer = path.join(deployRoot, "server");
+const finalClient = path.join(deployRoot, "client");
 await mkdir(finalServer, { recursive: true });
 await mkdir(finalClient, { recursive: true });
 await copyPublicTree(clientOutput, finalClient, false);
@@ -68,8 +79,8 @@ await writeFile(
   `${JSON.stringify(workerConfig, null, 2)}\n`,
   "utf8",
 );
-await mkdir(path.join(distRoot, ".openai"), { recursive: true });
-await copyFile(packagedManifest, path.join(distRoot, ".openai", "hosting.json"));
+await mkdir(path.join(deployRoot, ".openai"), { recursive: true });
+await copyFile(packagedManifest, path.join(deployRoot, ".openai", "hosting.json"));
 
 for (const [relative, expectedHash] of staticInventory) {
   const actual = await fileSha256(path.join(finalClient, relative));
@@ -78,8 +89,10 @@ for (const [relative, expectedHash] of staticInventory) {
 await access(path.join(finalServer, "index.js"), constants.R_OK);
 console.log(`Hosted Site build copied ${staticInventory.size} existing static files byte-for-byte.`);
 console.log(`Worker package: ${path.join(finalServer, "index.js")}`);
-console.log(`Sites metadata: ${path.join(distRoot, ".openai", "hosting.json")}`);
+console.log(`Sites metadata: ${path.join(deployRoot, ".openai", "hosting.json")}`);
+console.log(`Content-addressed public assets: ${Object.keys(assetCatalog.files).length} at ${assetCatalog.source_commit}`);
 console.log(`Private build staging retained for recovery: ${stageRoot}`);
+console.log(`Complete static preview retained at: ${previewRoot}`);
 
 function run(command, args, extraEnv = {}) {
   const result = spawnSync(command, args, {
@@ -97,18 +110,21 @@ async function assertStaticInput(root) {
   }
 }
 
-async function copyPublicTree(source, destination, filterBuildOutputs) {
+async function copyPublicTree(source, destination, filterBuildOutputs, filterStoredAssets = false, prefix = "") {
   await mkdir(destination, { recursive: true });
   for (const entry of await readdir(source, { withFileTypes: true })) {
     if (filterBuildOutputs && ignoredPublicRoots.has(entry.name)) continue;
+    const relative = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (filterStoredAssets && (isStoredAsset(relative) || ["art", "fonts", "vendor"].includes(relative))) continue;
     const from = path.join(source, entry.name);
     const to = path.join(destination, entry.name);
     const info = await lstat(from);
     if (info.isSymbolicLink()) throw new Error(`Refusing to copy symlink from static output: ${from}`);
-    if (info.isDirectory()) await copyPublicTree(from, to, false);
+    if (info.isDirectory()) await copyPublicTree(from, to, false, filterStoredAssets, relative);
     else if (info.isFile()) await copyFile(from, to);
   }
 }
+
 
 async function inventory(root) {
   const result = new Map();

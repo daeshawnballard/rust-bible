@@ -114,7 +114,7 @@ npm ci --ignore-scripts
 npm run build:hosted
 ```
 
-This keeps the Rust/WASM app and adds a small Worker for R2 audio delivery. Deploy `dist/client`, `dist/server`, and `dist/.openai` using the existing Sites project. Configure the `BUCKET` binding and the secret `NARRATION_UPLOAD_TOKEN` through Sites. Recording files, private job logs, and upload credentials belong outside the public repository. See [Worker operations](hosting/README.md).
+This keeps the Rust/WASM app and adds a small Worker for R2 audio and public-asset delivery. The compact deployment retains core code while serving committed artwork, fonts, and vendor files at the same URLs from verified, content-addressed Site storage. The complete static preview is retained in the build's printed staging location. Deploy `dist/client`, `dist/server`, and `dist/.openai` using the existing Sites project. Configure `BUCKET` and `NARRATION_UPLOAD_TOKEN` through Sites. Recording files, private job logs, and upload credentials belong outside the public repository. See [Worker operations and asset verification](hosting/README.md).
 
 ### API boundary
 

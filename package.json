@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:hosted": "node scripts/build-hosted.mjs"
+    "build:hosted": "node scripts/build-hosted.mjs",
+    "test:assets": "node scripts/test-public-assets.mjs"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",

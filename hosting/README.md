@@ -1,8 +1,17 @@
 # Narration storage Worker
 
-This is a small Cloudflare Worker transport for the existing Rust/WASM site. Static files are copied from the existing `dist/` build into `dist/client`; the Worker serves those requests through the `ASSETS` binding and serves chapter audio/cues from the `BUCKET` R2 binding. It does not generate narration or call an inference provider.
+This is a small Cloudflare Worker transport for the existing Rust/WASM site. Core files are copied from the `dist/` build into `dist/client`; the Worker serves those requests through `ASSETS` and serves chapter audio/cues from `BUCKET`. Large public artwork, fonts, and vendor files use the same URLs through content-addressed Site R2 storage. It does not generate narration or call an inference provider.
 
-`npm run build:hosted` first runs `bash scripts/build-wasm.sh`, then builds the Worker and client assets in a fresh temporary staging directory. It preserves the current `dist/` tree and copies complete outputs into `dist/client`, `dist/server`, and `dist/.openai` without clearing existing directories. The staging path is printed and retained for recovery.
+`npm run build:hosted` first runs `bash scripts/build-wasm.sh`, then builds the Worker and core client in fresh staging. It moves the complete static preview into that retained staging directory and writes the compact deployment to `dist/client`, `dist/server`, and `dist/.openai`. No output directory is deleted; both staging and preview paths are printed for recovery.
+
+The build catalogs each stored asset against its exact committed `web/` bytes. Dirty or untracked assets fail the build. Push that same commit to GitHub and Sites before saving the version. On a cold read, the Worker fetches only the cataloged path from the commit-pinned public GitHub source, checks byte length and SHA-256, then stores verified bytes under `public-assets/v1/<sha256>`. Subsequent reads use Site R2. There is no arbitrary upstream proxy or public write endpoint. Until an asset is stored, delivery depends on the public source being reachable; run the verifier after publication to populate storage and verify all assets before acceptance.
+
+```sh
+npm run test:assets
+node hosting/verify-public-assets.mjs https://daeshawnballard.com/projects/bibleinrust/ <saved-source-sha> /private/path/assets-check.json
+```
+
+The verifier checks each asset's complete public response, fresh Worker nonce, byte digest, and a second read from R2. It records failures rather than treating HTTP success alone as acceptance. Reader interactions and narration still need their own live browser checks.
 
 The upload tool expects files laid out as `<audio-root>/<voice>/<book>/<chapter>.mp3` and `.json`. It verifies the local cue contract and audio digest, imports audio before cues, then checks HEAD metadata and streams each stored object back through SHA-256. For example:
 
